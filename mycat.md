@@ -21,7 +21,17 @@ tar zxvf Mycat-server-1.6-RELEASE-20161028204710-linux.tar.gz
 ```
 
 **配置 mycat**
+先配置server.xml里的user，用户名与密码随意和数据库的密码没关系，只作为登陆mycat的密码
+然后配置schema.xml
 
+连接测试，管理端口9066，服务端口8066
+mysql -h127.0.0.1 -P8066 -uroot -proot
+![enter description here](./images/1528855052678.png)
+
+出现问题
+ 2018-06-13 15:20:11,571 [ERROR][WrapperSimpleAppMain] 2018-06-13 15:20:11 startup error java.lang.NumberFormatException: Size must be specified as bytes (b)
+解决办法
+配置文件server.xml中
 
 
 参考
