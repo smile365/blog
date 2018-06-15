@@ -20,8 +20,21 @@ apt -t stretch-backports install shadowsocks-libev
 [shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository)
 
 配置：
+vim /etc/shadowsocks-libev/config.json
+{
+    "server":"127.0.0.1",
+    "server_port":8388,
+    "local_port":1080,
+    "password":"xxxxx",
+    "timeout":60,
+    "method":"chacha20-ietf-poly1305"
+}
+
+启动
+systemctl start shadowsocks-libev  
+
 
 参考
 [如何安装获取Google Play服务框架？Google服务框架最新版下载](http://www.ifanr.com/app/693456)
-
+[Debian 8 安装 shadowsocks](https://blog.csdn.net/B0rn_T0_W1n/article/details/52663434)
 
