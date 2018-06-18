@@ -1,16 +1,11 @@
 ---
-title: 安装谷歌play
+title: 翻墙教程2--通过命令安装Shadowsocks Server
 tags: 新建,模板,小书匠
 grammar_cjkRuby: true
 ---
 
-如果你已经翻墙成功，那么你可以通过谷歌搜索[谷歌服务安装](https://www.google.com/search?newwindow=1&ei=srkfW_mpJ-au0gL39YiQDw&q=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85)
-得到安装的教程。我们需要安装谷歌服务框架，不同手机的安装方法不同。大部分手机可以通过下载一个名叫[谷歌安装器](http://www.wandoujia.com/apps-com.ericxiang.googleinstaller)的app进行安装。
 
-![使用安装器安装谷歌框架](./images/1529323136349.png)
-
-
-根据你的系统安装安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository)
+根据你的服务器系统选择不同的版本安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository)
 
 Debian 9 (Stretch) 的安装命令如下：
 ```
@@ -18,10 +13,9 @@ sh -c 'printf "deb http://deb.debian.org/debian stretch-backports main" > /etc/a
 apt update
 apt -t stretch-backports install shadowsocks-libev
 ```
-[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository)
 
 配置：
-vim /etc/shadowsocks-libev/config.json
+nano /etc/shadowsocks-libev/config.json
 {
     "server":"127.0.0.1",
     "server_port":8388,
@@ -34,6 +28,17 @@ vim /etc/shadowsocks-libev/config.json
 启动
 systemctl start shadowsocks-libev  
 
+
+然后安装客户端
+
+
+
+
+经翻墙成功后，如果是安卓手机推荐安装谷歌play，可以通过谷歌搜索[谷歌服务安装](https://www.google.com/search?newwindow=1&ei=srkfW_mpJ-au0gL39YiQDw&q=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85)找到符合自己手机的安装的教程。其实就是安装一套谷歌服务框架，不同手机的安装方法不同。大部分手机可以通过下载一个名叫[谷歌安装器](http://www.wandoujia.com/apps-com.ericxiang.googleinstaller)的app进行安装。
+
+![使用安装器安装谷歌框架](./images/1529323136349.png)
+
+祝你玩的愉快！
 
 参考
 [如何安装获取Google Play服务框架？Google服务框架最新版下载](http://www.ifanr.com/app/693456)
