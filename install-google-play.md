@@ -5,9 +5,10 @@ grammar_cjkRuby: true
 ---
 
 如果你已经翻墙成功，那么你可以通过谷歌搜索[谷歌服务安装](https://www.google.com/search?newwindow=1&ei=srkfW_mpJ-au0gL39YiQDw&q=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85)
-得到安装的教程
+得到安装的教程。我们需要安装谷歌服务框架，不同手机的安装方法不同。大部分手机可以通过下载一个名叫[谷歌安装器](http://www.wandoujia.com/apps-com.ericxiang.googleinstaller)的app进行安装。
 
-目前各大市场基本已经下降
+![使用安装器安装谷歌框架](./images/1529323136349.png)
+
 
 根据你的系统安装安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository)
 
