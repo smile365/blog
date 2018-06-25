@@ -1,5 +1,5 @@
 ---
-title: 在两台CentOS7上基于docker+keepalived+mycat搭建mysql双主实现高可用并测试(一)
+title: 在两台CentOS7上基于docker+keepalived+mycat搭建mysql双主实现高可用(一)
 tags: 新建,模板,小书匠
 grammar_cjkRuby: true
 ---
