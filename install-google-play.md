@@ -41,6 +41,6 @@ systemctl start shadowsocks-libev
 祝你玩的愉快！
 
 参考
-[如何安装获取Google Play服务框架？Google服务框架最新版下载](http://www.ifanr.com/app/693456)
+[Google服务框架最新版下载](http://www.ifanr.com/app/693456)
 [Debian 8 安装 shadowsocks](https://blog.csdn.net/B0rn_T0_W1n/article/details/52663434)
 
