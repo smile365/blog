@@ -1,0 +1,41 @@
+---
+title: mongo服务异退出问题记录及解决 
+tags: 新建,模板,小书匠
+grammar_cjkRuby: true
+---
+
+1.使用ps -ef|grep mongod 查看已经没有了mongod的服务进程
+2.使用 tail -f /var/log/mongodb/mongod.log 查看日志信息，发现并没有错误信息，最后一条消息只显示了一个时间
+3.使用mongod -f /etc/mongod.conf 发现启动失败，mongod.log里也并未增加任何运行日志 
+
+初步判断是mongo无法写入文件了。
+
+使用命令补全(tab键)时提示：va-bash: 无法为立即文档创建临时文件: 设备上没有空间
+
+使用命令 df -h 查看分区占用情况，发现挂载点为"/"已使用100%。
+
+![enter description here](./images/1529991883247.png)
+
+解决方式，把mongo的数据文件和日志文件迁移到其他挂载点(home)
+mkdir /home/lib /home/log
+mv /var/lib/mongod /home/lib
+mv /var/log/mongod /home/log
+修改mongo的配置文件，指定日志文件和数据文件路径
+vi /etc/mongod.conf
+![enter description here](./images/1529992187604.png)
+
+再次查看分区占用情况
+![enter description here](./images/1529992314772.png)
+
+使用mongod -f /etc/mongod.conf 启动mongodb能正常启动
+
+
+总结
+使用 df -h 查看所有挂载点
+使用 ls / 查看目录为"/"下的所有文件和目录。与上一步比较，不在挂载点的都属于"/"挂载点，这些目录类似于windows的系统盘，所以尽量不要安装服务或存放数据。
+
+安装相关服务时必须指定数据的存放路径和日志路径，且不能为系统目录。
+
+重灾区：/var/lib,/var/log
+
+
