@@ -3,12 +3,35 @@ title: 在两台CentOS7上基于docker+keepalived+mycat搭建mysql双主实现�
 tags: 新建,模板,小书匠
 grammar_cjkRuby: true
 ---
+## 基于docker环境安装mysql双主
 
 master1：192.168.1.77
 master2：192.168.1.125
 
+架构图如下：
+
+
+
 公司在业务上使用了分库，一共有3个不同版本的mysql，因此需要搭建三套mysql主从。
+创建配置文件
+
+mkdir -p /home/mysql/conf
+cd /home/mysql/conf
+mkdir news stock push
+
+编辑一个配置文件
+vi my.cnf
+[mysqld]
+log-bin=mysql-bin
+server-id=77 #一般为ip最后一段，在master2上记得改成125
+
+![配置文件目录](./images/1529977435928.png)
+
 使用docker命令在master1和master2上分别执行安装命令。安装docker请参考这里。
+
+
+
+
 docker run -p 3307:3306 --restart=always --name news -v /home/mysql/conf/news:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=test -d mariadb:5.5
 docker run -p 3308:3306 --restart=always --name stock -v /home/mysql/conf/stock:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=test -d percona/percona-server:5.6
 docker run -p 3309:3306 --restart=always --name push -v /home/mysql/conf/push:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=test -d mysql:5.7
@@ -42,6 +65,8 @@ MASTER_LOG_POS=460;
 查看是否启动
 start slave;
 show slave status\G;
+> Slave_IO_Running: Yes
+Slave_SQL_Running: Yes
 
 同理在其他mysql中执行执行以上命令，注意根据情况更改主机、端口、日志文件等参数。
 
