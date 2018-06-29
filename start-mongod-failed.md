@@ -1,6 +1,6 @@
 ---
 title: mongo服务异退出问题记录及解决 
-tags: 新建,模板,小书匠
+tags: mongo,Linux,磁盘满
 grammar_cjkRuby: true
 ---
 
@@ -17,31 +17,35 @@ grammar_cjkRuby: true
 ![enter description here](./images/1529991883247.png)
 
 解决方式，把mongo的数据文件和日志文件迁移到其他挂载点(home)
+```shell
 mkdir /home/lib /home/log
 mv /var/lib/mongod /home/lib
 mv /var/log/mongod /home/log
+```
+
 修改mongo的配置文件，指定日志文件和数据文件路径
-vi /etc/mongod.conf
-![enter description here](./images/1529992187604.png)
+
+![/etc/mongod.conf](./images/1529992187604.png)
 
 再次查看分区占用情况
+
 ![enter description here](./images/1529992314772.png)
 
 使用mongod -f /etc/mongod.conf 启动mongodb能正常启动
 
+> 
 
-总结
-使用 df -h 查看所有挂载点
-使用 ls / 查看目录为"/"下的所有文件和目录。与上一步比较，不在挂载点的都属于"/"挂载点，这些目录类似于windows的系统盘，所以尽量不要安装服务或存放数据。
-
-安装相关服务时必须指定数据的存放路径和日志路径，且尽量不要指定为系统目录。
+**总结：**
+* 使用`df -h`查看所有挂载点。
+* 使用`ls /`查看目录为"/"下的所有文件和目录。与上一步比较，不在挂载点的都属于"/"，这些目录* 类似于windows的系统盘，所以尽量不要安装服务或存放数据。
+* 安装相关服务时必须指定数据的存放路径和日志路径，且尽量不要指定为系统目录。
 
 重灾区：/var/lib，/var/log，/usr/local
 
 需要注意的服务
 nginx日志，建议使用新版，会自动按天分割日志，并归档压缩。
-mysql/redis/mongo等数据库的数据文件和日志文件
-tomcat日志，建议配置按天分割
+mysql/redis/mongo等数据库的数据文件和日志文件。
+tomcat日志，建议配置按天分割。
 
 
 
