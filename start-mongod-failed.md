@@ -1,18 +1,17 @@
 ---
-title: mongo服务异退出问题记录及解决 
+title: mongo服务因磁盘无法写入而异退出的解决方法
 tags: mongo,Linux,磁盘满
 grammar_cjkRuby: true
 ---
 
-1.使用ps -ef|grep mongod 查看已经没有了mongod的服务进程
-2.使用 tail -f /var/log/mongodb/mongod.log 查看日志信息，发现并没有错误信息，最后一条消息只显示了一个时间
-3.使用mongod -f /etc/mongod.conf 发现启动失败，mongod.log里也并未增加任何运行日志 
+1.使用`ps -ef|grep mongod `查看已经没有了mongod的服务进程
+2.使用`tail -f /var/log/mongodb/mongod.log`查看日志信息，发现并没有错误信息，最后一条消息只显示了一个时间.
+3.使用`mongod -f /etc/mongod.conf`启动失败，mongod.log里也并未增加任何运行日志 
 
 初步判断是mongo无法写入文件了。
+使用命令补全(tab键)时提示：`va-bash: 无法为立即文档创建临时文件: 设备上没有空间`
 
-使用命令补全(tab键)时提示：va-bash: 无法为立即文档创建临时文件: 设备上没有空间
-
-使用命令 df -h 查看分区占用情况，发现挂载点为"/"已使用100%。
+使用命令`df -h`查看分区占用情况，发现挂载点为"/"已使用100%。
 
 ![enter description here](./images/1529991883247.png)
 
@@ -31,7 +30,7 @@ mv /var/log/mongod /home/log
 
 ![enter description here](./images/1529992314772.png)
 
-使用mongod -f /etc/mongod.conf 启动mongodb能正常启动
+使用`mongod -f /etc/mongod.conf `启动mongodb能正常启动
 
 > 
 
@@ -42,10 +41,10 @@ mv /var/log/mongod /home/log
 
 重灾区：/var/lib，/var/log，/usr/local
 
-需要注意的服务
-nginx日志，建议使用新版，会自动按天分割日志，并归档压缩。
-mysql/redis/mongo等数据库的数据文件和日志文件。
-tomcat日志，建议配置按天分割。
+**需要注意的服务**:
+* nginx日志，建议使用新版，会自动按天分割日志，并归档压缩。
+* mysql/redis/mongo等数据库的数据文件和日志文件。
+* tomcat日志，建议配置按天分割。
 
 
 
