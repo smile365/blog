@@ -1,7 +1,7 @@
 ---
 title: 在CentOS上安装Fluentd实现把nginx日志存入mongo 
 tags: ["Fluentd","nginx"]
-date: 2018-7-3
+date: 2018-07-03
 ---
 
 
