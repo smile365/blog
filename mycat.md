@@ -1,7 +1,7 @@
 ---
 title: 在CentOS7上安装mycat实现读写分离 
-tags: mysql,高可用,读写分离
-grammar_cjkRuby: true
+tags: ["mysql"]
+draft: true
 ---
 
 
@@ -20,9 +20,13 @@ tar zxvf Mycat-server-1.6-RELEASE-20161028204710-linux.tar.gz
 ./mycat/bin/mycat console
 ```
 
+启动测试
+./mycat/bin/mycat console
+
 **配置 mycat**
 先配置server.xml里的user，用户名与密码随意和数据库的密码没关系，只作为登陆mycat的密码
 然后配置schema.xml
+
 
 连接测试，管理端口9066，服务端口8066
 mysql -h127.0.0.1 -P8066 -uroot -proot
