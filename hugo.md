@@ -56,6 +56,7 @@ vi /home/myblog/config.toml
 description
 
 github图片不显示的处理
+使用图床，7牛云存储
 
 seo修改
 显示缩略图
