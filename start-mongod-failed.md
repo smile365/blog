@@ -13,7 +13,8 @@ draft: true
 
 使用命令`df -h`查看分区占用情况，发现挂载点为"/"已使用100%。
 
-![enter description here](./images/1529991883247.png)
+
+![分区情况](https://i.loli.net/2018/07/04/5b3cb1b8a30f7.jpg)
 
 解决方式，把mongo的数据文件和日志文件迁移到其他挂载点(home)
 ```shell
@@ -24,11 +25,12 @@ mv /var/log/mongod /home/log
 
 修改mongo的配置文件，指定日志文件和数据文件路径
 
-![/etc/mongod.conf](./images/1529992187604.png)
+![/etc/mongod.conf](https://i.loli.net/2018/07/04/5b3cb1da283f4.jpg)
 
 再次查看分区占用情况
 
-![enter description here](./images/1529992314772.png)
+![分区情况](https://i.loli.net/2018/07/04/5b3cb1f3d4b34.jpg)
+
 
 使用`mongod -f /etc/mongod.conf `启动mongodb能正常启动
 
