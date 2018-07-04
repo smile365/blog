@@ -55,6 +55,8 @@ vi /home/myblog/config.toml
 文章中增加
 description
 
+github图片不显示的处理
+
 seo修改
 显示缩略图
 
