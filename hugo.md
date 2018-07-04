@@ -66,7 +66,7 @@ seo修改
 
 
 **参考**
-[官方文档](https://gohugo.io/getting-started/quick-start/)
-[Format](https://gohugo.io/functions/format/)
-[configuration](https://gohugo.io/getting-started/configuration/)
+* [官方文档](https://gohugo.io/getting-started/quick-start/)
+* [Format](https://gohugo.io/functions/format/)
+* [configuration](https://gohugo.io/getting-started/configuration/)
 
