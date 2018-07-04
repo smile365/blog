@@ -1,10 +1,10 @@
 ---
 title: 申请免费https证书并自动更新 
 tags: ["https"]
-date: 2018-07-04
+date: 2018-01-30
 ---
 
- [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过脚本定期更新。
+ [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过脚本定期更新。申请步骤如下：
 
 **创建验证所需文件**
 ```sh?linenums
