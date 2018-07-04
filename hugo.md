@@ -43,3 +43,6 @@ contab -l
 
 **参考**
 [官方文档](https://gohugo.io/getting-started/quick-start/)
+[Format](https://gohugo.io/functions/format/)
+
+
