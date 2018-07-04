@@ -1,5 +1,6 @@
 ---
 title: CentOS7安装hugo
+date: 2018-07-04
 tags: ["centos","hugo"]
 draft: true
 ---
@@ -18,6 +19,26 @@ hugo version
 * 命令行 hugo server -t themename
 * 配置文件 theme: themename
 
+修改主题的时间显示样式
+themes/cactus/layouts/partials/post-list.html
+.Date.Format "2006-01-02"
+
+定时发布脚本
+```shell?linenums
+#!/usr/bin/sh
+#publish_blog.sh
+rm -rf /home/myblog/content/posts/*
+cd /home/script/blog
+echo `pwd`
+echo `git pull`
+cp -rf * /home/myblog/content/posts
+cd /home/myblog
+echo `pwd`
+echo `hugo -b https://sxy91.com/ -t cactus`
+```
+
+contab -l
+0 */1 * * * /home/scritp/publish_blog.sh
 
 
 **参考**
