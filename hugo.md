@@ -1,7 +1,7 @@
 ---
 title: CentOS7安装hugo
-tags: centos,hugo
-grammar_cjkRuby: true
+tags: ["centos","hugo"]
+draft: true
 ---
 
 **安装命令**
