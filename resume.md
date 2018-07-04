@@ -7,7 +7,7 @@ IT工程师用Markdown语法写简历是什么样子
 <!-- excerpt -->
 # 宋学彦
 新疆大学  | 软件工程 | 17611134469 | sxy9103@qq.com
-博客：[songxueyan.top](https://www.songxueyan.top)
+博客：[songxueyan.top](https://www.sxy91.com)
 ### 个人能力
 - 具有4年的JavaEE体系结构设计经验，1年的Android应用开发经验。
 - 熟练运用H5、CSS、JavaScript、Vue等前端技术。 
