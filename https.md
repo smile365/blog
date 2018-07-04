@@ -46,7 +46,9 @@ server {
 ```shell
 python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /var/www/challenges/ > ./signed.crt
 ```
- ![signed.crt](./images/1530668572034.png)
+
+![signed.crt](https://i.loli.net/2018/07/04/5b3cb0f7dc4b5.jpg)
+
 
 **安装证书**
 ```shell?linenums
