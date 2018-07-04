@@ -34,8 +34,7 @@ systemctl start shadowsocks-libev
 
 经翻墙成功后，如果是安卓手机推荐安装谷歌play，可以通过谷歌搜索[谷歌服务安装](https://www.google.com/search?newwindow=1&ei=srkfW_mpJ-au0gL39YiQDw&q=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85)找到符合自己手机的安装的教程。其实就是安装一套谷歌服务框架，不同手机的安装方法不同。大部分手机可以通过下载一个名叫[谷歌安装器](http://www.wandoujia.com/apps-com.ericxiang.googleinstaller)的app进行安装。
 
-![使用安装器安装谷歌框架](./images/1529323136349.png)
-
+![使用安装器安装谷歌框架](https://i.loli.net/2018/07/04/5b3cb2558ee8a.jpg)
 祝你玩的愉快！
 
 参考
