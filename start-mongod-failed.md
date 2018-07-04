@@ -1,7 +1,7 @@
 ---
 title: mongo服务因磁盘无法写入而异退出的解决方法
-tags: mongo,Linux,磁盘满
-grammar_cjkRuby: true
+tags: ["mongo","Linux"]
+draft: true
 ---
 
 1.使用`ps -ef|grep mongod `查看已经没有了mongod的服务进程
