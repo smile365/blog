@@ -41,6 +41,8 @@ contab -l
 0 */1 * * * /home/scritp/publish_blog.sh
 
 
+更改主题，显示缩略图和摘要
+
 **参考**
 [官方文档](https://gohugo.io/getting-started/quick-start/)
 [Format](https://gohugo.io/functions/format/)
