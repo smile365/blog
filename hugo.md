@@ -19,9 +19,7 @@ hugo version
 * 命令行 hugo server -t themename
 * 配置文件 theme: themename
 
-修改主题的时间显示样式
-themes/cactus/layouts/partials/post-list.html
-.Date.Format "2006-01-02"
+
 
 定时发布脚本
 ```shell?linenums
@@ -40,12 +38,29 @@ echo `hugo -b https://sxy91.com/ -t cactus`
 contab -l
 0 */1 * * * /home/scritp/publish_blog.sh
 
+修改主题的时间显示样式
+themes/cactus/layouts/partials/post-list.html
+.Date.Format "2006-01-02"
 
-更改主题，显示缩略图和摘要
+显示摘要
+vi /home/myblog/config.toml
+[params]
+ enableSummary = true
+
+使用描述作为摘要
+[params]
+ enableSummary = true
+ useDescriptionReplaceSummary = true
+
+文章中增加
+description
+
 seo修改
+显示缩略图
+
 
 **参考**
 [官方文档](https://gohugo.io/getting-started/quick-start/)
 [Format](https://gohugo.io/functions/format/)
-
+[configuration](https://gohugo.io/getting-started/configuration/)
 
