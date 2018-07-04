@@ -1,7 +1,6 @@
 ---
 title: mycat出错的问题集锦及解决方式
-tags: 新建,模板,小书匠
-grammar_cjkRuby: true
+draft: true
 ---
 
 
@@ -12,3 +11,6 @@ grammar_cjkRuby: true
 
 
 Caused by: io.mycat.config.util.ConfigException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 6; 不允许有匹配 "[xX][mM][lL]" 的处理指令目标。
+
+vi schema.xml
+删除第一行空行
