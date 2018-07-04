@@ -42,6 +42,7 @@ contab -l
 
 
 更改主题，显示缩略图和摘要
+seo修改
 
 **参考**
 [官方文档](https://gohugo.io/getting-started/quick-start/)
