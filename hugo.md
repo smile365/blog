@@ -58,6 +58,9 @@ description
 seo修改
 显示缩略图
 
+评论
+百度统计，谷歌统计
+
 
 **参考**
 [官方文档](https://gohugo.io/getting-started/quick-start/)
