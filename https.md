@@ -1,6 +1,6 @@
 ---
 title: 申请免费https证书并自动更新 
-tags: https,证书
+tags: ["https"]
 date: 2018-07-04
 ---
 
