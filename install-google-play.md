@@ -1,6 +1,6 @@
 ---
 title: 通过命令安装Shadowsocks Server
-tags: Shadowsocks,科学上网
+tags: ["Shadowsocks"]
 date: 2018-07-03
 ---
 
