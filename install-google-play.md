@@ -1,7 +1,7 @@
 ---
 title: 通过命令安装Shadowsocks Server
 tags: ["Shadowsocks"]
-date: 2018-07-03
+date: 2018-06-01
 ---
 
 
