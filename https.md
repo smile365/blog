@@ -74,7 +74,7 @@ nginx -s reload
 #每2月执行一次
 0 0 1 */2 * /home/soft/key/renew_cert.sh 2>> /home/soft/key/acme_tiny.log
 
-**参考**
+
 1. [SSL/TLS 加密新纪元](https://linux.cn/article-6565-1.html)
 2. [免费HTTPS证书Let's Encrypt安装教程](https://foofish.net/https-free-for-lets-encrypt.html)
 3. [acme.sh](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
