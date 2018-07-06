@@ -2,8 +2,8 @@ baseURL = "http://sxy01.com/"
 languageCode = "en"
 title = "本草洋葱"
 theme = "nuo"
-PygmentsCodeFences = true
-canonifyurls = true
+#PygmentsCodeFences = true
+#canonifyurls = true
 
 # Disqus Username
 #disqusShortname = "disqus_shortname"
@@ -16,19 +16,19 @@ copyright = "? This post is licensed under a Creative Commons Attribution-NonCom
 
 # Initial site menu, you can extend menu with content.
 [[menu.main]]
-  name = "Home"
+  name = "首页"
   weight = 10
   identifier = "home"
   url = "/"
 
 [[menu.main]]
-  name = "Works"
+  name = "作品"
   weight = 20
   identifier = "works"
   url = "https://github.com/smile365"
 
 [[menu.main]]
-  name = "Tags"
+  name = "标签"
   weight = 30
   identifier = "tags"
   url = "/tags/"
