@@ -50,7 +50,7 @@ python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /v
 ![signed.crt](https://i.loli.net/2018/07/04/5b3cb0f7dc4b5.jpg)
 
 
-**安装证书**
+### 安装证书
 ```shell?linenums
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem > intermediate.pem
 cat signed.crt intermediate.pem > chained.pem
@@ -60,7 +60,7 @@ nginx -s reload
 
 访问[https://sxy91.com](https://sxy91.com)测试
 
-**过期前自动更新证书**
+### 过期前自动更新证书
 自动更新脚本renew_cert.sh，内容如下：
 ```shell?linenums
 #!/usr/bin/sh renew_cert.sh
@@ -74,6 +74,7 @@ nginx -s reload
 #每2月执行一次
 0 0 1 */2 * /home/soft/key/renew_cert.sh 2>> /home/soft/key/acme_tiny.log
 
+### 参考
 
 - [SSL/TLS 加密新纪元](https://linux.cn/article-6565-1.html)
 - [免费HTTPS证书Let's Encrypt安装教程](https://foofish.net/https-free-for-lets-encrypt.html)
