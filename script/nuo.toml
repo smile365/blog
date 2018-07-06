@@ -1,9 +1,11 @@
-baseURL = "http://sxy01.com/"
+baseURL = "http://sxy91.com/"
 languageCode = "en"
 title = "本草洋葱"
 theme = "nuo"
-#PygmentsCodeFences = true
-#canonifyurls = true
+#代码高亮
+PygmentsCodeFences = true
+#不使用/切割url，而使用filename.html
+canonifyurls = true
 
 # Disqus Username
 #disqusShortname = "disqus_shortname"
@@ -12,7 +14,7 @@ theme = "nuo"
 #googleAnalytics = "UA-XXXXXXXX-X"
 
 # Copyright of your post
-copyright = "? This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce."
+#copyright = " "
 
 # Initial site menu, you can extend menu with content.
 [[menu.main]]
