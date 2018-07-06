@@ -7,45 +7,45 @@ date: 2018-01-30
  [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过脚本定期更新。申请步骤如下：
 
 **创建验证所需文件**
-```sh?linenums
-#创建一个目录存放证书
-mkdir /home/soft/key
-cd  /home/soft/key
-
-#创建 Let's Encrypt 账号
-openssl genrsa 4096 > account.key
-
-#创建普通域名私钥
-openssl genrsa 4096 > domain.key
-
-#创建域名sxy91.com的注册文件
-openssl req -new -sha256 -key domain.key -subj "/CN=sxy91.com" > domain.csr
-
-#下载acme脚本
-wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
-
-#创建一个目录存放域名验证文件
-mkdir -p /var/www/challenges
-```
+    ```sh?linenums
+    #创建一个目录存放证书
+    mkdir /home/soft/key
+    cd  /home/soft/key
+    
+    #创建 Let's Encrypt 账号
+    openssl genrsa 4096 > account.key
+    
+    #创建普通域名私钥
+    openssl genrsa 4096 > domain.key
+    
+    #创建域名sxy91.com的注册文件
+    openssl req -new -sha256 -key domain.key -subj "/CN=sxy91.com" > domain.csr
+    
+    #下载acme脚本
+    wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
+    
+    #创建一个目录存放域名验证文件
+    mkdir -p /var/www/challenges
+    ```
 
 
 **编辑nginx，让域名能访问到验证文件（需要重启nginx）**
 vi /etc/nginx/conf.d/sxy.conf
-```nginxconf
-server {
-    listen 80;
-    server_name *.sxy91.com;
-    location ^~ /.well-known/acme-challenge/ {
-        alias /var/www/challenges/;
-        try_files $uri =404;
+    ```nginxconf
+    server {
+        listen 80;
+        server_name *.sxy91.com;
+        location ^~ /.well-known/acme-challenge/ {
+            alias /var/www/challenges/;
+            try_files $uri =404;
+        }
     }
-}
-```
+    ```
 
 **使用acme脚本申请证书**
-```shell
-python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /var/www/challenges/ > ./signed.crt
-```
+    ```shell
+    python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /var/www/challenges/ > ./signed.crt
+    ```
 
 ![signed.crt](https://i.loli.net/2018/07/04/5b3cb0f7dc4b5.jpg)
 
