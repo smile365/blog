@@ -64,9 +64,13 @@ seo修改
 评论
 百度统计，谷歌统计
 
+使用相对url，不是绝对url
+    修改主题文件中的summary.html引用Permalink的地方都改为URL
+代码高亮
 
 **参考**
 * [官方文档](https://gohugo.io/getting-started/quick-start/)
 * [Format](https://gohugo.io/functions/format/)
 * [configuration](https://gohugo.io/getting-started/configuration/)
-
+* [highlighter](https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css)
+* [page variables](https://gohugo.io/variables/page/)
