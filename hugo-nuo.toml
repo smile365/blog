@@ -38,8 +38,8 @@ copyright = "? This post is licensed under a Creative Commons Attribution-NonCom
   author = "宋学彦"
   avatar = "/img/avatar.jpg"
   seotitle = "本草洋葱"
-  subtitle = "宋学彦的个人博客"
-  description = "喜欢Python、Golang，混迹于互联网"
+  subtitle = "宋学彦的博客"
+  description = "我有故事，你有洋葱吗"
   paginate = 10
 
   # Choose your social networks
