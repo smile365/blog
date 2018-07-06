@@ -1,6 +1,6 @@
-baseURL = "http://sxy01.com/"
+ï»¿baseURL = "http://sxy01.com/"
 languageCode = "en"
-title = "±¾²İÑó´Ğ"
+title = "æœ¬è‰æ´‹è‘±"
 theme = "nuo"
 PygmentsCodeFences = true
 canonifyurls = true
@@ -12,7 +12,7 @@ canonifyurls = true
 #googleAnalytics = "UA-XXXXXXXX-X"
 
 # Copyright of your post
-copyright = "? This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License£¬please give source if you wish to quote or reproduce."
+copyright = "? This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International Licenseï¼Œplease give source if you wish to quote or reproduce."
 
 # Initial site menu, you can extend menu with content.
 [[menu.main]]
@@ -35,11 +35,11 @@ copyright = "? This post is licensed under a Creative Commons Attribution-NonCom
 
 # Add your own params here
 [params]
-  author = "ËÎÑ§Ñå"
+  author = "å®‹å­¦å½¦"
   avatar = "/img/avatar.jpg"
-  seotitle = "±¾²İÑó´Ğ"
-  subtitle = "ËÎÑ§ÑåµÄ²©¿Í"
-  description = "ÎÒÓĞ¹ÊÊÂ£¬ÄãÓĞÑó´ĞÂğ"
+  seotitle = "æœ¬è‰æ´‹è‘±"
+  subtitle = "å®‹å­¦å½¦çš„åšå®¢"
+  description = "æˆ‘æœ‰æ•…äº‹ï¼Œä½ æœ‰æ´‹è‘±å—"
   paginate = 10
 
   # Choose your social networks
@@ -95,4 +95,4 @@ copyright = "? This post is licensed under a Creative Commons Attribution-NonCom
   baiduTongji = "c72e82fc9139bd96d22ed8e902230200"
 
   # ICP Number (China Only)
-  ICP = "¾©ICP±¸17046504ºÅ"
+  ICP = "äº¬ICPå¤‡17046504å·"
