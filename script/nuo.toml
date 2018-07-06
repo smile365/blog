@@ -40,8 +40,8 @@ canonifyurls = true
   author = "宋学彦"
   avatar = "/img/avatar.jpg"
   seotitle = "本草洋葱"
-  subtitle = "宋学彦的博客"
-  description = "我有故事，你有洋葱吗"
+  subtitle = "我有故事，你有洋葱吗"
+  description = "宋学彦的博客"
   paginate = 10
 
   # Choose your social networks
