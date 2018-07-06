@@ -6,13 +6,16 @@ date: 2018-06-26
 
 
 下载官方安装脚本并启动：
-```
+
+```shell
 wget https://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh
 chmod +x install-redhat-td-agent2.sh
 ./install-redhat-td-agent2.sh
 systemctl start td-agent
 ```
+
 查看日志
+
 ```
 tail -f /var/log/td-agent/td-agent.log
 ```
@@ -23,6 +26,7 @@ vi /etc/td-agent/td-agent.conf
 ```
 
 文件内容如下，source为nginx日志格式化，match mongo为使用mongo存储
+
 ```
 <source>
   @type tail
@@ -57,6 +61,7 @@ port:端口，默认27017
 flush_interval:刷新间隔，10s写入一次数据
 
 重启 
+
 ```
 systemctl restart td-agent
 ```
