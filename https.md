@@ -7,30 +7,32 @@ date: 2018-01-30
  [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过脚本定期更新。申请步骤如下：
 
 **创建验证所需文件**
-    ```sh?linenums
-    #创建一个目录存放证书
-    mkdir /home/soft/key
-    cd  /home/soft/key
-    
-    #创建 Let's Encrypt 账号
-    openssl genrsa 4096 > account.key
-    
-    #创建普通域名私钥
-    openssl genrsa 4096 > domain.key
-    
-    #创建域名sxy91.com的注册文件
-    openssl req -new -sha256 -key domain.key -subj "/CN=sxy91.com" > domain.csr
-    
-    #下载acme脚本
-    wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
-    
-    #创建一个目录存放域名验证文件
-    mkdir -p /var/www/challenges
-    ```
+
+```sh?linenums
+#创建一个目录存放证书
+mkdir /home/soft/key
+cd  /home/soft/key
+
+#创建 Let's Encrypt 账号
+openssl genrsa 4096 > account.key
+
+#创建普通域名私钥
+openssl genrsa 4096 > domain.key
+
+#创建域名sxy91.com的注册文件
+openssl req -new -sha256 -key domain.key -subj "/CN=sxy91.com" > domain.csr
+
+#下载acme脚本
+wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
+
+#创建一个目录存放域名验证文件
+mkdir -p /var/www/challenges
+```
 
 
 **编辑nginx，让域名能访问到验证文件（需要重启nginx）**
 vi /etc/nginx/conf.d/sxy.conf
+
     ```nginxconf
     server {
         listen 80;
@@ -43,6 +45,7 @@ vi /etc/nginx/conf.d/sxy.conf
     ```
 
 **使用acme脚本申请证书**
+
     ```shell
     python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /var/www/challenges/ > ./signed.crt
     ```
@@ -51,6 +54,7 @@ vi /etc/nginx/conf.d/sxy.conf
 
 
 ### 安装证书
+
 ```shell?linenums
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem > intermediate.pem
 cat signed.crt intermediate.pem > chained.pem
@@ -62,6 +66,7 @@ nginx -s reload
 
 ### 过期前自动更新证书
 自动更新脚本renew_cert.sh，内容如下：
+
 ```shell?linenums
 #!/usr/bin/sh renew_cert.sh
 python acme_tiny.py --account-key account.key --csr domain.csr --acme-dir /var/www/challenges/ > /tmp/signed.crt || exit
