@@ -16,18 +16,18 @@ systemctl start td-agent
 
 查看日志
 
-```
+```shell
 tail -f /var/log/td-agent/td-agent.log
 ```
 
 配置
-```
+```shell
 vi /etc/td-agent/td-agent.conf
 ```
 
 文件内容如下，source为nginx日志格式化，match mongo为使用mongo存储
 
-```
+```nginx
 <source>
   @type tail
   format /^(?<remote>[^ ]*) (?<host>[-]) (?<user>[^ ]*) \[(?<time>[^\]]*)\] "(?<method>\S+)(?: +(?<path>[^\"]*) +\S*)?" (?<code>[^ ]*) (?<size>[^ ]*) "(?<referer>[^\"]*)" "(?<agent>[^\"]*)"/
@@ -46,9 +46,10 @@ vi /etc/td-agent/td-agent.conf
   flush_interval 10s
 </match>
 ```
+
 配置文件说明
 
-type tail: tail方式是 fluentd 内置的输入方式，其原理是不停地从源文件中获取新的日志。
+type tail: tail方式是 fluentd 内置的输入方式，其原理是不停地从源文件中获取新的日志.
 format nginx: 指定使用 fluentd 内置的 nginx 日志解析器。
 path /data/logs/nginx/access.log: nginx日志文件位置。
 pos_file /data/logs/nginx/access.log.pos:fluentd会把读取nginx日志并
