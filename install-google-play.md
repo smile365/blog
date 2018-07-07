@@ -16,7 +16,7 @@ apt -t stretch-backports install shadowsocks-libev
 
 配置：
 nano /etc/shadowsocks-libev/config.json
-```nginx
+```json
 {
     "server":"127.0.0.1",
     "server_port":8388,
