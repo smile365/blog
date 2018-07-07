@@ -8,7 +8,7 @@ date: 2018-01-30
 
 **创建验证所需文件**
 
-```sh?linenums
+```shell
 #创建一个目录存放证书
 mkdir /home/soft/key
 cd  /home/soft/key
@@ -33,16 +33,16 @@ mkdir -p /var/www/challenges
 **编辑nginx，让域名能访问到验证文件（需要重启nginx）**
 vi /etc/nginx/conf.d/sxy.conf
 
-    ```nginxconf
-    server {
-        listen 80;
-        server_name *.sxy91.com;
-        location ^~ /.well-known/acme-challenge/ {
-            alias /var/www/challenges/;
-            try_files $uri =404;
-        }
+```nginx
+server {
+    listen 80;
+    server_name *.sxy91.com;
+    location ^~ /.well-known/acme-challenge/ {
+        alias /var/www/challenges/;
+        try_files $uri =404;
     }
-    ```
+}
+```
 
 **使用acme脚本申请证书**
 
@@ -53,7 +53,7 @@ vi /etc/nginx/conf.d/sxy.conf
 ![signed.crt](https://i.loli.net/2018/07/04/5b3cb0f7dc4b5.jpg)
 
 
-### 安装证书
+### 
 
 ```shell?linenums
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem > intermediate.pem
