@@ -47,23 +47,22 @@ vi /etc/td-agent/td-agent.conf
 </match>
 ```
 
-配置文件说明
+**配置文件说明:**
 
-type tail: tail方式是 fluentd 内置的输入方式，其原理是不停地从源文件中获取新的日志.
+- type tail: tail方式是 fluentd 内置的输入方式，其原理是不停地从源文件中获取新的日志
 format nginx: 指定使用 fluentd 内置的 nginx 日志解析器。
-path /data/logs/nginx/access.log: nginx日志文件位置。
-pos_file /data/logs/nginx/access.log.pos:fluentd会把读取nginx日志并
-tag mongo.nginx: 指定tag，tag被用来对不同的日志进行分类
-type mongo:fluentd插件类型，这里是针对mongodb的插件
-database:数据库名字
-collection:表名
-host:主机
-port:端口，默认27017
-flush_interval:刷新间隔，10s写入一次数据
+- path /data/logs/nginx/access.log: nginx日志文件位置。
+- pos_file /data/logs/nginx/access.log.pos:fluentd会把读取nginx日志并
+- tag mongo.nginx: 指定tag，tag被用来对不同的日志进行分类
+- type mongo:fluentd插件类型，这里是针对mongodb的插件
+- database:数据库名字
+- collection:表名
+- host:主机
+- port:端口，默认27017
+- flush_interval:刷新间隔，10s写入一次数据
 
-重启 
-
-```
+改了配置文件记得重启 
+```shell
 systemctl restart td-agent
 ```
 
