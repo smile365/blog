@@ -16,6 +16,7 @@ apt -t stretch-backports install shadowsocks-libev
 
 配置：
 nano /etc/shadowsocks-libev/config.json
+```nginx
 {
     "server":"127.0.0.1",
     "server_port":8388,
@@ -24,6 +25,7 @@ nano /etc/shadowsocks-libev/config.json
     "timeout":60,
     "method":"chacha20-ietf-poly1305"
 }
+```
 
 启动
 systemctl start shadowsocks-libev  
@@ -37,7 +39,7 @@ systemctl start shadowsocks-libev
 ![使用安装器安装谷歌框架](https://i.loli.net/2018/07/04/5b3cb2558ee8a.jpg)
 祝你玩的愉快！
 
-参考
-[Google服务框架最新版下载](http://www.ifanr.com/app/693456)
-[Debian 8 安装 shadowsocks](https://blog.csdn.net/B0rn_T0_W1n/article/details/52663434)
+**参考**
+- [Google服务框架最新版下载](http://www.ifanr.com/app/693456)
+- [Debian 8 安装 shadowsocks](https://blog.csdn.net/B0rn_T0_W1n/article/details/52663434)
 
