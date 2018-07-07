@@ -4,7 +4,9 @@ date: 2018-07-07
 tags: ["ssh"]
 series: ["blog"]
 categories: ["code"]
+draft: false
 description: 
+cover: 
 ---
 
 查看已经安装的公
@@ -36,10 +38,17 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "smile645@sina.cn"
 
 ssh -T git@github.com
 
-![enter description here](https://i.loli.net/2018/07/07/5b405fc9d9dd5.jpg)
+![git bash](https://i.loli.net/2018/07/07/5b405fc9d9dd5.jpg)
 
 成功！
+
+如果commit时还需要密码，请在项目的config里把url改为ssh格式
+
+![ssh url](https://i.loli.net/2018/07/07/5b4079f06a054.jpg)
+
 
 **参考**
 
 - [Git之同一台电脑连接多个远程仓库](https://www.jianshu.com/p/04e9a885c5c8)
+- [Adding SSH key to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+- [git/github学习笔记](http://www.cnblogs.com/fnng/archive/2011/08/25/2153807.html)
