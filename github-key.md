@@ -6,7 +6,6 @@ series: ["blog"]
 categories: ["code"]
 draft: false
 description: 
-cover: 
 ---
 
 查看已经安装的公
