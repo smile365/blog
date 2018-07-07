@@ -7,7 +7,7 @@ categories: ["code"]
 description: 
 ---
 
-查看已经安装的公
+查看已经安装的公钥
 C:\Users\[用户]\.ssh
 
 ![enter description here](https://i.loli.net/2018/07/07/5b405c72a2c5c.jpg)
