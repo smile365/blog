@@ -50,7 +50,7 @@ vi /etc/td-agent/td-agent.conf
 **配置文件说明:**
 
 - type tail: tail方式是 fluentd 内置的输入方式，其原理是不停地从源文件中获取新的日志
-format nginx: 指定使用 fluentd 内置的 nginx 日志解析器。
+- format nginx: 指定使用 fluentd 内置的 nginx 日志解析器。
 - path /data/logs/nginx/access.log: nginx日志文件位置。
 - pos_file /data/logs/nginx/access.log.pos:fluentd会把读取nginx日志并
 - tag mongo.nginx: 指定tag，tag被用来对不同的日志进行分类
@@ -61,14 +61,16 @@ format nginx: 指定使用 fluentd 内置的 nginx 日志解析器。
 - port:端口，默认27017
 - flush_interval:刷新间隔，10s写入一次数据
 
+
 改了配置文件记得重启 
+
 ```shell
 systemctl restart td-agent
 ```
 
-参考
-[Installing Fluentd Using rpm Package](https://docs.fluentd.org/v0.12/articles/install-by-rpm)
-[MongoDB Output Plugin](https://docs.fluentd.org/v0.12/articles/out_mongo)
-[td-agent v1 vs. td-agent v2](https://docs.fluentd.org/v0.12/articles/td-agent-v1-vs-v2)
-[fluentd安装配置简介](http://mayiwei.com/2014/03/03/fluentd-setup/)
-[Getting Data From Nginx Into Mongo Using Fluentd](https://docs.fluentd.org/v0.12/articles/recipe-nginx-to-mongo)
+**参考**
+- [Installing Fluentd Using rpm Package](https://docs.fluentd.org/v0.12/articles/install-by-rpm)
+- [MongoDB Output Plugin](https://docs.fluentd.org/v0.12/articles/out_mongo)
+- [td-agent v1 vs. td-agent v2](https://docs.fluentd.org/v0.12/articles/td-agent-v1-vs-v2)
+- [fluentd安装配置简介](http://mayiwei.com/2014/03/03/fluentd-setup/)
+- [Getting Data From Nginx Into Mongo Using Fluentd](https://docs.fluentd.org/v0.12/articles/recipe-nginx-to-mongo)
