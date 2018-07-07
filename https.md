@@ -76,8 +76,8 @@ nginx -s reload
 ```
 
 修改crontab，增加一条定时：
-#每2月执行一次
-0 0 1 */2 * /home/soft/key/renew_cert.sh 2>> /home/soft/key/acme_tiny.log
+`#每2月执行一次`
+`0 0 1 */2 * /home/soft/key/renew_cert.sh 2>> /home/soft/key/acme_tiny.log`
 
 ### 参考
 
