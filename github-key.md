@@ -4,7 +4,6 @@ date: 2018-07-07
 tags: ["ssh"]
 series: ["blog"]
 categories: ["code"]
-draft: false
 description: 
 cover: 
 ---
