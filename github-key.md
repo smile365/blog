@@ -5,7 +5,6 @@ tags: ["ssh"]
 series: ["blog"]
 categories: ["code"]
 description: 
-cover: 
 ---
 
 查看已经安装的公
