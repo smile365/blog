@@ -1,5 +1,5 @@
 ---
-title:  windows配置多个远程仓库的ssh key公匙实现免密提交
+title:  windows配置ssh key公匙实现免密提交到多个远程仓库
 date: 2018-07-07
 tags: ["ssh"]
 series: ["blog"]
@@ -14,8 +14,8 @@ C:\Users\[用户]\.ssh
 
 ![enter description here](https://i.loli.net/2018/07/07/5b405c72a2c5c.jpg)
 
-如果已经安装git
-可以通过git bash 查看：ls ~/.ssh
+
+或者可以通过git bash 查看：ls ~/.ssh
 
 ![enter description here](https://i.loli.net/2018/07/07/5b405ca0bbbfe.jpg)
 
