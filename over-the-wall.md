@@ -3,7 +3,6 @@ title: 科学上网图文教程
 date: 2018-01-26
 tags: ["科学上网"]
 description : 一份全平台支持的翻墙图文教程
-cover: http://upload-images.jianshu.io/upload_images/1374969-2b60e6f0a92b0655.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 ---
 
 一份全平台支持的翻墙图文教程
