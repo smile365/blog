@@ -1,5 +1,5 @@
 ---
-title:  项目说明
+title:  Java项目结构说明
 date: 2018-07-09T06:46:05.091Z
 tags: ["交接文档"]
 series: ["blog"]
