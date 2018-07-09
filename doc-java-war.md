@@ -1,7 +1,7 @@
 ---
 title:  Java项目部署说明
 date: 2018-07-09T05:31:32.925Z
-tags: ["code","it"]
+tags: ["交接文档","it"]
 series: ["blog"]
 categories: ["code"]
 draft: true
