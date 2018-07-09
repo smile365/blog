@@ -1,7 +1,7 @@
 ---
 title:  项目说明
 date: 2018-07-09T06:46:05.091Z
-tags: ["code","it"]
+tags: ["交接文档"]
 series: ["blog"]
 categories: ["code"]
 draft: true
