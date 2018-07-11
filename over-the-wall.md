@@ -6,7 +6,7 @@ description : 一份全平台支持的翻墙图文教程
 ---
 
 一份全平台支持的翻墙图文教程
-
+<!-- excerpt -->
 ![翻墙不易](http://upload-images.jianshu.io/upload_images/1374969-2b60e6f0a92b0655.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
  **科学上网**：指突破“防火长城”的封锁，到国外网络上查找学习资料的过程。
@@ -53,3 +53,9 @@ description : 一份全平台支持的翻墙图文教程
 1、通过命令安装Shadowsocks Server
 2、[SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)插件的使用。
 3、把家里的智能路由器打造成vpn。
+
+**参考**
+
+- [Mac 端如何配置 Shadowsocks](http://16bing.com/2017/02/18/mac-shadowsocks/)
+- [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
+- [shadowsocks on Mac OS X](https://lvii.gitbooks.io/outman/content/ss.mac.html)
