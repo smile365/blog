@@ -59,3 +59,4 @@ description : 一份全平台支持的翻墙图文教程
 - [Mac 端如何配置 Shadowsocks](http://16bing.com/2017/02/18/mac-shadowsocks/)
 - [ShadowsocksX-NG](https://github.com/shadowsocks/ShadowsocksX-NG)
 - [shadowsocks on Mac OS X](https://lvii.gitbooks.io/outman/content/ss.mac.html)
+- [shadowsocks.org](https://shadowsocks.org/en/download/clients.html)
