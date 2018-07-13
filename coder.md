@@ -10,6 +10,7 @@ draft: true
 [ZHENG ZI'OU](https://orianna-zzo.github.io/)
 [零壹軒·笔记](http://note.qidong.name/)
 [谢益辉](https://yihui.name/cn/)
-
+[大疆测试](http://debugtalk.com/)
+[安全](https://impakho.com/)
 
 
