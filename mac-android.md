@@ -16,9 +16,9 @@ brew install gradle
 brew cask install java8
 ```
 
-然后到官网下载Android studio
+然后到官网下载[Android studio](https://developer.android.google.cn/studio/)
 
-如果出现unable to access android sdk add-on list，直接点击取消，如果使用了ss自动下载。
+如果出现unable to access android sdk add-on list，直接点击取消，之后会自动下载(可能需翻墙)。
 
 
 
