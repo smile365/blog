@@ -8,9 +8,24 @@ draft: true
 description:
 ---
 
+先安装构建工具和java8
+```
+brew install ant
+brew install maven
+brew install gradle
+brew cask install java8
+```
+
+然后到官网下载Android studio
+
+如果出现unable to access android sdk add-on list，直接点击取消，如果使用了ss自动下载。
+
+
+
 参考
 - [官方文档](https://developer.android.com/studio/install?hl=zh-cn)
 - [ANDROID学习之路](http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/)
 - [androiddevtools](http://www.androiddevtools.cn/)
 - [Android SDK 使用国内镜像](https://blog.csdn.net/zdw_wym/article/details/74942772)
 - [镜像地址](https://www.jianshu.com/p/53080a8cbc95)
+- [谷歌中国](https://developer.android.google.cn/)
