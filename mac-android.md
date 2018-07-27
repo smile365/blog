@@ -28,3 +28,6 @@ brew cask install java8
 - [Android SDK 使用国内镜像](https://blog.csdn.net/zdw_wym/article/details/74942772)
 - [镜像地址](https://www.jianshu.com/p/53080a8cbc95)
 - [谷歌中国](https://developer.android.google.cn/)
+- [Mac-Setup-Guide4OCD](https://github.com/macdao/ocds-guide-to-setting-up-mac)
+- [brew和brew-cask的区别](https://www.zhihu.com/question/22624898)
+- [idea-android-brew-mac](https://www.soupwaylee.com/2017/09/02/android-setup.html)
