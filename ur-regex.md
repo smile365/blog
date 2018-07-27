@@ -12,7 +12,11 @@ cover:
 网络标准RFC 1738规定：
 “只有字母和数字[0-9a-zA-Z]、一些特殊符号“$-_.+!*'(),”[不包括双引号]、以及某些保留字，才可以不经过编码直接用于URL。”
 
+全路径
 `(https?://)?([-\w]+\.)+[-\w]+(/[-\w\.'&=+$#%]+)*`
+
+相对网址
+(\.\./[-\w]*)*(\./)?[-\w\.'&=+$#%]+
 
 参考
 - [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
