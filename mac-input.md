@@ -28,6 +28,7 @@ ctl=1,⌃
 rt=1,↩
 et=1,⌅
 
-然后导入
+然后导入刚刚编辑过的文件。
+
 参考
 - [Mac快捷键](https://support.apple.com/zh-cn/HT201236)
