@@ -28,3 +28,4 @@ source "/Users/frankchow/.aliases.sh"
 参考
 - [aliases-and-functions](https://ashleynolan.co.uk/blog/beginners-guide-to-terminal-aliases-and-functions)
 - [mac下使用alias](https://www.jianshu.com/p/633a30e5d777)
+- [pypi 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
