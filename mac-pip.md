@@ -1,10 +1,9 @@
 ---
 title:  mac-pip
 date: 2018-07-26T01:48:58.589Z
-tags: ["code","it"]
+tags: ["pip"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 cover: 
 ---
