@@ -1,12 +1,11 @@
 ---
 title:  scrapy学习
 date: 2018-07-23T02:09:26.639Z
-tags: ["code","it"]
+tags: ["scrapy"]
 series: ["blog"]
 categories: ["code"]
 draft: true
 description:
-cover: 
 ---
 
 
