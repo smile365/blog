@@ -6,7 +6,6 @@ series: ["blog"]
 categories: ["code"]
 draft: true
 description:
-cover: 
 ---
 
 ⌘+t：新建一个tab
