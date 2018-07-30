@@ -6,7 +6,6 @@ series: ["blog"]
 categories: ["code"]
 draft: true
 description:
-cover: 
 ---
 
 网络标准RFC 1738规定：
