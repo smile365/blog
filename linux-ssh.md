@@ -22,13 +22,27 @@ description:
 生成密钥
 `ssh-keygen -t rsa -f ~/.ssh/id_rsa_www -C "songxueyan@www"`
 
+
+
+编辑ssh的config文件
+nano ~/.ssh/config
+内容如下：
+Host www
+    HostName www.sxy91.com
+    User songxueyan
+    Port 3322
+    IdentityFile ~/.ssh/id_rsa_www
+
 复制到Linux
 `ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www`
 
 测试
-ssh -p 3322 songxueyan@daxin
+ssh www
+无须输入端口和密码即可连接成功
+
 
 参考
 - [nano编辑器](https://www.vpser.net/manage/nano.html)
 - [Mac修改Hosts](https://www.jianshu.com/p/752211238c1b)
 - [ssh免密登录远程主机](https://blog.csdn.net/feinifi/article/details/78213297)
+- [使用SSH-config文件](http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file)
