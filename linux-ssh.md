@@ -1,5 +1,5 @@
 ---
-title:  两台主机免密登录
+title:  免密登录Linux主机
 date: 2018-07-30T09:19:48.400Z
 tags: ["ssh"]
 series: ["blog"]
