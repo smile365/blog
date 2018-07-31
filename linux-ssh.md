@@ -1,7 +1,7 @@
 ---
 title:  两台主机免密登录
 date: 2018-07-30T09:19:48.400Z
-tags: ["code","it"]
+tags: ["ssh"]
 series: ["blog"]
 categories: ["code"]
 draft: true
@@ -23,7 +23,10 @@ description:
 `ssh-keygen -t rsa -f ~/.ssh/id_rsa_www -C "songxueyan@www"`
 
 复制到Linux
-`ssh-copy-id -p3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www`
+`ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www`
+
+测试
+ssh -p 3322 songxueyan@daxin
 
 参考
 - [nano编辑器](https://www.vpser.net/manage/nano.html)
