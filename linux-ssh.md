@@ -8,7 +8,7 @@ draft: true
 description:
 ---
 
-假设Linux的ip为：192.168.1.2
+假设Linux的ip为：192.168.1.2,ssh端口：3322
 目标：mac免密码登录Linux
 
 编辑host
@@ -23,7 +23,7 @@ description:
 `ssh-keygen -t rsa -f ~/.ssh/id_rsa_www -C "songxueyan@www"`
 
 复制到Linux
-`ssh-copy-id -i ~/.ssh/id_rsa_www.pub  songxueyan@www`
+`ssh-copy-id -p3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www`
 
 参考
 - [nano编辑器](https://www.vpser.net/manage/nano.html)
