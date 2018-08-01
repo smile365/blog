@@ -5,7 +5,6 @@ tags: ["pip"]
 series: ["blog"]
 categories: ["code"]
 description:
-cover: 
 ---
 
 Mac上另一种方式实现pip使用国内镜像源下载。
