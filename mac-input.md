@@ -6,7 +6,6 @@ series: ["blog"]
 categories: ["code"]
 draft: true
 description:
-cover: 
 ---
 
 mac技术符号如下：
