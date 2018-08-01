@@ -26,7 +26,7 @@ description:
 编辑ssh的config文件
 nano ~/.ssh/config
 内容如下：
-```
+```nginx
 Host www
     HostName www.sxy91.com
     User songxueyan
