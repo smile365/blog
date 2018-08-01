@@ -20,7 +20,7 @@ C:\Users\[用户]\.ssh
 创建一个github的key
 
 ```shell
-ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "smile645@sina.cn"
+ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "sxy9103@gmail.com"
 ```
 操作完成后，该目录会多出 id_rsa_github 和 id_rsa_github.pub 两个文件。
 
