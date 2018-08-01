@@ -15,4 +15,5 @@ draft: true
 - [大疆测试](http://debugtalk.com/)
 - [安全](https://impakho.com/)
 - [科学空间](https://kexue.fm/)
+- [](https://www.rockyqi.net/Knownsec_RD_Checklist_v3.0/v3.0.html)
 
