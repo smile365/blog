@@ -35,11 +35,15 @@ Host www
 ```
 
 复制到Linux
-`ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www`
+```shell
+ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www
+```
 
-测试
-`ssh www`
-无须输入端口和密码即可连接成功
+测试,无须输入端口和密码即可连接成功
+```shell
+ssh www
+```
+
 
 
 参考
