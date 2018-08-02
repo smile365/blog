@@ -29,6 +29,7 @@ systemctl enable docker
 
 
 您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器：
+```shell
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
@@ -37,14 +38,11 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
+```
 检查加速器是否生效
 
 Linux系统下配置完加速器需要检查是否生效，在命令行执行 ps -ef | grep dockerd，如果从结果中看到了
 配置的 --registry-mirror 参数说明配置成功。
-
-
-docker pull centos
-
 
 
 
