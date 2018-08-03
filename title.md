@@ -24,3 +24,4 @@ cona --version
 
 - [安装miniconda](https://www.cnblogs.com/YLDream/p/6940085.html)
 - [Miniconda镜像](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
+- [Anaconda入门使用指南](http://python.jobbole.com/87522/)
