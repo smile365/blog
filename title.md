@@ -1,5 +1,5 @@
 ---
-title:  title
+title:  安装Miniconda
 date: 2018-08-03T06:11:56.394Z
 tags: ["code","it"]
 series: ["blog"]
