@@ -16,10 +16,13 @@ bash Miniconda*
 ```
 新打开一个终端，测试
 ```shell
+#查看版本
 cona --version
+#创建虚拟环境
+conda create -n py2 python=2.7 pandas
+#进入虚拟环境
+source activate env_name
 ```
-
-
 参考
 
 - [安装miniconda](https://www.cnblogs.com/YLDream/p/6940085.html)
