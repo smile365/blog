@@ -8,7 +8,7 @@ draft: true
 description:
 ---
 
-
+#### 基于docker安装redis
 创建文件
 
 ```shell
@@ -34,6 +34,16 @@ docker ps
 docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a sxy91
 ```
 
+#### mac 安装redis客户端
+
+```shell
+brew tap ringohub/redis-cli
+brew update && brew doctor
+brew install redis-cli
+```
+
 参考
 
 - [Linux-Tutorial](https://github.com/judasn/Linux-Tutorial)
+- [homebrew的tap功能](https://segmentfault.com/a/1190000012826983)
+- [homebrew-redis-cli](https://github.com/ringohub/homebrew-redis-cli)
