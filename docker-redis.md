@@ -40,6 +40,9 @@ docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a sxy91
 brew tap ringohub/redis-cli
 brew update && brew doctor
 brew install redis-cli
+
+#使用
+redis-cli -h 127.0.0.1 -p 6379 -a "mypass"
 ```
 
 参考
