@@ -40,9 +40,19 @@ docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a sxy91
 brew tap ringohub/redis-cli
 brew update && brew doctor
 brew install redis-cli
+```
 
-#使用
-redis-cli -h 127.0.0.1 -p 6379 -a "mypass"
+修改hosts
+
+```shell
+#注意更改为自己的ip
+192.168.31.68 my1.com my1
+```
+
+使用redis-cli
+
+```shell
+redis-cli -h my -a mypass
 ```
 
 参考
@@ -50,3 +60,4 @@ redis-cli -h 127.0.0.1 -p 6379 -a "mypass"
 - [Linux-Tutorial](https://github.com/judasn/Linux-Tutorial)
 - [homebrew的tap功能](https://segmentfault.com/a/1190000012826983)
 - [homebrew-redis-cli](https://github.com/ringohub/homebrew-redis-cli)
+- [mac修改hosts](https://blog.csdn.net/u012460084/article/details/40186973)
