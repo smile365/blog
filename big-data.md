@@ -1,7 +1,7 @@
 ---
 title:  大数据
 date: 2018-08-08T06:54:23.137Z
-tags: ["code","it"]
+tags: ["大数据"]
 series: ["blog"]
 categories: ["code"]
 draft: true
