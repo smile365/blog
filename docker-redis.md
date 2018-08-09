@@ -4,7 +4,6 @@ date: 2018-08-02T08:04:58.261Z
 tags: ["redis"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 
@@ -52,7 +51,7 @@ brew install redis-cli
 使用redis-cli
 
 ```shell
-redis-cli -h my -a mypass
+redis-cli -h my1 -a mypass
 ```
 
 参考
