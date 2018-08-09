@@ -18,19 +18,22 @@ su -c "yum install java-1.8.0-openjdk"
 [去镜像站下载kafka](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.0.0/kafka_2.11-2.0.0.tgz)
 
 ```shell
-wget http://mirrors.hust.edu.cn/apache/kafka/2.0.0/kafka_2.11-2.0.0.tgz
+> wget http://mirrors.hust.edu.cn/apache/kafka/2.0.0/kafka_2.11-2.0.0.tgz
 
-bin/zookeeper-server-start.sh config/zookeeper.properties
+> tar -xzf kafka_2.11-2.0.0.tgz
+> cd kafka_2.11-2.0.0
 
-bin/kafka-server-start.sh config/server.properties
+> bin/zookeeper-server-start.sh config/zookeeper.properties
 
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+> bin/kafka-server-start.sh config/server.properties
 
-bin/kafka-topics.sh --list --zookeeper localhost:2181
+> bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+> bin/kafka-topics.sh --list --zookeeper localhost:2181
 
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+
+> bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 
 ```
 
