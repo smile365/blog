@@ -81,4 +81,3 @@ c.close()
 - [安装kafka](https://segmentfault.com/a/1190000012730949)
 - [kafka-python](https://github.com/confluentinc/confluent-kafka-python)
 - [kafka-error](https://stackoverflow.com/questions/28184194/kafka-consumer-error-xxxx-nodename-nor-servname-provided-or-not-known)
-- 
