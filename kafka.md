@@ -73,7 +73,8 @@ c.close()
 ```
 
 
-参考
+**参考**
+
 - [kafka](https://kafka.apache.org/quickstart)
 - [kafka中文教程](http://orchome.com/kafka/index)
 - [install-kafka](https://www.mtyun.com/library/how-to-install-kafka-on-centos7)
