@@ -44,7 +44,7 @@ cat config/consumer.properties |grep "group"
 ```
 
 
-使用confluent-kafka-python
+使用confluent-kafka-python测试消费者
 ```python
 #!/usr/bin/python
 from confluent_kafka import Consumer, KafkaError
