@@ -21,7 +21,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 pip 和 pip3 并存时，只需修改` ~/.pip/pip.conf`。
 
-### 安装
+### 安装pip
 ```shell
 python get-pip.py
 ```
