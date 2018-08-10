@@ -7,7 +7,24 @@ categories: ["code"]
 description:
 ---
 
-Mac上另一种方式实现pip使用国内镜像源下载。
+pypi 镜像使用帮助
+pypi 镜像每 5 分钟同步一次。
+
+临时使用
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+注意，simple 不能少, 是 https 而不是 http
+
+设为默认
+修改 `~/.config/pip/pip.conf` (Linux), `%APPDATA%\pip\pip.ini` (Windows 10) 或 `$HOME/Library/Application Support/pip/pip.conf` (macOS) (没有就创建一个)， 修改 `index-url`至tuna，例如
+
+```ini
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```
+pip 和 pip3 并存时，` ~/.pip/pip.conf`。
+
+
+如果你不想更改匹配配置文件，也可以通过写个命令别名替代。
 
 mac的aliase不支持参数，可以通过function来达到目的。
 
@@ -23,6 +40,8 @@ function pip(){
 ```
 然后vim ~/.bash_profile,最后一行加入。
 source "/Users/frankchow/.aliases.sh"
+
+以后输入`pip2 install xxx `就是通过镜像下载。
 
 参考
 - [aliases-and-functions](https://ashleynolan.co.uk/blog/beginners-guide-to-terminal-aliases-and-functions)
