@@ -19,7 +19,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-pip 和 pip3 并存时，` ~/.pip/pip.conf`。
+pip 和 pip3 并存时，只需修改` ~/.pip/pip.conf`。
 
 
 ### 使用命令别名替代
