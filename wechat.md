@@ -16,3 +16,7 @@ description:
 点击微信右键
 
 再创建一个容器
+
+参考
+
+- [应用隔离](https://www.zhihu.com/question/25395183/answer/79937376)
