@@ -42,6 +42,7 @@ source "/Users/frankchow/.aliases.sh"
 以后输入`pip2 install xxx `就是通过镜像下载。
 
 参考
+- [get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
+- [pypi镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 - [aliases-and-functions](https://ashleynolan.co.uk/blog/beginners-guide-to-terminal-aliases-and-functions)
 - [mac下使用alias](https://www.jianshu.com/p/633a30e5d777)
-- [pypi 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
