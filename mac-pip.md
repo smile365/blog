@@ -1,5 +1,5 @@
 ---
-title:  mac-pip
+title:  pip配置国内镜像源
 date: 2018-07-26T01:48:58.589Z
 tags: ["pip"]
 series: ["blog"]
