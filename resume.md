@@ -23,7 +23,7 @@ IT工程师用Markdown语法写简历是什么样子
 - 熟练使用Ajax，JQuery，EasyUI, BootStarp, Vue等对页面各种操作，熟悉前端框架的web界面设计及开发。
 - 熟练使用Nginx构建高可用的网络环境。
 - 熟练使用Maven/Git/ntelliJ IDEA/Tomcat等开发工具。
-- 熟练使用Python语言进行开发，了解go语言。
+- 熟练使用Python语言进行开发，了解Go语言。
 - 理解分布式系统应用。
 
 
@@ -38,13 +38,13 @@ IT工程师用Markdown语法写简历是什么样子
 - 项目介绍：
     - 对于中石油西部管道公司的各个部门文档进行电子化，以及对工作内容记录和评审。对各个部门的风险文件、流程文件、技术文件、使用手册、维修记录等进行管理、查阅。
 - 采用技术：
-    - 主要使用Spring、Spring MVC、MyBatis、Oracle、Solr、EasyUI、Nginx等
+    - 主要使用Spring、Spring MVC、MyBatis、Oracle、Solr、EasyUI、Nginx等。
 - 职责描述：
     - 后端文档的快速检索和查询服务模块开发。
     - 询基于EasyUI和模仿taobao前端，实现多个多级联合查询的自定义前端控件。
     - Android端的文档检索、书柜、异步下载功能开发。
 
-#### 新建地州扶贫项目
+#### 新疆地州扶贫项目
 - 项目介绍：政府需要对全疆贫困户进行一对一帮扶，需要一套系统对扶贫工作进行详细记录；以及对扶贫对象的情况实时记录；同时汇聚数据做统计分析。
 - 采用技术：
     - Spring、Spring MVC、Spring Data JPA、MyBatis、jQuery、jSmart、Bootstrap、ECharts等。
