@@ -5,9 +5,67 @@ date: 2018-01-30
 ---
 IT工程师用Markdown语法写简历是什么样子
 <!-- excerpt -->
-# 宋学彦
-新疆大学  | 软件工程 | 17611134469 | sxy9103@qq.com
-博客：[songxueyan.top](https://www.sxy91.com)
+### 基本信息 
+宋学彦
+13161525202
+sxy9103@qq.com
+sxy91.com
+211学校毕业，统招本科
+
+目标职能：Java软件工程师                  求职性质：全职
+薪资期望：20K 					           工作地点：北京
+
+### 专业技能
+- 具有4年的JavaEE体系结构设计经验，深刻理解OOP编程思想进行软件的设计；对接口，多态，封装等OOP概念较为理解。
+- 熟练使用mybatis、Hibernate、spring MVC/Spring Boot框架，了解SpringCloud/Dubbo框架的应用。
+- 熟悉Spring的AOP与IOC机制，针对接口式开发有较多经验；对基于SSM整合式开发有多个项目经验。
+- 熟悉常用数据库Mysql、mongo、redis的开发，对MySQL高可用较为理解，了解kafka、storm的设计与开发。
+- 在软件项目中深刻理解并且熟练使用设计模式的设计方法。
+- 熟练使用Ajax，JQuery，EasyUI, BootStarp, Vue等对页面各种操作，熟悉前端框架的web界面设计及开发。
+- 熟练使用nginx构建高可用的网络环境。
+- 熟练使用maven/git/idea/tomcat等开发工具。
+- 熟练使用Python语言进行开发，了解go语言。
+- 理解分布式系统应用。
+
+
+### 工作经历
+|公司|角色|时间|
+|-|-|-|
+|北京沃民高新科技|技术组长|2017.3～至今|
+|新疆爱思电子科技|合伙人|2014.4~2017.3|
+
+### 项目经验
+#### 中石油文件评审系统
+- 项目介绍：
+    - 对于中石油西部管道公司的各个部门文档进行电子化，以及对工作内容记录和评审。对各个部门的风险文件、流程文件、技术文件、使用手册、维修记录等进行管理、查阅。
+- 采用技术：
+    - 主要使用Spring、Spring MVC、MyBatis、Oracle、Solr、EasyUI等
+- 职责描述：
+    - 开发后端文档的快速检索和查询服务模块。
+    - 询基于EasyUI和模仿taobao前端，实现了多个多级联合查询的自定义前端控件。
+    - Android端的文档显示和异步下载功能。
+
+#### 新建地州扶贫项目
+- 项目介绍：
+- 采用技术：
+- 职责描述：
+
+
+#### 沃德股票app后台
+
+#### 大规模数据抓取平台
+
+### 教育背景
+新疆大学
+软件工程
+统招本科
+2011~2015
+
+
+4年Java工作经验
+| 软件工程 |  |
+
+[sxy91.com](https://www.sxy91.com)
 ### 个人能力
 - 具有4年的JavaEE体系结构设计经验，1年的Android应用开发经验。
 - 熟练运用H5、CSS、JavaScript、Vue等前端技术。 
@@ -28,10 +86,6 @@ IT工程师用Markdown语法写简历是什么样子
 
 
 ### 项目经验
-* 川老燃面门户网站：[clranmian.com](http://clranmian.com)
-	- 自学PHP、MySQL、HTML、CSS、JavaScript等技术，完成clranmin.com门户网站的全部设计。并负责维护商家的域名及服务器至今。
-    - 自学SEO优化技术，使clranmian.com网站在百度搜索排名第一。帮助商家提升了餐厅的品牌知名度。
-    `
 * 大美千品分销商城:
     - 基于Spring Boot、Spring MVC、Hibernate、Vue等技术完成基础框架的搭建。
     - 在Linux环境下部署MongoDB及Redis的数据集群。
