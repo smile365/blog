@@ -50,14 +50,18 @@ sxy91.com
 - 采用技术：
     - Spring、Spring MVC、Spring Data JPA、MyBatis、jQuery、jSmart、Bootstrap、ECharts等。
 - 职责描述：
-    - 负责项目整体规划、设计和开发；功能模块设计划；疑难技术问题攻关；产品功能规划；技术团队建设。
-
+    - 负责架构设计、功能模块设计划分、疑难技术问题攻关、产品功能规划、技术团队建设、带领团队开发项目。
 
 
 #### 沃德股票app后台
 - 项目介绍：
-- 采用技术：
+- 采用技术：redis、mongo、kafka、docker、MySQL、mycat、keepalived、spring boot、vue等
 - 职责描述：
+    - 负责数据存数的高可用架构、规划、设计等工作。
+    - 负责app后台的整体规划、设计和开发；
+    - 参与系统功能模块设计，数据库设计，带领小组成员开发APP接口和业务服务。
+
+
 
 #### 大规模数据抓取平台
 - 项目介绍
