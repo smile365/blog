@@ -50,7 +50,7 @@ sxy91.com
 - 采用技术：
     - Spring、Spring MVC、Spring Data JPA、MyBatis、jQuery、jSmart、Bootstrap、ECharts等。
 - 职责描述：
-    - 负责架构设计、功能模块设计划分、疑难技术问题攻关、产品功能规划、技术团队建设、带领团队开发项目。
+    - 负责架构设计、功能模块设计划分、产品功能规划、技术团队建设、带领团队开发项目。
 
 
 #### 沃德股票app后台
@@ -64,9 +64,11 @@ sxy91.com
 #### 大规模数据抓取平台
 - 项目介绍：为第三方采集大规模数据，涵盖社会化媒体数据、1万家资讯和新闻类网站数据，以及部分公众号文章。
 - 采用技术：
-    - 主要使用了scrapy、redis、mongo、kafka、storm、es、zook、等。
+    - 主要使用了scrapy、redis、mongo、kafka、storm、es、zook、scikit-learn等。
 - 职责描述：
-    - 负责
+    - 负责平台的技术选项、技术架构、疑难技术问题攻关。
+    - 负责核心模块的设计和开发。
+    - 负责技术培训，带领组员进行开发实现。
 
 ### 教育背景
 新疆大学
