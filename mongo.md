@@ -10,15 +10,18 @@ description:
 
 配置软件的安装源
 
-1、备份
+
+```shell
+#1、备份
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 
-2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/
-CentOS 7
+#2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/CentOS 7
+
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
-3、之后运行yum makecache生成缓存
+#3、之后运行yum makecache生成缓存
 yum makecache
+```
 
 配置mongo的repo源`vi /etc/yum.repos.d/mongodb-org-3.4.repo`
 
