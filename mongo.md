@@ -1,10 +1,9 @@
 ---
 title:  centos7安装mongo
 date: 2018-08-13T02:55:14.439Z
-tags: ["code","it"]
+tags: ["mongo"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 
