@@ -71,7 +71,7 @@ mongod -f /etc/mongod.conf
 > use admin
 > db.auth('sxyadmin','s**%m%d')
 
-
+mongo 192.168.31.93:47017/spider -u user -p pass
 
 mongo 日志 文件
 /var/log/mongodb/mongod.log
