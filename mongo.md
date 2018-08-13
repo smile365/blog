@@ -94,28 +94,9 @@ use admin
 db.shutdownServer()
 ```
 
-参考：
-mongodb启动不了：child process failed, exited with error number 100
-
-
-rm -f /var/lib/mongo/mongod.lock
-mongod -f /etc/mongod.conf
-
-yum remove mongodb*
-rm -rf /var/log/mongodb
-rm -rf /var/lib/mongo
-yum install -y mongodb-org
-vi /etc/mongod.conf
-
-
-配置软件的安装源： http://mirrors.aliyun.com/help/centos
-使用阿里云的mongodb源：http://blog.csdn.net/liaoyundababe/article/details/71303039
-安装mongodb：https://www.linode.com/docs/databases/mongodb/install-mongodb-on-centos-7
-官方文档：https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/
-
-设置密码：https://docs.mongodb.com/manual/tutorial/enable-authentication/
 
 参考
 
 - [mongodb-manual](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/)
-- 
+- [enable-authentication](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
+- [安装MongoDB](http://blog.csdn.net/liaoyundababe/article/details/71303039)
