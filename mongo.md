@@ -16,7 +16,6 @@ description:
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 
 #2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/CentOS 7
-
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 
 #3、之后运行yum makecache生成缓存
@@ -39,7 +38,7 @@ enabled=1
 
 运行命令安装`yum install -y mongodb-org`
 
->设置密码：密码不要使用@
+
 
 启动服务`mongod -f /etc/mongod.conf`
 >不能使用 systemctl 启动
@@ -50,6 +49,7 @@ enabled=1
 use admin
 db.createUser({user:'sxyadmin',pwd:'s**%m%d ',roles: [ { role: "userAdminAnyDatabase", db: "admin" }]})
 ```
+>设置密码：不要含有@
 
 启用用户认证`vi /etc/mongod.conf`
 ```yaml
