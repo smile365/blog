@@ -39,29 +39,30 @@ enabled=1
 
 运行命令安装`yum install -y mongodb-org`
 
-设置密码：密码不要使用@
+>设置密码：密码不要使用@
 
-启动服务
-不能使用 systemctl 启动，应该使用mongod启动
-mongod -f /etc/mongod.conf
-
+启动服务`mongod -f /etc/mongod.conf`
+>不能使用 systemctl 启动
 
 
 创建用户
+```javascript
 use admin
 db.createUser({user:'sxyadmin',pwd:'s**%m%d ',roles: [ { role: "userAdminAnyDatabase", db: "admin" }]})
+```
 
-
-启用用户认证
-vi /etc/mongod.conf
+启用用户认证`vi /etc/mongod.conf`
+```yaml
 security:
   authorization: enabled
-
+```
 
 
 重启mongod
+```shell
 systemctl stop mongod
 mongod -f /etc/mongod.conf
+```
 
 登录认证
 > use admin
