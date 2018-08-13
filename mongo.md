@@ -68,8 +68,10 @@ mongod -f /etc/mongod.conf
 ```
 
 登录认证
-> use admin
-  db.auth('sxyadmin','s**%m%d')
+```javascript
+use admin
+db.auth('sxyadmin','s**%m%d')
+```
 
 创建其他用户
 ```javascript
