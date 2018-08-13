@@ -44,10 +44,10 @@ enabled=1
 >不能使用 systemctl 启动
 
 
-创建用户
+创建admin用户
 ```javascript
 use admin
-db.createUser({user:'sxyadmin',pwd:'s**%m%d ',roles: [ { role: "userAdminAnyDatabase", db: "admin" }]})
+db.createUser({user:'admin',pwd:'sxy91.com ',roles: [ { role: "userAdminAnyDatabase", db: "admin" }]})
 ```
 >设置密码：不要含有@
 
@@ -69,9 +69,14 @@ mongod -f /etc/mongod.conf
 
 登录认证
 > use admin
-> db.auth('sxyadmin','s**%m%d')
+  db.auth('sxyadmin','s**%m%d')
 
-mongo 192.168.31.93:47017/spider -u user -p pass
+创建其他用户
+```javascript
+use mydb
+db.createUser({user:'myuser',pwd:'sxy91.com ',roles: [ { role: "readWrite", db: "mydb" }]})
+```
+mongo 192.168.31.93:47017/mydb -u user -p pass
 
 mongo 日志 文件
 /var/log/mongodb/mongod.log
