@@ -78,26 +78,22 @@ db.auth('sxyadmin','s**%m%d')
 use mydb
 db.createUser({user:'myuser',pwd:'sxy91.com ',roles: [ { role: "readWrite", db: "mydb" }]})
 ```
+
+使用mongo shell连接
+```shell
 mongo 192.168.31.93:47017/mydb -u user -p pass
+```
 
-mongo 日志 文件
-/var/log/mongodb/mongod.log
+mongo日志文件:`/var/log/mongodb/mongod.log`
+配置文件:`/etc/mongod.conf`
 
-4、配置访问控制
-编辑  /etc/mongod.conf
-注释掉一行：bindIp: 127.0.0.1
-
-
-systemctl enable mongod
-
-systemctl restart mongod
-
-
-mongo -host 192.168.31.66 -port 47017
 
 正常关闭
+```javascript
 use admin
 db.shutdownServer()
+```
+
 参考：
 mongodb启动不了：child process failed, exited with error number 100
 
@@ -109,7 +105,7 @@ yum remove mongodb*
 rm -rf /var/log/mongodb
 rm -rf /var/lib/mongo
 yum install -y mongodb-org
- vi /etc/mongod.conf
+vi /etc/mongod.conf
 
 
 配置软件的安装源： http://mirrors.aliyun.com/help/centos
