@@ -53,8 +53,11 @@ db.createUser({user:'sxyadmin',pwd:'s**%m%d ',roles: [ { role: "userAdminAnyData
 
 启用用户认证`vi /etc/mongod.conf`
 ```yaml
+net:
+  port: 47017 #监听端口
+  #bindIp:  127.0.0.1 #注释后监听所有ip
 security:
-  authorization: enabled
+  authorization: enabled #启用安全认证
 ```
 
 
