@@ -28,4 +28,3 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 - [install-python3](http://ask.xmodulo.com/install-python3-centos.html)
 - [pip-mirror](https://pip.pypa.io/en/stable/user_guide/#configuration)
 - [pip-command](http://www.cnblogs.com/xueweihan/p/4981704.htm)
-
