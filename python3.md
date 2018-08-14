@@ -8,15 +8,19 @@ draft: true
 description:
 ---
 
+安装epel源：`yum install epel-release`
+安装python3：`yum install python34`
 
-yum install python34 #安装  >如果提示没有可用的Python34 则安装epel源： yum install epel-release
+下载get-pip:
+```shell
+curl -O https://bootstrap.pypa.io/get-pip.py
+```
+> 下载超级慢
 
-pip -V #查看当前pip版本
+配置pip的镜像
 
-curl -O https://bootstrap.pypa.io/get-pip.py #下载pip安装脚本 。ps：考验网速的时刻到了，太慢的话去喝杯咖啡。
- python3 get-pip.py #使用Python3 安装pip，
- pip -V #查看当前pip版本
-
+安装pip`python3 get-pip.py`
+查看当前pip版本:`pip -V` 
 
 
 参考
