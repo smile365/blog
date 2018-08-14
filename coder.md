@@ -18,4 +18,5 @@ draft: true
 - [知道创宇](https://www.rockyqi.net/Knownsec_RD_Checklist_v3.0/v3.0.html)
 - [老高](https://blog.phpgao.com/open_terminal_in_finder.html)
 - [zhengyi](http://blog.zhengyi.one/)
+- [给力星](http://www.powerxing.com/)
 
