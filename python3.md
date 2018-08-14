@@ -1,5 +1,5 @@
 ---
-title:  centos7安装python3
+title:  centos7快速安装python3
 date: 2018-08-14T09:18:01.346Z
 tags: ["python3"]
 series: ["blog"]
@@ -25,3 +25,28 @@ Install Python3 from EPEL Repository ：http://ask.xmodulo.com/install-python3-c
 3. How to install Python3 on CentOS 
 4. CentOS 7 安装 Python3.5
 pip 常用命令 http://www.cnblogs.com/xueweihan/p/4981704.html
+
+参考
+
+- [pip-mirror](https://pip.pypa.io/en/stable/user_guide/#configuration)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
