@@ -18,35 +18,10 @@ curl -O https://bootstrap.pypa.io/get-pip.py #下载pip安装脚本 。ps：考�
  pip -V #查看当前pip版本
 
 
-参考文档： 
-Install Python3 from EPEL Repository ：http://ask.xmodulo.com/install-python3-centos.html
-使用IUS源安装Python3.6
-2. ln命令 
-3. How to install Python3 on CentOS 
-4. CentOS 7 安装 Python3.5
-pip 常用命令 http://www.cnblogs.com/xueweihan/p/4981704.html
 
 参考
 
+- [install-python3](http://ask.xmodulo.com/install-python3-centos.html)
 - [pip-mirror](https://pip.pypa.io/en/stable/user_guide/#configuration)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [pip-command](http://www.cnblogs.com/xueweihan/p/4981704.htm)
 
