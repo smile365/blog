@@ -30,6 +30,14 @@ su -c "yum install java-1.8.0-openjdk"
 
 安装storm，参考[Storm-Installation](https://www.tutorialspoint.com/apache_storm/apache_storm_installation.htm)
 
+配置环境变量`vi ~/.bash_profile`
+```bash
+STORM_HOME="/root/apache-storm-1.2.2"
+export STORM_HOME
+PATH=$PATH:$HOME/bin:$STORM_HOME/bin
+export PATH
+```
+
 安装lien
 ```
 export HTTP_CLIENT="wget --no-check-certificate -O"
