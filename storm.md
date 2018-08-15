@@ -13,7 +13,7 @@ description:
 - pip:18.0
 - jdk:1.8
 - ZooKeeper:3.4
-- Storm:1.2
+- Storm:1.2.2
 - Leiningen:2.8
 - streamparse:3.13
 
@@ -57,6 +57,10 @@ pip3 install streamparse
 
 直接使用root账户,需要运行`export LEIN_ROOT=1`
 
+更改项目里的storm版本`vi project.clj`
+```bash
+org.apache.storm/storm-core "1.2.2"
+```
 
 参考
 - [Storm-Installation](https://www.tutorialspoint.com/apache_storm/apache_storm_installation.htm)
