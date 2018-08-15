@@ -57,7 +57,7 @@ pip3 install streamparse
 
 直接使用root账户,需要运行`export LEIN_ROOT=1`
 
-更改项目里的storm版本`vi project.clj`
+更改项目里的storm版本为当前安装的版本`vi project.clj`
 ```bash
 org.apache.storm/storm-core "1.2.2"
 ```
