@@ -47,6 +47,9 @@ yum install python34-devel
 pip3 install streamparse
 ```
 
+直接使用root账户,需要运行`export LEIN_ROOT=1`
+
+
 参考
 - [Storm-Installation](https://www.tutorialspoint.com/apache_storm/apache_storm_installation.htm)
 - [python-storm](https://www.jianshu.com/p/f0c0e53cb7f1)
@@ -56,3 +59,4 @@ pip3 install streamparse
 - [Storm安装](https://www.codetd.com/article/755024)
 - [Lein镜像源](https://www.smitechow.com/2018/02/lein-maven-clojars.html)
 - [set-storm-path](https://stackoverflow.com/questions/20793737/how-can-i-add-storm-in-my-path)
+- [LEIN_ROOT](https://blog.csdn.net/jiangjingxuan/article/details/54729039)
