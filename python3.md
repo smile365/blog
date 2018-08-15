@@ -8,18 +8,22 @@ draft: true
 description:
 ---
 
-安装epel源：`yum install epel-release`
-安装python3：`yum install python34`
-
 下载get-pip:
 ```shell
 curl -O https://bootstrap.pypa.io/get-pip.py
 ```
-> 下载超级慢
+> 下载超级慢，再开个shell继续下面的步骤
 
-配置pip的镜像
+安装epel源：`yum install epel-release`
+安装python3：`yum install python34`
 
-安装pip`python3 get-pip.py`
+配置pip的镜像`vi ~/.config/pip/pip.conf`
+```ini
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+下载完get-pip.py后，安装pip：`python3 get-pip.py`
 查看当前pip版本:`pip -V` 
 
 
