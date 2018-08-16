@@ -14,6 +14,8 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 ```
 > 下载超级慢，再开个shell继续下面的步骤
 
+[参考这里](https://github.com/smile365/blog/blob/master/mongo.md)配置centos的镜像源
+
 安装epel源：`yum install epel-release`
 安装python3：`yum install python34`
 
