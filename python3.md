@@ -17,7 +17,7 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 安装epel源：`yum install epel-release`
 安装python3：`yum install python34`
 
-配置pip的镜像`vi ~/.config/pip/pip.conf`
+配置pip的镜像`mkdir -p ~/.config/pip & vi ~/.config/pip/pip.conf`
 ```ini
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
