@@ -35,6 +35,7 @@ su -c "yum install java-1.8.0-openjdk"
 > bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 
 ```
+> 使用 -daemon 参数可以在后台运行，如：`zookeeper-server-start.sh -daemon zookeeper.properties`
 
 查看group.id
 
