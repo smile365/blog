@@ -19,3 +19,5 @@ description:
 - [余弦距离、欧氏距离和杰卡德相似性度量的对比分析](https://www.cnblogs.com/chaosimple/p/3160839.html)
 - [机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html)
 - [scrapy-cluster爬虫集群](https://bipabo1l.github.io/2018/01/12/scrapy-cluster%E5%88%86%E5%B8%83%E5%BC%8Furl%E7%88%AC%E8%99%AB%E9%9B%86%E7%BE%A4/)
+- [布谷鸟过滤Cuckoo Filter](https://www.jianshu.com/p/9ef9f298b5c6)
+- [redis的bitmap](https://blog.csdn.net/u011957758/article/details/74783347)
