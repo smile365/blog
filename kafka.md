@@ -22,9 +22,9 @@ su -c "yum install java-1.8.0-openjdk"
 > tar -xzf kafka_2.11-2.0.0.tgz
 > cd kafka_2.11-2.0.0
 
-> bin/zookeeper-server-start.sh config/zookeeper.properties
+> bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 
-> bin/kafka-server-start.sh config/server.properties
+> bin/kafka-server-start.sh -daemon config/server.properties
 
 > bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
@@ -35,7 +35,7 @@ su -c "yum install java-1.8.0-openjdk"
 > bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 
 ```
-> 使用 -daemon 参数可以在后台运行，如：`zookeeper-server-start.sh -daemon zookeeper.properties`
+> 使用 -daemon 参数可以在后台运行，去掉后可调试运行`
 
 查看group.id
 
