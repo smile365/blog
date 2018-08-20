@@ -11,4 +11,5 @@ description:
 
 参考
 
+- [Miniconda-install](https://conda.io/docs/user-guide/install/linux.html)
 - [Miniconda镜像](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
