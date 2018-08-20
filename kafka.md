@@ -44,9 +44,7 @@ cat config/consumer.properties |grep "group"
 ```
 
 
-使用confluent-kafka-python测试消费者
-
-安装`pip install confluent-kafka`
+使用confluent-kafka-python测试消费者：`pip install confluent-kafka`
 
 ```python
 #!/usr/bin/python
