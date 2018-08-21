@@ -102,9 +102,12 @@ if __name__ == '__main__':
 ```
 
 kafka出现`nodename nor servname provided, or not known`的解决
+
 原因：kafka的brokers会通过配置advertised.listeners广播自己，client端需要能解析这个地址。
+
 方法1：在client端增加一条host记录
-方法2：修改`config/server.properties`改为`advertised.listeners=PLAINTEXT://0.0.0.0:9092`
+
+方法2：修改`config/server.properties`改为`advertised.listeners=PLAINTEXT://192.168.31.174:9092`
 
 
 **参考**
