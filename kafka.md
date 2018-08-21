@@ -107,7 +107,7 @@ kafka出现`nodename nor servname provided, or not known`的解决
 
 方法1：在client端增加一条host记录
 
-方法2：修改`config/server.properties`改为`advertised.listeners=PLAINTEXT://192.168.31.174:9092`
+方法2：修改`config/server.properties`中的值为服务器端的ip`advertised.listeners=PLAINTEXT://192.168.31.174:9092`
 
 
 **参考**
