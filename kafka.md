@@ -48,31 +48,63 @@ cat config/consumer.properties |grep "group"
 
 ```python
 #!/usr/bin/python
-from confluent_kafka import Consumer, KafkaError
-
+from confluent_kafka import Consumer, KafkaError,Producer
+p = Producer({'bootstrap.servers': '192.168.31.174:9092'})
 c = Consumer({
-    'bootstrap.servers': '192.168.31.193 :9092',
+    'bootstrap.servers': '192.168.31.174:9092',
     'group.id': 'test-consumer-group'
 })
 
-c.subscribe(['test'])
-
-while True:
-    msg = c.poll(1.0)
-    if msg is None:
-        continue
-    if msg.error():
-        if msg.error().code() == KafkaError._PARTITION_EOF:
+def test_consumer():
+    '''
+    测试消费者
+    :return:
+    '''
+    c.subscribe(['test'])
+    for x in range(5):
+        msg = c.poll(5) #超时5秒
+        if msg is None:
+            print('none')
             continue
-        else:
-            print(msg.error())
-            break
-    print('Received message: {}'.format(msg.value().decode('utf-8')))
+        if msg.error():
+            if msg.error().code() == KafkaError._PARTITION_EOF:
+                continue
+            else:
+                print(msg.error())
+                break
+        print('Received message: {}'.format(msg.value().decode('utf-8')))
+    c.close()
 
-c.close()
 
+def delivery_report(err, msg):
+    """ Called once for each message produced to indicate delivery result.
+        Triggered by poll() or flush(). """
+    if err is not None:
+        print('Message delivery failed: {}'.format(err))
+    else:
+        print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
+
+def test_send():
+    '''
+    测试生产者
+    :return:
+    '''
+    test_url = ["http://localhost/"+str(x) for x in range(10)]
+    for data in test_url:
+        p.poll(1) #超时1秒
+        p.produce('test', data.encode('utf-8'), callback=delivery_report)
+    p.flush()
+
+if __name__ == '__main__':
+    test_send()
+    test_consumer()
 
 ```
+
+kafka出现`nodename nor servname provided, or not known`的解决
+原因：kafka的brokers会通过配置advertised.listeners广播自己，client端需要能解析这个地址。
+方法1：在client端增加一条host记录
+方法2：修改`config/server.properties`改为`advertised.listeners=PLAINTEXT://0.0.0.0:9092`
 
 
 **参考**
@@ -83,3 +115,5 @@ c.close()
 - [安装kafka](https://segmentfault.com/a/1190000012730949)
 - [kafka-python](https://github.com/confluentinc/confluent-kafka-python)
 - [kafka-error](https://stackoverflow.com/questions/28184194/kafka-consumer-error-xxxx-nodename-nor-servname-provided-or-not-known)
+- [kafka-failed](https://stackoverflow.com/questions/43103167/failed-to-resolve-kafka9092-name-or-service-not-known-docker-php-rdkafka)
+- [Advertised.Listeners](https://www.jianshu.com/p/71b295e1df4f)
