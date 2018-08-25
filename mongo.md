@@ -66,10 +66,17 @@ systemctl stop mongod
 mongod -f /etc/mongod.conf
 ```
 
-登录认证
+创建管理员
 ```javascript
 use admin
-db.auth('sxyadmin','s**%m%d')
+db.createUser(
+  {
+    user: "sxy",
+    pwd: "sxy91.com",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+);
+exit;
 ```
 
 创建其他用户
