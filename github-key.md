@@ -18,6 +18,7 @@ C:\Users\[用户]\.ssh
 ![enter description here](https://i.loli.net/2018/07/07/5b405ca0bbbfe.jpg)
 
 创建一个github的key
+> -t:加密算法；-f:文件名；-C:账号
 
 ```shell
 ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "sxy9103@gmail.com"
