@@ -23,7 +23,6 @@ pip install selenium
 #### 测试
 ```python
 from selenium import webdriver
- 
 browser = webdriver.Chrome()
 browser.get('https://sxy91.com/')
 ```
@@ -35,7 +34,7 @@ browser.get('https://sxy91.com/')
 ```python
 from selenium import webdriver
 driver = webdriver.PhantomJS()
-browser.get('https://sxy91.com/')
+driver.get('https://sxy91.com/')
 print(driver.title)
 ```
 
