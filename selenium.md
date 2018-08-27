@@ -37,7 +37,40 @@ driver = webdriver.PhantomJS()
 driver.get('https://sxy91.com/')
 print(driver.title)
 ```
+提示：UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead。
+
+### 服务器运行
+centos安装chrome
+```shell
+curl https://intoli.com/install-google-chrome.sh | bash
+```
+验证是否安装成功
+```shell
+google-chrome --headless --disable-gpu --no-sandbox --dump-dom https://sxy91.com/
+```
+安装chromedriver
+```
+wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+mv chromedriver /usr/local/bin/
+```
+
+测试
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+
+options = Options()
+for x in "--headless --disable-gpu --no-sandbox".split():
+    options.add_argument(x)
+driver = webdriver.Chrome(chrome_options=options)
+driver.get("https://sxy91.com/")
+```
 
 
 参考：
 - [Selenium的用法](https://cuiqingcai.com/2599.html)
+- [PhantomJS被Selenium标记为不赞成](https://www.cnblogs.com/zhuxiaoxi/p/8425686.html)
+- [Centos-Headless-chrome](https://intoli.com/blog/installing-google-chrome-on-centos/)
+- [selenium-doc](https://selenium-python.readthedocs.io/api.html)
