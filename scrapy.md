@@ -8,6 +8,7 @@ draft: true
 description:
 ---
 
+scrapy startproject tutorial
 
 
 参考
@@ -22,3 +23,6 @@ description:
 - [布谷鸟过滤Cuckoo Filter](https://www.jianshu.com/p/9ef9f298b5c6)
 - [redis的bitmap](https://blog.csdn.net/u011957758/article/details/74783347)
 - [漫谈非加密哈希算法](https://segmentfault.com/a/1190000010990136)
+- [Scrapy的Cookies和Session](https://www.jianshu.com/p/11017e5e3a82)
+- [登录和保存cookie](https://www.jianshu.com/p/7a1b8c144d83)
+- [CrawlSpider模拟登录](https://www.jianshu.com/p/0f64297fc912)
