@@ -8,7 +8,21 @@ draft: true
 description:
 ---
 
-scrapy startproject tutorial
+### 一般爬虫
+
+### 通用爬虫
+
+### 分布式爬虫
+
+登录，session，cookie
+动态内容，
+代理
+redis、kafka、mongo、
+去重，循环，
+
+工业级别
+
+产品思维
 
 
 参考
