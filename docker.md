@@ -48,4 +48,5 @@ Linux系统下配置完加速器需要检查是否生效，在命令行执行 ps
 
 参考
 
-- [安装 Docker CE](https://yeasy.gitbooks.io/docker_practice/content/install/centos.html)
+- [安装Docker CE](https://yeasy.gitbooks.io/docker_practice/content/install/centos.html)
+- [docker logs](https://www.jianshu.com/p/1eb1d1d3f25e)
