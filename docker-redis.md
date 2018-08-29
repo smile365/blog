@@ -20,7 +20,7 @@ vi redis/conf/redis.conf
 
 ```nginx
 bind 0.0.0.0
-requirepass adgredis123456
+requirepass sxy91
 protected-mode yes
 port 6379
 tcp-backlog 511
