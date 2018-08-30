@@ -40,3 +40,7 @@ redis、kafka、mongo、
 - [Scrapy的Cookies和Session](https://www.jianshu.com/p/11017e5e3a82)
 - [登录和保存cookie](https://www.jianshu.com/p/7a1b8c144d83)
 - [CrawlSpider模拟登录](https://scrapy-cookbook.readthedocs.io/zh_CN/latest/scrapy-11.html)
+- [portia](https://github.com/scrapinghub/portia)
+- [frontera](https://github.com/scrapinghub/frontera)
+- [可视化抓取-portia2.0](http://brucedone.com/archives/1059)
+- [portia-dashboard](https://github.com/siegfried415/portia-dashboard)
