@@ -16,7 +16,6 @@ sudo yum install java-1.8.0-openjdk-devel
 wget https://downloads.lightbend.com/scala/2.12.2/scala-2.12.2.rpm
 sudo yum localinstall -y scala-2.12.2.rpm
 
-
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 sudo yum install sbt
 ```
