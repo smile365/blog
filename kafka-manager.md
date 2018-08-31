@@ -20,7 +20,7 @@ curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm
 sudo yum install sbt
 ```
 
-配置sbt(scala-build-tools)的镜像`vi ~/.sbt/repositories`
+配置sbt(scala-build-tools)的镜像:`vi ~/.sbt/repositories`
 ```nginxconf
 [repositories]
   local
