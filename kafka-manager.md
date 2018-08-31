@@ -29,7 +29,7 @@ sudo yum install sbt
 ```
 
 构建
-```
+```shell
 git clone https://github.com/yahoo/kafka-manager.git
 cd ./kafka-manager
 sbt clean dist  
@@ -43,4 +43,4 @@ view raw
 
 参考
 
-- [](https://medium.com/@FrissonAI/yahoos-kafka-manager-installation-82fdc4bd1222)
+- [Kafka-Manager](https://medium.com/@FrissonAI/yahoos-kafka-manager-installation-82fdc4bd1222)
