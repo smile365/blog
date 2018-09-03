@@ -109,6 +109,11 @@ kafka出现`nodename nor servname provided, or not known`的解决
 
 方法2：修改`config/server.properties`中的值为服务器端的ip`advertised.listeners=PLAINTEXT://192.168.31.174:9092`
 
+查看最新的offset
+```
+bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic test --time -1
+```
+
 
 **参考**
 
@@ -121,3 +126,4 @@ kafka出现`nodename nor servname provided, or not known`的解决
 - [kafka-failed](https://stackoverflow.com/questions/43103167/failed-to-resolve-kafka9092-name-or-service-not-known-docker-php-rdkafka)
 - [Advertised.Listeners](https://www.jianshu.com/p/71b295e1df4f)
 - [如何确定Kafka的分区数](https://www.cnblogs.com/huxi2b/p/4757098.html)
+- [重新分配partition](http://wzktravel.github.io/2015/12/31/kafka-reassign/)
