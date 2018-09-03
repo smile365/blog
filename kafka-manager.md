@@ -37,9 +37,18 @@ sbt clean dist
 unzip target/universal/kafka-manager-1.3.3.8.zip  # unzip a.zpi /des/a
 
 ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181"  
-view raw
+```
+
+配置context的访问路径，方便nginx代理`vi conf/application.conf`
+```ini
+play.http.context = "/kafka/"
+
+./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181"
+
+#http://localhost:9001/kafka
 
 ```
+
 
 参考
 
