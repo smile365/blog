@@ -8,7 +8,7 @@ draft: true
 description:
 ---
 
-先安装java8、scala、sbt
+#### 先安装java8、scala、sbt
 ```shell
 sudo yum install java-1.8.0-openjdk
 sudo yum install java-1.8.0-openjdk-devel
@@ -20,7 +20,7 @@ curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm
 sudo yum install sbt
 ```
 
-配置sbt(scala-build-tools)的镜像:`vi ~/.sbt/repositories`
+#### 配置sbt(scala-build-tools)的镜像:`vi ~/.sbt/repositories`
 ```nginxconf
 [repositories]
   local
@@ -28,7 +28,7 @@ sudo yum install sbt
   central: http://repo1.maven.org/maven2/
 ```
 
-构建
+#### 构建
 ```shell
 git clone https://github.com/yahoo/kafka-manager.git
 cd ./kafka-manager
@@ -39,17 +39,23 @@ unzip target/universal/kafka-manager-1.3.3.8.zip  # unzip a.zpi /des/a
 ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181"  
 ```
 
-配置context的访问路径，方便nginx代理`vi conf/application.conf`
+#### 配置context的访问路径，方便nginx代理`vi conf/application.conf`
 ```ini
 play.http.context = "/kafka/"
 
 ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181"
 
-#http://localhost:9001/kafka
+#http://localhost:9000/kafka
 
 ```
+
+#### 添加Cluster
+点击【Cluster】>【Add Cluster】：
+输入集群的名字（如Kafka-Cluster-1）和 Zookeeper 服务器地址（如localhost:2181），点击save。
+
 
 
 参考
 
-- [Kafka-Manager](https://medium.com/@FrissonAI/yahoos-kafka-manager-installation-82fdc4bd1222)
+- [Kafka-Manager（fq）](https://medium.com/@FrissonAI/yahoos-kafka-manager-installation-82fdc4bd1222)
+- [Kafka-manager安装](https://blog.csdn.net/yuan_xw/article/details/79188565)
