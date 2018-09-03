@@ -8,12 +8,13 @@ draft: true
 description:
 ---
 
-下载安装脚本到需要安装的目录:[miniconda](https://conda.io/miniconda.html)
+下载安装脚本:[miniconda](https://conda.io/miniconda.html)
 ```shell
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 chmod +x Miniconda3*.sh
 ./Miniconda3*.sh
+#默认安装到 ~/miniconda3
 ```
 
 重新打开shell，激活conda命令
