@@ -39,7 +39,7 @@ conda config --set show_channel_urls yes
 创建虚拟环境
 ```shell
 conda create -n py35 python=3.5
-source activate py35
+source activate
 ```
 
 
@@ -48,3 +48,4 @@ source activate py35
 - [Miniconda-install](https://conda.io/docs/user-guide/install/linux.html)
 - [Miniconda镜像](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
 - [getting-started](https://conda.io/docs/user-guide/getting-started.html)
+- [Global bash_profile](https://serverfault.com/questions/491585/is-there-a-global-bash-profile-for-all-users-on-a-system)
