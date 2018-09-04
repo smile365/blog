@@ -13,10 +13,21 @@ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 chmod +x Miniconda3*.sh
 ./Miniconda3*.sh
-#默认安装到 ~/miniconda3
+# 同意协议
+yes
+# 默认安装到 ~/miniconda3
+# 为所有用户安装，则选择一个其他人可读的目录，如：
+/home/sharefile/conda
+# 是否加入当前用户的环境变量
+no
 ```
 
-重新打开shell，激活conda命令
+创建公用的环境变量`vi /etc/profile.d/conda.sh`
+```shell
+export PATH="/home/sharefile/conda/bin:$PATH"
+```
+
+重新打开shell，测试是否安装成功`which conda`
 
 安装镜像
 ```shell
@@ -30,6 +41,7 @@ conda config --set show_channel_urls yes
 conda create -n py35 python=3.5
 source activate py35
 ```
+
 
 参考
 
