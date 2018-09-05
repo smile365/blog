@@ -53,7 +53,10 @@ play.http.context = "/kafka/"
 点击【Cluster】>【Add Cluster】：
 输入集群的名字（如Kafka-Cluster-1）和 Zookeeper 服务器地址（如localhost:2181），点击save。
 
-
+### 后台运行
+```shell
+./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181" 1>>out.log 2>>err.log &
+```
 
 参考
 
