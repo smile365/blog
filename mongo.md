@@ -43,10 +43,17 @@ enabled=1
 >不能使用 systemctl 启动
 
 
-创建admin用户
+创建管理员
 ```javascript
 use admin
-db.createUser({user:'admin',pwd:'sxy91.com ',roles: [ { role: "userAdminAnyDatabase", db: "admin" }]})
+db.createUser(
+  {
+    user: "sxy",
+    pwd: "sxy91.com",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+);
+exit;
 ```
 >设置密码：不要含有@
 
@@ -66,23 +73,12 @@ systemctl stop mongod
 mongod -f /etc/mongod.conf
 ```
 
-创建管理员
-```javascript
-use admin
-db.createUser(
-  {
-    user: "sxy",
-    pwd: "sxy91.com",
-    roles: [ { role: "root", db: "admin" } ]
-  }
-);
-exit;
-```
+
 
 创建其他用户
 ```javascript
 use mydb
-db.createUser({user:'myuser',pwd:'sxy91.com ',roles: [ { role: "readWrite", db: "mydb" }]})
+db.createUser({user:'myuser',pwd:'sxy91.com',roles: [ { role: "readWrite", db: "mydb" }]})
 ```
 
 使用mongo shell连接
