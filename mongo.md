@@ -21,22 +21,22 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum makecache
 ```
 
-配置mongo的repo源`vi /etc/yum.repos.d/mongodb-org-3.4.repo`
+在mongo官网找到repo源,并添加`vi /etc/yum.repos.d/mongodb-org-3.4.repo`
 
-内容如下：
+把地址改为阿里的：
 ```ini
-[mongodb-org-3.4]
+[mongodb-org-4.0]
 name=MongoDB Repository
-#baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
-baseurl=https://mirrors.aliyun.com/mongodb/yum/redhat/7Server/mongodb-org/3.4/x86_64/
+#baseurl = https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/ 
+baseurl=https://mirrors.aliyun.com/mongodb/yum/redhat/7Server/mongodb-org/4.0/x86_64/
 #gpgcheck=1
 gpgcheck=0
 enabled=1
-#gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+#gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
 ```
+> 奇数版本为开发版(如3.5)，不建议生产环境使用
 
 运行命令安装`yum install -y mongodb-org`
-
 
 
 启动服务`mongod -f /etc/mongod.conf`
