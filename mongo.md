@@ -21,7 +21,7 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum makecache
 ```
 
-在mongo官网找到repo源,并添加`vi /etc/yum.repos.d/mongodb-org-3.4.repo`
+在[mongo官网](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/)找到repo源,并添加`vi /etc/yum.repos.d/mongodb-org-3.4.repo`
 
 把地址改为阿里的：
 ```ini
