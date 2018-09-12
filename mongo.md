@@ -61,7 +61,7 @@ exit;
 ```yaml
 net:
   port: 47017 #监听端口
-  #bindIp:  127.0.0.1 #注释后监听所有ip
+  bindIp:  0.0.0.0
 security:
   authorization: enabled #启用安全认证
 ```
