@@ -57,11 +57,13 @@ exit;
 ```
 >设置密码：不要含有@
 
-启用用户认证`vi /etc/mongod.conf`
+启用用户认证，并配置日志路径`vi /etc/mongod.conf`
 ```yaml
+systemLog:
+  path: /var/log/mongodb/mongod.log
 net:
   port: 47017 #监听端口
-  bindIp:  0.0.0.0
+  bindIp: 0.0.0.0
 security:
   authorization: enabled #启用安全认证
 ```
@@ -85,10 +87,6 @@ db.createUser({user:'myuser',pwd:'sxy91.com',roles: [ { role: "readWrite", db: "
 ```shell
 mongo 192.168.31.93:47017/mydb -u user -p pass
 ```
-
-mongo日志文件:`/var/log/mongodb/mongod.log`
-配置文件:`/etc/mongod.conf`
-
 
 正常关闭
 ```javascript
