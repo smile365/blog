@@ -1,10 +1,9 @@
 ---
-title:  Selenium使用
+title:  Selenium与PhantomJS的使用
 date: 2018-08-27T05:37:22.077Z
 tags: ["selenium"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 
@@ -38,7 +37,7 @@ driver = webdriver.PhantomJS()
 driver.get('https://sxy91.com/')
 print(driver.title)
 ```
-提示：UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead。
+提示：UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead。(hz'xuPhantomJS)
 
 ### 服务器运行
 centos安装chrome
