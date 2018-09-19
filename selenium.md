@@ -28,7 +28,7 @@ browser.get('https://sxy91.com/')
 ```
 
 ### 使用selenium控制PhantomJS
-[下载PhantomJS](http://phantomjs.org/download.html)，并把执行路径配置到环境变量里：sudo mv ~/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs /usr/bin/`
+[下载PhantomJS](http://phantomjs.org/download.html)，并把执行路径配置到环境变量里：`sudo mv ~/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs /usr/bin/`
 
 #### 测试
 ```python
