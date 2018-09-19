@@ -8,7 +8,8 @@ draft: true
 description:
 ---
 
-Selenium:网页自动化测试工具(通过各个浏览器的drive控制浏览器的行为)，给开发者提供控制浏览器的api，类似于sdk。
+Selenium:网页自动化测试工具(通过各个浏览器的drive控制浏览器的行为)，给开发者提供控制浏览器的api，类似于sdk。  
+
 PhantomJS:没有页面的浏览器
 
 ### 使用selenium控制chrome
