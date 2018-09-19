@@ -37,7 +37,7 @@ driver = webdriver.PhantomJS()
 driver.get('https://sxy91.com/')
 print(driver.title)
 ```
-提示：UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead。(hz'xuPhantomJS)
+提示：UserWarning: Selenium support for PhantomJS has been deprecated, please use headless versions of Chrome or Firefox instead。(后续不再支持PhantomJS，请使用 Chrome或Firefox替代)
 
 ### 服务器运行
 centos安装chrome
