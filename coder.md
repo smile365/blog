@@ -7,6 +7,18 @@ categories: ["code"]
 draft: true
 ---
 
+spring
+
+- [Spring Boot应用可视化监控](https://www.jianshu.com/p/7ecb57a3f326)
+
+java
+
+- [JVM参数调优](https://juejin.im/post/5add9f29518825670960d113)
+- [Java8 JVM参数解读](https://www.zybuluo.com/changedi/note/975529)
+- [如何正确地写出单例模式](http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/)
+- [https://www.jianshu.com/p/4e8ca4e2af6c](https://www.jianshu.com/p/4e8ca4e2af6c)
+
+其他
 
 - [明无梦](https://www.dreamxu.com/)
 - [ZHENG ZI'OU](https://orianna-zzo.github.io/)
