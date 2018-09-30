@@ -1,5 +1,5 @@
 ---
-title: 通过命令安装Shadowsocks Server
+title: 通过命令安装Shadowsocks Server并安装Google play
 tags: ["Shadowsocks"]
 date: 2018-06-01
 ---
