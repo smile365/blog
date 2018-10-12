@@ -1,7 +1,7 @@
 ---
 title:  ubuntu的一些配置
 date: 2018-10-11T13:54:06.446Z
-tags: ["code","it"]
+tags: ["ubuntu"]
 series: ["blog"]
 categories: ["code"]
 draft: true
@@ -13,7 +13,7 @@ description:
 sudo apt-get install openssh-server
 
 如果提示：`ubuntu package openssh-server has no installation candidate` 
-> sudo apt-get update`
+> sudo apt-get update
 
 
 apt install network-manager
