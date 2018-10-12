@@ -10,16 +10,17 @@ description:
 
 
 安装ssh-server服务
+```shell
 sudo apt-get install openssh-server
+```
+>如果提示：ubuntu package openssh-server has no installation candidate，则`sudo apt-get update`
 
-如果提示：`ubuntu package openssh-server has no installation candidate` 
-> sudo apt-get update
-
-
+安装nmtui
+```shell
 apt install network-manager
 systemclt start NetworkManager
 nmtui
-
+```
 
 参考
 
