@@ -22,6 +22,13 @@ systemclt start NetworkManager
 nmtui
 ```
 
+配置镜像源提示ubuntu could not resolve host，编辑 `vi /etc/resolv.conf`内容如下：
+```conf
+nameserver 192.168.31.1
+nameserver 127.0.1.1
+search lan
+```
+
 参考
 
 - [ubuntu开启SSH服务远程登录](https://blog.csdn.net/jackghq/article/details/54974141)
