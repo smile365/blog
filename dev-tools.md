@@ -9,7 +9,7 @@ description:
 grammar_flow: true
 ---
 
-- [纯ASCII文本流程图](https://or2.in/2017/05/02/graph-easy-ascii/)
+- [使用Graph Easy来做炫酷的Ascii字符流程图](https://or2.in/2017/05/02/graph-easy-ascii/)
 - [文档工具top4](https://mp.weixin.qq.com/s?__biz=MjM5Mjg4NDMwMA==&mid=2652973386&idx=1&sn=c775725513879f52b1d40219b7d457a4#rd)
 - 
 
