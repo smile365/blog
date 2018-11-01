@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
 ```
 
-使用confluent-kafka-python测试消费者：`pip install pykafka`  
+使用pykafka测试消费者：`pip install pykafka`  
 ```python
 #test_kafka
 from pykafka import KafkaClient
