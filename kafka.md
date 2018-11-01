@@ -101,6 +101,35 @@ if __name__ == '__main__':
 
 ```
 
+使用confluent-kafka-python测试消费者：`pip install pykafka`  
+```python
+#test_kafka
+from pykafka import KafkaClient
+client = KafkaClient(hosts="localhost:9092")
+
+client.topics
+
+topic = client.topics['my_topic']
+
+balanced_consumer = topic.get_balanced_consumer(
+	consumer_group='test-consumer-group3',
+	auto_commit_enable=True,
+	zookeeper_connect='localhost:2181',
+	reset_offset_on_start=True,
+	auto_offset_reset=-2
+)
+
+print(balanced_consumer.partitions)
+count = 1
+for message in balanced_consumer:
+	count += 1
+	if message is not None:
+		print(message.offset, message.value)
+	if count == 20:
+		balanced_consumer.stop()
+		break
+```
+
 kafka出现`nodename nor servname provided, or not known`的解决
 
 原因：kafka的brokers会通过配置advertised.listeners广播自己，client端需要能解析这个地址。
@@ -115,6 +144,7 @@ bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 -
 ```
 
 
+
 **参考**
 
 - [kafka](https://kafka.apache.org/quickstart)
@@ -127,3 +157,4 @@ bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 -
 - [Advertised.Listeners](https://www.jianshu.com/p/71b295e1df4f)
 - [如何确定Kafka的分区数](https://www.cnblogs.com/huxi2b/p/4757098.html)
 - [重新分配partition](http://wzktravel.github.io/2015/12/31/kafka-reassign/)
+- [PyKafka使用指南](https://pykafka.readthedocs.io/en/latest/usage.html)
