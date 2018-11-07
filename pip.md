@@ -29,10 +29,11 @@ python get-pip.py
 
 致命错误：Python.h：没有那个文件或目录
 ```shell
-yum install python-devel
+yum install python34-devel
 ```
 参考
 - [get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 - [pypi镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 - [aliases-and-functions](https://ashleynolan.co.uk/blog/beginners-guide-to-terminal-aliases-and-functions)
 - [mac下使用alias](https://www.jianshu.com/p/633a30e5d777)
+- [install python3-devel](https://stackoverflow.com/questions/43047284/how-to-install-python3-devel-on-red-hat-7)
