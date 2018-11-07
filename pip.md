@@ -27,7 +27,10 @@ python get-pip.py
 ```
 
 
-
+致命错误：Python.h：没有那个文件或目录
+```shell
+yum install python-devel
+```
 参考
 - [get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 - [pypi镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
