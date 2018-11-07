@@ -26,8 +26,8 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "sxy9103@gmail.com"
 操作完成后，该目录会多出 id_rsa_github 和 id_rsa_github.pub 两个文件。
 
 编辑config文件，配置不同的仓库指向不同的密钥文件：`vi ~/.ssh/config`
-Host:域名  
-HostName：随意填写
+Host:简称(@后面的字符串)
+HostName：域名或者ip
 ![enter description here](https://i.loli.net/2018/07/07/5b405e0b253ae.jpg)
 
 在[github](https://github.com/settings/ssh/new)添加刚刚生成的公钥id_rsa_github.pub
