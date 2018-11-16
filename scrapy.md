@@ -8,24 +8,12 @@ draft: true
 description:
 ---
 
-### 一般爬虫
-
-### 通用爬虫
-
-### 分布式爬虫
-
-登录，session，cookie
-动态内容，
-代理
-redis、kafka、mongo、
-去重，循环，
-
-工业级别
-
-产品思维
 
 
-参考
+
+
+
+用到的参考资料  
 - [Python3网络爬虫开发实战](https://germey.gitbooks.io/python3webspider/content/)
 - [Scrapy0.24 文档](http://scrapy-chs.readthedocs.io/zh_CN/0.24/index.html)
 - [Scrapy源码分析](http://kaito-kidd.com/2016/11/01/scrapy-code-analyze-architecture/)
@@ -45,3 +33,4 @@ redis、kafka、mongo、
 - [可视化抓取-portia2.0](http://brucedone.com/archives/1059)
 - [portia-dashboard](https://github.com/siegfried415/portia-dashboard)
 - [portia的学习入门](https://blog.csdn.net/zhanglao33/article/details/77678806)
+- [Beautiful-Soup-4-文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)
