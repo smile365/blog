@@ -33,4 +33,4 @@ description:
 - [可视化抓取-portia2.0](http://brucedone.com/archives/1059)
 - [portia-dashboard](https://github.com/siegfried415/portia-dashboard)
 - [portia的学习入门](https://blog.csdn.net/zhanglao33/article/details/77678806)
-- [Beautiful-Soup-4-文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)
+- [BeautifulSoup-4-文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)
