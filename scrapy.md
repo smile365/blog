@@ -34,3 +34,4 @@ description:
 - [portia-dashboard](https://github.com/siegfried415/portia-dashboard)
 - [portia的学习入门](https://blog.csdn.net/zhanglao33/article/details/77678806)
 - [BeautifulSoup-4-文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)
+- [XPath语法](http://www.w3school.com.cn/xpath/xpath_syntax.ASP)
