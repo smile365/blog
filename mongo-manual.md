@@ -8,9 +8,14 @@ draft: true
 description:
 ---
 
-mongo 更改列名
+创建索引[createIndex](http://www.runoob.com/mongodb/mongodb-indexing.html)
+```javascript
+db.values.createIndex({open: 1, close: 1}, {background: true})
+```
+
+mongo更改列名[$rename](https://docs.mongodb.com/manual/reference/operator/update/rename/)
 ```javascript
 db.students.updateMany( {}, { $rename: { "nmae": "name" } } )
 ```
-参考[$rename](https://docs.mongodb.com/manual/reference/operator/update/rename/)
+
 
