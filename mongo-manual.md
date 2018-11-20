@@ -19,3 +19,7 @@ db.students.updateMany( {}, { $rename: { "nmae": "name" } } )
 ```
 
 
+group
+```
+db.user.aggregate([{$group : {_id : "$date", total : {$sum : 1}}}])
+```
