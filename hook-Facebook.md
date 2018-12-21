@@ -36,3 +36,4 @@ VirtualXposed是基于VirtualApp和epic在非ROOT环境下运行Xposed模块的�
 - [XposedBridge-tutorial](https://github.com/rovo89/XposedBridge/wiki/Development-tutorial)
 - [Hook机制](https://github.com/tiann/understand-plugin-framework)
 - [运行时AOP](http://weishu.me/2017/11/23/dexposed-on-art/)
+- [Xposed 插件开发](https://blog.csdn.net/niubitianping/article/details/52575900)
