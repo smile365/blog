@@ -23,3 +23,6 @@ description:
 
 **需要开发的模**块：token分发、uid分发、post-id分发、post-scrapy、comments-scrapy、token失效刷新、任务失败处理、查询接口、数据推送。
 
+**账号购买**
+根据账号质量(注册时间、资料真实性登)，单价从$0.1至$40不等。
+
