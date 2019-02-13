@@ -11,7 +11,7 @@ description:
 
 使用synergy实现多台电脑共用一个鼠标和键盘。
 
-google搜索synergy free 找到[1.8版本的下载链接](https://sourceforge.net/projects/synergy-stable-builds/)
+google搜索`synergy free` 找到[1.8版本的下载链接](https://sourceforge.net/projects/synergy-stable-builds/)
 
 以mac为服务端，Windows为客户端配置如下
 
