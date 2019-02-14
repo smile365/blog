@@ -7,8 +7,11 @@ categories: ["code"]
 description:
 ---
 
-假设Linux的ip为：192.168.1.2,ssh端口：3322
-目标：mac免密码登录Linux
+每次在终端使用ssh链接服务器都比较繁琐，需要输入账号、密码、端口、域名等一大堆东西。这里提供一种方便的一键连接方式：
+
+：
+假设Linux服务器的ip为：192.168.1.2,ssh端口：3322，以下以mac操作为例。
+
 
 编辑host
 `sudo nano /etc/hosts`
