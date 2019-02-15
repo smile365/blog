@@ -30,7 +30,7 @@ Host:简称(@后面的字符串)
 HostName：域名或者ip  
 ![enter description here](https://i.loli.net/2018/07/07/5b405e0b253ae.jpg)
 
-在[github](https://github.com/settings/ssh/new)添加刚刚生成的公钥id_rsa_github.pub
+在[github](https://github.com/settings/ssh/new)添加刚刚生成的公钥`cat ~/.ssh/id_rsa_github.pub`
 
 ![enter description here](https://i.loli.net/2018/07/07/5b405f1dcfeb8.jpg)
 
