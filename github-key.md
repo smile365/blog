@@ -52,8 +52,12 @@ ssh -T git@github.com
 
 ![ssh url](https://i.loli.net/2018/07/07/5b4079f06a054.jpg)
 
-把已有项目增加到远程仓库：  
+提交文件到远程仓库：  
 ```shell
+echo "# 91mame" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
 git remote add origin git@github.com:smile365/91mame.git
 git push -u origin master
 ```
