@@ -49,10 +49,10 @@ description : 一份全平台支持的翻墙图文教程
 
 有什么问题欢迎微信交流：**smile8365**
 
-今天就写到这里，后续教程计划：
-1、通过命令安装Shadowsocks Server
-2、[SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)插件的使用。
-3、把家里的智能路由器打造成vpn。
+今天就写到这里，后续教程计划：  
+1、通过命令安装Shadowsocks Server  
+2、[SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)插件的使用。  
+3、把家里的智能路由器打造成vpn。  
 
 **参考**
 
