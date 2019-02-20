@@ -9,10 +9,10 @@ description:
 
 先安装构建工具和java8
 ```
+brew cask install java8
 brew install ant
 brew install maven
 brew install gradle
-brew cask install java8
 ```
 
 然后到官网下载[Android studio](https://developer.android.google.cn/studio/)
