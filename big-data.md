@@ -24,5 +24,6 @@ description:
 
 参考  
 - [一文读懂大数据平台](https://zhuanlan.zhihu.com/p/26545566)
+- [如何用形象的比喻描述大数据的技术生态？]()
 - [大数据架构商业之路](https://book.douban.com/subject/26818024/)
 - [大数据架构师指南](https://book.douban.com/subject/26821712/)
