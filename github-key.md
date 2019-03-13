@@ -67,3 +67,4 @@ git push -u origin master
 - [Git之同一台电脑连接多个远程仓库](https://www.jianshu.com/p/04e9a885c5c8)
 - [Adding SSH key to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 - [git/github学习笔记](http://www.cnblogs.com/fnng/archive/2011/08/25/2153807.html)
+- [Git之SSH与HTTPS免密码配置](https://www.jianshu.com/p/b5ec092fc1d1)
