@@ -68,7 +68,8 @@ vi /etc/td-agent/td-agent.conf
 systemctl restart td-agent
 ```
 
-**参考**
+**参考**  
+-[install-nginx](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7)
 - [Installing Fluentd Using rpm Package](https://docs.fluentd.org/v0.12/articles/install-by-rpm)
 - [MongoDB Output Plugin](https://docs.fluentd.org/v0.12/articles/out_mongo)
 - [td-agent v1 vs. td-agent v2](https://docs.fluentd.org/v0.12/articles/td-agent-v1-vs-v2)
