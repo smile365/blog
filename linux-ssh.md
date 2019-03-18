@@ -21,7 +21,7 @@ description:
 测试
 `ping www`
 
-生成密钥
+[生成密钥](https://blog.csdn.net/u013227473/article/details/78989041)
 `ssh-keygen -t rsa -f ~/.ssh/id_rsa_www -C "songxueyan@www"`
 
 
