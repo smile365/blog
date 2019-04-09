@@ -24,8 +24,6 @@ description:
 [生成密钥](https://blog.csdn.net/u013227473/article/details/78989041)
 `ssh-keygen -f ~/.ssh/id_rsa_www`
 
->-f filename 指定密钥文件名。
- -C comment 提供一个新注释。
 
 
 编辑ssh的config文件
