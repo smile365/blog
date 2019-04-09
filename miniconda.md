@@ -7,9 +7,9 @@ categories: ["code"]
 description:
 ---
 
-下载安装脚本:[miniconda](https://conda.io/miniconda.html)
+根据操作系统下载安装脚本:[miniconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)，centos操作如下：
 ```shell
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 chmod +x Miniconda3*.sh
 ./Miniconda3*.sh
