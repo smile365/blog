@@ -19,6 +19,7 @@ yes
 # 为所有用户安装，则选择一个其他人可读的目录，如：
 /home/sharefile/conda
 # 是否加入当前用户的环境变量
+# 服务器选择no，选择yes会覆盖当前python、pip等环境变量
 no
 ```
 
