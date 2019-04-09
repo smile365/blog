@@ -27,7 +27,7 @@ no
 export PATH="/home/sharefile/conda/bin:$PATH"
 ```
 
-**重新打开**shell，测试是否安装成功`which conda`
+**重新打开一个**终端，测试是否安装成功`which conda`
 
 安装镜像
 ```shell
