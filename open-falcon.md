@@ -101,7 +101,7 @@ tar -xzvf open-falcon* -C $WORKSPACE ./open-falcon ./agent
 cd $WORKSPACE
 
 #修改heartbeat与transfer的ip地址 改为实际的后端地址
-cat agent/config/cfg.json |grep addrs
+cat agent/config/cfg.json |grep addr
 # 启动
 ./open-falcon start agent
 # 查看日志
