@@ -116,22 +116,22 @@ chmod +x /etc/rc.d/rc.local
 # 使用QQ邮箱的smtp服务
 export WORKSPACE=/home/work/open-falcon/falcon-mail
 wget https://dl.cactifans.com/open-falcon/falcon-mail-provider.tar.gz
-mkdir -p $WORKSPACE/falcon-mail
-tar zxvf falcon-mail-provider.tar.gz -C $WORKSPACE/falcon-mail
+mkdir -p $WORKSPACE
+tar zxvf falcon-mail-provider.tar.gz -C $WORKSPACE
 cd $WORKSPACE
 # 配置smtp服务器地址
-vim falcon-mail/cfg.json
+vim cfg.json
 #启动
-./falcon-mail/control start
+./control start
 #测试
 curl http://127.0.0.1:4000/sender/mail -d "tos=sxy9103@qq.com&subject=falcon-mail-test&content=test"
 
 # 修改Alarm组件api下的mail地址 及dashboardd地址
 # "mail": "http://127.0.0.1:4000/sender/mail"
-vim alarm/config/cfg.json
+vim ../alarm/config/cfg.json
 
 #重启alarm
-./open-falcon restart alarm
+cd .. && ./open-falcon restart alarm
 ```
 
 参考  
