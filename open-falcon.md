@@ -105,8 +105,34 @@ cat agent/config/cfg.json |grep addrs
 ./open-falcon start agent
 # 查看日志
 tail -f agent/logs/agent.log 
+# 让agent开机启动
+echo "cd /home/soft/open-falcon && ./open-falcon start agent" >> /etc/rc.d/rc.local
+chmod +x /etc/rc.d/rc.local
 ```
 
+### 开启邮件报警
+```shell
+#https://github.com/open-falcon/mail-provider
+# 使用QQ邮箱的smtp服务
+export WORKSPACE=/home/work/open-falcon/falcon-mail
+wget https://dl.cactifans.com/open-falcon/falcon-mail-provider.tar.gz
+mkdir -p $WORKSPACE/falcon-mail
+tar zxvf falcon-mail-provider.tar.gz -C $WORKSPACE/falcon-mail
+cd $WORKSPACE
+# 配置smtp服务器地址
+vim falcon-mail/cfg.json
+#启动
+./falcon-mail/control start
+#测试
+curl http://127.0.0.1:4000/sender/mail -d "tos=sxy9103@qq.com&subject=falcon-mail-test&content=test"
+
+# 修改Alarm组件api下的mail地址 及dashboardd地址
+# "mail": "http://127.0.0.1:4000/sender/mail"
+vim alarm/config/cfg.json
+
+#重启alarm
+./open-falcon restart alarm
+```
 
 参考  
 - [open-falcon](http://open-falcon.org/)
