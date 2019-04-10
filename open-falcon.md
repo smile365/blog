@@ -94,6 +94,7 @@ cat api/config/cfg.json |grep signup_disable
 
 ### 其他服务器安装agent
 ```
+# 把open-falcon-v0.2.1.tar.gz 拷贝到需要安装的服务器上
 export WORKSPACE=/home/soft/open-falcon
 mkdir -p $WORKSPACE
 tar -xzvf open-falcon* -C $WORKSPACE ./open-falcon ./agent 
