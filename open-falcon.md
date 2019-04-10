@@ -96,7 +96,7 @@ cat api/config/cfg.json |grep signup_disable
 ```
 export WORKSPACE=/home/soft/open-falcon
 mkdir -p $WORKSPACE
-tar -xzvf open-falcon-v0.2.1.tar.gz -C $WORKSPACE
+tar -xzvf open-falcon* -C $WORKSPACE ./open-falcon ./agent 
 cd $WORKSPACE
 
 #修改heartbeat与transfer的ip地址 改为实际的后端地址
