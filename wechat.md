@@ -11,7 +11,7 @@ description:
 mac 微信记录备份。
 每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
 ```shell
-> cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
+> cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
 
 # 仅压缩 微信号-开始-结束
 > zip -r smile8365-181025-190108.zip . 
