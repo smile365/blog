@@ -29,7 +29,12 @@ pidfile /data/redis_6379.pid
 logfile ""
 save ""
 dir /data
+
+maxmemory
+maxmemory-policy volatile-lru
+
 appendonly yes
+no-appendfsync-on-rewrite yes
 ```
 
 使用docker安装redis
