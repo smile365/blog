@@ -39,8 +39,8 @@ aof重写也会消耗部分内存，需要配置相应策略。
 - 关闭bgsave的策略，改为使用脚步监测redis。
 - 当redis或者系统内存空闲多的时候进行save。
 
-备注：
-如果redis在线上运行，更改配置尽可能使用命令更改，如：`redis-cli config set appendonly yes`
+备注：  
+运行状态更改redis.conf持久化策略重启后会丢失数据，建议通过命令修改：`redis-cli config set appendonly yes`
 
 
 参考  
