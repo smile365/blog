@@ -47,4 +47,3 @@ aof重写也会消耗部分内存，需要配置相应策略。
 - [redis-cli config](https://www.zhihu.com/question/46220824)
 - [RDB、AOF](https://www.jianshu.com/p/a91329ae210c)
 - [save、Bgsave](http://www.runoob.com/redis/redis-backup.html)
-- 
