@@ -7,6 +7,8 @@ categories: ["code"]
 description:
 ---
 
+安装最新版redis请参考[install-redis-from-REMI](https://computingforgeeks.com/how-to-install-latest-redis-on-centos-7/)
+
 #### 基于docker安装redis
 创建文件
 
