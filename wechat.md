@@ -18,6 +18,7 @@ mac 微信记录备份。
 # 压缩并删除
 > zip -rm smile8365-181025-190108.zip .
 
+# 还原unzip test.zip -d /dir
 ```
 使用Sandboxie实现windows应用程序的多开。
 
