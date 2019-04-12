@@ -15,7 +15,8 @@ description:
 ```shell
 mkdir -p redis/conf
 mkdir -p redis/data
-vi redis/conf/redis.conf
+cd redis/conf
+wget http://download.redis.io/redis-stable/redis.conf
 ```
 
 [redis.conf](https://redis.io/topics/config)配置文件建议修改一下项
