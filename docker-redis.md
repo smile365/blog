@@ -11,69 +11,24 @@ description:
 
 #### 基于docker安装redis
 创建文件
-
+挂在的目录存放conf/data/rdb/aof
 ```shell
 mkdir -p redis/conf
 mkdir -p redis/data
 vi redis/conf/redis.conf
 ```
 
-[redis.conf](https://redis.io/topics/config)配置文件如下
+[redis.conf](https://redis.io/topics/config)配置文件建议修改一下项
 
 ```nginx
 bind 0.0.0.0
 requirepass sxy91
-protected-mode yes
-port 6379
-tcp-backlog 511
-timeout 0
-tcp-keepalive 300
-daemonize no
-supervised no
+
 pidfile /data/redis_6379.pid
-loglevel notice
 logfile ""
-databases 16
-save 900 1
-save 300 10
-save 60 10000
-stop-writes-on-bgsave-error yes
-rdbcompression yes
-rdbchecksum yes
-dbfilename dump.rdb
+save ""
 dir /data
-slave-serve-stale-data yes
-slave-read-only yes
-repl-diskless-sync no
-repl-diskless-sync-delay 5
-repl-disable-tcp-nodelay no
-slave-priority 100
-appendonly no
-appendfilename "appendonly.aof"
-appendfsync everysec
-no-appendfsync-on-rewrite no
-auto-aof-rewrite-percentage 100
-auto-aof-rewrite-min-size 64mb
-aof-load-truncated yes
-lua-time-limit 5000
-slowlog-log-slower-than 10000
-slowlog-max-len 128
-latency-monitor-threshold 0
-notify-keyspace-events ""
-hash-max-ziplist-entries 512
-hash-max-ziplist-value 64
-list-max-ziplist-size -2
-list-compress-depth 0
-set-max-intset-entries 512
-zset-max-ziplist-entries 128
-zset-max-ziplist-value 64
-hll-sparse-max-bytes 3000
-activerehashing yes
-client-output-buffer-limit normal 0 0 0
-client-output-buffer-limit slave 256mb 64mb 60
-client-output-buffer-limit pubsub 32mb 8mb 60
-hz 10
-aof-rewrite-incremental-fsync yes
+appendonly yes
 ```
 
 使用docker安装redis
