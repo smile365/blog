@@ -8,8 +8,10 @@ draft: true
 description:
 ---
 
+docker快速运行hbase
+----------
+[先安装docker](https://github.com/smile365/blog/blob/master/docker.md)  
 
-[先安装docker](https://github.com/smile365/blog/blob/master/docker.md)
 然后拉取镜像[hbase-docker](https://github.com/dajobe/hbase-docker)
 ```shell
 docker pull dajobe/hbase
@@ -28,11 +30,37 @@ Hostname 192.168.31.235
     LocalForward *:16010 hbase-docker:16010
     LocalForward *:9095 hbase-docker:9095
     LocalForward *:8085 hbase-docker:8085
+    LocalForward *:9090 hbase-docker:9090
 ```
 
-然后在myserver上执行`ssh myserver`
+防火墙打开相应端口，然后在myserver上执行`ssh myserver`
 
 浏览器打开：http://192.168.31.235:16010/master-status
+
+
+使用python连接hbase
+----------
+
+    $ pip install cython thriftpy happybase
+    
+```python
+import happybase
+server = '192.168.31.235'
+connection = happybase.Connection(server, 9090)
+connection.create_table('table-name', { 'family': dict() } )
+connection.tables()
+table = connection.table('table-name')
+table.put('row-key', {'family:qual1': 'value1', 'family:qual2': 'value2'})
+for k, data in table.scan():
+	print(k, data)
+
+```
+
+使用hbase-shell
+----------
+测试status、list等命令  
+
+    $ docker exec -it  hbase-docker hbase shell
 
 
 参考  
