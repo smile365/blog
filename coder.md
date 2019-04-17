@@ -18,8 +18,8 @@ java
 - [如何正确地写出单例模式](http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/)
 - [https://www.jianshu.com/p/4e8ca4e2af6c](https://www.jianshu.com/p/4e8ca4e2af6c)
 
-其他
-
+其他  
+- [今日热榜](http://hot.mrcuriosity.org/)
 - [明无梦](https://www.dreamxu.com/)
 - [ZHENG ZI'OU](https://orianna-zzo.github.io/)
 - [零壹軒·笔记](http://note.qidong.name/)
