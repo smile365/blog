@@ -38,8 +38,8 @@ conda config --set show_channel_urls yes
 
 创建虚拟环境
 ```shell
-conda create -n py35 python=3.5
-source activate py35
+conda create -n py3 python=3
+source activate py3
 ```
 
 
