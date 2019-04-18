@@ -42,7 +42,8 @@ conda create -n py3 python=3
 source activate py3
 ```
 
-配置pip镜`mkdir ~/.pip && vim ~/.pip/pip.conf`，内容如下：
+配置pip镜  
+`mkdir ~/.pip && vim ~/.pip/pip.conf`，内容如下：
 ```ini
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
