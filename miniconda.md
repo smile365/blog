@@ -50,3 +50,4 @@ source activate py35
 - [Miniconda镜像](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
 - [getting-started](https://conda.io/docs/user-guide/getting-started.html)
 - [Global bash_profile](https://serverfault.com/questions/491585/is-there-a-global-bash-profile-for-all-users-on-a-system)
+- [install-conda-for-all](https://stackoverflow.com/questions/27263620/how-to-install-anaconda-python-for-all-users)
