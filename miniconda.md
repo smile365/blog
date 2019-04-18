@@ -9,17 +9,16 @@ description:
 
 根据操作系统下载安装脚本:[miniconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)，centos操作如下：
 ```shell
+mkdir /opt/conda
+chmod ugo+w /opt/conda
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
 chmod +x Miniconda3*.sh
 ./Miniconda3*.sh
-# 同意协议
+# 1.同意协议
 yes
-# 默认安装到 ~/miniconda3
-# 为所有用户安装，则选择一个其他人可读的目录，如：
-/home/sharefile/conda
-# 是否加入当前用户的环境变量
-# 服务器选择no，选择yes会覆盖当前python、pip等环境变量
+# 2.输入安装位置
+/opt/conda/miniconda3
+# 3.是否加入当前用户的环境变量
 no
 ```
 
