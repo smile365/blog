@@ -47,7 +47,11 @@ ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www
 ssh www
 ```
 
-
+ssh端口转发(隧道)
+```
+#本机访问server端8080端口如下(s端防火墙只允许localhost访问)：
+ssh -L 8080:localhost:8080 sxy@server
+```
 
 参考
 
@@ -56,3 +60,5 @@ ssh www
 - [ssh免密登录远程主机](https://blog.csdn.net/feinifi/article/details/78213297)
 - [使用SSH-config文件](http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file)
 - [ssh-keygen参数](https://blog.51cto.com/13691477/2121696)
+- [SSH端口转发](https://www.cnblogs.com/520yang/articles/5405323.html)
+- [实战SSH端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
