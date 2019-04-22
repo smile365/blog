@@ -58,11 +58,12 @@ for k, data in table.scan():
 
 使用hbase-shell
 ----------
-测试status、list等命令  
+测试status\list\create等命令  
 
     $ docker exec -it  hbase-docker hbase shell
-
+    $ create 'test_table','cf',{VERSIONS=>1,COMPRESSION=>'SNAPPY',SPLITS => ['5','a','e','i','m','q','v']}
 
 参考  
 - [SSH LocalForward](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
 - [SSH Config](https://deepzz.com/post/how-to-setup-ssh-config.html)
+- [SSH端口转发](https://www.cnblogs.com/520yang/articles/5405323.html)
