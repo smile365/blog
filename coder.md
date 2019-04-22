@@ -7,16 +7,18 @@ categories: ["code"]
 draft: true
 ---
 
-spring
-
+spring  
 - [Spring Boot应用可视化监控](https://www.jianshu.com/p/7ecb57a3f326)
 
-java
-
+java  
 - [JVM参数调优](https://juejin.im/post/5add9f29518825670960d113)
 - [Java8 JVM参数解读](https://www.zybuluo.com/changedi/note/975529)
 - [如何正确地写出单例模式](http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/)
 - [https://www.jianshu.com/p/4e8ca4e2af6c](https://www.jianshu.com/p/4e8ca4e2af6c)
+
+在线工具  
+- [时间戳转换](http://www.beijing-time.org/shijianchuo/)
+- [进制转换](https://tool.oschina.net/hexconvert)
 
 其他  
 - [今日热榜](http://hot.mrcuriosity.org/)
