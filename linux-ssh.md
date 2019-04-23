@@ -62,3 +62,4 @@ ssh -L 8080:localhost:8080 sxy@server
 - [ssh-keygen参数](https://blog.51cto.com/13691477/2121696)
 - [SSH端口转发](https://www.cnblogs.com/520yang/articles/5405323.html)
 - [实战SSH端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
+- [动态端口转发](https://blog.fundebug.com/2017/04/24/ssh-port-forwarding/)
