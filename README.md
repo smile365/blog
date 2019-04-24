@@ -5,7 +5,7 @@ draft: true
 my blog
 
 正在学习  
-大数据  
+bigdata    
 - [hadoop]()
 - []()
 
