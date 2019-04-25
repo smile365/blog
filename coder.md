@@ -20,6 +20,8 @@ java
 - [时间戳转换](http://www.beijing-time.org/shijianchuo/)
 - [进制转换](https://tool.oschina.net/hexconvert)
 - [加密解密](http://tool.chacuo.net/crypt3des)
+- [tool.lu](https://tool.lu/)
+- [oschina](https://tool.oschina.net/)
 
 其他  
 - [今日热榜](http://hot.mrcuriosity.org/)
