@@ -15,7 +15,7 @@ systemctl enable supervisord
 vim /etc/supervisord.d/myprogram.ini
 ```
 
-编辑配置文件
+配置文件myprogram.ini内容
 ```ini
 [program:db2db]
 directory=/root/project
