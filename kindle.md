@@ -14,3 +14,4 @@ description:
 - [mobi、azw3、epub格式](http://www.360doc.com/content/18/0828/18/7872436_781919924.shtml)
 - [电子书下载网站](https://zhuanlan.zhihu.com/p/35051290)
 - [Kindle资源网站](https://zhuanlan.zhihu.com/p/33860130)
+- [传输方式](https://bookfere.com/post/459.html)
