@@ -1,5 +1,5 @@
 ---
-title:  Linux根目沾满的解决方法
+title:  Linux根目占满的解决方法
 date: 2019-05-05T03:26:43.089Z
 tags: ["code","it"]
 series: ["blog"]
