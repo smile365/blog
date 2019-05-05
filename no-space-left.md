@@ -61,3 +61,4 @@ storage:
 
 参考  
 - [linux磁盘占用问题](https://blog.csdn.net/nciasd/article/details/51497817)
+- [mongo因磁盘无法写入而异退出](https://github.com/smile365/blog/blob/master/start-mongod-failed.md)
