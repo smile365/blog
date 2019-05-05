@@ -5,9 +5,9 @@ date: 2018-06-29T02:18:59.803Z
 description:
 ---
 
-1.使用`ps -ef|grep mongod `查看已经没有了mongod的服务进程
-2.使用`tail -f /var/log/mongodb/mongod.log`查看日志信息，发现并没有错误信息，最后一条消息只显示了一个时间.
-3.使用`mongod -f /etc/mongod.conf`启动失败，mongod.log里也并未增加任何运行日志 
+1.使用`ps -ef|grep mongod `查看已经没有了mongod的服务进程  
+2.使用`tail -f /var/log/mongodb/mongod.log`查看日志信息，发现并没有错误信息，最后一条消息只显示了一个时间.  
+3.使用`mongod -f /etc/mongod.conf`启动失败，mongod.log里也并未增加任何运行日志  
 
 初步判断是mongo无法写入文件了。
 使用命令补全(tab键)时提示：`va-bash: 无法为立即文档创建临时文件: 设备上没有空间`
