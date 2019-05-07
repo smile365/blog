@@ -24,8 +24,8 @@ su -c "yum install java-1.8.0-openjdk"
 ```
 
 需要修改数据文件以及日志文件的存放路径：`grep -Iri dir ./config/`
-![enter description here](https://i.loli.net/2019/05/07/5cd0f38f04662.jpg)
->放在/tmp路径下的数据会被系统定时清理，容易造成topic丢失。
+![enter description here](https://i.loli.net/2019/05/07/5cd0f92a15cf5.jpg)
+>zk的dataDir默认为/tmp路径，会被系统定时清理，容易造成topic丢失。
 
 修改log4j的日志路径:`vim bin/kafka-server-start.sh`,增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
 
