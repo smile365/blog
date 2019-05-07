@@ -63,3 +63,4 @@ nuhup ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181" 1>>out.log 2>
 - [Kafka-Manager（fq）](https://medium.com/@FrissonAI/yahoos-kafka-manager-installation-82fdc4bd1222)
 - [Kafka-manager安装](https://blog.csdn.net/yuan_xw/article/details/79188565)
 - [Kafka三款监控工具比较](https://blog.csdn.net/xbs1019/article/details/54949324)
+- [kafka-monitor vs kafka-manager](https://stackoverflow.com/questions/49276785/monitoring-ui-for-apache-kafka-kafka-manager-vs-kafka-monitor/49292872)
