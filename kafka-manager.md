@@ -55,7 +55,9 @@ play.http.context = "/kafka/"
 
 ### 后台运行
 ```shell
-nuhup ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181" >/dev/null 2>&1 &
+nohup ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181" >/dev/null 2>&1 &
+
+#输出日志：nohup ./bin/kafka-manager -Dkafka-manager.zkhosts="localhost:2181" 1>out.log 2>err.log &
 ```
 
 参考
