@@ -27,7 +27,8 @@ su -c "yum install java-1.8.0-openjdk"
 ![enter description here](https://i.loli.net/2019/05/07/5cd0f92a15cf5.jpg)
 >zk的dataDir默认为/tmp路径，会被系统定时清理，容易造成topic丢失。
 
-修改log4j的日志路径:`vim bin/kafka-server-start.sh`,增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
+修改log4j的日志路径:`vim bin/kafka-server-start.sh`  
+增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
 
 启动和测试
 ```shell
