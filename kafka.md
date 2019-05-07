@@ -23,6 +23,7 @@ su -c "yum install java-1.8.0-openjdk"
 > tar -xzf kafka_2.11-2.0.0.tgz
 > cd kafka_2.11-2.0.0
 ```
+> 解压到特定路径使用-C参数：tar -xzf kafka*.tgz -C youdir
 
 需要修改数据文件以及日志文件的存放路径：`grep -Iri dir ./config/`
 ![enter description here](https://i.loli.net/2019/05/07/5cd0f92a15cf5.jpg)
