@@ -21,7 +21,16 @@ su -c "yum install java-1.8.0-openjdk"
 
 > tar -xzf kafka_2.11-2.0.0.tgz
 > cd kafka_2.11-2.0.0
+```
 
+需要修改数据文件以及日志文件的存放路径：`grep -Iri dir ./config/`
+![enter description here](https://i.loli.net/2019/05/07/5cd0f38f04662.jpg)
+>放在/tmp路径下的数据会被系统定时清理，容易造成topic丢失。
+
+修改log4j的日志路径:`vim bin/kafka-server-start.sh`,增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
+
+启动和测试
+```shell
 > bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 
 > bin/kafka-server-start.sh -daemon config/server.properties
@@ -158,3 +167,4 @@ bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 -
 - [如何确定Kafka的分区数](https://www.cnblogs.com/huxi2b/p/4757098.html)
 - [重新分配partition](http://wzktravel.github.io/2015/12/31/kafka-reassign/)
 - [PyKafka使用指南](https://pykafka.readthedocs.io/en/latest/usage.html)
+- [kafka.logs.dir](https://stackoverflow.com/questions/50800079/kafka-application-log-configuration)
