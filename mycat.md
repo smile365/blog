@@ -33,7 +33,6 @@ tar zxvf Mycat-server-1.6-RELEASE-20161028204710-linux.tar.gz
 ```shell
 mysql -h127.0.0.1 -P8066 -uroot -proot
 ```
-![enter description here](./images/1528855052678.png)
 
 出现问题一下问题，请检查配置文件server.xml
 ```accesslog
