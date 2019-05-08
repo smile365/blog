@@ -46,3 +46,4 @@ mysql -h127.0.0.1 -P8066 -uroot -proot
 - [install-OpenJDK](http://openjdk.java.net/install/)
 - [Mycat实现MySQL读写分离](https://www.jianshu.com/p/cb7ec06dae05)
 - [Mycat安装部署+读写分离](https://segmentfault.com/a/1190000009520414)
+- [Mycat读写分离](https://www.souyunku.com/2017/11/15/mycat/)
