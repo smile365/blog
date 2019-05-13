@@ -20,12 +20,12 @@ description:
   
 
 查看占用超过1g的目录:
-`du -sh * |grep -E 'G|T'`
+`du -sh * |grep -E 'G|T'`  
 ![enter description here](https://i.loli.net/2019/05/05/5cce639bdd203.jpg)
 
 >注：不在上图中挂载点的目录(usr/var/root)都属于/挂载点 
 
-大多数情况为数据或日志等文件过多造成的。
+大多数情况为数据或日志等文件过多造成的。  
 ![enter description here](https://i.loli.net/2019/05/05/5cce641f9412a.jpg)
 
 
