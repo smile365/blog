@@ -7,6 +7,11 @@ categories: ["code"]
 draft: true
 ---
 
+python  
+- [python-gui](https://pythonguidecn.readthedocs.io/zh/latest/scenarios/gui.html)
+- [python开发app实战](https://thief.one/2018/05/08/1/)
+- [Kivy入门手册](https://github.com/mvasilkov/kb)
+
 spring  
 - [Spring Boot应用可视化监控](https://www.jianshu.com/p/7ecb57a3f326)
 
