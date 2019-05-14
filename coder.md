@@ -10,6 +10,7 @@ draft: true
 python  
 - [python-gui](https://pythonguidecn.readthedocs.io/zh/latest/scenarios/gui.html)
 - [python开发app实战](https://thief.one/2018/05/08/1/)
+- [kivy doc](https://kivy.org/doc/stable/)
 - [Kivy入门手册](https://github.com/mvasilkov/kb)
 
 spring  
