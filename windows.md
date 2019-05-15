@@ -15,3 +15,6 @@ C:\> dir /B | findstr /R /C:"[mp]"
 查看端口占用
 netstat -ano | findstr 8009
 
+参考  
+- [Windows-alias给cmd命令起别名](https://www.awaimai.com/2445.html)
+- [windows-alias](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)
