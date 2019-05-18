@@ -44,9 +44,13 @@ sudo systemctl restart docker
 Linux系统下配置完加速器需要检查是否生效，在命令行执行 ps -ef | grep dockerd，如果从结果中看到了
 配置的 --registry-mirror 参数说明配置成功。
 
+测试  
+```shell
+docker pull centos
+docker run -it centos /bin/bash
+```
 
-
-参考
-
+参考  
+- [docker镜像](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 - [安装Docker CE](https://yeasy.gitbooks.io/docker_practice/content/install/centos.html)
 - [docker logs](https://www.jianshu.com/p/1eb1d1d3f25e)
