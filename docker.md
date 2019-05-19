@@ -42,10 +42,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
-检查加速器是否生效
-
-Linux系统下配置完加速器需要检查是否生效，在命令行执行 ps -ef | grep dockerd，如果从结果中看到了
-配置的 --registry-mirror 参数说明配置成功。
+执行`docker info`，看到Registry Mirrors:信息则表示生效
 
 测试  
 ```shell
