@@ -46,8 +46,7 @@ sudo systemctl restart docker
 
 测试  
 ```shell
-docker pull centos
-docker run -it centos /bin/bash
+docker run alpine echo '123'
 ```
 
 参考  
