@@ -33,7 +33,10 @@ systemctl enable docker
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://6lsei4oi.mirror.aliyuncs.com"]
+  "registry-mirrors": [
+    "https://dockerhub.azk8s.cn",
+    "https://reg-mirror.qiniu.com"
+  ]
 }
 EOF
 sudo systemctl daemon-reload
@@ -54,4 +57,4 @@ docker run -it centos /bin/bash
 - [docker镜像](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 - [安装Docker CE](https://yeasy.gitbooks.io/docker_practice/content/install/centos.html)
 - [docker logs](https://www.jianshu.com/p/1eb1d1d3f25e)
-- [docker-hub加速器](https://yeasy.gitbooks.io/docker_practice/install/mirror.html)
+- [docker-hub镜像加速器](https://yeasy.gitbooks.io/docker_practice/install/mirror.html)
