@@ -54,3 +54,4 @@ docker run -it centos /bin/bash
 - [docker镜像](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 - [安装Docker CE](https://yeasy.gitbooks.io/docker_practice/content/install/centos.html)
 - [docker logs](https://www.jianshu.com/p/1eb1d1d3f25e)
+- [docker-hub加速器](https://yeasy.gitbooks.io/docker_practice/install/mirror.html)
