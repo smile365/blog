@@ -34,6 +34,8 @@ if __name__ == '__main__':
 ```shell
 #必须先升级
 pip install --upgrade buildozer
+# 进入到项目目录
+buildozer init
 buildozer -v android debug
 ```
 
@@ -42,6 +44,7 @@ buildozer -v android debug
 参考  
 - [kivy-downloads](https://kivy.org/downloads/)
 - [kivy-doc](https://kivy.org/doc/stable/gettingstarted/intro.html#)
+- [buildozer-doc](https://buildozer.readthedocs.io/en/latest/quickstart.html)
 - [linux-android-sdk-Proxy](https://stackoverflow.com/questions/10634202/android-sdk-manager-proxy-settings-in-linux)
 - [android-sdk-mirrors](https://github.com/renfeng/android-repository/wiki/Known-Mirrors)
 - [local-sdk-mirror](https://www.koorka.com/wiki/How_to_setup_a_local_Android_SDK_repository_mirror)
