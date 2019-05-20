@@ -25,7 +25,7 @@ docker version
 systemctl enable docker
 ```
 
-**配置数据路径和Docker加速器**
+**配置数据路径和Docker加速器**  
 data-root默认为/var/lib/docker，一般分配较小，可改到其他路径。修改daemon配置文件/etc/docker/daemon.json：
 ```shell
 sudo mkdir -p /etc/docker
