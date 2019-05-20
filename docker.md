@@ -8,7 +8,7 @@ draft: true
 description:
 ---
 
-Docker 最低支持 CentOS 7。
+**Docker最低支持 CentOS 7**
 
 ```shell
 #step 1: 安装必要的一些系统工具
@@ -25,14 +25,13 @@ docker version
 systemctl enable docker
 ```
 
-如何使用Docker加速器
-
-
-您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器：
+**配置数据路径和Docker加速器**
+data-root默认为/var/lib/docker，一般分配较小，可改到其他路径。修改daemon配置文件/etc/docker/daemon.json：
 ```shell
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<-'EOF'
 {
+  "data-root": "/home/softdata/docker",
   "registry-mirrors": [
     "https://dockerhub.azk8s.cn",
     "https://reg-mirror.qiniu.com"
@@ -44,10 +43,15 @@ sudo systemctl restart docker
 ```
 执行`docker info`，看到Registry Mirrors:信息则表示生效
 
-测试  
+常用命令  
 ```shell
+#删除所有CONTAINER
+docker rm $(docker ps -a -q)
+#
 docker run alpine echo '123'
 ```
+
+
 
 参考  
 - [docker镜像](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
@@ -55,3 +59,5 @@ docker run alpine echo '123'
 - [docker logs](https://www.jianshu.com/p/1eb1d1d3f25e)
 - [docker-hub镜像加速器](https://yeasy.gitbooks.io/docker_practice/install/mirror.html)
 - [docker-run](http://www.runoob.com/docker/docker-run-command.html)
+- [dockerd](https://docs.docker.com/engine/reference/commandline/dockerd/)
+- [config.json](https://www.cnblogs.com/ningskyer/articles/8330143.html)
