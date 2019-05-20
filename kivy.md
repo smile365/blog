@@ -40,4 +40,5 @@ buildozer -v android debug
 - [kivy-downloads](https://kivy.org/downloads/)
 - [kivy-doc](https://kivy.org/doc/stable/gettingstarted/intro.html#)
 - [linux-android-sdk-Proxy](https://stackoverflow.com/questions/10634202/android-sdk-manager-proxy-settings-in-linux)
-- [android-sdk-mirros](https://github.com/renfeng/android-repository/wiki/Known-Mirrors)
+- [android-sdk-mirrors](https://github.com/renfeng/android-repository/wiki/Known-Mirrors)
+- [local-sdk-mirror](https://www.koorka.com/wiki/How_to_setup_a_local_Android_SDK_repository_mirror)
