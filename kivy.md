@@ -33,7 +33,7 @@ if __name__ == '__main__':
 构建所需的环境比较复杂，官方提供了打包好的虚拟镜像。下载[Buildozer.7z](https://kivy.org/downloads/android/)导入到vmware或者virtualbox进行构建。     
 ```shell
 #必须先升级
-pip install --upgrade buildozer
+sudo pip3 install --upgrade buildozer
 # 进入到项目目录
 buildozer init
 buildozer -v android debug
