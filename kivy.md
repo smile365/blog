@@ -31,8 +31,11 @@ if __name__ == '__main__':
 
 **构建成apk**
 构建所需的环境比较复杂，官方提供了打包好的虚拟镜像。下载[Buildozer.7z](https://kivy.org/downloads/android/)导入到vmware或者virtualbox进行构建。     
-
+```shell
+#必须先升级
+pip install --upgrade buildozer
 buildozer -v android debug
+```
 
 需要下载sdk，建议配置国内[Proxy Server](http://mirrors.zzu.edu.cn/wiki/android.html)
 
