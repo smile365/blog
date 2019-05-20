@@ -8,6 +8,32 @@ draft: true
 description:
 ---
 
+**安装kivy **
+```shell
+
+pip install kivy
+```
+
+**开发并测试**
+```python
+import kivy
+from kivy.app import App
+from kivy.uix.label import Label
+
+class MyApp(App):
+
+    def build(self):
+        return Label(text='Hello world')
+
+if __name__ == '__main__':
+    MyApp().run()
+```
+
+**构建成apk**
+构建所需的环境比较复杂，官方提供了打包好的虚拟镜像。下载[Buildozer.7z](https://kivy.org/downloads/android/)导入到vmware或者virtualbox进行构建。     
+
+
+
 
 参考  
 - [kivy-downloads](https://kivy.org/downloads/)
