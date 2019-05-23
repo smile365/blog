@@ -43,6 +43,7 @@ buildozer -v android debug
 需要下载sdk，建议配置国内[Proxy Server](http://mirrors.zzu.edu.cn/wiki/android.html)
 
 参考  
+- [Kivy中文编程指南](https://www.bookstack.cn/read/Kivy-CN/README.md)
 - [kivy-downloads](https://kivy.org/downloads/)
 - [kivy-doc](https://kivy.org/doc/stable/gettingstarted/intro.html#)
 - [buildozer-doc](https://buildozer.readthedocs.io/en/latest/quickstart.html)
