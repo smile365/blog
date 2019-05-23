@@ -19,7 +19,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-pip 和 pip3 并存时，只需修改` ~/.pip/pip.conf`。
+pip 和 pip3 并存时，只需修改` mkdir -p ~/.pip/ && vim ~/.pip/pip.conf`。
 
 ### 安装pip
 ```shell
