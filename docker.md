@@ -43,12 +43,14 @@ sudo systemctl restart docker
 ```
 执行`docker info`，看到Registry Mirrors:信息则表示生效
 
-常用命令  
+测试使用 
 ```shell
+#后台运行alpine
+docker run -d -ti --name a alpine
+#进入容器
+docker exec -it a /bin/sh
 #删除所有CONTAINER
 docker rm $(docker ps -a -q)
-#
-docker run alpine echo '123'
 ```
 
 
