@@ -72,7 +72,7 @@ server {
 
 ```
 
-**同步完成后测试**
+**同步完成后测试**  
 编辑host  
 `echo "192.168.1.176 mirrors.yourname.com" >> /etc/hosts`
 
