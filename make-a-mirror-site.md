@@ -1,5 +1,5 @@
 ---
-title: centos搭建软件安装镜像
+title: centos搭建软件安装镜像站
 date: 2019-05-29T06:21:08.071Z
 tags: ["code","it"]
 series: ["blog"]
