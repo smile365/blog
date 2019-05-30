@@ -80,24 +80,22 @@ server {
 ```ini
 [base]
 name=CentOS-$releasever - Base
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/os/$basearch/
-#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+baseurl=https://mirrors.yourname.com/centos/$releasever/os/$basearch/
+gpgcheck=0
 
 [updates]
 name=CentOS-$releasever - Updates
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/updates/$basearch/
+baseurl=https://mirrors.yourname.com/centos/$releasever/updates/$basearch/
 gpgcheck=0
 
 [extras]
 name=CentOS-$releasever - Extras
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/extras/$basearch/
+baseurl=https://mirrors.yourname.com/centos/$releasever/extras/$basearch/
 gpgcheck=0
 
 [centosplus]
 name=CentOS-$releasever - Plus
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/centosplus/$basearch/
+baseurl=https://mirrors.yourname.com/centos/$releasever/centosplus/$basearch/
 gpgcheck=0
 enabled=0
 ```
