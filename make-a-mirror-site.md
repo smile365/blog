@@ -64,18 +64,47 @@ Nginx打开目录浏览功能
 在nginx的配置文件中添加
 ```nginx
 server {
-    listen 8989;
+    listen 80;
+    server_name mirrors.yourname.com;
     autoindex on;
     root /home/softdata/tunasync/data;
 }
+
 ```
 
-测试
-```shell
-#若是目录，url最后必须有/
-curl localhost:8989/
-curl localhost:8989/centos/
+**同步完成后测试**
+编辑host  
+`echo "192.168.1.176 mirrors.yourname.com" >> /etc/hosts`
+
+参考[使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/centos/)，改`/etc/yum.repos.d/CentOS-Base.repo`文件
+```ini
+[base]
+name=CentOS-$releasever - Base
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/os/$basearch/
+#mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=os
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+[updates]
+name=CentOS-$releasever - Updates
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/updates/$basearch/
+gpgcheck=0
+
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/extras/$basearch/
+gpgcheck=0
+
+[centosplus]
+name=CentOS-$releasever - Plus
+baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos/$releasever/centosplus/$basearch/
+gpgcheck=0
+enabled=0
 ```
+更新软件包缓存 `sudo yum makecache`  
+测试一下速度 `yum udpate`
+
+
 
 参考  
 - [清华大学TUNA镜像源](https://github.com/tuna/tunasync/blob/master/docs/zh_CN/get_started.md)
