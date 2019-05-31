@@ -32,7 +32,7 @@ su -c "yum install java-1.8.0-openjdk"
 如果需要修改log4j的日志路径，编辑文件:`vim bin/kafka-server-start.sh`  
 在开头增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
 
-kafka的配置需要注意listeners与advertised.listeners。客户端会先连接到listeners地址，然后通过dvertised.listeners获取元数据。如果后者没有配置会使用前者地址，如果都没有配置会使用主机名或者localhost。
+kafka的配置需要注意listeners与advertised.listeners。客户端会先连接到listeners地址，然后通过dvertised.listeners获取元数据。如果后者没有配置会使用前者地址，如果都没有配置会使用主机名或者localhost。一般只需要配置前者：`listeners=PLAINTEXT://:0.0.0.0:9092`
 
 
 
