@@ -32,6 +32,10 @@ su -c "yum install java-1.8.0-openjdk"
 如果需要修改log4j的日志路径，编辑文件:`vim bin/kafka-server-start.sh`  
 在开头增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
 
+kafka的配置需要注意listeners与advertised.listeners。客户端会先连接到listeners地址，然后通过dvertised.listeners获取元数据。
+
+
+
 启动和测试
 ```shell
 > bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
@@ -149,6 +153,9 @@ kafka出现`nodename nor servname provided, or not known`的解决
 方法1：在client端增加一条host记录
 
 方法2：修改`config/server.properties`中的值为服务器端的ip`advertised.listeners=PLAINTEXT://192.168.31.174:9092`
+
+
+关于listeners和advertised.listeners的区别可以看这篇文章[](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
 
 查看最新的offset
 ```
