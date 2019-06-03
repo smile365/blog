@@ -29,7 +29,7 @@ export PATH="/opt/conda/miniconda3/bin:$PATH"
 
 **重新打开一个**终端，测试是否安装成功`which conda`
 
-**2019-05-17更新**：（conda官方不允许第三方非授权镜像)  
+**2019-05-17更新**:清华大学开源软件镜像站宣布，因未经官方授权，停止Anaconda镜像服务。  
 ~~安装镜像,失效~~
 ```shell
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
