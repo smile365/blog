@@ -27,3 +27,4 @@ sudo -u postgres /usr/pgsql-10/bin/psql -c "SELECT version();"
 - [use](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
 - [tutorial](https://www.postgresql.org/docs/11/index.html)
 - [digoal](https://github.com/digoal/blog/blob/master/201706/20170601_02.md)
+- [advanced](https://github.com/digoal/blog/blob/master/README.md)
