@@ -11,11 +11,11 @@ description:
 使用[官网的rpm](https://www.postgresql.org/download/linux/redhat/)包安装  
 ```shell
 yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
-yum -y install postgresql11
+yum -y install postgresql11-server
 /usr/pgsql-11/bin/postgresql-11-setup initdb
 systemctl enable postgresql-11
 systemctl start postgresql-11
-sudo -u postgres /usr/pgsql-10/bin/psql -c "SELECT version();"
+sudo -u postgres psql -c "SELECT version();"
 ```
 
 [postgresql的应用场景举例](https://github.com/digoal/blog/blob/master/201611/20161124_02.md)
