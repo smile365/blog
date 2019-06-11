@@ -30,6 +30,7 @@ grant all privileges on database sxydb to sxy;
 echo -e "host \t sxydb \t\t sxy \t\t 0.0.0.0/0 \t\t md5" >> /var/lib/pgsql/11/data/pg_hba.conf
 echo "listen_addresses = '*'" >> /var/lib/pgsql/11/data/postgresql.conf
 sudo systemctl restart postgresql-11
+#psql -d sxydb -U sxy -W 
 ```
 
 
@@ -43,3 +44,4 @@ sudo systemctl restart postgresql-11
 - [use](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
 - [tutorial](https://www.postgresql.org/docs/11/index.html)
 - [digoal](https://github.com/digoal/blog/blob/master/201706/20170601_02.md)
+- [中文文档](https://www.docs4dev.com/docs/zh/postgre-sql/11.2/reference)
