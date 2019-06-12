@@ -16,8 +16,8 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 
 [参考这里](https://github.com/smile365/blog/blob/master/mongo.md)配置centos的镜像源
 
-安装epel源：`yum install epel-release`
-安装python3：`yum install python34`
+安装epel源：`yum -y install epel-release`
+安装python3：`yum -y install python34`
 
 配置pip的镜像`mkdir -p ~/.config/pip & vi ~/.config/pip/pip.conf`
 ```ini
