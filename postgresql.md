@@ -26,13 +26,40 @@ grant all privileges on database sxydb to sxy;
 ```
 
 开启远程访问  
-```shell
+```bash
 echo -e "host \t all \t all \t 127.0.0.1/32 \t md5" >> /var/lib/pgsql/11/data/pg_hba.conf
 echo "listen_addresses = '*'" >> /var/lib/pgsql/11/data/postgresql.conf
 sudo systemctl restart postgresql-11
 psql -h 127.0.0.1 -d sxydb -U sxy -W 
 ```
 
+安装[Psycopg](http://initd.org/psycopg/)与[pony](https://docs.ponyorm.org/firststeps.html)  
+```bash
+yum -y install postgresql11-devel gcc python-devel
+
+PATH=$PATH:/usr/pgsql-11/bin/
+export PATH
+which pg_config
+
+pip install psycopg2 pony
+```
+
+测试  
+```python
+from pony.orm import *
+
+db = Database()
+
+class Midc(db.Entity):
+	info = Required(str)
+
+db.bind(provider='postgres', user='sxy', password='sxy', host='127.0.0.1', database='sxydb')
+db.generate_mapping(create_tables=True)
+p1 = Midc(info='test')
+commit()
+elect(p for p in Midc).show()
+db.close()
+```
 
 
 [postgresql的应用场景举例](https://github.com/digoal/blog/blob/master/201611/20161124_02.md)
@@ -44,4 +71,4 @@ psql -h 127.0.0.1 -d sxydb -U sxy -W
 - [use](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7)
 - [tutorial](https://www.postgresql.org/docs/11/index.html)
 - [digoal](https://github.com/digoal/blog/blob/master/201706/20170601_02.md)
-- [中文文档](https://www.docs4dev.com/docs/zh/postgre-sql/11.2/reference)
+- [ponyorm](https://docs.ponyorm.org/firststeps.html)
