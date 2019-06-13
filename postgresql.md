@@ -35,13 +35,7 @@ psql -h 127.0.0.1 -d sxydb -U sxy -W
 
 安装[Psycopg](http://initd.org/psycopg/)与[pony](https://docs.ponyorm.org/firststeps.html)  
 ```bash
-yum -y install postgresql11-devel gcc python-devel
-
-PATH=$PATH:/usr/pgsql-11/bin/
-export PATH
-which pg_config
-
-pip install psycopg2 pony
+pip install psycopg2-binary pony
 ```
 
 测试  
