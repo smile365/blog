@@ -69,10 +69,7 @@ nginx -t
 nginx -s reload
 ```
 
-
-
-**参考**
-
+**参考**  
 - [SSL/TLS 加密新纪元](https://linux.cn/article-6565-1.html)
 - [免费HTTPS证书Let's Encrypt安装教程](https://foofish.net/https-free-for-lets-encrypt.html)
 - [acme.sh](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
