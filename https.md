@@ -76,4 +76,6 @@ nginx -s reload
 - [SSL/TLS 加密新纪元](https://linux.cn/article-6565-1.html)
 - [免费HTTPS证书Let's Encrypt安装教程](https://foofish.net/https-free-for-lets-encrypt.html)
 - [acme.sh](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
+- [nginx2https](https://tecadmin.net/nginx-force-redirect-to-https-with-www/)
+- [nginx-force2https](https://serverfault.com/questions/250476/how-to-force-or-redirect-to-ssl-in-nginx)
 
