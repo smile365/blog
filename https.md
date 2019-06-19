@@ -6,88 +6,65 @@ date: 2018-01-30
 
  [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过脚本定期更新。申请步骤如下：
 
-**创建验证所需文件**
+**使用acme脚本申请证书**
 
 ```shell
 #创建一个目录存放证书
-mkdir /home/soft/key
-cd  /home/soft/key
+mkdir -p /etc/nginx/ssl
 
-#创建 Let's Encrypt 账号
-openssl genrsa 4096 > account.key
 
-#创建普通域名私钥
-openssl genrsa 4096 > domain.key
-
-#创建域名sxy91.com的注册文件
-openssl req -new -sha256 -key domain.key -subj "/CN=sxy91.com" > domain.csr
-
-#下载acme脚本
+#安装acme脚本
 wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
 
-#创建一个目录存放域名验证文件
-mkdir -p /var/www/challenges
+测试安装
+acme.sh -v
+
+如果找不到命令就创建alias
+alias acme.sh=~/.acme.sh/acme.sh
 ```
 
-
-**编辑nginx，让域名能访问到验证文件（需要重启nginx）**
-vi /etc/nginx/conf.d/sxy.conf
-
-```nginx
+配置nginx
+```nginxconf
+# acme.sh 会查找 -d指定的domain
 server {
     listen 80;
-    server_name *.sxy91.com;
-    location ^~ /.well-known/acme-challenge/ {
-        alias /var/www/challenges/;
-        try_files $uri =404;
-    }
+    server_name www.sxy91.com sxy91.com;
 }
 ```
 
-**使用acme脚本申请证书**
+生成证书
+```shell
+acme.sh  --installcert  -d  sxy91.com  \
+		-d www.sxy91.com \
+		--key-file   /etc/nginx/ssl/sxy91.key \
+		--fullchain-file /etc/nginx/ssl/fullchain.cer \
+		--reloadcmd  "service nginx force-reload"
+#会自动生成fullchain.cer和sxy91.key
+#会自动创建cronjob，每天 0:00 点自动检测所有的证书
+crontab -l
 
-    ```shell
-    python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /var/www/challenges/ > ./signed.crt
-    ```
-
-![signed.crt](https://i.loli.net/2018/07/04/5b3cb0f7dc4b5.jpg)
-
-
-### 
-
-```shell?linenums
-wget -O - https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem > intermediate.pem
-cat signed.crt intermediate.pem > chained.pem
-nginx -t
-nginx -s reload
 ```
 
-访问[https://sxy91.com](https://sxy91.com)测试
+配置nginx并强制使用htpps  
+```nginxconf
+server {
+    listen 80;
+    server_name www.sxy91.com sxy91.com;
+    rewrite ^ https://www.sxy91.com$request_uri? permanent;
+}
 
-### 过期前自动更新证书
-自动更新脚本renew_cert.sh，内容如下：
-
-```shell?linenums
-#!/usr/bin/sh renew_cert.sh
-python acme_tiny.py --account-key account.key --csr domain.csr --acme-dir /var/www/challenges/ > /tmp/signed.crt || exit
-wget -O - https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem > intermediate.pem
-cat /tmp/signed.crt intermediate.pem > chained.pem
-nginx -s reload
+server {
+	listen 443 ssl;
+	server_name www.sxy91.com sxy91.com;
+	ssl_certificate /etc/nginx/ssl/fullchain.cer;
+	ssl_certificate_key /etc/nginx/ssl/sxy91.key;
+	ssl_session_timeout 5m;
+	ssl_session_cache shared:SSL:50m;
+	ssl_prefer_server_ciphers on;
+}
 ```
 
-修改crontab，增加一条定时：
-`#每2月执行一次`
-`0 0 1 */2 * /home/soft/key/renew_cert.sh 2>> /home/soft/key/acme_tiny.log`
 
-配置nginx让网站默认为htpps
-```nginx
-#ssl on;
-    server {
-        listen  80;
-        server_name www.sxy91.com;
-        return 301 https://$server_name$request_uri;
-    }
-```
 
 
 **参考**
