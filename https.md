@@ -12,7 +12,6 @@ date: 2018-01-30
 #创建一个目录存放证书
 mkdir -p /etc/nginx/ssl
 
-
 #安装acme脚本
 wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
 
