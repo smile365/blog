@@ -64,6 +64,11 @@ server {
 }
 ```
 
+重启nginx  
+```shell
+nginx -t
+nginx -s reload
+```
 
 
 
