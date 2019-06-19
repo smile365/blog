@@ -13,7 +13,7 @@ date: 2018-01-30
 mkdir -p /etc/nginx/ssl
 
 #安装acme脚本
-wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
+curl  https://get.acme.sh | sh
 
 测试安装
 acme.sh -v
