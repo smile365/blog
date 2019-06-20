@@ -1,6 +1,6 @@
 ---
 title:  技术博客收集
-date: 2018-7-4
+date: 2018-07-04
 tags: ["websit"]
 series: ["blog"]
 categories: ["code"]
