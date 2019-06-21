@@ -1,6 +1,7 @@
 ---
 title: 在CentOS7上安装mycat实现读写分离 
 tags: ["mysql"]
+date: 2018-06-12
 draft: true
 ---
 
