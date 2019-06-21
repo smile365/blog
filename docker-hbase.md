@@ -24,7 +24,7 @@ echo "172.17.0.2 hbase-docker hbase-docker" >> /etc/hosts
 ```
 
 如果docker没有安装在本机，而是安装在myserver上(ip:192.168.31.235)，可在myserver服务器上编辑`vim ~/.ssh/config`，内容如下：  
-```dsconfig
+```bash
 Host myserver
 Hostname 192.168.31.235
     LocalForward *:16010 hbase-docker:16010
