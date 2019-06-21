@@ -2,8 +2,6 @@
 title:  readme.md
 draft: true
 ---
-# blog
-my blog
 
 正在学习  
 bigdata    
