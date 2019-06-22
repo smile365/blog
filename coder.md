@@ -10,6 +10,7 @@ draft: true
 站点收藏  
 
 - [多吉搜索](https://dogedoge.com/)
+- [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 
 
 python  
