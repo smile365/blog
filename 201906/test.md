@@ -1,37 +1,37 @@
-# 标题
-
-**粗体** *斜体* <u>下划线</u> ~~删除线~~
-
-> 引用内容
-
-```html
-<!-- 代码块 -->
-<link rel="stylesheet" href="assets/prism.css" />
-<pre><code class="language-javascript">
-console.log('Test');
-</code></pre>
-<script src="assets/prism.css"></script>
-```
-
-1. 有序列表1
-2. 有序列表2
-
-
-* 无序列表1
-* 无序列表2
-
-[链接](http://baidu.com "链接提示")
-
-![图片](http://placehold.it/140x140 "图片提示")
-
-分隔线
-
+---
+title:  Marked - Markdown Parser
 ---
 
-## 表格
+[Marked] lets you convert [Markdown] into HTML.  Markdown is a simple text format whose goal is to be very easy to read and write, even when not converted to HTML.  This demo page will let you type anything you like and see how it gets converted.  Live.  No more waiting around.
 
-column1 | column2 | column3
-------- | ------- | -------
-column1 | column2 | column3
-column1 | column2 | column3
-column1 | column2 | column3
+How To Use The Demo
+-------------------
+
+1. Type in stuff on the left.
+2. See the live updates on the right.
+
+That's it.  Pretty simple.  There's also a drop-down option in the upper right to switch between various views:
+
+- **Preview:**  A live display of the generated HTML as it would render in a browser.
+- **HTML Source:**  The generated HTML before your browser makes it pretty.
+- **Lexer Data:**  What [marked] uses internally, in case you like gory stuff like this.
+- **Quick Reference:**  A brief run-down of how to format things using markdown.
+
+Why Markdown?
+-------------
+
+It's easy.  It's not overly bloated, unlike HTML.  Also, as the creator of [markdown] says,
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+Ready to start writing?  Either start changing stuff on the left or
+[clear everything](/demo/?text=) with a simple click.
+
+[Marked]: https://github.com/markedjs/marked/
+[Markdown]: http://daringfireball.net/projects/markdown/
