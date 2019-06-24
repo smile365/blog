@@ -9,6 +9,8 @@ draft: true
 
 站点收藏  
 
+- [如何使用GitHub-issue作为博客后端](https://github.com/jwenjian/ghiblog)
+- [微信历史文章](https://www.ershicimi.com/)
 - [多吉搜索](https://dogedoge.com/)
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 
