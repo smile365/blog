@@ -19,7 +19,7 @@ cd redis/conf
 wget http://download.redis.io/redis-stable/redis.conf
 ```
 
-[redis.conf](https://redis.io/topics/config)配置文件建议修改一下项
+[redis.conf](https://redis.io/topics/config)配置文件建议修改以下几项
 
 ```nginx
 bind 0.0.0.0
