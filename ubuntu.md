@@ -1,11 +1,9 @@
 ---
 title:  ubuntu配置
 date: 2018-10-11T13:54:06.446Z
-tags: ["ubuntu"]
-series: ["blog"]
-categories: ["code"]
+tags: 
+ - ubuntu
 draft: true
-description:
 ---
 
 
