@@ -31,8 +31,11 @@ tags:
 停止mongo服务：
 
 迁移数据文件：
+```sh
 mv /var/lib/mongo /home/sharefile/mongo 
 echo "" > /home/sharefile/mongo/mongod.log
+```
+
 修改配置文件：`vim /etc/mongod.conf`
 ```yaml
 # where to write logging data.
