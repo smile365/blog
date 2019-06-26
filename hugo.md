@@ -1,8 +1,10 @@
 ---
 title: 使用hugo创建自己的blog
 date: 2018-07-04
-tags: ["centos","hugo"]
-draft: true
+tags:
+ - hugo
+ - bloger
+ - centos
 ---
 
 **centos安装**[hugo](https://gohugo.io/getting-started/quick-start/)
