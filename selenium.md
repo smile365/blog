@@ -1,10 +1,10 @@
 ---
 title:  Selenium与PhantomJS的使用
 date: 2018-08-27T05:37:22.077Z
-tags: ["selenium"]
-series: ["blog"]
-categories: ["code"]
-description:
+tags: 
+ - selenium
+ - PhantomJS
+ - Pyppeteer
 ---
 
 **Selenium**：网页自动化测试工具(通过各个浏览器的drive控制浏览器的行为)，给开发者提供控制浏览器的api，类似于sdk。  
@@ -75,3 +75,4 @@ driver.get("https://sxy91.com/")
 - [PhantomJS被Selenium标记为不赞成](https://www.cnblogs.com/zhuxiaoxi/p/8425686.html)
 - [Centos-Headless-chrome](https://intoli.com/blog/installing-google-chrome-on-centos/)
 - [selenium-doc](https://selenium-python.readthedocs.io/api.html)
+- [Pyppeteer比selenium更高效的利器](https://mp.weixin.qq.com/s/PnKdH_wq2sWKr-Wq55fy-A)
