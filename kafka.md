@@ -1,10 +1,9 @@
 ---
 title:  centos安装kafka
 date: 2018-08-08T09:56:42.699Z
-tags: ["kafka"]
-series: ["blog"]
-categories: ["code"]
-description:
+tags:
+ - kafka
+draft: true
 ---
 
 安装java
