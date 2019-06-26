@@ -1,12 +1,11 @@
 ---
 title:  docker-mongo
+draft: true
 date: 2018-11-02T07:16:11.158Z
 tags: 
  - docker
  - mongo
-categories: 
- - code
-description:
+draft: true
 ---
 
 docker run —name rds -d redis
