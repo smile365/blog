@@ -1,10 +1,9 @@
 ---
 title:  pip的安装和镜像的配置
 date: 2018-07-26T01:48:58.589Z
-tags: ["pip"]
-series: ["blog"]
-categories: ["code"]
-description:
+tags: 
+ - pip
+ - mirror
 ---
 
 ### 下载[get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
