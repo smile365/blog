@@ -47,7 +47,7 @@ crontab -l
 ```
 
 配置nginx并强制使用htpps  
-```nginxconf
+```nginx
 server {
     listen 80;
     server_name www.sxy91.com sxy91.com;
