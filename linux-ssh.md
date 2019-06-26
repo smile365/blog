@@ -9,7 +9,6 @@ description:
 
 每次在终端使用ssh链接服务器都比较繁琐，需要输入账号、密码、端口、域名等一大堆东西。这里提供一种方便的一键连接方式：
 
-：
 假设Linux服务器的ip为：192.168.1.2,ssh端口：3322，以下以mac操作为例。
 
 
@@ -47,11 +46,16 @@ ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www
 ssh www
 ```
 
-ssh端口转发(隧道)
+**ssh奇技淫巧**
+
+1、ssh端口转发(隧道)
 ```
 #本机访问server端8080端口如下(s端防火墙只允许localhost访问)：
 ssh -L 8080:localhost:8080 sxy@server
 ```
+
+2、访问server的多个绑定localhost的端口
+
 
 参考
 
