@@ -1,11 +1,9 @@
 ---
 title:  新手暗网简易教程
 date: 2019-02-13T05:44:08.321Z
-tags: ["code","it"]
-series: ["blog"]
-categories: ["code"]
+tags: 
+ - TorBrowse
 draft: true
-description:
 ---
 
 在此之前你必须学会番强，并启动ss全局代理。
