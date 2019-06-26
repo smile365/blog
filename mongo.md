@@ -3,6 +3,7 @@ title:  centos7安装mongo
 date: 2018-08-13T02:55:14.439Z
 tags: 
  - mongo
+draft: true
 ---
 
 配置软件的安装源
