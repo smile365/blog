@@ -2,10 +2,7 @@
 title:  url正则
 date: 2018-07-27T02:05:03.386Z
 tags: ["正则"]
-series: ["blog"]
-categories: ["code"]
 draft: true
-description:
 ---
 
 网络标准RFC 1738规定：
