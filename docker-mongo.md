@@ -1,10 +1,11 @@
 ---
 title:  docker-mongo
 date: 2018-11-02T07:16:11.158Z
-tags: ["docker","mongo"]
-series: ["blog"]
-categories: ["code"]
-draft: true
+tags: 
+ - docker
+ - mongo
+categories: 
+ - code
 description:
 ---
 
