@@ -1,11 +1,6 @@
 ---
 title:  OpenFalcon
 date: 2019-04-08T05:38:43.535Z
-tags: ["code","it"]
-series: ["blog"]
-categories: ["code"]
-draft: true
-description:
 ---
 
 ### 安装mysql
