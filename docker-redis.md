@@ -1,9 +1,11 @@
 ---
 title:  docker安装redis
 date: 2018-08-02T08:04:58.261Z
-tags: ["docker","redis"]
-series: ["blog"]
-categories: ["code"]
+tags: 
+ - docker
+ - redis
+categories:
+ - code
 description:
 ---
 
