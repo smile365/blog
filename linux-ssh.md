@@ -17,17 +17,13 @@ description:
 增加如下：
 `192.168.1.2 www.sxy91.com www`
 
-测试
-`ping www`
+测试：`ping www`
 
-[生成密钥](https://blog.csdn.net/u013227473/article/details/78989041)
-`ssh-keygen -f ~/.ssh/id_rsa_www`
+使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_www`
 
 
 
-编辑ssh的config文件
-nano ~/.ssh/config
-内容如下：
+编辑ssh的config文件：`nano ~/.ssh/config`,内容如下： 
 ```nginx
 Host www
     HostName www.sxy91.com
@@ -37,12 +33,12 @@ Host www
 ```
 
 复制到Linux
-```shell
+```sh
 ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www
 ```
 
 测试,无须输入端口和密码即可连接成功
-```shell
+```sh
 ssh www
 ```
 
