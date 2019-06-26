@@ -12,68 +12,27 @@ yum -y install hugo
 hugo version
 ```
 
+hugo列表无法正确显示的解决方法
 
+在其他地方显示正常的md文件，在hugo下显示错误。其原因是hugo使用了Blackfriday作为Markdown解析引擎。
 
+方法一：在列表前方增加一行空行
+```md
+list
 
-[下载和使用主题](https://gohugo.io/themes/installing-and-using-themes/)
-选择一个适合自己的[主题](https://themes.gohugo.io/)
-
-**使用主题**
-* 命令行 hugo server -t themename
-* 配置文件 theme: themename
-
-
-
-定时发布脚本
-```shell?linenums
-#!/usr/bin/sh
-#publish_blog.sh
-rm -rf /home/myblog/content/posts/*
-cd /home/script/blog
-echo `pwd`
-echo `git pull`
-cp -rf * /home/myblog/content/posts
-cd /home/myblog
-echo `pwd`
-echo `hugo -b https://sxy91.com/ -t cactus`
+- item1
+- item2
 ```
 
-contab -l
-0 */1 * * * /home/scritp/publish_blog.sh
+方法二：配置Blackfriday对列表前无需空行`vim config.toml`
+```toml
+[blackfriday]
+  extensions = ["noEmptyLineBeforeBlock"]
+```
 
-修改主题的时间显示样式
-themes/cactus/layouts/partials/post-list.html
-.Date.Format "2006-01-02"
 
-显示摘要
-vi /home/myblog/config.toml
-[params]
- enableSummary = true
-
-使用描述作为摘要
-[params]
- enableSummary = true
- useDescriptionReplaceSummary = true
-
-文章中增加
-description
-
-github图片不显示的处理
-使用图床，7牛云存储
-
-seo修改
-显示缩略图
-
-评论
-百度统计，谷歌统计
-
-使用相对url，不是绝对url
-    修改主题文件中的summary.html引用Permalink的地方都改为URL
-代码高亮
 
 **参考**
-* [官方文档](https://gohugo.io/getting-started/quick-start/)
-* [Format](https://gohugo.io/functions/format/)
-* [configuration](https://gohugo.io/getting-started/configuration/)
-* [highlighter](https://gohugo.io/content-management/syntax-highlighting/#generate-syntax-highlighter-css)
-* [page variables](https://gohugo.io/variables/page/)
+- [gohugo.io](https://gohugo.io/getting-started/quick-start/)
+- [hugo列表显示错误](https://orianna-zzo.github.io/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B07-hugo%E5%A4%9A%E7%BA%A7%E5%88%97%E8%A1%A8%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA--cocoa%E4%B8%BB%E9%A2%98%E7%9A%84markdown-bug%E5%90%88%E9%9B%86/)
+- [使用Hugo搭建静态站点](https://tonybai.com/2015/09/23/intro-of-gohugo/)
