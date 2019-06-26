@@ -25,7 +25,7 @@ alias acme.sh=~/.acme.sh/acme.sh
 ```
 
 配置nginx
-```nginxconf
+```nginx
 # acme.sh 会查找 -d指定的domain
 server {
     listen 80;
