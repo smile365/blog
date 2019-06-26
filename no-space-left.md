@@ -10,14 +10,12 @@ tags:
 >-bash: cannot create temp file for here-document: No space left on device
 (无法为立即文档创建临时文件: 设备上没有空间)
 
-查看挂载点占用情况：
-`df -h`
+查看挂载点占用情况：`df -h`  
+
 ![enter description here](https://i.loli.net/2019/05/05/5cce5839406f5.jpg)
 
-  
-
-查看占用超过1g的目录:
-`du -sh * |grep -E 'G|T'`  
+ 
+查看占用超过1g的目录:`du -sh * |grep -E 'G|T'`    
 ![enter description here](https://i.loli.net/2019/05/05/5cce639bdd203.jpg)
 
 >注：不在上图中挂载点的目录(usr/var/root)都属于/挂载点 
@@ -28,7 +26,7 @@ tags:
 
 查看mongo配置文件：`cat /etc/mongod.conf`
 
-停止mongo服务：
+停止mongo服务：`systemctl stop mongod`
 
 迁移数据文件：
 ```sh
@@ -52,10 +50,10 @@ storage:
 ```
 重启服务:`mongod -f /etc/mongod.conf`
 
-测试：mongo localhost:47017
+测试：`mongo localhost:47017`
 
 
-总结：
+**总结**： 
 使用yum install方式安装的文件需要注意日志文件/数据文件等的路径，安装前配置一个容量大的目录。
 
 
