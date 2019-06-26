@@ -33,6 +33,11 @@ list
   extensions = ["noEmptyLineBeforeBlock"]
 ```
 
+测试  
+```sh
+# test whith draft posts
+$ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
+```
 
 
 **参考**
