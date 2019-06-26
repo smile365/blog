@@ -8,7 +8,8 @@ tags:
 ---
 
 **centos安装**[hugo](https://gohugo.io/getting-started/quick-start/)
-```shell?linenums
+
+```sh
 yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/repo/epel-7/daftaupe-hugo-epel-7.repo
 yum -y install hugo
 hugo version
