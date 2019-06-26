@@ -1,10 +1,10 @@
 ---
 title:  kafka-manager安装
 date: 2018-08-31T03:15:13.262Z
-tags: ["kafka"]
-series: ["blog"]
-categories: ["code"]
-draft: true
+tags:
+ - kafka
+categories: 
+ - code
 description:
 ---
 
