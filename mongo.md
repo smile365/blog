@@ -1,10 +1,8 @@
 ---
 title:  centos7安装mongo
 date: 2018-08-13T02:55:14.439Z
-tags: ["mongo"]
-series: ["blog"]
-categories: ["code"]
-description:
+tags: 
+ - mongo
 ---
 
 配置软件的安装源
