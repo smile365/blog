@@ -1,11 +1,8 @@
 ---
 title:  postgresql使用
 date: 2019-06-04T08:13:00.474Z
-tags: ["code","it"]
-series: ["blog"]
-categories: ["code"]
-draft: true
-description:
+tags: 
+- postgresql
 ---
 
 使用[官网的rpm](https://www.postgresql.org/download/linux/redhat/)包安装  
@@ -30,8 +27,25 @@ grant all privileges on database sxydb to sxy;
 echo -e "host \t all \t all \t 192.168.31.0/24 \t md5" >> /var/lib/pgsql/11/data/pg_hba.conf
 echo "listen_addresses = '*'" >> /var/lib/pgsql/11/data/postgresql.conf
 sudo systemctl restart postgresql-11
-psql -h 127.0.0.1 -d sxydb -U sxy -W 
+psql -h 127.0.0.1 -d sxydb -U sxy -W
 ```
+
+导入某2千万数据测试
+```sql
+CREATE TABLE persons
+(
+  Name character varying(50),
+  CtfId character varying(18),
+  Gender character varying(50),
+  Address character varying(100),
+  Mobile character varying(50),
+  Tel character varying(50),
+  EMail character varying(50),
+  Nation character varying(50)
+);
+\COPY persons FROM '/home/persons.csv' DELIMITER ',' CSV HEADER;
+```
+
 
 安装[Psycopg](http://initd.org/psycopg/)与[pony](https://docs.ponyorm.org/firststeps.html)  
 ```bash
