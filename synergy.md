@@ -1,11 +1,9 @@
 ---
 title: 多台电脑共用一个鼠标和键盘
 date: 2019-02-13T02:57:07.012Z
-tags: ["code","it"]
-series: ["blog"]
-categories: ["code"]
-draft: true
-description:
+tags: 
+ - synergy
+ - share keyboard
 ---
 
 
