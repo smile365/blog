@@ -1,13 +1,11 @@
 ---
 title: 科学上网图文教程
 date: 2018-01-26
-tags: ["科学上网"]
+tags: 
+ - 科学上网
 description : 一份全平台支持的翻墙图文教程
 ---
 
-一份全平台支持的翻墙图文教程
-<!-- excerpt -->
-![翻墙不易](http://upload-images.jianshu.io/upload_images/1374969-2b60e6f0a92b0655.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
  **科学上网**：指突破“防火长城”的封锁，到国外网络上查找学习资料的过程。
 
@@ -21,25 +19,24 @@ description : 一份全平台支持的翻墙图文教程
 **第一步：注册账号并购买**
 用了三年搬瓦工还算稳定，本教程以搬瓦工为例，[10G套餐](https://bwh8.net/aff.php?aff=24326) 基本抢不到，一般购买[20G套餐](https://bwh1.net/aff.php?aff=24326&gid=1)的（点击蓝色链接购买，用这个优惠码还能再省6% ： BWH1ZBPVK）。一定要点击验证码，否则不会有优惠！
 
-![使用优惠码](http://upload-images.jianshu.io/upload_images/1374969-6ea007ab7511c076.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 支付成功后邮箱里会收到：服务器IP、ssh端口等信息。在官网点击右上角Client Area进行登录。依次点击 Service、My service、Control Panel进入控制面板。
 
-![进入控制面板](http://upload-images.jianshu.io/upload_images/1374969-57cd9de9303630ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
 **第二步：安装Shadowsocks Server（ss服务端）**
 
 点击 Shadowsocks Server进行安装，成功后会显示ss的加密方式、端口、和密码。注意保存，下一步会用到。
 
-![安装服务端](http://upload-images.jianshu.io/upload_images/1374969-ba14d089261c9872.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
 **第三步：安装Shadowsocks Clinent （客户端）**
 
 下载相应的客户端（[安卓](https://github.com/shadowsocks/shadowsocks-android/releases)、[ios](https://github.com/shadowsocks/shadowsocks-iOS/releases)、[window](https://github.com/shadowsocks/shadowsocks-windows/releases)、[mac](https://github.com/shadowsocks/ShadowsocksX-NG/releases)或[Linux](https://github.com/shadowsocks/shadowsocks-qt5/releases)）进行安装。安装完成后填写第二步生成的加密方式、端口和密码就完成了。官方还附赠了科学上网的客户端教程，真是贴心。
 
-![填写密码](http://upload-images.jianshu.io/upload_images/1374969-7be799614a30354c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
