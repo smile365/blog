@@ -3,9 +3,7 @@ title:  kafka-manager安装
 date: 2018-08-31T03:15:13.262Z
 tags:
  - kafka
-categories: 
- - code
-description:
+draft: true
 ---
 
 #### 先安装java8、scala、sbt
