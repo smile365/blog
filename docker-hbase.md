@@ -1,10 +1,11 @@
 ---
 title:  使用docker快速体验hbase
 date: 2019-04-15T08:10:30.889Z
-tags: ["code","it"]
-series: ["blog"]
-categories: ["code"]
-draft: true
+tags:
+ - docker
+ - hbase
+categories:
+ - code
 description:
 ---
 
