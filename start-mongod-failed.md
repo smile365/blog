@@ -1,8 +1,9 @@
 ---
 title: mongo服务因磁盘无法写入而异退出的解决方法
-tags: ["mongo","Linux"]
+tags: 
+ - mongo
+ - Linux
 date: 2018-06-29T02:18:59.803Z
-description:
 ---
 
 1.使用`ps -ef|grep mongod `查看已经没有了mongod的服务进程  
