@@ -42,7 +42,7 @@ Host github.com
 
 ![enter description here](https://i.loli.net/2018/07/07/5b405f1dcfeb8.jpg)
 
-使用git bash 测试是否能免密码连接`ssh -T git@github.com`
+使用git bash 测试是否能免密码连接`ssh -vT git@github.com`
 
 ![git bash](https://i.loli.net/2018/07/07/5b405fc9d9dd5.jpg)
 
