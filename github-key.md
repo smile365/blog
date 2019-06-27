@@ -30,8 +30,11 @@ Host github.com
     User songxueyan
     IdentityFile ~/.ssh/id_rsa_github
 ```
-> Host:简称(@后面的字符串)  
-HostName：域名或者ip(如果host填写了域名，这里可以不填) 
+> **Host**:简称(@后面的字符串)  
+**HostName**：域名或者ip(如果host填写了域名，这里可以不填)  
+**不配置会出现错误**：git@github.com: Permission denied (publickey)
+
+
 
 ![enter description here](https://i.loli.net/2018/07/07/5b405e0b253ae.jpg)
 
