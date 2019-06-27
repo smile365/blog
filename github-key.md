@@ -23,7 +23,7 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa_github -C "sxy9103@gmail.com"
 ```
 操作完成后，该目录会多出 `id_rsa_github` 和 `id_rsa_github.pub` 两个文件。
 
-编辑config文件，配置不同的仓库指向不同的密钥文件：`vi ~/.ssh/config`,例子如下： 
+编辑config文件，配置不同的仓库指向不同的密钥文件(不配置会使用默认的`~/.ssh/id_rsa`文件)：`vi ~/.ssh/config`,例子如下： 
 
 ```conf
 Host github.com
