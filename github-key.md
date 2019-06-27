@@ -1,5 +1,5 @@
 ---
-title:  windows配置ssh key公匙实现免密提交到多个远程仓库
+title:  配置ssh key公匙实现免密提交到多个远程仓库
 date: 2018-07-07
 tags: 
  - ssh
