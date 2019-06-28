@@ -8,6 +8,8 @@ draft: true
 description:
 ---
 
+mac wechat 防撤回[WeChatPlugin-MacOS](https://github.com/TKkk-iOSer/WeChatPlugin-MacOS/blob/master/README.md)
+
 mac 微信记录备份。
 每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
 ```shell
