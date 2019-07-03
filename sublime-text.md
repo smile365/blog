@@ -26,7 +26,7 @@ description:
 ```json
 [
     {
-        "keys": ["ctrl+alt+p"], "command": "sublime_tmpl",
+        "keys": ["super+n"], "command": "sublime_tmpl",
         "args": {"type": "python"}, "context": [{"key": "sublime_tmpl.python"}]
     }
 ]
