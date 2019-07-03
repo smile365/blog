@@ -12,8 +12,8 @@ description:
 
 安装[SublimeTmpl](https://github.com/kairyou/SublimeTmpl)
 
-配置自定义模板
-`Preferences / Packages Settings / SublimeTmpl / default`
+配置自定义模板:`Preferences / Packages Settings / SublimeTmpl`
+`settings default`
 ```json
 "attr": {
     "author": "songxueyan",
@@ -22,6 +22,15 @@ description:
 }
 ```
 
+`key bindings user`
+```json
+[
+    {
+        "keys": ["ctrl+alt+p"], "command": "sublime_tmpl",
+        "args": {"type": "python"}, "context": [{"key": "sublime_tmpl.python"}]
+    }
+]
+```
 
 
 符号说明
