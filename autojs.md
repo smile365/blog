@@ -19,6 +19,13 @@ description:
 
 5. fn+f5测试刚刚新建的项目
 
+6. 手机端开启悬浮窗可打开界面分析工具。
+
+7. 要显示来自Auto.js的日志，打开 VS Code上面菜单的"帮助"->"切换开发人员工具"->"Console"即可。
+
+8. 打包：点击脚本的...按钮->更多。
+
+
 参考  
 
 - [auto.js](https://github.com/hyb1996/Auto.js)
