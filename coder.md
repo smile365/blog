@@ -14,7 +14,7 @@ draft: true
 - [多吉搜索](https://dogedoge.com/)
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 
-
+牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC
 
 工具  
 
