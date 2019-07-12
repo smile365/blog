@@ -7,6 +7,8 @@ categories: ["code"]
 draft: true
 ---
 
+牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC
+
 站点收藏  
 
 - [如何使用GitHub-issue作为博客后端](https://github.com/jwenjian/ghiblog)
@@ -14,10 +16,11 @@ draft: true
 - [多吉搜索](https://dogedoge.com/)
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 
-牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC
+
 
 工具  
 
+- [app图标制作](https://appicon.co/)
 - [在线web编辑器](https://c.runoob.com/front-end/61)
 - [在线svg编辑器](https://c.runoob.com/more/svgeditor/)
 - [时间戳转换](http://www.beijing-time.org/shijianchuo/)
