@@ -13,8 +13,7 @@ description:
 |  微信小程序版   |  Android版   |  h5网页版   |  ios版   |
 | --- | --- | --- | --- |
 |   ![enter description here](https://i.loli.net/2019/07/16/5d2d3e43e308697165.jpg)  |    ![enter description here](https://i.loli.net/2019/07/16/5d2d402d1774579108.jpg) |    ![enter description here](https://i.loli.net/2019/07/16/5d2d40eb71fef13012.jpg) |     |
-| 微信扫一扫    |  [扫码下载](https://www.lanzous.com/b760437/)   |   [点击访问](https://sxy91.com/h5code/index.html#/)  |  暂无精力开发   |
-
+| 微信扫一扫    |  [扫码下载](https://www.lanzous.com/b760437/)   |   [点击访问](https://sxy91.com/h5code)
 android h5网页端 微信小程序
 
 ios暂无精力开发上架，请使用h5网页端。
