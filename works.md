@@ -12,7 +12,7 @@ description:
 
 |  微信小程序版   |  Android版   |  h5网页版   |  ios版   |
 | --- | --- | --- | --- |
-|   ![wechat](https://i.loli.net/2019/07/16/5d2d3e43e308697165.jpg)  |  ![enter description here](https://i.loli.net/2019/07/19/5d316e9191b9689475.jpg)   |   ![enter description here](https://i.loli.net/2019/07/19/5d316e561481064527.jpg) |     |
+|   ![wechat](https://i.loli.net/2019/07/16/5d2d3e43e308697165.jpg)  |  ![android](https://i.loli.net/2019/07/19/5d316e9191b9689475.jpg)   |   ![h5](https://i.loli.net/2019/07/19/5d316e561481064527.jpg) |     |
 | 微信扫一扫    |  [扫码下载](https://www.lanzous.com/b760437/)   |   [点击访问](https://sxy91.com/h5code)
 android h5网页端 微信小程序
 
