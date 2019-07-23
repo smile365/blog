@@ -60,9 +60,9 @@ cat config/consumer.properties |grep "group"
 
 python的[client](https://cwiki.apache.org/confluence/display/KAFKA/Clients)推荐  
 
-- [kafka-python](https://github.com/dpkp/kafka-python)
-- [confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python)
-- [pykafka](https://github.com/Parsely/pykafka)
+- 5星：[kafka-python](https://github.com/dpkp/kafka-python)
+- 4星：[confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python)
+- 4星：[pykafka](https://github.com/Parsely/pykafka)
 
 使用confluent-kafka-python测试消费者：`pip install confluent-kafka`
 
