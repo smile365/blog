@@ -5,7 +5,7 @@ tags:
  - kafka
 ---
 
-安装java
+**安装java**
 ```shell
 java -version
 
@@ -22,11 +22,12 @@ su -c "yum install java-1.8.0-openjdk"
 > tar -xzf kafka_2.11-2.0.0.tgz
 > cd kafka_2.11-2.0.0
 ```
-> 解压到特定路径使用-C参数：tar -xzf kafka*.tgz -C youdir
+解压到特定路径使用-C参数：`tar -xzf kafka*.tgz -C youdir`
 
 建议修改数据及日志文件的路径：`grep -Iri dir ./config/`
 ![enter description here](https://i.loli.net/2019/05/07/5cd0f92a15cf5.jpg)
->zk的dataDir默认路径为/tmp，会被系统定时清理，容易造成topic丢失。
+
+zk的dataDir默认路径为`/tmp`，会被系统定时清理，容易造成topic丢失。
 
 如果需要修改log4j的日志路径，编辑文件:`vim bin/kafka-server-start.sh`  
 在开头增加一项：`export LOG_DIR=/home/sharefile/kafkadata/log4j`
@@ -35,7 +36,7 @@ kafka的配置需要注意listeners与advertised.listeners。客户端会先连�
 
 
 
-启动和测试
+**启动和测试**
 ```shell
 > bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
 
@@ -50,9 +51,9 @@ kafka的配置需要注意listeners与advertised.listeners。客户端会先连�
 > bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 
 ```
-> 使用 -daemon 参数可以在后台运行，去掉后可调试运行`
+使用 `-daemon`参数可以在后台运行，去掉后可调试运行。
 
-查看group.id
+**查看group-id**
 
 ```shell
 cat config/consumer.properties |grep "group"
@@ -151,6 +152,7 @@ for message in balanced_consumer:
 		break
 ```
 
+**问题**
 kafka出现`nodename nor servname provided, or not known`的解决
 
 原因：kafka的brokers会通过配置advertised.listeners广播自己，client端需要能解析这个地址。
@@ -162,11 +164,10 @@ kafka出现`nodename nor servname provided, or not known`的解决
 
 关于listeners和advertised.listeners的区别可以看这篇文章[listeners-vs-advertised.listeners](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
 
-查看最新的offset
+**查看最新的offset**
 ```
 bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic test --time -1
 ```
-
 
 
 **参考**
