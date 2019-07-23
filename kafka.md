@@ -14,6 +14,7 @@ su -c "yum install java-1.8.0-openjdk"
 
 选择合适的版本，到镜像站[下载kafka](https://kafka.apache.org/downloads)
 
+安装与使用可参考官方文档：[kafka-doc](https://kafka.apache.org/documentation/)
 
 ```shell
 > wget http://mirrors.hust.edu.cn/apache/kafka/2.0.0/kafka_2.11-2.0.0.tgz
