@@ -3,7 +3,6 @@ title:  centos安装kafka
 date: 2018-08-08T09:56:42.699Z
 tags:
  - kafka
-draft: true
 ---
 
 安装java
@@ -58,6 +57,12 @@ kafka的配置需要注意listeners与advertised.listeners。客户端会先连�
 cat config/consumer.properties |grep "group"
 ```
 
+
+python的[client](https://cwiki.apache.org/confluence/display/KAFKA/Clients)推荐  
+
+- [kafka-python](https://github.com/dpkp/kafka-python)
+- [confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python)
+- [pykafka](https://github.com/Parsely/pykafka)
 
 使用confluent-kafka-python测试消费者：`pip install confluent-kafka`
 
