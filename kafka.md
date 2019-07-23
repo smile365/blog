@@ -13,7 +13,7 @@ java -version
 su -c "yum install java-1.8.0-openjdk"
 ```
 
-[去镜像站下载kafka](https://www.apache.org/dyn/closer.cgi?path=/kafka/2.0.0/kafka_2.11-2.0.0.tgz)
+选择合适的版本，到镜像站[下载kafka](https://kafka.apache.org/downloads)
 
 
 ```shell
