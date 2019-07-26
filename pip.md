@@ -36,3 +36,4 @@ yum install python34-devel
 - [aliases-and-functions](https://ashleynolan.co.uk/blog/beginners-guide-to-terminal-aliases-and-functions)
 - [mac下使用alias](https://www.jianshu.com/p/633a30e5d777)
 - [install python3-devel](https://stackoverflow.com/questions/43047284/how-to-install-python3-devel-on-red-hat-7)
+- [阿里镜像](https://opsx.alibaba.com/mirror)
