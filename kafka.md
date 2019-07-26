@@ -51,6 +51,7 @@ kafka的配置需要注意listeners与advertised.listeners。客户端会先连�
 > bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
 
 ```
+
 使用 `-daemon`参数可以在后台运行，去掉后可调试运行。
 
 **查看group-id**
@@ -66,60 +67,19 @@ python的[client](https://cwiki.apache.org/confluence/display/KAFKA/Clients)推�
 - [librdkafka](https://github.com/edenhill/librdkafka)的包装器，4星推荐：[confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python)
 - [librdkafka](https://github.com/edenhill/librdkafka)的包装器，4星推荐：[pykafka](https://github.com/Parsely/pykafka)
 
-使用confluent-kafka-python测试消费者：`pip install confluent-kafka`
+使用kafka-python测试消费者：`pip install kafka-python`
 
 ```python
-#!/usr/bin/python
-from confluent_kafka import Consumer, KafkaError,Producer
-p = Producer({'bootstrap.servers': '192.168.31.174:9092'})
-c = Consumer({
-    'bootstrap.servers': '192.168.31.174:9092',
-    'group.id': 'test-consumer-group'
-})
+from kafka import KafkaProducer,KafkaConsumer,TopicPartition
+import time
 
-def test_consumer():
-    '''
-    测试消费者
-    :return:
-    '''
-    c.subscribe(['test'])
-    for x in range(5):
-        msg = c.poll(5) #超时5秒
-        if msg is None:
-            print('none')
-            continue
-        if msg.error():
-            if msg.error().code() == KafkaError._PARTITION_EOF:
-                continue
-            else:
-                print(msg.error())
-                break
-        print('Received message: {}'.format(msg.value().decode('utf-8')))
-    c.close()
-
-
-def delivery_report(err, msg):
-    """ Called once for each message produced to indicate delivery result.
-        Triggered by poll() or flush(). """
-    if err is not None:
-        print('Message delivery failed: {}'.format(err))
-    else:
-        print('Message delivered to {} [{}]'.format(msg.topic(), msg.partition()))
-
-def test_send():
-    '''
-    测试生产者
-    :return:
-    '''
-    test_url = ["http://localhost/"+str(x) for x in range(10)]
-    for data in test_url:
-        p.poll(1) #超时1秒
-        p.produce('test', data.encode('utf-8'), callback=delivery_report)
-    p.flush()
-
-if __name__ == '__main__':
-    test_send()
-    test_consumer()
+producer = KafkaProducer(bootstrap_servers='192.168.1.143:9092')
+for _ in range(10):
+	msg = time.strftime("%Y-%m-%d %H:%M:%S")
+	future = producer.send('mytopic',msg.encode('utf-8'))
+	result = future.get(timeout=10)
+	print(result)
+producer.flush()
 
 ```
 
