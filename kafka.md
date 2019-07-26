@@ -67,7 +67,7 @@ python的[client](https://cwiki.apache.org/confluence/display/KAFKA/Clients)推�
 - [librdkafka](https://github.com/edenhill/librdkafka)的包装器，4星推荐：[confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python)
 - [librdkafka](https://github.com/edenhill/librdkafka)的包装器，4星推荐：[pykafka](https://github.com/Parsely/pykafka)
 
-使用kafka-python测试消费者：`pip install kafka-python`
+使用kafka-python测试生产者：`pip install kafka-python`
 
 ```python
 from kafka import KafkaProducer,KafkaConsumer,TopicPartition
