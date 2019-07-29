@@ -24,6 +24,14 @@ appendfilename "appendonly.aof"
 ```
 
 
+```bash
+systemctl restart redis
+systemctl status  redis
+redis-cli
+auth yourpass
+```
+
+
 参考  
 - [redis-cli config](https://www.zhihu.com/question/46220824)
 - [RDB、AOF](https://www.jianshu.com/p/a91329ae210c)
