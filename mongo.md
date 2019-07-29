@@ -42,7 +42,7 @@ enabled=1
 >不能使用 systemctl 启动
 
 
-创建管理员
+创建管理员`mongo`
 ```javascript
 use admin
 db.createUser(
@@ -54,7 +54,7 @@ db.createUser(
 );
 exit;
 ```
->设置密码：不要含有@
+设置密码：不要含有@
 
 启用用户认证，并配置日志路径`vi /etc/mongod.conf`
 ```yaml
@@ -76,7 +76,7 @@ mongod -f /etc/mongod.conf
 
 
 
-创建其他用户
+创建其他用户`mongo localhost:47017/admin -u sxy -p`
 ```javascript
 use mydb
 db.createUser({user:'myuser',pwd:'sxy91.com',roles: [ { role: "readWrite", db: "mydb" }]})
@@ -93,6 +93,11 @@ use admin
 db.shutdownServer()
 ```
 
+统计Collection的数据量  
+```javascript
+use test
+db.getCollectionNames().forEach(function(x){print(x+":"+db[x].count())})
+```
 
 参考
 
@@ -100,3 +105,4 @@ db.shutdownServer()
 - [enable-authentication](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
 - [安装MongoDB](http://blog.csdn.net/liaoyundababe/article/details/71303039)
 - [Ubuntu镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/mongodb/)
+- [listCollections](https://stackoverflow.com/questions/8866041/how-to-list-all-collections-in-the-mongo-shell)
