@@ -53,3 +53,6 @@ SolrCloud是通过zk来管理配置文件的，需要先下载下来修改，然
  </fieldType>
 ```
 
+参考  
+
+- [搭建SolrCloud集群服务](https://segmentfault.com/a/1190000010836061#articleHeader21)
