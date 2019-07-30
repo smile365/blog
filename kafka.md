@@ -68,9 +68,8 @@ python的[client](https://cwiki.apache.org/confluence/display/KAFKA/Clients)推�
 - [librdkafka](https://github.com/edenhill/librdkafka)的包装器，4星推荐：[pykafka](https://github.com/Parsely/pykafka)
 
 使用kafka-python测试生产者：`pip install kafka-python`
-
 ```python
-from kafka import KafkaProducer,KafkaConsumer,TopicPartition
+from kafka import KafkaProducer
 import time
 
 producer = KafkaProducer(bootstrap_servers='192.168.1.143:9092')
@@ -80,55 +79,22 @@ for _ in range(10):
 	result = future.get(timeout=10)
 	print(result)
 producer.flush()
-
 ```
 
-使用pykafka测试消费者：`pip install pykafka`  
+测试消费者
 ```python
-#test_kafka
-from pykafka import KafkaClient
-client = KafkaClient(hosts="localhost:9092")
-
-client.topics
-
-topic = client.topics['my_topic']
-
-balanced_consumer = topic.get_balanced_consumer(
-	consumer_group='test-consumer-group3',
-	auto_commit_enable=True,
-	zookeeper_connect='localhost:2181',
-	reset_offset_on_start=True,
-	auto_offset_reset=-2
-)
-
-print(balanced_consumer.partitions)
-count = 1
-for message in balanced_consumer:
-	count += 1
-	if message is not None:
-		print(message.offset, message.value)
-	if count == 20:
-		balanced_consumer.stop()
-		break
+from kafka import KafkaConsumer
+# 不同group_id会收到全量数据，相同group_id会去负载均衡数据
+consumer = KafkaConsumer('mytopic',bootstrap_servers='192.168.1.143:9092',group_id='mygoupid')
+#consumer.seek_to_beginning() # 从头开始
+for msg in consumer:
+	print(msg.value.)
 ```
-
-**问题**
-kafka出现`nodename nor servname provided, or not known`的解决
-
-原因：kafka的brokers会通过配置advertised.listeners广播自己，client端需要能解析这个地址。
-
-方法1：在client端增加一条host记录
-
-方法2：修改`config/server.properties`中的值为服务器端的ip`advertised.listeners=PLAINTEXT://192.168.31.174:9092`
-
-
-关于listeners和advertised.listeners的区别可以看这篇文章[listeners-vs-advertised.listeners](https://rmoff.net/2018/08/02/kafka-listeners-explained/)
 
 **查看最新的offset**
 ```
 bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092 --topic test --time -1
 ```
-
 
 **参考**
 
