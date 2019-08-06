@@ -7,8 +7,13 @@ draft: true
 description: 
 ---
 
+方式一
+MODULE LOAD /opt/redismodules/redisbloom.so
 
+方式二
+redis-server --loadmodule /opt/redismodules/redisbloom.so
 
 参考  
 
 - [ReBloom](https://redislabs.com/blog/rebloom-bloom-filter-datatype-redis/)
+- [redis-module](https://segmentfault.com/a/1190000015976157)
