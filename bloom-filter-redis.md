@@ -17,3 +17,4 @@ redis-server --loadmodule /opt/redismodules/redisbloom.so
 
 - [ReBloom](https://redislabs.com/blog/rebloom-bloom-filter-datatype-redis/)
 - [redis-module](https://segmentfault.com/a/1190000015976157)
+- [redis-modules-hub](https://redislabs.com/community/redis-modules-hub/)
