@@ -15,6 +15,7 @@ redis-server --loadmodule /opt/redismodules/redisbloom.so
 
 参考  
 
-- [ReBloom](https://redislabs.com/blog/rebloom-bloom-filter-datatype-redis/)
+- [ReBloom](https://github.com/RedisLabsModules/rebloom)
+- [Redis的BloomFilter](https://redislabs.com/blog/rebloom-bloom-filter-datatype-redis/)
 - [redis-module](https://segmentfault.com/a/1190000015976157)
 - [redis-modules-hub](https://redislabs.com/community/redis-modules-hub/)
