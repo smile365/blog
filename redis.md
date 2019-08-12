@@ -15,7 +15,6 @@ description:
 ```bash
 yum -y install redis
 systemctl enable redis
-#awk -F: '/^[^#]/ {print}' /etc/redis.conf
 vim /etc/redis.conf
 ```
 
