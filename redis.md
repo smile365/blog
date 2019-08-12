@@ -39,7 +39,7 @@ pidfile /data/redis_6379.pid # pid文件路径
 logfile "your path log" # 日志文件路径
 save "" # 关闭rdb快照
 dir "your path" # 数据文件路径
-maxmemory # 建议为机器最大内存80%
+maxmemory # 建议不超过机器最大内存的80%
 appendonly yes  # 使用aof方式持久化
 appendfilename "your path/appendonly.aof" # aof文件路径
 no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时间
