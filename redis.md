@@ -35,13 +35,13 @@ appendfilename "appendonly.aof"
 
 建议修改以下几项配置
 ```
-pidfile /data/redis_6379.pid
-logfile "your path log"
+pidfile /data/redis_6379.pid # pid文件路径
+logfile "your path log" # 日志文件路径
 save "" # 关闭rdb快照
-dir "your path"
+dir "your path" # 数据文件路径
 maxmemory 机器最大内存80%
 appendonly yes
-appendfilename "your path/appendonly.aof"
+appendfilename "your path/appendonly.aof" # aof文件路径
 no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时间
 ```
 
