@@ -35,7 +35,8 @@ appendfilename "appendonly.aof"
 
 建议修改以下几项配置
 ```
-pidfile /data/redis_6379.pid # pid文件路径
+bind 0.0.0.0 #ip地址
+requirepass yourpass # 密码
 logfile "your path log" # 日志文件路径
 save "" # 关闭rdb快照
 dir "your path" # 数据文件路径
