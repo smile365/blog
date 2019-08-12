@@ -10,29 +10,16 @@ description:
 
 安装最新版redis请参考[install-redis-from-REMI](https://computingforgeeks.com/how-to-install-latest-redis-on-centos-7/)
 
-
-
 ```bash
 yum -y install redis
 systemctl enable redis
-vim /etc/redis.conf
-```
-
-查看默认配置  
-```shell
+#查看默认配置 
 awk -F: '/^[^#]/ {print}' /etc/redis.conf
 ```
 
 
+建议修改以下几项配置`vim /etc/redis.conf`  
 
-```conf
-bind 0.0.0.0
-requirepass yourpass
-appendonly yes
-appendfilename "appendonly.aof"
-```
-
-建议修改以下几项配置
 ```
 bind 0.0.0.0 #ip地址
 requirepass yourpass # 密码
@@ -45,7 +32,7 @@ appendfilename "your path/appendonly.aof" # aof文件路径
 no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时间
 ```
 
-
+重启  
 
 ```bash
 systemctl restart redis
