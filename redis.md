@@ -20,7 +20,7 @@ awk -F: '/^[^#]/ {print}' /etc/redis.conf
 
 建议修改以下几项配置`vim /etc/redis.conf`  
 
-```
+```yaml
 bind 0.0.0.0 #ip地址
 requirepass yourpass # 密码
 logfile "your path log" # 日志文件路径
@@ -34,7 +34,7 @@ no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时
 
 重启  
 
-```bash
+```shell
 systemctl restart redis
 systemctl status  redis
 redis-cli
