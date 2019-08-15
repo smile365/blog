@@ -15,6 +15,7 @@ draft: true
 - [微信历史文章](https://www.ershicimi.com/)
 - [多吉搜索](https://dogedoge.com/)
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
+- [奶牛快传](https://cowtransfer.com/)
 
 
 
