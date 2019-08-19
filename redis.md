@@ -28,7 +28,7 @@ save "" # 关闭rdb快照
 dir "your path" # 数据文件路径
 maxmemory # 建议不超过机器最大内存的80%
 appendonly yes  # 使用aof方式持久化
-appendfilename "your path/appendonly.aof" # aof文件路径
+appendfilename "appendonly.aof" # aof文件名(只能是文件名，路径为上方配置的dir)
 no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时间
 ```
 
