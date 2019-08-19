@@ -7,15 +7,15 @@ draft: true
 description: 
 ---
 
-方式一
+config方式
 MODULE LOAD /opt/redismodules/redisbloom.so
 
-方式二
+命令方式
 redis-server --loadmodule /opt/redismodules/redisbloom.so
 
 参考  
 
-- [ReBloom](https://github.com/RedisLabsModules/rebloom)
+- [ReBloom](https://oss.redislabs.com/redisbloom/Quick_Start/)
 - [redisbloom-py](https://github.com/RedisBloom/redisbloom-py)
 - [Redis的BloomFilter](https://redislabs.com/blog/rebloom-bloom-filter-datatype-redis/)
 - [redis-module](https://segmentfault.com/a/1190000015976157)
