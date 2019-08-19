@@ -9,7 +9,7 @@ description:
 
 
 ```bash
-git clone https://github.com/RedisBloom/RedisBloom.git
+git clone https://github.com/RedisBloom/RedisBloom.git redisbloom
 cd redisbloom
 make
 
