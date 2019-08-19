@@ -36,9 +36,11 @@ no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时
 
 ```shell
 systemctl restart redis
+#或者通过"redis-server --help"启动
 systemctl status  redis
 redis-cli
 auth yourpass
+
 ```
 
 
