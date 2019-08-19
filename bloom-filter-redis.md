@@ -7,11 +7,25 @@ draft: true
 description: 
 ---
 
-config方式
-MODULE LOAD /opt/redismodules/redisbloom.so
 
-命令方式
-redis-server --loadmodule /opt/redismodules/redisbloom.so
+```bash
+git clone https://github.com/RedisBloom/RedisBloom.git
+cd redisbloom
+make
+
+# Assuming you have a redis build from the unstable branch:
+redis-server --loadmodule ./redisbloom.so
+```
+`vim /etc/redis.conf`
+```conf
+loadmodule /opt/redismodules/redisbloom.so
+```
+
+`redis-cli`
+```shell
+MODULE LOAD /opt/redismodules/redisbloom.so
+```
+
 
 参考  
 
