@@ -9,13 +9,20 @@ description:
 
 
 ```bash
+
 git clone https://github.com/RedisBloom/RedisBloom.git redisbloom
 cd redisbloom
 make
+mkdir -p /opt/redismodules/
+mv redisbloom.so /opt/redismodules/
 
 # Assuming you have a redis build from the unstable branch:
-redis-server --loadmodule ./redisbloom.so
+redis-server --loadmodule /opt/redismodules/redisbloom.so
+
+#查看默认配置 
+awk -F: '/^[^#]/ {print}' /etc/redis.conf
 ```
+
 `vim /etc/redis.conf`
 ```conf
 loadmodule /opt/redismodules/redisbloom.so
