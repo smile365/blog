@@ -43,11 +43,14 @@ conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkg
 ```
 
 创建虚拟环境
+
 ```shell
 conda create -n py3 python=3
 conda env list
 source activate py3
 ```
+
+更多命令请参考[官方文档](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 配置pip镜  
 `mkdir ~/.pip && vim ~/.pip/pip.conf`，内容如下：
