@@ -49,3 +49,4 @@ auth yourpass
 - [RDB、AOF](https://www.jianshu.com/p/a91329ae210c)
 - [save、Bgsave](http://www.runoob.com/redis/redis-backup.html)
 - [Redis导致OOM Killer的问题](https://emacsist.github.io/2016/09/06/%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%80%E6%AC%A1redis%E5%AF%BC%E8%87%B4oom-killer%E7%9A%84%E9%97%AE%E9%A2%98/)
+- [Redis的持久化之AOF](https://my.oschina.net/happyBKs/blog/1579757)
