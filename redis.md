@@ -30,6 +30,8 @@ maxmemory # 建议不超过机器最大内存的80%
 appendonly yes  # 使用aof方式持久化
 appendfilename "appendonly.aof" # aof文件名(只能是文件名，路径为上方配置的dir)
 no-appendfsync-on-rewrite yes #异步方式写 由系统决定写入磁盘的时间
+auto-aof-rewrite-percentage 100 # 超过100%会把aof文件重写
+auto-aof-rewrite-min-size 30G # 第一次超过多大会重写，建议配置成机器内存大小
 ```
 
 重启  
