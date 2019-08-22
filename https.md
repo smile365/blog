@@ -10,7 +10,7 @@ date: 2018-01-30
  [acme脚本](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)自动申请证书并定期自动更新。申请步骤如下：
 
 
-## 1.安装脚本
+### 1.安装脚本
 
 ```shell
 #创建一个目录存放证书
@@ -26,7 +26,7 @@ acme.sh -v
 alias acme.sh=~/.acme.sh/acme.sh
 ```
 
-## 2.配置nginx
+### 2.配置nginx
 
 ```nginx
 # acme.sh 会查找 -d指定的domain
@@ -36,7 +36,7 @@ server {
 }
 ```
 
-## 3.生成证书
+### 3.生成证书
 
 ```shell
 acme.sh --issue  -d sxy91.com -d www.sxy91.com --nginx
@@ -48,7 +48,7 @@ crontab -l
 > 上面的方法是http验证方式，若要使用通配符配置域名，则只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
 
-## 4.安装证书
+### 4.安装证书
 
 ```bash
 acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
@@ -59,7 +59,7 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
 # 会自动把证书文件复制到"/etc/nginx/ssl"目录下 并改名为sxy91，然后重启nginx。
 ```
 
-## 5. 强制使用https访问
+### 5. 强制使用https访问
 
 配置nginx并强制使用htpps  
 ```nginx
