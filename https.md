@@ -46,6 +46,8 @@ crontab -l
 
 ```
 
+> `-d 参数`不能使用如`*.sxy91.com`方式。
+
 配置nginx并强制使用htpps  
 ```nginx
 server {
