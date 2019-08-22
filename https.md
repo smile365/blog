@@ -6,9 +6,9 @@ tags:
 date: 2018-01-30
 ---
 
- [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过脚本定期更新。申请步骤如下：
+ [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过[脚本](https://letsencrypt.org/docs/client-options/)定期更新。申请步骤如下：
 
-**使用acme脚本申请证书**
+**使用[acme](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)脚本申请证书**
 
 ```shell
 #创建一个目录存放证书
