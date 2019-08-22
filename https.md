@@ -19,10 +19,10 @@ mkdir -p /etc/nginx/ssl
 #安装acme脚本
 curl  https://get.acme.sh | sh
 
-测试安装
+#测试安装
 acme.sh -v
 
-如果找不到命令就创建alias
+#如果找不到命令就创建alias
 alias acme.sh=~/.acme.sh/acme.sh
 ```
 
