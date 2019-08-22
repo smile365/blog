@@ -6,9 +6,11 @@ tags:
 date: 2018-01-30
 ---
 
- [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，但可以通过[脚本](https://letsencrypt.org/docs/client-options/)定期更新。申请步骤如下：
+ [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，可以通过
+ [acme脚本](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)自动申请证书并定期自动更新。申请步骤如下：
 
-**使用[acme](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)脚本申请证书**
+
+## 1.安装脚本
 
 ```shell
 #创建一个目录存放证书
@@ -24,7 +26,8 @@ acme.sh -v
 alias acme.sh=~/.acme.sh/acme.sh
 ```
 
-配置nginx
+## 2.配置nginx
+
 ```nginx
 # acme.sh 会查找 -d指定的domain
 server {
@@ -33,7 +36,7 @@ server {
 }
 ```
 
-生成证书
+## 3.生成证书
 
 ```shell
 acme.sh --issue  -d sxy91.com -d www.sxy91.com --nginx
@@ -45,9 +48,9 @@ crontab -l
 > 上面的方法是http验证方式，若要使用通配符配置域名，则只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
 
-安装证书
+## 4.安装证书
 
-```
+```bash
 acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
         --key-file   /etc/nginx/ssl/sxy91.key \
         --fullchain-file /etc/nginx/ssl/sxy91.cer \
@@ -56,6 +59,7 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
 # 会自动把证书文件复制到"/etc/nginx/ssl"目录下 并改名为sxy91，然后重启nginx。
 ```
 
+## 5. 强制使用https访问
 
 配置nginx并强制使用htpps  
 ```nginx
@@ -83,6 +87,8 @@ nginx -s reload
 ```
 
 **参考**  
+
+- [acme客户端](https://letsencrypt.org/docs/client-options/)
 - [SSL/TLS 加密新纪元](https://linux.cn/article-6565-1.html)
 - [免费HTTPS证书Let's Encrypt安装教程](https://foofish.net/https-free-for-lets-encrypt.html)
 - [acme.sh](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
