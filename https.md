@@ -46,7 +46,7 @@ crontab -l
 
 ```
 
-> `-d 参数`不能使用如`*.sxy91.com`方式。
+> 通配符域只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
 配置nginx并强制使用htpps  
 ```nginx
