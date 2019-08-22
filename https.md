@@ -67,7 +67,7 @@ server {
 server {
 	listen 443 ssl;
 	server_name *.sxy91.com;
-	ssl_certificate /etc/nginx/ssl/fullchain.cer;
+	ssl_certificate /etc/nginx/ssl/sxy91.cer;
 	ssl_certificate_key /etc/nginx/ssl/sxy91.key;
 	ssl_session_timeout 5m;
 	ssl_session_cache shared:SSL:50m;
