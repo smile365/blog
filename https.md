@@ -42,6 +42,9 @@ acme.sh --issue  -d sxy91.com -d www.sxy91.com --nginx
 crontab -l
 ```
 
+> 上面的方法是http验证方式，若要使用通配符配置域名，则只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
+
+
 安装证书
 
 ```
@@ -53,8 +56,6 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
 # 会自动把证书文件复制到"/etc/nginx/ssl"目录下 并改名为sxy91，然后重启nginx。
 ```
 
-
-> 通配符域只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
 配置nginx并强制使用htpps  
 ```nginx
