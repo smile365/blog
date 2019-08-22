@@ -34,17 +34,25 @@ server {
 ```
 
 生成证书
+
 ```shell
-acme.sh  --installcert  -d  sxy91.com  \
-		-d www.sxy91.com \
-		--key-file   /etc/nginx/ssl/sxy91.key \
-		--fullchain-file /etc/nginx/ssl/fullchain.cer \
-		--reloadcmd  "service nginx force-reload"
-#会自动生成fullchain.cer和sxy91.key
+acme.sh --issue  -d sxy91.com -d www.sxy91.com --nginx
+#会在 "~/.acme.sh/" 目录下生成证书文件
 #会自动创建cronjob，每天 0:00 点自动检测所有的证书
 crontab -l
+```
+
+安装证书
 
 ```
+acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
+        --key-file   /etc/nginx/ssl/sxy91.key \
+        --fullchain-file /etc/nginx/ssl/sxy91.cer \
+        --reloadcmd  "service nginx force-reload"
+
+# 会自动把证书文件复制到"/etc/nginx/ssl"目录下 并改名为sxy91，然后重启nginx。
+```
+
 
 > 通配符域只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
@@ -52,13 +60,13 @@ crontab -l
 ```nginx
 server {
     listen 80;
-    server_name www.sxy91.com sxy91.com;
-    rewrite ^ https://www.sxy91.com$request_uri? permanent;
+    server_name *.sxy91.com;
+    rewrite ^ https://sxy91.com$request_uri? permanent;
 }
 
 server {
 	listen 443 ssl;
-	server_name www.sxy91.com sxy91.com;
+	server_name *.sxy91.com;
 	ssl_certificate /etc/nginx/ssl/fullchain.cer;
 	ssl_certificate_key /etc/nginx/ssl/sxy91.key;
 	ssl_session_timeout 5m;
