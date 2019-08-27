@@ -46,7 +46,7 @@ pyppeteer的开发团队似乎比较忙，还没修复。可参考[pyppeteer#159
 
 参考  
 
-- [Pyppeteer:比selenium更高效的利器](https://mp.weixin.qq.com/s/PnKdH_wq2sWKr-Wq55fy-A)
+- [Pyppeteer:比selenium更高效的利器](https://mp.weixin.qq.com/s/i1Sr5xIURsoaSJK8ajGEqw)
 - [install-chromium](https://www.technig.com/install-chromium-on-centos/)
 - [selenium-and-chrome](https://github.com/smile365/blog/blob/master/selenium.md)
 - [Session-closed-error](https://blog.csdn.net/weixin_39198406/article/details/86719814)
