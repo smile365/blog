@@ -57,7 +57,7 @@ DROP CONTINUOUS QUERY "cq_sum_1h" ON "sxydata"
 show measurements
 
 -- 查看数据
-SELECT * from cq_sum_1h
+select sum(*) from sum_source_1h GROUP By time(1h) tz('Asia/Shanghai')
 ```
 
 
