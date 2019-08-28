@@ -91,4 +91,6 @@ ssh -L 8080:localhost:8080 sxy@server
 - [SSH端口转发](https://www.cnblogs.com/520yang/articles/5405323.html)
 - [实战SSH端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
 - [动态端口转发](https://blog.fundebug.com/2017/04/24/ssh-port-forwarding/)
-- [ssh免密码登陆仍然需要密码](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
+- [ssh服务器添加公钥后仍需要输入密码](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
+- [SSH-Authentication-Refused](https://www.daveperrett.com/articles/2010/09/14/ssh-authentication-refused/)
+- [why-password-prompt-with-ssh-with-public-key](https://unix.stackexchange.com/questions/36540/why-am-i-still-getting-a-password-prompt-with-ssh-with-public-key-authentication)
