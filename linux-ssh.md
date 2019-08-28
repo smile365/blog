@@ -19,6 +19,7 @@ description:
 
 测试：`ping www`
 
+
 使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_www`
 
 
@@ -38,9 +39,37 @@ ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www
 ```
 
 测试,无须输入端口和密码即可连接成功
+
 ```sh
 ssh www
 ```
+
+若仍需输入密码,一般为权限问题。
+
+```sh
+ssh -vT www # 打印调试信息，查看Next authentication method: publickey 以后的行。发现有Offering public key，但没有Server accepts key
+
+#登录服务器查看.ssh 目录权限
+ls -la ~/ |grep ssh
+#drwx------.  2 ssh # 
+# 查看sshd日志
+tail -f /var/log/secure
+# 发现一行Authentication refused: bad ownership or modes for file ～/.ssh/authorized_keys
+```
+
+说明：安全起见，sshd强制对key的文件权限进行检查，`.ssh`目录的权限只有自己能读写，keys文件的权限组和其他人只能读。
+
+修改权限
+
+```shell
+chmod og-wx ~/.ssh/authorized_keys
+chmod og-wx ~/.ssh
+chmod og+r ~/.ssh
+chmod og+r ~/.ssh/authorized_keys
+```
+
+再次测试问题解决
+
 
 **ssh奇技淫巧**
 
@@ -63,3 +92,6 @@ ssh -L 8080:localhost:8080 sxy@server
 - [SSH端口转发](https://www.cnblogs.com/520yang/articles/5405323.html)
 - [实战SSH端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
 - [动态端口转发](https://blog.fundebug.com/2017/04/24/ssh-port-forwarding/)
+- [password-prompt-with-ssh](https://unix.stackexchange.com/questions/36540/why-am-i-still-getting-a-password-prompt-with-ssh-with-public-key-authentication)
+- [无法通过ssh-key 免密登录](https://www.cnblogs.com/marility/p/8400354.html)
+- [sshd_config](https://www.ssh.com/ssh/sshd_config/)
