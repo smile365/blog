@@ -57,15 +57,14 @@ tail -f /var/log/secure
 # 发现一行Authentication refused: bad ownership or modes for file ～/.ssh/authorized_keys
 ```
 
-说明：安全起见，sshd强制对key的文件权限进行检查，`.ssh`目录的权限只有自己能读写，keys文件的权限组和其他人只能读。
+说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
 
 修改权限
 
 ```shell
-chmod og-wx ~/.ssh/authorized_keys
-chmod og-wx ~/.ssh
-chmod og+r ~/.ssh
-chmod og+r ~/.ssh/authorized_keys
+chmod og-wx -R ~/.ssh
+chmod og+r -R ~/.ssh
+chmod og-w ~
 ```
 
 再次测试问题解决
@@ -92,6 +91,4 @@ ssh -L 8080:localhost:8080 sxy@server
 - [SSH端口转发](https://www.cnblogs.com/520yang/articles/5405323.html)
 - [实战SSH端口转发](https://www.ibm.com/developerworks/cn/linux/l-cn-sshforward/)
 - [动态端口转发](https://blog.fundebug.com/2017/04/24/ssh-port-forwarding/)
-- [password-prompt-with-ssh](https://unix.stackexchange.com/questions/36540/why-am-i-still-getting-a-password-prompt-with-ssh-with-public-key-authentication)
-- [无法通过ssh-key 免密登录](https://www.cnblogs.com/marility/p/8400354.html)
-- [sshd_config](https://www.ssh.com/ssh/sshd_config/)
+- [ssh免密码登陆仍然需要密码](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
