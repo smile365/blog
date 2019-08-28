@@ -22,7 +22,7 @@ EOF
 yum -y install influxdb
 systemctl start influxdb
 # 进入infulx
-influx
+influx -precision rfc3339
 ```
 
 创建数据库
