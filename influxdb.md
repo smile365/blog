@@ -28,19 +28,43 @@ influx
 创建数据库
 
 ```sql
-> CREATE DATABASE "sxydb"
-> show databases
 
+#创建数据库
+create database "sxydata"
+
+-- RP数据默策略，默认保留1周
+CREATE RETENTION POLICY "seven_days" ON "sxydata" DURATION 1w REPLICATION 1 DEFAULT
+
+-- CQ连续查询 聚合1小时的数据
+CREATE CONTINUOUS QUERY "cq_sum_1h" ON "sxydata"
+BEGIN
+  SELECT sum(*) INTO "sum_source_1h" FROM "data_count" GROUP BY *,time(1h)
+END
+
+-- CQ连续查询 聚合1天的数据
+CREATE CONTINUOUS QUERY "cq_sum_1day" ON "sxydata"
+BEGIN
+  SELECT sum(*) INTO "sum_source_1day" FROM "sum_source_1h" GROUP BY *,time(1d)
+END
+
+-- 查看连续查询
+SHOW CONTINUOUS QUERIES
+
+-- 删除连续查询
+DROP CONTINUOUS QUERY "cq_sum_1h" ON "sxydata"
+
+-- 查看measurements(类似于表)
+show measurements
+
+-- 查看数据
+SELECT * from cq_sum_1h
 ```
-
-数据保留策略
-
-连续查询
 
 
 
 
 参考  
 
+- [docs](https://v2.docs.influxdata.com/v2.0/get-started/)
 - [influxdb的数据重复性问题](https://docs.influxdata.com/influxdb/v1.7/troubleshooting/frequently-asked-questions/#how-does-influxdb-handle-duplicate-points)
 - [InfluxDB中文文档](https://jasper-zhang1.gitbooks.io/influxdb/content/)
