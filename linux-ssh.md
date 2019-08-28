@@ -47,7 +47,8 @@ ssh www
 若仍需输入密码,一般为权限问题。
 
 ```sh
-ssh -vT www # 打印调试信息，查看Next authentication method: publickey 以后的行。发现有Offering public key，但没有Server accepts key
+ssh -vT www # 打印调试信息，查看Next authentication method: publickey 以后的行。
+发现有Offering public key，但没有Server accepts key
 
 #登录服务器查看.ssh 目录权限
 ls -la ~/ |grep ssh
