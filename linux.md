@@ -13,13 +13,14 @@ ls /etc/*release
 
 利用grep/awk/sed命令从文件中提取特定内容
 
-举例1
-一行一个json，把uid提取到另一个文件
+
 
 
 - grep：打印匹配的行，类似于 `awk '/reger/print'`
 - awk：`'/pattern/ action'` 使用`pattern` 按行进行`pattern`匹配，匹配成功则执行`action`
 - sed：行编辑器
+
+举例1
 
 打`uid`所在的行号
 
@@ -29,7 +30,19 @@ ls /etc/*release
 
 `wc -l book.txt`
 
+文件内容为一行一个json，把`user`下的`uid`提取到另一个文件
+
+`awk '{ print $0 }' book.json | ./jq.sh -r '.user.uid' > book-uid.txt`
+
+如果json文件不是严格正确的则
+
+```bash
+grep -o 'uid": "[0-9]*' book.json | awk -F'"' {'print $3'} > book-uid.txt
+```
+
 
 参考  
 
 - [awk-filter](https://www.tecmint.com/use-linux-awk-command-to-filter-text-string-in-files/)
+- [类似于sed的json行编辑器](https://stedolan.github.io/jq/)
+- [使用正则匹配杀死多个进程](https://stackoverflow.com/questions/3510673/find-and-kill-a-process-in-one-line-using-bash-and-regex/3510850#3510850)
