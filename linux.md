@@ -16,6 +16,18 @@ ls /etc/*release
 举例1
 一行一个json，把uid提取到另一个文件
 
-grep:打印匹配的行
+
+- grep：打印匹配的行，类似于 `awk '/reger/print'`
+- awk：`'/pattern/ action'` 使用`pattern` 按行进行`pattern`匹配，匹配成功则执行`action`
+- sed：行编辑器
+
+打印某个字符所在的行号
+
+统计文件的行数
+
+wc -l book.txt
 
 
+参考  
+
+- [awk-filter](https://www.tecmint.com/use-linux-awk-command-to-filter-text-string-in-files/)
