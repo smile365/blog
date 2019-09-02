@@ -21,11 +21,13 @@ ls /etc/*release
 - awk：`'/pattern/ action'` 使用`pattern` 按行进行`pattern`匹配，匹配成功则执行`action`
 - sed：行编辑器
 
-打印某个字符所在的行号
+打`uid`所在的行号
+
+`sed -n  -e '/uid/=' book.json`
 
 统计文件的行数
 
-wc -l book.txt
+`wc -l book.txt`
 
 
 参考  
