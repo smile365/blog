@@ -16,7 +16,7 @@ ls /etc/*release
 
 
 
-- grep：打印匹配的行，类似于 `awk '/reger/print'`
+- grep：使用正则匹配到行，然后打印指定的内容
 - awk：`'/pattern/ action'` 使用`pattern` 按行进行`pattern`匹配，匹配成功则执行`action`
 - sed：行编辑器
 
