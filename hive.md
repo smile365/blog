@@ -25,6 +25,12 @@ TBLPROPERTIES ("hbase.table.name" = "test_data_hb", "hbase.mapred.output.outputt
 
 若提示:`ermission denied: user=root`,因为`hive` 是hdfs创建的，在hadoop里hdfs才是超级管理员。所以需要hdfs用户来执行hive命令：`sudo -su hdfs`.
 
+把查询的结果放入另一临时表中
+
+```sql
+create table data_weixin as select * from test_data where source = "post/weixin";
+```
+
 
 参考  
 
