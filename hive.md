@@ -16,7 +16,12 @@ hive> show tables;
 ```
 
 创建表  
-
+```sql
+CREATE EXTERNAL TABLE test_data (rowkey string, source string, id string,url string,pdate int,pid string,pname string)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,data:interface,data:id,data:url,data:publishDate,data:posterOriginId,data:posterScreenName")
+TBLPROPERTIES ("hbase.table.name" = "test_data_hb", "hbase.mapred.output.outputtable" = "test_data)");
+```
 
 
 
