@@ -10,9 +10,10 @@ description:
 
 成功安装hive后输入`hive`进入命令行环境
 
-查看表  
+显示表的列名(默认为false)
+
 ```sql
-hive> show tables;
+hive> set hive.cli.print.header=true;
 ```
 
 创建表  
