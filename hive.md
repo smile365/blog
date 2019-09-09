@@ -37,3 +37,4 @@ create table data_weixin as select * from test_data where source = "post/weixin"
 
 - [hive-docs](https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-CreatingHiveTables)
 - [hive与hbase集成](https://cwiki.apache.org/confluence/display/Hive/HBaseIntegration)
+- [Hive的数据类型](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Types)
