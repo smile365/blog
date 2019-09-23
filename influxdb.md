@@ -32,19 +32,23 @@ influx -precision rfc3339
 #创建数据库
 create database "sxydata"
 
--- RP数据默策略，默认保留1周
+-- 建立一个保留时间1周的默认数据保留策略（RP）
 CREATE RETENTION POLICY "seven_days" ON "sxydata" DURATION 1w REPLICATION 1 DEFAULT
 
--- CQ连续查询 聚合1小时的数据
+-- 建立一个保留时间4周的数据保留策略
+CREATE RETENTION POLICY "one_month" ON "sxydata" DURATION 4w REPLICATION 1 
+
+
+-- 连续查询（CQ）聚合1小时的数据,使用默认RP
 CREATE CONTINUOUS QUERY "cq_sum_1h" ON "sxydata"
 BEGIN
   SELECT sum(*) INTO "sum_source_1h" FROM "data_count" GROUP BY *,time(1h)
 END
 
--- CQ连续查询 聚合1天的数据
-CREATE CONTINUOUS QUERY "cq_sum_1day" ON "sxydata"
+-- CQ连续查询 聚合1天的数据，使用one_month的RP
+CREATE CONTINUOUS QUERY "cq_1day" ON "sxydata"
 BEGIN
-  SELECT sum(*) INTO "sum_source_1day" FROM "sum_source_1h" GROUP BY *,time(1d)
+  SELECT sum("sum_repeat") as "repeat",sum("sum_total") as "total" INTO "wodedata"."one_month"."sum_1day" FROM "sum_source_1h" GROUP BY *,time(1d)
 END
 
 -- 查看连续查询
