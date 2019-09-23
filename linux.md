@@ -8,19 +8,16 @@ draft: true
 description:
 ---
 
-查看Linux发行版信息
+**使用grep匹配杀死多个进程**
+```bash
+kill $(ps aux | grep 'myapp.py' | awk '{print $2}')
+```
+
+
+**查看Linux发行版信息**
 ls /etc/*release
 
-利用grep/awk/sed命令从文件中提取特定内容
-
-
-
-
-- grep：使用正则匹配到行，然后打印指定的内容
-- awk：`'/pattern/ action'` 使用`pattern` 按行进行`pattern`匹配，匹配成功则执行`action`
-- sed：行编辑器
-
-举例1
+**利用grep/awk/sed命令提取特定内容**
 
 打`uid`所在的行号
 
