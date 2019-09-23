@@ -48,7 +48,7 @@ END
 -- CQ连续查询 聚合1天的数据，使用one_month的RP
 CREATE CONTINUOUS QUERY "cq_1day" ON "sxydata"
 BEGIN
-  SELECT sum("sum_repeat") as "repeat",sum("sum_total") as "total" INTO "wodedata"."one_month"."sum_1day" FROM "sum_source_1h" GROUP BY *,time(1d)
+  SELECT sum("sum_repeat") as "repeat",sum("sum_total") as "total" INTO "sxydata"."one_month"."sum_1day" FROM "sum_source_1h" GROUP BY *,time(1d)
 END
 
 -- 查看连续查询
