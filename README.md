@@ -4,10 +4,13 @@ draft: true
 date: 2018-01-01
 ---
 
+todo
+
+- [李子柒](https://mp.weixin.qq.com/s/ZndPLiST-ghEASFM4yDYQA)
+
 正在学习  
 bigdata    
 - [hadoop]()
-- []()
 
 go  
 - [bolt](https://github.com/boltdb/bolt)
@@ -20,10 +23,9 @@ python
 db  
 - [PostgreSQL](https://github.com/digoal/blog/blob/master/201706/20170601_02.md)
   
-Android  
-- [Flutter](https://book.flutterchina.club/)
 
 参考：  
+
 - [我基于嵌入式键值存储构建了3个高流量Web应用程序过程中学到了什么](https://hackernoon.com/what-i-learnt-from-building-3-high-traffic-web-applications-on-an-embedded-key-value-store-68d47249774f)
   
 
