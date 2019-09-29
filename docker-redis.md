@@ -23,7 +23,7 @@ wget http://download.redis.io/redis-stable/redis.conf
 
 [redis.conf](https://redis.io/topics/config)配置文件建议修改以下几项
 
-```nginx
+```conf
 requirepass yourpass
 logfile "/data/redis6379.log"
 save "" # 取消rdb快照模式
