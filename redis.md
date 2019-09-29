@@ -22,6 +22,8 @@ awk -F: '/^[^#]/ {print}' /etc/redis.conf
 
 ```yaml
 bind 0.0.0.0 #ip地址
+pidfile /var/run/redis_6379.pid
+port 637
 requirepass yourpass # 密码
 logfile "your path log" # 日志文件路径
 save "" # 关闭rdb快照
