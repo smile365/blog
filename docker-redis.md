@@ -24,19 +24,16 @@ wget http://download.redis.io/redis-stable/redis.conf
 [redis.conf](https://redis.io/topics/config)配置文件建议修改以下几项
 
 ```nginx
-bind 0.0.0.0
-requirepass sxy91
+requirepass yourpass
+logfile "/data/redis6379.log"
+save "" # 取消rdb快照模式
+dir "/data" # 数据文件路径
+maxmemory 30Gb #建议最大内存的80%
+appendonly yes  # 使用aof方式持久化
+appendfilename "appendonly.aof" #只能是文件名，路径为上方配置的di
+auto-aof-rewrite-percentage 100 # 超过100%会把aof文件重写
+auto-aof-rewrite-min-size 30G # 第一次超过多大会重写，建议80%的maxmemory
 
-pidfile /data/redis_6379.pid
-logfile ""
-save ""
-dir /data
-
-maxmemory
-maxmemory-policy volatile-lru
-
-appendonly yes
-no-appendfsync-on-rewrite yes
 ```
 
 使用docker安装redis
