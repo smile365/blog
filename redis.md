@@ -17,17 +17,16 @@ systemctl enable redis
 awk -F: '/^[^#]/ {print}' /etc/redis.conf
 ```
 
-
 建议修改以下几项配置`vim /etc/redis.conf`  
 
 ```yaml
 bind 0.0.0.0 #ip地址
 pidfile /var/run/redis_6379.pid
-port 637
+port 6379
 requirepass yourpass # 密码
-logfile "your path log" # 日志文件路径
+logfile /logs/6379.log" # 日志文件路径
 save "" # 关闭rdb快照
-dir "your path" # 数据文件路径
+dir "/home/redisdata/data6379" # 数据文件路径
 maxmemory # 建议不超过机器最大内存的80%
 appendonly yes  # 使用aof方式持久化
 appendfilename "appendonly.aof" # aof文件名(只能是文件名，路径为上方配置的dir)
