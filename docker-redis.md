@@ -38,7 +38,7 @@ auto-aof-rewrite-min-size 30G # 第一次超过多大会重写，建议80%的max
 使用docker安装redis
 
 ```shell
-docker run -d -ti -p 6379:6379 -v /home/soft/redis/conf/redis.conf:/etc/redis/redis.conf -v /home/soft/redis/db:/data --restart always --name redis  redis redis-server /etc/redis/redis.conf --requirepass 
+docker run -d -ti -p 6379:6379 -v /home/soft/redis/conf/redis.conf:/etc/redis/redis.conf -v /home/soft/redis/db:/data --restart always --name redis  redis redis-server /etc/redis/redis.conf --requirepass "yourpass"
 docker ps
 docker exec -it redis redis-cli -h 127.0.0.1 -p 6379 -a sxy91
 ```
