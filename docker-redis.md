@@ -75,3 +75,4 @@ redis-cli -h my1 -a mypass
 - [homebrew的tap功能](https://segmentfault.com/a/1190000012826983)
 - [homebrew-redis-cli](https://github.com/ringohub/homebrew-redis-cli)
 - [mac修改hosts](https://blog.csdn.net/u012460084/article/details/40186973)
+- [在线随机密码](https://www.lastpass.com/zh/password-generator)
