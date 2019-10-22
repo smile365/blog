@@ -23,8 +23,7 @@ format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {file}:{line} - {message}"
 
 #修改默认的日志格式
 log.configure(handlers=[
-	dict(sink=sys.stderr,format=format),
-	])
+	dict(sink=sys.stderr,format=format)])
 
 #增加一个文件日志，每天0点创建新的日志文件，保存最近7天的日志。
 log.add('out.log',format=format,rotation="00:00",retention="7 days")
