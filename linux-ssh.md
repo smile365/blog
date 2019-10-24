@@ -13,11 +13,11 @@ description:
 
 
 编辑host
-`sudo nano /etc/hosts`
+`sudo vim /etc/hosts`
 增加如下：
-`192.168.1.2 www.sxy91.com www`
+`192.168.1.2 www.sxy91.com sxy91`
 
-测试：`ping www`
+测试：`ping sxy91`
 
 
 使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_sxy`
