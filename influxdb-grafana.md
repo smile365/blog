@@ -7,3 +7,7 @@ draft: true
 description: 
 ---
 
+```sql
+SELECT sum("sum_total") as "total" , sum("sum_repeat") as "repeat",  sum("sum_total") -  sum("sum_repeat")  as "unique"   FROM "sum_source_1h" where time > now() - 8d GROUP BY time(1d)  tz('Asia/Shanghai')
+```
+
