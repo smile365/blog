@@ -20,34 +20,34 @@ description:
 测试：`ping www`
 
 
-使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_www`
+使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_sxy`
 
 
 
 编辑ssh的config文件：`nano ~/.ssh/config`,内容如下： 
 ```nginx
-Host www
+Host sxy91
     HostName www.sxy91.com
     User songxueyan
     Port 3322
-    IdentityFile ~/.ssh/id_rsa_www
+    IdentityFile ~/.ssh/id_rsa_sxy
 ```
 
 复制到Linux
 ```sh
-ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_www.pub  songxueyan@www
+ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@sxy91
 ```
 
 测试,无须输入端口和密码即可连接成功
 
 ```sh
-ssh www
+ssh sxy91
 ```
 
 若仍需输入密码,一般为权限问题。
 
 ```sh
-ssh -vT www # 打印调试信息，查看Next authentication method: publickey 以后的行。
+ssh -vT sxy91 # 打印调试信息，查看Next authentication method: publickey 以后的行。
 #发现有Offering public key，但没有Server accepts key
 
 #登录服务器查看.ssh 目录权限
