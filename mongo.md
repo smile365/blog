@@ -60,14 +60,11 @@ exit;
 ```yaml
 systemLog:
   path: /var/log/mongodb/mongod.log
-
 storage:
   dbPath: /var/lib/mongo 
-  
 net:
   port: 47017 #监听端口
   bindIp: 0.0.0.0
-
 security:
   authorization: enabled #启用安全认证
 ```
