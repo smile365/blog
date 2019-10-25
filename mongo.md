@@ -57,14 +57,6 @@ security:
 
 创建管理员:`mongo localhost:47017`  
 ```javascript
-use admin
-db.createUser(
-  {
-    user: "sxy",
-    pwd: "sxy91.com",
-    roles: [ { role: "root", db: "admin" } ]
-  }
-);
 //创建管理员
 use admin
 db.createUser(
