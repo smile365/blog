@@ -38,26 +38,8 @@ enabled=1
 运行命令安装`yum install -y mongodb-org`
 
 
-启动服务`mongod -f /etc/mongod.conf`
->不能使用 systemctl 启动
-
-
-创建管理员`mongo`
-```javascript
-use admin
-db.createUser(
-  {
-    user: "sxy",
-    pwd: "sxy91.com",
-    roles: [ { role: "root", db: "admin" } ]
-  }
-);
-exit;
-```
-设置密码：不要含有@
-
 编辑配置文件：`vi /etc/mongod.conf`  
-建议修改日志文件路径/数据存储路径/端口/及启用密码。  
+建议修改日志文件路径/数据存储路径/端口/及启用密码。
 ```yaml
 systemLog:
   path: /var/log/mongodb/mongod.log
@@ -70,18 +52,32 @@ security:
   authorization: enabled #启用安全认证
 ```
 
-重启mongod
-```shell
-systemctl stop mongod
-mongod -f /etc/mongod.conf
+
+启动服务（不能使用systemctl启动）：`mongod -f /etc/mongod.conf`
+
+创建管理员:`mongo localhost:47017`  
+```javascript
+use admin
+db.createUser(
+  {
+    user: "sxy",
+    pwd: "sxy91.com",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+);
+exit;
 ```
-
-
 
 创建其他用户`mongo localhost:47017/admin -u sxy -p`
 ```javascript
 use mydb
 db.createUser({user:'myuser',pwd:'sxy91.com',roles: [ { role: "readWrite", db: "mydb" }]})
+```
+
+重启mongod
+```shell
+systemctl stop mongod
+mongod -f /etc/mongod.conf
 ```
 
 使用mongo shell连接
