@@ -6,7 +6,7 @@ tags:
 draft: true
 ---
 
-配置软件的安装源
+**配置软件的安装源**
 
 
 ```shell
@@ -35,11 +35,14 @@ enabled=1
 ```
 > 奇数版本为开发版(如3.5)，不建议生产环境使用
 
-运行命令安装`yum install -y mongodb-org`
+**安装及启动**  
+```
+yum install -y mongodb-org
+```
+编辑配置文：`vi /etc/mongod.conf` 
 
-
-编辑配置文件：`vi /etc/mongod.conf`  
-建议修改日志文件路径/数据存储路径/端口/及启用密码。
+件建议修改日志文件路径/数据存储路径/端口/及启用密码。
+ 
 ```yaml
 systemLog:
   path: /var/log/mongodb/mongod.log
@@ -52,8 +55,9 @@ security:
   authorization: enabled #启用安全认证
 ```
 
-
 启动服务（不能使用systemctl启动）：`mongod -f /etc/mongod.conf`
+
+**数据库管理**
 
 创建数据库用户及分配权限:`mongo localhost:47017`  
 ```javascript
@@ -105,10 +109,27 @@ use test
 db.getCollectionNames().forEach(function(x){print(x+":"+db[x].count())})
 ```
 
-参考
+**使用pymongo的python客户端**
+```python
+from pymongo import MongoClient
+client = MongoClient('mongodb://[username:password@]host[:port]')
+
+# 若用户名和密码中包含保留字符（如‘:’,‘/’,‘+’,‘@’ 等）必须按照RFC 2396进行百分比编码：
+from urllib.parse import quote_plus
+uri = "mongodb://%s:%s@%s:%s" % (quote_plus(user),quote_plus(password),host,port)
+client = MongoClient(uri)
+
+amount = client.dbname.tablename.count()
+print(amount)
+
+```
+
+
+更多用法参考文档：
 
 - [mongodb-manual](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/)
 - [enable-authentication](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
 - [安装MongoDB](http://blog.csdn.net/liaoyundababe/article/details/71303039)
 - [Ubuntu镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/mongodb/)
 - [listCollections](https://stackoverflow.com/questions/8866041/how-to-list-all-collections-in-the-mongo-shell)
+- [PyMongo-doc](https://api.mongodb.com/python/current/tutorial.html)
