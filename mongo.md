@@ -56,17 +56,21 @@ exit;
 ```
 设置密码：不要含有@
 
-启用用户认证，并配置日志路径`vi /etc/mongod.conf`
+编辑配置文件，建议修改日志文件路径/数据存储路径/端口/及启用密码：`vi /etc/mongod.conf`
 ```yaml
 systemLog:
   path: /var/log/mongodb/mongod.log
+
+storage:
+  dbPath: /var/lib/mongo 
+  
 net:
   port: 47017 #监听端口
   bindIp: 0.0.0.0
+
 security:
   authorization: enabled #启用安全认证
 ```
-
 
 重启mongod
 ```shell
