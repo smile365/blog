@@ -112,7 +112,7 @@ db.getCollectionNames().forEach(function(x){print(x+":"+db[x].count())})
 **使用pymongo的python客户端**
 ```python
 from pymongo import MongoClient
-client = MongoClient('mongodb://[username:password@]host[:port]'/[database])
+client = MongoClient("mongodb://[username:password@]host[:port][/[database][?options]]")
 
 # 若用户名和密码中包含保留字符（如‘:’,‘/’,‘+’,‘@’ 等）必须按照RFC 2396进行百分比编码：
 from urllib.parse import quote_plus
