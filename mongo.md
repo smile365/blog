@@ -55,7 +55,7 @@ security:
 
 启动服务（不能使用systemctl启动）：`mongod -f /etc/mongod.conf`
 
-创建管理员:`mongo localhost:47017`  
+创建数据库用户及分配权限:`mongo localhost:47017`  
 ```javascript
 //创建管理员
 use admin
