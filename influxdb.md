@@ -40,9 +40,9 @@ CREATE RETENTION POLICY "one_month" ON "sxydata" DURATION 4w REPLICATION 1
 
 
 -- 连续查询（CQ）聚合1小时的数据,使用默认RP
-CREATE CONTINUOUS QUERY "cq_sum_1h" ON "sxydata"
+CREATE CONTINUOUS QUERY "cq_Adata_1h" ON "sxydata"
 BEGIN
-  SELECT sum(*) INTO "sum_source_1h" FROM "data_count" GROUP BY *,time(1h)
+  SELECT sum(*) INTO "Adata_1h" FROM "Adata" GROUP BY *,time(1h)
 END
 
 -- CQ连续查询 聚合1天的数据，使用one_month的RP
@@ -64,7 +64,7 @@ show measurements
 select sum(*) from sum_source_1h GROUP By time(1h) tz('Asia/Shanghai')
 ```
 
-
+python的客户端可参考[influxdb-python](https://github.com/influxdata/influxdb-python)
 
 
 参考  
