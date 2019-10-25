@@ -119,6 +119,7 @@ from urllib.parse import quote_plus
 uri = "mongodb://%s:%s@%s:%s/%s" % (quote_plus(user),quote_plus(password),host,port,database)
 client = MongoClient(uri)
 
+client.dbname.tablename.insert_one({'_id':'a1','name':'test1'})
 amount = client.dbname.tablename.count()
 print(amount)
 
