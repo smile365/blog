@@ -65,13 +65,29 @@ db.createUser(
     roles: [ { role: "root", db: "admin" } ]
   }
 );
-exit;
-```
+//创建管理员
+use admin
+db.createUser(
+  {
+    user: "sxy",
+    pwd: "sxy91.com",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+);
+//管理员认证
+db.auth("sxy","sxy91.com")
 
-创建其他用户`mongo localhost:47017/admin -u sxy -p`
-```javascript
-use mydb
-db.createUser({user:'myuser',pwd:'sxy91.com',roles: [ { role: "readWrite", db: "mydb" }]})
+//创建其他用户
+use dbtest
+db.createUser(
+  {
+    user: "dbuser",
+    pwd: "sxy91.com",
+    roles: [ { role: "readWrite", db: "dbtest" } ]
+  }
+);
+
+exit;
 ```
 
 重启mongod
