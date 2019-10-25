@@ -56,7 +56,8 @@ exit;
 ```
 设置密码：不要含有@
 
-编辑配置文件，建议修改日志文件路径/数据存储路径/端口/及启用密码：`vi /etc/mongod.conf`
+编辑配置文件：`vi /etc/mongod.conf`  
+建议修改日志文件路径/数据存储路径/端口/及启用密码。  
 ```yaml
 systemLog:
   path: /var/log/mongodb/mongod.log
