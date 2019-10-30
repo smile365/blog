@@ -62,6 +62,10 @@ SolrCloud是通过zk来管理配置文件的，需要先下载下来修改，然
  Solr Server × 1
 
 ### 使用python客户端[pysolr](https://github.com/django-haystack/pysolr/)
+```bash
+#使用SolrCloud模式需要安装kazoo
+pip install kazoo
+```
 
 solr（7.4）调整了配置文件的路径及名称，Pysolr（3.8.1）还未支持到最新版本的规则，使用SolrCloud模式需要在初始化zookeeper前定义ZooKeeper中`ZooKeeper.CLUSTER_STATE`的节点路径。
 否则会报错`pysolr.SolrError: Unknown collection: your_collection`：
@@ -72,7 +76,6 @@ solr = pysolr.SolrCloud(zookeeper,"your_collection")
 print(len(solr.search("*:*")))
 
 ```
-
 
 
 
