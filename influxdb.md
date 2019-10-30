@@ -42,13 +42,13 @@ CREATE RETENTION POLICY "one_month" ON "sxydata" DURATION 4w REPLICATION 1
 -- 连续查询（CQ）聚合1小时的数据,使用默认RP
 CREATE CONTINUOUS QUERY "cq_Adata_1h" ON "sxydata"
 BEGIN
-  SELECT sum(*) INTO "Adata_1h" FROM "Adata" GROUP BY *,time(1h)
+  SELECT sum(*) INTO "Adata_1h" FROM "Adata" GROUP BY *,time(1h) tz('Asia/Shanghai')
 END
 
 -- CQ连续查询 聚合1天的数据，使用one_month的RP
 CREATE CONTINUOUS QUERY "cq_1day" ON "sxydata"
 BEGIN
-  SELECT sum("sum_repeat") as "repeat",sum("sum_total") as "total" INTO "sxydata"."one_month"."sum_1day" FROM "sum_source_1h" GROUP BY *,time(1d)
+  SELECT sum("sum_repeat") as "repeat",sum("sum_total") as "total" INTO "sxydata"."one_month"."sum_1day" FROM "sum_source_1h" GROUP BY *,time(1d) tz('Asia/Shanghai')
 END
 
 -- 查看连续查询
