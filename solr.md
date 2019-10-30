@@ -8,6 +8,7 @@ description:
 ---
 
 
+
 打开solr主页
 点击`collections`,点击`add`
 
@@ -53,6 +54,29 @@ SolrCloud是通过zk来管理配置文件的，需要先下载下来修改，然
  </fieldType>
 ```
 
+### 添加实例
+
+进入Cloudera Manager主页，集群-->solr-->操作-->添加角色实例
+
+ Gateway × 2 新建
+ Solr Server × 1
+
+### 使用python客户端[pysolr](https://github.com/django-haystack/pysolr/)
+
+solr（7.4）调整了配置文件的路径及名称，Pysolr（3.8.1）还未支持到最新版本的规则，使用SolrCloud模式需要在初始化zookeeper前定义ZooKeeper中`ZooKeeper.CLUSTER_STATE`的节点路径。
+否则会报错`pysolr.SolrError: Unknown collection: your_collection`：
+```python
+pysolr.ZooKeeper.CLUSTER_STATE = '/solr/collections/your_collection/state.json'
+zookeeper = pysolr.ZooKeeper("server-01:2181,server-02:2181,server-03:2181")
+solr = pysolr.SolrCloud(zookeeper,"your_collection")
+print(len(solr.search("*:*")))
+
+```
+
+
+
+
 参考  
 
 - [搭建SolrCloud集群服务](https://segmentfault.com/a/1190000010836061#articleHeader21)
+- [pysolr使用SolrCloud模式问题](https://stackoverflow.com/questions/47263729/connection-to-solr-cloud-collection-using-pysolr)
