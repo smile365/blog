@@ -34,7 +34,7 @@ time                 save2solr
 堆内存：   10g
 直接内存： 15g
 
-
+三、增加share数量
 
 
 
