@@ -91,13 +91,13 @@ tar zxvf kcptun-linux-amd64*.tar.gz
 
 启动shadowsocks点击+号，手动设置。
 
-服务器：你的服务器ip
-远程端口：kcptun.json里配置的`listen`，即4000
-密码：shadowsocks.json里配置的`password`
+服务器：你的服务器ip  
+远程端口：kcptun.json里配置的`listen`，即4000  
+密码：shadowsocks.json里配置的`password`  
 
 
-点击插件-->kcptun-->配置
-清空所有。填写：`key=你的kcptun密码;`
+点击插件-->kcptun-->配置  
+清空所有。填写：`key=你的kcptun密码;`  
 
 保存后启动即可。
 
