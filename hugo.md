@@ -39,8 +39,17 @@ list
 $ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
 ```
 
+[开启百度统计](https://tongji.baidu.com/web/welcome/basic)
 
-**参考**
+按照要求把代码复制到模版的single.html/list.html等地方。
+
+[使用valine作为评论插件](https://valine.js.org/quickstart.html)
+
+把代码复制到模版的single.html页面
+
+
+**参考**  
+
 - [gohugo.io](https://gohugo.io/getting-started/quick-start/)
 - [hugo列表显示错误](https://orianna-zzo.github.io/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B07-hugo%E5%A4%9A%E7%BA%A7%E5%88%97%E8%A1%A8%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA--cocoa%E4%B8%BB%E9%A2%98%E7%9A%84markdown-bug%E5%90%88%E9%9B%86/)
 - [使用Hugo搭建静态站点](https://tonybai.com/2015/09/23/intro-of-gohugo/)
