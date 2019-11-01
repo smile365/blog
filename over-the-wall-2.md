@@ -14,6 +14,83 @@ description:
 然后[登录上服务器](sxy91.com)
 
 
+**需要的工具**
+
+- shadowsocks（服务端+客户端）
+- kcptun（服务端+客户端）
+
+
+
+**1.服务器端安装shadowsocks**
+
+```bash
+# 安装pip，通过pip安装shadowsocks
+pip -V
+yum -y install wget
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+pip install shadowsocks
+```
+
+
+
+
+配置shadowsocks：`vi /etc/shadowsocks.json`    
+
+用[密码生成器](https://suijimimashengcheng.51240.com/)生成一个密码填写在`password`的地方(自己想一个也行)
+
+
+```json
+{
+    "server":"0.0.0.0",
+    "server_port":50013,
+    "local_port":1080,
+    "password":"你的shadowsocks密码",
+    "timeout":600,
+    "method":"aes-256-cfb"
+}
+```
+
+启动shadowsocks:`nohup ssserver -c /etc/shadowsocks.json >/dev/null 2>&1 &`
+
+
+**2.服务器端安装kcptun**
+
+安装kcptun
+
+在[kcptun-发布页面](https://github.com/xtaci/kcptun/releases)找到`kcptun-linux-amd64`版本，并复制下载链接。
+```shell
+# wget +复制的下载链接进行下载。如：
+wget https://github.com/xtaci/kcptun/releases/download/v20190924/kcptun-linux-amd64-20190924.tar.gz
+# 解压：
+tar zxvf kcptun-linux-amd64*.tar.gz
+```
+
+配置kcptun：`vi /etc/kcptun/config.json`
+
+用[密码生成器](https://suijimimashengcheng.51240.com/)生成一个密码填写在key的地方(自己想一个也行)
+
+```json
+{
+    "target":"127.0.0.1:50013",
+    "listen":":3306",
+    "key":"你的密码kcptun",
+}
+```
+
+**3.安卓端安装shadowsocks**
+
+**4.安卓端安装kcptun插件**
+
+没有iphone，暂时不做
+
+window
+mac
+ios
+
+**mac端安装shadowsocks**
+
+**mac端安装kcptun**
 
 相关教程：
 
