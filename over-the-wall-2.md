@@ -73,24 +73,43 @@ tar zxvf kcptun-linux-amd64*.tar.gz
 ```json
 {
     "target":"127.0.0.1:50013",
-    "listen":":3306",
-    "key":"你的密码kcptun",
+    "listen":":4000",
+    "key":"你的kcptun密码",
 }
 ```
 
-**3.安卓端安装shadowsocks**
+**安卓手机上网方法**
 
-**4.安卓端安装kcptun插件**
+安装shadowsocks和kcptun插件:
 
-没有iphone，暂时不做
+到[shadowsocks-android](https://github.com/shadowsocks/shadowsocks-android/releases)页面 下载`shadowsocks--universal.apk
+`并安装。
 
-window
-mac
-ios
+到[kcptun-android](https://github.com/shadowsocks/kcptun-android/releases)页面下载`kcptun--universal.apk`并安装。
 
-**mac端安装shadowsocks**
+配置：
 
-**mac端安装kcptun**
+启动shadowsocks点击+号，手动设置。
+
+服务器：你的服务器ip
+远程端口：kcptun.json里配置的`listen`，即4000
+密码：shadowsocks.json里配置的`password`
+
+
+点击插件-->kcptun-->配置
+清空所有。填写：`key=你的kcptun密码;`
+
+保存后启动即可。
+
+
+**mac电脑上网方法**
+
+到[mac-shadowsocks](https://github.com/shadowsocks/ShadowsocksX-NG/releases)页面下载`ShadowsocksX-NG.zip`,解压后拖到应用里启动。
+
+配置
+![enter description here](https://i.loli.net/2019/11/01/P4NG9fS2OgAr1RM.png)
+
+
 
 相关教程：
 
