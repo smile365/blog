@@ -120,8 +120,11 @@ tar zxvf kcptun-linux-amd64*.tar.gz
 
 参考连接
 
-
-
-
+- [kcptun使用.json文件启动](https://blog.phpgao.com/kcptun.html/comment-page-1)
+- [kcptun使用.sh文件启动](https://home4love.com/3154.html)
+- [kcptun](https://github.com/xtaci/kcptun)
+- [android-shadowsocks](https://github.com/shadowsocks/shadowsocks-android/releases)
+- [kcptun-android](https://github.com/shadowsocks/kcptun-android/releases)
+- [mac-shadowsocks](https://github.com/shadowsocks/ShadowsocksX-NG/releases)
 
 
