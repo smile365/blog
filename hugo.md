@@ -43,6 +43,12 @@ $ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
 
 按照要求把代码复制到模版的single.html/list.html等地方。
 
+先去注册[leancloud](https://leancloud.cn/?source=XRC4B1YQ)
+
+创建应用，
+把代码复制到需要的地方
+
+
 [使用valine作为评论插件](https://valine.js.org/quickstart.html)
 
 把代码复制到模版的single.html页面
