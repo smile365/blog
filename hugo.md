@@ -55,7 +55,7 @@ $ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
 
 推荐主题：
 
-- [KeepIt](https://github.com/Fastbyte01/KeepIt)
+- [KeepIt](https://github.com/Fastbyte01/KeepIt),[demo](https://shuzang.github.io/)
 - []()
 
 **参考**  
