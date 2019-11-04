@@ -53,6 +53,10 @@ $ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
 
 把代码复制到模版的single.html页面
 
+推荐主题：
+
+- [KeepIt](https://github.com/Fastbyte01/KeepIt)
+- []()
 
 **参考**  
 
