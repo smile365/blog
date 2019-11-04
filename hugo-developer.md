@@ -15,4 +15,4 @@ description:
 - day3-美化主页
 - day4-美化详情页
 - day5-增加评论和百度统计
-- day6-
+- day6-开发栏目
