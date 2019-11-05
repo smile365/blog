@@ -22,3 +22,4 @@ description:
 - day10-申请一个免费顶级域名
 - day11-配置域名解析和https证书
 - day12-永久固定url
+- day13-配置cdn提升访问速度
