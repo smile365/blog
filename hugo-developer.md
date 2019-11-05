@@ -23,3 +23,31 @@ description:
 - day11-配置域名解析和https证书
 - day12-永久固定url
 - day13-配置cdn提升访问速度
+- day14-seo优化。
+
+
+md文件建议的字段
+
+```markdown
+---
+title:  hugo主题开发实战
+date: 2019-11-04T01:51:55.940Z
+tags: 
+  - blog
+  - hugo
+categories:
+  - code
+draft: true
+description: hugo theme developer 开发
+
+---
+```
+
+对应在html的head部分
+
+```html
+  <meta name="Keywords" content="宋洋葱,本草洋葱,宋佳小巷,宋学彦,博客,bloger"/>
+  <meta name="Description" content=" {{ .Site.Title }}"/>
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <meta name="title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end}}">
+```
