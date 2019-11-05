@@ -51,3 +51,11 @@ description: hugo theme developer 开发
   <meta name="author" content="{{ .Site.Params.author }}" />
   <meta name="title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end}}">
 ```
+
+|   html  |  md   |  说明   |
+| --- | --- | --- |
+|  Keywords   | tags    |     |
+|  Description   | description    |     |
+|  title   |   title  |     |
+|  author   |   author  |     |
+
