@@ -2,7 +2,6 @@
 title:  dev-tools
 date: 2018-09-03T11:54:41.611Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
 draft: true
 description:

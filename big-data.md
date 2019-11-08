@@ -2,7 +2,6 @@
 title:  大数据学习计划
 date: 2019-03-06T07:47:11.653Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
 draft: true
 description:

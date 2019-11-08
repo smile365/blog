@@ -1,9 +1,8 @@
 ---
 title: loguru比logging更优雅的python日志记录工具 
 date: 2019-10-22T06:51:43.672Z
-tags: 
-categories:
-draft: true
+tags: ["python","logging","loguru"]
+categories: ["code"]
 description: 
 ---
 

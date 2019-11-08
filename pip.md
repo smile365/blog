@@ -4,6 +4,7 @@ date: 2018-07-26T01:48:58.589Z
 tags: 
  - pip
  - mirror
+categories: ["code"] 
 ---
 
 ### 下载[get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)

@@ -1,8 +1,9 @@
 ---
-title:  postgresql使用
+title:  推荐-postgresql是我用过最牛的关系型数据库
 date: 2019-06-04T08:13:00.474Z
 tags: 
 - postgresql
+categories: ["code"] 
 ---
 
 使用[官网的rpm](https://www.postgresql.org/download/linux/redhat/)包安装  

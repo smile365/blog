@@ -1,9 +1,8 @@
 ---
-title:  autojs
+title:  autojs使用教程
 date: 2019-07-08T01:28:44.819Z
 tags: autojs
-categories:
-draft: true
+categories: ["code"]
 description: 
 ---
 

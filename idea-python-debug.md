@@ -2,9 +2,7 @@
 title:  使用IntelliJ IDEA进行Python远程调试
 date: 2018-08-21T02:43:06.074Z
 tags: ["idea"]
-series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 

@@ -2,7 +2,7 @@
 title:  bloom-filter-redis
 date: 2019-08-06T07:12:55.203Z
 tags: 
-categories:
+categories: ["code"]
 draft: true
 description: 
 ---

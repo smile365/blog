@@ -2,7 +2,7 @@
 title:  hugo主题开发实战
 date: 2019-11-04T01:51:55.940Z
 tags: 
-categories:
+categories: ["code"]
 draft: true
 description: 
 ---

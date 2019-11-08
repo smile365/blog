@@ -1,9 +1,8 @@
 ---
-title:  influxdb
+title:  influxdb时序数据库的使用
 date: 2019-08-27T07:56:11.769Z
 tags: 
-categories:
-draft: true
+categories: ["code"]
 description: 
 ---
 

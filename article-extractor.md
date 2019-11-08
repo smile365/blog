@@ -2,7 +2,6 @@
 title:  网页正文提取工具
 date: 2018-07-31T02:18:59.803Z
 tags: ["爬虫"]
-series: ["blog"]
 categories: ["code"]
 description:
 ---

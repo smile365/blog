@@ -2,7 +2,6 @@
 title:  Alpine镜像源
 date: 2019-05-18T01:16:21.497Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
 draft: true
 description:

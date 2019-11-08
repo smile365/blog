@@ -2,9 +2,7 @@
 title:  使用xposed框架hook安卓端Facebook
 date: 2018-12-07T08:28:28.379Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 
@@ -32,6 +30,7 @@ VirtualXposed是基于VirtualApp和epic在非ROOT环境下运行Xposed模块的�
 安装[VirtualXposed](https://github.com/android-hacker/VirtualXposed/releases)，然后把Facebook的app和本插件安装到其中。登录Facebook后在开启本插件，然后通过AndroidS
 
 参考  
+
 - [xposed-api](https://api.xposed.info/reference/packages.html)
 - [XposedBridge-tutorial](https://github.com/rovo89/XposedBridge/wiki/Development-tutorial)
 - [Hook机制](https://github.com/tiann/understand-plugin-framework)

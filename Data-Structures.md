@@ -2,7 +2,6 @@
 title:  数据结构
 date: 2018-08-30T06:17:06.183Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
 draft: true
 description:

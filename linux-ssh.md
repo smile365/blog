@@ -2,7 +2,6 @@
 title:  免密登录Linux主机
 date: 2018-07-30T09:19:48.400Z
 tags: ["ssh"]
-series: ["blog"]
 categories: ["code"]
 description:
 ---

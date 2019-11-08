@@ -1,10 +1,8 @@
 ---
-title:  Linux
+title:  Linux常用命令
 date: 2019-05-19T13:28:17.845Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 

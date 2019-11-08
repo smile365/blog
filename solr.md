@@ -1,9 +1,8 @@
 ---
-title:  solr
+title:  solr安装
 date: 2019-07-30T07:37:40.166Z
-tags: 
-categories:
-draft: true
+tags: ["solr"]
+categories: ["code"] 
 description: 
 ---
 

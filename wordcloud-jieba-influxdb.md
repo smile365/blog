@@ -4,6 +4,7 @@ date: 2019-06-17T05:52:14.535Z
 tags: 
  - 分词
  - InfluxDB
+categories: ["code"]  
 ---
 
 添加[influxdb源](https://docs.influxdata.com/influxdb/v1.7/introduction/installation/),然后安装  

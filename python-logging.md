@@ -1,8 +1,7 @@
 ---
 title:  python日志
 date: 2018-08-07T07:34:37.512Z
-tags: ["loggin"]
-series: ["blog"]
+tags: ["logging"]
 categories: ["code"]
 draft: true
 description:

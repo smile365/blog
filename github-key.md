@@ -4,6 +4,7 @@ date: 2018-07-07
 tags: 
  - ssh
  - github
+categories: ["code"]
 ---
 
 查看已经安装的公钥

@@ -1,10 +1,8 @@
 ---
-title:  redis
+title:  redis安装
 date: 2019-04-12T01:50:53.440Z
-tags: ["code","it"]
-series: ["blog"]
+tags: ["redis"]
 categories: ["code"]
-draft: true
 description:
 ---
 

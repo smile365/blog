@@ -1,10 +1,9 @@
 ---
-title:  centos 安装docker
+title:  centos安装docker
 date: 2018-08-02T07:54:20.501Z
 tags: ["docker"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 

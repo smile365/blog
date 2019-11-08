@@ -1,10 +1,10 @@
 ---
-title:  pyppeteer-and-chromium
+title:  用pyppeteer控制chrome浏览器干点坏事
 date: 2019-07-01T02:11:34.220Z
 tags: 
  - pyppeteer
  - chromium
-draft: true
+categories: ["code"]  
 ---
 
 

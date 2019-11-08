@@ -1,10 +1,8 @@
 ---
-title:  kivy的安装与使用
+title:  用python开发app是什么体验
 date: 2019-05-17T04:53:01.726Z
 tags: ["code","it"]
-series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 

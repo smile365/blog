@@ -1,6 +1,7 @@
 ---
 title: 宋学彦
 date: 2018-01-30
+categories: ["code"]
 
 ---
 IT工程师用Markdown语法写简历是什么样子

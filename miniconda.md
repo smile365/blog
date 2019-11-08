@@ -3,6 +3,7 @@ title:  使用Miniconda管理多个Python环境
 date: 2018-08-20T03:32:41.354Z
 tags: 
  - conda
+categories: ["code"] 
 ---
 
 根据操作系统下载安装脚本:[miniconda](https://docs.conda.io/en/latest/miniconda.html)，centos操作如下：

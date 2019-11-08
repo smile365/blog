@@ -2,9 +2,7 @@
 title:  技术博客收集
 date: 2018-07-04
 tags: ["websit"]
-series: ["blog"]
 categories: ["code"]
-draft: true
 ---
 
 牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC

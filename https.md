@@ -4,6 +4,7 @@ tags:
  - https
  - encrypt
 date: 2018-01-30
+categories: ["code"]
 ---
 
  [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，可以通过

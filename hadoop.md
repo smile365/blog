@@ -1,10 +1,9 @@
 ---
-title:  大数据平台介绍
+title:  大话大数据
 date: 2019-03-08T02:29:21.561Z
 tags: ["code","it"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 

@@ -5,6 +5,7 @@ tags:
  - selenium
  - PhantomJS
  - Pyppeteer
+categories: ["code"] 
 ---
 
 **Selenium**：网页自动化测试工具(通过各个浏览器的drive控制浏览器的行为)，给开发者提供控制浏览器的api，类似于sdk。  

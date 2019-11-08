@@ -5,6 +5,8 @@ tags:
  - hugo
  - bloger
  - centos
+categories: ["code"]
+
 ---
 
 **centos安装**[hugo](https://gohugo.io/getting-started/quick-start/)
