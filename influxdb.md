@@ -1,8 +1,9 @@
 ---
-title:  influxdb时序数据库的使用
+title:  influxdb
 date: 2019-08-27T07:56:11.769Z
 tags: 
-categories: ["code"]
+categories:
+draft: true
 description: 
 ---
 
@@ -65,8 +66,17 @@ select sum(*) from sum_source_1h GROUP By time(1h) tz('Asia/Shanghai')
 
 python的客户端可参考[influxdb-python](https://github.com/influxdata/influxdb-python)
 
+**如何唯一确定一条数据**
 
-参考  
+由时间和tags确定唯一性
+
+如果多次提交： 
+- 时间+tags不一样。 -- > 多条记录
+- 时间+tags一样，fields名称不一样。 --> 合并fields到时间+tag的那条记录中。
+- 时间+tags一样，fields名称一样。 --> 更新fields里的值
+
+
+参考文档  
 
 - [docs](https://v2.docs.influxdata.com/v2.0/get-started/)
 - [influxdb的数据重复性问题](https://docs.influxdata.com/influxdb/v1.7/troubleshooting/frequently-asked-questions/#how-does-influxdb-handle-duplicate-points)
