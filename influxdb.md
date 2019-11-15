@@ -1,9 +1,8 @@
 ---
-title:  influxdb
+title:  influxdb教程安装与使用
 date: 2019-08-27T07:56:11.769Z
-tags: 
-categories:
-draft: true
+tags: ["influxdb"]
+categories: ["code"]
 description: 
 ---
 
