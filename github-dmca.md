@@ -49,6 +49,7 @@ git log --stat -S "IntelliJ"
 
 参考资料  
 
-- [aaa](https://berryjam.github.io/2019/06/%E8%AE%B0github%E4%BB%93%E5%BA%93%E8%A2%ABDMCA-take-down%E7%BB%8F%E5%8E%86/)
+- [记一次github仓库被DMCA take down的经历](https://berryjam.github.io/2019/06/%E8%AE%B0github%E4%BB%93%E5%BA%93%E8%A2%ABDMCA-take-down%E7%BB%8F%E5%8E%86/)
 - [美国人怎么拔网线----DMCA入门](http://www.ruanyifeng.com/blog/2010/03/dmca.html)
 - [Github仓库被DMCA Takedown后怎么办](https://linux.cn/article-9374-1.html)
+- [从 Git 仓库中永久删除文件或目录](https://www.jianshu.com/p/d333ab0e6818)
