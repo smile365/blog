@@ -25,7 +25,8 @@ If you are the repository owner, and you believe that your repository was disabl
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1574926087695.png)
 
-收到回复邮件
+收到回复邮件：
+要么它可以帮你删除整个库，或者给你24小时删除侵权内容。
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1574926127420.png)
 
