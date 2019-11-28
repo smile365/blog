@@ -53,3 +53,4 @@ git log --stat -S "IntelliJ"
 - [美国人怎么拔网线----DMCA入门](http://www.ruanyifeng.com/blog/2010/03/dmca.html)
 - [Github仓库被DMCA Takedown后怎么办](https://linux.cn/article-9374-1.html)
 - [从 Git 仓库中永久删除文件或目录](https://www.jianshu.com/p/d333ab0e6818)
+- [使用git的“核弹级选项”：filter-branch](https://blog.lilydjwg.me/2011/4/22/tried-the-nuclear-option-filter-branch-of-git-the-first-time.26331.html)
