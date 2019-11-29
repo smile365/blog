@@ -7,6 +7,12 @@ draft: true
 description: 
 ---
 
+centos
+
+```bash
+yum -y install go
+```
+
 参考  
 
 - [install](https://golang.google.cn/doc/install)
