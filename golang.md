@@ -11,6 +11,7 @@ centos
 
 ```bash
 yum -y install go
+go version
 ```
 
 参考  
