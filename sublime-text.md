@@ -24,7 +24,7 @@ source ~/.bash_profile
 
 1. `Ctrl+Shift+P`调出面板后输入`Install Package`选中。 
 2. 输入`SublimeTmpl`，选中回车。
-
+3. 安装完插件重新启动Sublime。
 
 配置自定义模板:`Preferences / Packages Settings / SublimeTmpl`
 `settings default`
@@ -44,6 +44,18 @@ source ~/.bash_profile
         "args": {"type": "python"}, "context": [{"key": "sublime_tmpl.python"}]
     }
 ]
+```
+
+`Browse Packages`  
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Date    : ${date}
+# @Author  : ${author} (${email})
+# @Link    : ${link}
+# @Description : 
+
+$0
 ```
 
 
