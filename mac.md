@@ -8,7 +8,7 @@ draft: true
 description:
 ---
 
-安装brew:[brew.sh](https://brew.sh/index_zh-cn)
+[安装brew](https://brew.sh/index_zh-cn)
 
 使用brew镜像
 
