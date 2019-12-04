@@ -10,7 +10,9 @@ description:
 
 1. 手机下载并安装[auto.js](https://hyb1996.github.io/AutoJs-Docs/#/)
 
-2. 电脑端安装[Auto.js-VSCodeExt](https://github.com/hyb1996/Auto.js-VSCode-Extension)
+2. 电脑端安装[Auto.js-VSCodeExt](https://github.com/hyb1996/Auto.js-VSCode-Extension)：
+在VS Code中菜单"查看"->"扩展"->输入"Auto.js"或"hyb1996"搜索，即可看到"Auto.js-VSCodeExt"插件，安装即可。
+
 
 3. 打开一个空白的文件夹，按 `Ctrl+Shift+P` 或点击"查看"->"命令面板"，输入 `Auto.js`可调出命令面板。依次新建项目和启动服务。
 
