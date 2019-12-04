@@ -57,17 +57,24 @@ tail -f /var/log/secure
 # 发现一行Authentication refused: bad ownership or modes for file ～/.ssh/authorized_keys
 ```
 
+若权限不正确，git或者ssh会出现id_rsa are too open错误如下：
+```bash
+Permissions 0644 for  are too open. It is required that your private key files are NOT accessible by others. This private key will be ignored.
+```
+
 说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
 
 修改权限
 
-```shell
+```bash
 chmod og-wx -R ~/.ssh
 chmod og+r -R ~/.ssh
 chmod og-w ~
 ```
 
 再次测试问题解决
+
+
 
 
 **ssh奇技淫巧**
@@ -94,3 +101,4 @@ ssh -L 8080:localhost:8080 sxy@server
 - [ssh服务器添加公钥后仍需要输入密码](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
 - [SSH-Authentication-Refused](https://www.daveperrett.com/articles/2010/09/14/ssh-authentication-refused/)
 - [why-password-prompt-with-ssh-with-public-key](https://unix.stackexchange.com/questions/36540/why-am-i-still-getting-a-password-prompt-with-ssh-with-public-key-authentication)
+- [git id_rsa are too open解决方法](https://www.jianshu.com/p/ac1594058493)
