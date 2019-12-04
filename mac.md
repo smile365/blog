@@ -8,7 +8,11 @@ draft: true
 description:
 ---
 
-brew
+安装brew:[brew.sh](https://brew.sh/index_zh-cn)
+
+使用brew镜像
+
+[Homebrew 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 
 brew-crak
 
