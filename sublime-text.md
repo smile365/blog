@@ -20,8 +20,11 @@ source ~/.bash_profile
 
 安装[Package-Control](https://packagecontrol.io/installation#st3) 
 
-
 安装[SublimeTmpl](https://github.com/kairyou/SublimeTmpl)
+
+1. `Ctrl+Shift+P`调出面板后输入`Install Package`选中。 
+2. 输入`SublimeTmpl`，选中回车。
+
 
 配置自定义模板:`Preferences / Packages Settings / SublimeTmpl`
 `settings default`
