@@ -9,7 +9,7 @@ description:
 
 
 创建一个别名
-```
+```bash
 # alias 别名
 vim ~/.bash_profile
 # Mac OS命令行下使用SublimeText打开文本文件
