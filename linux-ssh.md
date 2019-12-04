@@ -57,22 +57,30 @@ tail -f /var/log/secure
 # 发现一行Authentication refused: bad ownership or modes for file ～/.ssh/authorized_keys
 ```
 
+
+
+说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
+
 若权限不正确，git或者ssh会出现id_rsa are too open错误如下：
 ```bash
 Permissions 0644 for  are too open. It is required that your private key files are NOT accessible by others. This private key will be ignored.
 ```
 
-说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
+说明：私钥仅能自己读写。公钥其他人只能读。
 
 修改权限
 
 ```bash
-chmod og-wx -R ~/.ssh
-chmod og+r -R ~/.ssh
-chmod og-w ~
+chmod -R og-wxr ~/.ssh
+chmod -R og+r ~/.ssh/*.pub
+chmod -R og+r ~/.ssh/config
+chmod -R og+r ~/.ssh/known_hosts
 ```
 
 再次测试问题解决
+
+
+
 
 
 
