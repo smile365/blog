@@ -43,8 +43,6 @@ git log --stat -S "IntelliJ"
 git push origin master --force
 ```
 
-然后提交到仓库就行。
-
 记得回复邮件，否则还是会被禁！
 
 
