@@ -39,7 +39,8 @@ git clone  git://github.com/smile365/blog.git
 git filter-branch --tree-filter 'rm -rf IntelliJ-IDEA.md' HEAD
 # 确认是否删除
 git log --stat -S "IntelliJ"
-
+#向仓库强制推送所有的变化
+git push origin master --force
 ```
 
 然后提交到仓库就行。
