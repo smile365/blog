@@ -8,3 +8,7 @@ tags:
 description: 
 ---
 
+下载[nodejs](https://nodejs.org/zh-cn/download/)并安装
+
+配置[npm镜像](https://npm.taobao.org/)
+
