@@ -87,6 +87,22 @@ nginx -t
 nginx -s reload
 ```
 
+### 6. 自动更新
+
+因增nginx加了rewrite强制http跳转到https,acme.sh的自动更新证书无法通过http验证，所以会失败。可以写成一个脚本或用下面的命令。
+
+```bash
+yum -y install socat
+nginx -s stop
+acme.sh --issue -d sxy91.com --standalone -d www.sxy91.com
+
+acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
+        --key-file   /etc/nginx/ssl/sxy91.key \
+        --fullchain-file /etc/nginx/ssl/sxy91.cer \
+        --reloadcmd  "nginx -s start"
+```
+
+
 **参考**  
 
 - [acme客户端](https://letsencrypt.org/docs/client-options/)
