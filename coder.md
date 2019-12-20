@@ -9,6 +9,7 @@ categories: ["code"]
 
 站点收藏  
 
+- [逐行剖析 Vue.js 源码](https://nlrx-wjc.github.io/Learn-Vue-Source-Code/)
 - [Patrick McKenzie](https://www.kalzumeus.com/greatest-hits/)
 - [如何使用GitHub-issue作为博客后端](https://github.com/jwenjian/ghiblog)
 - [微信历史文章](https://www.ershicimi.com/)
