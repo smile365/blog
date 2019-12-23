@@ -47,11 +47,11 @@ description:
 
 “你丫吹了半天牛B，还是没说怎么学啊”
 
-呵呵，我也没啥特别的办法，只是推荐几本好书。推荐的书，得按先后顺序看。别第一本没看完，就急着上第二本，并不是每次“穿越”都能成功的。[书的相关资源点击这里](https://sxy91.com/posts/javascript-books/)
+呵呵，我也没啥特别的办法，只是推荐几本好书。推荐的书，得按先后顺序看。别第一本没看完，就急着上第二本，并不是每次“穿越”都能成功的。
 
 **第一阶段：**《JavaScript DOM编程艺术》
 
-看这本书之前，请先确认您对Javascript有个基本的了解，应该知道if/else之类的语法，如果不懂，先去看看我第二阶段推荐的Javascript高级程序设计的前三章，记住看三章就别往下看了，回到《JavaScript DOM编程艺术》这本书上来。
+看这本书之前，请先确认您对Javascript有个基本的了解，应该知道if/else之类的语法，如果不懂，先去看看我第二阶段推荐的Javascript高级程序设计的前三章，记住看三章就别往下看了，回到《JavaScript DOM编程艺术》这本书上来。 [下载地址](https://sxy91.com/posts/javascript-books/)
 
 学习Javascript用《JavaScript DOM编程艺术》来入门最好不过了，老老实实看两遍，看完了你就会对JS有一个大概的了解，整本书都围绕着一个网页效果例子展开，你跟着老老实实敲一篇，敲完之后，你会发现这个效果不是常在网页中看到么，发现自己也能做出来网上的效果了，嘿嘿，小有成就感吧。
 
@@ -87,9 +87,7 @@ description:
 
 《JavaScript设计模式》主要讲Javascript的设计模式，说实话，翻译的质量很一般，有些生硬，但已经基本不影响你的学习，看代码完全可以理解出自己的意思。
 
-这两本书出来一段时间了，可能买不着了，提供下载地址
-《JavaScript DOM高级程序设计》下载地址，注意有三部分需要下载
-《JavaScript设计模式》下载地址
+这两本书出来一段时间了，可能买不着了。[提供下载地址](https://sxy91.com/posts/javascript-books/)
 
 **最后想说的**
 
@@ -97,5 +95,6 @@ description:
 - 任何工作都需要多种技能，别忽略了html,css等其他知识的学习。
 
 
-ps:文中出现的书籍资源整理在。[点这里](https://sxy91.com/posts/javascript-books/)
+
+ps:[书单在这里](https://sxy91.com/posts/javascript-books/)
 
