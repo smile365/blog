@@ -1,10 +1,9 @@
 ---
-title:  JavaScript-books
+title:  JavaScript进阶性学习该看哪些书
 heading: 
 date: 2019-12-23T07:04:49.748Z
-categories: ["life"]
-draft: true
-tags: 
+categories: ["code"]
+tags: ["JavaScript"]
 description: 
 ---
 
