@@ -1,10 +1,10 @@
 ---
 title:  如何循序渐进地学习JavaScript
-heading: 如何循序渐进/有效/系统/正确地学习JavaScript指南教程方法-超毛
+heading: 如何循序渐进/有效/系统/正确地学习前端JavaScript指南教程方法-超毛
 date: 2019-12-23T05:29:27.069Z
 categories: ["code"]
 draft: true
-tags: ["JavaScript","超毛"]
+tags: ["JavaScript","超毛","前端"]
 description: 
 ---
 
