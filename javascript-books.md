@@ -7,6 +7,7 @@ tags: ["JavaScript"]
 description: 
 ---
 
+前端JavaScript电子书。学习过程请参考[如何循序渐进地学习JavaScript](https://sxy91.com/posts/how-to-learn-javascript/)
 
 |封面|阶段|书名|电子版|纸质版|
 --------|------|------|------|------
