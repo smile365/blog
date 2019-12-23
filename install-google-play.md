@@ -1,41 +1,18 @@
 ---
-title: 通过命令安装Shadowsocks Server并安装Google play
-tags: ["Shadowsocks"]
+title: Android安装google play服务
+heading: 必须更新google play服务 shadowsocks
+tags: ["Shadowsocks","google play"]
 date: 2018-06-01
 categories: ["code"]
 ---
 
-
-根据你的服务器系统选择不同的版本安装[shadowsocks-libev](https://github.com/shadowsocks/shadowsocks-libev#install-from-repository)
-
-Debian 9 (Stretch) 的安装命令如下：
-```shell?linenums
-sh -c 'printf "deb http://deb.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/stretch-backports.list'
-apt update
-apt -t stretch-backports install shadowsocks-libev
-```
-
-配置：
-nano /etc/shadowsocks-libev/config.json
-```json
-{
-    "server":"127.0.0.1",
-    "server_port":8388,
-    "local_port":1080,
-    "password":"xxxxx",
-    "timeout":60,
-    "method":"chacha20-ietf-poly1305"
-}
-```
-
-启动
-systemctl start shadowsocks-libev  
+如果安装完ss提示：必须更新google play。则用老版本更新google play试试。
 
 
-然后安装客户端
+若需要安装google play客户端
 
 
-经翻墙成功后，如果是安卓手机推荐安装谷歌play，可以通过谷歌搜索[谷歌服务安装](https://www.google.com/search?newwindow=1&ei=srkfW_mpJ-au0gL39YiQDw&q=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85)找到符合自己手机的安装的教程。其实就是安装一套谷歌服务框架，不同手机的安装方法不同。大部分手机可以通过下载一个名叫[谷歌安装器](http://www.wandoujia.com/apps-com.ericxiang.googleinstaller)的app进行安装。
+可以通过谷歌搜索[谷歌服务安装](https://www.google.com/search?newwindow=1&ei=srkfW_mpJ-au0gL39YiQDw&q=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%E5%AE%89%E8%A3%85)找到符合自己手机的安装的教程。其实就是安装一套谷歌服务框架，不同手机的安装方法不同。大部分手机可以通过下载一个名叫[谷歌安装器](http://www.wandoujia.com/apps-com.ericxiang.googleinstaller)的app进行安装。
 
 ![使用安装器安装谷歌框架](https://i.loli.net/2018/07/04/5b3cb2558ee8a.jpg)
 祝你玩的愉快！
