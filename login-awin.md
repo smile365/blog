@@ -7,7 +7,12 @@ draft: true
 description: 
 ---
 
+联盟/广告主/推客
+
 awin invitation code 邀请码
+awin invitation code 2020
+
+注册指南参考[Awin_Publisher_Sign_up_Guide](https://wiki.awin.com/index.php/File:Awin_Publisher_Sign_up_Guide_(CN).pdf)
 
 总部位于英国
 
@@ -27,3 +32,12 @@ awin invitation code 邀请码
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1577238850670.png)
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1577239141002.png)
+
+My article on zhihu.com had 500,000 views, and then I created my own personal blog sxy91.com. I am a software engineer.
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1577240481174.png)
+
+这一步需要谷歌的验证码。需要梯子。
+
+
+支付 需要一张 支持visa的信用卡。
