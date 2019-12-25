@@ -19,7 +19,7 @@ awin invitation code 2020
 
 注册指南参考[Awin_Publisher_Sign_up_Guide](https://wiki.awin.com/index.php/File:Awin_Publisher_Sign_up_Guide_(CN).pdf)
 
-总部位于英国
+总部位于英国。收购了Shareasale。Shareasale仍然独立运行，有独立的账号。
 
 英国/欧美市场/
 要集中在英国和欧盟商人。
