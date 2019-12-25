@@ -24,6 +24,8 @@ awin invitation code 2020
 英国/欧美市场/
 要集中在英国和欧盟商人。
 
+英国版支付宝：https://www.payoneer.com/
+
 综合性介绍，参考[Awin联盟-又一国外广告联盟巨头](https://minghao88.com/awin%E8%81%94%E7%9B%9F)
 
 回答问题 知乎[Awin 教程？](https://www.zhihu.com/question/276895138)
