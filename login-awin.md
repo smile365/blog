@@ -7,6 +7,11 @@ draft: true
 description: 
 ---
 
+准备：
+- 一张visa的信用卡
+- 能上外网的梯子(谷歌验证码)
+
+
 联盟/广告主/推客
 
 awin invitation code 邀请码
