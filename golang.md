@@ -15,6 +15,13 @@ go version
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
+mac
+
+[下载golang安装包](https://golang.org/dl/),或者使用brew
+```bash
+brew install go
+```
+
 参考  
 
 - [install](https://golang.google.cn/doc/install)
