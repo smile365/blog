@@ -70,3 +70,4 @@ git
 参考
 - [给alias的命令传递自定义参数](https://blog.csdn.net/zhangxinrun/article/details/5709940)
 - [在终端中使用sublime](https://www.jianshu.com/p/592a5ede266f)
+- [中科大brew镜像](https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git)
