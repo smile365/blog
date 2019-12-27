@@ -10,11 +10,22 @@ description:
 
 [安装brew](https://brew.sh/index_zh-cn)
 
-使用brew镜像
+用来安装非gui程序。
 
-[Homebrew 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-brew-crak
+
+安装[Homebrew Cask](https://github.com/Homebrew/homebrew-cask)
+
+用来安装gui程序。
+> 安装完最新版Homebrew自带Homebrew Cask
+
+使用[Homebrew镜像](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
+
+
+
 
 python3
 
