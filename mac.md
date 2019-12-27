@@ -20,7 +20,18 @@ description:
 安装[Homebrew Cask](https://github.com/Homebrew/homebrew-cask)
 
 用来安装gui程序。
-> 安装完最新版Homebrew自带Homebrew Cask
+> 安装完最新版Homebrew自带Homebrew Cask，或者执行`brew cask`命令自动安装
+
+测试
+
+```bash
+brew -v
+
+#显示如下
+#Homebrew 2.2.2
+#Homebrew/homebrew-core (git revision c78f; last commit 2019-12-26)
+#Homebrew/homebrew-cask (git revision 7d57; last commit 2019-12-27)
+```
 
 使用[Homebrew镜像](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)
 
