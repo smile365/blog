@@ -1,9 +1,8 @@
 ---
-title:毕设代做
+title: 毕设代做
 heading: 买毕到毕业设计代做平台
 date: 2019-12-31T06:40:13.646Z
 categories: ["other"]
-draft: true
 tags: ["毕设"]
 description: 
 ---
