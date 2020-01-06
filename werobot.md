@@ -21,9 +21,10 @@ pip install werobot cryptography bottle
 
 - 登录公众号-->开发-->基本配置-->启用
 - 配置好AppID、AppSecret、IP白名单并记录下AppSecret
+
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1578292719110.png)
 
-**nginx配置**
+**nginx反向代理配置**
 ```nginxconf
     location /wechat/ {
             proxy_pass_header Server;
