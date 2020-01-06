@@ -13,22 +13,11 @@ description:
 截止目前我用过以下vps：
 
 ```
-搬瓦工、vultr、Linode、virmach、hostflyte、hosteons
+搬瓦工、vultr、Linode、virmach、hosteons、hostflyte、hostdare、tripodcloud、profitserver、itldc、cloudcone、hostwinds、vultr、hostodo、anynode
 ```
 
-体验下来价格差不多如下
 
-|  内存   |  月付($)   |  年付(¥) | 备注
-| --- | --- |--- |--- |--- |
-| 256M |$ 1~2 | 一般没有 | 低配
-| 512M | $ 2~3 | ¥ | 中配
-| 1G  | $ 3~5  | ¥  | 高配
+购买vps一般需要注意： 内存/带宽/流量/价格/地区/线路/CPU/SSD
 
+总体来说一分价钱一分货，就看你的需求想把钱花在什么方面。想短时间使用就选virmach,想网速快就选hostflyte、想不限流量就选hosteons。
 
-virmach
-
-virmach的优势是支持月付，且有超低配192M版本，比较适合短时间使用。
-
-coresite只有年付，但是价格是最便宜的。512M的中配版只要$14.4一年。折算下来就100人民币。
-
-提供商 内存 月付最低 年付最低 
