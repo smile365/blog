@@ -60,6 +60,11 @@ app.run(port=8091)
 **服务器配置**
 
 - 开发-->基本配置-->修改配置
-- 填写好
+- 填写好代码里的：URL、Token、EncodingAESKey后点击启用
+
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1578292762126.png)
+
+
+关注公众号测试。
+
