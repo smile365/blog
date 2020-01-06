@@ -19,5 +19,11 @@ description:
 
 购买vps一般需要注意： 内存/带宽/流量/价格/地区/线路/CPU/SSD
 
-总体来说一分价钱一分货，就看你的需求想把钱花在什么方面。想短时间使用就选virmach,想网速快就选hostflyte、想不限流量就选hosteons。
+总体来说一分价钱一分货，就看你的需求想把钱花在什么方面。想短时间使用就选virmach,想网速快就选hostflyte、想不限流量就选itldc、hosteons、profitserver
+
+月付推荐(短时间/急用)
+
+年付推荐(按年使用)
+
+不限流量推荐(按年使用，天天看视频)
 
