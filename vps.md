@@ -2,7 +2,7 @@
 title:  
 heading: 
 date: 2020-01-06T09:13:41.782Z
-categories: ["life"]
+categories: ["code"]
 draft: true
 tags: 
 description: 
