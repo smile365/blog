@@ -18,6 +18,12 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 安装epel源：`yum -y install epel-release`
 安装python3：`yum -y install python34`
 
+>若出现“Error: Cannot retrieve metalink for repository: epel. Please verify its path and try again” 错误，可运行如下命令。
+
+```bash
+sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
+```
+
 配置pip的镜像`mkdir -p ~/.config/pip & vi ~/.config/pip/pip.conf`
 ```ini
 [global]
