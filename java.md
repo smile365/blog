@@ -34,7 +34,16 @@ brew install java11
 安装maven之前需要安装java
 
 ```bash
+# 检测java是否安装
+java -version
+# 安装maven
 brew install maven
+# 检测maven是否安装成功
+mvn -version
 ```
+
+
+
+docker run --name mariadb -p 6306:3306 -e MYSQL_ROOT_PASSWORD=mydb2020 -d  mariadb
 
 
