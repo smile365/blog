@@ -42,8 +42,6 @@ brew install maven
 mvn -version
 ```
 
-
-
-docker run --name mariadb -p 6306:3306 -e MYSQL_ROOT_PASSWORD=mydb2020 -d  mariadb
+docker run --name mariadb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=yourpass -d  mariadb
 
 
