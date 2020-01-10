@@ -40,8 +40,34 @@ java -version
 brew install maven
 # 检测maven是否安装成功
 mvn -version
+# 安装npm
+brew install npm
+npm -v
+# 使用淘宝的npm镜像
+npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
+> [淘宝npm镜像使用说明](https://npm.taobao.org/)
+
+
+```安装mysql
 docker run --name mariadb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=yourpass -d  mariadb
+```
+
+配置
+
+[安装Lombok](https://github.com/mplushnikov/lombok-intellij-plugin)
+
+- Preferences > Settings > Plugins > Search for "lombok" > Install Plugin
+- restart idea
+
+修改linjiashop-admin-api/src/main/resources/logback.xml下的日志路径
+
+右键`cn.enilu.flash.api.AdminApiApplication`启动后端api
 
 
+```启动后端web
+cnpm install
+
+cnpm run dev
+```
