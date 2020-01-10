@@ -1,5 +1,5 @@
 ---
-title:  
+title: mac安装java8
 heading: jdk-8u212-macosx-x64.dmg 下载
 date: 2020-01-10T03:10:28.254Z
 categories: ["life"]
