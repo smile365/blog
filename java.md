@@ -29,7 +29,7 @@ brew info java
 brew install java11
 ```
 
-> 注：brew安装的版本为oracle发行的openjdk版本，与商业版oracle-jdk有所不同。open版本不提供商业支持及维护。
+> 注：brew安装的版本为oracle发行的openjdk版本，与商业版oracle-jdk有所不同。open版本不提供安全更新和漏洞修复支持。
 
 安装maven之前需要安装java
 
