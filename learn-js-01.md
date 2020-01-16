@@ -41,22 +41,43 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 <html>
     <head>
        <title>我的第一个网页</title> 
+       <script>
+        console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我"); 
+    </script>
     </head>
     <meta charset="utf-8">
     <body>
         <h1>我的第一个标题</h1>
         <p>我的第一个段落。</p>
     </body>
-    
-    <script>
-            console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我"); //打印日志
-            // document.body.innerText = "你好呀 JavaScript"; // “//”代表注释，取消注释保存后，重新刷新浏览器看看效果
-    </script>
+</html>
+
+```
+保存后，重新刷新网页看看效果
+
+方式2，点file-->new file，内容如下
+
+```javascript
+// "//" 可以注释单行
+// script 放到最后，等待网页加载完毕再运行JavaScript，这样对用户更好。
+document.body.innerText = "你好呀 JavaScript"; 
+```
+保存，文件为`01.js`。然后在index.html里引入此文件，修改index.html如下：
+```html
+<html>
+    <head>
+       <title>我的第一个网页</title> 
+    </head>
+    <meta charset="utf-8">
+    <body>
+        <h1>我的第一个标题</h1>
+        <p>我的第一个段落。</p>
+    </body>
+    <script src="01.js"></script>
 </html>
 ```
 
 
-方式2，点file-->new file
 
 
 
