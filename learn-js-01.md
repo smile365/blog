@@ -32,13 +32,18 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 </body>
 </html>
 ```
-点击保存为文件`index.html`,双击打开看看效果。（ps：或者拖动到chrome浏览器）
-
+点击保存为文件`index.html`,右键选择`Reveal in Finder`或者`Reveal in Explorer`, 然后双击打开看看效果。（ps：或者拖动到chrome浏览器）
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1579144507595.png)
 
 ### 3 把JavaScript代码放到网页里
 
 接下来如何把JavaScript放到index.html里呢，有两种方式
 
 方式1:
+
+
+
+
+
 
 
