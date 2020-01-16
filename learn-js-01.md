@@ -79,7 +79,7 @@ document.body.innerText = "你好呀 JavaScript";
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1579148312686.png)
 
-接下来把这本书[《JavaScript DOM编程艺术》](https://sxy91.com/posts/javascript-books/)里的代码敲一遍吧，敲完你的js功力基本就算入门了。
+接下来把这本书[《JavaScript DOM编程艺术》](https://sxy91.com/posts/javascript-books/)里的代码敲一遍吧，敲完你就能做一个个人网页了。快行动吧，**切记要一行一行敲一遍，且运行正确**。
 
 
 
