@@ -12,7 +12,7 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 
 浏览器地址栏访问的是网页，因此JavaScript需要放到网页里。
 
-新建一个文件夹`day1`，用vscode打开此文件夹，点击new file里面的内容如下:
+新建一个文件夹`day1`，用vscode打开此文件夹，点击`new file`,内容如下:
 ```html
 <html>
 <body>
