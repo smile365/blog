@@ -41,7 +41,7 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
     <head>
        <title>我的第一个网页</title> 
        <script>
-        console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我"); //打印日志
+        console.log("这里是JavaScript代码，用chrome打开，按f12，点击Console即可看到我"); //打印日志
     </script>
     </head>
     <meta charset="utf-8">
