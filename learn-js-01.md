@@ -1,6 +1,6 @@
 ---
-title: JavaScript新手入门第1课 
-heading: 
+title:  写给女朋友看的JavaScript学习教程
+heading: JavaScript新手入门第1课
 date: 2020-01-16T02:29:49.898Z
 categories: ["code"]
 tags: 
