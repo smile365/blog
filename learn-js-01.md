@@ -40,21 +40,23 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 ```html
 <html>
     <head>
-        <script>
-            console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我");
-        </script>
+       <title>我的第一个网页</title> 
     </head>
     <meta charset="utf-8">
-    <title>我的第一个网页</title>
     <body>
         <h1>我的第一个标题</h1>
         <p>我的第一个段落。</p>
     </body>
+    
+    <script>
+            console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我"); //打印日志
+            // document.body.innerText = "你好呀 JavaScript"; // “//”代表注释，取消注释保存后，重新刷新浏览器看看效果
+    </script>
 </html>
 ```
 
 
-
+方式2，点file-->new file
 
 
 
