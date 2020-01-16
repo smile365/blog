@@ -23,13 +23,11 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 在电脑本地硬盘任意位置，右键新建一个文件夹`day1`，用vscode打开此文件夹，点击`new file`,内容如下:
 ```html
 <html>
-<body>
-
-<h1>我的第一个标题</h1>
-
-<p>我的第一个段落。</p>
-
-</body>
+    <title>我的第一个网页</title>
+    <body>
+        <h1>我的第一个标题</h1>
+        <p>我的第一个段落。</p>
+    </body>
 </html>
 ```
 点击保存为文件`index.html`,右键选择`Reveal in Finder`或者`Reveal in Explorer`, 然后双击打开看看效果。（ps：或者拖动到chrome浏览器）
@@ -39,7 +37,22 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 
 接下来如何把JavaScript放到index.html里呢，有两种方式
 
-方式1:
+方式1，直接写到index.html里，代码如下:
+```html
+<html>
+    <head>
+        <script>
+            console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我");
+        </script>
+    </head>
+    <meta charset="utf-8">
+    <title>我的第一个网页</title>
+    <body>
+        <h1>我的第一个标题</h1>
+        <p>我的第一个段落。</p>
+    </body>
+</html>
+```
 
 
 
