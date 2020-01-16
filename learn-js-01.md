@@ -41,7 +41,7 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
     <head>
        <title>我的第一个网页</title> 
        <script>
-        console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我"); 
+        console.log("这里是JavaScript代码，用chrome打开，按f12，点击console即可看到我"); //打印日志
     </script>
     </head>
     <meta charset="utf-8">
@@ -57,9 +57,9 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 方式2，点file-->new file，内容如下
 
 ```javascript
+document.body.innerText = "你好呀 JavaScript"; 
 // "//" 可以注释单行
 // script 放到最后，等待网页加载完毕再运行JavaScript，这样对用户更好。
-document.body.innerText = "你好呀 JavaScript"; 
 ```
 保存，文件为`01.js`。然后在index.html里引入此文件，修改index.html如下：
 ```html
