@@ -3,7 +3,7 @@ title:  写给女朋友看的JavaScript学习教程
 heading: JavaScript新手入门第1课
 date: 2020-01-16T02:29:49.898Z
 categories: ["code"]
-tags: 
+tags: ["如何学习js","js新手教程","如何学习JavaScript"]
 description: 
 ---
 
