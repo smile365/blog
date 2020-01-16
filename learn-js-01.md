@@ -76,6 +76,9 @@ document.body.innerText = "你好呀 JavaScript";
     <script src="01.js"></script>
 </html>
 ```
+保存后重新刷新网页，看看发生了什么？如果整个页面显示`你好呀 JavaScript`，那么恭喜你，你成功了。
+
+
 
 
 
