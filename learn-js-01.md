@@ -2,8 +2,7 @@
 title: JavaScript新手入门第1课 
 heading: 
 date: 2020-01-16T02:29:49.898Z
-categories: ["life"]
-draft: true
+categories: ["code"]
 tags: 
 description: 
 ---
