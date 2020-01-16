@@ -77,6 +77,7 @@ document.body.innerText = "你好呀 JavaScript";
 ```
 保存后重新刷新网页，看看发生了什么？如果整个页面内容显示成`你好呀 JavaScript`，那么恭喜你，你成功了!
 
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1579148312686.png)
 
 接下来把这本书[《JavaScript DOM编程艺术》](https://sxy91.com/posts/javascript-books/)里的代码敲一遍吧，敲完你的js功力基本就算入门了。
 
