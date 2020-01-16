@@ -8,11 +8,17 @@ tags:
 description: 
 ---
 
+### 1 下载所需工具
+- [chrome](https://pc.qq.com/detail/1/detail_2661.html)，谷歌开发的一款浏览器。
+- [vscode](https://code.visualstudio.com/download)，微软开发的一款写代码的工具。
+
+
+
 JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 
 浏览器地址栏访问的是网页，因此JavaScript需要放到网页里。
 
-### 因此第1步,先创建1个网页
+### 2 先创建1个网页
 
 在电脑本地硬盘任意位置，右键新建一个文件夹`day1`，用vscode打开此文件夹，点击`new file`,内容如下:
 ```html
@@ -26,10 +32,10 @@ JavaScript代码需要浏览器来运行，用来控制网页的各种行为。
 </body>
 </html>
 ```
-点击保存为文件`index.html`,然后用浏览器打开看看效果。
+点击保存为文件`index.html`,双击打开看看效果。（ps：或者拖动到chrome浏览器）
 
 
-### 因此第2步,把JavaScript代码放到网页里
+### 3 把JavaScript代码放到网页里
 
 接下来如何把JavaScript放到index.html里呢，有两种方式
 
