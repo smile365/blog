@@ -2,7 +2,6 @@
 title:  宋学彦的个人简历
 heading:
 date: 2019-12-29T14:40:26.987Z
-draft: true
 categories: ["code"]
 tags: 
 description: 
