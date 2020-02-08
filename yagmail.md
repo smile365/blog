@@ -26,8 +26,8 @@ body = '''
 高性能JavaScript_编程.pdf
 JavaScript_DOM编程艺术_第2版.pdf
 JavaScript高级程序设计_第3版.pdf
-JavaScript高级程序设计（第3版）】中文 高清 完整 详细书签版.pdf
-JavaScript语言精粹（修订版）.pdf
+JavaScript高级程序设计_第3版.pdf
+JavaScript语言精粹.pdf
 
 更多技术相关文章可以到我的博客查看，<a href="https://sxy91.com/">宋洋葱的博客</a>
 
