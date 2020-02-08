@@ -35,8 +35,5 @@ description:
 ![下课了](https://gitee.com/smile365/blogimg/raw/master/sxy91/1581132295732.png)
 
 
-
-参考  
-
 - [auto.js](https://github.com/hyb1996/Auto.js)
 
