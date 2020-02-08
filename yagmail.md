@@ -45,3 +45,5 @@ to = 'sxy9103@qq.com'
 send_email(to)
 ```
 
+
+> ps：附件太大会发送失败。
