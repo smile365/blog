@@ -2,8 +2,7 @@
 title:  yagmail使用教程
 heading: python发送邮件yagmail使用教程
 date: 2020-02-08T02:25:35.614Z
-categories: ["life"]
-draft: true
+categories: ["code"]
 tags: 
 description: 
 ---
