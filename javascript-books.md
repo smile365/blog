@@ -12,7 +12,7 @@ description:
 下面是我学习前端过程中精选出比较好的参考书籍，可以收藏一下，作为学习的指引。
 
 |封面|阶段|书名|
---------|------|------|------|------
+--------|------|------|
 |![JavaScript DOM编程艺术](https://gitee.com/smile365/blogimg/raw/master/sxy91/1577087288354.png)|第一阶段|《JavaScript DOM编程艺术》| 
 |![JavaScript高级程序设计](https://gitee.com/smile365/blogimg/raw/master/sxy91/1577087248874.png)|第二阶段|《JavaScript高级程序设计》| 
 |![JavaScript语言精粹](https://gitee.com/smile365/blogimg/raw/master/sxy91/1577087212121.png)|第三阶段|《JavaScript语言精粹》|
