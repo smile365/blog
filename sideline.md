@@ -3,7 +3,6 @@ title:  交了5000元智商税后，在副业上我学会了什么
 heading: 
 date: 2020-02-10T09:28:17.204Z
 categories: ["life"]
-draft: true
 tags: 
 description: 
 ---
