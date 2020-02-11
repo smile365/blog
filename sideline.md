@@ -7,8 +7,7 @@ tags:
 description: 
 ---
 
-
-参考文章：[我差点删了这篇文章](https://mp.weixin.qq.com/s/OzDgCLe9oRxqRNHbl2khDA)
+![题图： Bess Hamiti](https://gitee.com/smile365/blogimg/raw/master/sxy91/1581391960460.png)
 
 
 ## 想学一项技能，顺便赚点钱。而不是想挣钱，所以到网上去学如何挣钱。
