@@ -30,10 +30,11 @@ description:
 
 
 
+> ps：微信搜索公众号「**下课了**」，回复「autojs」获取以下源码：
+> - 微博自动关注/点赞/评论源码
+> - 微信自动群发/删除死粉源码
 
-> ps：打算出一套autojs教程，有需要的同学关注一下我的公众号[「下课了」](https://mp.weixin.qq.com/s/Cw1Pjc4sR-xVF4uPlp541w)。有什么关于autojs的疑问也可以在公众号提问，一般当天都会收到回答。
-![下课了](https://gitee.com/smile365/blogimg/raw/master/sxy91/1581132295732.png)
-
+**参考文章**
 
 - [auto.js](https://github.com/hyb1996/Auto.js)
 
