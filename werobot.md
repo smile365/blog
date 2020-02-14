@@ -43,9 +43,6 @@ pip install werobot cryptography bottle
 # @Author  : songxueyan (sxy9103@gmail.com)
 # @Link    : https://sxy91.com
 
-#登录公众号-->开发-->基本配置-->启用 记录AppID和AppSecret
-# 服务器配置 --> 修改配置
-
 from werobot import WeRoBot
 import re
 #from entity import save,update,query
