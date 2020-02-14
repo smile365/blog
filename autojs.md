@@ -3,7 +3,7 @@ title:  autojs使用教程
 date: 2019-07-08T01:28:44.819Z
 tags: ["autojs输入文字","anto js 切换应用","	auto.js 运行日志","autojs布局分析的使用方法"]
 categories: ["code"]
-description: 
+description:  如何用autojs控制新浪微博和微信，自动点赞评论。
 ---
 
 
