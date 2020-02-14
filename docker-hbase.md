@@ -81,6 +81,7 @@ for k, data in table.scan():
 
 ```
 
+> ps: 微信搜索公众号「**下课了**」，回复「**it**」，进入it微信群，有问题可提问，还能和it大佬一起学习交流。
 
 参考  
 - [SSH LocalForward](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
