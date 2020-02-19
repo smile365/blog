@@ -1,12 +1,9 @@
 ---
 title:  使用docker快速体验hbase
 date: 2019-04-15T08:10:30.889Z
-tags:
- - docker
- - hbase
-categories:
- - code
-description:
+tags: ["docker run hbase"]
+categories: ["code"]
+description: 
 ---
 
 学习大数据相关技术的时候往往离不开hbase，用docker快速运行hbase是一个不错的选择。
