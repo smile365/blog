@@ -33,8 +33,8 @@ autojs是在中山大学的hyb1996开发的一款手机辅助软件。
 
 **学习资料**  
 
-> ps：微信搜索公众号「**下课了**」，回复「autojs」进入开发交流群，一起学习autojs，有疑问可在群里提问。
-![xiakele99](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582087774482.png)
+> ps：微信搜索公众号「**下课了**」，回复「autojs」进入开发交流群，一起学习autojs，有疑问可在群里提问。 
+> ![微信扫一扫](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582087774482.png)
 
 **参考文章**
 
