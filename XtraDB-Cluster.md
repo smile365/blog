@@ -3,8 +3,7 @@ title:  CentOS7安装Percona XtraDB Cluster实现mysql高可用
 date: 2018-09-05T02:51:39.093Z
 tags: ["mysql"]
 categories: ["code"]
-description:
----
+description: Percona XtraDB Cluster with config /etc/sysconfig/mysql.bootstrap
 
 [Percona XtraDB Cluster](https://www.percona.com/doc/percona-xtradb-cluster/5.7/index.html) 是MySQL数据库集群解决方案。具有高可用性，能避免单点故障和数据丢失，并支持线性扩展。
 * 优点：
