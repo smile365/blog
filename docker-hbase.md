@@ -1,5 +1,5 @@
 ---
-title:  使用docker快速体验hbase
+title: 使用docker快速体验hbase
 date: 2019-04-15T08:10:30.889Z
 tags: ["docker run hbase"]
 categories: ["code"]
