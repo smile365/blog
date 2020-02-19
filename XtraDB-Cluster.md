@@ -1,5 +1,5 @@
 ---
-title:  CentOS7安装Percona XtraDB Cluster实现mysql高可用
+title: CentOS7安装Percona XtraDB Cluster实现mysql高可用  
 date: 2018-09-05T02:51:39.093Z
 tags: ["mysql"]
 categories: ["code"]
