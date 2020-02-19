@@ -18,8 +18,7 @@ categories: ["code"]
 ![使用安装器安装谷歌框架](https://i.loli.net/2018/07/04/5b3cb2558ee8a.jpg)
 
 > ps：微信搜索公众号「**下课了**」，回复「ss」微信交流群，有疑问可在群里提问。
-
-![微信扫一扫](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582087774482.png)
+> ![微信扫一扫](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582087774482.png)
 
 **参考**
 - [Google服务框架最新版下载](http://www.ifanr.com/app/693456)
