@@ -2,7 +2,7 @@
 title: virmach教程
 heading: 
 date: 2020-02-20T07:56:16.162Z
-categories: ["life"]
+categories: ["code"]
 draft: true
 description: 
 ---
