@@ -1,10 +1,9 @@
 ---
-title:  virmach教程
+title: virmach.md
 heading: 
 date: 2020-02-20T07:56:16.162Z
 categories: ["life"]
 draft: true
-tags: 
 description: 
 ---
 
@@ -56,4 +55,14 @@ yes
 password
 ```
 
+Error: Cannot retrieve metalink for repository: epel. Please verify its path and try again
 
+参考 [CentOS6.6安装ShadowSocks服务](https://github.com/jeezlee/www.pickerlee.com/wiki/CentOS6.6%E5%AE%89%E8%A3%85ShadowSocks%E6%9C%8D%E5%8A%A1)
+
+```bash
+cat /etc/*-release
+#centos 6.10
+
+yum install -y python-setuptools && easy_install pip
+pip install shadowsocks
+```
