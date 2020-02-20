@@ -38,6 +38,8 @@ Xposed的插件开发请自行搜索，本次主要测试了sqlite、http、sp�
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582171153887.png)
 
 
+> ps：微信搜索公众号「**下课了**」，回复「hook」进入开发交流群，一起学习。有疑问可在群里提问。   
+> ![微信扫一扫](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582087774482.png)
 
 
 参考  
