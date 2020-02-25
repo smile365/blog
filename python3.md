@@ -13,10 +13,10 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 ```
 > 下载超级慢，再开个shell继续下面的步骤
 
-[参考这里](https://github.com/smile365/blog/blob/master/mongo.md)配置centos的镜像源
+[参考这里](https://sxy91.com/posts/mongo/)配置centos的镜像源
 
-安装epel源：`yum -y install epel-release`
-安装python3：`yum -y install python34`
+安装epel源：`yum -y install epel-release`  
+安装python3：`yum -y install python34`  
 
 >若出现“Error: Cannot retrieve metalink for repository: epel. Please verify its path and try again” 错误，可运行如下命令。
 
@@ -33,6 +33,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 下载完get-pip.py后，安装pip：`python3 get-pip.py`
 查看当前pip版本:`pip -V` 
 
+> 打个小广告：微信搜索“下课了”，回复“it”，获取30本开发相关的电子书。
 
 参考
 
