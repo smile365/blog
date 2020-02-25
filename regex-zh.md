@@ -1,9 +1,9 @@
 ---
 title:  python-正则匹配中文日文韩文
 date: 2019-11-06T09:52:57.390Z
-tags: ["正则"]
+tags: ["正则","韩文匹配"]
 categories: ["code"]
-description: 
+description: 正则表达式匹配中日韩文
 ---
 
 UTF-8(Unicode)编码区间如下：
@@ -25,3 +25,6 @@ text = '''
 print(p.findall(text))
 ```
 
+参考文档：
+
+- [最新正则匹配手机号](https://sxy91.com/posts/regex-for-phone-number/)
