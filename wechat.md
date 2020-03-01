@@ -1,10 +1,9 @@
 ---
 title: 微信pc端和移动端多开技术的研究 
 date: 2018-08-10T06:32:54.129Z
-tags: ["多开"]
+tags: ["微信多开"]
 series: ["blog"]
 categories: ["code"]
-draft: true
 description:
 ---
 
@@ -29,6 +28,17 @@ mac 微信记录备份。
 点击微信右键
 
 再创建一个容器
+
+使用adb 备份手机文件
+
+```bash
+mkdir backup
+cd backup
+adb pull /sdcard/DCIM .
+mkdir apks
+cd apks
+for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(adb shell pm path $i | awk -F':' '{print $2}')"; mv base.apk $i.apk 2&> /dev/null ;done
+```
 
 参考  
 - [Mac微信聊天记录备份位置](https://www.zhihu.com/question/50022284/answer/123677875)
