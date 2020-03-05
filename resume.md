@@ -1,5 +1,6 @@
 ---
-title: 宋学彦
+title: sxy91com
+heading: 宋学彦
 date: 2018-01-30
 categories: ["code"]
 
@@ -8,7 +9,7 @@ IT工程师用Markdown语法写简历是什么样子
 <!-- excerpt -->
 ### 基本信息 
 
->手机：13161525202 | 邮箱：sxy9103@qq.com | 博客：[sxy91.com](sxy91.com)
+>手机：xxxxx | 邮箱：sxy9103@qq.com | 博客：[sxy91.com](sxy91.com)
 
 工作经验：4年
 求职意向：java软件工程师                 
