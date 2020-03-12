@@ -62,7 +62,12 @@ SHOW CONTINUOUS QUERIES
 
 table:words
 
-词库使用：[清华大学开放中文词库](http://thuocl.thunlp.org/sendMessage)、[github-中文分词词库整理](https://github.com/fighting41love/funNLP)
+词库使用（清华的质量较高，其余需要筛选）：  
+- [清华大学开放中文词库](http://thuocl.thunlp.org/sendMessage)
+- [github-中文分词词库整理](https://github.com/fighting41love/funNLP)
+- [搜狗词库](https://pinyin.sogou.com/dict/cate/index/)
+
+
 
 使用数据库pg保存关键词列表，可以动态添加/删除(非物理删除)。【id、关键词、词频、词性、是否删除、添加日期、删除日期】，id从1开始自增，关键词建立索引，唯一。
 
