@@ -62,6 +62,8 @@ SHOW CONTINUOUS QUERIES
 
 table:words
 
+词库使用：[清华大学开放中文词库](http://thuocl.thunlp.org/sendMessage)、[github-中文分词词库整理](https://github.com/fighting41love/funNLP)
+
 使用数据库pg保存关键词列表，可以动态添加/删除(非物理删除)。【id、关键词、词频、词性、是否删除、添加日期、删除日期】，id从1开始自增，关键词建立索引，唯一。
 
 后台提供web管理界面，有变化时，往key:words添加变化。一个定时任务，定期检测并同步变化。
