@@ -29,3 +29,35 @@ time,tags(word/source1/source2/mood/category),values(amount,rank)
 
 select time,word,source1,sum(amount),sum(rank) from table_1h where word = 'a' and time > now() - -8h group by word,source1;
 
+保留策略
+非聚合的，保留24h，默认。表：wordcount
+聚合成按小时，保留24小时。表：wordcount_1h
+聚合成按天的，保留365天。表：wordcount_1d
+
+
+即三个MEASUREMENTS，两个保留策略。
+```sql
+create database "indexsystem";
+use "indexsystem";
+CREATE RETENTION POLICY "rp24h" ON "indexsystem" DURATION 1w REPLICATION 1 DEFAULT;
+CREATE RETENTION POLICY "rp365d" ON "indexsystem" DURATION 365d REPLICATION 1
+
+-- 连续查询（CQ）聚合1小时的数据,使用默认RP
+CREATE CONTINUOUS QUERY "cq_wordcount_1h" ON "indexsystem"
+BEGIN
+  SELECT sum(*) INTO "wordcount_1h" FROM "wordcount" GROUP BY *,time(1h) tz('Asia/Shanghai')
+END
+
+-- CQ连续查询 聚合1天的数据，使用名为rp365d的RP
+CREATE CONTINUOUS QUERY "cq_wordcount_1d" ON "indexsystem"
+BEGIN
+  SELECT sum(*) INTO "rp365d"."wordcount_1d" FROM "wordcount_1h" GROUP BY *,time(1d) tz('Asia/Shanghai')
+END
+
+-- 查看连续查询
+SHOW CONTINUOUS QUERIES
+```
+
+
+
+
