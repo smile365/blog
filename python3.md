@@ -6,6 +6,8 @@ categories: ["code"]
 description: 
 ---
 
+推荐使用[minicoda](https://www.sxy91.com/posts/miniconda/)，安装更快，更便捷。
+
 下载get-pip:
 ```shell
 curl -O https://bootstrap.pypa.io/get-pip.py
