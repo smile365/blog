@@ -6,11 +6,15 @@ tags:
 categories: ["code"] 
 ---
 
-根据操作系统下载安装脚本:[miniconda](https://docs.conda.io/en/latest/miniconda.html)，centos操作如下：
+Miniconda 安装包可以到  下载。
+
+根据操作系统下载安装脚本:[miniconda](https://docs.conda.io/en/latest/miniconda.html)，[清华镜像下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)。
+
+centos操作如下：  
 ```shell
 mkdir /opt/conda
 chmod ugo+w /opt/conda
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3*.sh
 ./Miniconda3*.sh
 # 1.同意协议
