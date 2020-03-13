@@ -1,14 +1,14 @@
 ---
-title:  使用Miniconda管理多个Python环境
+title:  使用Miniconda创建多个python虚拟环境
+heading: python虚拟环境
 date: 2018-08-20T03:32:41.354Z
-tags: 
- - conda
+tags: ["Miniconda教程","python虚拟环境"]
 categories: ["code"] 
 ---
 
-Miniconda 安装包可以到  下载。
+Miniconda比conda小，安装更快。使用miniconda可创建多个互不影响的python虚拟运行环境，且自带pip。
 
-根据操作系统下载安装脚本:[miniconda](https://docs.conda.io/en/latest/miniconda.html)，[清华镜像下载](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)。
+根据操作系统到[官网miniconda](https://docs.conda.io/en/latest/miniconda.html)下载安装脚本，推荐到[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)下载。
 
 centos操作如下：  
 ```shell
