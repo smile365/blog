@@ -1,0 +1,65 @@
+---
+title:  seafile
+heading: 
+date: 2020-03-17T03:32:47.442Z
+categories: ["life"]
+draft: true
+tags: 
+description: 
+---
+
+官网：seafile.com
+
+**目录说明**
+
+- conf： 配置文件
+- seafile-server：服务器端运行脚本
+- seafile-server/seafile.sh： 服务端启动停止
+- seafile-server/seahub.sh： web端启动停止
+- logs：日志目录（出问题请先检查日志）
+
+
+
+**数据库**为mysql:5.7
+数据库用户和密码请参考seafile/conf下的`ccnet.conf`、 `seafdav.conf`、`seafile.conf`、`seahub_settings.py`
+- ccnet-db: 包含用户和群组信息
+- seafile-db: 包含资料库元数据信息
+- seahub-db: 包含网站前端（seahub）所用到的数据库表信息
+
+
+
+web端默认使用8000端口，使用nginx跳转，nginx配置为：nginx/conf/seafile.conf
+
+```
+server {
+    listen 80;
+    server_name  seafile.sxy91.com;
+    proxy_set_header X-Forwarded-For $remote_addr;
+
+    location / {
+         proxy_pass         http://127.0.0.1:8000;
+         proxy_set_header   Host $host;
+         proxy_set_header   X-Real-IP $remote_addr;
+         proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+         proxy_set_header   X-Forwarded-Host $server_name;
+         proxy_read_timeout  1200s;
+         Office Online Server;
+         client_max_body_size 0;
+    }
+    
+    location /seafhttp {
+        rewrite ^/seafhttp(.*)$ $1 break;
+        proxy_pass http://127.0.0.1:8082;
+        client_max_body_size 0;
+        proxy_connect_timeout  36000s;
+        proxy_read_timeout  36000s;
+        proxy_send_timeout  36000s;
+        send_timeout  36000s;
+    }
+    location /media {
+        root /home/seafile/seafile-server-latest/seahub;
+    }
+
+```
+
+
