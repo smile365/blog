@@ -13,17 +13,19 @@ categories: ["code"]
 
 查看挂载点占用情况：`df -h`  
 
-![enter description here](https://i.loli.net/2019/05/05/5cce5839406f5.jpg)
+![磁盘占用](https://i.loli.net/2019/05/05/5cce5839406f5.jpg)
 
  
 查看占用超过1g的目录:`du -sh * |grep -E 'G|T'`    
-![enter description here](https://i.loli.net/2019/05/05/5cce639bdd203.jpg)
+![目录大小](https://i.loli.net/2019/05/05/5cce639bdd203.jpg)
 
 >注：不在上图中挂载点的目录(usr/var/root)都属于/挂载点 
 
-大多数情况为数据或日志等文件过多造成的。  
+大多数情况为数据或日志等文件过多造成的。 比如mongo、docker、redis
 ![enter description here](https://i.loli.net/2019/05/05/5cce641f9412a.jpg)
 
+
+**迁移mongo数据**
 
 查看mongo配置文件：`cat /etc/mongod.conf`
 
@@ -52,6 +54,10 @@ storage:
 重启服务:`mongod -f /etc/mongod.conf`
 
 测试：`mongo localhost:47017`
+
+
+**迁移docker数据**
+
 
 
 **总结**： 
