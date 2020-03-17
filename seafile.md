@@ -1,9 +1,8 @@
 ---
-title:  seafile
+title:  seafile安装教程
 heading: 
 date: 2020-03-17T03:32:47.442Z
-categories: ["life"]
-draft: true
+categories: ["code"]
 tags: 
 description: 
 ---
