@@ -57,13 +57,32 @@ storage:
 
 
 **迁移docker数据**
-
-
+按照教程[配置docker存储路径](https://sxy91.com/posts/docker/))
+```bash
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "data-root": "/home/softdata/docker",
+  "registry-mirrors": [
+    "https://dockerhub.azk8s.cn",
+    "https://reg-mirror.qiniu.com"
+  ]
+}
+EOF
+sudo systemctl stop docker
+sudo rsync -aP /var/lib/docker/ /path/to/your/docker
+sudo mv /var/lib/docker /var/lib/docker.old
+systemctl start docker
+#测试通过后可删除备份文件
+#sudo rm -rf /var/lib/docker.old
+```
 
 **总结**： 
 使用yum install方式安装的文件需要注意日志文件/数据文件等的路径，安装前配置一个容量大的目录。
 
 
 参考  
+
 - [linux磁盘占用问题](https://blog.csdn.net/nciasd/article/details/51497817)
 - [mongo因磁盘无法写入而异退出](https://github.com/smile365/blog/blob/master/start-mongod-failed.md)
+- [move docker lib](https://www.guguweb.com/2019/02/07/how-to-move-docker-data-directory-to-another-location-on-ubuntu/)
