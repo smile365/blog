@@ -6,13 +6,21 @@ categories: ["code"]
 description:  如何用autojs控制新浪微博和微信，自动点赞评论。
 ---
 
-autojs是在中山大学的hyb1996开发的一款手机辅助软件。
+[auto.js](https://hyb1996.github.io/AutoJs-Docs/#/)是hyb1996在上中山大学期间开发的一款手机辅助软件。
+
+主要版本如下：
+
+- 4.0：免费版本，不需要账号（目前已被作者下架，）
+- 7.0 pro：收费版，需要购买账号（不再更新，且关闭购买通道）
+- 8.0 pro：收费版，需要购买账号（目前正式版本）
+
+> 可搜索微信公众号“下课了”，回复“aujojs”获取以上各个版本的下载链接，若没有账号的同学请安装免费版。
 
 在手机上写代码不方便，一般在电脑搭建auto.js环境。以下是教程：
 
 **autojs使用教程**
 
-1. 手机下载并安装[auto.js](https://hyb1996.github.io/AutoJs-Docs/#/)
+1. 手机下载并安装aujojs.app
 
 2. 电脑端安装[Auto.js-VSCodeExt](https://github.com/hyb1996/Auto.js-VSCode-Extension)： 
 
