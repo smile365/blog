@@ -20,12 +20,15 @@ wget https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-red
 yum install -y pgdg-redhat-repo-latest.noarch.rpm epel-release 
 yum update
 yum install -y postgresql12-server postgresql12
-/usr/pgsql-12/bin/postgresql-12-setup initdb
 awk -F: '/^[^#]/ {print}' /var/lib/pgsql/12/data/postgresql.conf
-systemctl start postgresql
-systemctl enable postgresql
-
+/usr/pgsql-12/bin/postgresql-12-setup initdb
+systemctl enable --now postgresql-12
+systemctl status postgresql-12
+sudo -u postgres psql
+alter user postgres with password 'newpasswd'
+exit
 ```
+
 
 
 参考 
