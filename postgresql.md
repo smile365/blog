@@ -62,6 +62,7 @@ shared_buffers 8GB # 1/4 memery
 work_mem 100MB  # shared_buffers/核数/10
 effective_cache_size 16GB # 1/2 memery
 maintenance_work_mem 160MB # effective_cache_size/100
+max_worker_processes = 128
 ```
 
 
