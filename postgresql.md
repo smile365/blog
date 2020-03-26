@@ -25,6 +25,7 @@ grant all privileges on database sxydb to sxy;
 
 开启远程访问  
 ```bash
+#允许所有内网网段通过密码方式登录数据库
 echo -e "host \t all \t all \t 192.168.31.0/24 \t md5" >> /var/lib/pgsql/11/data/pg_hba.conf
 echo "listen_addresses = '*'" >> /var/lib/pgsql/11/data/postgresql.conf
 sudo systemctl restart postgresql-11
