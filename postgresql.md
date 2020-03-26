@@ -48,7 +48,13 @@ CREATE TABLE persons
 ```
 
 建议修改配置项
-
+```
+fsync no
+shared_buffers 8GB # 1/4 memery
+work_mem 100MB  # shared_buffers/核数/10
+effective_cache_size 16GB # 1/2 memery
+maintenance_work_mem 160MB # effective_cache_size/100
+```
 
 
 安装[Psycopg](http://initd.org/psycopg/)与[pony](https://docs.ponyorm.org/firststeps.html)  
