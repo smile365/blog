@@ -1,8 +1,8 @@
 ---
-title:  推荐-postgresql是我用过最牛的关系型数据库
+title:  PostgreSQL新手入门教程
+heading: 
 date: 2019-06-04T08:13:00.474Z
-tags: 
-- postgresql
+tags: ["PostgreSQL教程","postgresql安装教程"]
 categories: ["code"] 
 ---
 
@@ -46,6 +46,9 @@ CREATE TABLE persons
 );
 \COPY persons FROM '/home/persons.csv' DELIMITER ',' CSV HEADER;
 ```
+
+建议修改配置项
+
 
 
 安装[Psycopg](http://initd.org/psycopg/)与[pony](https://docs.ponyorm.org/firststeps.html)  
