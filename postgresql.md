@@ -47,7 +47,7 @@ CREATE TABLE persons
 \COPY persons FROM '/home/persons.csv' DELIMITER ',' CSV HEADER;
 ```
 
-建议修改配置项
+建议修改配置项  `vim /var/lib/pgsql/11/data/postgresql.conf`
 ```
 fsync no
 shared_buffers 8GB # 1/4 memery
