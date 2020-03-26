@@ -23,7 +23,7 @@ create database sxydb;
 grant all privileges on database sxydb to sxy;
 ```
 
-开启远程访问  
+开启远程访问和登录方式 
 ```bash
 #允许所有内网网段通过密码方式登录数据库
 echo -e "host \t all \t all \t 192.168.31.0/24 \t md5" >> /var/lib/pgsql/11/data/pg_hba.conf
@@ -32,10 +32,12 @@ sudo systemctl restart postgresql-11
 psql -h 127.0.0.1 -d sxydb -U sxy -W
 ```
 
-> 若提示`psql: could not connect to server: 拒绝连接
+> 登录方式可参考：[pg_hba.conf](https://www.postgresql.org/docs/9.3/auth-pg-hba-conf.html) 
+若提示`psql: could not connect to server: 拒绝连接
 	Is the server running on host "xxx" and accepting
 	TCP/IP connections on port 30000?`
   可使用`p`参数指定端口：`psql -h 127.0.0.1 -p 5432 -d sxydb -U sxy -W `
+  
 
 导入某2千万数据测试
 ```sql
