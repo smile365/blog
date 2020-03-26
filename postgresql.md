@@ -31,6 +31,11 @@ sudo systemctl restart postgresql-11
 psql -h 127.0.0.1 -d sxydb -U sxy -W
 ```
 
+> 若提示`psql: could not connect to server: 拒绝连接
+	Is the server running on host "xxx" and accepting
+	TCP/IP connections on port 30000?`
+  可使用`p`参数指定端口：`psql -h 127.0.0.1 -p 5432 -d sxydb -U sxy -W `
+
 导入某2千万数据测试
 ```sql
 CREATE TABLE persons
