@@ -37,3 +37,4 @@ clickhouse-client
 - [ClickHouse使用](https://www.zouyesheng.com/clickhouse.html)
 - [ClickHouse表引擎及作用](http://liangfan.tech/2019/01/03/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ClickHouse%E4%B9%8B6-%E8%A1%A8%E5%BC%95%E6%93%8E%E5%8F%8A%E4%BD%9C%E7%94%A8/)
 - [clickhouse-python](https://clickhouse-driver.readthedocs.io/en/latest/)
+- [clickhouse性能测试](https://www.jianshu.com/p/f9a54193dc63)
