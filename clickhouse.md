@@ -30,10 +30,10 @@ yum install -y clickhouse-server clickhouse-client
 
 ```
 
-修改[服务器配置项](https://clickhouse.tech/docs/en/operations/server_settings/settings/#server_settings-listen_host)，开启远程访问和配置数据目录。
+修改[服务器配置项](https://clickhouse.tech/docs/en/operations/server_settings/settings/#server_settings-listen_host)，监听内网ip和配置数据目录。
 `vim /etc/clickhouse-server/config.xml`
 ```xml
-<listen_host>::</listen_host>
+<listen_host>192.168.1.135</listen_host>
 <path>/var/lib/clickhouse/</path>
 <tmp_path>/var/lib/clickhouse/tmp/</tmp_path>
 ```
@@ -47,7 +47,7 @@ yum install -y clickhouse-server clickhouse-client
 启动服务器和客户端
 ```bash
 systemctl start clickhouse-server
-clickhouse-client
+clickhouse-client -h 192.168.1.135
 ```
 
 创建数据库和表  
