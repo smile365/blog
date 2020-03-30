@@ -90,11 +90,25 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple clickhouse-driver[lz4]
 插入测试数据
 ```python
 from clickhouse_driver import Client
+from datetime import datetime, timedelta, timezone
+
+
 client = Client(host='192.168.1.135',database='indexsysdb')
 insert_keyword1h = 'insert into keyword1h (keyword,dtime,source1,source2,mood,category,amount) VALUES'
-rows = [{'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'dtime': '2020-03-30 10:00:00', 'keyword': '宋洋葱'}, {'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'dtime': '2020-03-30 10:00:00', 'keyword': '宋洋葱'}]
+
+tz_utc_8 = timezone(timedelta(hours=8)) # 创建时区UTC+8:00
+
+data = [{'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'keyword': '宋洋葱'}, {'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'keyword': '宋洋葱'}]
+tm = datetime.now()
+dtime = datetime(tm.year, tm.month, tm.day, tm.hour,tzinfo=tz_utc_8)
+rows = []
+for x in data:
+	x['dtime'] = dtime
+	rows.append(x)
+
 client.execute(insert_keyword1h,rows)
 ```
+> 注：DateTime类型的数据带有时区信息，python中需要用timezone指定
 
 参考
 
