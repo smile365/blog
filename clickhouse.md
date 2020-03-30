@@ -27,10 +27,28 @@ yum install -y yum-utils
 rpm --import https://repo.yandex.ru/clickhouse/CLICKHOUSE-KEY.GPG
 yum-config-manager --add-repo https://repo.yandex.ru/clickhouse/rpm/stable/x86_64
 yum install -y clickhouse-server clickhouse-client
+
+```
+
+修改[服务器配置项](https://clickhouse.tech/docs/en/operations/server_settings/settings/#server_settings-listen_host)，开启远程访问和配置数据目录。
+`vim /etc/clickhouse-server/config.xml`
+```xml
+<listen_host>::</listen_host>
+<path>/var/lib/clickhouse/</path>
+<tmp_path>/var/lib/clickhouse/tmp/</tmp_path>
+```
+
+修改[用户配置项](https://clickhouse.tech/docs/en/operations/settings/query_complexity/#settings_max_memory_usage),调整可用最大内存。
+`vim /etc/clickhouse-server/users.xml`
+```xml
+<max_memory_usage>20000000000</max_memory_usage>
+```
+
+启动服务器和客户端
+```bash
 systemctl start clickhouse-server
 clickhouse-client
 ```
-
 
 创建数据库和表  
 ```sql
@@ -64,9 +82,9 @@ insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values
 select keyword,dtime,source1,source2,mood,category,sum(amount) from keyword1h group by keyword,dtime,source1,source2,mood,category
 ```
 
-安装python客户端[clickhouse-driver](https://clickhouse-driver.readthedocs.io/en/latest/installation.html#installation-from-pypi)  
+安装python[客户端](https://clickhouse.tech/docs/en/interfaces/third-party/client_libraries/)  
 ```bash
-pip install clickhouse-driver
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple clickhouse-driver[lz4]
 ```
 
 
