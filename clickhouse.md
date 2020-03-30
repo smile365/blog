@@ -77,7 +77,7 @@ ORDER BY (dtime, keyword, source1, source2,mood,category)
 插入测试数据
 
 ```sql
-insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values ('宋洋葱','2020-03-30 11:00:00','finance','finance',1,1,1), ('宋洋葱','2020-03-30 11:00:00','finance','finance',1,1,1);
+insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values ('宋洋葱','2020-03-30 10:00:00','finance','finance',1,1,1), ('宋洋葱','2020-03-30 10:00:00','finance','finance',1,1,1);
 
 select keyword,dtime,source1,source2,mood,category,sum(amount) from keyword1h group by keyword,dtime,source1,source2,mood,category
 ```
@@ -92,7 +92,7 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple clickhouse-driver[lz4]
 from clickhouse_driver import Client
 client = Client(host='192.168.1.135',database='indexsysdb')
 insert_keyword1h = 'insert into keyword1h (keyword,dtime,source1,source2,mood,category,amount) VALUES'
-rows = [{'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'dtime': '2020-03-27 10:00:00', 'keyword': '宋洋葱'}, {'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'dtime': '2020-03-27 10:00:00', 'keyword': '宋洋葱'}]
+rows = [{'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'dtime': '2020-03-30 10:00:00', 'keyword': '宋洋葱'}, {'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'dtime': '2020-03-30 10:00:00', 'keyword': '宋洋葱'}]
 client.execute(insert_keyword1h,rows)
 ```
 
