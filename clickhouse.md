@@ -98,7 +98,7 @@ insert_keyword1h = 'insert into keyword1h (keyword,dtime,source1,source2,mood,ca
 
 tz_utc_8 = timezone(timedelta(hours=8)) # 创建时区UTC+8:00
 
-data = [{'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'keyword': '宋洋葱'}, {'source1': 'finance', 'source2': 'finance', 'mood': 3, 'category': 4, 'amount': 1, 'keyword': '宋洋葱'}]
+data = [{'source1': 'video', 'source2': 'youtube', 'mood': 3, 'category': 4, 'amount': 1, 'keyword': '宋洋葱'}, {'source1': 'overseas', 'source2': 'facebook', 'mood': 3, 'category': 4, 'amount': 1, 'keyword': '宋洋葱'}]
 tm = datetime.now()
 dtime = datetime(tm.year, tm.month, tm.day, tm.hour,tzinfo=tz_utc_8)
 rows = []
