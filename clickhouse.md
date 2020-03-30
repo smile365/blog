@@ -77,7 +77,7 @@ ORDER BY (dtime, keyword, source1, source2,mood,category)
 插入测试数据
 
 ```sql
-insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values ('宋洋葱','2020-03-30 10:00:00','finance','finance',1,1,1), ('宋洋葱','2020-03-30 10:00:00','finance','finance',1,1,1);
+insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values ('宋洋葱','2020-03-30 10:00:00','video','youtube',1,1,1), ('宋洋葱','2020-03-30 10:00:00','video','youtube',1,1,1);
 
 select keyword,dtime,source1,source2,mood,category,sum(amount) from keyword1h group by keyword,dtime,source1,source2,mood,category
 ```
