@@ -108,7 +108,7 @@ for x in data:
 
 client.execute(insert_keyword1h,rows)
 ```
-> 注：DateTime类型的数据带有时区信息，python中需要用timezone指定
+> 注：DateTime类型的数据带有时区信息，python中需要用timezone指定。使用字符串格式的时间则会出现错误：` clickhouse AttributeError: str object has no attribute tzinfo`。
 
 参考
 
