@@ -35,17 +35,17 @@ clickhouse-client
 创建数据库和表  
 ```sql
 CREATE DATABASE IF NOT EXISTS indexsysdb;
-
-CREATE TABLE indexsysdb.keyword1h
-(`keyword` String,
-`dtime` DateTime('Asia/Shanghai'),
-`source1` String,
-`source2` String,
-`mood` Int8,
-`category` Int8,
-`amount` UInt64)
-ENGINE = SummingMergeTree(amount)
-PARTITION BY toYYYYMM(dtime)
+-- use indexsysdb;
+CREATE TABLE indexsysdb.keyword1h \
+(keyword String,\
+dtime DateTime('Asia/Shanghai'),\
+source1 String,\
+source2 String,\
+mood Int8,\
+category Int8,\
+amount UInt64) \
+ENGINE = SummingMergeTree(amount) \
+PARTITION BY toYYYYMM(dtime) \
 ORDER BY (dtime, keyword, source1, source2,mood,category)
 ```
 
@@ -55,7 +55,16 @@ ORDER BY (dtime, keyword, source1, source2,mood,category)
 - PARTITION BY：[分区规则](https://clickhouse.tech/docs/zh/operations/table_engines/custom_partitioning_key/)，按天分区可用[toYYYYMMDD](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymmdd)，按月分区可用[toYYYYMM](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymm)
 - ORDER BY：聚合的条件
 
-python客户端
+
+插入测试数据
+
+```sql
+insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values ('主力资金','2020-03-30 11:00:00','finance','finance',1,1,1), ('主力资金','2020-03-30 11:00:00','finance','finance',1,1,1);
+
+select keyword,dtime,source1,source2,mood,category,sum(amount) from keyword1h group by keyword,dtime,source1,source2,mood,category
+```
+
+安装python客户端[clickhouse-driver](https://clickhouse-driver.readthedocs.io/en/latest/installation.html#installation-from-pypi)  
 ```bash
 pip install clickhouse-driver
 ```
