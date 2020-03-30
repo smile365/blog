@@ -1,9 +1,8 @@
 ---
-title:  clickhouse
+title:  clickhouse教程
 heading: 
 date: 2020-03-12T03:06:50.536Z
 categories: ["code"]
-draft: true
 tags: 
 description: 
 ---
@@ -24,13 +23,43 @@ yum makecache
 
 安装[clickhouse](https://clickhouse.tech/#quick-start)
 ```bash
-sudo yum install -y yum-utils
-sudo rpm --import https://repo.yandex.ru/clickhouse/CLICKHOUSE-KEY.GPG
-sudo yum-config-manager --add-repo https://repo.yandex.ru/clickhouse/rpm/stable/x86_64
-sudo yum install -y clickhouse-server clickhouse-client
-sudo /etc/init.d/clickhouse-server start
+yum install -y yum-utils
+rpm --import https://repo.yandex.ru/clickhouse/CLICKHOUSE-KEY.GPG
+yum-config-manager --add-repo https://repo.yandex.ru/clickhouse/rpm/stable/x86_64
+yum install -y clickhouse-server clickhouse-client
+systemctl start clickhouse-server
 clickhouse-client
 ```
+
+
+创建数据库和表  
+```sql
+CREATE DATABASE IF NOT EXISTS indexsysdb;
+
+CREATE TABLE indexsysdb.keyword1h
+(`keyword` String,
+`dtime` DateTime('Asia/Shanghai'),
+`source1` String,
+`source2` String,
+`mood` Int8,
+`category` Int8,
+`amount` UInt64)
+ENGINE = SummingMergeTree(amount)
+PARTITION BY toYYYYMM(dtime)
+ORDER BY (dtime, keyword, source1, source2,mood,category)
+```
+
+下面来解释下[各关键字](https://clickhouse.tech/docs/en/operations/table_engines/mergetree/)的意思：
+
+- ENGINE：[表引擎](https://clickhouse.tech/docs/en/operations/table_engines/)
+- PARTITION BY：[分区规则](https://clickhouse.tech/docs/zh/operations/table_engines/custom_partitioning_key/)，按天分区可用[toYYYYMMDD](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymmdd)，按月分区可用[toYYYYMM](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymm)
+- ORDER BY：聚合的条件
+
+python客户端
+```bash
+pip install clickhouse-driver
+```
+
 
 参考
 
@@ -38,3 +67,4 @@ clickhouse-client
 - [ClickHouse表引擎及作用](http://liangfan.tech/2019/01/03/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ClickHouse%E4%B9%8B6-%E8%A1%A8%E5%BC%95%E6%93%8E%E5%8F%8A%E4%BD%9C%E7%94%A8/)
 - [clickhouse-python](https://clickhouse-driver.readthedocs.io/en/latest/)
 - [clickhouse性能测试](https://www.jianshu.com/p/f9a54193dc63)
+- [clickhouse物化视图](https://blog.lzzrpi.xin/index.php/archives/205/)
