@@ -1,18 +1,18 @@
 ---
 title:  autojs使用教程手册
 date: 2019-07-08T01:28:44.819Z
-tags: ["autojs输入文字","anto js 切换应用","	auto.js 运行日志","autojs布局分析的使用方法"]
+tags: ["autojs输入文字","anto.js 切换应用","	auto.js 运行日志","auto.js布局分析的使用方法"]
 categories: ["code"]
-description:  如何用autojs控制新浪微博和微信，自动点赞评论。
+description:  如何用auto.js控制新浪微博和微信，自动点赞评论。
 ---
 
 [auto.js](https://hyb1996.github.io/AutoJs-Docs/#/)是hyb1996在上中山大学期间开发的一款手机辅助软件。
 
 主要版本如下：
 
-- 4.0：免费版本，不需要账号（目前已被作者下架，）
-- 7.0 pro：收费版，需要购买账号（不再更新，且关闭购买通道）
-- 8.0 pro：收费版，需要购买账号（目前正式版本）
+- auto.js 4.0：免费版本，不需要账号（目前已被作者下架，）
+- auto.js 7.0 pro：收费版，需要购买账号（不再更新，且关闭购买通道）
+- auto.js 8.0 pro：收费版，需要购买账号（目前正式版本）
 
 > 可搜索微信公众号“下课了”，回复“aujojs”获取以上各个版本的下载链接，若没有账号的同学请安装免费版。
 
