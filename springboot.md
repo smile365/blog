@@ -49,3 +49,24 @@ jar包/war包 启动方式
 
 spring beans 
 
+
+请求 
+    - 参数
+    - 参数验证
+    
+
+相应
+    - string
+    - xml
+    - json
+    
+99%的人接触到的项目都是对数据的增删改查。
+
+sping data jpa
+
+mybatis
+
+redis
+
+登录验证
+
