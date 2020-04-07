@@ -31,8 +31,9 @@ maven + spring boot 的优势。 2/3个依赖搞定所有依赖，告别大版�
 
 3. controller注解,[hello word](http://blog.didispace.com/books/spring-boot-reference/II.%20Getting%20started/10.2.6.%20Quick%20start%20Spring%20CLI%20example.html)
 
-4. 运行测试
-
+4. 测试
+    本地测试
+    远端测试
 
 6. [发布与打包](http://blog.didispace.com/books/spring-boot-reference/II.%20Getting%20started/11.5.%20Creating%20an%20executable%20jar.html)
 
