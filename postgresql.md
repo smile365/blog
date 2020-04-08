@@ -55,7 +55,7 @@ CREATE TABLE persons
 \COPY persons FROM '/home/persons.csv' DELIMITER ',' CSV HEADER;
 ```
 
-32G内存8核cpu，建议修改如下配置项  `vim /var/lib/pgsql/11/data/postgresql.conf`
+32G内存8核cpu，建议修改[postgresql.conf](https://github.com/digoal/blog/blob/master/201611/20161121_01.md)的如下配置项  `vim /var/lib/pgsql/11/data/postgresql.conf`
 ```
 fsync no
 shared_buffers 8GB # 1/4 memery
@@ -63,6 +63,7 @@ work_mem 100MB  # shared_buffers/核数/10
 effective_cache_size 16GB # 1/2 memery
 maintenance_work_mem 160MB # effective_cache_size/100
 max_worker_processes = 128
+wal_buffers = 300MB       #min(2GB,shared_buffers/32)
 ```
 
 
