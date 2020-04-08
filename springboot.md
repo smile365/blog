@@ -71,3 +71,10 @@ redis
 
 登录验证
 
+
+使用[YAML](http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/24.6.1.%20Loading%20YAML.html)格式的配置文件，[YAML缺点](http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/24.6.4.%20YAML%20shortcomings.html)
+
+value注解，应用内参数配置
+
+跨域资源共享（CORS）
+
