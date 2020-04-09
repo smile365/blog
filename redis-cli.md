@@ -1,5 +1,5 @@
 ---
-title:  redis-cli
+title:  只安装redis-cli
 heading:
 date: 2020-04-09T05:48:31.427Z
 categories: ["code"]
