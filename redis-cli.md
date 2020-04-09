@@ -2,7 +2,6 @@
 title:  redis-cli
 heading:
 date: 2020-04-09T05:48:31.427Z
-draft: true
 categories: ["code"]
 tags: 
 description: 只安装redis客户端，不安装redis服务端
