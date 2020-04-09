@@ -37,7 +37,9 @@ git push
 
 此时发现个人主页的贡献度已经发生变化了，终于成功了啊。
 
-> 注：`git remote set-url --add`这条语句的一次是推送的时候同时推送到两个地址，改变的是本地git的config配置，origin端的配置已经不会改变，重新clone以后会回到没改之前。
+> 注：`git remote set-url --add`这条语句的一次是推送的时候同时推送到两个地址，改变的是本地git的config配置，origin端的配置已经不会改变，重新clone会初始化成clone地址相对应的配置。
+
+若要保持gitee和github贡献度同步，可以在github的[邮箱配置](https://github.com/settings/emails)也填写一致，增加在gitee填写的邮箱即可。
 
 
 
