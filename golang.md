@@ -1,9 +1,8 @@
 ---
-title:  golang
+title:  golang简明入门教程
 date: 2019-07-26T05:45:19.158Z
 tags: 
-categories:
-draft: true
+categories: ["code"]
 description: 
 ---
 
@@ -12,14 +11,18 @@ centos
 ```bash
 yum -y install go
 go version
-go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
 mac
 
-[下载golang安装包](https://golang.org/dl/)（需要梯子）,或者使用brew
+[下载golang安装包](https://golang.google.cn/doc/install),或者使用brew
 ```bash
 brew install go
+```
+
+配置镜像
+```bash
+go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
