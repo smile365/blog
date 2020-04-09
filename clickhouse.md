@@ -113,7 +113,8 @@ client.execute(insert_keyword1h,rows)
 
 聚合查询测试  
 ```sql
-select keyword,dtime,sum(amount) from keyword1h where keyword='冠状病毒' and dtime > '2020-03-26 23:00:00' group by keyword,dtime order by dtime
+--- 查询昨天0点到现在的数据
+select keyword,dtime,sum(amount) from keyword1h where keyword='冠状病毒' and dtime > toDate(now())-1 group by keyword,dtime order by dtime
 ```
 
 结果如下
