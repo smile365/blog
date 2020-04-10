@@ -7,6 +7,12 @@ categories: ["code"]
 
 牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC
 
+推荐
+
+- [简单粗暴 TensorFlow 2](https://tf.wiki/)
+- [网盘搜](https://www.dashengpan.com/)
+
+
 站点收藏  
 
 - [如何选定搭建个人独立博客工具](https://www.jeffjade.com/2019/07/29/156-vuepress-hexo-jekyll-ghost-gitbook-hugo-solo_compare-personal-website-generator/)
