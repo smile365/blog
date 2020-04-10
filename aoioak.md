@@ -58,10 +58,21 @@ sudo mysql_secure_installation
 
 安装aoioak
 ```bash
-wget https://gitee.com/apioak/apioak/attach_files/369211/download
-sudo yum -y install aoioak*.rpm
-#导入数据库配置文件到 MySQL 或 MariaDB 中，配置文件路径 /path/conf/apioak.sql。
-#编辑 APIOAK 配置文件中 database 项的数据库连接信息，配置文件路径 /path/conf/apioak.yaml
+#到发行页面下载安装包 https://gitee.com/apioak/apioak/releases
+yum install -y apioak-0.4.0-1.el7.x86_64.rpm
+```
+
+导入数据
+```sql
+mysql -uroot -proot -e"show databases;"
+mysql -uroot -proot -e"create database aoioak;"
+mysql -uroot -proot -Daoioak < /usr/local/apioak/conf/apioak.sql
+mysql -uroot -proot -Daoioak -e"show tables;"
+```
+
+修改数据库链接信息并启动
+```bash
+vim /usr/local/apioak/conf/apioak.yaml
 sudo apioak start
 # http://127.0.0.1:10080/apioak/dashboard 即可访问控制台管理面板
 ```
