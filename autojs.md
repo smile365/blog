@@ -20,7 +20,7 @@ description:  如何用auto.js控制新浪微博和微信，自动点赞评论�
 
 **autojs使用教程**
 
-1. 手机下载并安装aujojs.app
+1. 手机下载并安装autojs.app
 
 2. 电脑端安装[Auto.js-VSCodeExt](https://github.com/hyb1996/Auto.js-VSCode-Extension)： 
 
