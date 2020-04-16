@@ -1,6 +1,6 @@
 ---
-title:  pyppeteer简明教程手册
-heading: pyppeteer的使用教程方法
+title:  pyppeteer简明教程
+heading: 爬虫神器pyppeteer的使用教程方法
 date: 2019-07-01T02:11:34.220Z
 tags: ["pyppeteer的使用","pyppeteer淘宝","pyppeteer微博","puppeteer python"]
 categories: ["code"]  
