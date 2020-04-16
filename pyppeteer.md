@@ -40,9 +40,10 @@ asyncio.get_event_loop().run_until_complete(main())
 
 会话关闭的解决办法
 ==
-20秒不操作后会话关闭，会出现错误:`Session closed. Most likely the page has been closed`
-pyppeteer的开发团队似乎比较忙，还没修复。可参考[pyppeteer#159](https://github.com/miyakogi/pyppeteer/pull/160/files),修改源码`pyppeteer/connection.py`
+20秒不操作后会话关闭，会出现错误:`Session closed. Most likely the page has been closed`  
+pyppeteer的开发团队似乎比较忙，还没修复。可参考[pyppeteer#159](https://github.com/miyakogi/pyppeteer/pull/160/files),修改源码`pyppeteer/connection.py`，替换第44行源码。
 ```git 
+self._ws = websockets.client.connect(
 - self._url, max_size=None, loop=self._loop)
 + self._url, max_size=None, loop=self._loop,ping_interval=None, ping_timeout=None)
 ```
