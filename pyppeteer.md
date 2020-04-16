@@ -1,14 +1,14 @@
 ---
-title:  用pyppeteer控制chrome浏览器干点坏事
+title:  pyppeteer简明教程手册
+heading: pyppeteer的使用教程方法
 date: 2019-07-01T02:11:34.220Z
-tags: 
- - pyppeteer
- - chromium
+tags: ["pyppeteer的使用","pyppeteer淘宝","pyppeteer微博","puppeteer python"]
 categories: ["code"]  
 ---
 
+Puppeteer它是一个Node库，提供了一个高级的API来控制DevTools协议上的无头版Chrome，可以自动化控制浏览器运行。pyppeteer是python版的实现。
 
-安装
+安装pyppeteer
 ==
 
 ```sh
