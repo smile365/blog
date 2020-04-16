@@ -23,7 +23,7 @@ import asyncio
 from pyppeteer import launch
 
 async def main():
-	browser = await launch(executablePath='/usr/bin/chromium-browser',headless=True,devtools=False)
+	browser = await launch()
 	page = await browser.newPage()
 	await page.goto('https://sxy91.com')
 	await page.screenshot({'path': 'sxy.png'})
@@ -33,10 +33,6 @@ async def main():
 
 asyncio.get_event_loop().run_until_complete(main())
 ```
-参数说明
-- **executablePath**：运行Chromium或Chrome可执行文件的路径，而不是默认捆绑的Chromium
-- **headless**：是否使用无头模式（无界面）运行
-- **devtools**：是否打开开发者调试工具，打开后忽略headless参数自动改成False
 
 会话关闭的解决办法
 ==
@@ -47,6 +43,50 @@ self._ws = websockets.client.connect(
 - self._url, max_size=None, loop=self._loop)
 + self._url, max_size=None, loop=self._loop,ping_interval=None, ping_timeout=None)
 ```
+
+使用pyppeteer自动发送微博的例子
+```python
+import asyncio
+from pyppeteer import launch
+
+home_url = 'https://weibo.com/'
+ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'
+CHROME_PATH = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+img = '/Users/songyangcong/Pictures/6781573623694_.pic.jpg'
+
+async def sendimg(path,headless=False,devtools=False):
+	browser = await launch(executablePath=path,headless=headless,devtools=devtools,userDataDir='./tmp/userdata',args=['--no-sandbox','--disable-infobars'])
+	pages  = await browser.pages()
+	if len(pages) < 1:
+		page = await self.browser.newPage()
+	else:
+		page = pages[0]
+	await page.setViewport({'width':1366,'height':768})
+	await page.setUserAgent(ua)	
+	await page.goto(home_url)
+	await asyncio.sleep(15)  # 等待15秒，先手动登录一下
+	await page.type('textarea',"测试微博自动发送内容")
+	fileInput = await page.J('input[type=file]')
+	await fileInput.uploadFile(img)	# pyppeteer upload image 发布图片
+	await asyncio.sleep(2)
+	await page.click('a[node-type="submit"]')	# 点击发布
+	#await page.click('a[node-type="submit"]') 
+	await asyncio.sleep(100)
+	
+def test():
+	asyncio.get_event_loop().run_until_complete(sendimg(CHROME_PATH))
+	
+if __name__ == '__main__':
+	test()
+```
+
+几个有用的参数说明
+- **executablePath**：运行Chromium或Chrome可执行文件的路径，而不是默认捆绑的Chromium
+- **headless**：是否使用无头模式（无界面）运行
+- **devtools**：是否打开开发者调试工具，打开后忽略headless参数自动改成False
+- **userDataDir**：自动保存浏览器数据到磁盘，登录一次后可免登录（记录cookies）
+
 
 
 参考  
