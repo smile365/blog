@@ -8,7 +8,7 @@ categories: ["code"]
 
 Puppeteer它是一个Node库，提供了一个高级的API来控制DevTools协议上的无头版Chrome，可以自动化控制浏览器运行。pyppeteer是python版的实现。
 
-centos7安装pyppeteer
+centos7安装[pyppeteer](https://miyakogi.github.io/pyppeteer/)
 ==
 
 ```sh
