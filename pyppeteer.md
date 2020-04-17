@@ -81,7 +81,7 @@ if __name__ == '__main__':
 	test()
 ```
 
-几个有用的参数说明
+常用参数说明
 - **executablePath**：运行Chromium或Chrome可执行文件的路径，而不是默认捆绑的Chromium
 - **headless**：是否使用无头模式（无界面）运行
 - **devtools**：是否打开开发者调试工具，打开后忽略headless参数自动改成False
