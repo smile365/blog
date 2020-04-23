@@ -60,3 +60,7 @@ git commit -m "restore file mac-xattr.md"
 git pull
 git push
 ```
+
+参考 
+
+- [可能是目前为止最好的git教程](https://learngitbranching.js.org/?locale=zh_CN)
