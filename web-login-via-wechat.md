@@ -2,7 +2,7 @@
 title:  为网页增加微信登录功能
 heading: 
 date: 2019-12-10T02:47:27.052Z
-categories: ["code","life","tools","read"]
+categories: ["code"]
 tags: 
 description: 
 ---
