@@ -3,8 +3,8 @@ title:  git从远程仓库的恢复已经删除的文件
 heading: git恢复被删除的文件
 date: 2020-04-23T05:16:32.739Z
 categories: ["code"]
-tags: [""]
-description: 
+tags: ["git恢复被删除的文件"]
+description: git recover deleted file from origin branch
 ---
 
 使用命令查看工作区情况`git status`：
