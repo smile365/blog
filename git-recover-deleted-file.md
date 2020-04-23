@@ -50,7 +50,8 @@ Changes to be committed:
 	new file:   mac-xattr.md
 ```
 
-发现又多了这个文件，而且是新的。git checkout commit_id file这个命令的意思是从含有该文件的旧版本号里把该文件拿出来，放到现版本里，版本号不改变。
+发现又多了这个文件，而且是新的。`git checkout commit_id file`这个命令的意思是从含有该文件的旧版本号里把该文件拿出来，放到现版本里，版本号不改变。
+`git reset --hard commit_id`是把记录的头heard回退到commit_id这个版本号。reset命令要慎用，类似于恢复出厂设置。
 
 然后继续提交到远程分支即可
 ```bash
