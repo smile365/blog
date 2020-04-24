@@ -4,33 +4,65 @@ heading: auto.js如何跳转到群
 date: 2020-04-24T02:55:34.942Z
 categories: ["code"]
 tags: ["Auto.js教程","Auto.js跳转到QQ群","Auto.js自动跳转到个人QQ页面","Auto.js intent"]
-description: 
+description:  auto.js intent qq群
 ---
 
+Android的意图和广播可用来跳转到其他app和传递数据。下面介绍一下Auto.js关于意图和广播的一些使用方法。Auto.js借助intent可以跳转到其他应用的界面。
 
-Android的意图和广播可用来跳转到其他app和传递数据。下面介绍一下Auto.js关于意图和广播的一些使用方法。
+**脚本例子1：Auto.js跳转到个人QQ界面**   
+方便添加QQ好友联系人。
+```javascript
+// 打开QQ的个人界面
+//testqq="931918906"
+function toQQ(qq){
+    if(!qq) qq="931918906";
+    app.startActivity({
+        action: "android.intent.action.VIEW",
+        data: "mqqapi://card/show_pslcard?src_type=internal&source=sharecard&version=1&uin=" + qq,
+    });
+}
+```
 
-**脚本例子：**
+**脚本例子2：Auto.js跳转到QQ群界面**   
+方便添加QQ群，加入群聊。
+```javascript
+// 打开QQ群
+// testkey = "49zbWmn0Bwnde1m_p6RuOlHB9IivoEIk";
+function toQqGroup(key){
+    if(!key) key = "49zbWmn0Bwnde1m_p6RuOlHB9IivoEIk";
+    app.startActivity({
+                action: "android.intent.action.VIEW",
+                data: "mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26k%3D" + key
+    });
+}
+```
+
+**脚本例子3：Auto.js跳转到QQ群的自动接龙界面**   
+若没有加入QQ群，得先加入QQ群。
+```javascript
+// 自动跳转到QQ群的群接龙游戏
+// testqqgroup = "1003185728"
+function qunSolitaire(qqgroup){
+    if(!qqgroup) qqgroup = "1003185728";
+    var url = base64("https://qun.qq.com/homework/qunsolitaire/list.html?_wv=1031&gc="+qqgroup+"&from=appstore_icon&from=qqminiprogram="+ qqgroup + "&state=1");
+    app.startActivity({
+            action: "android.intent.action.VIEW",
+            data: "mqqapi://forward/url?url_prefix=" + url + "&version=1&src_type=web"
+    });
+}
+```
+有疑问欢迎加入AutoJs的交流QQ群提问：`1003185728`。
 
 
-跳转到其他应用一般会用到
-
-QQ自动群接龙脚本，来拯救接龙打卡迟到的你
-
-auto.js intent qq群
 
 QQ自动点赞脚本
 
-请登录后操作
+请登录后操作。（引导到微信公众号关注，发送邀请码等）
+积分兑换，淘宝客，变现。直接支付下载6.66
 xpay，支付1.66元，自动把以下代码发送到你的邮箱。
 
 
 autojs写的QQ群批量签到脚本源代码
-
-更多源码请到QQ群：下载。
-
-
-AutoJs的交流QQ群
 
 auto.js qq群的相关搜索
 Tasker Auto .js
@@ -41,7 +73,6 @@ Auto js 打包apk
 Auto js 王者荣耀
 Auto.js docs
 Auto.js 截图
-
 Auto.js 破解
 Auto.js 录制
 Auto.js 启动app
