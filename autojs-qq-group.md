@@ -91,4 +91,4 @@ autojs老版本下载		钉钉自动签到插件		autojs免费版下载
 若出现错误，
 java.lang.NoClassDefFoundError: android.view.SearchEvent
 
-则是因为auto.js没有适配低版本Android的原因。
+则是因为auto.js没有适配低版本Android的原因。目测是不支持Android7以下版本。
