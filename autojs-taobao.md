@@ -2,7 +2,7 @@
 title:  autojs
 heading:
 date: 2020-04-24T02:58:59.864Z
-tags: 
+tags: ["Auto js","Auto js 下载"]
 description: 
 ---
 
@@ -18,3 +18,8 @@ autojs教程
 秒杀
 抢购
 脚本
+
+
+
+
+
