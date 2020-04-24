@@ -81,3 +81,10 @@ Auto js API
 
 auto.js  删除死粉
 auto.js  删除僵尸粉
+
+
+
+autojs下载官网		autojs老版本		autojs最新版
+autojs脚本大全		auto.js pro破解版		autojs安卓脚本大全
+autojs老版本下载		钉钉自动签到插件		autojs免费版下载
+
