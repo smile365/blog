@@ -88,3 +88,7 @@ autojs下载官网		autojs老版本		autojs最新版
 autojs脚本大全		auto.js pro破解版		autojs安卓脚本大全
 autojs老版本下载		钉钉自动签到插件		autojs免费版下载
 
+若出现错误，
+java.lang.NoClassDefFoundError: android.view.SearchEvent
+
+则是因为auto.js没有适配低版本Android的原因。
