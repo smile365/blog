@@ -22,3 +22,27 @@ auto.js intent qq群
 QQ自动点赞脚本
 
 autojs写的QQ群批量签到脚本源代码
+
+更多源码请到QQ群：下载。
+
+
+AutoJs的交流QQ群
+
+auto.js qq群的相关搜索
+Tasker Auto .js
+
+Hyb1996 auto js
+Auto js 连接电脑
+Auto js 打包apk
+Auto js 王者荣耀
+Auto.js docs
+Auto.js 截图
+
+Auto.js 破解
+Auto.js 录制
+Auto.js 启动app
+Auto.js 无障碍
+Auto js API
+
+auto.js  删除死粉
+auto.js  删除僵尸粉
