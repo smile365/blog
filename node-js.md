@@ -1,6 +1,6 @@
 ---
-title:  在macos、windows、centos7安装nodejs
-heading: 
+title:  nodejs安装教程
+heading: 在macos、windows、centos7安装nodejs
 date: 2019-12-12T08:55:06.812Z
 categories: ["code"]
 tags: 
