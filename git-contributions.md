@@ -2,7 +2,7 @@
 title:  如何把github仓库项目迁移到gitee并保留历史贡献度
 heading:
 date: 2020-04-08T06:41:57.794Z
-categories: ["code","life","tools","read"]
+categories: ["code"]
 tags: ["commit email","git 贡献度","gitee贡献度统计"]
 description: 
 ---
