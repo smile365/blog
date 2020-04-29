@@ -16,13 +16,24 @@ description:
 
 截止今天（2020年4月29日）推荐多数用户使用的是长期支持版(LTS)12.16.3 
 
-```bash
+先配置安装源[nodejs-yum-source](https://github.com/nodesource/distributions)
 
+```bash
+# root 账号
+# curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+# 非root账号需要sudo权限
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
+
+#然后安装nodejs
+yum install nodejs
+
+#检查Node.js和npm版本
+node -v
+npm -v
 ```
 
 
-
-nodejs配置阿里巴巴的npm镜像
+nodejs的npm比较慢，可以配置成阿里巴巴的npm镜像
 
 ```bash
 # 安装cnpm
