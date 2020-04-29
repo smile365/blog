@@ -7,7 +7,7 @@ tags:
 description: 
 ---
 
-截止今天（2020年4月29日）推荐多数用户使用的是长期支持版(LTS)12.16.3 
+截止今天（2020年4月29日）推荐多数用户使用的是长期支持版(LTS)Node.js 12.16.3 
 
 mac 或者windos建议直接下载[nodejs](https://nodejs.org/zh-cn/download/)安装包进行安装。
 
@@ -27,6 +27,8 @@ yum install nodejs
 #检查Node.js和npm版本
 node -v
 npm -v
+# v12.16.2
+# 6.14.4
 ```
 
 
