@@ -1,11 +1,13 @@
 ---
 title:  只安装redis-cli
-heading:
+heading:  如何只安装redis-cli，mac|windos|centos|linux 
 date: 2020-04-09T05:48:31.427Z
 categories: ["code"]
-tags: 
+tags: ["redis-cli","安装redis-cli"]
 description: 只安装redis客户端，不安装redis服务端
 ---
+
+有时候我们只想用redis-cli客户端，但不想在电脑上安装redis-server服务端。下面是单独安装redis-cli的教程方法。
 
 仅仅安装redis-cli
 
