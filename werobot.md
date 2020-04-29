@@ -115,5 +115,5 @@ app.run(port=8091)
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1578292762126.png)
 
 
-欢迎关注公众号「**下课了**」测试。
+欢迎关注公众号「**下课了**」测试，或者加入QQ交流群：334118484。
 
