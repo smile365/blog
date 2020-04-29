@@ -1,15 +1,13 @@
 ---
-title:  nodejs on mac
+title:  在macos、windows、centos7安装nodejs
 heading: 
 date: 2019-12-12T08:55:06.812Z
-categories: ["life"]
-draft: true
+categories: ["code"]
 tags: 
 description: 
 ---
 
 mac 或者windos建议直接下载[nodejs](https://nodejs.org/zh-cn/download/)安装包进行安装。
-
 
 在centos7安装[nodejs](https://nodejs.org/en/download/package-manager/)
 
