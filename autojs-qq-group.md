@@ -9,7 +9,7 @@ description:  auto.js intent qq群
 
 Android的意图和广播可用来跳转到其他app和传递数据。下面介绍一下Auto.js关于意图和广播的一些使用方法。Auto.js借助intent可以跳转到其他应用的界面。
 
-**脚本例子1：Auto.js跳转到个人QQ界面**   
+**脚本例子1：Auto.js自动打开个人QQ界面**   
 方便添加QQ好友联系人。
 ```javascript
 // 打开QQ的个人界面
@@ -23,7 +23,7 @@ function toQQ(qq){
 }
 ```
 
-**脚本例子2：Auto.js跳转到QQ群界面**   
+**脚本例子2：Auto.js自动打开QQ群界面**   
 方便添加QQ群，加入群聊。
 ```javascript
 // 打开QQ群
@@ -37,7 +37,7 @@ function toQqGroup(key){
 }
 ```
 
-**脚本例子3：Auto.js跳转到QQ群的自动接龙界面**   
+**脚本例子3：Auto.js自动打开QQ群的接龙界面**   
 若没有加入QQ群，得先加入QQ群。
 ```javascript
 // 自动跳转到QQ群的群接龙游戏
