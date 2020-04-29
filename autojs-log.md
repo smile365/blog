@@ -33,6 +33,8 @@ console.setGlobalLogConfig({
 });
 ```
 
+如果需要在auto.js连接电脑进行调试，请参考教程[Auto.js如何连接电脑上的VS Code插件](https://www.sxy91.com/posts/autojs/)
+
 
 有疑问欢迎加入AutoJs的交流QQ群提问：`1003185728`。
 
