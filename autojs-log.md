@@ -1,5 +1,5 @@
 ---
-title:  auto.js如何
+title:  auto.js如何显示日志和调试信息
 heading:
 date: 2020-04-29T01:26:59.943Z
 categories: ["code"]
@@ -39,14 +39,5 @@ autojs教程手册
 
 autojs打包教程
 
-brew tap ringohub/redis-cli	1	
-
-python判断是不是韩语日语	1	
-5%
-单独安装redis-cli	1	
-5%
-WeRoBot robot.location	1	
-5%
-Auto.js Pro图文教程	1	
-5%
+Auto.js Pro图文教程	
 
