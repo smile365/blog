@@ -38,7 +38,7 @@ console.setGlobalLogConfig({
 
 参考文章
 
-- [Auto.js自动打开QQ群的方法](https://www.sxy91.com/posts/autojs-qq-group/)
+- [Auto.js自动打开QQ群的方法教程](https://www.sxy91.com/posts/autojs-qq-group/)
 
 
 
