@@ -1,5 +1,5 @@
 ---
-title:  autojs跳转到群
+title:  autojs跳转到QQ群
 heading: auto.js如何跳转到群
 date: 2020-04-24T02:55:34.942Z
 categories: ["code"]
@@ -84,11 +84,8 @@ auto.js  删除僵尸粉
 
 
 
-autojs下载官网		autojs老版本		autojs最新版
-autojs脚本大全		auto.js pro破解版		autojs安卓脚本大全
-autojs老版本下载		钉钉自动签到插件		autojs免费版下载
-
 若出现错误，
 java.lang.NoClassDefFoundError: android.view.SearchEvent
 
 则是因为auto.js没有适配低版本Android的原因。目测是不支持Android7以下版本。
+
