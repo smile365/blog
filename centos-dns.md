@@ -20,3 +20,8 @@ Couldn't resolve host 'mirrors.cloud.aliyuncs.com'、Could not resolve host: mir
 echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 ```
 
+或者编辑`vi /etc/resolv.conf`，在文末增加
+```dsconfig
+nameserver 8.8.8.8
+nameserver 114.114.114.114
+```
