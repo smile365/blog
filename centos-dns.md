@@ -25,3 +25,5 @@ echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 nameserver 8.8.8.8
 nameserver 114.114.114.114
 ```
+
+有疑问欢迎加入开发者交流QQ群：1003185728。
