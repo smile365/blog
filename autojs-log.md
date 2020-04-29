@@ -7,9 +7,9 @@ tags: ["autojs 7.0下载","autojs"]
 description: 手机autojs菜鸟教程，Auto.js Pro图文教程	
 ---
 
-autojs的文档没有pdf格式可供下载，只能去看网页版官方文档地址：`https://hyb1996.github.io/AutoJs-Docs`。文档支持Auto.js 4和auto.js pro7两个版本。作者hyb1996还没来得及写Auto.js 8.0 pro的文档，如果你用的是auto.js pro8只能自己研究。
+autojs的文档没有pdf格式可供下载，只能去看网页版官方文档地址：`https://hyb1996.github.io/AutoJs-Docs`。文档支持Auto.js 4（免费版）和auto.js pro7（收费版）两个版本。作者hyb1996还没来得及写Auto.js 8.0 pro的文档，如果你用的是auto.js pro8只能自己研究。
 
-我目前用的是autojs 7.0 pro，可以到这里[下载Auto.js app](https://www.sxy91.com/posts/autojs/)
+我目前用的是autojs 7.0 pro，官网已经不支持下载。如果需要老版本和最新版本可以到这里[下载Auto.js app](https://www.sxy91.com/posts/autojs/)
 
 
 使用autojs写脚本的时候，最需要的就是调试信息，不然无法知道出错的信息。一般打印日志的方法是log、print、console等。但在手机上如何显示呢。
@@ -34,8 +34,11 @@ console.setGlobalLogConfig({
 ```
 
 
+有疑问欢迎加入AutoJs的交流QQ群提问：`1003185728`。
 
+参考文章
 
+- [Auto.js自动打开QQ群的方法](https://www.sxy91.com/posts/autojs-qq-group/)
 
 
 
