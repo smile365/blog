@@ -1,5 +1,5 @@
 ---
-title:  autojs自动跳转到QQ群
+title:  autojs自动跳转到QQ群并打开
 heading: auto.js如何跳转到QQ群
 date: 2020-04-24T02:55:34.942Z
 categories: ["code"]
