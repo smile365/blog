@@ -8,4 +8,12 @@ description:
 ---
 
 
-无法解析域名，
+
+
+若出现Couldn't resolve host 'mirrors.cloud.aliyuncs.com'、Could not resolve host: mirrors.aliyun.com; 未知的错误、Could not resolve host: mirrors.tuna.tsinghua.edu.cn; 未知的错误等.
+
+因无法解析域名，需要配置域名解析服务器。
+
+```bash
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+```
