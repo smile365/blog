@@ -8,9 +8,8 @@ tags:
 description: 
 ---
 
-下载[nodejs](https://nodejs.org/zh-cn/download/)并安装
+mac 或者windos建议直接下载[nodejs](https://nodejs.org/zh-cn/download/)安装包进行安装。
 
-配置[npm镜像](https://npm.taobao.org/)
 
 在centos7安装[nodejs](https://nodejs.org/en/download/package-manager/)
 
@@ -33,7 +32,7 @@ npm -v
 ```
 
 
-nodejs的npm比较慢，可以配置成阿里巴巴的npm镜像
+nodejs的npm比较慢，可以配置成阿里巴巴的[npm镜像](https://npm.taobao.org/)
 
 ```bash
 # 安装cnpm
@@ -43,3 +42,5 @@ cnpm install [name]
 #也可以直接执行以下命令，将镜像地址改为淘宝的npm镜像地址
 npm config set registry https://registry.npm.taobao.org
 ```
+
+欢迎加入开发者交流QQ群：334118484。
