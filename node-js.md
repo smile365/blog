@@ -7,11 +7,11 @@ tags:
 description: 
 ---
 
+截止今天（2020年4月29日）推荐多数用户使用的是长期支持版(LTS)12.16.3 
+
 mac 或者windos建议直接下载[nodejs](https://nodejs.org/zh-cn/download/)安装包进行安装。
 
 在centos7安装[nodejs](https://nodejs.org/en/download/package-manager/)
-
-截止今天（2020年4月29日）推荐多数用户使用的是长期支持版(LTS)12.16.3 
 
 先配置安装源[nodejs-yum-source](https://github.com/nodesource/distributions)
 
