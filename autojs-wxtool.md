@@ -1,12 +1,11 @@
 ---
-title:  
-heading: auto.js实现微信双向删除好友功能
+title:  auto.js实现微信双向删除好友功能
+heading: 
 date: 2020-04-30T07:09:17.772Z
 categories: ["code"]
-tags: 
-description: 
+tags: ["微信双向删除好友","微信检测僵尸粉源码"]
+description: 批量删除微信好友,清粉源码,基于autojs开发的免root自动化脚本，微信批量删除朋友圈脚本,使用auto.js编写的免root运行。autojs微信群自动添加好友。
 ---
-
 
 
 已经把autojs的代码脚本封装成了app，具体可以查看[这个链接](https://www.sxy91.com/posts/wechat-delete-user/)。
@@ -73,17 +72,7 @@ function send_fail(){
     }else{
         del_user(); // 直接删除用户
     }
-    
     btn_back(); //在聊天界输入界面点返回，回到可看到“通讯录”按钮
-    
-}
-
-function btn_back(){
-    // 点击左上角返回
-    var btn_back = desc("返回").findOne(1500);
-    if(btn_back){
-        btn_back.parent().click(); 
-    }
 }
 
 function send_msg(s){
