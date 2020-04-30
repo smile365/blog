@@ -8,7 +8,7 @@ description: 批量删除微信好友,清粉源码,基于autojs开发的免root�
 ---
 
 
-已经把autojs的代码脚本封装成了app，具体可以查看[这个链接](https://www.sxy91.com/posts/wechat-delete-user/)。
+已经把autojs的代码脚本封装成了app，具体可以查看[这个链接](https://www.sxy91.com/posts/wxtool/)。
 
 
 微信里有2000多个好友，我想知道谁拉黑了我，谁删除了我。目前有两种方式：
