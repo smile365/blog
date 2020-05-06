@@ -23,8 +23,11 @@ yum install python34-devel
 ```
 
 #### 临时使用
+
 ```bash
+# 普通安装
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+# 使用requirements.txt安装依赖
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
