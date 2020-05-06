@@ -7,31 +7,46 @@ tags:
 categories: ["code"] 
 ---
 
-### 下载[get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
+
+
+#### 安装pip
+若没有pip，下载并安装[get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 ```shell
 wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
 ```
 
-### 配置清华pip镜像作为默认源
-修改 `~/.config/pip/pip.conf` (Linux), `%APPDATA%\pip\pip.ini` (Windows 10) 或 `$HOME/Library/Application Support/pip/pip.conf` (macOS) (没有就创建一个)， 修改 `index-url`至tuna，例如
+若遇到致命错误：Python.h：没有那个文件或目录，需要安装python-devel，如：
+
+```shell
+yum install python34-devel
+```
+
+#### 临时使用
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+
+#### 默认使用  
+
+配置清华pip镜像作为默认源,修改文件(没有就创建一个): 
+- Linux：`~/.config/pip/pip.conf` 
+- Windows：`%APPDATA%\pip\pip.ini` 
+- macOS：`$HOME/Library/Application Support/pip/pip.conf`
+
+修改 `index-url`至tuna，如下
 
 ```ini
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-pip 和 pip3 并存时，只需修改` mkdir -p ~/.pip/ && vim ~/.pip/pip.conf`。
 
-### 安装pip
-```shell
-python get-pip.py
-```
+pip 和 pip3 并存时，只需修改一个文件即可` mkdir -p ~/.pip/ && vim ~/.pip/pip.conf`。
 
 
-致命错误：Python.h：没有那个文件或目录
-```shell
-yum install python34-devel
-```
-参考
+参考  
 - [get-pip.py](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py)
 - [pypi镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 - [aliases-and-functions](https://ashleynolan.co.uk/blog/beginners-guide-to-terminal-aliases-and-functions)
