@@ -36,3 +36,28 @@ ffmpeg -version
 # ffmpeg version 3.4.7 Copyright (c) 2000-2019 the FFmpeg developers
 ```
 
+下载[asrt](https://asrt.ailemon.me/download.html)  
+
+```bash 
+unzip ASRT_v0.6.1.zip
+cd ASRT_v0.6.1
+```
+
+使用pip安装python[所需依赖](https://github.com/nl8590687/ASRT_SpeechRecognition#python-import)
+
+```bash
+# vi requirements.txt
+python_speech_features
+TensorFlow
+Keras
+Numpy
+wave
+matplotlib
+math
+Scipy
+h5py
+http
+urllib
+#  pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
