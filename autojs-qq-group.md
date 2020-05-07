@@ -51,22 +51,19 @@ function qunSolitaire(qqgroup){
     });
 }
 ```
+
+若出现错误，
+java.lang.NoClassDefFoundError: android.view.SearchEvent
+
+则是因为auto.js没有适配低版本Android的原因。目测是不支持Android7以下版本。
+
+
 有疑问欢迎加入AutoJs的交流QQ群提问：`1003185728`。
 
-
-
+目前已经实现以下功能，需要的小伙伴私聊。   
 QQ自动点赞脚本
-
-请登录后操作。（引导到微信公众号关注，发送邀请码等）
-积分兑换，淘宝客，变现。直接支付下载6.66
-xpay，支付1.66元，自动把以下代码发送到你的邮箱。
-
-
 autojs写的QQ群批量签到脚本源代码
-
-auto.js qq群的相关搜索
 Tasker Auto .js
-
 Hyb1996 auto js
 Auto js 连接电脑
 Auto js 打包apk
@@ -78,14 +75,9 @@ Auto.js 录制
 Auto.js 启动app
 Auto.js 无障碍
 Auto js API
-
 auto.js  删除死粉
 auto.js  删除僵尸粉
 
 
 
-若出现错误，
-java.lang.NoClassDefFoundError: android.view.SearchEvent
-
-则是因为auto.js没有适配低版本Android的原因。目测是不支持Android7以下版本。
 
