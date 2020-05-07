@@ -36,3 +36,5 @@ Auto.js 打包的配置文件详解
     }
 }
 ```
+
+如果需要auto.js程序结束后显示所有日志，可以把日志级别配置到文件里。具体教程请参考[auto.js如何显示日志信息](https://sxy91.com/posts/autojs-log/)
