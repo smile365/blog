@@ -1,6 +1,6 @@
 ---
 title:  autojs project.json 配置文件详解
-heading: 
+heading: Auto.js 项目打包如何配置文件project.json
 date: 2020-05-07T08:02:33.866Z
 categories: ["code"]
 tags: 
