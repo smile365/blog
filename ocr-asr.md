@@ -48,7 +48,7 @@ cd ASRT_v0.6.1
 ```bash
 # vi requirements.txt
 python_speech_features
-TensorFlow
+TensorFlow=1.12
 Keras
 Numpy
 wave
@@ -61,3 +61,11 @@ urllib
 #  pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
+pip install -r requirements.txt -i https://pypi.douban.com/simple/
+
+pip install -i https://pypi.douban.com/simple/ TensorFlow=1.0
+
+
+```
+docker run -dit -p 8080:8080 -v /home/idb/chineseocr_lite:/data/ --name chineseocr vitzy/chineseocr_lite
+```
