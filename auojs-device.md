@@ -7,6 +7,7 @@ tags:
 description: 
 ---
 
+获取包名、设备信息等。
 
 ```javascript
 log("device:"+device.device);
