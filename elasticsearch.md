@@ -69,4 +69,8 @@ PUT /wd-analytics/_doc/test1
 	"comment":3,
 	"category":5
 }
+
+// 获取
+GET /wd-analytics/_doc/test1
 ```
+
