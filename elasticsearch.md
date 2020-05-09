@@ -20,7 +20,8 @@ Elasticsearch 基本介绍及其与 Python 的对接实现
 
 elasticsearch python create index mapping
 
-创建索引
+
+[创建索引](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html#indices-create-api-example)
 
 [定义mapping](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html#create-mapping)
 
@@ -29,3 +30,31 @@ elasticsearch python create index mapping
 设置[分片和副本](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html)。
 
 [字段数据类型](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html)
+
+
+
+使用kibana的控制台创建索引如下
+```json
+PUT /wd-analytics
+{
+	"settings" : {
+        "index" : {
+            "number_of_shards": 5, 
+            "number_of_replicas" : 2 
+        }
+    },
+    "mappings" : {
+        "properties" : {
+            "date": {
+		        "type":   "date",
+		        "format": "yyyy-MM-dd HH"
+		    },
+		    "mood":{"type":"short"},
+		    "comment":{"type":"short"},
+		    "category":{"type":"short"}
+        }
+    }
+}
+```
+
+插入测试数据
