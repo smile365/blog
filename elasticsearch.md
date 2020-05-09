@@ -58,3 +58,15 @@ PUT /wd-analytics
 ```
 
 插入测试数据
+```json
+PUT /wd-analytics/_doc/test1
+{
+	"source1":"wechat",
+	"source2":"wechat",
+	"keywords":["疫情","武汉"],
+	"date":"2020-05-09 07",
+	"mood":5,
+	"comment":3,
+	"category":5
+}
+```
