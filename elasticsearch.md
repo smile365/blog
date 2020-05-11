@@ -50,16 +50,17 @@ PUT /wd-analytics
 		        "type":   "date",
 		        "format": "yyyy-MM-dd HH"
 		    },
+		    "keywords": {"type":  "keyword"},
 		    "mood":{"type":"short"},
 		    "comment":{"type":"short"},
 		    "category":{"type":"short"}
         }
     }
 }
-
 // 查看创建索引的信息
 GET /wd-analytics/
 ```
+
 
 插入测试数据
 ```json
@@ -86,6 +87,7 @@ GET /wd-analytics/_search
 使用python客户端获取
 
 ```python
+# pip install elasticsearch
 from elasticsearch import Elasticsearch
 es = Elasticsearch(hosts=['192.168.1.3:9200','192.168.1.4:9200'])
 res = es.get(index="wd-analytics", id="test1")
@@ -101,4 +103,54 @@ elasticsearch.exceptions.AuthenticationException: AuthenticationException(401, '
 因为没有登录授权，使用如下连接方式:
 ```python
 es = Elasticsearch(hosts=['username:password@192.168.1.3:9200','username:password@192.168.1.4:9200'])
+```
+
+
+聚合统计
+统计新闻资讯中每个小时的新闻数量，关键词需同时包含`疫情`和`武汉`，时间范围需从2020-04-22 0点到2020-05-22 0点，聚合后的结果按照时间升序排序。
+
+```json
+POST /wd-analytics/_search
+{
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "range": {
+            "date": {
+              "gt": "2020-04-22 00",
+              "lt": "2020-05-22 00"
+            }
+          }
+        },
+        {
+          "terms": {
+            "keywords" : ["疫情","武汉"]
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "count_by_date": {
+      "terms": {
+        "field": "date",
+        "order": {
+          "_key": "asc"
+        }
+      }
+    }
+  }
+}
+```
+
+
+上面的查询语句改成用elasticsearch-dsl的python客户端聚合如下  
+```python
+s = Search(using=client, index="wd-analytics").extra(size=0)\
+	.filter('range', date={'gt': '2020-04-22 00', 'lt' : '2020-05-22 00'})\
+	.filter("terms", keywords=["疫情","武汉"])
+
+s.aggs.bucket('count_by_date','terms',field='date',order={'_key': 'asc'})
 ```
