@@ -59,6 +59,7 @@ PUT /wd-analytics
 
 插入测试数据
 ```json
+// 插入
 PUT /wd-analytics/_doc/test1
 {
 	"source1":"wechat",
@@ -72,6 +73,9 @@ PUT /wd-analytics/_doc/test1
 
 // 获取
 GET /wd-analytics/_doc/test1
+
+// 统计总文档数
+GET /wd-analytics/_count
 ```
 
 使用python客户端获取
