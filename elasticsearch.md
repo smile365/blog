@@ -138,7 +138,8 @@ POST /wd-analytics/_search
         "field": "date",
         "order": {
           "_key": "asc"
-        }
+        },
+        "size":1000
       }
     }
   }
@@ -152,5 +153,5 @@ s = Search(using=client, index="wd-analytics").extra(size=0)\
 	.filter('range', date={'gt': '2020-04-22 00', 'lt' : '2020-05-22 00'})\
 	.filter("terms", keywords=["疫情","武汉"])
 
-s.aggs.bucket('count_by_date','terms',field='date',order={'_key': 'asc'})
+s.aggs.bucket('count_by_date','terms',field='date',order={'_key': 'asc'},size=1000)
 ```
