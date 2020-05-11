@@ -74,3 +74,22 @@ PUT /wd-analytics/_doc/test1
 GET /wd-analytics/_doc/test1
 ```
 
+使用python客户端获取
+
+```python
+from elasticsearch import Elasticsearch
+es = Elasticsearch(hosts=['192.168.1.3:9200','192.168.1.4:9200'])
+res = es.get(index="wd-analytics", id="test1")
+print(res)
+```
+
+出现错误： 
+```python
+raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.AuthenticationException: AuthenticationException(401, 'security_exception', 'missing authentication credentials for REST request [/_bulk]')
+```
+
+因为没有登录授权，使用如下连接方式:
+```python
+es = Elasticsearch(hosts=['username:password@192.168.1.3:9200','username:password@192.168.1.4:9200'])
+```
