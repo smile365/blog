@@ -151,7 +151,7 @@ select keyword,dtime,sum(amount) from keyword1h where keyword='冠状病毒' and
 20 rows in set. Elapsed: 0.059 sec. Processed 1.34 million rows, 24.48 MB (22.55 million rows/s., 412.69 MB/s.) 
 ```
 
-聚合了20行结果，耗时：0.059秒。 处理了134万行，24.48 MB（2255万行/秒，412.69 MB /秒）。这性能，速度快的令人尖叫。
+聚合了20行结果，耗时：0.059秒。 处理了134万行，24.48 MB（2255万行/秒，412.69 MB /秒）。这性能，clickhouse查询速度快的令人尖叫。
 
 参考
 
