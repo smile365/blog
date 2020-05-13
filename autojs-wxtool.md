@@ -107,7 +107,7 @@ usersCache.put = function(name,value){
     return value;
 }
 
-var send_message = "请关注微信「下课了」公众号，获取最新版";
+var send_message = "请关注微信「下课了」公众号，回复「autojs」获取最新版源码";
 
 function get_weid(){
     // 获取备注、昵称、微信号、地区
