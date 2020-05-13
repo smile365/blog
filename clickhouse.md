@@ -1,11 +1,17 @@
 ---
 title:  clickhouse教程
-heading: 
+heading:  clickhouse入门教程手册
 date: 2020-03-12T03:06:50.536Z
 categories: ["code"]
-tags: 
+tags: ["clickhouse教程","clickhouse场景","clickhouse安装"]
 description: 
 ---
+
+ClickHouse是一个开源列式数据库，由俄罗斯排名第一的搜索引擎公司Yandex开发，主要用于线上分析处理（OLAP）。该系统允许分析实时更新的数据，以高性能著称。clickhouse官网地址：https://clickhouse.tech
+
+ClickHouse的主键不具有唯一性，其使用场景比较适合在并发低，需要实时分析大规模数据的业务场景中。
+
+在centos 7安装ClickHouse过程如下：
 
 `CentOS 7`换成[清华的镜像](https://mirrors.tuna.tsinghua.edu.cn/help/centos/)或者[阿里云的镜像](https://developer.aliyun.com/mirror/centos?spm=a2c6h.13651102.0.0.3e221b11XBR0VU)
 
