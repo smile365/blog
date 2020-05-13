@@ -1,9 +1,9 @@
 ---
-title:  auto.js实现微信双向删除好友功能
-heading: 
+title: autojs清理删除微信好友
+heading: auto.js实现微信双向删除好友功能
 date: 2020-04-30T07:09:17.772Z
 categories: ["code"]
-tags: ["微信双向删除好友","微信检测僵尸粉源码"]
+tags: ["微信双向删除好友","微信检测僵尸粉源码","auto.js清理微信好友"]
 description: 批量删除微信好友,清粉源码,基于autojs开发的免root自动化脚本，微信批量删除朋友圈脚本,使用auto.js编写的免root运行。autojs微信群自动添加好友。
 ---
 
