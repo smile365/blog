@@ -50,3 +50,12 @@ description:
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1589468610677.png)
 
 
+**最后**
+
+为了检验上面的思考，以后每年将做部分数据记录。
+
+- 各个城市房子均价（12月+/12）、GDP、年人均工资
+- 上证指数（12+/12）
+- 深圳指数（12+/12）
+- 上证50ETF
+- 米、面、奶、蛋、蔬菜、水果、粮食等均价。
