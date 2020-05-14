@@ -36,7 +36,7 @@ elasticsearch python create index mapping
 创建索引前要考虑好各个字段的类型，创建后不支持修改，但可以新增字段。使用kibana的控制台创建索引如下： 
 ```json
 # 创建索引
-PUT /wd-analytics
+PUT /wd-analytics-v1
 {
 	"settings" : {
         "index" : {
@@ -60,6 +60,14 @@ PUT /wd-analytics
     }
 }
 
+# 创建一个别名
+POST /_aliases
+{
+    "actions" : [
+        { "add" : { "index" : "wd-analytics-v1", "alias" : "wd-analytics" } }
+    ]
+}
+
 # 查看创建索引的信息
 GET /wd-analytics/
 ```
@@ -77,6 +85,12 @@ PUT /wd-analytics/_doc/test1
 	"mood":5,
 	"comment":3,
 	"category":5
+}
+
+#更新数据
+POST test/_update/1
+{
+    "script" : "ctx._source.source1 = 'weibo'"
 }
 
 # 获取
