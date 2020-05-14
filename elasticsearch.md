@@ -90,7 +90,7 @@ PUT /wd-analytics/_doc/test1
 #更新数据
 POST test/_update/1
 {
-    "script" : "ctx._source.source1 = 'weibo'"
+    "script" : "ctx._source.source1 = 'weibo';ctx._source.source2 = 'weibo'"
 }
 
 # 获取
