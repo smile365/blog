@@ -59,3 +59,8 @@ ssh -R 8088:127.0.0.1:8088 root@sxy91.com
 
 启动wx-api进行测试。
 
+修改配置：src/main/resources/application-dev.yml
+修改日志文件的路径：src/main/resources/logback-spring.
+wx-api/
+
+
