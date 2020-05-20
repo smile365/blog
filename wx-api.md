@@ -43,7 +43,7 @@ source /home/db.sql
 ```dsconfig
 server {
     listen 80;
-	server_name dev.songxueyan.top;
+	server_name dev.sxy91.com;
 	location / {
         proxy_pass http://127.0.0.1:8088;
     }
