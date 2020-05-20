@@ -45,14 +45,14 @@ server {
     listen 80;
 	server_name dev.sxy91.com;
 	location / {
-        proxy_pass http://127.0.0.1:8088;
+        proxy_pass http://127.0.0.1:8087;
     }
 }
 ```
 
 使用ssh隧道反向代理8088端口
 ```bash
-ssh -R 8088:127.0.0.1:8088 root@sxy91.com
+ssh -R 8087:127.0.0.1:8088 root@sxy91.com
 ```
 
 使用[测试版微信公众号](https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index)配置测试信息。
