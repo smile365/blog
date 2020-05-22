@@ -11,7 +11,7 @@ categories: ["code"]
  [acme脚本](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)自动申请证书并定期自动更新。申请步骤如下：
 
 
-### 1.安装脚本
+#### 1.安装脚本
 
 ```shell
 #创建一个目录存放证书
@@ -27,7 +27,7 @@ acme.sh -v
 alias acme.sh=~/.acme.sh/acme.sh
 ```
 
-### 2.配置nginx
+#### 2.配置nginx
 
 ```nginx
 # acme.sh 会查找 -d指定的domain
@@ -37,7 +37,7 @@ server {
 }
 ```
 
-### 3.生成证书
+#### 3.生成证书
 
 ```shell
 acme.sh --issue  -d sxy91.com -d www.sxy91.com --nginx
@@ -48,16 +48,7 @@ crontab -l
 
 > 上面的方法是http验证方式，若要使用通配符配置域名，则只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
-若调试的时候出现：`Create new order error. Le_OrderFinalize not found. `错误，一般是域名没写对，或者解析出错。Let's Encrypt 在有频次限制，如果每个域名、账号在一个小时内触发了 5 次失败的验证，那么就需要等待 1 小时再试。错误信息如下：
-```json
-{
-  "type": "urn:ietf:params:acme:error:rateLimited",
-  "detail": "Error creating new order :: too many failed authorizations recently: see https://letsencrypt.org/docs/rate-limits/",
-  "status": 429
-}
-````
-
-### 4.安装证书
+#### 4.安装证书
 
 ```bash
 acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
@@ -68,7 +59,7 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
 # 会自动把证书文件复制到"/etc/nginx/ssl"目录下 并改名为sxy91，然后重启nginx。
 ```
 
-### 5. 强制使用https访问
+#### 5. 强制使用https访问
 
 配置nginx并强制使用htpps  
 ```nginx
@@ -95,7 +86,7 @@ nginx -t
 nginx -s reload
 ```
 
-### 6. 自动更新
+#### 6. 自动更新
 
 因增nginx加了rewrite强制http跳转到https,acme.sh的自动更新证书无法通过http验证，所以会失败。可以写成一个脚本或用下面的命令。
 
@@ -122,6 +113,16 @@ nginx参数说明：
 - --key-file：需要把<domain>.key复制到哪里
 - --fullchain-file：需要把fullchain.cer复制到哪里
 
+#### 7. 错误信息解决
+
+若调试的时候出现：`Create new order error. Le_OrderFinalize not found. `错误，一般是域名没写对，或者解析出错。Let's Encrypt 在有频次限制，如果每个域名、账号在一个小时内触发了 5 次失败的验证，那么就需要等待 1 小时再试。错误信息如下：
+```json
+{
+  "type": "urn:ietf:params:acme:error:rateLimited",
+  "detail": "Error creating new order :: too many failed authorizations recently: see https://letsencrypt.org/docs/rate-limits/",
+  "status": 429
+}
+````
 
 **参考**  
 
