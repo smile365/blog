@@ -102,6 +102,16 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
         --reloadcmd  "nginx -s start"
 ```
 
+生成的四个文件：
+ - <domain>.cer： 
+ - <domain>.key：  ssl_certificate_key所用文件
+ - ca.cer：  
+ - fullchain.cer： ssl_certificate所用文件 
+
+nginx参数说明：
+- --key-file：需要把<domain>.key复制到哪里
+- --fullchain-file：需要把fullchain.cer复制到哪里
+
 
 **参考**  
 
