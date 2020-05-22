@@ -64,3 +64,20 @@ ssh -R 8087:127.0.0.1:8088 root@sxy91.com
 wx-api/
 
 
+运行前端
+```
+cnpm install
+cnpm run serve
+```
+
+#### 如何打包
+
+项目名上右键
+- 1. 打开模块设置
+- 2. Artfacts
+- 3. 选择Jar，from module
+- 4. Directory目录建议改成/xxx/target
+
+
+参考  
+- [idea工具将SpringBoot工程打包成 jar或war](https://blog.csdn.net/WillJGL/article/details/75125801)
