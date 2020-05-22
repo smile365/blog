@@ -108,10 +108,10 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
 
 
 生成的四个文件：
- - **<domain>.cer**： 由ca机构签发的域名证书
- - **<domain>.key**： nginx的ssl_certificate_key参数所用文件
+ - **<domain>.cer**： 由ca机构签发的域名证书。
+ - **<domain>.key**：域名证书的私钥。nginx的ssl_certificate_key参数所用文件。
  - **ca.cer**：  CA证书
- - **fullchain.cer**： nginx的ssl_certificate参数所用文件 
+ - **fullchain.cer**：链证书，包含域名证书和ca证书。nginx的ssl_certificate参数所用文件。
 
 nginx参数说明：
 - **--key-file**：需要把<domain>.key复制到哪里
@@ -136,4 +136,5 @@ nginx参数说明：
 - [acme.sh](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)
 - [nginx2https](https://tecadmin.net/nginx-force-redirect-to-https-with-www/)
 - [nginx-force2https](https://serverfault.com/questions/250476/how-to-force-or-redirect-to-ssl-in-nginx)
+- [域名证书-证书密钥-CA证书-](https://community.letsencrypt.org/t/got-4-files-where-to-specify-them/102339)
 
