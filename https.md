@@ -1,11 +1,15 @@
 ---
 title: 申请免费https证书并自动更新 
-tags: 
- - https
- - encrypt
+heading: 申请免费的ssl证书让域名支持https访问并自动更新证书教程方法
+tags: ["ssl证书","ssl证书申请","ssl免费证书申请","ssl证书教程","https教程"]
 date: 2018-01-30
 categories: ["code"]
+description:  域名申请ssl证书，申请免费ssl证书后怎么验证域名ssl证书，
 ---
+
+想给我的域名sxy91.com加https实现域名由http升级为https,找了一圈发现一个免费的ssl证书颁发机构Let's Encrypt。
+
+申请好ssl证书，绑定好自己的域名，这样就可以通过https方式来访问，起到安全的作用。
 
  [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，可以通过
  [acme脚本](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)自动申请证书并定期自动更新。申请步骤如下：
