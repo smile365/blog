@@ -48,6 +48,14 @@ crontab -l
 
 > 上面的方法是http验证方式，若要使用通配符配置域名，则只能通过[dns模式](https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E)验证。
 
+若调试的时候出现：`Create new order error. Le_OrderFinalize not found. `错误，一般是域名没写对，或者解析出错。Let's Encrypt 在有频次限制，如果每个域名、账号在一个小时内触发了 5 次失败的验证，那么就需要等待 1 小时再试。错误信息如下：
+```json
+{
+  "type": "urn:ietf:params:acme:error:rateLimited",
+  "detail": "Error creating new order :: too many failed authorizations recently: see https://letsencrypt.org/docs/rate-limits/",
+  "status": 429
+}
+````
 
 ### 4.安装证书
 
@@ -101,6 +109,8 @@ acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
         --fullchain-file /etc/nginx/ssl/sxy91.cer \
         --reloadcmd  "nginx -s start"
 ```
+
+
 
 生成的四个文件：
  - <domain>.cer： 
