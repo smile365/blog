@@ -44,5 +44,5 @@ description:
 #### 类别分析
 统计5月份关键词包含`视频`**和**`直播`的不同类别的新闻数量占比：
 
-{"size":0,"query":{"bool":{"filter":[{"term":{"keywords":"疫情"}},{"term":{"keywords":"武汉"}},{"range":{"date":{"gte":"2020-05-01","lte":"2020-06-01","format":"yyyy-MM-dd"}}}]}},"aggs":{"NAME":{"terms":{"field":"category"}}}}
+{"size":0,"query":{"bool":{"filter":[{"term":{"keywords":"直播"}},{"term":{"keywords":"视频"}},{"range":{"date":{"gte":"2020-05-01","lte":"2020-06-01","format":"yyyy-MM-dd"}}}]}},"aggs":{"NAME":{"terms":{"field":"category"}}}}
 
