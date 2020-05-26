@@ -52,11 +52,12 @@ mv /var/lib/clickhouse/* /mnt/data2/chdata/
 vim /etc/clickhouse-server/config.xml
 # path --> /mnt/data2/chdata
 # tmp_path --> /mnt/data2/chdata/tmp
+# user_files_path
+# format_schema_path
 # 建议修改logger节点，把日志放到其他目录
 # 重启
 systemctl start clickhouse-server
 systemctl status clickhouse-server
-
 ```
 
 日志
@@ -68,3 +69,4 @@ tail -f /var/log/clickhouse-server/clickhouse-server.err.log
 
 若遇到Access to file denied，需要给权限：`chown clickhouse:clickhouse /mnt/data2/chdata`
 
+若看不到日志可直接使用`service clickhouse-server start`启动。
