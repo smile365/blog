@@ -13,7 +13,7 @@ clickhouse最重要的部分大概是表格引擎，选择合适的引擎可以�
 上次`SummingMergeTree`实现了一个类似百度指数的功能，这次把要求改变一下，要求对多个关键词计算。比如：最近8小时同时谈到`视频`和`直播`的文章数量有多少。
 
 
-创建表并使用`MergeTree`引擎,`keywords`为String数组，保存新闻分词后的所有关键词，数据根据`dtime`按天分区。
+创建表并使用`MergeTree`引擎,`keywords`为String数组，保存新闻分词后的所有关键词，数据根据`dtime`按天分区。最后三个字段分别为情绪、分类、评价。
 
 ```sql
 CREATE TABLE indexsysdb.analytics \
