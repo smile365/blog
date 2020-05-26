@@ -93,7 +93,7 @@ select keyword,dtime,source1,source2,mood,category,sum(amount) from keyword1h gr
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple clickhouse-driver[lz4]
 ```
 
-插入测试数据
+这里选用[clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver)插入测试数据: 
 ```python
 from clickhouse_driver import Client
 from datetime import datetime, timedelta, timezone
