@@ -56,7 +56,7 @@ systemctl start clickhouse-server
 clickhouse-client -h 192.168.1.135
 ```
 
-创建数据库和表，数据类型请参考[data_types](https://clickhouse-docs.readthedocs.io/en/latest/data_types/)   
+创建数据库和表，数据类型参考[data_types](https://clickhouse-docs.readthedocs.io/en/latest/data_types/)  
 ```sql
 CREATE DATABASE IF NOT EXISTS indexsysdb;
 -- use indexsysdb;
