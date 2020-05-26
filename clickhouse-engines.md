@@ -29,5 +29,8 @@ PARTITION BY toYYYYMMDD(dtime) \
 ORDER BY (dtime,keywords,source1,source2,mood,category,comment);
 ```
 
-
+插入测试数据
+```sql
+insert into analytics(keywords,dtime,source1,source2,mood,category,comment) values (['宋洋葱','clickhouse'],'2020-03-30 10:00:00','video','youtube',1,1,1);
+```
 
