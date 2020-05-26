@@ -34,3 +34,30 @@ ORDER BY (dtime,keywords,source1,source2,mood,category,comment);
 insert into analytics(keywords,dtime,source1,source2,mood,category,comment) values (['宋洋葱','clickhouse'],'2020-03-30 10:00:00','video','youtube',1,1,1);
 ```
 
+
+clickhouse错误代码
+- **243**：Cannot reserve 1.00 MiB，服务器磁盘空间不足，迁移存储路径
+- **62**：一般为sql写错
+
+数据迁移
+```bash
+#创建目录
+mkdir -p /mnt/data2/chdata
+#停止clickhouse
+systemctl stop clickhouse-server
+systemctl status clickhouse-server
+# 迁移数据文件
+mv /var/lib/clickhouse/* /mnt/data2/chdata/
+# 修改配置文件
+vim /etc/clickhouse-server/config.xml
+# path --> /mnt/data2/chdata
+# tmp_path --> /mnt/data2/chdata/tmp
+# 建议修改logger节点，把日志放到其他目录
+# 重启
+systemctl start clickhouse-server
+systemctl status clickhouse-server
+```
+
+
+
+
