@@ -56,8 +56,15 @@ vim /etc/clickhouse-server/config.xml
 # 重启
 systemctl start clickhouse-server
 systemctl status clickhouse-server
+
 ```
 
+日志
 
+```bash
+tail -f /var/log/clickhouse-server/clickhouse-server.log
+tail -f /var/log/clickhouse-server/clickhouse-server.err.log
+```
 
+若遇到Access to file denied，需要给权限：`chown clickhouse:clickhouse /mnt/data2/chdata`
 
