@@ -70,3 +70,12 @@ tail -f /var/log/clickhouse-server/clickhouse-server.err.log
 若遇到Access to file denied，需要给权限：`chown clickhouse:clickhouse /mnt/data2/chdata`
 
 若看不到日志可直接使用`service clickhouse-server start`启动。
+
+聚合查询语句
+```sql
+--- 按月统计数据量
+select toYYYYMM(dtime) as date,count(date) as num from analytics group by date;
+--- 统计5月份每天的数据量
+select toYYYYMMDD(dtime) as date,count(date) as num from analytics where dtime >= '2020-05-01 00:00:00' and dtime < '2020-06-01 00:00:00'  group by date order by date;
+```
+
