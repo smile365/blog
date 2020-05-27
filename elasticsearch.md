@@ -41,7 +41,13 @@ PUT /wd-analytics-v1
 	"settings" : {
         "index" : {
             "number_of_shards": 5, 
-            "number_of_replicas" : 2 
+            "number_of_replicas" : 1,
+            "refresh_interval" : "120s",
+            "translog" : {
+              "flush_threshold_size" : "1024mb",
+              "sync_interval" : "120s",
+              "durability" : "async"
+            }
         }
     },
     "mappings" : {
