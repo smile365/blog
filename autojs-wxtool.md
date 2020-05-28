@@ -34,7 +34,7 @@ description: 批量删除微信好友,清粉源码,基于autojs开发的免root�
 如果人数太多（像我这样2000人好友），那一个一个手动操作也太累了。刚好Android提供无障碍服务(AccessibilityService)，可以通过代码来模拟人的操作。借助autojs即可完成上述功能。
 
 
-部分代码如下:
+2020微信检测删除好友代码如下:
 ```javascript
 /**
  * 微x工具箱
@@ -142,4 +142,3 @@ var lvid ;
 var not_bottom = true;
 ```
 
-2020微信检测删除好友代码
