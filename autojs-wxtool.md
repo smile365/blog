@@ -43,23 +43,6 @@ description: 批量删除微信好友,清粉源码,基于autojs开发的免root�
  * @site https://sxy91.com
  */
 var users = {};
-
-function etit_msg(sbtn){
-    // 编辑消息并发送
-    sbtn.parent().parent().click();
-    var et = className("EditText").findOne(2000);
-    if(!et){
-        desc("切换到键盘").findOne(1000).click();
-        et = className("EditText").findOne(2000);
-    }
-    if(send_message){
-        et.setText(send_message);
-        sleep(200);
-        text("发送").findOne(2000).click();
-        sleep(200);
-    } 
-}
-
 let mode = 1; // 1=mark_user,2=del_user
 function send_fail(){
     // 找到重发按钮，并标记用户
@@ -109,23 +92,7 @@ usersCache.put = function(name,value){
 
 var send_message = "请关注微信「下课了」公众号，回复「autojs」获取最新版源码";
 
-function get_weid(){
-    // 获取备注、昵称、微信号、地区
-    var uinfo = {};
-    eid = textStartsWith("微信号").findOne(2000);
-    wid = name_id_address(eid);
-    uinfo.id = wid;
-    if(usersCache.get(wid,0)==1){
-        log("已经发送过了👇");
-        desc("返回").findOne().parent().click();
-        return uinfo;
-    }
-    send_msg(send_message);
-    usersCache.put(wid,1);
-    var stime = Math.ceil(Math.random()*1000+500); //500~1500
-    sleep(stime);
-    return uinfo;
-}
+
 
 var from_user = null;//"叶青"; //从谁开始,设置为null关闭
 //var find_flag = false; //是否找到
@@ -173,28 +140,6 @@ function finduser(){
 var friends = {}
 var lvid ;
 var not_bottom = true;
-
-function get_all_users(){
-    btn = text("通讯录").findOne(2000);
-    btn.parent().parent().click();
-    sleep(500);
-    lv = className("ListView").find(3000); //联系人的listview
-    lvid = lv[1].id();
-    log("ListView id= "+lvid);
-    var bottom_num = 0;
-    while(bottom_num<2){
-        u = finduser();
-        moveto(u[0],u[1]);
-        var ele_bottom = textEndsWith("位联系人").findOne(1000);
-        if(ele_bottom){
-            bottom_num++;
-            log(ele_bottom.text());
-        }
-    }
-    
-}
-
-get_all_users();
 ```
 
 
