@@ -142,4 +142,4 @@ var lvid ;
 var not_bottom = true;
 ```
 
-
+2020微信检测删除好友代码
