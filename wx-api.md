@@ -1,11 +1,13 @@
 ---
-title:  wx-api
-heading:
+title:  wx-api部署教程
+heading: 使用wx-api管理微信公众号
 date: 2020-05-19T08:40:28.316Z
 categories: ["code"]
 tags: 
 description: 
 ---
+
+微信公众号管理系统，包含公众号菜单管理、自动回复、素材管理、模板消息、粉丝管理️等功，适合已经认证成功的微信订阅号，个人非认证号暂不支持（没有api的权限，因此无法部署成功）。
 
 项目：
 - [后端wx-api](https://github.com/niefy/wx-api)
@@ -35,6 +37,7 @@ SELECT VERSION();
 SHOW CHARACTER SET;
 CREATE DATABASE wx CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 show databases;
+use wx;
 source /home/db.sql
 ```
 
@@ -52,7 +55,7 @@ server {
 
 使用ssh隧道反向代理8088端口
 ```bash
-ssh -R 8087:127.0.0.1:8088 root@sxy91.com
+ssh -R 8091:127.0.0.1:8088 root@sxy91.com
 ```
 
 使用[测试版微信公众号](https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index)配置测试信息。
@@ -77,6 +80,8 @@ cnpm run serve
 - 2. Artfacts
 - 3. 选择Jar，from module
 - 4. Directory目录建议改成/xxx/target
+
+#### 如何运行
 
 
 参考  
