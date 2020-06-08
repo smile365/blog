@@ -1,5 +1,5 @@
 ---
-title:  wx-api部署教程
+title:  微信公众号管理系统wx-api部署教程
 heading: 使用wx-api管理微信公众号
 date: 2020-05-19T08:40:28.316Z
 categories: ["code"]
