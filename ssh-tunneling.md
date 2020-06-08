@@ -31,12 +31,10 @@ ssh -L 3306:localhost:3306 root@sxy91.com
 ```bash
 ssh -R 8080:localhost:8088 root@sxy91.com:8080
 ```
-反向隧道的网络请求转发路径如下： 
-![反向](https://gitee.com/smile365/blogimg/raw/master/sxy91/1589941179868.png)
 
 - 第一步：访问dev.sxy91.com的8080端口
-- 第二步：sxy91.com把8080端口的请求转发给自己的ssh隧道
-- 第三步：ssh隧道把请求继续转发给本机，并把响应结果通过ssh隧道返回给sxy91.com的8080端口。
+- 第二步：sxy91.com（linux服务器）把8080端口的请求转发给ssh隧道
+- 第三步：ssh隧道把请求继续转发给本机（笔记本电脑），并把响应结果通过ssh隧道返回给sxy91.com的8080端口。
 
 
 正向即：访问客户端相当于访问服务器
