@@ -22,22 +22,22 @@ vps一分钱一分货，在众多vps提供商中，[搬瓦工](https://sxy91.com
 
 打开官网，选择分类下面的亚洲优化款，点击现在下单。
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584278499.png)
+![下单](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584278499.png)
 
 
 主机名随意填写，然后点击继续。
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584501905.png)
+![继续](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584501905.png)
 
 25美元以下的vps不支持优惠码，所以直接点击付款
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584942469.png)
+![主机名](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584942469.png)
 
 注册一个账户，选择支付宝或者微信付款即可。
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585129834.png)
+![注册](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585129834.png)
 
 点击使用支付宝购买链接即可购买。
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585275737.png)
+![付款](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585275737.png)
 
 如需安装科学上网工具请[参考教程](https://sxy91.com/posts/over-the-wall-2/)
 
