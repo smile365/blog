@@ -1,6 +1,6 @@
 ---
-title:  hostodo
-heading: hostodo注册购买教程
+title:  注册hostodo购买低价vps教程
+heading: 
 date: 2020-06-08T01:56:01.756Z
 categories: ["code"]
 tags: 
@@ -41,3 +41,5 @@ vps一分钱一分货，在众多vps提供商中，[搬瓦工](https://sxy91.com
 
 如需安装科学上网工具请[参考教程](https://sxy91.com/posts/over-the-wall-2/)
 
+
+遇到问题，欢迎加微交流：smile8365
