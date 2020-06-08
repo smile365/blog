@@ -1,9 +1,9 @@
 ---
-title:  SSH tunneling
-heading:
+title:  SSH隧道的使用
+heading: 无需任何软件实现内网穿透
 date: 2020-05-20T01:16:16.583Z
 categories: ["code"]
-tags: 
+tags: ["SSH tunneling"]
 description: 
 ---
 
