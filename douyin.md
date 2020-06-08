@@ -1,5 +1,5 @@
 ---
-title: douyin
+title: 抖音数据爬虫爬取粉丝信息数据
 heading: 抖音数据分析工具
 date: 2020-05-21T02:42:33.706Z
 categories: ["code"]
@@ -28,3 +28,4 @@ description:
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1590031715568.png)
 
+爬取的速度大概为10分钟4000条数据。
