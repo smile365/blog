@@ -18,9 +18,8 @@ description:
 | ---- | ---- | ---- |---- |
 |  hostodo[普通款](https://hostodo.com/portal/cart.php?aff=844&gid=44)   |  $19.99    | 🌟🌟🌟 | 速度适中，适合不看视频的同学    |
 |  hostodo[亚洲优化款](https://hostodo.com/portal/cart.php?aff=844&gid=36)    |   $25   | 🌟🌟🌟🌟   |  速度较快，接近搬瓦工，看视频流畅   |
-|  搬瓦工[高速网络直连版](https://hostodo.com/portal/cart.php?aff=844&gid=36)    |   $49.99   | 🌟🌟🌟🌟🌟     |速度最快， 看视高清视频无卡顿   |
+|  搬瓦工[高速网络直连版](https://bwh88.net/aff.php?aff=24326)    |   $49.99   | 🌟🌟🌟🌟🌟     |速度最快， 看高清视频无卡顿   |
 
 这两家不定期有促销活动，欢迎加入QQ群，有优惠码会在群里发放。
-
 
 
