@@ -2,7 +2,7 @@
 title:  2020最新科学上网方法教程
 heading: 2020安卓手机和pc端如何挂梯子科学上外网方法教程
 date: 2020-06-09T02:35:19.504Z
-categories: ["code"]
+categories: ["tools"]
 tags: ["科学上网","如何科学上外网"]
 description: 
 ---
