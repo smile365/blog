@@ -24,5 +24,36 @@ description:
 
 ### 2.安装所需软件
 
-[购买vps](https://sxy91.com/posts/hostodo/)成功后会收到ip地址和账号密码，需要通过ssh工具连接到vps。
+[购买vps](https://sxy91.com/posts/hostodo/)成功后会收到ip地址和账号密码，需要通过[ssh工具](https://sxy91.com/posts/over-the-wall-2/)连接到vps。
+
+无论是ss还是ssr或是其他软件，底层传输用的都是tcp协议，目前大多数tcp连接都被防火墙阻断了。因此需要修改底层协议才能梯子才能正常使用。目前较为可行的底层协议为udp/socket/cdn三种方式。把tcp协议转换成其他协议的软件也有很多，较为稳定的是实现了KCP传输协议相关的软件。目前我用的也是这种方式，稳定运行两年暂未遇到问题。
+
+动手能力强的同学欢迎参考[安装和配置教程](https://sxy91.com/posts/over-the-wall-2/)，安装所需软件。
+
+vps需要两个软件：
+
+通过pip安装shadowsocks  
+```bash
+# 安装pip，通过pip安装shadowsocks
+pip -V
+yum -y install wget
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+pip install shadowsocks
+```
+
+安装kcptun-linux   
+```bash
+# wget +复制的下载链接进行下载。如：
+wget https://github.com/xtaci/kcptun/releases/download/v20190924/kcptun-linux-amd64-20190924.tar.gz
+# 解压：
+tar zxvf kcptun-linux-amd64*.tar.gz
+```
+
+
+如果嫌上面的教程太麻烦，我写了一个全自动安装脚本，有需要的同学私聊微信`smile8365`发给你，暂不公开提供。
+
+
+
+
 
