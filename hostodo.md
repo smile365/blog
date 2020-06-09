@@ -33,10 +33,11 @@ vps一分钱一分货，在众多vps提供商中，[搬瓦工](https://sxy91.com
 
 ![主机名](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584942469.png)
 
-注册一个账户，选择支付宝或者微信付款即可。
+注册一个账户，选择支付宝或者微信付款即可。   
 ![注册](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585129834.png)
 
-点击使用支付宝购买链接即可购买。
+点击使用支付宝购买链接即可购买。  
+
 ![付款](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585275737.png)
 
 如需安装科学上网工具请[参考教程](https://sxy91.com/posts/over-the-wall-2/)
