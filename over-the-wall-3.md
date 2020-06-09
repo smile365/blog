@@ -19,7 +19,7 @@ description:
 |  hostodo[亚洲优化款](https://hostodo.com/portal/cart.php?aff=844&gid=36)    |   $25   | 🌟🌟🌟🌟   |  速度较快，接近搬瓦工，看视频流畅   |
 |  搬瓦工[高速网络直连版](https://bwh88.net/aff.php?aff=24326)    |   $49.99   | 🌟🌟🌟🌟🌟     |速度最快， 看高清视频无卡顿   |
 
-这两家不定期有促销活动，欢迎加入QQ群，有优惠码会在群里发放。
+这两家不定期有促销活动，欢迎加入QQ群，有优惠码会在群里发放。<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0205580283f1d4211435b84db108766d9175a6c842da5d21dfba59ae5422461b"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="微x工具箱讨论群" title="微x工具箱讨论群"></a>
 
 
 ### 2.安装所需软件
