@@ -4,7 +4,7 @@ heading: windows server 2012 配置多个账户实现多用户同时登录远程
 date: 2020-06-16T06:23:19.495Z
 categories: ["code"]
 tags: 
-description: 
+description:  windows server 2012 r2 multiple remote desktop sessions
 ---
 
 配置组策略
