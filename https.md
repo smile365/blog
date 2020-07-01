@@ -102,7 +102,7 @@ acme.sh --issue -d sxy91.com --standalone -d www.sxy91.com
 acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
         --key-file   /etc/nginx/ssl/sxy91.key \
         --fullchain-file /etc/nginx/ssl/sxy91.cer \
-        --reloadcmd  "nginx -s start"
+        --reloadcmd  "nginx"
 ```
 
 
