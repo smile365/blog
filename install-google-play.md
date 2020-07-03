@@ -6,6 +6,8 @@ date: 2018-06-01
 categories: ["code"]
 ---
 
+你的设备不支持Google play 服务，因此无法运行 shadowsocks。
+
 在用shadowsocks的时候提示：必须更新google play服务。可以用老版本的google play去更新即可。
 
 Android手机若需要安装google play客户端，可以通过谷歌搜索`谷歌服务安装`找到符合自己手机的安装的教程。
