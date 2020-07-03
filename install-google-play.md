@@ -17,6 +17,8 @@ description: 安卓手机如何安装Google服务教程。
 
 ![安装谷歌服务](https://gitee.com/smile365/blogimg/raw/master/sxy91/1593782643114.png)
 
+一个一个允许安装，安装完成不用打开。
+
 > ps：没有找到安装器的，可以在微信搜索公众号「**下课了**」，回复「**安装器**」获取。  
 ![微信扫一扫](https://gitee.com/smile365/blogimg/raw/master/sxy91/1582087774482.png)
 
