@@ -51,8 +51,7 @@ mysql> select des_encrypt("password","key");
 
 因为`des_encrypt`返回的是二进制序列（binary），需要将字节序列编码为字符串（即baseN）才可正常显示。常见的做法是base16或base64。
 ```sql
-SELECT to_base64(aes_encrypt('password','key')); 
-SELECT hex(aes_encrypt('password','key')); 
+mysql> SELECT to_base64(aes_encrypt('password','key')); 
 mysql> SELECT hex(aes_encrypt('password','key')); 
 +------------------------------------+
 | hex(aes_encrypt('password','key')) |
@@ -63,7 +62,7 @@ mysql> SELECT hex(aes_encrypt('password','key'));
 
 `hex`即base16，意思是使用16个可见字符来表示一个二进制数组。
 
-解密方法:
+上述加密结果的解密方法:
 ```sql
 mysql> select aes_decrypt(unhex('9BDD7DE3EFED2089E18D6EB20B3C2DA0'),'key');
 +--------------------------------------------------------------+
