@@ -72,6 +72,50 @@ mysql> select aes_decrypt(unhex('9BDD7DE3EFED2089E18D6EB20B3C2DA0'),'key');
 +--------------------------------------------------------------+
 ```
 
+如果只在mysql内加密与解密，那么到这里已经足够。若使用其他语言加解密可能得到的结果与mysql加解密的不一致。这是由于mysql处理IV，明文，填充和密文的方式不一致导致的。
+
+AES分组：
+- AES-128（mysql默认）
+- AES-192
+- AES-256
+
+加密模式：
+- ECB（mysql默认）
+- CBC
+- CFB
+- CTR
+- ...
+
+更多参数可参考[AES-kwargs](https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html#Crypto.Cipher.AES.new)
+
+使用python实现mysql的aes加密解密如下：
+```python
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Cipher import AES
+BLOCK_SIZE = 16 # Bytes
+
+class MysqlAes(object):
+	"""docstring for MysqlAes"""
+	def __init__(self, key):
+		super(MysqlAes, self).__init__()
+		while len(key) % BLOCK_SIZE != 0:
+			key += '\0'		
+		self.cipher = AES.new(key.encode("utf-8"), AES.MODE_ECB)
+
+	def encrypt(self,val):
+		msg = self.cipher.encrypt(pad(val.encode("utf-8"), BLOCK_SIZE))
+		return msg.hex().upper()
+
+	def decrypt(self,val):
+		msg_dec = self.cipher.decrypt(bytes.fromhex(val.lower()))
+		return unpad(msg_dec, BLOCK_SIZE).decode('utf-8')
+
+
+sqlAes = MysqlAes("key")
+print(sqlAes.encrypt("password"))
+print(sqlAes.decrypt("9BDD7DE3EFED2089E18D6EB20B3C2DA0"))
+
+```
 
 
 参考文献：
