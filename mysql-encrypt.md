@@ -125,6 +125,35 @@ print(sqlAes.encrypt("password"))
 print(sqlAes.decrypt("9BDD7DE3EFED2089E18D6EB20B3C2DA0"))
 ```
 
+架设有如下加密解密规则：
+```sql
+--- 加密
+select HEX(aes_encrypt(lower(conv(13888888888,10,32)),'yourkey'));
+
+--- 解密
+select conv(aes_decrypt(unhex('45EE3C8976FF9FC8F4BCA57AA479DEF3'),'yourkey'),32,10);
+```
+
+
+若用python实现如下：
+```python
+# MysqlAes.py
+def baseN(num,b):
+	#把十进制转化成任意进制（36进制内）
+	return ((num == 0) and  "0" ) or ( baseN(num // b, b).lstrip("0") + "0123456789abcdefghijklmnopqrstuvwxyz"[num % b])
+
+
+phone = 13888888888
+str_32 = baseN(phone,32)
+sqlAes = MysqlAes("key")
+phone_encrypt = sqlAes.encrypt(str_32)
+print(phone_encrypt)
+phone_decrypt = sqlAes.decrypt(phone_encrypt)
+print(phone_decrypt)
+num_10 = int(phone_decrypt, 32) # 把32进制转10进制
+print(num_10)
+```
+
 
 参考文献：
 - [mysql-aes-encryption-in-java](https://info.michael-simons.eu/2011/07/18/mysql-compatible-aes-encryption-decryption-in-java/)
