@@ -90,16 +90,25 @@ AES分组：
 
 使用python实现mysql的aes加密解密如下：
 ```python
+# -*- coding: utf-8 -*-
+# @Date    : 2020-07-06 17:12:37
+# @Author  : songxueyan (sxy9103@gmail.com)
+# @Link    : https://sxy91.com
+
+# https://pycryptodome.readthedocs.io/en/latest/index.html
+# pip uninstall pycrypto
+# pip install pycryptodome
+
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Cipher import AES
-BLOCK_SIZE = 16 # Bytes
+BLOCK_SIZE = 16 # Bytes，mysql默认块大小
 
 class MysqlAes(object):
 	"""docstring for MysqlAes"""
 	def __init__(self, key):
 		super(MysqlAes, self).__init__()
 		while len(key) % BLOCK_SIZE != 0:
-			key += '\0'		
+			key += '\0'		#必须为16位长度的倍数，不足则补‘\0’
 		self.cipher = AES.new(key.encode("utf-8"), AES.MODE_ECB)
 
 	def encrypt(self,val):
@@ -114,7 +123,6 @@ class MysqlAes(object):
 sqlAes = MysqlAes("key")
 print(sqlAes.encrypt("password"))
 print(sqlAes.decrypt("9BDD7DE3EFED2089E18D6EB20B3C2DA0"))
-
 ```
 
 
