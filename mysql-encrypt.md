@@ -71,3 +71,9 @@ mysql> select aes_decrypt(unhex('9BDD7DE3EFED2089E18D6EB20B3C2DA0'),'key');
 | password                                                     |
 +--------------------------------------------------------------+
 ```
+
+
+
+参考文献：
+- [mysql-aes-encryption-in-java](https://info.michael-simons.eu/2011/07/18/mysql-compatible-aes-encryption-decryption-in-java/)
+
