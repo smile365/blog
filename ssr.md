@@ -70,11 +70,16 @@ forward-socks5t / 127.0.0.1:1081 .
 # 启动 privoxy
 privoxy /etc/privoxy/config
 # 或以指定用户如www运行privoxy：
-privoxy --user www /etc/privoxy/config
+# privoxy --user www /etc/privoxy/config
 
 # 设置privoxy开机自启
 sudo vim /lib/systemd/system/privoxy.service
+# 查看privoxy的配置
+grep -Ev '^$|#'
 ```
+
+
+
 
 填写如下内容：
 ```ini
