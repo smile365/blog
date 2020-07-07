@@ -1,13 +1,13 @@
 ---
-title:  ssr
-heading:
+title:  centos7安装和配置ssr客户端并配置privoxy
+heading: 
 date: 2020-07-07T05:38:56.953Z
 categories: ["code"]
 tags: 
 description: 
 ---
 
-#### 安装和配置ssr
+#### 安装和配置ssr客户端
 
 安装ssr
 ```bash
@@ -16,7 +16,7 @@ cd shadowsocksr
 vim config.json
 ```
 
-配置
+配置客户端
 ```json
 {
     "server": "0.0.0.0",
