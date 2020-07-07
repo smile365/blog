@@ -104,6 +104,22 @@ curl -x http://127.0.0.1:8118 http://httpbin.org/ip
 }
 ```
 
+python的requests如何配置代理
+```python
+http_proxies = dict(
+    http='http://127.0.0.1:8118',
+    https='https://127.0.0.1:8118',
+)
+
+socks5_proxies = dict(
+	http='socks5:127.0.0.1:1080',
+	https='socks5:127.0.0.1:1080'
+)
+
+import requests 
+r = requests.get("http://httpbin.org/ip", proxies=http_proxies)
+r2 = requests.get("http://httpbin.org/ip", proxies=http_proxies)
+```
 
 
 参考文献：
