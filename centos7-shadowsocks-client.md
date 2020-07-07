@@ -9,11 +9,6 @@ description: Linux安装shadowsocks和shadowsocks-libev
 
 本篇文章为客户端安装和配置教程，CentOS安装和配置shadowsocks服务端请参考另外的[教程]()
 
-
-
-
-
-
 可使用pip直接安装，安装完成后有客户端和服务端启动命令。
 ```bash
 yum install python-pip
