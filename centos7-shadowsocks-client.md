@@ -1,6 +1,6 @@
 ---
-title:  Linux环境centos7安装shadowsocks-client客户端
-heading: 
+title:  Linux安装shadowsocks客户端教程
+heading: 2020年Linux环境centos7安装shadowsocks-client客户端教程方法
 date: 2020-07-07T02:42:23.828Z
 categories: ["code"]
 tags: ["CentOS科学上网","shadowsocks-libev"]
