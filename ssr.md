@@ -23,7 +23,7 @@ vim config.json
     "server_ipv6": "::",
     "server_port": 8388,
     "local_address": "127.0.0.1",
-    "local_port": 1080,
+    "local_port": 1081,
     "password": "m",
     "method": "aes-128-ctr",
     "protocol": "auth_aes128_md5",
@@ -63,9 +63,9 @@ yum install privoxy
 # 安装好后，修改一下配置：
 vim /etc/privoxy/config
 # 搜索forward-socks5t将
-forward-socks5t / 127.0.0.1:9050 .
+# forward-socks5t / 127.0.0.1:1080 .
 # 取消注释并修改为：
-forward-socks5t / 127.0.0.1:1080 .
+forward-socks5t / 127.0.0.1:1081 .
 
 # 启动 privoxy
 privoxy /etc/privoxy/config
@@ -112,13 +112,14 @@ http_proxies = dict(
 )
 
 socks5_proxies = dict(
-	http='socks5:127.0.0.1:1080',
-	https='socks5:127.0.0.1:1080'
+	http='socks5:127.0.0.1:1081',
+	https='socks5:127.0.0.1:1081'
 )
 
 import requests 
 r = requests.get("http://httpbin.org/ip", proxies=http_proxies)
-r2 = requests.get("http://httpbin.org/ip", proxies=http_proxies)
+r2 = requests.get("http://httpbin.org/ip", proxies=socks5_proxies)
+
 ```
 
 
