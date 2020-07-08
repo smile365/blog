@@ -7,7 +7,7 @@ tags: ["CentOS科学上网","shadowsocks-libev"]
 description: Linux安装shadowsocks和shadowsocks-libev
 ---
 
-本篇文章为客户端安装和配置教程，CentOS安装和配置shadowsocks服务端请参考另外的[教程]()
+本篇文章为客户端安装和配置教程，CentOS安装和配置shadowsocks服务端请参考另外的[教程](https://sxy91.com/posts/over-the-wall-2/)
 
 可使用pip直接安装，安装完成后有客户端和服务端启动命令。
 ```bash
@@ -59,3 +59,9 @@ yum install -y libsodium libsodium-devel
 
 
 CentOS 7 shadowsocks 开机 启动
+
+
+
+参考文献：
+- [shadowsocks+Privoxy](https://xeylon.com/server/140.html)
+- 
