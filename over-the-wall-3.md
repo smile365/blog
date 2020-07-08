@@ -41,8 +41,20 @@ pip -V
 yum -y install wget
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
+# 安装默认版
 pip install shadowsocks
+# 安装最新版
+# pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U
 ```
+
+启动方式： 
+```
+# 前台启动：ssserver -c shadowsocks.json
+# 后台启动：ssserver -c shadowsocks.json -d start
+# 关闭：ssserver -c shadowsocks.json -d stop
+# 日志文件：/var/log/shadowsocks.log
+```
+
 
 安装kcptun-linux   
 ```bash
