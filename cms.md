@@ -7,14 +7,14 @@ tags: ["cms系统","blog系统","内容管理系统"]
 description: 有没有比较好用且开源的个人博客系统
 ---
 
-名称，开发语言，发展年限，推荐等级
 
-| 名称    |   开发语言  | 发展年限    |  推荐等级   |
+
+| 名称    |   开发语言  | 推荐等级    |  其他   |
 | --- | --- | --- | --- |
-|     |     |     |     |
-|     |     |     |     |
-|     |     |     |     |
-|     |     |     |     |
+|  [solo](https://github.com/88250/solo)   |  java   |   5🌟  |     |
+|  [halo](https://github.com/halo-dev/halo)   | java    | 4🌟    |     |
+|  [typecho](https://github.com/typecho/typecho)  |  php   |  5🌟   |     |
+|  [DoraCMS](https://github.com/doramart/DoraCMS)   |  nodejs   |   3🌟  | Mongodb    |
 
 
 #### Solo
@@ -39,14 +39,6 @@ Solo是一款小而美的博客系统。功能丰富，主题众多。第一个�
 
 
 
-名称、代码更新、使用人群、稳定度、扩展程度、综合平凡
-
-持续维护
-贡献人数
-发展年限
-人群广度
-稳定程度
-扩展程度
 
 
 个人博客系统哪个好用		typecho博客系统		wordpress官网
