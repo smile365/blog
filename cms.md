@@ -16,6 +16,14 @@ description: 有没有比较好用且开源的个人博客系统
 |  [typecho](https://github.com/typecho/typecho)  |  php   |  5🌟   |  mysql   |
 |  [DoraCMS](https://github.com/doramart/DoraCMS)   |  nodejs   |   3🌟  | Mongodb    |
 
+Solo 
+Solo是一款小而美的博客系统。虽小但社区活跃高，功能超丰富，主题众多。第一个版本发布于2010年，最近更新与3天前。
+
+typecho 
+
+不需要vps，只需要支持php的虚拟主机即可运行，占用内存小。
+
+
 
 #### Solo
 
