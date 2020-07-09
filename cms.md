@@ -9,11 +9,11 @@ description: 有没有比较好用且开源的个人博客系统
 
 
 
-| 名称    |   开发语言  | 推荐等级    |  其他   |
+| 名称    |   开发语言  | 推荐等级    |  使用数据库   |
 | --- | --- | --- | --- |
-|  [solo](https://github.com/88250/solo)   |  java   |   5🌟  |     |
-|  [halo](https://github.com/halo-dev/halo)   | java    | 4🌟    |     |
-|  [typecho](https://github.com/typecho/typecho)  |  php   |  5🌟   |     |
+|  [solo](https://github.com/88250/solo)   |  java   |   5🌟  | mysql    |
+|  [halo](https://github.com/halo-dev/halo)   | java    | 4🌟    |  mysql   |
+|  [typecho](https://github.com/typecho/typecho)  |  php   |  5🌟   |  mysql   |
 |  [DoraCMS](https://github.com/doramart/DoraCMS)   |  nodejs   |   3🌟  | Mongodb    |
 
 
