@@ -23,10 +23,9 @@ vps一分钱一分货，在众多vps提供商中，[搬瓦工](https://sxy91.com
 打开官网，选择订购主机(Order Hosting)
 ![忽略自动翻译](https://gitee.com/smile365/blogimg/raw/master/sxy91/1594561280289.png)
 
-选择分类下面的亚洲优化款，点击现在下单。
+点击小三角打开分类，从下面的配置中选择一个自己合适的。推荐第一款19.9美元，或者第三款25美元，然后点击现在下单。
 
-![下单](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584278499.png)
-
+![下单](https://gitee.com/smile365/blogimg/raw/master/sxy91/1594561744066.png)
 
 主机名随意填写，然后点击继续。
 
