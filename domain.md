@@ -24,3 +24,6 @@ description:
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1594528685117.png)
 
+剩下的是记录值，填写购买的服务器公网ip地址。
+
+接下来就等生效了，快的话2小时，慢的话24小时。
