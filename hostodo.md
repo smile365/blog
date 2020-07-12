@@ -20,7 +20,10 @@ vps一分钱一分货，在众多vps提供商中，[搬瓦工](https://sxy91.com
 |  hostodo[亚洲优化款](https://hostodo.com/portal/cart.php?aff=844&gid=36)    |   $25   |   速度较快，接近搬瓦工，看视频流畅   |
 
 
-打开官网，选择分类下面的亚洲优化款，点击现在下单。
+打开官网，选择订购主机(Order Hosting)
+![忽略自动翻译](https://gitee.com/smile365/blogimg/raw/master/sxy91/1594561280289.png)
+
+选择分类下面的亚洲优化款，点击现在下单。
 
 ![下单](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584278499.png)
 
@@ -34,7 +37,8 @@ vps一分钱一分货，在众多vps提供商中，[搬瓦工](https://sxy91.com
 ![主机名](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591584942469.png)
 
 注册一个账户，选择支付宝或者微信付款即可。   
-![注册](https://gitee.com/smile365/blogimg/raw/master/sxy91/1591585129834.png)
+
+![注册](https://gitee.com/smile365/blogimg/raw/master/sxy91/1594561405138.png)
 
 点击使用支付宝购买链接即可购买。  
 
