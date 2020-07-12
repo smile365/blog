@@ -44,7 +44,8 @@ server {
 #### 3.生成证书
 
 ```shell
-acme.sh --issue  -d sxy91.com -d www.sxy91.com --nginx
+nginx -s stop
+acme.sh --issue  -d sxy91.com -d www.sxy91.com --standalone
 #会在 "~/.acme.sh/" 目录下生成证书文件
 #会自动创建cronjob，每天 0:00 点自动检测所有的证书
 crontab -l
