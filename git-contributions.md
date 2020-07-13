@@ -1,10 +1,10 @@
 ---
-title:  如何把github仓库项目迁移到gitee并保留历史贡献度
-heading:
+title:  git上不显示贡献度的解决办法
+heading: 如何把github仓库项目迁移到gitee并保留历史贡献度
 date: 2020-04-08T06:41:57.794Z
 categories: ["code"]
 tags: ["commit email","git 贡献度","gitee贡献度统计"]
-description: 
+description:  码云提交不显示贡献度问题，git账户提交（贡献度）没记录
 ---
 
 在码云(gitee)【新建仓库-->导入已有仓库】,输入github仓库地址，此时导入的项目commit并没有被统计到人主页的贡献度里。
