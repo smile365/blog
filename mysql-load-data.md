@@ -28,7 +28,17 @@ CREATE TABLE IF NOT EXISTS `uid_pcode`(
 mysql -uroot -p
 mysql> LOAD DATA INFILE '/mnt/data1/uid_phone.txt' IGNORE INTO TABLE uid_pcode(@c1,@c2) set uid=@c1,pcode=HEX(aes_encrypt(lower(conv(@c2,10,32)),'yourkey'));
 ```
-
+查看导入进度
+```bash
+# 查看mysql的pid
+ps -ef | grep mysqld
+# 本次是19411
+sudo ls -l /proc/19411/fd ｜grep uid_phone.txt
+# 本次是34
+sudo cat /proc/19411/fdinfo/34
+# 得到目前正在读取的位置
+# pos:	621936640
+```
 
 如果需要导出数据
 ```sql
