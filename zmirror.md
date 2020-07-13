@@ -50,7 +50,12 @@ acme.sh --issue -d twitter.sxy91.com --standalone
 申请好证书以后，配置nginx
 ```nginx
 server {
-	listen 80;
+    listen 80;
+    server_name twitter.sxy91.com;
+    rewrite ^ https://twitter.sxy91.com$request_uri? permanent;
+}
+
+server {
 	listen 443 ssl;
 	server_name  twitter.sxy91.com;
 
