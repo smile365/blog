@@ -21,6 +21,8 @@ cd twitter/
 cp more_configs/config_twitter_pc.py config.py
 vim config.py
 # 修改如下内容
+# verbose_level默认为3，会产生非常大量的debug输出
+verbose_level = 2
 # 配置代理
 my_host_name = 'twitter.sxy91.com'
 my_host_scheme = 'https://'
@@ -73,3 +75,8 @@ acme.sh --installcert -d twitter.sxy91.com  \
         --fullchain-file /etc/nginx/ssl/twitter.cer \
         --reloadcmd  "nginx"
 ```    
+
+启动
+```bash
+nohup python wsgi.py 1>twitter.out 2>&1 &
+```
