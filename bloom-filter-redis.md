@@ -1,11 +1,13 @@
 ---
-title:  bloom-filter-redis
+title:  redis配置布隆过滤器bloom-filter-redis
 date: 2019-08-06T07:12:55.203Z
 tags: 
 categories: ["code"]
 draft: true
 description: 
 ---
+
+
 
 推荐阅读[Redis 高级主题之布隆过滤器(BloomFilter)](https://juejin.im/post/5cfd060ee51d4556f76e8067)
 
