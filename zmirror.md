@@ -31,9 +31,11 @@ requests_proxies = dict(
 	https='socks5:127.0.0.1:1081'
 )
 
+# 配置端口
+vim wsgi.py 
+## 修改如下内容
 application.run(
             port=8092
-            
 ```
 
 ssl证书参考[免费ssl证书申请教程](https://sxy91.com/posts/https/)
