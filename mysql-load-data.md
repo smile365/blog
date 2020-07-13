@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `uid_pcode`(
 mysql -uroot -p
 mysql> LOAD DATA INFILE '/mnt/data1/uid_phone.txt' IGNORE INTO TABLE uid_pcode(@c1,@c2) set uid=@c1,pcode=HEX(aes_encrypt(lower(conv(@c2,10,32)),'yourkey'));
 ```
+
 查看导入进度
 ```bash
 # 查看mysql的pid
