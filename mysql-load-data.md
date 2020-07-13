@@ -34,6 +34,7 @@ mysql> LOAD DATA INFILE '/mnt/data1/uid_phone.txt' IGNORE INTO TABLE uid_pcode(@
 # 查看mysql的pid
 ps -ef | grep mysqld
 # 本次是19411
+# 查看打开的文件描述符编号
 sudo ls -l /proc/19411/fd ｜grep uid_phone.txt
 # 本次是34
 sudo cat /proc/19411/fdinfo/34
