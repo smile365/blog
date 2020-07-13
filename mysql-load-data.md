@@ -38,7 +38,7 @@ ps -ef | grep mysqld
 sudo ls -l /proc/19411/fd ｜grep uid_phone.txt
 # 本次是34
 sudo cat /proc/19411/fdinfo/34
-# 得到目前正在读取的位置
+# 打印已读取的字节数
 # pos:	621936640
 ```
 
