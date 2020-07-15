@@ -16,7 +16,9 @@ description:
     access_log  /var/log/nginx/access.log  main;
 ```
 
-|   参数  |   说明  |
+下面是log_format指令中常用的一些变量：
+
+|   变量  |   说明  |
 | --- | --- |
 |	$bytes_sent	|	发送给客户端的总字节数
 |	$body_bytes_sent	|	发送给客户端的字节数，不包括响应头的大小
@@ -37,3 +39,14 @@ description:
 |	$remote_user	|	客户端用户名称，针对启用了用户认证的请求
 |	$request_uri	|	完整的请求地址，如 "https://sxy91.com/"
 
+可根据自己需要选择。
+
+推荐的格式如下
+```nginx
+    log_format  main  '$remote_addr - $time_iso8601 [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+```
