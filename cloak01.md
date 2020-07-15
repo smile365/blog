@@ -10,7 +10,6 @@ description:
 [cloak技术](https://www.c1oak.com/)策略-如何用cloak系统来跑Facebook广告
 
 
-
 跨境电商绕不开Google/Facebook/Twitter等几大流量平台，在这些平台推广商品规则众多，部分商品一不小心就触犯了平台方的广告推广规则，轻则无效，重则关小黑屋。
 
 另外，网络世界的流量相当巨大，除了爬虫Spider、还有spy工具等非人类用户。如何防止爬虫模拟真实用户去抓你的Banner或者Landing Page。
