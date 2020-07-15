@@ -1,5 +1,5 @@
 ---
-title:  cloak01
+title:  从0到1开发一套claok系统|day1
 heading: cloak技术策略，如何用cloak系统来跑Facebook广告
 date: 2020-07-15T06:15:39.400Z
 categories: ["code"]
@@ -55,7 +55,7 @@ Cloak系统应对的流量多且咋，因此难于设计，造成了Cloak程序�
 
 
 
-从0到1开发一套claok系统|day1
+
 
 Cloak技术简介
 是什么，为什么需要，需求是什么，如何实现
