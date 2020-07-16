@@ -8,10 +8,25 @@ description:
 
 centos
 
+
 ```bash
 yum -y install go
 go version
 ```
+
+[或者通过压缩包安装](https://golang.google.cn/dl/)  
+```bash
+# 下载
+wget https://golang.google.cn/dl/go1.14.5.linux-amd64.tar.gz
+# 解压
+tar -C /usr/local -xzf go1.14.5.linux-amd64.tar.gz
+# 配置环境变量
+vim /etc/profile
+# 尾部增加如下内容：
+export PATH=$PATH:/usr/local/go/bin
+# 重新打开一个shell即可
+```
+
 
 mac
 
