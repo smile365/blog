@@ -8,13 +8,27 @@ tags: ["python","onion","proxy","tor","scrapy"]
 description: 
 ---
 
+centos安装tor
 ```bash
 yum -y install tor
 #mac brew install tor
-# 使用ss代理连接tor桥
-echo "Socks5Proxy 192.168.159.1:1080" >> /etc/tor/torrc
+
+# 编辑配置文件
+vim  /etc/tor/torrc
+```
+
+修改配置文件
+```
+Socks5Proxy 192.168.159.1:1080 # 使用ss代理连接tor桥
+CookieAuthentication 1         # 开启cookies
+ControlPort 9051               # 配置通讯端口
+```
+
+启动
+```bash
 systemctl start tor
 ```
+
 
 ```python
 proxies = {'http': 'socks5h://127.0.0.1:9050', 'https': 'socks5h://127.0.0.1:9050'}
