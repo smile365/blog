@@ -18,7 +18,7 @@ systemctl start tor
 mac安装tor
 ```bash
 mac brew install tor
-cp /usr/local/etc/tor/torrc.custom /usr/local/etc/tor/torrc
+cp /usr/local/etc/tor/torrc.sample /usr/local/etc/tor/torrc
 echo "Socks5Proxy 127.0.0.1:1080" >> /usr/local/etc/tor/torrc
 ```
 
