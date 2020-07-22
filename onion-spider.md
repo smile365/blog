@@ -38,7 +38,7 @@ python测试代码
 ```python
 proxies = {'http': 'socks5h://127.0.0.1:9050', 'https': 'socks5h://127.0.0.1:9050'}
 not_evil = "http://hss3uro2hsxfogfq.onion/"
-data = requests.get(url3,proxies=proxies).text
+data = requests.get(not_evil,proxies=proxies).text
 print(data)
 ```
 
