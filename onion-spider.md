@@ -11,22 +11,27 @@ description:
 centos安装tor
 ```bash
 yum -y install tor
-echo "Socks5Proxy 127.0.0.1:1080" >> /etc/tor/torrc
-systemctl start tor
+# 编辑配置文件
+vim /etc/tor/torrc
+# 启动
+# systemctl start tor
 ```
 
 mac安装tor
 ```bash
 mac brew install tor
+# 拷贝配置文件
 cp /usr/local/etc/tor/torrc.sample /usr/local/etc/tor/torrc
-echo "Socks5Proxy 127.0.0.1:1080" >> /usr/local/etc/tor/torrc
+# 编辑配置文件
+# vim /usr/local/etc/tor/torrc
+#启动
+tor
 ```
 
 配置文件的其他项
 ```
 Socks5Proxy 127.0.1.1:1080 # 使用ss代理的地址和端口
 CookieAuthentication 1         # 开启cookies
-ControlPort 9051               # 配置通讯端口
 ```
 
 
