@@ -34,7 +34,7 @@ Socks5Proxy 127.0.1.1:1080 # 使用ss代理的地址和端口
 CookieAuthentication 1         # 开启cookies
 ```
 
-
+python测试代码
 ```python
 proxies = {'http': 'socks5h://127.0.0.1:9050', 'https': 'socks5h://127.0.0.1:9050'}
 not_evil = "http://hss3uro2hsxfogfq.onion/"
