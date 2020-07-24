@@ -32,8 +32,8 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "data-root": "/home/softdata/docker",
   "registry-mirrors": [
+    "https://registry.docker-cn.com",
     "https://dockerhub.azk8s.cn",
-    "https://reg-mirror.qiniu.com"
   ]
 }
 EOF
