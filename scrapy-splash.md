@@ -21,6 +21,11 @@ pip install scrapy
 pip install scrapy-splash
 git clone https://github.com/Python3WebSpider/ScrapySplashTest
 cd ScrapySplashTest
+# 修改splash地址和mongo地址
+vim scrapysplashtest/settings.py
+# 运行
 scrapy crawl taobao
 ```
+
+不出意外的话，你大概率会运行失败。
 
