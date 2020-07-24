@@ -27,5 +27,5 @@ vim scrapysplashtest/settings.py
 scrapy crawl taobao
 ```
 
-不出意外的话，你大概率会运行失败。
+
 
