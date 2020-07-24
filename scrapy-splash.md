@@ -7,3 +7,8 @@ tags:
 description: 
 ---
 
+先安装[docker](http://sxy91.com/posts/docker)
+
+docker pull scrapinghub/splash
+
+
