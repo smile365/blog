@@ -7,8 +7,10 @@ tags:
 description: 
 ---
 
-先安装[docker](http://sxy91.com/posts/docker)
-
+先安装[docker](http://sxy91.com/posts/docker) 
+安装并运行splash：  
+```bash
 docker pull scrapinghub/splash
-
+docker run -dit -p 8050:8050 --name splash scrapinghub/splash
+```
 
