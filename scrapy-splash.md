@@ -14,3 +14,13 @@ docker pull scrapinghub/splash
 docker run -dit -p 8050:8050 --name splash scrapinghub/splash
 ```
 
+
+运行一个测试项目
+```
+pip install scrapy
+pip install scrapy-splash
+git clone https://github.com/Python3WebSpider/ScrapySplashTest
+cd ScrapySplashTest
+scrapy crawl taobao
+```
+
