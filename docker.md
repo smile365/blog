@@ -33,13 +33,14 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
   "data-root": "/home/softdata/docker",
   "registry-mirrors": [
     "https://registry.docker-cn.com",
-    "https://dockerhub.azk8s.cn",
+    "https://dockerhub.azk8s.cn"
   ]
 }
 EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
+
 执行`docker info`，看到Registry Mirrors:信息则表示生效
 
 测试使用 
@@ -52,6 +53,13 @@ docker exec -it a /bin/sh
 docker rm $(docker ps -a -q)
 ```
 
+启动docker报错
+```log
+start request repeated too quickly 
+Failed to start Docker Application Container Engine
+docker.service failed 
+```
+一般是配置文件错误，请查看`/etc/docker/daemon.json`文件中的json格式是否正确。
 
 
 参考  
