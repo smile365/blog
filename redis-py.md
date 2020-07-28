@@ -8,3 +8,5 @@ description:  redis-py使用教程
 ---
 
 
+pip install redis
+
