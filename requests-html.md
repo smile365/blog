@@ -11,12 +11,18 @@ requests与requests-html的区别是，前者比较方面处理如何发送请�
 
 比如选取网页的某些元素，把网页内结构化等等。
 
-> 注：仅支持Python 3.6及更高版本。
+
 
 安装
 ```bash
+# 先把pyppeteer升级到最新版
+pip install pyppeteer -U -i https://mirrors.163.com/pypi/simple/
 pip install requests-html
+
 ```
+
+> 注：requests-html仅支持Python 3.6及更高版本。不同pyppeteer版本安装的chromium版本不同。
+
 
 运行
 ```python
