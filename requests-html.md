@@ -11,6 +11,7 @@ requests与requests-html的区别是，前者比较方面处理如何发送请�
 
 比如选取网页的某些元素，把网页内结构化等等。
 
+> 注：仅支持Python 3.6及更高版本。
 
 安装
 ```bash
@@ -26,6 +27,9 @@ r = session.get('http://sxy91.com/posts/requests-html /')
 print(r.html.absolute_links)
 ```
 
+
+
+
 默认是获取静态网页的内容。
 
 部分网页的内容由js动态生成，requests_html也支持获取js渲染后的内容。获取内容之前调用`r.html.render()`即可
@@ -33,6 +37,8 @@ print(r.html.absolute_links)
 requests_html通过pyppeteer调用Chromium来渲染网页。
 
 若电脑上检测不到Chromium，第一次调用r.html.render()的时候会自动下载。linux下载路径为`~/.pyppeteer/`,mac路径为`～/Library/Application Support/pyppeteer/local-chromium`
+
+
 
 
 
