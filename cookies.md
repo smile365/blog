@@ -84,8 +84,7 @@ end
 cks = []
 for c in Cookies.split(";"):
 	v = c.split("=")
-	#ck = {"name":v[0].strip(),"value":v[1].strip(),'domain':'.github.com'}
-	ck = '''{name="%s", value="%s",domain=".github.com"}''' % (v[0].strip(),v[1].strip())
+	ck = '''{name="%s", value="%s",domain=".sxy91.com"}''' % (v[0].strip(),v[1].strip())
 	cks.append(ck)
 
 ckstr = ",".join(cks)
