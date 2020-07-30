@@ -15,6 +15,21 @@ description:  用一个域名获取任意数量的邮箱
 比如我有一个域名：sxy91.com
 那么我可以分配任意多个邮箱账号如：1@sxy91.com、2@sxy91.com ....
 
+登录QQ企业邮箱，创建一个企业，然后增加一个自己的域名，配置好域名解析，等2小时就可以用自己的域名登录邮箱了。
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1596091372625.png)
+
+
+如何配置邮箱域名解析
+
+登录你的域名提供商，以[namesilo](https://www.namesilo.com/account_home.php)为例。
+
+依次点击：manage domain --> Manage DNS(蓝色按钮) --> MX
+
+在TARGET HOSTNAME的地方添加mx记录
+
+
+
 
 
 
