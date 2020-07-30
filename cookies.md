@@ -61,3 +61,5 @@ pyppeteer.errors.NetworkError: Protocol error (Network.deleteCookies): At least 
 解决方法
 > page.setCookie的必须要有domain,如：{'name': '_octo', 'value': 'GH1.', 'domain': '.sxy91.com'}
 
+若网页加载较慢，则在`用pyppeteer.page.goto`的参数中增加超时时间`{'timeout':60*1000}`,单位为毫秒。
+
