@@ -63,3 +63,43 @@ pyppeteer.errors.NetworkError: Protocol error (Network.deleteCookies): At least 
 
 若网页加载较慢，则在`用pyppeteer.page.goto`的参数中增加超时时间`{'timeout':60*1000}`,单位为毫秒。
 
+#### 使用splash设置cookies
+
+```python
+import requests
+
+Cookies ="_octo=GH1.1.1911316843.1574215196;_ga=GA1.2.86110170.1574215236;_device_id=26f4400b5e70fff5b84f47da276ffe20; "
+
+init_cookies= '''
+function main(splash, args)
+	splash:set_user_agent("%s")
+	splash:init_cookies({
+		%s
+	})
+	splash:go(args.url)
+    return splash:html()
+end
+'''
+
+cks = []
+for c in Cookies.split(";"):
+	v = c.split("=")
+	#ck = {"name":v[0].strip(),"value":v[1].strip(),'domain':'.github.com'}
+	ck = '''{name="%s", value="%s",domain=".github.com"}''' % (v[0].strip(),v[1].strip())
+	cks.append(ck)
+
+ckstr = ",".join(cks)
+
+lua_script = init_cookies %(useragent,ckstr)
+
+
+def pageDownload(url):
+	payload = {'wait':2,'timeout':90,'url':url,'lua_source':lua_script}
+	r = requests.get(SPLASH_URL,params=payload)
+	log.info('pageDownload:{},{}',url,r.status_code)
+	if r.status_code == requests.codes.ok:
+		return r.text
+
+t = pageDownload("https://sxy91.com/posts/cookies/")
+print(t)
+```
