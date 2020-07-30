@@ -91,6 +91,7 @@ ckstr = ",".join(cks)
 
 lua_script = init_cookies %(useragent,ckstr)
 
+SPLASH_URL = 'http://127.0.0.1:8085/execute'
 
 def pageDownload(url):
 	payload = {'wait':2,'timeout':90,'url':url,'lua_source':lua_script}
@@ -102,3 +103,4 @@ def pageDownload(url):
 t = pageDownload("https://sxy91.com/posts/cookies/")
 print(t)
 ```
+
