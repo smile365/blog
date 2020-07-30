@@ -1,5 +1,5 @@
 ---
-title:  qqmail
+title:  QQ邮箱添加MX域名解析
 heading: 如何免费用自己的域名创建腾讯QQ邮箱教程
 date: 2020-07-30T06:27:42.045Z
 categories: ["code"]
