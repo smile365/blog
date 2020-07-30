@@ -1,10 +1,10 @@
 ---
-title:  domain
+title:  域名解析步骤教程
 heading: 域名解析如何填写
 date: 2020-07-12T04:31:55.343Z
 categories: ["code"]
 tags: 
-description: 
+description:  域名解析应该怎样填写
 ---
 
 
