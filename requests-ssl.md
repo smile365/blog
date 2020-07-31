@@ -77,3 +77,4 @@ print(r.text)
 参考文档:  
 - [python-ssl](https://stackoverflow.com/questions/53158229/python-ssl-bad-handshake)
 - [requests-tls](https://lukasa.co.uk/2017/02/Configuring_TLS_With_Requests/)
+- [sslerrorbad](https://stackoverflow.com/questions/49165989/python-sslerrorbad-handshake-syscallerror-1-unexpected-eof)
