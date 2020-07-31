@@ -57,6 +57,15 @@ vi /etc/shadowsocks.json
 yum install -y libsodium libsodium-devel
 ```
 
+启动
+```bash
+python ./shadowsocks/local.py -c config.json
+```
+
+curl测试
+```bash
+curl --socks5 127.0.0.1:1080 http://httpbin.org/ip
+```
 
 CentOS 7 shadowsocks 开机 启动
 
