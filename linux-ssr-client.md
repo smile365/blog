@@ -12,7 +12,11 @@ wget https://github.com/cndaqiang/shadowsocksr/archive/manyuser.zip
 unzip manyuser.zip
 cd shadowsocksr-manyuser/
 vim config.json 
-python ./shadowsocks/local.py -c config.json
+# 前台启动
+python ./shadowsocks/local.py -c config.json 
+# 后台启动加参数 start
+# python ./shadowsocks/local.py -c config.json start
+
 # curl使用socks5测试
 curl --socks5-hostname 127.0.0.1:1081 https://google.com
 ```
