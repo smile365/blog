@@ -13,4 +13,7 @@ unzip manyuser.zip
 cd shadowsocksr-manyuser/
 vim config.json 
 python ./shadowsocks/local.py -c config.json
+curl --socks5-hostname 127.0.0.1:1081 https://google.com
 ```
+
+
