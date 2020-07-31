@@ -15,7 +15,7 @@ requests/packages/urllib3/contrib/pyopenssl.py  OpenSSL.SSL.SysCallError: (-1, '
 
 网站的ssl证书使用了不安全的 3DES Cipher加密方式，主流ssl中间件如OpenSSL删除了对所有使用3DES流密码的密码套件的支持，因此造成依赖openssl的新版本的上层软件会报错。
 
-解决办法
+解决办法  
 ```python
 import requests
 requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS = 'DES-CBC3-SHA'
