@@ -1,9 +1,9 @@
 ---
-title:  cloudflare
+title:  2020年cloudflare配置使用cdn教程
 heading: 2020年cloudflare配置使用教程
 date: 2020-07-12T14:05:27.212Z
 categories: ["code"]
-tags: 
+tags: ["cloudflare教程"]
 description: 使用cloudflare配置免费的cdn加速自己的网站
 ---
 
@@ -43,3 +43,4 @@ Auto Minify
 
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1594564455656.png)
+
