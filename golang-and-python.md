@@ -1,5 +1,5 @@
 ---
-title:  golang-and-python
+title:  用python语言调用Go语言函数
 heading: 用python语言调用Go语言函数
 date: 2020-07-16T02:03:51.425Z
 categories: ["code"]
