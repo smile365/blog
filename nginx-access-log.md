@@ -1,10 +1,10 @@
 ---
-title:  nginx-access-log
+title:  nginx推荐日志配置
 heading: nginx推荐日志配置
 date: 2020-07-15T06:40:09.393Z
 categories: ["code"]
 tags: 
-description: 
+description: nginx-access-log
 ---
 
 默认的日志格式
@@ -43,7 +43,7 @@ description:
 
 推荐的格式如下
 ```nginx
-    log_format  main  '$remote_addr - $time_iso8601 [$time_local] "$request" '
+    log_format  main  '$remote_addr -  [$time_iso8601] "$request" '
                       '$status $body_bytes_sent "$http_referer" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
 
