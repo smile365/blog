@@ -1,5 +1,5 @@
 ---
-title:  paypal
+title:  paypal注册（国外支付宝）
 heading:
 date: 2020-07-11T13:51:25.043Z
 categories: ["code"]
