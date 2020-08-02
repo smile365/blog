@@ -1,6 +1,6 @@
 ---
-title:  sqlite
-heading:
+title:  sqlite简洁教程
+heading: 如何打开.db文件，用什么软件打开.db文件
 date: 2020-07-17T06:18:32.125Z
 categories: ["code"]
 tags: 
