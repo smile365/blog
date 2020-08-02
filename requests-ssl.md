@@ -1,5 +1,5 @@
 ---
-title:  requests-ssl
+title:  python爬虫使用requests库出现SSLError的错误解决办法
 heading:  python爬虫使用requests库出现SSLError的错误解决办法
 date: 2020-07-31T07:47:38.969Z
 categories: ["code"]
