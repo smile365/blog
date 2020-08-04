@@ -27,3 +27,7 @@ description:
  - 有一定量的百度收录
 
 
+参考文献  
+- [移动端网页百度联盟广告位详细教程](https://www.cnblogs.com/beileixinqing/p/8379248.html)
+- [网站如何投放百度联盟广告赚钱](https://www.xuewangzhan.net/why/yunyin/9221.html)
+- 
