@@ -1,5 +1,5 @@
 ---
-title:  Linux根目占满的解决方法
+title:  Linux根目占满造成无法自动补全命令的解决方法
 date: 2019-05-05T03:26:43.089Z
 tags: 
  - linux
@@ -9,7 +9,8 @@ categories: ["code"]
 
 使用命令补全(tab键)时提示：
 >-bash: cannot create temp file for here-document: No space left on device
-(无法为立即文档创建临时文件: 设备上没有空间)
+ls -bash: 无法为立即文档创建临时文件: 设备上没有空间
+-bash: 无法为立即文档创建临时文件: 设备上没有空间
 
 查看挂载点占用情况：`df -h`  
 
