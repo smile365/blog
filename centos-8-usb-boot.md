@@ -11,7 +11,7 @@ description:  如何通过USB来安装CentOS ，
 
 准备
 - UltraISO.exe，
-- CentOS-8.2.2004-x86_64-minimal.iso  ，下载地址：http://isoredirect.centos.org/  
+- CentOS-8.2.2004-x86_64-dvd1.iso ，下载地址：http://isoredirect.centos.org/  
 
 
 系统说明
@@ -29,6 +29,7 @@ description:  如何通过USB来安装CentOS ，
 　　7、在“写入方式”项目中选择“USB-HDD+”或“USB-ZIP+”（尝试选择，制作后能启动电脑为准）；
 　　8、最后，点击“写入”按钮，等待数秒，提示“刻录成功”后，点“返回”按钮退出，制作结束。
 
+> 使用boot.iso/和minimal.iso均制作失败。dvd1.iso成功。
 
 参考文献  
 - [如何设置USB密钥以安装CentOS](https://wiki.centos.org/zh/HowTos/InstallFromUSBkey)
