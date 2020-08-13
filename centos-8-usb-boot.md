@@ -11,7 +11,7 @@ description:  如何通过USB来安装CentOS ，
 
 准备
 - UltraISO.exe，
-- CentOS-8.2.2004-x86_64-boot.iso  ，下载地址：http://isoredirect.centos.org/  
+- CentOS-8.2.2004-x86_64-minimal.iso  ，下载地址：http://isoredirect.centos.org/  
 
 
 系统说明
