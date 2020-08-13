@@ -33,3 +33,4 @@ description:  如何通过USB来安装CentOS ，
 
 参考文献  
 - [如何设置USB密钥以安装CentOS](https://wiki.centos.org/zh/HowTos/InstallFromUSBkey)
+- [创建可启动的USB驱动器](https://docs.centos.org/en-US/8-docs/standard-install/assembly_preparing-for-your-installation/)
