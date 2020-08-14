@@ -48,3 +48,9 @@ DiskPart 遇到错误: 拒绝访问。
 磁盘上点击右键，再点击清除扇区数据即可解决问题。
 
 
+
+
+参考文献
+- [磁盘管理疑难解答](https://docs.microsoft.com/zh-cn/windows-server/storage/disk-management/troubleshooting-disk-management#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps)
+- [Attribute "partition" not found](https://askubuntu.com/questions/946638/attribute-partition-not-found-error-when-formatting-usb-flash-drive)
+- [如何在Linux中创建磁盘分区](https://www.linuxidc.com/Linux/2019-05/158492.htm)
