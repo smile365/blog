@@ -14,7 +14,7 @@ description: 旅游/旅行/景点/足迹/轨迹/地图/app/标记/笔记/记录
 
 之前看到有人买了一张很大的地图，每去一个景点就在地图上插上一个小红旗，感觉很有意思。
 
-![qq](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597657303830.png)
+![旅行统计](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597738235802.png)
 
 然后我就去搜了一下有没有这样的app或者网站，想要把自己的旅行足迹在地图上标记出来。
 
