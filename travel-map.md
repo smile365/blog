@@ -51,3 +51,8 @@ v0.0.1版本的效果如下
 
 目前暂时还不完美，体验地址：[songxueyan.top/travel/](https://songxueyan.top/travel/index.html)
 
+
+简略教程如下：
+
+![如何在地图上添加我的旅行足迹地图教程](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597737865702.png)
+
