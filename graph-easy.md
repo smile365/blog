@@ -155,7 +155,7 @@ vim /Library/Perl/5.18/Graph/Easy/Node.pm
 
 修改后发现美观多了。
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907068083.png)
+![Graph::Easy中文支持](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907068083.png)
 
 
 
