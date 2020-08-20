@@ -168,6 +168,22 @@ vim /Library/Perl/5.18/Graph/Easy/Node.pm
 
 ![Graph::Easy中文支持](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907921847.png)
 
+`Graph::Easy`支持把文本格式的流程图直接输出为图像格式，比如png。
+
+需要安装Graph::Easy::As_svg  
+```bash
+sudo cpan
+install Graph::Easy::As_svg
+```
+
+使用方法
+```bash
+graph-easy <<< '[c]->[d]' --as_dot | dot -Tpng -o test.png
+```
+
+但是不支持中文，有中文会报错。
+
+
 
 
 参考文档  
