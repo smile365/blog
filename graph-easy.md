@@ -4,7 +4,7 @@ heading:  用纯文本ASCII字符把流程图画到txt里|Graph-Easy教程
 date: 2020-08-20T06:39:14.076Z
 categories: ["code"]
 tags: ["graph-easy","text流程图","用纯文本画流程图"]
-description: graph-easy即Graph::Easy，一款用ascii纯文本画流程图的工具。
+description: graph-easy即Graph::Easy，一款用ascii纯文本画流程图和关系图的工具。
 ---
 
 
@@ -121,7 +121,7 @@ graph-easy <<< '[a] -> [b]'
 ```
 
 
-用 Ascii 画关系图
+
 
 但是发现``中文排版不太美观
 
