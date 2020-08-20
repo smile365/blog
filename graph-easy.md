@@ -1,44 +1,23 @@
 ---
-title:  graph-easy
-heading: 
+title:  用text纯文本字符画流程图 
+heading:  用纯文本ASCII字符把流程图画到txt里|Graph-Easy教程
 date: 2020-08-20T06:39:14.076Z
 categories: ["code"]
-tags: 
-description: 
+tags: ["graph-easy","text流程图","用纯文本画流程图"]
+description: graph-easy即Graph::Easy，一款用ascii纯文本画流程图的工具。
 ---
 
 
-ASCII Art：使用纯文本画流程图
 
-ASCII字符流程图txt流程图
-
-ascii流程图在线
-
-Graph::Easy
-
-纯文本流程图
-
-ascii图
-
-ASCIIFlow
-
-Text 流程图
-
-文本绘图
-
-字符 作 图
-
-流程图 字符画
-
-Graph Easy 教程
 
 无意中在一个python库中发现如下文本信息
 
 ![ascii流程图](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597890929660.png)
 
-瞬间被惊艳到了。
+瞬间被惊艳到了，竟然用字符作出里一个流程图！！
 
-竟然还能用文本字符来画流程图
+究竟是什么神仙软件，能纯文本字符画流程图，我太需要这样的工具了。
+
 
 有时候写代码，一般的注释只能写文字性描述信息，有了纯文本流程图，以后就能把架构设计或者其他需要流程图表示的说明写在代码注释里了。或者还能把这个粘贴到makdown的文档里或者txt文档里，简直不要太方便。
 
