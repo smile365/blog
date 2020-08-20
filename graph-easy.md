@@ -8,8 +8,6 @@ description: graph-easy即Graph::Easy，一款用ascii纯文本画流程图和�
 ---
 
 
-
-
 无意中在一个python库中发现如下文本信息
 
 ![ascii流程图](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597890929660.png)
@@ -121,12 +119,47 @@ graph-easy <<< '[a] -> [b]'
 ```
 
 
+但是发现`Graph::Easy`对中文排版不太美观，可能开发的时候没用中文做过测试，所以对中文支持的不够完美。可以通过如下方式修复。
 
+```bash
+# 找到Easy.pm
+mdfind -name Easy.pm
+# 在1572行前后
+vim /Library/Perl/5.18/Graph/Easy.pm
+# 修改后如下
+sub as_ascii
+  {
+  # Convert the graph to pretty ASCII art - will return utf-8.
+  my $self = shift;
 
-但是发现``中文排版不太美观
+  # select 'ascii' characters
+
+  my $asc = $self->_as_ascii(@_);
+  $asc =~ s/(\x{FFFF})//g;
+  $asc;
+  }
+  
+# 找到Node.pm
+mdfind -name Node.pm
+# 在1505行前后
+vim /Library/Perl/5.18/Graph/Easy/Node.pm
+# 修改后如下
+  $label = $self->_un_escape($label) if !$_[0] && $label =~ /\\[EGHNT]/;
+  # placeholder for han chars
+  $label =~ s/([\x{4E00}-\x{9FFF}])/$1\x{FFFF}/g;
+
+  $label;
+  }
+  
+```
+
+修改后发现美观多了。
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907068083.png)
 
 
 
 参考文档  
 - [Graph::Easy的dsl语法](http://bloodgate.com/perl/graph/manual/syntax.html)
 - [Graph::Easy文档译文](https://weishu.gitbooks.io/graph-easy-cn/content/)
+- [中文支持](https://blog.codingnow.com/2016/12/ascii_graph.html)
