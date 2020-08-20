@@ -181,7 +181,8 @@ install Graph::Easy::As_svg
 graph-easy <<< '[c]->[d]' --as_dot | dot -Tpng -o test.png
 ```
 
-但是不支持中文，有中文会报错。
+输出png之类的格式不支持中文，有中文会报错，但可以输出svg格式。
+
 
 
 
