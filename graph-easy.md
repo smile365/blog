@@ -119,7 +119,18 @@ graph-easy <<< '[a] -> [b]'
 ```
 
 
-但是发现`Graph::Easy`对中文排版不太美观，可能开发的时候没用中文做过测试，所以对中文支持的不够完美。可以通过如下方式修复。
+但是发现`Graph::Easy`对中文排版不太美观，可能开发的时候没用中文做过测试，所以对中文支持的不够完美。
+
+```bash
+graph-easy <<< '[ 北京 ] - 火车 -> [ 张家口 ]'
+```
+
+输出： 
+
+![Graph::Easy中文不对齐](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907904459.png)
+
+
+可以通过如下方式修复。
 
 ```bash
 # 找到Easy.pm
@@ -155,7 +166,7 @@ vim /Library/Perl/5.18/Graph/Easy/Node.pm
 
 修改后发现美观多了。
 
-![Graph::Easy中文支持](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907068083.png)
+![Graph::Easy中文支持](https://gitee.com/smile365/blogimg/raw/master/sxy91/1597907921847.png)
 
 
 
