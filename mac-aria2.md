@@ -1,5 +1,5 @@
 ---
-title:  mac-aria2
+title:  使用aria2高速下载磁力链接的文件
 date: 2019-02-20T08:52:44.075Z
 tags: ["code","it"]
 series: ["blog"]
