@@ -84,9 +84,18 @@ aria2c http://example.org/mylinux.torrent
 aria2c 'magnet:?xt=urn:btih:248D0A1CD08284299DE78D5C1ED359BB46717D8C'
 ```
 
+第一次下载磁力链接大概率会遇到如下错误:
+```
+errorCode=1 Failed to load DHT routing table from /Users/songyangcong/.cache/aria2/dht.dat
+```
+
+
 
 
 参考  
-- [Mac-aria2]Mac-aria2(https://sspai.com/post/32167)
+- [Mac-aria2](https://sspai.com/post/32167)
 - [aria2-cookies](https://www.yinquesiting.net/archives/109)
 - [Alex Hua-Aria2 for Chrome](https://chrome.google.com/webstore/search/Aria2%20?hl=zh-CN)
+- [Aria2 一键安装管理脚本](https://github.com/P3TERX/aria2.sh)
+- [添加 BitTorrent tracker](https://p3terx.com/archives/solved-aria2-cant-download-magnetic-link-bt-seed-and-slow-speed.html)
+- [aria2.conf](https://github.com/P3TERX/aria2.conf)
