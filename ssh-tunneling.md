@@ -1,10 +1,10 @@
 ---
-title:  SSH隧道的使用（内网穿透）
+title:  使用SSH隧道实现内网穿透教程
 heading: 无需任何软件实现内网穿透
 date: 2020-05-20T01:16:16.583Z
 categories: ["code"]
-tags: ["SSH tunneling"]
-description: 
+tags: ["SSH tunneling","内网穿透","ssh 隧道",]
+description: 不安装任何软件，使用 ssh 即可实现内网穿透。
 ---
 
 情景1：本地直接连接远程服务
