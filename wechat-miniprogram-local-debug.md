@@ -1,28 +1,30 @@
 ---
-title:  wechat-miniprogram-local-debug
-heading: 微信公众号开发本地调试
+title:  微信开发如何做本地调试？
+heading: 微信公众号开发本地调试方法教程
 date: 2020-10-29T03:33:11.148Z
 categories: ["code"]
 tags: 
-description: 
+description: wechat-miniprogram-local-debug,
 ---
 
-微信公众号后台配置可信 request 域名
+微信公众号本地调试开发方法步骤：
+
+1. 微信公众号后台配置可信 request 域名
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1603942624559.png)
 
-服务器启动一个 nginx，配置如下：
+2. 服务器启动一个 nginx，配置如下：
 ```
     location /api/wechat/login {
             proxy_pass http://127.0.0.1:14030;
     }
 ```
 
-在笔记本电脑执行
+3. 在笔记本电脑执行
 ```
 ssh -R 14030:localhost:8080 root@songxueyan.top
 ```
 
-用 Python 写一个调用微信服务器的服务 weapi.py
+4. 用 Python 写一个调用微信服务器的服务 weapi.py
 ```
 import requests
 from bottle import run,request,get
@@ -41,12 +43,12 @@ def wechat_login():
 run(port=8080)
 ```
 
-笔记本电脑启动
+5. 笔记本电脑启动
 ```
 python weapi.py
 ```
 
-小程序端登录代码
+6. 小程序端登录代码
 
 ```javascript
  onLoad: function () {
