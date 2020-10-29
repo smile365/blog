@@ -33,6 +33,30 @@ description:
 2. 然后把 code 传给自己在微信后台配置的后端服务器
 3. 后端服务器拿 code 去微信服务器取 openid
 
+小程序端的登录代码如下
+```javascript
+wx.login({
+      success(res) {
+        if (res.code) {
+          //发起网络请求
+          // url 需要用你自己服务器的地址
+          wx.request({
+            url: 'https://songxueyan.top/api/wechat/login',
+            data: {
+              code: res.code
+            },
+            success(r) {
+              console.log('登录成功' + r);
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+```
+
+服务器端代码请参考：
 
 参考文献
 
