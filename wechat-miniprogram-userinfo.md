@@ -1,10 +1,10 @@
 ---
-title:  wechat-miniprogram-userinfo
-heading:
+title: 微信小程序免授权获取用户头像昵称用于展示
+heading: 微信小程序无需授权获取用户昵称头像方法教程
 date: 2020-10-29T02:57:31.912Z
 categories: ["code"]
 tags: 
-description: 
+description:  wechat-miniprogram-userinfo
 ---
 
 需求：用户打开小程序时，无需授权即可显示用户的昵称和头像，且自动登录成功，不弹框获取到用户的openid。
