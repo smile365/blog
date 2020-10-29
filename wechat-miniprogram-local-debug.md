@@ -12,7 +12,7 @@ description:
 
 服务器启动一个 nginx，配置如下：
 ```
-    location /api/wechat/login/ {
+    location /api/wechat/login {
             proxy_pass http://127.0.0.1:14030;
     }
 ```
@@ -29,7 +29,7 @@ from bottle import run,request,get
 
 WECHAT_LOGIN_API = "https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code"
 
-@get("/api/v1/books/wechat")
+@get("/api/wechat/login")
 def wechat_login():
 	code = request.query.code
 	print(code)
@@ -55,7 +55,7 @@ python weapi.py
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'https://songxueyan.top/api/v1/books/wechat',
+            url: 'https://songxueyan.top/api/wechat/login',
             data: {
               code: res.code
             },
