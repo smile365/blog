@@ -6,24 +6,39 @@ categories: ["code"]
 description:
 ---
 
-每次在终端使用ssh链接服务器都比较繁琐，需要输入账号、密码、端口、域名等一大堆东西。这里提供一种方便的一键连接方式：
+每次在终端使用ssh链接服务器，需要输入账号、密码、端口、域名等一大堆东西，比较繁琐。若不想输入密码端口等信息，可以使用 ssh 密钥方式连接服务器。
+
+
 
 假设Linux服务器的ip为：192.168.1.2,ssh端口：3322，以下以mac操作为例。
-
-
-编辑host
-`sudo vim /etc/hosts`
-增加如下：
-`192.168.1.2 www.sxy91.com sxy91`
-
-测试：`ping sxy91`
 
 
 使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_sxy`
 
 
+把密钥复制到Linux
+```sh
+ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@192.168.1.2
+```
 
-编辑ssh的config文件：`vim ~/.ssh/config`,内容如下： 
+成功以后即可使用密钥链接服务器
+
+```sh
+ssh -i id_rsa_sxy -p 3322  songxueyan@192.168.1.2
+```
+
+虽然少了账号密码，但需要指定端口和密钥，能不能一块去掉呢。
+
+
+先编辑host
+`sudo vim /etc/hosts`
+
+绑定一个域名如下：
+`192.168.1.2 www.sxy91.com sxy91`
+
+测试：`ping sxy91`
+
+然后编辑ssh的config文件：`vim ~/.ssh/config`,内容如下： 
 ```nginx
 Host sxy91
     HostName www.sxy91.com
@@ -32,12 +47,7 @@ Host sxy91
     IdentityFile ~/.ssh/id_rsa_sxy
 ```
 
-复制到Linux
-```sh
-ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@sxy91
-```
-
-测试,无须输入端口和密码即可连接成功
+此时，无须输入端口和密码即可连接成功
 
 ```sh
 ssh sxy91
@@ -56,8 +66,6 @@ ls -la ~/ |grep ssh
 tail -f /var/log/secure
 # 发现一行Authentication refused: bad ownership or modes for file ～/.ssh/authorized_keys
 ```
-
-
 
 说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
 
@@ -78,9 +86,6 @@ chmod -R og+r ~/.ssh/known_hosts
 ```
 
 再次测试问题解决
-
-
-
 
 
 
