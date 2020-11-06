@@ -14,6 +14,13 @@ description:
 - nginx
 - zmirror
 - acme.sh（ssl证书）
+- python3
+
+
+需要先安装 Python3 环境，可以参考教程： [Python3 安装教程](https://sxy91.com/posts/python3/)
+
+
+安装 zmirror 步骤如下：
 
 ```bash
 git clone https://github.com/aploium/zmirror.git twitter
@@ -38,6 +45,9 @@ vim wsgi.py
 ## 修改如下内容
 application.run(
             port=8092
+            
+# 安装依赖
+pip3 install -r requirements.txt 
 ```
 
 ssl证书参考[免费ssl证书申请教程](https://sxy91.com/posts/https/)
@@ -81,7 +91,22 @@ acme.sh --installcert -d twitter.sxy91.com  \
         --reloadcmd  "nginx"
 ```    
 
-启动
+
+
+测试启动
+```bash
+python wsgi.py 
+```
+
+在 centos 系统下可能会出现错误： `gcc: error trying to exec 'cc1plus': execvp: 没有那个文件或目录`。
+
+安装c++即可解决：
+```bash
+yum install gcc-c++
+```
+
+正式启动
 ```bash
 nohup python wsgi.py 1>twitter.out 2>&1 &
 ```
+
