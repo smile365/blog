@@ -20,4 +20,15 @@ sudo raspi-config
 # P3 VNC         Enable/Disable graphical remote access to your Pi using RealVNC     
 ```
 
+测试 ssh 连接
+```bash
+ssh pi@your_ip
+# 树莓派默认登录名和密码是：pi, raspberry
+```
+
+
+vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/download/viewer/)。
+
+
+![enter description here](https://markdown.xiaoshujiang.com/img/spinner.gif "[[[1605523846410]]]" )
 
