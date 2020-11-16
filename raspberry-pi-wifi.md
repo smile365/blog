@@ -42,7 +42,8 @@ description:
 
 
     
-
+参考文献：
+- [自动连接wifi](https://unix.stackexchange.com/questions/92799/connecting-to-wifi-network-through-command-line)
 
 
 
