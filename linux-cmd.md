@@ -9,5 +9,8 @@ description:  linux-cmd
 
 
 
+参考文档：
+
+- [linux 常用命令-1](https://sxy91.com/posts/linux/)
 
 
