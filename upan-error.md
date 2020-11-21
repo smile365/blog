@@ -1,10 +1,10 @@
 ---
-title:  upan-error
+title:  "DiskPart 遇到错误: 拒绝访问。"
 heading: 
 date: 2020-08-13T10:19:51.141Z
 categories: ["code"]
 tags: 
-description: DiskPart 遇到错误: 拒绝访问。
+description:  "DiskPart 遇到错误: 拒绝访问。"
 ---
 
 
