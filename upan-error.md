@@ -1,5 +1,5 @@
 ---
-title:  "U盘遇到[DiskPart 遇到错误: 拒绝访问]的处理方法"
+title:  "U盘遇到“DiskPart 遇到错误: 拒绝访问”的处理方法"
 heading: 
 date: 2020-08-13T10:19:51.141Z
 categories: ["code"]
