@@ -1,5 +1,5 @@
 ---
-title: 树莓派自动连接 wifi 的设计设想
+title: 树莓派自动连接 wifi 的设计思路
 heading: 
 date: 2020-11-13T02:23:10.038Z
 categories: ["code"]
