@@ -1,5 +1,5 @@
 ---
-title:  gitee-github
+title:  实现gitee作为主仓库，github作为从仓库。
 heading: gitee作为主仓库，github作为从仓库。
 date: 2020-06-16T12:09:09.298Z
 categories: ["code"]
