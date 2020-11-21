@@ -1,5 +1,5 @@
 ---
-title: centos-8-usb-boot
+title: 使用u盘制作centos8的usb启动盘通过u盘安装系统
 heading: 使用u盘制作centos8的usb启动盘通过u盘安装系统
 date: 2020-08-13T06:40:52.290Z
 categories: ["code"]
