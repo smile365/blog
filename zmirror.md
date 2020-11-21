@@ -1,6 +1,6 @@
 ---
-title:  zmirror
-heading:
+title:  使用zmirror实现Twitter的全站镜像
+heading: 使用zmirror实现Twitter的全站镜像
 date: 2020-06-29T01:34:31.411Z
 categories: ["code"]
 tags: 
