@@ -2,7 +2,7 @@
 title:  tiktok
 heading: TikTok基础下载教程及新手注意事项 | 教程
 date: 2020-07-03T11:04:48.264Z
-categories: ["code"]
+categories: ["other"]
 tags: 
 description: 
 ---
