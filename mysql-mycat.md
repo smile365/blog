@@ -1,10 +1,10 @@
 ---
-title:   mysql-mycat
+title: 在docker环境下实用mycat搭建mysql高可用集群
 heading: 
 date: 2020-06-28T09:35:49.503Z
 categories: ["code"]
 tags: 
-description:  mysql高可用
+description:  mysql高可用，在docker环境下实用mycat搭建mysql高可用集群
 ---
 
 
