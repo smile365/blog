@@ -1,10 +1,10 @@
 ---
-title: 微信pc端和移动端多开技术的研究 
+title: 微信pc端和移动端多开的几种方法 
 date: 2018-08-10T06:32:54.129Z
 tags: ["微信多开"]
 series: ["blog"]
 categories: ["code"]
-description:
+description: 微信多开
 ---
 
 #### mac 微信多开
