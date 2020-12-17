@@ -33,7 +33,19 @@ cd oh-my-wechat
 /bin/bash main.sh
 ```
 
-mac 微信记录备份。
+
+
+#### Windows 微信多开
+
+1. 使用Sandboxie
+
+Sandboxie 是一款可提供虚拟环境的工具，按照在虚拟环境里的软件互不干扰，也就实现了 windows 应用程序的多开。
+
+下载，点击微信右键，再创建一个容器
+
+
+#### 信数据备份
+1. mac 微信记录备份。
 每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
 ```shell
 > cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
@@ -45,15 +57,8 @@ mac 微信记录备份。
 
 # 还原unzip test.zip -d /dir
 ```
-使用Sandboxie实现windows应用程序的多开。
 
-下载
-
-点击微信右键
-
-再创建一个容器
-
-使用adb 备份手机文件
+2. 使用adb 备份手机文件
 
 ```bash
 mkdir backup
