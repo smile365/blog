@@ -7,7 +7,26 @@ categories: ["code"]
 description:
 ---
 
-mac wechat 防撤回[Oh-My-WeChat](https://github.com/lmk123/oh-my-wechat)
+#### mac 微信多开
+
+1. 使用命令
+
+```
+# 不能关闭命令窗口
+open -n /Applications/WeChat.app/Contents/MacOS/WeChat
+
+# 可关闭
+nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
+```
+-n参数表示Open a new instance of the application(s) even if one is already running，也就是开启另外一个实例，哪怕这个程序已经再运行了。
+
+2. 安装时保留两者
+
+重新下载一个 mac 端的微信按照包，安装时选择“*保留两者*”，如果选替换，会把之前的微信给覆盖掉
+
+3. 使用 mac 的微信扩展插件
+
+可以通过[WeChatExtension](https://github.com/MustangYM/WeChatExtension-ForMac)插件实现多开，它的功能比较多，除了多开，还有防撤回，换主题等功能。有人制作了一键安装脚本回[Oh-My-WeChat](https://github.com/lmk123/oh-my-wechat)，安装方法如下：
 ```bash
 git clone https://github.com/lmk123/oh-my-wechat.git
 cd oh-my-wechat
@@ -49,3 +68,4 @@ for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(
 - [Mac微信聊天记录备份位置](https://www.zhihu.com/question/50022284/answer/123677875)
 - [接触禁止复制](https://zhuanlan.zhihu.com/p/32155254)
 - [应用隔离](https://www.zhihu.com/question/25395183/answer/79937376)
+- [mac 微信多开](https://www.zhihu.com/question/60153484)
