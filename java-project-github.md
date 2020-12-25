@@ -1,10 +1,10 @@
 ---
-title:  java-project-github
+title:  github上非常优秀的java项目推荐
 heading:
 date: 2020-12-25T09:57:33.786Z
 categories: ["code"]
 tags: 
-description: Github 上有没有优秀的 Java 项目推荐？
+description: Github 上有没有优秀的 Java 项目推荐？java-project-github
 ---
 
 #### 1. WxJava ：22k star
