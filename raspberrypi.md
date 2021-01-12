@@ -48,6 +48,9 @@ iface eth0 inet dhcp
 cat /etc/wpa_supplicant/wpa_supplicant.conf
 
 
+若树莓派无限重启，一般是电源电压不够（可能是充电头或电源线）。
+
 参考链接
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
+- [树莓派花屏或自动重启](http://www.raspigeek.com/index.php?c=read&id=98&page=1)
