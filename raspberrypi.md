@@ -13,6 +13,12 @@ Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系
 2. 下载[Etcher](https://www.balena.io/etcher/)并安装，然后参考[安装教程](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 3. [让树莓派启动直接连接WIFI](http://sonicguo.com/2019/Initialize-RaspBerry-3-with-wifi/)
 
+
+vi 编辑器不太好用，nano 编辑器命令不太熟悉，安装 vim 编辑器
+
+sudo apt-get install vim
+
+
 开启远程桌面和 ssh 连接。
 ```bash
 sudo raspi-config 
