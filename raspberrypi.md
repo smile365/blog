@@ -44,6 +44,9 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 vi /etc/dhcpcd.conf
 iface eth0 inet dhcp
 
+查看无线网络配置
+cat /etc/wpa_supplicant/wpa_supplicant.conf
+
 
 参考链接
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
