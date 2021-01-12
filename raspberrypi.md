@@ -11,6 +11,7 @@ Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系
 
 1. 下载树莓派操作系统：[Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 2. 下载[Etcher](https://www.balena.io/etcher/)并安装，然后参考[安装教程](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
+3. [让树莓派启动直接连接WIFI](http://sonicguo.com/2019/Initialize-RaspBerry-3-with-wifi/)
 
 开启远程桌面和 ssh 连接。
 ```bash
@@ -41,7 +42,7 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 
 插上网线，上不了网，ifconfig 不显示有线网络的地址。原因时树莓派的有线网卡没开启。
 
-vi /etc/dhcpcd.conf
+sudo nano /etc/network/interfaces
 iface eth0 inet dhcp
 
 查看无线网络配置
@@ -51,9 +52,10 @@ cat /etc/wpa_supplicant/wpa_supplicant.conf
 若树莓派无限重启，一般是电源电压不够（可能是充电头或电源线）。
 
 wifi配置失败，网线配置失败，如何配置树莓派
-网络（有线、无线）
-鼠标、键盘，
-显示器，HDMI，输出，大部分屏幕还是 VGA。买 HDMI 转 VGA 的需要带电源。
+网络（有线、无线）：插网线无反应，WIFI不自动连接。
+鼠标、键盘：没有鼠标键盘
+显示器：没有显示器
+HDMI，输出，大部分屏幕还是 VGA。买 HDMI 转 VGA 的需要带电源。
 
 
 
