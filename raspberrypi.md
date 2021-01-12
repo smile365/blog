@@ -50,6 +50,16 @@ cat /etc/wpa_supplicant/wpa_supplicant.conf
 
 若树莓派无限重启，一般是电源电压不够（可能是充电头或电源线）。
 
+wifi配置失败，网线配置失败，如何配置树莓派
+网络（有线、无线）
+鼠标、键盘，
+显示器，HDMI，输出，大部分屏幕还是 VGA。买 HDMI 转 VGA 的需要带电源。
+
+
+
+
+
+
 参考链接
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
