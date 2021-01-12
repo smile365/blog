@@ -18,6 +18,7 @@ vi 编辑器不太好用，nano 编辑器命令不太熟悉，安装 vim 编辑�
 
 sudo apt-get install vim
 
+配置镜像
 
 开启远程桌面和 ssh 连接。
 ```bash
