@@ -7,6 +7,8 @@ draft: true
 description: 
 ---
 
+Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系统。
+
 1. 下载树莓派操作系统：[Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 2. 下载[Etcher](https://www.balena.io/etcher/)并安装，然后参考[安装教程](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
@@ -20,6 +22,10 @@ sudo raspi-config
 # P3 VNC         Enable/Disable graphical remote access to your Pi using RealVNC     
 ```
 
+也可以使用桌面方式配置
+![依次点击](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610433840402.png) 
+
+
 测试 ssh 连接
 ```bash
 ssh pi@your_ip
@@ -30,5 +36,14 @@ ssh pi@your_ip
 vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/download/viewer/)。
 
 
-![enter description here](https://markdown.xiaoshujiang.com/img/spinner.gif "[[[1605523846410]]]" )
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1605523846409.png)
 
+
+插上网线，上不了网，ifconfig 不显示有线网络的地址。原因时树莓派的有线网卡没开启。
+
+vi /etc/dhcpcd.conf
+iface eth0 inet dhcp
+
+
+参考链接
+- [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
