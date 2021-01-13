@@ -83,6 +83,18 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1605523846409.png)
 
 
+此时可以使用桌面方式配置 
+![依次点击](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610433840402.png) 
+
+
+
+
+#### 其他用法
+
+关机
+```bash
+shutdown -t 0
+```
 
 
 vi 编辑器不太好用，nano 编辑器命令不太熟悉，安装 vim 编辑器
@@ -91,10 +103,6 @@ sudo apt-get install vim
 
 配置镜像
 
-
-
-也可以使用桌面方式配置
-![依次点击](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610433840402.png) 
 
 
 测试 ssh 连接
