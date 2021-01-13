@@ -33,6 +33,13 @@ ssh 默认关闭，只需在 SD 的根目录新建一个名为 ssh 文件即可�
 
 #### 找到树莓派 ip
 
+先查自己电脑 ip
+```bash
+ifconfig |grep "inet "
+	inet 127.0.0.1 netmask 0xff000000 
+	inet 192.168.1.21 netmask 0xffffff00 broadcast 10.3.1.255
+```
+
 写一个 [shell 脚本](https://sxy91.com/posts/ping-ip/) ping 一下 ip 或者扫描一下 22 端口。编写 ip_ping.sh 内容如下：
 ```bash
 #!/bin/bash
@@ -83,6 +90,15 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1605523846409.png)
 
 
+#### 让树莓派支持有线连接
+
+树莓派默认禁用了有线网卡，所以使用 `ifconfig -a` 无法显示 `eth0`
+
+通过 VNC 连接远程桌面后，设置国家即可启用有线网卡。
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551042645.png)
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610550878632.png)
 
 #### 其他用法
 
