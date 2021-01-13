@@ -94,11 +94,11 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 
 树莓派默认禁用了有线网卡，所以使用 `ifconfig -a` 无法显示 `eth0`
 
-通过 VNC 连接远程桌面后，设置国家即可启用有线网卡。
-
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551042645.png)
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610550878632.png)
+通过 VNC 连接远程桌面后，设置国家即可启用有线网卡。
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551222938.png)
 
 #### 其他用法
 
