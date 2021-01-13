@@ -100,6 +100,19 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551222938.png)
 
+使用命令 `ifconfig -a` 可以查看到已经有了 `eth0`，但即使插了网线也没有 ip 地址。
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551347561.png)
+
+需要重启下网卡或直接重启系统
+```bash
+reboot
+```
+
+之后即可查看到有线网卡
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551675046.png)
+
 #### 其他用法
 
 关机
