@@ -111,7 +111,7 @@ reboot
 # shutdown -t 0
 ```
 
-之后即可查看到有线网卡
+之后即可查看到有线网卡，已经有了 ip 地址
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551675046.png)
 
