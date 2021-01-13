@@ -98,7 +98,8 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 
 通过 VNC 连接远程桌面后，设置国家即可启用有线网卡。
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551222938.png)
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610552196271.png)
+
 
 使用命令 `ifconfig -a` 可以查看到已经有了 `eth0`，但即使插了网线也没有 ip 地址。
 
