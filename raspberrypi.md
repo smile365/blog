@@ -107,6 +107,8 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 需要重启下网卡或直接重启系统
 ```bash
 reboot
+# 若无效可以关机，等待 5 秒拔掉电源再重新插上电源。
+# shutdown -t 0
 ```
 
 之后即可查看到有线网卡
@@ -114,12 +116,6 @@ reboot
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551675046.png)
 
 #### 其他用法
-
-关机
-```bash
-shutdown -t 0
-```
-
 
 vi 编辑器不太好用，nano 编辑器命令不太熟悉，安装 vim 编辑器
 
