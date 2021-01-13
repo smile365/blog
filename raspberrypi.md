@@ -1,5 +1,5 @@
 ---
-title:  raspberrypi
+title:  2021年树莓派最新安装使用教程
 date: 2019-07-02T10:35:01.080Z
 tags: 
 categories:
@@ -8,7 +8,7 @@ description: 2021年树莓派最新安装使用教程
 ---
 
 #### 安装系统
-Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系统。到官网下载[Raspberry Pi Imager](https://www.raspberrypi.org/software/)这个安装工具并安装到电脑上，选择需要烧录的内存和需要的系统，工具会自动下载系统，并安装到 sd 卡上，只需要简单 3 步。
+Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系统。到官网下载[Raspberry Pi Imager](https://www.raspberrypi.org/software/)这个安装工具并安装到电脑上，然后选择需要烧录的 sd 卡和需要烧录的系统，工具会自动下载 Raspberry Pi OS ，并烧录到 sd 卡上，只需要简单 3 步。
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610547292645.png)
 
@@ -64,7 +64,6 @@ ssh pi@192.168.1.29
 
 
 
-3. [让树莓派启动直接连接WIFI](http://sonicguo.com/2019/Initialize-RaspBerry-3-with-wifi/)
 
 
 vi 编辑器不太好用，nano 编辑器命令不太熟悉，安装 vim 编辑器
@@ -129,3 +128,4 @@ pinout
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
 - [树莓派花屏或自动重启](http://www.raspigeek.com/index.php?c=read&id=98&page=1)
+- [让树莓派启动直接连接WIFI](http://sonicguo.com/2019/Initialize-RaspBerry-3-with-wifi/)
