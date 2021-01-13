@@ -83,11 +83,6 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1605523846409.png)
 
 
-此时可以使用桌面方式配置 
-![依次点击](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610433840402.png) 
-
-
-
 
 #### 其他用法
 
