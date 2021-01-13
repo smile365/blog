@@ -62,6 +62,25 @@ wait
 ssh pi@192.168.1.29
 ```
 
+登录之后可以通过命令开启远程桌面，打开 VNC 即可。
+```bash
+sudo raspi-config 
+# 选择 Interfacing Options
+# Interfacing Options  Configure connections to peripherals  
+# 然后可以开启或关闭 SSH 和 VNC，
+# SSH 已经开启了，所以这里打开 VNC，即远程桌面                  │ 
+# VNC         Enable/Disable graphical remote access to your Pi using RealVNC     
+```
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610549575434.png)
+
+
+#### 远程桌面连接 树莓派
+
+
+vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/download/viewer/)，之后输入 ip 地址即可连接。
+
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1605523846409.png)
 
 
 
@@ -72,15 +91,7 @@ sudo apt-get install vim
 
 配置镜像
 
-开启远程桌面和 ssh 连接。
-```bash
-sudo raspi-config 
-# 选择第 5 项
-# 5 Interfacing Options  Configure connections to peripherals  
-# 依次设置 P2、P3
-# P2 SSH         Enable/Disable remote command line access to your Pi using SSH                      │ 
-# P3 VNC         Enable/Disable graphical remote access to your Pi using RealVNC     
-```
+
 
 也可以使用桌面方式配置
 ![依次点击](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610433840402.png) 
@@ -92,11 +103,6 @@ ssh pi@your_ip
 # 树莓派默认登录名和密码是：pi, raspberry
 ```
 
-
-vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/download/viewer/)。
-
-
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1605523846409.png)
 
 
 插上网线，上不了网，ifconfig 不显示有线网络的地址。原因时树莓派的有线网卡没开启。
