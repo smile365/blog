@@ -1,11 +1,17 @@
 ---
 title:  2021年树莓派最新安装使用教程
+heading: 没有显示器鼠标键盘网线如何安装和使用树莓派教程
 date: 2019-07-02T10:35:01.080Z
 tags: 
 categories:
-draft: true
 description: 2021年树莓派最新安装使用教程
 ---
+
+没有显示器情况下，
+无屏幕和键盘配置树莓派WiFi和SSH
+通过SD卡为树莓派配置WIFI
+买了个树莓派，
+
 
 #### 安装系统
 Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系统。到官网下载[Raspberry Pi Imager](https://www.raspberrypi.org/software/)这个安装工具并安装到电脑上，然后选择需要烧录的 sd 卡和需要烧录的系统，工具会自动下载 Raspberry Pi OS ，并烧录到 sd 卡上，只需要简单 3 步。
