@@ -91,8 +91,6 @@ sudo raspi-config
 
 vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/download/viewer/)，之后输入 ip 地址即可连接。
 
-![vnc 树莓派](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610889588805.png)
-
 #### 让树莓派支持有线连接
 
 树莓派默认禁用了有线网卡，所以使用 `ifconfig -a` 无法显示 `eth0`
