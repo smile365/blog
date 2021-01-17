@@ -95,13 +95,12 @@ vnc 连接需要安装 [vnc 客户端](https://www.realvnc.com/en/connect/downlo
 
 树莓派默认禁用了有线网卡，所以使用 `ifconfig -a` 无法显示 `eth0`
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551042645.png)
+![eth0](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610551042645.png)
 
 
 通过 VNC 连接远程桌面后，设置国家即可启用有线网卡。
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610552196271.png)
-
+![vnc 树莓派](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610889767815.png)
 
 使用命令 `ifconfig -a` 可以查看到已经有了 `eth0`，但即使插了网线也没有 ip 地址。
 
