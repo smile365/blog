@@ -3,7 +3,7 @@ title:  2021年树莓派最新安装使用教程
 heading: 没有显示器鼠标键盘网线如何安装和使用树莓派教程
 date: 2019-07-02T10:35:01.080Z
 tags: 
-categories:
+categories: ["code"]
 description: 2021年树莓派最新安装使用教程
 ---
 
