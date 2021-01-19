@@ -1,10 +1,10 @@
 ---
-title:  ping-ip
+title:  Linux命令之多线程ping一个ip段
 heading: Linux命令一次性批量多线程ping一个ip段所有ip
 date: 2021-01-12T08:29:28.741Z
 categories: ["code"]
 tags: 
-description: linux 一次性批量多线程ping一个ip段所有ip
+description: linux 一次性批量多线程ping一个ip段所有ip,ping-ip
 ---
 
 
