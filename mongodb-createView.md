@@ -8,7 +8,7 @@ description: mongodb-createView
 ---
 
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1611046301342.png)
+![需求](https://gitee.com/smile365/blogimg/raw/master/sxy91/1611046301342.png)
 
 
 一本电子课件有多个媒体资源，每一个资源需要经过很多轮审核，如何设计数据模型？
@@ -20,4 +20,10 @@ description: mongodb-createView
 方案二：数据放到资源上，统计。慢，准确，逻辑简单。
 方案三：使用 mongodb 视图
 方案四：使用 mongodb 按需视图
+
+
+[树形结构的数据模型](https://docs.mongodb.com/manual/tutorial/model-tree-structures-with-parent-references/)
+
+
+[mongodb-createView](https://docs.mongodb.com/manual/reference/method/db.createView/#db.createView)
 
