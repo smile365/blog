@@ -31,5 +31,7 @@ print(fake.lexify(text='测试字符串：????', letters='abcdefghijklmnopqrstuv
 
 
 
+也可以使用 [mimesis](https://github.com/lk-geimfari/mimesis)
+
 
 
