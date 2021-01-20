@@ -26,7 +26,9 @@ print(fake.name())
 print(fake.random_int(0, 100))
 print(fake.random_number(digits=10))
 
+print(fake.lexify(text='测试字符串：????', letters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
 ```
+
 
 
 
