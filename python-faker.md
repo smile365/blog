@@ -35,3 +35,6 @@ print(fake.lexify(text='测试字符串：????', letters='abcdefghijklmnopqrstuv
 
 
 
+
+参考文档
+- [假数据 3 种方法](https://blog.csdn.net/pythonxiaopeng/article/details/109026484)
