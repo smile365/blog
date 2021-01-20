@@ -7,3 +7,20 @@ tags:
 description: python-faker
 ---
 
+安装[faker](https://faker.readthedocs.io/en/master/)
+
+```bash
+pip install faker
+```
+
+使用
+
+```python
+from faker import Faker
+fake = Faker()
+
+fake.name()
+```
+
+
+
