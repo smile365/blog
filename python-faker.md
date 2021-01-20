@@ -19,10 +19,13 @@ pip install faker
 
 ```python
 from faker import Faker
-fake = Faker()
+# 设置语言
+fake = Faker('zh_CN')
 
-fake.name()
-# 'Lucy Cechtelar'
+print(fake.name())
+print(fake.random_int(0, 100))
+print(fake.random_number(digits=10))
+
 ```
 
 
