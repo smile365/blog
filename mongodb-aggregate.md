@@ -18,7 +18,8 @@ description:
 ![统计](https://gitee.com/smile365/blogimg/raw/master/sxy91/1611215812237.png)
 
 
-如何设计数据的存储模型，以及如何实现这样的功能。
+如何设计数据的存储模型，统计的查询语句应该怎样写。
+
 
 
 
