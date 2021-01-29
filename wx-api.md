@@ -85,6 +85,8 @@ cnpm run serve
 scp ./project/wx-api/target/wx-api.jar server:/home/wx-api
 # 运行
 nohup java -jar -Dspring.profiles.active=prod wx-api.jar 1>out.log 2>out.log &
+# 查看日志
+tail -f out.log
 ```
 
 
