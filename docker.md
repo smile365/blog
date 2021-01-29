@@ -42,7 +42,7 @@ sudo systemctl restart docker
 执行`docker info`，看到Registry Mirrors:信息则表示生效
 
 
-> 若购买的是云服务器，用云服务器厂商提供的加速器会更快。[腾讯云](https://cloud.tencent.com/document/product/1207/45596?from=information.detail.%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8A%A0%E9%80%9Fdocker)的 docker 加速器为：`https://mirror.ccs.tencentyun.com`，[阿里云](https://help.aliyun.com/document_detail/60750.html)的 docker 加速器需要登录容器镜像服务控制台后，在左侧导航栏选择镜像工具 > 镜像加速器，可以找到单独独立分配的加速器地址
+> 注：若购买的是云服务器，用云服务器厂商提供的加速器会更快。[腾讯云](https://cloud.tencent.com/document/product/1207/45596?from=information.detail.%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8A%A0%E9%80%9Fdocker)的 docker 加速器为：`https://mirror.ccs.tencentyun.com`，[阿里云](https://help.aliyun.com/document_detail/60750.html)的 docker 加速器需要登录容器镜像服务控制台后，在左侧导航栏选择镜像工具 > 镜像加速器，可以找到单独独立分配的加速器地址。
 
 
 测试使用 
