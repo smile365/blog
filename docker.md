@@ -2,7 +2,6 @@
 title:  centos安装docker
 date: 2018-08-02T07:54:20.501Z
 tags: ["docker"]
-series: ["blog"]
 categories: ["code"]
 description:
 ---
@@ -60,6 +59,14 @@ Failed to start Docker Application Container Engine
 docker.service failed 
 ```
 一般是配置文件错误，请查看`/etc/docker/daemon.json`文件中的json格式是否正确。
+
+docker run —name rds -d redis
+
+**run 命令常用参数**
+- -p:主机端口:容器端口
+- -d:
+- -name:取一个别名
+- -v:
 
 
 参考  
