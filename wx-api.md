@@ -20,7 +20,7 @@ description:
 docker run --name myname -p 3306:3306 -e MYSQL_ROOT_PASSWORD=yourpass -d  mariadb
 
 # 把主机的 sql 文件拷贝到容器内
-docker cp mysql-2020-05-10.sql myname:/home/db.sql
+docker cp .db/mysql.sql myname:/home/db.sql
 
 #进入容器
 docker exec -it myname /bin/bash
