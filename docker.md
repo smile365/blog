@@ -60,7 +60,7 @@ docker.service failed
 ```
 一般是配置文件错误，请查看`/etc/docker/daemon.json`文件中的json格式是否正确。
 
-docker run —name rds -d redis
+
 
 **run 命令常用参数**
 - -p:主机端口:容器端口
