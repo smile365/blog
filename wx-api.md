@@ -18,6 +18,10 @@ description:
 ```bash
 #创建容器
 docker run --name myname -p 3306:3306 -e MYSQL_ROOT_PASSWORD=yourpass -d  mariadb
+
+# 把主机的 sql 文件拷贝到容器内
+docker cp mysql-2020-05-10.sql myname:/home/db.sql
+
 #进入容器
 docker exec -it myname /bin/bash
 ```
@@ -87,8 +91,7 @@ MYSQL_ROOT_PASSWORD=yourpass
 docker exec myname sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /some/path/on/your/host/all-databases.sql
 # 导入数据
 docker exec -i myname sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /some/path/on/your/host/all-databases.sql
-# 拷贝数据
-docker cp mysql-2020-05-10.sql myname:/home/db.sql
+
 ```
 
 参考  
