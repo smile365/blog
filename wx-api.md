@@ -80,7 +80,12 @@ cnpm run serve
 - 4. Directory目录建议改成/xxx/target
 
 #### 如何运行
-略
+```
+# 打包后把 jar 拷贝只服务器
+scp ./project/wx-api/target/wx-api.jar server:/home/wx-api
+# 运行
+nohup java -jar -Dspring.profiles.active=prod wx-api.jar 1>out.log 2>out.log &
+```
 
 
 #### 数据导入导出
