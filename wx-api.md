@@ -94,5 +94,8 @@ docker exec -i myname sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /some
 
 ```
 
+后期计划，配置 CI/CD
+
+
 参考  
 - [idea工具将SpringBoot工程打包成 jar或war](https://blog.csdn.net/WillJGL/article/details/75125801)
