@@ -30,6 +30,8 @@ docker exec -i myname sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /some
 docker cp mysql-2020-05-10.sql myname:/home/db.sql
 ```
 
+> **参数说明** -p:外面端口:里面端口, -p:主机端口:容器端口
+
 创建数据库wx，数据库字符集utf8mb4，编码规则utf8mb4_general_ci，并导入数据
 ```sql
 mysql -u root -p;
