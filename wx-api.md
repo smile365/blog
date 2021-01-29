@@ -20,14 +20,6 @@ description:
 docker run --name myname -p 3306:3306 -e MYSQL_ROOT_PASSWORD=yourpass -d  mariadb
 #进入容器
 docker exec -it myname /bin/bash
-#数据导入导出
-MYSQL_ROOT_PASSWORD=yourpass
-# 导出数据
-docker exec myname sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /some/path/on/your/host/all-databases.sql
-# 导入数据
-docker exec -i myname sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /some/path/on/your/host/all-databases.sql
-# 拷贝数据
-docker cp mysql-2020-05-10.sql myname:/home/db.sql
 ```
 
 > **参数说明** -p:外面端口:里面端口, -p:主机端口:容器端口
@@ -84,7 +76,20 @@ cnpm run serve
 - 4. Directory目录建议改成/xxx/target
 
 #### 如何运行
+略
 
+
+#### 数据导入导出
+```bash
+# 先配置密码
+MYSQL_ROOT_PASSWORD=yourpass
+# 导出数据
+docker exec myname sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /some/path/on/your/host/all-databases.sql
+# 导入数据
+docker exec -i myname sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD"' < /some/path/on/your/host/all-databases.sql
+# 拷贝数据
+docker cp mysql-2020-05-10.sql myname:/home/db.sql
+```
 
 参考  
 - [idea工具将SpringBoot工程打包成 jar或war](https://blog.csdn.net/WillJGL/article/details/75125801)
