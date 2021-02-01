@@ -53,8 +53,9 @@ server {
 
 使用ssh隧道反向代理8088端口
 ```bash
-ssh -R 8091:127.0.0.1:8088 root@sxy91.com
+ssh -R 8088:127.0.0.1:8088 root@sxy91.com
 ```
+> -R : 值反向（从服务器访问本地）。8088：远程端口。127.0.0.1:8088 本地绑定的ip地址和端口。root@sxy91.com 用户名@服务器域名或产品。
 
 使用[测试版微信公众号](https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index)配置测试信息。
 
