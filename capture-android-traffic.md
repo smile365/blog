@@ -25,7 +25,9 @@ APP 获取网站的公钥对要发送的数据进行加密，发送给网站。�
 - [太极app](https://github.com/taichi-framework/TaiChi/releases) 或 [VirtualXposed](https://github.com/android-hacker/VirtualXposed/releases)
 - [JustTrustMe-v0.4](https://github.com/pengwei1024/JustTrustMe/releases)
 - 
-缺点：大部分 app 在太极中无法运行，但可以在 VirtualXposed 中运行。
+说明：在 VirtualXposed 安装目标 app 和 JustTrustMe 后，与电脑在同一 wifi，并按照 Charles 配置代理即可，无需在手机上安装证书。
+缺点：大部分 app 在太极中无法运行，但可以在 VirtualXposed 中运行，少部分 app 在 vx 中无法运行。
+
 
 方案二：[apk-mitm](https://github.com/shroudedcode/apk-mitm)
 ```
