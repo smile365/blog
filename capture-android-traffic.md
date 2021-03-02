@@ -13,3 +13,25 @@ APP 接收数据的过程：
 APP 发送数据的过程：
 APP 获取网站的公钥对要发送的数据进行加密，发送给网站。网站通过私钥对数据进行解密。
 
+非 root 环境下抓取 app 包
+JustTrustMe/releases/download/V0.4/app-release.apk
+
+方案一：[太极app](https://github.com/taichi-framework/TaiChi/releases) 或 [VirtualXposed](https://github.com/android-hacker/VirtualXposed/releases) + 
+[JustTrustMe-v0.4](https://github.com/pengwei1024/JustTrustMe/releases)
+缺点：大部分 app 在太极中无法运行，但可以在 VirtualXposed 中运行。
+
+方案二：[apk-mitm](https://github.com/shroudedcode/apk-mitm)
+```
+sudo npm install -g apk-mitm
+npx apk-mitm xiakele.apk
+# 会生成 ./xiakele-patched.apk
+```
+缺点：可能出现无法运行、闪退
+
+方案三：刷机
+
+
+
+参考链接
+- [抓包移动端app的https请求的流程](https://book.crifan.com/books/app_capture_package_tool_charles/website/how_capture_app/complex_https/)
+- [JustTrustMe不生效](https://github.com/taichi-framework/TaiChi/issues/538)
