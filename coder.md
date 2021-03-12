@@ -8,7 +8,7 @@ categories: ["code"]
 牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC
 
 推荐
-
+- [我作为独奏开发者的第三年](https://mtlynch.io/solo-developer-year-3/)
 - [简单粗暴 TensorFlow 2](https://tf.wiki/)
 - [网盘搜](https://www.dashengpan.com/)
 
