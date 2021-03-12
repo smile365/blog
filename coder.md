@@ -11,6 +11,7 @@ categories: ["code"]
 - [我作为独奏开发者的第三年](https://mtlynch.io/solo-developer-year-3/)
 - [简单粗暴 TensorFlow 2](https://tf.wiki/)
 - [网盘搜](https://www.dashengpan.com/)
+- [用中文浏览国外社交媒体](https://www.buzzing.cc/)
 
 
 站点收藏  
