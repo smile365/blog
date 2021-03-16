@@ -1,10 +1,10 @@
 ---
-title:  app-java-difficulty
+title:  参与app的Java后端开发过程中遇到的疑难杂症
 heading: 参与app的Java后端开发过程中遇到的疑难杂症
 date: 2021-03-16T12:43:59.634Z
 categories: ["code"]
 tags: 
-description: 
+description: app-java-difficulty
 ---
 
 情况一：MySQL连接数超过最大值，拒绝新的连接，造成大部分api无法提供服务
