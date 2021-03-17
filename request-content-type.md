@@ -1,6 +1,6 @@
 ---
-title: request-content-type 
-heading: 发送请求时不同数据发送方式的区别
+title: 发送请求时不同数据发送方式的区别
+heading: 
 date: 2021-03-17T10:57:00.062Z
 categories: ["code"]
 tags: 
