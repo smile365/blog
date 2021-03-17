@@ -1,19 +1,18 @@
 ---
-title:  install acme-sh
-heading: install acme-sh
+title: 秒级别安装acme.sh的另类方式
+heading: 国内快速秒级安装acme.sh
 date: 2021-03-17T07:28:17.467Z
 categories: ["code"]
 tags: 
 description: acme.sh 的另类安装方式
 ---
 
-想使用 let en 生成免费的 https 所需要的 SSL 证书，
+想使用 [acme.sh](https://github.com/acmesh-official/acme.sh/wiki) 生成免费的 https 所需要的 SSL 证书，
 由于众所周知的原因，国内安装 acme.sh 奇慢无比，甚至还经常失败，以下是快速的安装方法。
 
-打开此acme.sh脚本文件，并拷贝
+首先浏览器打开此[acme.sh脚本](https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh)文件，并拷贝，然后：
 ```bash
-
-# 需要安装的目录
+# 进入需要安装的目录
 cd ~
 mkdir .acme.sh
 cd .acme.sh
