@@ -28,3 +28,7 @@ build:
 ```
 
 若你的 gitlab 仓库开启了 ci/cd 那么，push 代码的时候会自动构建并把镜像推送到自己的创建的容器仓库里。
+
+
+参考文档 
+- [Docker — 从入门到实践](https://yeasy.gitbook.io/docker_practice/repository/registry)
