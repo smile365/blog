@@ -32,3 +32,5 @@ build:
 
 参考文档 
 - [Docker — 从入门到实践](https://yeasy.gitbook.io/docker_practice/repository/registry)
+- [使用Docker对ReactJS，NodeJS，NGINX进行Docker化](https://dev.to/subhransu/nevertheless-subhransu-maharana-coded-5eam)
+- [docker-run-static-website](https://tecadmin.net/tutorial/docker-run-static-website)
