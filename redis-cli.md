@@ -31,10 +31,11 @@ tar xvzf redis-stable.tar.gz
 cd redis-stable
 make redis-cli
 sudo cp src/redis-cli /usr/local/bin/
+redis-cli -h 127.0.0.1-p 6379 ping
 ```
 
 
 
 参考
 
-- (install-redis-cli-only)[https://stackoverflow.com/questions/21795340/linux-install-redis-cli-only]
+- [install-redis-cli-only](https://stackoverflow.com/questions/21795340/linux-install-redis-cli-only)
