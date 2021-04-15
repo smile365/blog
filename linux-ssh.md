@@ -23,8 +23,25 @@ ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@192.168.1.2
 成功以后即可使用密钥链接服务器
 
 ```sh
-ssh -i id_rsa_sxy -p 3322  songxueyan@192.168.1.2
+ssh -i ~/.ssh/id_rsa_sxy -p 3322  songxueyan@192.168.1.2
 ```
+
+若是从别的地方下载或者拷贝的密钥，链接时可能出现错误：
+```
+Permissions 0644 for '/Users/songyangcong/.ssh/id_rsa_sxy' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/Users/songyangcong/.ssh/id_rsa_sxy": bad permissions
+songxueyan@192.168.1.2: Permission denied (publickey).
+```
+
+意思是权限太大了，私钥只能创建者有读写权限，其他人不可读写。改一下权限即可。
+```bash
+chmod og-rw ~/.ssh/id_rsa_sxy.pub
+```
+
+
+
 
 虽然少了账号密码，但需要指定端口和密钥，能不能一块去掉呢。
 
@@ -98,6 +115,14 @@ ssh -L 8080:localhost:8080 sxy@server
 ```
 
 2、访问server的多个绑定localhost的端口
+```
+ssh sxy@server -L 8080:localhost:8080 -L 8088:localhost:8088
+```
+
+3、免密转发
+```
+# 把转发规则配置到 ~/.ssh/config
+```
 
 
 参考
