@@ -9,15 +9,38 @@ categories: ["code"]
 
 ---
 
-**centos安装**[hugo](https://gohugo.io/getting-started/quick-start/)
+### 安装
 
+Centos 系统安装方法：
 ```sh
 yum-config-manager --add-repo https://copr.fedorainfracloud.org/coprs/daftaupe/hugo/repo/epel-7/daftaupe-hugo-epel-7.repo
 yum -y install hugo
 hugo version
 ```
 
-hugo列表无法正确显示的解决方法
+Mac 系统[安装](https://gohugo.io/getting-started/quick-start/)方法：
+使用 
+```sh
+# 安装
+brew install hugo
+# 测试
+hugo version
+```
+
+如果 安装不成功，可以直接[下载](https://github.com/gohugoio/hugo/releases)二进制文件[安装](https://discourse.gohugo.io/t/script-to-install-latest-hugo-release-on-macos-and-ubuntu/14774)
+下载并解压后。
+```
+# 改成可运行
+chmod +x hugo
+# 放到用户目录
+mv hugo /usr/local/bin/
+# 测试
+hugo version
+```
+
+
+
+### Hugo 文章列表无法正确显示的解决方法
 
 在其他地方显示正常的md文件，在hugo下显示错误。其原因是hugo使用了Blackfriday作为Markdown解析引擎。
 
@@ -41,9 +64,10 @@ list
 $ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
 ```
 
-[开启百度统计](https://tongji.baidu.com/web/welcome/basic)
+### 开启百度统计
 
-按照要求把代码复制到模版的single.html/list.html等地方。
+
+按照要求把[百度统计代码](https://tongji.baidu.com/web/welcome/basic)复制到模版的single.html/list.html等地方。
 
 先去注册[leancloud](https://leancloud.cn/?source=XRC4B1YQ)
 
@@ -58,10 +82,9 @@ $ hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
 推荐主题：
 
 - [KeepIt](https://github.com/Fastbyte01/KeepIt),[demo](https://shuzang.github.io/)
-- []()
+- [Wehuth](https://gitee.com/smile365/wehuth)
 
 **参考**  
-
 - [gohugo.io](https://gohugo.io/getting-started/quick-start/)
 - [hugo列表显示错误](https://orianna-zzo.github.io/sci-tech/2018-03/blog%E5%85%BB%E6%88%90%E8%AE%B07-hugo%E5%A4%9A%E7%BA%A7%E5%88%97%E8%A1%A8%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA--cocoa%E4%B8%BB%E9%A2%98%E7%9A%84markdown-bug%E5%90%88%E9%9B%86/)
 - [使用Hugo搭建静态站点](https://tonybai.com/2015/09/23/intro-of-gohugo/)
