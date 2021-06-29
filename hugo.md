@@ -38,7 +38,7 @@ mv hugo /usr/local/bin/
 hugo version
 ```
 
-
+之后的创建站点、使用主题、添加内容、启动等都可以从[quick-start](https://gohugo.io/getting-started/quick-start/)查看到。
 
 ### Hugo 文章列表无法正确显示的解决方法
 
