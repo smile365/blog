@@ -2,7 +2,7 @@
 title: redmi-note8-root 
 heading: 红米 note 8 刷机教程
 date: 2021-03-21T12:30:06.473Z
-categories: ["code"]
+categories: ["other"]
 tags: 
 description: 
 ---
@@ -27,3 +27,4 @@ description:
 
 参考教程
 - [小米红米note 8 Pro（Redmi note8 Pro）刷机](http://www.goodcms8.com/493/)
+
