@@ -2,7 +2,7 @@
 title: 发送请求时不同数据发送方式的区别
 heading: 
 date: 2021-03-17T10:57:00.062Z
-categories: ["code"]
+categories: ["other"]
 tags: 
 description: 发送请求时不同数据发送方式的区别,request-content-type 
 ---
