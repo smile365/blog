@@ -1,10 +1,10 @@
 ---
-title: capture-android-traffic 
-heading: Android 抓包 2021 
+title: 2021年如何对安卓app抓包教程
+heading: 
 date: 2021-03-02T02:06:59.414Z
 categories: ["code"]
 tags: 
-description: 'android https capture,Intercept HTTPS Traffic from Android App,Capture and decrypt HTTPS traffic from any android app,How to: Capture Android Traffic with Fiddler - Telerik'
+description: 'android https capture,Intercept HTTPS Traffic from Android App,Capture and decrypt HTTPS traffic from any android app,How to: Capture Android Traffic with Fiddler - Telerik,capture-android-traffic，Android 抓包 2021  '
 ---
 
 APP 接收数据的过程：
