@@ -1,5 +1,5 @@
 ---
-title:  配置 gitlab-ci.yml 实现提交代码，自动部署到容器
+title:  配置 gitlab-ci.yml 实现提交代码时自动部署到容器
 heading: 
 date: 2021-03-24T08:08:59.340Z
 categories: ["code"]
