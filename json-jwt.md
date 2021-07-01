@@ -8,7 +8,9 @@ tags:
 description: JSON Web Toke,json-jwt
 ---
 
-这五个缩写对应的英文全称是：
+之前开发互联网应用的时候一直使用 token 作为鉴权的手段，之前使用的时候仅仅当做类似 session 的存在，完全没有发挥 jwt-token 的价值。当遇到签发、授权、鉴权等流程不在同一主体时，就遇到了很多问题。查问题的时候又遇到一大堆名词，比如：JWT、JWE、JWA、JWS、JWK、JWKS，听起来就头皮发麻。为了完全理解它们，做一个整理。
+
+这几个缩写对应的英文全称是：
 - `JWT`: JSON Web Toke，令牌。
 - `JWE`: JSON Web Encryption，加密。
 - `JWA`: JSON Web Algorithm，算法。
