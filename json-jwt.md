@@ -1,11 +1,11 @@
 ---
-title: json-jwt
-heading: 傻傻分不清楚JWT\JWE\JWS\JWK\JWKS分别是什么
+title: 傻傻分不清楚JWT\JWE\JWS\JWK\JWKS分别是什么
+heading: 
 date: 2021-06-30T10:28:12.372Z
 categories: ["code"]
 grammar_mathjax: true
 tags: 
-description: JSON Web Toke
+description: JSON Web Toke,json-jwt
 ---
 
 这五个缩写对应的英文全称是：
