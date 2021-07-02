@@ -10,13 +10,49 @@ description: JSON Web Toke,json-jwt
 
 之前开发互联网应用的时候一直使用 token 作为鉴权的手段，之前使用的时候仅仅当做类似 session 的存在，完全没有发挥 jwt-token 的价值。当遇到签发、授权、鉴权等流程不在同一主体时，就遇到了很多问题。查问题的时候又遇到一大堆名词，比如：JWT、JWE、JWA、JWS、JWK、JWKS，听起来就头皮发麻。为了完全理解它们，做一个整理。
 
-这几个缩写对应的英文全称是：
+这几个缩写对应的[英文全称](https://redthunder.blog/2017/06/08/jwts-jwks-kids-x5ts-oh-my/)是：
 - `JWT`: JSON Web Toke，令牌。
 - `JWE`: JSON Web Encryption，加密。
 - `JWA`: JSON Web Algorithm，算法。
 - `JWS`: JSON Web Signature，签名。
 - `JWK`: JSON Web Key，密钥。
 - `JWKS`: JSON Web Key Set，多个密钥的集合。
+
+
+JWT 由 JWK 经过一系列计算得来。
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625216099694.png)
+
+[JWT](https://www.tomczhen.com/2017/05/25/5-easy-steps-to-understanding-json-web-tokens-jwt/)其实是由两个点“.”分隔成三段的一串字符串:
+```
+# 头部说明.数据体.签名
+header.payload.signature
+```
+header、payload 其实都是 json 数据，header 描述了 signature 使用了哪种算法，方便验证的时候选择响应的算法。
+
+比如下面是一个真实的 JWT：
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Zjg5MGI4NTVjMGI3MDc1IiwicGljdHVyZSI6Imh0dHBzOi8vc3h5OTEuY29tL2F2YXRhci5wbmciLCJ1c2VybmFtZSI6IiIsImlkIjoiNWY4OTBiODU1MDM4YzBiNzA3NSIsImVtYWlsIjoic3h5OTFAbWUuY29tIiwic2lkIjoiNmUzYzIzZmJmNWQ1MDEzMmZlNTUiLCJhdWQiOiI1ZTQzYWIxNDFlODZhZGFmY2IiLCJleHAiOjE2MjUyMTc5MjAsImlhdCI6MTYyNTIxNDMyMCwiaXNzIjoiaHR0cHM6Ly91c2VyLnN4eTkxLmNvbS9vYXV0aC9vaWRjIn0.yDuGkG4JYTaDH15EHX7fB03BXMaSKbv1UUZlrxBMHAs
+```
+用 [base64urlDecode](https://base64.guru/standards/base64url/decode) 把第一个点前面的字符串解码，就可以可以知道 header 的内容：
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625217924505.png)
+
+同理，把第二段解码后就得到数据
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625218027543.png)
+
+
+
+
+
+
+JWK 可以表示密钥，即可以表示公钥或私钥，也可同时表示公钥和私钥。
+
+提到公钥或私钥就不得不说非对称加密，这是一种特殊的算法。
+
+fx(私钥,message)=n,
+fy(公钥,n)=message
+
 
 
 要理解 JWT 就避不开哈希算法和非对称加密。
@@ -47,29 +83,25 @@ H("哈希算了") = d67394d8dcda13ca451ae72e90ed2de2
 ```json
 {
     "kid":"YoxRVsbyYE5zKzxAaiayKY9rVLl13xNbHIM_cDI18S4"
-    "alg":"RS256",
     "kty":"RSA",
+    "alg":"RS256",
+    "use":"sig",
     "e":"AQAB",
     "n":"vL6fnf1S36B4xI3tIkD5_W3HoZJgEIzAYSsTLGIn",
-    "use":"sig",
 }
 ```
 
-密钥 ID (kid）
-这些区域有：kid是一个提示，指示哪些密钥用于保护令牌的 JSON Web Signature (JWS)。
 
-算法 (alg）
-这些区域有：alg标头参数表示用于保护 ID 令牌的加密算法。用户池使用 RS256 加密算法，这是一种采用 SHA-256 的 RSA 签名。有关 RSA 的更多信息，请参阅RSA 加密。
-
-密钥类型 (kty）
-这些区域有：kty参数标识与密钥结合使用的加密算法系列，例如本示例中的 “RSA”。
+密钥 ID (kid）: 
+密钥类型 (kty）：算法系列，RSA\EC\oct\OKP
+算法 (alg）：具体的算法，
+使用使用 (use）：enc、sig
 
 RSA 指数 (e）
-这些区域有：e参数包含 RSA 公有密钥的指数值。它表示为采用 Base64urlUInt 编码的值。
-
 RSA 模量 (n）
-这些区域有：n参数包含 RSA 公有密钥的模数值。它表示为采用 Base64urlUInt 编码的值。
 
-使用使用 (use）
-这些区域有：use参数描述了公有密钥的预期用途。对于这个示例，use值sig表示签名。
 
+
+
+参考： 
+[五个步骤轻松弄懂 JSON Web Token](https://www.tomczhen.com/2017/05/25/5-easy-steps-to-understanding-json-web-tokens-jwt/)
