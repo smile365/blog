@@ -42,7 +42,28 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Zjg5MGI4NTVjMGI3MDc1IiwicGljdHV
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625218027543.png)
 
 
+那么 ~~伪造~~ 生成这样格式的 token 也很简单：
+```
+data = base64urlEncode( header ) + "." + base64urlEncode( payload );
+signature = Hash( data, secret );
+token = data + "." + signature
+```
 
+或者直接在[jwt.io](https://jwt.io/)这个网站可以直接编辑或查看 JWT 格式的 token 。
+
+
+所以 JWT 的作用是：
+1. 更方便的传输和转换数据结构 JSON 格式经过 base64Url 编码。
+2. 数据是没加密的，没有经过隐藏或者混淆数据。
+3. 使用 JWT 是为了保证发送的数据是由可信的来源创建的。
+
+
+既然谁都可以方便的造出一个格式相符的 token ，那么服务器怎么验证这个 token 确实是服务器发出去的呢？，答案就是 signature 。
+
+用 token 中第二个“.”前面的数据和服务器签发时的密码做一次哈西运算，如果结果与第三段的 signature 就证明是自己签发的。
+```
+Hash(header+"."+payload,secret) =? signature
+```
 
 
 
