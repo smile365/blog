@@ -104,4 +104,5 @@ RSA 模量 (n）
 
 
 参考： 
-[五个步骤轻松弄懂 JSON Web Token](https://www.tomczhen.com/2017/05/25/5-easy-steps-to-understanding-json-web-tokens-jwt/)
+- [五个步骤轻松弄懂 JSON Web Token](https://www.tomczhen.com/2017/05/25/5-easy-steps-to-understanding-json-web-tokens-jwt/)
+- [在线生成密钥](https://mkjwk.org/?spm=a2c4g.11186623.2.12.7b966a3ayACLcE)
