@@ -65,22 +65,8 @@ token = data + "." + signature
 Hash(header+"."+payload,secret) =? signature
 ```
 
-
-
-JWK 可以表示密钥，即可以表示公钥或私钥，也可同时表示公钥和私钥。
-
-提到公钥或私钥就不得不说非对称加密，这是一种特殊的算法。
-
-fx(私钥,message)=n,
-fy(公钥,n)=message
-
-
-
-要理解 JWT 就避不开哈希算法和非对称加密。
-
 哈希算法，又称散列算法，它是一个单向函数，可以把任意长度的输入数据转化为固定长度的输出：
 `h=H(x)`
-
 
 这个算法有如下几个特点：
 1. 无论输入多长，输出总是一定的。
@@ -99,7 +85,16 @@ H("哈希算了") = d67394d8dcda13ca451ae72e90ed2de2
 
 这样的散列算法有很多比如：MD5\SHAxxx\HmacSHA\HmacMd5 等。
 
-这样的算法有什么用呢？
+这样的算法有什么用呢？把之前的 token 简化一下。
+```
+signature = Hash(data, secret);
+token = data+"."+signature
+```
+
+服务器把数据和一个别人不知道的东西（密钥）进行一次哈希运算，得到一个独一无二的指纹（signature）。然后服务器把数据+指纹（token）发给前端。之后服务器收到 token（数据+指纹），只需要取出数据，通过计算密钥+数据的指纹与收到的指纹进行对比，就知道是否是自己发出的token，如果是就是合法的。也就做到了验证和防篡改。
+
+
+
 
 ```json
 {
@@ -122,6 +117,22 @@ RSA 指数 (e）
 RSA 模量 (n）
 
 
+
+![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625283745171.png)
+
+
+
+
+JWK 可以表示密钥，即可以表示公钥或私钥，也可同时表示公钥和私钥。
+
+提到公钥或私钥就不得不说非对称加密，这是一种特殊的算法。
+
+fx(私钥,message)=n,
+fy(公钥,n)=message
+
+
+
+要理解 JWT 就避不开哈希算法和非对称加密。
 
 
 参考： 
