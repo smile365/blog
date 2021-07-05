@@ -96,6 +96,13 @@ token = data+"."+signature
 
 
 
+
+这样的哈希算法有很多，有可能不同的 signature 使用的算法不同。那么验证的时候怎么知道要用哪个算法呢？
+
+
+这就需要用到 JWK，其实就是用来存储密钥和哈希算法所需的各种参数。
+
+
 ```json
 {
     "kid":"YoxRVsbyYE5zKzxAaiayKY9rVLl13xNbHIM_cDI18S4"
@@ -138,3 +145,4 @@ fy(公钥,n)=message
 参考： 
 - [五个步骤轻松弄懂 JSON Web Token](https://www.tomczhen.com/2017/05/25/5-easy-steps-to-understanding-json-web-tokens-jwt/)
 - [在线生成密钥](https://mkjwk.org/?spm=a2c4g.11186623.2.12.7b966a3ayACLcE)
+- [X.509 数字证书的基本原理及应用](https://zhuanlan.zhihu.com/p/36832100)
