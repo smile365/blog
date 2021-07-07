@@ -143,6 +143,7 @@ fy(公钥,n)=message
 
 
 参考： 
+- [X.509 数字证书的基本原理及应用](https://zhuanlan.zhihu.com/p/36832100)
 - [五个步骤轻松弄懂 JSON Web Token](https://www.tomczhen.com/2017/05/25/5-easy-steps-to-understanding-json-web-tokens-jwt/)
 - [在线生成密钥](https://mkjwk.org/?spm=a2c4g.11186623.2.12.7b966a3ayACLcE)
 - [X.509 数字证书的基本原理及应用](https://zhuanlan.zhihu.com/p/36832100)
@@ -156,3 +157,4 @@ fy(公钥,n)=message
 - [JWTs: Which Signing Algorithm Should I Use?](https://www.scottbrady91.com/JOSE/JWTs-Which-Signing-Algorithm-Should-I-Use)
 - [JSON Web Signatures, KIDs and Thumbprints: Sticking to Standards](https://developer.forgerock.com/docs/platform/how-tos/json-web-signatures-kids-and-thumbprints-sticking-standards)
 - [RW 的 JWS 签名算法](https://bitbucket.org/openid/fapi/issues/101/jws-signature-algorithms-for-rw)
+- [X.509证书有什么用？](https://www.ssl.com/zh-CN/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%BB%80%E4%B9%88%E6%98%AFx-509%E8%AF%81%E4%B9%A6/)
