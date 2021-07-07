@@ -122,6 +122,13 @@ ssh sxy@server -L 8080:localhost:8080 -L 8088:localhost:8088
 3、免密转发
 ```
 # 把转发规则配置到 ~/.ssh/config
+
+Host tunnel
+    HostName database.example.com
+    IdentityFile ~/.ssh/coolio.example.key
+    User sxy91
+    LocalForward 9906 127.0.0.1:3306
+    LocalForward 8806 127.0.0.1:8806
 ```
 
 
