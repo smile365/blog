@@ -29,5 +29,23 @@ pip install psycopg2-binary
 brew install postgresql
 ```
 
+```
+from pony.orm import *
+
+db = Database()
+class User(db.Entity):
+	_table_ = "users"
+	id = PrimaryKey(str)
+	username = Optional(str)
+
+db.bind(provider='postgres', user='sxy91', password='111', host='localhost', database='mydb',port='1921')
+db.generate_mapping()
+
+with db_session:
+    u = User.get(id="xxx")
+
+```
+
+
 参考 
 - [psycopg](https://www.psycopg.org/docs/)
