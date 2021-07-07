@@ -119,7 +119,7 @@ ssh -L 8080:localhost:8080 sxy@server
 ssh sxy@server -L 8080:localhost:8080 -L 8088:localhost:8088
 ```
 
-3、免密转发
+3、免密转发[ssh_config](https://man.openbsd.org/ssh_config.5)
 ```
 # 把转发规则配置到 ~/.ssh/config
 
