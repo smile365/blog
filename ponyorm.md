@@ -29,6 +29,7 @@ pip install psycopg2-binary
 brew install postgresql
 ```
 
+使用方法
 ```
 from pony.orm import *
 
