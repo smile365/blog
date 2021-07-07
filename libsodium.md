@@ -30,4 +30,6 @@ load libsodium failed with path None
 - [libsodium.org](https://doc.libsodium.org/)
 - [load libsodium failed with path none 的解决方案](https://zhuanlan.zhihu.com/p/354780318)
 - [更新SS以支持新的加密方法](https://zhcexo.com/2018/07/06/ubuntu-update-and-ss-update/)
-- 
+- [udp加速方案](https://github.com/xtaci/kcptun/issues/458)
+- [yanfa](https://github.com/jiashihar/yanfa)
+- [kylina](https://share.qlbalaa.com/kylina/?id=123)
