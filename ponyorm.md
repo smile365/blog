@@ -47,6 +47,18 @@ with db_session:
 
 ```
 
+Ubuntu install psycopg2
+
+出现 Error: pg_config executable not found.
+
+```
+apt-get update 
+sudo apt-get install postgresql
+sudo apt-get install python-psycopg2
+sudo apt-get install libpq-dev
+pip3 install psycopg2
+```
+
 
 参考 
 - [psycopg](https://www.psycopg.org/docs/)
