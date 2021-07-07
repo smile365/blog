@@ -27,3 +27,7 @@ load libsodium failed with path None
 参考：  
 - [libsodium 安装](https://jaminzhang.github.io/programming/libsodium-introduction-and-installation/)
 - [CentOS 7/8 安装 libsodium](https://www.24kplus.com/linux/287.html)
+- [libsodium.org](https://doc.libsodium.org/)
+- [load libsodium failed with path none 的解决方案](https://zhuanlan.zhihu.com/p/354780318)
+- [更新SS以支持新的加密方法](https://zhcexo.com/2018/07/06/ubuntu-update-and-ss-update/)
+- 
