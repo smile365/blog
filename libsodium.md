@@ -24,3 +24,6 @@ https://jaminzhang.github.io/programming/libsodium-introduction-and-installation
 load libsodium failed with path None
 
 
+参考：  
+- [libsodium 安装](https://jaminzhang.github.io/programming/libsodium-introduction-and-installation/)
+- [CentOS 7/8 安装 libsodium](https://www.24kplus.com/linux/287.html)
