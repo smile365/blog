@@ -119,13 +119,24 @@ Hash("哈希算了") = d67394d8dcda13ca451ae72e90ed2de2
 
 回到 JWT ，使用哈希算法就可以保证数据的一致性，只要 header 和 payload 没有被改变，那么其生成的摘要也不会变。
 ```
-header.payload.signature
+token = header.payload.signature
 摘要 = Hash(header+"."+payload); 
 ```
 
 到这里，如果用摘要作为 signature 那么似乎也没什么用，因为谁都能使用哈希算法轻易的生成这个摘要，伪造JWT比之前定义的规则还简单。
 
-这时候就需要非对称加密出场了。
+那能否加点干扰数据呢，比如: 
+```
+token = header.payload.signature
+摘要 = Hash(header+"."+payload); 
+signature = Hash(摘要+"这是我的密码，只有我知道")
+```
+
+这样也能保证别人无法伪造 signature ，这么做就需要密码设置的足够复杂，然而大多数人不会设置复杂的密码，即使看起来复杂的密码，对机器来说其实很简单，另外即使特别复杂也完全可以使用一个一个尝试的方式来破解。
+
+那
+
+
 
 ## 非对称加密
 
