@@ -36,11 +36,21 @@ header.payload.signature
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Zjg5MGI4NTVjMGI3MDc1IiwicGljdHVyZSI6Imh0dHBzOi8vc3h5OTEuY29tL2F2YXRhci5wbmciLCJ1c2VybmFtZSI6IiIsImlkIjoiNWY4OTBiODU1MDM4YzBiNzA3NSIsImVtYWlsIjoic3h5OTFAbWUuY29tIiwic2lkIjoiNmUzYzIzZmJmNWQ1MDEzMmZlNTUiLCJhdWQiOiI1ZTQzYWIxNDFlODZhZGFmY2IiLCJleHAiOjE2MjUyMTc5MjAsImlhdCI6MTYyNTIxNDMyMCwiaXNzIjoiaHR0cHM6Ly91c2VyLnN4eTkxLmNvbS9vYXV0aC9vaWRjIn0.yDuGkG4JYTaDH15EHX7fB03BXMaSKbv1UUZlrxBMHAs
 ```
 用 [base64urlDecode](https://base64.guru/standards/base64url/decode) 把第一个点前面的字符串解码，就可以可以知道 header 的内容：
+```
+header = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9';
+print(base64urlDecode(header)) 
+// 输出
+{"alg":"HS256","typ":"JWT"}
+```
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625217924505.png)
 
-同理，把第二段解码后就得到数据
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1625218027543.png)
+同理，把第二段[解码](https://base64.guru/standards/base64url/decode)后就得到数据
+```
+payload = 'eyJzdWIiOiI1Zjg5MGI4NTVjMGI3MDc1IiwicGljdHVyZSI6Imh0dHBzOi8vc3h5OTEuY29tL2F2YXRhci5wbmciLCJ1c2VybmFtZSI6IiIsImlkIjoiNWY4OTBiODU1MDM4YzBiNzA3NSIsImVtYWlsIjoic3h5OTFAbWUuY29tIiwic2lkIjoiNmUzYzIzZmJmNWQ1MDEzMmZlNTUiLCJhdWQiOiI1ZTQzYWIxNDFlODZhZGFmY2IiLCJleHAiOjE2MjUyMTc5MjAsImlhdCI6MTYyNTIxNDMyMCwiaXNzIjoiaHR0cHM6Ly91c2VyLnN4eTkxLmNvbS9vYXV0aC9vaWRjIn0';
+print(base64urlDecode(payload)) 
+// 输出
+{"sub":"5f890b855c0b7075","picture":"https://sxy91.com/avatar.png","username":"","id":"5f890b855038c0b7075","email":"sxy91@me.com","sid":"6e3c23fbf5d50132fe55","aud":"5e43ab141e86adafcb","exp":1625217920,"iat":1625214320,"iss":"https://user.sxy91.com/oauth/oidc"}
+```
 
 第三段可以理解成随机字符串，客户端拿到也没什么用。
 
@@ -52,8 +62,7 @@ signature = "xxxx"; // 任意字符串
 token = data + "." + signature
 ```
 
-直接在[jwt.io](https://jwt.io/)这个网站可以直接编辑或查看 JWT 格式的 token 。
-
+上面的过程仅仅为了说明 JWT 的生成过程和解析过程，更简单的方式是到[jwt.io](https://jwt.io/)这个网站，它提供在线编辑或查看 JWT 格式的 token 。
 
 所以 JWT 的作用是：
 1. 更方便的传输和转换数据结构 JSON 格式经过 base64Url 编码。
