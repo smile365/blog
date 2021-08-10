@@ -14,6 +14,14 @@ duplicate key value violates unique constraint "IDX_3bd1c1761646a6ec2a23c1bc11"
 
 如何查是哪个表，建立的什么索引
 
+```sql
+select * from pg_indexes
+WHERE indexname = 'IDX_3bd1c1761646a6ec2a23c1bc11';
+```
 
+结果如下
+```sql
+CREATE UNIQUE INDEX "IDX_3bd1c1761646a6ec2a23c1bc11" ON public.users USING btree (appid, openid, user_id)
+```
 
 
