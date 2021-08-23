@@ -33,3 +33,9 @@ cd existing_git_repo
 git remote add origin git@github.com:smile365/mblog.git
 git push -u origin master
 ```
+
+
+
+参考文献
+- [git-如何修复 master 分支的bug](https://www.liaoxuefeng.com/wiki/896043488029600/900388704535136)
+- [git-如何放弃未push的commit](https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192)
