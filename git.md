@@ -2,8 +2,7 @@
 title:  简易的git命令入门教程
 heading:
 date: 2019-12-04T06:24:34.427Z
-draft: true
-categories: ["code","life","tools","read"]
+categories: ["code"]
 tags: 
 description: 
 ---
