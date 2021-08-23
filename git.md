@@ -34,7 +34,7 @@ git remote add origin git@github.com:smile365/mblog.git
 git push -u origin master
 ```
 
-如何修复 master 分支的 bug 并
+如何修复 master 分支的 bug 并应用到dev分支
 ```bash
 # 1.切换到master分支
 git checkout master
