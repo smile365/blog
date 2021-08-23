@@ -34,6 +34,25 @@ git remote add origin git@github.com:smile365/mblog.git
 git push -u origin master
 ```
 
+如何修复 master 分支的 bug 并
+```bash
+# 1.切换到master分支
+git checkout master
+# 2.从masther创建一个修复分支名叫 fix-some-thing
+git checkout -b fix-some-thing
+# 3.做修复工作
+# do some thing
+# 4.提交修复到 fix-some-thing
+git commit -m "fix: fix content"
+# 5.切换到master分支
+git switch master
+# 6.把fix-some-thing合并到master分支
+git merge --no-ff -m "fix: bug fix from fix-some-thing" fix-some-thing
+# 7.切换到dev分支
+git checkout devolop
+# 7.查找第四步的 commit id 为 4c805e2，把第四步的修改同步到dev分支。
+git cherry-pick 4c805e2
+```
 
 
 参考文献
