@@ -54,7 +54,7 @@ git checkout devolop
 git cherry-pick 4c805e2
 ```
 >注：Cherry pick 支持一次转移多个提交。`git cherry-pick <HashA> <HashB>`
-或者转移多次连续的提交 `git cherry-pick A..B `
+或者转移多次连续的提交 `git cherry-pick A^..B `
 
 参考文献: 
 - [git-如何修复 master 分支的bug](https://www.liaoxuefeng.com/wiki/896043488029600/900388704535136)
