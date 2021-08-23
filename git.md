@@ -53,6 +53,7 @@ git checkout devolop
 # 7.查找第四步的 commit id 为 4c805e2，把第四步的修改同步到dev分支。
 git cherry-pick 4c805e2
 ```
+
 >注：Cherry pick 支持一次转移多个提交。`git cherry-pick <HashA> <HashB>`
 或者转移多次连续的提交 `git cherry-pick A^..B `
 
