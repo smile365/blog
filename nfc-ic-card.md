@@ -20,6 +20,7 @@ description: proxmark3 pm3
 - [mfcuk](https://github.com/nfc-tools/mfcuk)
 - [MifareClassicTool](https://github.com/ikarus23/MifareClassicTool)
 - [proxmark3](https://github.com/Proxmark/proxmark3)
+- [Mifare dumps parser](https://github.com/zhovner/mfdread)
 
 
 ## 一、编译 mfoc 并安装
@@ -110,6 +111,15 @@ mfoc: ERROR: No success, maybe you should increase the probes
 Auth with all sectors succeeded, dumping keys to a file!
 ```
 
+## 把数据写入手机
+
+
+这里用别人写好的 Python 脚本查看破解的数据
+```bash
+pip install bitstring
+git clone git@github.com:zhovner/mfdread.git
+python mfdread/mfdread.py mycard.mfd
+```
 
 
 
