@@ -32,7 +32,7 @@ make && sudo make install
 mfoc -h
 ```
 
-二、mac osx 连接到 pn532
+## 二、mac osx 连接到 pn532
 
 ```bash
 $> nfc-list
