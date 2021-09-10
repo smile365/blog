@@ -161,27 +161,25 @@ mfcuk 一个也不知道（全加密）
 80C51 单片机属于MCS-51系列单片机，由Intel公司开发.
 
 参考文献：
+- [复制MIFARE Classic小区门禁卡记录](https://zohead.com/archives/copy-mifare-classic/)
 - [使用pm3及变色龙获取加密卡信息写入小米手环NFC版](https://post.smzdm.com/p/777188/)
- 
+- [手环NFC复制加密卡，门禁卡，饭卡全过程](https://post.smzdm.com/p/aqnlper7/)
+- [记Macbook Pro配合FT232使用PN532模块](https://www.jianshu.com/p/7a0bf015e06c)
 
 扩展阅读：
+- [Mifare Classic card(M1卡)破解过程记录](https://www.123455.xyz/2021/05/m1.html)
+- [RFID基础概念梳理及攻击方法](https://www.freebuf.com/column/223864.html)
+- [NFC相关卡片基础知识](https://hceng.cn/2019/07/12/NFC%E6%89%8B%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%8A%A0%E5%AF%86%E9%97%A8%E7%A6%81%E5%8D%A1/)
 - [常见RFID卡片介绍-破解思路](https://ulyc.github.io/2020/01/18/%E5%B8%B8%E8%A7%81RFID%E5%8D%A1%E7%89%87%E4%BB%8B%E7%BB%8D-%E7%A0%B4%E8%A7%A3%E6%80%9D%E8%B7%AF-%E5%8F%8A-Proxmark3%E7%AE%80%E4%BB%8B/)
-
-参考：
-
-
-- [手环NFC复制加密卡，门禁卡，饭卡全过程](https://post.smzdm.com/p/aqnlper7/)
 - [学习嵌入式要学哪些课程？](https://blog.csdn.net/qq_36948778/article/details/77480401)
 - [嵌入式工程师出路之我见](https://www.eet-china.com/mp/a17205.html)
-- [如何系统地入门学习stm32？](https://www.zhihu.com/question/46616925)
-- [NFC相关卡片基础知识](https://hceng.cn/2019/07/12/NFC%E6%89%8B%E6%9C%BA%E6%A8%A1%E6%8B%9F%E5%8A%A0%E5%AF%86%E9%97%A8%E7%A6%81%E5%8D%A1/)
+- [如何系统地入门学习stm32？](https://www.zhihu.com/question/46616925) 
 - [RFID 破解基础详解](https://www.xazlsec.com/index.php/archives/1003/)
-- [RFID基础概念梳理及攻击方法](https://www.freebuf.com/column/223864.html)
-- [复制MIFARE Classic小区门禁卡记录](https://zohead.com/archives/copy-mifare-classic/)
-- [Android中主机卡模拟的编辑功能](https://stackoverflow.com/questions/28409934/editing-functionality-of-host-card-emulation-in-android)
+- [Android中主机卡模拟的编辑功能](https://stackoverflow.com/questions/28409934/editing-functionality-of-host-card-emulation-in-android) 
 - [Proxmark3（PM3）硬件简单拆解与介绍](https://www.wasyoung.com/2019/11/30/337/)
 - [MIFARE系列7《安全》](https://itnewbee.org/mifare%E7%B3%BB%E5%88%977%E3%80%8A%E5%AE%89%E5%85%A8%E3%80%8B/)
-- [尝试对MIFARE classic 1k进行暴力攻击](http://62.234.115.194/ask/122013874.html)
-- [Mifare Classic card(M1卡)破解过程记录(准备+理论+获取扇区密钥+数据分析)
-](https://www.123455.xyz/2021/05/m1.html)
-- [记Macbook Pro配合FT232使用PN532模块](https://www.jianshu.com/p/7a0bf015e06c)
+- [更快的攻击攻击手段](http://62.234.115.194/ask/122013874.html)
+
+
+
+
