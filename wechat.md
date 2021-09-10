@@ -57,7 +57,7 @@ Sandboxie 是一款可提供虚拟环境的工具，按照在虚拟环境里的�
 
 # 还原unzip test.zip -d /dir
 
-# 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx
+# 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx (我的是1eb36d0ea2f1dbc5d9e9976637facc10)
 ```
 
 2. 使用adb 备份手机文件
