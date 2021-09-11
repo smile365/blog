@@ -84,7 +84,7 @@ ISO/IEC 14443A (106 kbps) target:
 
 
 ## 三、破解密钥
-执行 `mfoc -O mycard.mfd` 会看到以下输出：
+执行 `mfoc -P 500 -O mycard.mfd` 会看到以下输出：
 ```
 Sector 00 - Found   Key A: ffffffffffff Found   Key B: ffffffffffff
 Sector 01 - Unknown Key A               Unknown Key B
