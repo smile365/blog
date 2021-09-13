@@ -1,5 +1,5 @@
 ---
-title: nfc-ic-card
+title: 在  macbook 下攻击和模拟 Mifare NFC 加密卡的简明指南
 heading: 通过手机的 NFC 功能模拟加密的门禁卡
 date: 2021-09-04T01:08:42.169Z
 categories: ["other"]
@@ -11,16 +11,21 @@ description: proxmark3 pm3
 
 换了一个新的住址，社区给了一张门禁卡，刚好小米手机支持模拟实体门禁卡，试了一下，只能开小区的大门，单元门没法开，电梯没法开。好奇为什么，索性研究了下如何解决这个问题。网上找了一圈，没有发现 mac 电脑上的教程，经过一番研究，实现了在 mac os x 下破解加密卡，在此记录一下破解过程。
 
-需要购买的硬件
-- CUID卡
-- PN532 读卡器
 
-可能需要的软件
+本教程所用的硬件：
+- CUID 空白卡
+- PN532 读卡器
+- 小米8 手机
+- macbook air （系统 10.15.7）
+
+本教程所用到的软件：
 - [mfoc](https://github.com/nfc-tools/mfoc)
-- [mfcuk](https://github.com/nfc-tools/mfcuk)
 - [MifareClassicTool](https://github.com/ikarus23/MifareClassicTool)
-- [proxmark3](https://github.com/Proxmark/proxmark3)
 - [Mifare dumps parser](https://github.com/zhovner/mfdread)
+
+其他可能需要的软件：
+- [mfcuk](https://github.com/nfc-tools/mfcuk)
+- [proxmark3](https://github.com/Proxmark/proxmark3)
 
 
 ## 一、编译 mfoc 并安装
