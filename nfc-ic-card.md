@@ -15,7 +15,7 @@ description: proxmark3 pm3
 本教程所用的硬件：
 - CUID 空白卡
 - PN532 读卡器
-- 小米8 手机
+- 小米8 手机（支持 NFC 功能）
 - macbook air （系统 10.15.7）
 
 本教程所用到的软件：
