@@ -228,6 +228,7 @@ mfcuk 一个也不知道（全加密）
 80C51 单片机属于MCS-51系列单片机，由Intel公司开发.
 
 参考文献：
+- [Linux 下攻击 Mifare NFC 卡片的简明指南](https://www.ducksoft.site/%E5%AE%89%E5%85%A8/mifare-crack-guide.html)
 - [复制MIFARE Classic小区门禁卡记录](https://zohead.com/archives/copy-mifare-classic/)
 - [使用pm3及变色龙获取加密卡信息写入小米手环NFC版](https://post.smzdm.com/p/777188/)
 - [手环NFC复制加密卡，门禁卡，饭卡全过程](https://post.smzdm.com/p/aqnlper7/)
