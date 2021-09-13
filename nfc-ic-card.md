@@ -86,30 +86,12 @@ ISO/IEC 14443A (106 kbps) target:
 ## 三、破解密钥
 执行 `mfoc -P 500 -O mycard.mfd` 会看到以下输出：
 ```
-Sector 00 - Found   Key A: ffffffffffff Found   Key B: ffffffffffff
-Sector 01 - Unknown Key A               Unknown Key B
-Sector 02 - Found   Key A: ffffffffffff Found   Key B: ffffffffffff
-...
-```
-
-
-其中出现“Found   Key”的行证明是发现了默认密钥，如果所有扇区的密钥都是 ffffffffffff 默认密钥的话，证明此卡没加密。 
-
-“Unknown Key”的行就是没发现密钥，如果全都是“Unknown Key”，那么此卡就是全加密卡，使用 mfoc 工具就无法破解。
-
-如果有 “Found   Key” 也有 “Unknown Key” 证明是半加密卡，mfoc 可以破解这种卡。
-
-执行`mfoc -O mycard.mfd`命令后，mfoc 会以每次20的探测数探测数据，不出意外的话你需要等很久才能看到结果，甚至执行 20 分钟后发现失败。
-```
-mfoc: ERROR: No success, maybe you should increase the probes
-```
-
-可以改成 `mfoc -P 500 -O mycard.mfd` 加快速度。不出意外的话就可以看到成功字样了。
-```
   Found Key: A [1ed2dfd37623]
   Data read with Key A revealed Key B: [1ed2dfd37623] - checking Auth: OK
 Auth with all sectors succeeded, dumping keys to a file!
 ```
+
+
 
 ## 把数据写入手环
 
@@ -180,7 +162,9 @@ nfc-mfclassic f a u blank.mfd
 
 ## 问题记录
 
-编译过程中的问题记录：
+编译过程中的问题记录。
+
+### mfoc 安装失败的解决方法
 
 ```
 # 问题1
@@ -205,6 +189,33 @@ brew install libnfc
 
 ```
 
+### mfoc 破解失败的解决办法
+
+执行`mfoc -O mycard.mfd`命令后，mfoc 会以每次20的探测数探测数据，并会检测出加密情况。
+```
+Sector 00 - Found   Key A: ffffffffffff Found   Key B: ffffffffffff
+Sector 01 - Unknown Key A               Unknown Key B
+Sector 02 - Found   Key A: ffffffffffff Found   Key B: ffffffffffff
+...
+```
+
+其中出现“Found   Key”的行证明是发现了默认密钥，如果所有扇区的密钥都是 ffffffffffff 默认密钥的话，证明此卡没加密。 
+
+“Unknown Key”的行就是没发现密钥，如果全都是“Unknown Key”，那么此卡就是全加密卡，使用 mfoc 工具就无法破解。
+
+如果有 “Found   Key” 也有 “Unknown Key” 证明是半加密卡，mfoc 可以破解这种卡。
+
+
+不加参数的情况下，一般需要等很久才能看到结果，甚至执行 20 分钟后发现失败。
+```
+mfoc: ERROR: No success, maybe you should increase the probes
+```
+
+可以改成 `mfoc -P 500 -O mycard.mfd` 加快速度。不出意外的话就可以看到成功字样了。
+
+
+
+## 后记
 
 疑问，为什么 mfoc 和 mfcuk 没有安卓版本？既然手机相当于读卡器，为什么直接用手机破解呢？
 
