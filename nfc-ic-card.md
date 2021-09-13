@@ -115,7 +115,7 @@ Auth with all sectors succeeded, dumping keys to a file!
 
 ### 第一步 复制 UID
 
-工具 -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白卡
+MifareClassicTool -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白卡
 
 使用手环的模拟功能把这张空白卡模拟一下
 
@@ -141,6 +141,27 @@ FFFFFFFFFFFF
 
 ## 把数据写入手机
 
+### 第一步 复制 UID
+
+MifareClassicTool -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白卡
+
+使用手机的模拟功能把这张空白卡模拟一下
+
+
+### 第二步 获取空白卡密钥
+把手机刚刚模拟成功的卡片放到 nfc 读卡器上，然后执行
+```bash
+mfoc -O old_cuid.mfd
+```
+
+### 第三步 把数据写入手环
+
+```
+nfc-mfclassic w a u mycard.mfd old_cuid.mfd f
+```
+
+
+
 
 这里用别人写好的 Python 脚本查看破解的数据
 ```bash
@@ -149,6 +170,11 @@ git clone git@github.com:zhovner/mfdread.git
 python mfdread/mfdread.py mycard.mfd
 ```
 
+```bash
+# 用默认密码格式化空白卡
+nfc-mfclassic f a u blank.mfd
+# 
+```
 
 
 
