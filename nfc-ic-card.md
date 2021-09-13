@@ -93,7 +93,7 @@ Auth with all sectors succeeded, dumping keys to a file!
 
 
 
-## 把数据写入手环
+## 四、把数据写入手环
 
 ### 第一步 复制 UID
 
@@ -121,7 +121,7 @@ FFFFFFFFFFFF
 
 
 
-## 把数据写入手机
+## 五、把数据写入手机
 
 ### 第一步 复制 UID
 
@@ -133,30 +133,15 @@ MifareClassicTool -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白�
 ### 第二步 获取空白卡密钥
 把手机刚刚模拟成功的卡片放到 nfc 读卡器上，然后执行
 ```bash
-mfoc -O old_cuid.mfd
+mfoc -O blank_cuid.mfd
 ```
 
-### 第三步 把数据写入手环
-
-```
-nfc-mfclassic w a u mycard.mfd old_cuid.mfd f
-```
-
-
-
-
-这里用别人写好的 Python 脚本查看破解的数据
-```bash
-pip install bitstring
-git clone git@github.com:zhovner/mfdread.git
-python mfdread/mfdread.py mycard.mfd
-```
+### 第三步 把数据写入手机
 
 ```bash
-# 用默认密码格式化空白卡
-nfc-mfclassic f a u blank.mfd
-# 
+nfc-mfclassic w a u mycard.mfd blank_cuid.mfd f
 ```
+
 
 
 
@@ -212,6 +197,18 @@ mfoc: ERROR: No success, maybe you should increase the probes
 ```
 
 可以改成 `mfoc -P 500 -O mycard.mfd` 加快速度。不出意外的话就可以看到成功字样了。
+
+
+
+### 如何对比两个 mfd 文件的差异。
+
+这里用别人写好的 Python 脚本查看破解的数据
+```bash
+pip install bitstring
+git clone git@github.com:zhovner/mfdread.git
+python mfdread/mfdread.py mycard.mfd
+```
+
 
 
 
