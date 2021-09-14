@@ -32,3 +32,5 @@ description:
 
 
 
+参考文献
+- [比较 Visual Studio for Mac 和 PC 版](https://visualstudio.microsoft.com/zh-hans/vs/mac/#vs_mac_table)
