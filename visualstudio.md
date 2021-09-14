@@ -13,6 +13,11 @@ description:
 - [Visual Studio Community ](https://visualstudio.microsoft.com/zh-hans/vs/)
 
 
+安装 Visual Studio Community ：
+1. 勾选 net web、net 桌面
+2. 单个组件勾选所有 4.6.2
+
+
 
 ## 遇到的问题
 问题：已处理证书链，但是在不受信任的根证书中终止
@@ -24,3 +29,6 @@ description:
 
 问题：时间戳签名和或证书无法验证或已损坏
 解决：安装[系统补丁](https://www.microsoft.com/zh-CN/download/details.aspx?id=39115)
+
+
+
