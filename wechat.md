@@ -71,6 +71,15 @@ cd apks
 for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(adb shell pm path $i | awk -F':' '{print $2}')"; mv base.apk $i.apk 2&> /dev/null ;done
 ```
 
+3. 使用条件备份多个文件
+```bash
+# 所有 mp4 文件
+# 先 cd 到需要保存的文件夹下
+adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
+```
+
+
+
 参考  
 - [Mac微信聊天记录备份位置](https://www.zhihu.com/question/50022284/answer/123677875)
 - [接触禁止复制](https://zhuanlan.zhihu.com/p/32155254)
