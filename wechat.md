@@ -78,6 +78,14 @@ for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(
 adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
 ```
 
+4. 类似 Linux 下的 sync 命令同步
+linix 下可以使用 sync 命令同步仅不存在的文件，存在的自动跳过。adb shell 目前不支持此命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能
+```bash
+git clone https://github.com/google/adb-sync
+cd adb-sync
+./adb-sync --reverse /sdcard/DCIM/Camera/VID_2021092*.mp4 ~/Downloads/mp4/
+```
+
 
 
 参考  
