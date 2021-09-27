@@ -1,19 +1,24 @@
 ---
 title:  docker-mongo
-draft: true
 date: 2018-11-02T07:16:11.158Z
 tags: 
  - docker
  - mongo
-draft: true
+categories: ["other"]
+description:  Install MongoDB with Docker
 ---
 
-docker run —name rds -d redis
+使用默认配置后台运行最新版：
+```bash
+docker run -p 47017:27017 --name sxymongo  -d mongo
+```
 
+使用其他版本和配置数据路径：
+```bash
 mkdir -p ~/mongo/data
 chcon -Rt svirt_sandbox_file_t ~/mongo
 docker run -p 47017:27017 --name daxindb -v /home/daxin/mongo/:/data/db -d mongo:3.4 --replSet "rs0"
-
+```
 
 官方文档：
 https://docs.docker.com/samples/library/mongo/#mongoversion
