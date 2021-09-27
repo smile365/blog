@@ -10,7 +10,12 @@ description:  Install MongoDB with Docker
 
 使用默认配置后台运行最新版：
 ```bash
+# 安装
 docker run -p 47017:27017 --name sxymongo  -d mongo
+# 进入容器
+docker exec -it sxymongo  /bin/sh
+# 连接 mongo
+mongosh
 ```
 
 使用其他版本和配置数据路径：
