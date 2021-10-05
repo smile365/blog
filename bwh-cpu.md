@@ -22,3 +22,5 @@ Once load is reduced to levels described in our Terms of Service, this limitatio
 重启 vps ，暂停耗费 cpu 的程序。
 
 
+参考文章
+ - [搬瓦工 VPS 由于“high CPU usage”被暂停的原因和解决方法](https://www.bandwagonhost.net/1330.html)
