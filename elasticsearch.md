@@ -4,7 +4,7 @@ heading:
 date: 2020-05-09T06:42:21.580Z
 categories: ["code"]
 tags: 
-description: 
+description: 在centos安装完elasticsearch7之后使用python操作es。
 ---
 
 
