@@ -4,7 +4,7 @@ heading: 用python语言调用Go语言函数
 date: 2020-07-16T02:03:51.425Z
 categories: ["code"]
 tags: 
-description: 
+description: 用Golang为Python编写模
 ---
 
 c语言几乎是所有高级语言的桥梁，通过c语言编译的动态链接库(.so文件)，其他高级语言即可调用c语言实现的功能，以便提高性能。
