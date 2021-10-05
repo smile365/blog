@@ -1,10 +1,10 @@
 ---
-title: libsodium
-heading: cetenos 安装 libsodium 
+title: CentOS 7/8 安装libsodium 最新版教程 
+heading: 
 date: 2021-07-06T03:55:01.640Z
 categories: ["code"]
 tags: 
-description: 
+description:  CentOS安装libsodium启用ss的chacha20等高级加密
 ---
 
 
