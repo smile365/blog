@@ -1,10 +1,10 @@
 ---
-title: 在  macbook 下攻击和模拟 Mifare NFC 加密卡的简明指南
+title: 在macbook下攻击和模拟 Mifare NFC 加密卡的简明指南
 heading: 通过手机的 NFC 功能模拟加密的门禁卡
 date: 2021-09-04T01:08:42.169Z
-categories: ["other"]
+categories: ["code"]
 tags: 
-description: proxmark3 pm3 
+description: 在苹果电脑的 osx 系统下实现手机和手环模拟加密门禁卡的教程
 ---
 
 ## 导言
