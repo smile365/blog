@@ -4,7 +4,7 @@ heading: 使用zmirror实现Twitter的全站镜像
 date: 2020-06-29T01:34:31.411Z
 categories: ["code"]
 tags: 
-description: 
+description: 自己搭建谷歌或者twitter镜像站的方法教程
 ---
 
 使用zmirror实现Twitter的全站镜像
