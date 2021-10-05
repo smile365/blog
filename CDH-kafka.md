@@ -4,7 +4,7 @@ heading: 基于cdh安装的kafka集群如何在Cloudera Manager管理界面创�
 date: 2020-06-03T03:00:16.652Z
 categories: ["code"]
 tags: ["Cloudera Manager","kafka","topic"]
-description: 
+description: 大数据平台相关 kafka 工具的使用教程
 ---
 
 目前官网cdh最新版为：Cloudera Manager 7.1.1，不知道是否提供创建kafka主题的便捷操作界面。
