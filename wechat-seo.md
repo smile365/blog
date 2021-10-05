@@ -1,8 +1,8 @@
 ---
-title: 微信WSEO优化
+title: wechat-seo 
 heading: 用微信SEO，
 date: 2020-05-28T03:06:15.405Z
-categories: ["code"]
+categories: ["other"]
 tags: 
 description: 
 ---
