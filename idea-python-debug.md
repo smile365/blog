@@ -3,7 +3,7 @@ title:  使用IntelliJ IDEA进行Python远程调试
 date: 2018-08-21T02:43:06.074Z
 tags: ["idea"]
 categories: ["code"]
-description:
+description: 使用IntelliJ IDEA进行Python远程调试图文教程
 ---
 
 找到部署配置
