@@ -24,7 +24,9 @@ nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
 
 重新下载一个 mac 端的微信按照包，安装时选择“*保留两者*”，如果选替换，会把之前的微信给覆盖掉
 
-3. 使用 mac 的微信扩展插件
+#### mac 微信防撤回（可多开）
+
+使用 mac 的微信扩展插件
 
 可以通过[WeChatExtension](https://github.com/MustangYM/WeChatExtension-ForMac)插件实现多开，它的功能比较多，除了多开，还有防撤回，换主题等功能。有人制作了一键安装脚本回[Oh-My-WeChat](https://github.com/lmk123/oh-my-wechat)，安装方法如下：
 ```bash
