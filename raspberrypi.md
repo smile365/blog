@@ -22,7 +22,8 @@ Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系
 
 在SD卡的根目录下添加一个名为 wpa_supplicant.conf的文件，然后在该文件内添加以下的内容 ： 
 ```
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+ctrl_interface=DIR=/var/run/wpa_supplicant    GROUP=netdev   
+update_config=1  
 network={
   ssid="WIFI名"
   psk="WIFI密码"
@@ -134,33 +135,37 @@ ssh pi@your_ip
 ```
 
 
+#### 可能遇到的问题
 
-插上网线，上不了网，ifconfig 不显示有线网络的地址。原因时树莓派的有线网卡没开启。
+1. 无法上网
+问题：插上网线，上不了网，ifconfig 不显示有线网络的地址。  
+原因：树莓派的有线网卡没开启。  
+解决办法：sudo nano /etc/network/interfaces
+iface eth0 inet dhcp   
 
-sudo nano /etc/network/interfaces
-iface eth0 inet dhcp
+
+2. 无线重启
+若树莓派无限重启，一般是电源电压不够（可能是充电头或电源线）。
+
+3. 网络配置失败
+
+wifi配置失败，网线配置失败，如何配置树莓派
+网络（有线、无线），插网线无反应，WIFI不自动连接。
 
 查看无线网络配置
 cat /etc/wpa_supplicant/wpa_supplicant.conf
 
+4. 使用了 VGA 转 HDMI，显示器没反应
 
-若树莓派无限重启，一般是电源电压不够（可能是充电头或电源线）。
+大部分屏幕还是 VGA。需要买带电源的 HDMI 转 VGA 接头。   
+5. 其他命令
 
-wifi配置失败，网线配置失败，如何配置树莓派
-网络（有线、无线）：插网线无反应，WIFI不自动连接。  
-鼠标、键盘：没有鼠标键盘   
-显示器：没有显示器   
-HDMI，输出，大部分屏幕还是 VGA。买 HDMI 转 VGA 的需要带电源。   
+查看系统版本：uname -a
 
-
-查看系统版本
-uname -a
-
-查看硬件版本
-pinout
+查看硬件版本： pinout
 
 
-参考链接
+参考链接：   
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
 - [树莓派花屏或自动重启](http://www.raspigeek.com/index.php?c=read&id=98&page=1)
