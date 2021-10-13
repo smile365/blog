@@ -193,6 +193,8 @@ ctr+k：删除整行
 sudo apt -y update
 # 时间比较长，大概两小时
 sudo apt -y dist-upgrade
+sudo apt clean
+# 重启即可
 ```
 参考文献：   
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
