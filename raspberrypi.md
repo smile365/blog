@@ -163,7 +163,13 @@ wifi配置失败，网线配置失败，如何配置树莓派
 sudo killall wpa_supplicant  
 sudo wpa_supplicant   -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0  
 ```
-此时会提示你哪些配置项配置错了，注释错误的配置项即可。
+此时会提示你哪些配置项配置错了，注释错误的配置项或者修改成正确的配置即可。
+
+注：-d 参数可以放到后台运行
+```
+sudo wpa_supplicant   -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0  -d
+```
+
 
 
 4. 使用了 VGA 转 HDMI，显示器没反应
