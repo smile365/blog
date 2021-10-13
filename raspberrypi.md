@@ -149,22 +149,38 @@ iface eth0 inet dhcp
 2. 无线重启
 若树莓派无限重启，一般是电源电压不够（可能是充电头或电源线）。
 
-3. 网络配置失败
+3. no wireless interfaces found
 
 wifi配置失败，网线配置失败，如何配置树莓派
 网络（有线、无线），插网线无反应，WIFI不自动连接。
 
-查看无线网络配置
-cat /etc/wpa_supplicant/wpa_supplicant.conf
+一般是修改了文件： cat /etc/wpa_supplicant/wpa_supplicant.conf 导致的。
+
+参考[解决办法](https://tolotra.com/2018/07/22/how-to-solve-no-wireless-interface-found-on-a-raspberry-pi-3/)：
+
+使用手动模式启动：
+```
+sudo killall wpa_supplicant  
+sudo wpa_supplicant   -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0  
+```
+此时会提示你哪些配置项配置错了，注释错误的配置项即可。
+
 
 4. 使用了 VGA 转 HDMI，显示器没反应
 
 大部分屏幕还是 VGA。需要买带电源的 HDMI 转 VGA 接头。   
-5. 其他命令
+
+6. 其他命令
 
 查看系统版本：uname -a
 
 查看硬件版本： pinout
+
+#### nano常用命令
+ctr+o：保存（需要输入文件名，再次回车）
+ctr+x：退出
+ctr+k：删除整行
+
 
 
 参考链接：   
