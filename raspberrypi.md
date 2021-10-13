@@ -197,6 +197,8 @@ sudo apt clean
 # 重启即可
 sudo reboot
 ```
+
+
 参考文献：   
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
