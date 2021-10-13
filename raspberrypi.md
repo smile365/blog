@@ -22,11 +22,13 @@ Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系
 
 在SD卡的根目录下添加一个名为 wpa_supplicant.conf的文件，然后在该文件内添加以下的内容 ： 
 ```
-ctrl_interface=DIR=/var/run/wpa_supplicant    GROUP=netdev   
-update_config=1  
+country=CN
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
 network={
-  ssid="WIFI名"
-  psk="WIFI密码"
+ scan_ssid=1
+ ssid="WIFI名称"
+ psk="WIFI密码"
 }
 ```
 
