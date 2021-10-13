@@ -189,9 +189,11 @@ ctr+k：删除整行
 
 #### 更新树莓派
 
+```
 sudo apt -y update
+# 时间比较长，大概两小时
 sudo apt -y dist-upgrade
-
+```
 参考文献：   
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
