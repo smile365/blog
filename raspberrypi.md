@@ -29,7 +29,7 @@ network={
   ssid="WIFI名"
   psk="WIFI密码"
 }
-
+# 别漏了双引号“”
 ```
 
 #### 启用 SSH
