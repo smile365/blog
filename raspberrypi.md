@@ -187,9 +187,12 @@ ctr+o：保存（需要输入文件名，再次回车）
 ctr+x：退出
 ctr+k：删除整行
 
+#### 更新树莓派
 
+sudo apt -y update
+sudo apt -y dist-upgrade
 
-参考链接：   
+参考文献：   
 - [开启有线网卡](http://www.nrjs.cn/ctt/11120032.html)
 - [nano教程](https://www.vpser.net/manage/nano.html)
 - [树莓派花屏或自动重启](http://www.raspigeek.com/index.php?c=read&id=98&page=1)
