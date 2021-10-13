@@ -136,6 +136,9 @@ ssh pi@your_ip
 # 树莓派默认登录名和密码是：pi, raspberry
 ```
 
+#### 修改密码
+
+passwd
 
 #### 可能遇到的问题
 
@@ -196,6 +199,8 @@ sudo apt -y dist-upgrade
 sudo apt clean
 # 重启即可
 sudo reboot
+# 查看系统版本
+cat /etc/os-release
 ```
 
 
