@@ -28,7 +28,7 @@ get current mouse cursor type
 how to use javascript get current cursor style from browser
 
 
-获取鼠标当前形状的代码如下：
+### 获取鼠标当前形状的代码如下：
 
 ```javascript
 document.addEventListener('mouseover',function(e){
