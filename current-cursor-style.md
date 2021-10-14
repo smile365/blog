@@ -2,7 +2,7 @@
 title: current cursor style  
 heading: 
 date: 2021-10-14T07:02:26.218Z
-categories: ["code"]
+categories: ["other"]
 tags: 
 description: 机器学习+自动化测试
 ---
