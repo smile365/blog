@@ -1,10 +1,10 @@
 ---
-title: current cursor style  
+title: 使用JavaScript获取当前鼠标的形状类型状态
 heading: 
 date: 2021-10-14T07:02:26.218Z
 categories: ["other"]
 tags: 
-description: 机器学习+自动化测试
+description: how to use javascript get current cursor style from browser
 ---
 
 ### 概述
