@@ -52,14 +52,19 @@ Sandboxie 是一款可提供虚拟环境的工具，按照在虚拟环境里的�
 ```shell
 > cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
 
-# 仅压缩 微信号-开始-结束
-> zip -r smile8365-181025-190108.zip . 
 # 压缩并删除
-> zip -rm smile8365-181025-190108.zip .
+zip -rm smile8365-$(date "+%y%m%d-%H%M").zip .
 
 # 还原unzip test.zip -d /dir
 
 # 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx (我的是1eb36d0ea2f1dbc5d9e9976637facc10)
+# 仅压缩 微信号-开始-结束
+> zip -r smile8365-181025-190108.zip . 
+# 压缩并删除
+> zip -rm smile8365-181025-190108.zip .
+# 获取时间
+# time=$(date "+%y%m%d-%H%M")
+
 ```
 
 2. 使用adb 备份手机文件
