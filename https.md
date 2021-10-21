@@ -59,7 +59,7 @@ crontab -l
 acme.sh --installcert  -d sxy91.com -d www.sxy91.com  \
         --key-file   /etc/nginx/ssl/sxy91.key \
         --fullchain-file /etc/nginx/ssl/sxy91.cer \
-        --reloadcmd  "service nginx force-reload"
+        --reloadcmd  "nginx"
 
 # 会自动把证书文件复制到"/etc/nginx/ssl"目录下 并改名为sxy91，然后重启nginx。
 ```
@@ -191,6 +191,18 @@ Unable to add the DNS record.
 一直错误，通过调试模式发现，acme 读取一次 key 之后会保存在 ~/.acme.sh/account.conf
 
 把 Namesilo_Key 修改成正确的就好了。
+
+在dns模式下，添加dns记录后，acme.sh会使用cloudflare public dns或者google dns来[检查记录](https://github.com/acmesh-official/acme.sh/wiki/dnscheck)是否生效。
+
+如果您不想要此检查，请使用--dnssleep 300.
+
+
+```bash
+acme.sh --issue --dns dns_namesilo -d sxy91.com -d *.sxy91.com --dnssleep 60
+
+# --standalone
+```
+
 
 **参考**  
 
