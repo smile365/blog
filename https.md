@@ -183,15 +183,14 @@ export CF_Email="sxy@qq.com"
 
 export Namesilo_Key="05ed62502fdsaff"
 
-acme.sh --issue --dns dns_namesilo --dnssleep 10 -d sxy91.com -d *.sxy91.com
-
+acme.sh --issue --dns dns_namesilo -d sxy91.com -d *.sxy91.com
 
 Unable to add the DNS record.
 ```
 
 一直错误，通过调试模式发现，acme 读取一次 key 之后会保存在 ~/.acme.sh/account.conf
 
-
+把 Namesilo_Key 修改成正确的就好了。
 
 **参考**  
 
