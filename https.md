@@ -120,6 +120,7 @@ nginx参数说明：
 
 #### 7. 错误信息解决
 
+
 若调试的时候出现：`Create new order error. Le_OrderFinalize not found. `错误，一般是域名没写对，或者解析出错。Let's Encrypt 在有频次限制，如果每个域名、账号在一个小时内触发了 5 次失败的验证，那么就需要等待 1 小时再试。错误信息如下：
 ```json
 {
@@ -128,6 +129,69 @@ nginx参数说明：
   "status": 429
 }
 ````
+
+#### acme.sh 提示 CURLE_PEER_FAILED_VERIFICATION 错误
+
+```bash
+Please refer to https://curl.haxx.se/libcurl/c/libcurl-errors.html for error code: 60
+ Can not init api.
+ 
+CURLE_PEER_FAILED_VERIFICATION (60)
+
+The remote server's SSL certificate or SSH md5 fingerprint was deemed not OK. This error code has been unified with CURLE_SSL_CACERT since 7.62.0. Its previous value was 51.
+```
+
+先查看 acme.sh -v 版本， [acme](https://github.com/acmesh-official/acme.sh/wiki/ZeroSSL.com-CA) 从 3.0 版本开始，颁发机构从 letencrypt 换成了 ZeroSSL
+
+升级 acme
+```
+acme.sh --upgrade
+acme.sh -v
+# 注册一次 ZeroSSL 账号
+acme.sh  --register-account  -m 931918906@qq.com --server zerossl
+acme.sh --issue -d  sxy91.com --dns dns_cf
+acme.sh --issue -d sxy91.com 
+
+acme.sh  --register-account --server zerossl \
+        --eab-kid xxxx  \
+        --eab-hmac-key xxxx
+        
+acme.sh --server zerossl --issue -d sxy91.com --dns dns_cf        
+```
+
+
+传送门：https://app.zerossl.com/signup
+
+
+```bash
+[2021年 10月 21日 星期四 09:28:53 EDT] You didn't specify a Cloudflare api key and email yet.
+[2021年 10月 21日 星期四 09:28:53 EDT] You can get yours from here https://dash.cloudflare.com/profile.
+[2021年 10月 21日 星期四 09:28:53 EDT] Error add txt for domain:_acme-challenge.sxy91.com
+[2021年 10月 21日 星期四 09:28:53 EDT] Please add '--debug' or '--log' to check more details.
+[2021年 10月 21日 星期四 09:28:53 EDT] See: https://github.com/acmesh-official/acme.sh/wiki/How-to-debug-acme.s
+```
+
+
+[使用了 dns-api 模式](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)
+
+
+[acme.sh letsencrypt 和Cloudflare DNS API](https://cyfeng.science/2020/06/28/advanced-thinking-about-free-tls-license/)
+
+```bash
+export CF_Key="fdffT_qI3KAH75yNstggmhcoXQ"
+export CF_Email="sxy@qq.com"
+
+export Namesilo_Key="05ed62502fdsaff"
+
+acme.sh --issue --dns dns_namesilo --dnssleep 10 -d sxy91.com -d *.sxy91.com
+
+
+Unable to add the DNS record.
+```
+
+一直错误，通过调试模式发现，acme 读取一次 key 之后会保存在 ~/.acme.sh/account.conf
+
+
 
 **参考**  
 
@@ -138,4 +202,5 @@ nginx参数说明：
 - [nginx2https](https://tecadmin.net/nginx-force-redirect-to-https-with-www/)
 - [nginx-force2https](https://serverfault.com/questions/250476/how-to-force-or-redirect-to-ssl-in-nginx)
 - [域名证书-证书密钥-CA证书-](https://community.letsencrypt.org/t/got-4-files-where-to-specify-them/102339)
+- [放弃Let's Encrypt证书，全站更换ZeroSSL证书](https://ffis.me/archives/2110.html)
 
