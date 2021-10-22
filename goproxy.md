@@ -27,6 +27,11 @@ uname
 wget https://mirrors.host900.com/https://github.com/snail007/goproxy/releases/download/v11.2/proxy-linux-arm-v7.tar.gz
 # 下载自动安装脚本
 wget https://mirrors.host900.com/https://raw.githubusercontent.com/snail007/goproxy/master/install.sh  
+
+# 把 F="proxy-linux-amd64.tar.gz" 修改成 F="proxy-linux-arm-v7.tar.gz"
+# 否则会提示 cp: cannot stat 'proxy-linux-amd64.tar.gz': No such file or directory
+vim install.sh 
+
 chmod +x install.sh  
 sudo ./install.sh  
 ```
