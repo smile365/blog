@@ -7,7 +7,7 @@ draft: true
 description: 
 ---
 
-使用 [goproxy](https://github.com/snail007/goproxy/blob/master/README_ZH.md) 实现树莓派3b的内网穿透。
+使用 [goproxy](https://github.com/snail007/goproxy/blob/master/README_ZH.md#4%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F 实现树莓派3b的内网穿透。
 
 ## 公网服务器安装
 64位linux centos
@@ -63,7 +63,7 @@ sudo ./install.sh
 ```
 # 1.在公网服务器上执行
 proxy bridge -p ":33080" -C proxy.crt -K proxy.key --daemon
-proxy server -r ":28080@:80" -P "127.0.0.1:33080" -C proxy.crt -K proxy.key --daemon 
+proxy server -r ":28080@:8080" -P "127.0.0.1:33080" -C proxy.crt -K proxy.key --daemon 
 
 
 # 2.在树莓派上执行
@@ -98,6 +98,7 @@ adb devices
 树莓派上安装 nginx
 ```bash
 sudo apt-get install nginx
+sudo nginx
 
 ```
 
