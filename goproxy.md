@@ -7,6 +7,8 @@ draft: true
 description: 
 ---
 
+使用 [goproxy](https://github.com/snail007/goproxy/blob/master/README_ZH.md) 实现树莓派3b的内网穿透。
+
 ## 公网服务器安装
 64位linux centos
 ```bash
@@ -47,7 +49,26 @@ sudo ./install.sh
 
 ```
 
+## 内网穿透
+多链接版本，对应的子命令是tserver，tclient，tbridge。
 
-参考文档
+
+需求:
+在家里能够通过访问sxy91.com的28080端口访问到树莓派的80端口
+
+步骤:
+
+在vps上执行
+proxy bridge -p ":33080" -C proxy.crt -K proxy.key
+proxy server -r ":28080@:80" -P "127.0.0.1:33080" -C proxy.crt -K proxy.key
+
+在公司机器A上面执行
+proxy client -P "22.22.22.22:33080" -C proxy.crt -K proxy.key
+
+完成
+
+
+
+## 参考文档
 
 - [cannot execute binary file](https://my.oschina.net/liting/blog/358502)
