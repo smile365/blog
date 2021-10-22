@@ -7,6 +7,8 @@ draft: true
 description: 
 ---
 
+## 公网服务器安装
+64位linux centos
 ```bash
 yum -y install wget
 curl -L https://raw.githubusercontent.com/snail007/goproxy/master/install_auto.sh | bash 
