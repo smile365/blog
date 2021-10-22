@@ -49,6 +49,9 @@ sudo ./install.sh
 
 ```
 
+## 生成证书
+
+
 ## 内网穿透
 多链接版本，对应的子命令是tserver，tclient，tbridge。
 
@@ -57,16 +60,46 @@ sudo ./install.sh
 在家里能够通过访问sxy91.com的28080端口访问到树莓派的80端口
 
 步骤:
+```
+# 1.在公网服务器上执行
+proxy bridge -p ":33080" -C proxy.crt -K proxy.key --daemon
+proxy server -r ":28080@:80" -P "127.0.0.1:33080" -C proxy.crt -K proxy.key --daemon 
 
-在vps上执行
-proxy bridge -p ":33080" -C proxy.crt -K proxy.key
-proxy server -r ":28080@:80" -P "127.0.0.1:33080" -C proxy.crt -K proxy.key
 
-在公司机器A上面执行
-proxy client -P "22.22.22.22:33080" -C proxy.crt -K proxy.key
+# 2.在树莓派上执行
+# 从服务器拷贝整书
+scp user@sxy91.com:/home/goproxy/proxy.* .
+# 执行代理
+proxy client -P "songxueyan.top:33080" -C proxy.crt -K proxy.key 
 
-完成
+```
 
+nginx 配置
+
+在树莓派上仅安装 adb
+```bash
+# 安装 adb
+sudo apt-get install adb
+# 测试是否正常
+adb devices
+```
+
+开启远程调试
+``` bash
+1. 手机、树莓派在同一个 wifi下。
+2. 使用数据线连接树莓派和手机
+3. adb devices 授权
+4. 授权成功后切换成网络模式 adb tcpip 5355
+5. 手机断开数据线连接，使用网络连接 adb connect 10.0.0.4：5355
+6. 测试 adb shell pwd
+
+```
+
+树莓派上安装 nginx
+```bash
+sudo apt-get install nginx
+
+```
 
 
 ## 参考文档
