@@ -1,9 +1,8 @@
 ---
-title:  goproxy
+title: 在树莓派上安装goproxy实现内容穿透和反向代理
 date: 2019-07-16T02:09:37.404Z
 tags: 
-categories:
-draft: true
+categories: ["code"]
 description: 
 ---
 
@@ -70,7 +69,7 @@ proxy server -r ":28080@:8080" -P "127.0.0.1:33080" -C proxy.crt -K proxy.key --
 # 从服务器拷贝整书
 scp user@sxy91.com:/home/goproxy/proxy.* .
 # 执行代理
-proxy client -P "songxueyan.top:33080" -C proxy.crt -K proxy.key 
+proxy client -P "songxueyan.top:33080" -C proxy.crt -K proxy.key --daemon 
 
 ```
 
