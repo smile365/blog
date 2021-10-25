@@ -3,7 +3,7 @@ title: 在树莓派上安装goproxy实现内容穿透和反向代理
 date: 2019-07-16T02:09:37.404Z
 tags: 
 categories: ["code"]
-description: 
+description: 远程控制手机
 ---
 
 使用 [goproxy](https://github.com/snail007/goproxy/blob/master/README_ZH.md#4%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F 实现树莓派3b的内网穿透。
