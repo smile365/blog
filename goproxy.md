@@ -104,4 +104,3 @@ sudo nginx
 
 ## 参考文档
 
-- [cannot execute binary file](https://my.oschina.net/liting/blog/358502)
