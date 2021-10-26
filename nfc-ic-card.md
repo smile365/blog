@@ -141,7 +141,7 @@ MifareClassicTool -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白�
 mfoc -O blank_cuid.mfd
 ```
 
-### 5.3把数据写入手机
+### 5.3 把数据写入手机
 
 ```bash
 nfc-mfclassic w a u mycard.mfd blank_cuid.mfd f
