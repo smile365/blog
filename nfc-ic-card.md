@@ -100,13 +100,13 @@ Auth with all sectors succeeded, dumping keys to a file!
 
 ## 四、把数据写入手环
 
-### 第一步 复制 UID
+### 4.1 复制 UID
 
 MifareClassicTool -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白卡
 
 使用手环的模拟功能把这张空白卡模拟一下
 
-### 第二步 获取解密数据
+### 4.2 获取解密数据
 
 打开 MifareClassicTool -> 编辑/新建密钥，新建一个密钥，把刚刚破解出来的密钥和默认密钥粘贴进去。
 ```
@@ -118,7 +118,7 @@ FFFFFFFFFFFF
 
 然后点击【读标签】选择刚刚创建的密钥文件，门禁卡靠近手机，点击【开始映射并读取标签】读取成功后【保存】转储文件。
 
-### 第三步 把数据写入手环
+### 4.3 把数据写入手环
 
 手环靠近手机，然后 MifareClassicTool -> 编辑/分析转储文件 --> 刚保存的文件 -> 打开转储文件 -> 写转储 。
 
@@ -128,20 +128,20 @@ FFFFFFFFFFFF
 
 ## 五、把数据写入手机
 
-### 第一步 复制 UID
+### 5.1 复制 UID
 
 MifareClassicTool -> 克隆 UID -> 门禁卡 --> 计算0块并克隆 --> 空白卡
 
 使用手机的模拟功能把这张空白卡模拟一下
 
 
-### 第二步 获取空白卡密钥
+### 5.2 获取空白卡密钥
 把手机刚刚模拟成功的卡片放到 nfc 读卡器上，然后执行
 ```bash
 mfoc -O blank_cuid.mfd
 ```
 
-### 第三步 把数据写入手机
+### 5.3把数据写入手机
 
 ```bash
 nfc-mfclassic w a u mycard.mfd blank_cuid.mfd f
