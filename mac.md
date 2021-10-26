@@ -69,6 +69,17 @@ git
 
 在终端中使用sublime
 
+rar解压 
+
+```bash
+# rar.sh
+if [ ! -z "$2" ]
+then
+      unrar x $1 $2
+else
+      dir=${1%.rar}
+      mkdir $dir  && unrar x $1 $dir
+```
 
 参考
 
