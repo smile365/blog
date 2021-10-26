@@ -6,7 +6,7 @@ categories: ["code"]
 description: 远程控制手机
 ---
 
-使用 [goproxy](https://github.com/snail007/goproxy/blob/master/README_ZH.md#4%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F 实现树莓派3b的内网穿透。
+使用 [goproxy](https://github.com/snail007/goproxy/blob/master/README_ZH.md#4%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F) 实现树莓派3b的内网穿透。
 
 ## 公网服务器安装
 64位linux centos
