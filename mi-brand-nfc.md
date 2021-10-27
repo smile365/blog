@@ -1,10 +1,10 @@
 ---
-title:  mi-brand-nfc
+title: 小米手环模拟非加密门禁卡
 heading: 
 date: 2021-10-27T03:15:19.225Z
 categories: ["other"]
 tags: 
-description: 小米手环模拟非加密门禁卡
+description: 小米手环模拟非加密门禁卡,mi-brand-nfc
 ---
 
 ## 模拟 nfc
