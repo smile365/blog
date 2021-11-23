@@ -49,11 +49,19 @@ mkdir -p ~/Downloads/DCIM$(date "+%y%m%d")
 # ./adb-sync --reverse /sdcard/DCIM/ Camera/VID_2021092*.mp4 ~/Downloads/mp4/
 ```
 
-### 使用条件备份多个文件
+### 使用正则备份多个文件
 ```bash
 # 所有 mp4 文件
 # 先 cd 到需要保存的文件夹下
 adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
+```
+
+### 备份其他应用的数据
+```
+# 迅雷
+/sdcard/Android/data
+# 录音
+/sdcard/MIUI/sound_recorder
 ```
 
 ### 使用adb 备份 app
