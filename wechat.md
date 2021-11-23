@@ -8,8 +8,8 @@ description: 微信多开
 ---
 
 
-## 信数据备份
-### mac 微信聊天记录备份
+## 微信数据备份
+### mac 端微信聊天记录备份
 
 每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
 
@@ -34,8 +34,9 @@ mv *.zip ~/Downloads/
 
 ```
 
-### 类似 Linux 下的 sync 命令同步
-linix 下可以使用 sync 命令同步仅不存在的文件，存在的自动跳过。adb shell 目前不支持此命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能
+### 相册备份
+Linux 下可以使用 sync  命令同步仅不存在的文件，存在的自动跳过。
+但 Android 的 adb shell 没有类似 Linux 下的 sync 命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能。实现的原理是，同步前做一次检查。
 ```bash
 git clone https://github.com/google/adb-sync
 cd adb-sync
