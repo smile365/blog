@@ -37,10 +37,16 @@ mv *.zip ~/Downloads/
 ### 相册备份  
 Linux 下可以使用 sync  命令同步仅不存在的文件，存在的自动跳过。
 但 Android 的 adb shell 没有类似 Linux 下的 sync 命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能。实现的原理是，同步前做一次检查。
+
+
+
 ```bash
-git clone https://github.com/google/adb-sync
-cd adb-sync
-./adb-sync --reverse /sdcard/DCIM/Camera/VID_2021092*.mp4 ~/Downloads/mp4/
+cd ~/project/adb-sync
+mkdir -p ~/Downloads/DCIM$(date "+%y%m%d")
+./adb-sync --reverse /sdcard/DCIM/ ~/Downloads/DCIM$(date "+%y%m%d")/
+
+# 也可以使用正则匹配符
+# ./adb-sync --reverse /sdcard/DCIM/ Camera/VID_2021092*.mp4 ~/Downloads/mp4/
 ```
 
 ### 使用条件备份多个文件
