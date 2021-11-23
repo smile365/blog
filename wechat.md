@@ -80,7 +80,7 @@ ls . | grep "20210[1-7]" | tr -d '\r' | xargs -n1 rm -rf
 ```
 
 
-### 使用adb 备份 app
+### 使用 adb 备份 app 安装包
 
 ```bash
 mkdir backup
