@@ -7,6 +7,59 @@ categories: ["code"]
 description: 微信多开
 ---
 
+
+#### 信数据备份
+1. mac 微信记录备份。
+每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
+```shell
+> cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
+
+# 压缩并删除
+zip -rm smile8365-$(date "+%y%m%d-%H%M").zip .
+
+# 移动到下载
+mv *.zip ~/Downloads/
+
+# 还原unzip test.zip -d /dir
+
+# 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx (我的是1eb36d0ea2f1dbc5d9e9976637facc10)
+# 仅压缩 微信号-开始-结束
+> zip -r smile8365-181025-190108.zip . 
+# 压缩并删除
+> zip -rm smile8365-181025-190108.zip .
+# 获取时间
+# time=$(date "+%y%m%d-%H%M")
+
+```
+
+2. 类似 Linux 下的 sync 命令同步
+linix 下可以使用 sync 命令同步仅不存在的文件，存在的自动跳过。adb shell 目前不支持此命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能
+```bash
+git clone https://github.com/google/adb-sync
+cd adb-sync
+./adb-sync --reverse /sdcard/DCIM/Camera/VID_2021092*.mp4 ~/Downloads/mp4/
+```
+
+3. 使用条件备份多个文件
+```bash
+# 所有 mp4 文件
+# 先 cd 到需要保存的文件夹下
+adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
+```
+
+4. 使用adb 备份 app
+
+```bash
+mkdir backup
+cd backup
+adb pull /sdcard/DCIM .
+mkdir apks
+cd apks
+for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(adb shell pm path $i | awk -F':' '{print $2}')"; mv base.apk $i.apk 2&> /dev/null ;done
+```
+
+
+
 #### mac 微信多开
 
 1. 使用命令
@@ -45,56 +98,6 @@ Sandboxie 是一款可提供虚拟环境的工具，按照在虚拟环境里的�
 
 下载，点击微信右键，再创建一个容器
 
-
-#### 信数据备份
-1. mac 微信记录备份。
-每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
-```shell
-> cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
-
-# 压缩并删除
-zip -rm smile8365-$(date "+%y%m%d-%H%M").zip .
-
-# 移动到下载
-mv *.zip ~/Downloads/
-
-# 还原unzip test.zip -d /dir
-
-# 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx (我的是1eb36d0ea2f1dbc5d9e9976637facc10)
-# 仅压缩 微信号-开始-结束
-> zip -r smile8365-181025-190108.zip . 
-# 压缩并删除
-> zip -rm smile8365-181025-190108.zip .
-# 获取时间
-# time=$(date "+%y%m%d-%H%M")
-
-```
-
-2. 使用adb 备份手机文件
-
-```bash
-mkdir backup
-cd backup
-adb pull /sdcard/DCIM .
-mkdir apks
-cd apks
-for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(adb shell pm path $i | awk -F':' '{print $2}')"; mv base.apk $i.apk 2&> /dev/null ;done
-```
-
-3. 使用条件备份多个文件
-```bash
-# 所有 mp4 文件
-# 先 cd 到需要保存的文件夹下
-adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
-```
-
-4. 类似 Linux 下的 sync 命令同步
-linix 下可以使用 sync 命令同步仅不存在的文件，存在的自动跳过。adb shell 目前不支持此命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能
-```bash
-git clone https://github.com/google/adb-sync
-cd adb-sync
-./adb-sync --reverse /sdcard/DCIM/Camera/VID_2021092*.mp4 ~/Downloads/mp4/
-```
 
 
 
