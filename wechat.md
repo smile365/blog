@@ -61,8 +61,18 @@ adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
 # 迅雷
 /sdcard/Android/data
 # 录音
-/sdcard/MIUI/sound_recorder
+adb shell 'ls /sdcard/MIUI/sound_recorder/2021*.mp3' | tr -d '\r' | xargs -n1 adb pull
 ```
+
+### 删除数据
+
+```bash
+# 相册，删除某个时间之前的照片
+cd /sdcard/DCIM/Camera/
+ls *2020* | tr -d '\r' | xargs -n1 rm -rf
+ls . | grep "20210[1-7]" | tr -d '\r' | xargs -n1 rm -rf 
+```
+
 
 ### 使用adb 备份 app
 
