@@ -8,9 +8,11 @@ description: 微信多开
 ---
 
 
-#### 信数据备份
-1. mac 微信记录备份。
+## 信数据备份
+### mac 微信聊天记录备份
+
 每次备份都会追加到原来的文件上，建议每次备份后都删除备份文件。
+
 ```shell
 > cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
 
@@ -32,7 +34,7 @@ mv *.zip ~/Downloads/
 
 ```
 
-2. 类似 Linux 下的 sync 命令同步
+### 类似 Linux 下的 sync 命令同步
 linix 下可以使用 sync 命令同步仅不存在的文件，存在的自动跳过。adb shell 目前不支持此命令，可以通过一个小哥写的[ python 脚本](https://github.com/google/adb-sync) 实现这个功能
 ```bash
 git clone https://github.com/google/adb-sync
@@ -40,14 +42,14 @@ cd adb-sync
 ./adb-sync --reverse /sdcard/DCIM/Camera/VID_2021092*.mp4 ~/Downloads/mp4/
 ```
 
-3. 使用条件备份多个文件
+### 使用条件备份多个文件
 ```bash
 # 所有 mp4 文件
 # 先 cd 到需要保存的文件夹下
 adb shell 'ls /sdcard/DCIM/Camera/*.mp4' | tr -d '\r' | xargs -n1 adb pull
 ```
 
-4. 使用adb 备份 app
+### 使用adb 备份 app
 
 ```bash
 mkdir backup
@@ -60,7 +62,7 @@ for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(
 
 
 
-#### mac 微信多开
+## mac 微信多开
 
 1. 使用命令
 
@@ -90,7 +92,7 @@ cd oh-my-wechat
 
 
 
-#### Windows 微信多开
+## Windows 微信多开
 
 1. 使用Sandboxie
 
