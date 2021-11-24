@@ -7,8 +7,15 @@ tags:
 description: 
 ---
 
+常见工具：  
 
-参考
+- [bully](https://www.kali.org/tools/bully/)
+- [reaver](https://www.kali.org/tools/reaver/)
+- 
+
+
+
+参考  
 - [WiFi 安全与攻击案例分析](https://paper.seebug.org/1159/)
 - [cracking-wifi-at-scale-with-one-simple-trick](https://www.cyberark.com/resources/threat-research-blog/cracking-wifi-at-scale-with-one-simple-trick)
 - [wifi-attack-tools](https://linuxhint.com/wireless-attack-tools-kali-linux/)
