@@ -9,4 +9,6 @@ description:
 
 
 参考
-- [](https://paper.seebug.org/1159/)
+- [WiFi 安全与攻击案例分析](https://paper.seebug.org/1159/)
+- [cracking-wifi-at-scale-with-one-simple-trick](https://www.cyberark.com/resources/threat-research-blog/cracking-wifi-at-scale-with-one-simple-trick)
+- [wifi-attack-tools](https://linuxhint.com/wireless-attack-tools-kali-linux/)
