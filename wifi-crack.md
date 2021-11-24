@@ -19,3 +19,4 @@ description:
 - [WiFi 安全与攻击案例分析](https://paper.seebug.org/1159/)
 - [cracking-wifi-at-scale-with-one-simple-trick](https://www.cyberark.com/resources/threat-research-blog/cracking-wifi-at-scale-with-one-simple-trick)
 - [wifi-attack-tools](https://linuxhint.com/wireless-attack-tools-kali-linux/)
+- [wifi密码破解方法记录](https://www.jianshu.com/p/44d54b5369d8)
