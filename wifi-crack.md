@@ -39,3 +39,4 @@ brew install autoconf automake libtool openssl shtool pkg-config
 - [Mac上使用aircrack-ng破解Wi-Fi密码](https://uare.github.io/2016/cracking-wifi-by-aircrack-ng-on-mac)
 - [近源渗透，超低成本打造自定义专属钓鱼WIFI](https://www.freebuf.com/articles/wireless/272733.html)
 - [无线局域网攻防之Wi-Fi破解](https://www.freebuf.com/articles/wireless/280568.html)
+- [知道创宇研发技能表v3](https://blog.knownsec.com/Knownsec_RD_Checklist/index.html)
