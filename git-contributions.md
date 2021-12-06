@@ -46,6 +46,18 @@ git push
 若要保持gitee和github贡献度同步，可以在github的[邮箱配置](https://github.com/settings/emails)也填写一致，增加在gitee填写的邮箱即可。
 
 
+## 两个仓库不一致
+
+```bash
+  522  git clone git@github.com:smile365/myself.git
+  523  cd myself
+  530  git remote rm origin
+  531  git remote -v
+  532  git remote add origin git@gitee.com:smile365/myself.git
+  534  git pull
+  543  git push -u origin master
+  548  git push -u origin +master
+```
 
 
 
