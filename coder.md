@@ -7,6 +7,11 @@ categories: ["code"]
 
 牛人=选择<sup>3</sup>X方法<sup>2</sup>X动力XuC
 
+小工具
+- [AnimeGANv2](https://huggingface.co/spaces/akhaliq/AnimeGANv2)
+- [AnimeGANv2 介绍](https://www.shejipi.com/660746.html)
+- [如何在家里种植氯化钠晶体](https://crystalverse.com/sodium-chloride-crystals/)
+
 推荐
 - [我作为独奏开发者的第三年](https://mtlynch.io/solo-developer-year-3/)
 - [简单粗暴 TensorFlow 2](https://tf.wiki/)
