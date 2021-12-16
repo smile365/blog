@@ -34,6 +34,24 @@ Available subcommands:
   pubkey: Reads a private key from stdin and writes a public key to stdout
 ```
 
+```
+$ brew install wireguard-tools
+# 创建配置目录
+$ mkdir /usr/local/etc/wireguard
+#
+# 创建配置文件
+# 配置目录创建完成后，需要自己创建配置文件。配置文件内容就是前面的‘客户端配置文件’
+# vi命令使用前面已有介绍，此处不再赘述。
+$ vi /usr/local/etc/wireguard/wg0.conf
+
+# 启动服务
+$ sudo wg-quick up wg0 
+# 关闭服务
+$ sudo wg-quick down wg0
+# 查看WG是否启动
+$ sudo wg
+```
+
 mkdir /usr/local/etc/wireguard/
 vim /usr/local/etc/wireguard/wg0.conf
 
@@ -61,3 +79,4 @@ AllowedIPs = 0.0.0.0/0,::/0
 - [使用 WireGuard 无缝接入内网](https://devld.me/2020/07/27/wireguard-setup/)
 - [Mac install wireguard ](https://unpc.github.io/2019/02/18/wireguard%20vpn%E5%AE%89%E8%A3%85mac%E5%AE%A2%E6%88%B7%E7%AB%AF/)
 - [wireguard](https://www.wireguard.com/install/)
+- [mac-wireguard使用](https://unpc.github.io/2019/02/18/wireguard%20vpn%E5%AE%89%E8%A3%85mac%E5%AE%A2%E6%88%B7%E7%AB%AF/)
