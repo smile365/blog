@@ -2,7 +2,7 @@
 title: ad-active-directory
 heading: 
 date: 2021-12-16T03:12:45.870Z
-categories: ["life"]
+categories: ["other"]
 tags: 
 description: ad 免密登录 Active Directory
 ---
