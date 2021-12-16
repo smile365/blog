@@ -7,11 +7,21 @@ tags:
 description: ad 免密登录 Active Directory
 ---
 
+ad active directory
+
+kerberos
+
+keytabs
+
 
 active-directory-using-kerberos-keytabs-to-integrate-non-windows-systems.aspx
 
 
+
+
+
 参考资料： 
+- [如何设置 Kerberos 身份验证](https://www.easyredmine.com/documentation-of-easy-redmine/article/how-to-set-up-kerberos-authentication)
 - [集成 Windows 验证](https://www.w3cschool.cn/tomcat/6wds1ka3.html)
 - [Active Directory：使用 Kerberos Keytabs 集成非 Windows 系统](https://social.technet.microsoft.com/wiki/contents/articles/36470.active-directory-using-kerberos-keytabs-to-integrate-non-windows-systems.aspx)
 - [kerberos-keytab](http://woshub.com/create-kerberos-keytab-file-spn/)
@@ -19,3 +29,4 @@ active-directory-using-kerberos-keytabs-to-integrate-non-windows-systems.aspx
 - [sso-nginx-kerberos](https://docs.j7k6.org/sso-nginx-kerberos-spnego-debian/)
 - [配置集成式 Windows 验证](https://help.highbond.com/helpdocs/analytics-exchange/142/user-guide/zh-cn/Content/ax_maintenance/security/configuring_integrated_windows_authentication.htm)
 - [kerberos委派详解](https://www.freebuf.com/articles/network/290860.html)
+- [网站识别Windows AD 域账号，并自动登录](https://blog.csdn.net/vn700/article/details/88658706)
