@@ -9,10 +9,12 @@ description: wireguard 内网穿透
 
 ## mac 安装 WireGuard
 
+
+```
 brew install wireGuard
-
-
-
+# Bottle installation failed
+# Run brew update twice and brew doctor (and fix all the warnings) before creating an issue!
+```
 
 参考文章
 - [wireguard内网穿透](https://www.wangairui.com/docs/kaiyuan/kaiyuan-1ctpaoqssmls6)
@@ -21,3 +23,4 @@ brew install wireGuard
 - [WireGuard 的工作原理](https://fuckcloudnative.io/posts/wireguard-docs-theory/)
 - [使用 WireGuard 无缝接入内网](https://devld.me/2020/07/27/wireguard-setup/)
 - [Mac install wireguard ](https://unpc.github.io/2019/02/18/wireguard%20vpn%E5%AE%89%E8%A3%85mac%E5%AE%A2%E6%88%B7%E7%AB%AF/)
+- [wireguard](https://www.wireguard.com/install/)
