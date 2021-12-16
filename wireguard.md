@@ -9,12 +9,49 @@ description: wireguard 内网穿透
 
 ## mac 安装 WireGuard
 
-
-```
+```bash
 brew install wireGuard
 # Bottle installation failed
 # Run brew update twice and brew doctor (and fix all the warnings) before creating an issue!
+# 测试是否安装
+wg version
+查看帮助
+wg help
 ```
+
+帮助文档： 
+```bash
+Usage: wg <cmd> [<args>]
+Available subcommands:
+  show: Shows the current configuration and device information
+  showconf: Shows the current configuration of a given WireGuard interface, for use with `setconf'
+  set: Change the current configuration, add peers, remove peers, or change peers
+  setconf: Applies a configuration file to a WireGuard interface
+  addconf: Appends a configuration file to a WireGuard interface
+  syncconf: Synchronizes a configuration file to a WireGuard interface
+  genkey: Generates a new private key and writes it to stdout
+  genpsk: Generates a new preshared key and writes it to stdout
+  pubkey: Reads a private key from stdin and writes a public key to stdout
+```
+
+mkdir /usr/local/etc/wireguard/
+vim /usr/local/etc/wireguard/wg0.conf
+
+```nginxconf
+[Interface]
+PrivateKey = xxx=
+Address = 10.10.10.10/32,fd42:42:42::10/128
+DNS = x.x.x.x,x.x.x.x
+
+[Peer]
+PublicKey = yyyy=
+PresharedKey = zzzz=
+Endpoint = mysite.com:51200
+AllowedIPs = 0.0.0.0/0,::/0
+```
+
+
+
 
 参考文章
 - [wireguard内网穿透](https://www.wangairui.com/docs/kaiyuan/kaiyuan-1ctpaoqssmls6)
