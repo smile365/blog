@@ -1,11 +1,15 @@
 ---
 title: xiaomi8-root 
-heading: 在苹果mac系统下root小米8手机
+heading: 2022年小米手机8获取root权限刷机教程
 date: 2021-12-27T06:54:25.581Z
 categories: ["other"]
 tags: 
 description: Unlock bootloader of xiaomi devices on mac
 ---
+
+在苹果mac系统下root小米8手机
+
+
 
 ## 前言
 虽然手上的小米8还能再战两年，但奈何天天被无线快充和120HZ高刷吸引，所以打算22年换个新手机。手上这台就想 root 了之后玩耍下。
@@ -40,6 +44,8 @@ XiaoMiToolV2 是一个用 java 开发的 JUI 程序，我满怀希望在 mac 上
 
 pd 无愧是 mac 上最好用的虚拟机软件。
 
+
+解锁成功后，手机会自动重启，但需要等待很长时间才能进入桌面，不要惊慌。
 
 
 
