@@ -83,6 +83,8 @@ adb push /Users/songyangcong/Downloads/Magisk-v23.0.apk /sdcard/
 
 此时已经可获取 root 权限了。
 
+如果不想安装第三方系统，那么到这一步就已经够了。
+
 
 
 
