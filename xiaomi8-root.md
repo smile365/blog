@@ -17,7 +17,7 @@ description: Unlock bootloader of xiaomi devices on mac
 > 注： 解锁会清除用户数据，手机会恢复成出厂设置，请提前备份数据。
 
 
-## 下载解锁工具
+## 手机解锁
 
 按照[小米官方教程](https://www.miui.com/unlock/download.html)先申请解锁手机。
 
@@ -48,8 +48,52 @@ pd 无愧是 mac 上最好用的虚拟机软件。
 解锁成功后，手机会自动重启，但需要等待很长时间才能进入桌面，不要惊慌。
 
 
+## 刷入 TWRP
+
+在[TWRP](https://twrp.me/Devices/)官网找到自己的机型，从`Download Links` 找到符合自己机型代号的 `twrp-xxx(版本)-(机型代号).img`	下载链接。
+
+下载超慢，估计要 1 小时（记得开启小飞机）。
+
+```
+# 确保设备正确连接电脑
+adb devices
+
+# 重启到bootloader模式
+adb reboot bootloader
+
+# 输入twrp
+fastboot flash recovery recovery-TWRP-3.4.2B-0108-REDMI9-CN-wzsx150.img
+
+# 重启手机到Fastboot
+# fastboot reboot recovery
+# 上面的命令小米手机无效，方法如下：
+# 按住音量上+电源键(一般为这两个组合键)，重启出现mi后松开电源键，即可进入 TWRP 的 recovery界面。
+
+```
+
+## 安装 Magisk
+
+下载[apk 文件](https://github.com/topjohnwu/Magisk/releases)
+
+adb push /Users/songyangcong/Downloads/Magisk-v23.0.apk /sdcard/
+
+在 TWRP recovery 中点击安装 --> 选中刚才的 zip --> 右滑安装 --> 安装完成后点击重启。
 
 
+
+此时已经可获取 root 权限了。
+
+
+
+
+
+
+
+
+
+参考文档：
+- [android手机刷机root教程](https://saucer-man.com/else/692.html)
+- [小米手机root](http://www.noobyard.com/article/p-ygahukgf-pb.html)
 
 
 
