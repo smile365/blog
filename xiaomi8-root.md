@@ -7,6 +7,12 @@ tags:
 description: Unlock bootloader of xiaomi devices on mac
 ---
 
+## 前言
+虽然手上的小米8还能再战两年，但奈何天天被无线快充和120HZ高刷吸引，所以打算22年换个新手机。手上这台就想 root 了之后玩耍下。
+
+> 注： 刷机有风险，请提前备份数据。
+
+
 ## 下载解锁工具
 
 按照[小米官方教程](https://www.miui.com/unlock/download.html)先申请解锁手机。
@@ -21,7 +27,20 @@ gg 了一番，发现有国外网友开发了能在 mac 上跑的工具 [XiaoMiT
 
 XiaoMiToolV2 是一个用 java 开发的 JUI 程序，我满怀希望在 mac 上运行时，出现了错误提示： “XiaoMiTool V2”已损坏，无法打开。 您应该将它移到废纸篓。
 
-结果发现是下错版本了，不能下最新版，得下alpha 版本。
+结果发现是下错版本了，不能下最新版，得下alpha 版本，当然可以运行，但无法解锁。
+
+
+下载了正确版本发现还是无法解锁，只能用[CrossOver](https://www.crossoverchina.com/)跑小米官方的解锁程序。还是不行，跑不起来。
+
+
+下载virtual box 装了 window 7 系统，还是不行，手机根本连不到虚拟机里面。
+
+
+最终还是下载 [parallels desktop](https://www.macwk.com/soft/pd-runner)搞定
+
+pd 无愧是 mac 上最好用的虚拟机软件。
+
+
 
 
 
