@@ -86,6 +86,14 @@ adb push /Users/songyangcong/Downloads/Magisk-v23.0.apk /sdcard/
 如果不想安装第三方系统，那么到这一步就已经够了。
 
 
+## 安装太极·Magisk
+
+根据 [安装教程](https://github.com/taichi-framework/TaiChi/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
+
+1、打开 Magisk Manager，点击左上角侧滑菜单。
+2、选择 模块 打开 模块管理页面
+3、点击页面下方的 ➕ 从文件选择器选择 太极 提供的 magisk 模块的安装包。
+4、等待安装结束，重启手机。
 
 
 
