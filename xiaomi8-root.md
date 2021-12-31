@@ -106,6 +106,7 @@ adb push /Users/songyangcong/Downloads/Magisk-v23.0.apk /sdcard/
 - [android手机刷机root教程](https://saucer-man.com/else/692.html)
 - [小米手机root](http://www.noobyard.com/article/p-ygahukgf-pb.html)
 - [Magisk与EdXposed框架](https://sspai.com/post/63094)
+- [LSPosed](https://post.smzdm.com/p/awrxr8kg/)
 
 
 
