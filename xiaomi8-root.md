@@ -2,7 +2,7 @@
 title: xiaomi8-root 
 heading: 2022年小米手机8获取root权限刷机教程
 date: 2021-12-27T06:54:25.581Z
-categories: ["other"]
+categories: ["code"]
 tags: 
 description: Unlock bootloader of xiaomi devices on mac
 ---
