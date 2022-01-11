@@ -7,6 +7,12 @@ tags:
 description: 
 ---
 
+所需工具
+- java sdk
+- gradle
+- android studio
+
+
 下载[Android Studio](https://developer.android.com/studio)，根据[使用文档](https://developer.android.com/studio/install)安装和配置。
 
 
