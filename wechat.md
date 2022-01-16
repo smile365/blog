@@ -54,6 +54,13 @@ mkdir -p ~/Downloads/WeiXin$(date "+%y%m%d")
 ./adb-sync --reverse /sdcard/Pictures/WeiXin/ ~/Downloads/WeiXin$(date "+%y%m%d")/
 ```
 
+录音
+```bash
+cd ~/project/adb-sync
+mkdir -p ~/Downloads/recorder$(date "+%y%m")
+./adb-sync --reverse /sdcard/MIUI/sound_recorder/ ~/Downloads/recorder$(date "+%y%m")
+```
+
 
 ### 使用正则备份多个文件
 ```bash
