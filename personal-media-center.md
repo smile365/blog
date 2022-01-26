@@ -8,6 +8,15 @@ description: 打造家庭媒体中心，Personal Media Center
 ---
 
 
+## 需求
+随时随地都能添加标准和非标准
+
+- 设备类型：支持公网、手机、电脑、平板
+- 媒体类型
+    - 标准媒体：公开发行的电影、电视剧、动漫
+    - 非标准：你懂的
+
+
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/小书匠/1643194483988.png)
 
 
