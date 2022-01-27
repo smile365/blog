@@ -95,6 +95,11 @@ adb push /Users/songyangcong/Downloads/Magisk-v23.0.apk /sdcard/
 3、点击页面下方的 ➕ 从文件选择器选择 太极 提供的 magisk 模块的安装包。
 4、等待安装结束，重启手机。
 
+## 安装 LSPosed
+
+下载 [LSPosed](https://github.com/LSPosed/LSPosed/releases) 到手机
+
+从 magisk 选择安装。
 
 
 
