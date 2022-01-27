@@ -53,6 +53,23 @@ npx apk-mitm xiakele.apk
 
 root 手机应该是终极解决方案，一切无法抓包的问题都迎刃而解。参考教程[2022年安卓手机root教程（小米8）](https://sxy91.com/posts/xiaomi8-root/)
 
+打开 Charles 保存 pem 格式的证书到电脑
+
+使用命令把 pem 证书重命名为 md5.0 的格式
+```bash?linenums
+mv charles-ssl-proxying-certificate.pem $(openssl x509 -inform PEM -subject_hash_old -in ***.pem | head -1).0
+
+# 把证书推到安卓的系统内
+adb push 7d8cc3c7.0 /system/etc/security/cacerts
+# 提示失败，/system 为 Read-only file system 
+
+用 mt 管理器复制，会自动把
+```
+
+/system/etc/security/cacerts
+
+
+
 
 
 参考链接
