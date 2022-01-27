@@ -7,29 +7,31 @@ tags:
 description: 'android https capture,Intercept HTTPS Traffic from Android App,Capture and decrypt HTTPS traffic from any android app,How to: Capture Android Traffic with Fiddler - Telerik,capture-android-traffic，Android 抓包 2021  '
 ---
 
-APP 接收数据的过程：
-网站通过私钥对数据进行加密，发送给 APP，APP 通过网址获取网站的公钥对数据进行解密。
+## 前言
 
-APP 发送数据的过程：
-APP 获取网站的公钥对要发送的数据进行加密，发送给网站。网站通过私钥对数据进行解密。
+对 Android app 抓包，主要解决 APP 验证 https 整书问题。
 
-非 root 环境下抓取 app 包
-
-解决 APP 验证 https 整书问题
-
-抓包工具
+可能用到的抓包工具
 - [Charles](https://www.macwk.com/soft/charles)
 - [wireshark]()
 
-方案一：
+
+## 非 root 环境
+
+### 方案 1：把需要抓包的 app 装到一个虚拟环境。
+
+工具
 - [太极app](https://github.com/taichi-framework/TaiChi/releases) 或 [VirtualXposed](https://github.com/android-hacker/VirtualXposed/releases)
 - [JustTrustMe-v0.4](https://github.com/pengwei1024/JustTrustMe/releases)
-- 
+ 
 说明：在 VirtualXposed 安装目标 app 和 JustTrustMe 后，与电脑在同一 wifi，并按照 Charles 配置代理即可，无需在手机上安装证书。
 缺点：大部分 app 在太极中无法运行，但可以在 VirtualXposed 中运行，少部分 app 在 vx 中无法运行。
 
 
-方案二：[apk-mitm](https://github.com/shroudedcode/apk-mitm)
+### 方案2：逆向 app，去掉 https 验证 
+
+工具
+：[apk-mitm](https://github.com/shroudedcode/apk-mitm)
 ```
 sudo npm install -g apk-mitm
 npx apk-mitm xiakele.apk
@@ -37,7 +39,10 @@ npx apk-mitm xiakele.apk
 ```
 缺点：可能出现无法运行、闪退
 
-方案三：刷机
+
+## root 环境
+
+root 手机应该是终极解决方案，一切无法抓包的问题都迎刃而解。
 
 
 
