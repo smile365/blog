@@ -42,7 +42,7 @@ npx apk-mitm xiakele.apk
 
 ## root 环境
 
-root 手机应该是终极解决方案，一切无法抓包的问题都迎刃而解。
+root 手机应该是终极解决方案，一切无法抓包的问题都迎刃而解。参考教程[2022年安卓手机root教程（小米8）](https://sxy91.com/posts/xiaomi8-root/)
 
 
 
