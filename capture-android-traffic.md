@@ -30,14 +30,21 @@ description: 'android https capture,Intercept HTTPS Traffic from Android App,Cap
 
 ### 方案2：逆向 app，去掉 https 验证 
 
-工具
-：[apk-mitm](https://github.com/shroudedcode/apk-mitm)
+这里用到一款工具[apk-mitm](https://github.com/shroudedcode/apk-mitm) ，它会自动做以下事情：
+- 解码 APK 文件
+- 替换应用的网络安全配置
+- 允许用户添加证书
+- 禁用各种证书固定实现
+- 使用Apktool对修补的 APK 文件进行编码
+- 使用uber-apk-signer对修补的 APK 文件进行签名
+
+使用方法：
 ```
 sudo npm install -g apk-mitm
 npx apk-mitm xiakele.apk
 # 会生成 ./xiakele-patched.apk
 ```
-缺点：可能出现无法运行、闪退
+缺点：可能出现无法运行、闪退。
 
 
 ## root 环境
