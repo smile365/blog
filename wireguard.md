@@ -9,6 +9,9 @@ description: wireguard 内网穿透
 
 ## mac 安装 WireGuard
 
+
+客户端[命令](https://www.wireguard.com/quickstart/#command-line-interface)
+
 ```bash
 brew install wireGuard
 # Bottle installation failed
@@ -69,6 +72,19 @@ AllowedIPs = 0.0.0.0/0,::/0
 ```
 
 
+## centos 安装 wireguard
+
+参考[官方文档](https://www.wireguard.com/install/)
+
+```
+查看版本
+cat /etc/*-release
+
+yum install -y epel-release elrepo-release
+yum install -y yum-plugin-elrepo
+yum install -y kmod-wireguard wireguard-tools
+```
+
 
 
 参考文章
@@ -79,4 +95,5 @@ AllowedIPs = 0.0.0.0/0,::/0
 - [使用 WireGuard 无缝接入内网](https://devld.me/2020/07/27/wireguard-setup/)
 - [Mac install wireguard ](https://unpc.github.io/2019/02/18/wireguard%20vpn%E5%AE%89%E8%A3%85mac%E5%AE%A2%E6%88%B7%E7%AB%AF/)
 - [wireguard](https://www.wireguard.com/install/)
-- [mac-wireguard使用](https://unpc.github.io/2019/02/18/wireguard%20vpn%E5%AE%89%E8%A3%85mac%E5%AE%A2%E6%88%B7%E7%AB%AF/)
+- [mac-wireguard使用](https://ccstudio.com.cn/linux/part3/wg.html)
+- [在CentOS上设置WireGuard ](https://www.myfreax.com/how-to-set-up-wireguard-vpn-on-centos-8/)
