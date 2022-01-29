@@ -107,9 +107,23 @@ wg-quick up wg0
 # 启动防火墙
 systemctl start firewalld
 systemctl status firewalld
+
+# 启用ip 转发
+# 改配置 net.ipv4.ip_forward = 1
+vi /etc/sysctl.d/99-sysctl.conf 
+sysctl -p /etc/sysctl.d/99-sysctl.conf
+
 ```
 
+
+
+
+
 参考[教程](wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.3/24)配置安卓端
+
+下载安卓客户端[wireguard](https://f-droid.org/en/packages/com.wireguard.android/)
+
+
 
 
 
