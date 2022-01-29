@@ -119,5 +119,5 @@ systemctl status firewalld
 - [Mac install wireguard ](https://unpc.github.io/2019/02/18/wireguard%20vpn%E5%AE%89%E8%A3%85mac%E5%AE%A2%E6%88%B7%E7%AB%AF/)
 - [wireguard](https://www.wireguard.com/install/)
 - [mac-wireguard使用](https://ccstudio.com.cn/linux/part3/wg.html)
-- [在CentOS上设置WireGuard ]
 - [CentOS-7 升级内核](https://zhuanlan.zhihu.com/p/368879345)
+- [如何在五分钟内装好 WireGuard](https://cloud.tencent.com/developer/article/1752845)
