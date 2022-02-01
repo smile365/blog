@@ -14,8 +14,22 @@ description:
 - [aircrack-ng](https://www.aircrack-ng.org/doku.php?id=install_aircrack#installing_on_mac_osx)
 
 
- 
-brew install autoconf automake libtool openssl shtool pkg-config
+参考程[aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)教安装
+``` 
+brew install autoconf automake libtool openssl shtool pkg-config hwloc pcre sqlite3 libpcap cmocka
+```
+下载[aircrack-ng.tar.gz](https://www.aircrack-ng.org/doku.php?id=install_aircrack#installing_on_mac_osx)
+
+解压后安装
+```bash
+ cd aircrack-ng-1.6
+ autoreconf -i
+ ./configure --with-experimental
+ make
+ make install
+ ldconfig
+```
+
 
 
 使用Aircrack-ng工具，依次输入以下命令
