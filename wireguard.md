@@ -115,6 +115,7 @@ sysctl -p /etc/sysctl.d/99-sysctl.conf
 
 ```
 
+yum install adb
 
 
 
