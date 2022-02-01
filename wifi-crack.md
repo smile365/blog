@@ -25,8 +25,8 @@ brew install autoconf automake libtool openssl shtool pkg-config hwloc pcre sqli
  cd aircrack-ng-1.6
  autoreconf -i
  ./configure --with-experimental
- make
- make install
+ gmake
+ gmake install
  ldconfig
 ```
 
