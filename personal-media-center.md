@@ -23,6 +23,14 @@ description: 打造家庭媒体中心，Personal Media Center
 
 Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
 
+安装[PVE](https://www.10bests.com/install-proxmox-ve/)
+
+下载[pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)
+
+用迅雷 bt 下载，官方下载很慢。
+
+
+
 
 
 参考 
