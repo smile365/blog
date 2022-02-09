@@ -35,4 +35,5 @@ Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
 
 参考 
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
+- [mac-ios-usb](https://www.jianshu.com/p/c51745324df6)
 
