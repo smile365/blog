@@ -60,4 +60,5 @@ diskutil eraseDisk ExFAT ud /dev/disk3
 - [Mac 上将U盘格式化为 ExFAT](https://sspai.com/post/68573)
 - [MAC OS 烧录ISO文件到U盘](https://blog.csdn.net/Aria_Miazzy/article/details/104321607)
 - [Mac 使用终端彻底格式化U盘](https://blog.csdn.net/chenhao_c_h/article/details/102552874)
+- [macOS下磁盘管理diskutil命令详解](https://blog.csdn.net/weixin_41136293/article/details/108766145)
 
