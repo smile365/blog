@@ -37,6 +37,13 @@ Proxmox VE，是一个开源的服务器虚拟化环境Linux发行版。Proxmox 
 安装时最好设备插入网线，否则配置网络特别麻烦，有可能无法上网。
 
 
+mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，如何恢复容量？
+
+
+
+diskutil list
+
+
 
 
 
@@ -44,4 +51,5 @@ Proxmox VE，是一个开源的服务器虚拟化环境Linux发行版。Proxmox 
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
 - [Mac 上将U盘格式化为 ExFAT](https://sspai.com/post/68573)
 - [MAC OS 烧录ISO文件到U盘](https://blog.csdn.net/Aria_Miazzy/article/details/104321607)
+- [Mac 使用终端彻底格式化U盘](https://blog.csdn.net/chenhao_c_h/article/details/102552874)
 
