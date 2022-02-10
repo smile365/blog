@@ -75,7 +75,7 @@ iwconfig
 iwlist wlp9s0 scan
 ifup wlp9s0
 iwlist wlp9s0 scan | grep ESSID
-wpa_passphrase CMCC-nJ9A tqyb6cne > /etc/wpa_supplicant/wpa_supplicant.conf
+wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 
 ```
 
