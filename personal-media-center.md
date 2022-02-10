@@ -40,9 +40,17 @@ Proxmox VE，是一个开源的服务器虚拟化环境Linux发行版。Proxmox 
 mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，如何恢复容量？
 
 
-
+```bash
+# 查看磁盘列表，找到 external physical 外部物理磁盘即为 U 盘。
 diskutil list
+# 取消挂载
+diskutil umountDisk /dev/disk3
+# 使用0覆盖所有扇区（比较慢）
+diskutil zeroDisk /dev/disk3
+# 格式化
+diskutil eraseDisk ExFAT ud /dev/disk3 
 
+```
 
 
 
