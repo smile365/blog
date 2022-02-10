@@ -65,13 +65,18 @@ diskutil eraseDisk 可选项说明：
 
 更新镜像源 [Debian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
 
+参考教程[配置WIFI](https://linuxconfig.org/how-to-connect-to-wifi-from-the-cli-on-debian-10-buster)
+
 ```bash
 apt-get install wireless-tools
 iwconfig
 iwlist wlp9s0 scan
 ifup wlp9s0
 iwlist wlp9s0 scan | grep ESSID
+wpa_passphrase CMCC-nJ9A tqyb6cne > /etc/wpa_supplicant/wpa_supplicant.conf
+
 ```
+
 
 
 
