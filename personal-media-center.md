@@ -48,7 +48,7 @@ diskutil umountDisk /dev/disk3
 # 使用0覆盖所有扇区（比较慢，可不执行）
 # diskutil zeroDisk /dev/disk3
 # 格式化
-diskutil eraseDisk ExFAT ud /dev/disk3 
+diskutil eraseDisk ExFAT myupan /dev/disk3 
 ```
 
 ```bash
