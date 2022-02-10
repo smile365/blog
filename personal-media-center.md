@@ -25,9 +25,19 @@ Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
 
 安装[PVE](https://www.10bests.com/install-proxmox-ve/)
 
+Proxmox VE，是一个开源的服务器虚拟化环境Linux发行版。Proxmox VE基于Debian，使用基于Ubuntu的定制内核，包含安装程序、网页控制台和命令行工具。
+
+
 下载[pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)
 
 用迅雷 bt 下载，官方下载很慢。
+
+把 iso 文件用 [etcher](https://www.balena.io/etcher/) 写入 u 盘即可。
+
+安装时最好设备插入网线，否则配置网络特别麻烦，有可能无法上网。
+
+
+
 
 
 参考 
