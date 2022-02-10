@@ -65,11 +65,13 @@ diskutil eraseDisk 可选项说明：
 
 更新镜像源 [Debian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
 
-使用[NMCLI](https://computingforgeeks.com/install-and-use-networkmanager-nmcli-on-ubuntu-debian/) 配置WIFI
-
-apt-get install network-manager
-
-
+```bash
+apt-get install wireless-tools
+iwconfig
+iwlist wlp9s0 scan
+ifup wlp9s0
+iwlist wlp9s0 scan | grep ESSID
+```
 
 
 
