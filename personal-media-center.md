@@ -45,13 +45,21 @@ mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，如何恢复容�
 diskutil list
 # 取消挂载
 diskutil umountDisk /dev/disk3
-# 使用0覆盖所有扇区（比较慢）
-diskutil zeroDisk /dev/disk3
+# 使用0覆盖所有扇区（比较慢，可不执行）
+# diskutil zeroDisk /dev/disk3
 # 格式化
 diskutil eraseDisk ExFAT ud /dev/disk3 
-
 ```
 
+```bash
+diskutil eraseDisk format name [APM | MBR | GPT] device
+```
+
+diskutil eraseDisk 可选项说明：
+ - format：指定抹掉后的文件系统（如 FAT32、ExFAT、APFS）
+- name：抹掉后磁盘的名称
+- APM|MBR|GPT：磁盘的类型（可不填）
+- device：设备ID
 
 
 
