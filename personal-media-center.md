@@ -32,7 +32,7 @@ Proxmox VE，是一个开源的服务器虚拟化环境Linux发行版。Proxmox 
 
 用迅雷 bt 下载，官方下载很慢。
 
-把 iso 文件用 [etcher](https://www.balena.io/etcher/) 写入 u 盘即可。
+把 iso 文件用 [etcher](https://www.balena.io/etcher/) 写入 u 盘即可。（注：mac下 容量会变小，且会被分区成三份）
 
 安装时最好设备插入网线，否则配置网络特别麻烦，有可能无法上网。
 
