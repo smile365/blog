@@ -67,6 +67,8 @@ diskutil eraseDisk 可选项说明：
 
 参考教程[配置WIFI](https://linuxconfig.org/how-to-connect-to-wifi-from-the-cli-on-debian-10-buster)
 
+或者使用图形界面[nmtui](https://howtoinstall.co/en/network-manager)
+
 ```bash
 apt-get install wireless-tools
 iwconfig
@@ -86,4 +88,5 @@ wpa_passphrase CMCC-nJ9A tqyb6cne > /etc/wpa_supplicant/wpa_supplicant.conf
 - [MAC OS 烧录ISO文件到U盘](https://blog.csdn.net/Aria_Miazzy/article/details/104321607)
 - [Mac 使用终端彻底格式化U盘](https://blog.csdn.net/chenhao_c_h/article/details/102552874)
 - [macOS下磁盘管理diskutil命令详解](https://blog.csdn.net/weixin_41136293/article/details/108766145)
+- [Debian 网络配置](https://pan-xiao.gitbook.io/debian/config/network)
 
