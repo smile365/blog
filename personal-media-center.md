@@ -63,6 +63,11 @@ diskutil eraseDisk 可选项说明：
 
 
 
+更新镜像源 [Debian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+
+
+
+
 参考 
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
 - [Mac 上将U盘格式化为 ExFAT](https://sspai.com/post/68573)
