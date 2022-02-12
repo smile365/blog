@@ -98,10 +98,32 @@ iwlist wlp9s0 scan | grep ESSID
 apt-get install wpasupplicant
 wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 
+
 ```
 
+编辑文件 `nano /etc/wpa_supplicant/wpa_supplicant.conf` 在首行增加以下内容：
+```
+ctrl_interface=/run/wpa_supplicant
+ctrl_interface_group=netdev
+update_config=1
+ap_scan=1
+```
 
+启动网卡
+```bash
+# 测试执行
+wpa_supplicant -B -i wlp9s0 -c /etc/wpa_supplicant/wpa_supplicant.conf
 
+# 重启 wpa_supplicant
+systemctl restart wpa_supplicant
+
+# 重启网卡
+ifdown wlp9s0
+ifup wlp9s0
+
+# 获取动态ip
+dhclient
+```
 
 
 或者使用图形界面[nmtui](https://howtoinstall.co/en/network-manager)
