@@ -165,6 +165,12 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 建立共享文件夹
 
  群晖[安装 docker](https://zhuanlan.zhihu.com/p/146175822)并配置[docker加速器](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)
+ 
+ 然后通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker
+ ```bash
+ synoservicecfg --list |grep ocker
+ synoservice --restart pkgctl-Docker
+ ```
 
 注册表搜索 superng 安装 [qbittorrentee](https://registry.hub.docker.com/r/superng6/qbittorrentee/)
 
