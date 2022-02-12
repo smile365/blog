@@ -116,10 +116,26 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 
 
+配置群晖，参考[教程](https://gitmind.cn/app/doc/1e57138160015b5fd23e76b9a2fc61ed)
+
+多媒体信息来源于 https://www.themoviedb.org/ ，保证群晖能访问。
+
+开启 ssh ，获取 id，1026 。
 
 
+uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 
+注册并登录 https://trakt.tv/ 新建电影、电视剧清单。
 
+建立共享文件夹
+
+安装 docker
+
+注册表搜索 superng 安装 [qbittorrentee](https://registry.hub.docker.com/r/superng6/qbittorrentee/)
+
+配置[套件源](https://www.ruoyer.com/dsm_crt.html)
+
+安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
 
 
