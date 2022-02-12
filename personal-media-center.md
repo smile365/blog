@@ -187,5 +187,5 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 - [Debian 网络配置](https://pan-xiao.gitbook.io/debian/config/network)
 - [在pve上安装黑群晖](https://foxi.buduanwang.vip/virtualization/1353.html/)
 - [高阶教程-追剧全流程自动化](https://post.smzdm.com/p/a3gvpn27/)
-- [https://packages.synocommunity.com/](https://github.com/SynoCommunity/spksrc/issues/4897#issuecomment-937376994)
+- [synocommunity](https://github.com/SynoCommunity/spksrc/issues/4897#issuecomment-937376994)
 
