@@ -97,9 +97,24 @@ wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 
 ## 使用 PVE 安装黑群晖
 
-准备的工具
-- 群晖引导：[DS3617-1.03b_boot.img](https://foxi.buduanwang.vip/pan/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/%E9%BB%91%E7%BE%A4%E6%99%96/)
-- 群晖固件：[DSM_DS3617xs_25426.pat](https://foxi.buduanwang.vip/pan/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/%E9%BB%91%E7%BE%A4%E6%99%96/)
+
+从[网盘](https://foxi.buduanwang.vip/pan/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/%E9%BB%91%E7%BE%A4%E6%99%96/)下载所需文件
+- 群晖引导：DS3617-1.03b_boot.qcow2
+- 群晖固件：DSM_DS3617xs_25426.pat
+
+参考教程创建一个[虚拟机](https://foxi.buduanwang.vip/virtualization/1353.html/)，网络选择 Intel E1000
+
+![](https://gitee.com/smile365/blogimg/raw/master/小书匠/1644664926503.png)
+
+
+把 DS3617-1.03b_boot.qcow2 上传到 PVE 的 /root 目录下
+
+在 pve 的终端执行：
+```bash
+qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
+```
+
+
 
 
 
