@@ -172,7 +172,7 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 
 https://packages.synocommunity.com/
 
-通过套件安装Jackett、Radarr、Sonarr
+通过套件安装 Jackett、Radarr、Sonarr
 
 也可以通过 docker 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
@@ -192,4 +192,5 @@ https://packages.synocommunity.com/
 - [在pve上安装黑群晖](https://foxi.buduanwang.vip/virtualization/1353.html/)
 - [高阶教程-追剧全流程自动化](https://post.smzdm.com/p/a3gvpn27/)
 - [synocommunity](https://github.com/SynoCommunity/spksrc/issues/4897#issuecomment-937376994)
+- [BT蚂蚁磁力搜索](https://btmayi.cc/)
 
