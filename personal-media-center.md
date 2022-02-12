@@ -170,6 +170,9 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 
 配置[套件源](https://www.ruoyer.com/dsm_crt.html)
 
+https://packages.synocommunity.com/
+
+
 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
 
