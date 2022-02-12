@@ -149,4 +149,5 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 - [macOS下磁盘管理diskutil命令详解](https://blog.csdn.net/weixin_41136293/article/details/108766145)
 - [Debian 网络配置](https://pan-xiao.gitbook.io/debian/config/network)
 - [在pve上安装黑群晖](https://foxi.buduanwang.vip/virtualization/1353.html/)
+- [高阶教程-追剧全流程自动化](https://post.smzdm.com/p/a3gvpn27/)
 
