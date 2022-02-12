@@ -34,6 +34,24 @@ Proxmox VE 是一个基于 Debian 的开源服务器虚拟化环境Linux发行�
 
 安装时最好设备插入网线，否则配置网络特别麻烦，若无法上网，请查阅官方[关于网络配置的文档](https://pve.proxmox.com/wiki/Network_Configuration#_choosing_a_network_configuration)
 
+安装完，插上网线，修改网络配置`nano /etc/network/interfaces`
+```bash
+auto lo
+iface lo inet loopback
+
+iface enp5s0 inet dhcp
+
+auto vmbr0
+iface vmbr0 inet dhcp
+	#address 192.168.100.2/24
+	#gateway 192.168.100.1
+	bridge-ports enp5s0
+	bridge-stp off
+	bridge-fd 0
+
+iface wlp9s0 inet dhcp
+```
+
 
 mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，可通过 `diskutil` 命令恢复。
 
