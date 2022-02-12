@@ -164,7 +164,7 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 
 建立共享文件夹
 
-安装 docker
+ 群晖[安装 docker](https://zhuanlan.zhihu.com/p/146175822)并配置docker加速器
 
 注册表搜索 superng 安装 [qbittorrentee](https://registry.hub.docker.com/r/superng6/qbittorrentee/)
 
