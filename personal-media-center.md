@@ -172,8 +172,9 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 
 https://packages.synocommunity.com/
 
+通过套件安装Jackett、Radarr、Sonarr
 
-安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
+也可以通过 docker 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
 
 ## 远程管理
