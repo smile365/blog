@@ -27,11 +27,8 @@ description: 打造家庭媒体中心，Personal Media Center
 
 Proxmox VE 是一个基于 Debian 的开源服务器虚拟化环境Linux发行版，使用基于Ubuntu的定制内核，包含安装程序、网页控制台和命令行工具。
 
-下载[pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)镜像后，参考
-[PVE安装教程](https://www.10bests.com/install-proxmox-ve/)进行安装。
+下载[pve-iso](https://www.proxmox.com/en/downloads/category/iso-images-pve)镜像后，参考[PVE安装教程](https://www.10bests.com/install-proxmox-ve/)进行安装。简易用迅雷 bt 下载，官方下载很慢。
 
-
-用迅雷 bt 下载，官方下载很慢。
 
 把 iso 文件用 [etcher](https://www.balena.io/etcher/) 写入 u 盘即可。（注：mac下 容量会变小，且会被分区成三份）
 
