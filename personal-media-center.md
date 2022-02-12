@@ -19,22 +19,23 @@ description: 打造家庭媒体中心，Personal Media Center
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/小书匠/1643194483988.png)
 
+思路：Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
 
 
-Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
-
-安装[PVE](https://www.10bests.com/install-proxmox-ve/)
-
-Proxmox VE，是一个开源的服务器虚拟化环境Linux发行版。Proxmox VE基于Debian，使用基于Ubuntu的定制内核，包含安装程序、网页控制台和命令行工具。
+## 安装 PVE
 
 
-下载[pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)
+Proxmox VE 是一个基于 Debian 的开源服务器虚拟化环境Linux发行版，使用基于Ubuntu的定制内核，包含安装程序、网页控制台和命令行工具。
+
+下载[pve](https://www.proxmox.com/en/downloads/category/iso-images-pve)镜像后，参考
+[PVE安装教程](https://www.10bests.com/install-proxmox-ve/)进行安装。
+
 
 用迅雷 bt 下载，官方下载很慢。
 
 把 iso 文件用 [etcher](https://www.balena.io/etcher/) 写入 u 盘即可。（注：mac下 容量会变小，且会被分区成三份）
 
-安装时最好设备插入网线，否则配置网络特别麻烦，有可能无法上网。
+安装时最好设备插入网线，否则配置网络特别麻烦，若无法上网，请查阅官方[关于网络配置的文档](https://pve.proxmox.com/wiki/Network_Configuration#_choosing_a_network_configuration)
 
 
 mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，如何恢复容量？
@@ -79,6 +80,13 @@ wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 
 ```
 
+## 使用 PVE 安装黑群晖
+
+准备的工具
+- 群晖引导：[DS3617-1.03b_boot.img](https://foxi.buduanwang.vip/pan/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/%E9%BB%91%E7%BE%A4%E6%99%96/)
+- 群晖固件：[DSM_DS3617xs_25426.pat](https://foxi.buduanwang.vip/pan/%E8%BD%AF%E4%BB%B6%E6%94%B6%E9%9B%86/%E9%BB%91%E7%BE%A4%E6%99%96/)
+
+
 
 
 
@@ -89,4 +97,5 @@ wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 - [Mac 使用终端彻底格式化U盘](https://blog.csdn.net/chenhao_c_h/article/details/102552874)
 - [macOS下磁盘管理diskutil命令详解](https://blog.csdn.net/weixin_41136293/article/details/108766145)
 - [Debian 网络配置](https://pan-xiao.gitbook.io/debian/config/network)
+- [在pve上安装黑群晖](https://foxi.buduanwang.vip/virtualization/1353.html/)
 
