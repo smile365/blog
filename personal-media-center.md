@@ -17,7 +17,7 @@ description: 打造家庭媒体中心，Personal Media Center
     - 非标准：你懂的
 
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/小书匠/1643194483988.png)
+![目标](https://gitee.com/smile365/blogimg/raw/master/小书匠/1643194483988.png)
 
 思路：Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
 
@@ -113,6 +113,11 @@ wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 ```bash
 qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 ```
+
+
+
+
+
 
 
 
