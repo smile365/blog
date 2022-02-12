@@ -174,7 +174,7 @@ https://packages.synocommunity.com/
 
 通过套件安装 Jackett、Radarr、Sonarr、Emby
 
-也可以通过 docker 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
+套件版本的软件比较老，以上软件也可以通过 docker 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
 
 ## 远程管理
