@@ -38,8 +38,7 @@ Proxmox VE 是一个基于 Debian 的开源服务器虚拟化环境Linux发行�
 安装时最好设备插入网线，否则配置网络特别麻烦，若无法上网，请查阅官方[关于网络配置的文档](https://pve.proxmox.com/wiki/Network_Configuration#_choosing_a_network_configuration)
 
 
-mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，如何恢复容量？
-
+mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，可通过 `diskutil` 命令恢复。
 
 ```bash
 # 查看磁盘列表，找到 external physical 外部物理磁盘即为 U 盘。
@@ -52,6 +51,7 @@ diskutil umountDisk /dev/disk3
 diskutil eraseDisk ExFAT myupan /dev/disk3 
 ```
 
+这里主要用到 `diskutil eraseDisk` 命令
 ```bash
 diskutil eraseDisk format name [APM | MBR | GPT] device
 ```
