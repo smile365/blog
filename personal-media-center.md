@@ -80,20 +80,33 @@ diskutil eraseDisk 可选项说明：
 
 
 更新镜像源 [Debian 镜像使用帮助](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+```
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
+nano /etc/apt/sources.list
+apt-get update
+apt-get upgrade
+```
 
-参考教程[配置WIFI](https://linuxconfig.org/how-to-connect-to-wifi-from-the-cli-on-debian-10-buster)
 
-或者使用图形界面[nmtui](https://howtoinstall.co/en/network-manager)
+安装[wpa_supplicant](https://wiki.archlinux.org/title/wpa_supplicant)，并参考[教程](https://linuxconfig.org/how-to-connect-to-wifi-from-the-cli-on-debian-10-buster)配置 WIFI。
 
 ```bash
 apt-get install wireless-tools
 iwconfig
-iwlist wlp9s0 scan
 ifup wlp9s0
 iwlist wlp9s0 scan | grep ESSID
+apt-get install wpasupplicant
 wpa_passphrase CMCC-sxy 123456 > /etc/wpa_supplicant/wpa_supplicant.conf
 
 ```
+
+
+
+
+
+或者使用图形界面[nmtui](https://howtoinstall.co/en/network-manager)
+
+
 
 ## 使用 PVE 安装黑群晖
 
