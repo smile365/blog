@@ -172,9 +172,9 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 ## 配置群晖
 
-配置面板--终端机：启用 ssh
-文件管理：创建存储池、存储空间
-套件中心：搜索 docker 并[安装 docker](https://zhuanlan.zhihu.com/p/146175822)
+配置面板--终端机：启用 ssh  
+文件管理：创建存储池、存储空间  
+套件中心：搜索 docker 并[安装 docker](https://zhuanlan.zhihu.com/p/146175822)  
 
 到阿里云申请一个[加速器地址](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)
  
