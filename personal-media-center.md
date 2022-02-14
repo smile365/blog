@@ -162,10 +162,15 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 此时会出现未使用的磁盘0，点编辑改成 sata。
 再增加一个 sata 磁盘，容量随意，简易 32G 以上。
-编辑 options 启动项改成 sata0
+编辑 options 启动项改成 sata0，点击启动，然后打开终端。
+
+此时会出现 http://find.synology.com/ 等字样，打开网站继续安装即可。
+
+手动安装，选择 `DSM_DS3617xs_25426.pat` 
 
 
 
+## 配置群晖
 
 配置群晖，参考[教程](https://gitmind.cn/app/doc/1e57138160015b5fd23e76b9a2fc61ed)
 
