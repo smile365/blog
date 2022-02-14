@@ -173,9 +173,18 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 ## 配置群晖
 
 配置面板--终端机：启用 ssh
-文件管理：创建存储池、存储空间、共享文件夹
-套件中心：搜索 docker 并安装
+文件管理：创建存储池、存储空间
+套件中心：搜索 docker 并[安装 docker](https://zhuanlan.zhihu.com/p/146175822)
 
+到阿里云申请一个[加速器地址](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)
+ 
+ 然后修改 docker 配置文件，通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker
+ ```bash
+ vim /var/packages/Docker/etc/dockerd.json
+ synoservicecfg --list |grep ocker
+ synoservice --restart pkgctl-Docker
+ docker info
+ ```
 
 
 
@@ -192,15 +201,7 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
 
 建立共享文件夹
 
- 群晖[安装 docker](https://zhuanlan.zhihu.com/p/146175822)并配置[docker加速器](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)
- 
- 然后通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker
- ```bash
- vim /var/packages/Docker/etc/dockerd.json
- synoservicecfg --list |grep ocker
- synoservice --restart pkgctl-Docker
- docker info
- ```
+
 
 注册表搜索 superng 安装 [qbittorrentee](https://registry.hub.docker.com/r/superng6/qbittorrentee/)
 
