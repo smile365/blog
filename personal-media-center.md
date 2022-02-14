@@ -178,7 +178,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 到阿里云申请一个[加速器地址](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)
  
- 然后修改 docker 配置文件，通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker
+ 通过 ssh 登录群晖，修改 docker 配置文件，通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker。
  ```bash
  vim /var/packages/Docker/etc/dockerd.json
  synoservicecfg --list |grep ocker
