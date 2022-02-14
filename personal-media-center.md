@@ -213,9 +213,13 @@ docker exec -it linuxserver-qbittorrent1 /bin/bash
 apt update
 apt install binutils
 strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+
 # 重启容器
 ```
 
+vim /volume1/docker/qb/config/qBittorrent/data/nova3/engines/jackett.json
+
+修改 api_key、url
 
 KODI、jellyfin、emby、plex
 
