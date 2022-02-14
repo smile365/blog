@@ -180,10 +180,16 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
  
  通过 ssh 登录群晖，修改 docker 配置文件，通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker。
  ```bash
+ # 切换到 root 用户
+ sudo -i
+ # 修改 dockerd.json
  vim /var/packages/Docker/etc/dockerd.json
+ # 查看 docker 服务
  synoservicecfg --list |grep ocker
+ # 重启
  synoservice --restart pkgctl-Docker
- docker info
+ # 检查是否有加速器地址
+ docker info |grep irror
  ```
 
 
