@@ -54,6 +54,7 @@ iface wlp9s0 inet dhcp
 
 修改成自动获取 ip，然后重启网络 `systemctl restart networking.service`
 
+然后浏览器打开: https://10.0.0.113:8006
 
 mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，可通过 `diskutil` 命令恢复。
 
@@ -139,7 +140,15 @@ dhclient
 - 群晖引导：DS3617-1.03b_boot.qcow2
 - 群晖固件：DSM_DS3617xs_25426.pat
 
-参考教程创建一个[虚拟机](https://foxi.buduanwang.vip/virtualization/1353.html/)，网络选择 Intel E1000
+参考教程创建一个[虚拟机](https://foxi.buduanwang.vip/virtualization/1353.html/)
+- OS：not use any media
+- system
+    - Machine: q35
+    - scsi controller: virtio scsi single
+- netwok
+    - model： Intel E1000
+
+然后删除 CD 驱动和硬盘。
 
 ![](https://gitee.com/smile365/blogimg/raw/master/小书匠/1644664926503.png)
 
@@ -150,6 +159,11 @@ dhclient
 ```bash
 qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 ```
+
+此时会出现未使用的磁盘0，点编辑改成 sata。
+再增加一个 sata 磁盘，容量随意，简易 32G 以上。
+编辑 options 启动项改成 sata0
+
 
 
 
