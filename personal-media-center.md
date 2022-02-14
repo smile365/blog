@@ -52,6 +52,8 @@ iface vmbr0 inet dhcp
 iface wlp9s0 inet dhcp
 ```
 
+修改成自动获取 ip，然后重启网络 `systemctl restart networking.service`
+
 
 mac os 下 使用 etcher 刻录系统以后 U 盘容量变小，可通过 `diskutil` 命令恢复。
 
@@ -168,8 +170,10 @@ uid=1026(dsm) gid=100(users) groups=100(users),101(administrators)
  
  然后通过[synoservicecfg](https://www.itfanr.cc/2017/11/17/playing-synology-nas-of-docker-accelerator/)查看和重启 docker
  ```bash
+ vim /var/packages/Docker/etc/dockerd.json
  synoservicecfg --list |grep ocker
  synoservice --restart pkgctl-Docker
+ docker info
  ```
 
 注册表搜索 superng 安装 [qbittorrentee](https://registry.hub.docker.com/r/superng6/qbittorrentee/)
