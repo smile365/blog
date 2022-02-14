@@ -172,6 +172,13 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 ## 配置群晖
 
+配置面板--终端机：启用 ssh
+文件管理：创建存储池、存储空间、共享文件夹
+套件中心：搜索 docker 并安装
+
+
+
+
 配置群晖，参考[教程](https://gitmind.cn/app/doc/1e57138160015b5fd23e76b9a2fc61ed)
 
 多媒体信息来源于 https://www.themoviedb.org/ ，保证群晖能访问。
