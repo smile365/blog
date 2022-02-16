@@ -104,6 +104,8 @@ echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 ```
 
 
+如需开机启动，在 pve 的 options 界面中把 start at boot 设置成 yes。 
+
 后期如需更改源，请参考[教程](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
 
 
