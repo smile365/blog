@@ -169,6 +169,23 @@ server{
 ```bash
 nginx -t
 nginx -s reload
+
+apk add -U wireguard-tools
+
+cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
+cat /etc/wireguard/publickey 
+vi wg0.conf
+
+[Interface]
+Address = 10.0.8.2
+SaveConfig = true
+ListenPort = 49152
+PrivateKey = 当前私钥
+
+[Peer]
+PublicKey = 公网的公钥
+Endpoint = 你的公网:49152
+AllowedIPs = 10.0.8.0/24        
 ```
 
 
