@@ -109,3 +109,26 @@ echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 后期如需更改源，请参考[教程](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
 
 
+安装 软件
+```bash
+apk add vim
+apk add nginx
+cd /etc/nginx
+# 备份文件
+mv nginx.conf nginx.conf.bak
+# 方便修改去掉注释行
+grep -v "#" nginx.conf.bak > nginx.conf 
+vim nginx.conf 
+# 最后增加一行
+include /etc/nginx/http.d/*.conf;
+
+# 需要手动安装 stream 模块
+# 否则报错 nginx: [emerg] unknown directive "stream" in
+apk add nginx-mod-stream
+nginx -t
+nginx -s reload
+```
+
+安装完成后删除 cd 驱动，然后重启。
+
+配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
