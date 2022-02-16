@@ -189,6 +189,9 @@ AllowedIPs = 10.0.8.0/24
 ```
 
 
+启动 ` wg-quick up wg0 `
+
+
 Alpine 没有 systemc 之类的工具，相似的工具是 [awall](https://www.cyberciti.biz/faq/how-to-set-up-a-firewall-with-awall-on-alpine-linux/)
 ```bash
 # apk update && apk upgrade
@@ -201,5 +204,15 @@ Alpine 没有 systemc 之类的工具，相似的工具是 [awall](https://www.c
 ```
 
 让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
+
+或者使用[脚本](https://www.kryii.com/44.html)
+
+vim /etc/local.d/wg.start
+
+wg-quick up wg0
+
+rc-update add wg
+
+
 
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
