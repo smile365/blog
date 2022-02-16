@@ -104,4 +104,6 @@ echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 ```
 
 
-更改[](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
+后期如需更改源，请参考[教程](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
+
+
