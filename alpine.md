@@ -211,10 +211,14 @@ vim /etc/local.d/wg.start
 
 wg-quick up wg0
 
-rc-update add local
+rc-update add wg
 
 wg-quick up wg0    #启动服务端
 wg-quick down wg0  #停止服务端
+
+
+rc-service wg start
+rc-service wg stop
 
 
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
