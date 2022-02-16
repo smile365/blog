@@ -189,4 +189,15 @@ AllowedIPs = 10.0.8.0/24
 ```
 
 
+Alpine 没有 systemc 之类的工具，相似的工具是 [awall](https://www.cyberciti.biz/faq/how-to-set-up-a-firewall-with-awall-on-alpine-linux/)
+```bash
+# apk update && apk upgrade
+## Install both IPv4 and IPv6 version of IPtables ##
+# apk add ip6tables iptables
+## Install awall ##
+# apk add -u awall
+## Verify it ##
+# apk version awall
+```
+
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
