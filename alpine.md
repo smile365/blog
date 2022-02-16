@@ -102,10 +102,6 @@ e) 使用文本编辑器编辑 /etc/apk/repositories
 # 重启
 reboot
 
-
-#开启 root 用户远程管理
-echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
-
 ```
 
 
@@ -116,8 +112,10 @@ echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 
 安装 软件
 ```bash
+# 开启 root 用户远程管理
+echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
+# 安装 vim、nginx
 apk add vim nginx nginx-mod-stream
-
 # 需要手动安装 stream 模块
 # 否则报错 nginx: [emerg] unknown directive "stream" in
 
@@ -129,13 +127,9 @@ grep -v "#" nginx.conf.bak > nginx.conf
 # 最后增加一行
 mkdir tcp.d
 echo "include /etc/nginx/tcp.d/*.conf;" >> nginx.conf 
-
-
-nginx -t
-nginx -s reload
 ```
 
-```
+```bash
 # vi tcp.d/pve.conf
 # pve.conf
 stream{
@@ -168,10 +162,16 @@ server{
     location / {     
             proxy_pass http://10.0.0.117:9117;
     }                               
-}                                                         
-  
+} 
 ```
 
-安装完成后删除 cd 驱动，然后重启。
+重启 nginx
+```bash
+nginx -t
+nginx -s reload
+```
+
+
+
 
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
