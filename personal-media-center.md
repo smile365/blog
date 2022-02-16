@@ -155,7 +155,7 @@ dhclient
 
 把 DS3617-1.03b_boot.qcow2 上传到 PVE 的 /root 目录下
 
-在 pve 的终端执行：
+在 pve 的终端执行 [qm 命令](https://pve.proxmox.com/pve-docs/qm.1.html)：
 ```bash
 qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 ```
