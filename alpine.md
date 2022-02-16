@@ -200,4 +200,6 @@ Alpine 没有 systemc 之类的工具，相似的工具是 [awall](https://www.c
 # apk version awall
 ```
 
+让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
+
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
