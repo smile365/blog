@@ -97,6 +97,11 @@ e) 使用文本编辑器编辑 /etc/apk/repositories
 16) mirrors.tuna.tsinghua.edu.cn # 清华
 57) mirrors.aliyun.com # 阿里云
 
+最后是否格式化 sda 选择 y。否则会安装失败。
+ 
+# 重启
+reboot
+
 
 #开启 root 用户远程管理
 echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
@@ -111,22 +116,60 @@ echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 
 安装 软件
 ```bash
-apk add vim
-apk add nginx
+apk add vim nginx nginx-mod-stream
+
+# 需要手动安装 stream 模块
+# 否则报错 nginx: [emerg] unknown directive "stream" in
+
 cd /etc/nginx
 # 备份文件
 mv nginx.conf nginx.conf.bak
 # 方便修改去掉注释行
 grep -v "#" nginx.conf.bak > nginx.conf 
-vim nginx.conf 
 # 最后增加一行
-include /etc/nginx/http.d/*.conf;
+mkdir tcp.d
+echo "include /etc/nginx/tcp.d/*.conf;" >> nginx.conf 
 
-# 需要手动安装 stream 模块
-# 否则报错 nginx: [emerg] unknown directive "stream" in
-apk add nginx-mod-stream
+
 nginx -t
 nginx -s reload
+```
+
+```
+# vi tcp.d/pve.conf
+# pve.conf
+stream{
+    upstream pve{
+        hash $remote_addr consistent;
+        server 	10.0.0.113:8006 max_fails=3 fail_timeout=10s;  
+    }
+    server{
+        listen 8006;
+        proxy_connect_timeout 20s;
+        proxy_timeout 5m;
+        proxy_pass pve;
+    }
+}
+```
+
+
+http 反向代理
+```pf.conf
+# cat http.d/default.conf
+server{
+    listen 5000; # dsm
+    location / {
+            proxy_pass http://10.0.0.117:5000;
+    }
+}
+
+server{                                          
+    listen 9117; # JackettAPI     
+    location / {     
+            proxy_pass http://10.0.0.117:9117;
+    }                               
+}                                                         
+  
 ```
 
 安装完成后删除 cd 驱动，然后重启。
