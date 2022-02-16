@@ -1,15 +1,18 @@
 ---
-title:  Alpine镜像源
-date: 2019-05-18T01:16:21.497Z
-tags: ["code","it"]
-categories: ["code"]
-draft: true
-description:
+title: alpine 
+heading: 
+date: 2022-02-16T03:32:29.694Z
+categories: ["other"]
+tags: 
+description: 
 ---
 
 
-sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
+alpine-virt-3.15.0-x86_64 安装
 
-参考  
-- [Alpine镜像源](https://mirrors.ustc.edu.cn/help/alpine.html)
+setup-alpine
+cn
+
+#如果要想使用root用户远程管理，需要修改#PermitRootLogin prohibit-password参数为：
+PermitRootLogin yes
