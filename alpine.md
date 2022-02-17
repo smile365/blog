@@ -222,3 +222,9 @@ rc-service wg stop
 
 
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
+
+如果没有活动的数据连接，ip 地址变动就无法创建链接。弄个定时任务。
+
+crontab -e
+
+*/15    *       *       *       *      ping 10.0.8.2
