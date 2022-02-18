@@ -141,6 +141,5 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 - [mac-wireguard使用](https://ccstudio.com.cn/linux/part3/wg.html)
 - [CentOS-7 升级内核](https://zhuanlan.zhihu.com/p/368879345)
 - [如何在五分钟内装好 WireGuard](https://cloud.tencent.com/developer/article/1752845)
-- [android-WireGuard](wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.3/24)
 - [大白话聊 WireGuard](https://no1.engineer/articles/2020-01/simply-talk-about-wireguard)
 - [体验Wireguard的简单之美](https://www.nixops.me/articles/wireguard-howtos.html)
