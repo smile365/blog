@@ -187,6 +187,7 @@ PublicKey = 公网的公钥
 Endpoint = 你的公网:49152
 AllowedIPs = 10.0.8.0/24    
 # Send periodic keepalives to ensure connection stays up behind NAT.
+# 25 秒触发一次
 PersistentKeepalive = 25
 ```
 
@@ -207,6 +208,8 @@ Alpine 没有 systemc 之类的工具，相似的工具是 [awall](https://www.c
 
 让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
 
+如果客户端在 NAT 之后，当没有活动的数据连接，客户端就是断开，可通过 配置项 PersistentKeepalive “促活”
+
 或者使用[脚本](https://www.kryii.com/44.html)
 
 vim /etc/local.d/wg.start
@@ -225,8 +228,7 @@ rc-service wg stop
 
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
 
-如果没有活动的数据连接，ip 地址变动就无法创建链接。弄个定时任务。
 
-crontab -e
+nginx 开机启动
 
-*/15    *       *       *       *      ping 10.0.8.2
+
