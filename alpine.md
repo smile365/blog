@@ -230,5 +230,10 @@ rc-service wg stop
 
 
 nginx 开机启动
+rc-service nginx status
+rc-service nginx start
 
 
+
+参考资料   
+- [/run/nginx/nginx.pid](https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command)
