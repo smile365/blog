@@ -185,7 +185,9 @@ PrivateKey = 当前私钥
 [Peer]
 PublicKey = 公网的公钥
 Endpoint = 你的公网:49152
-AllowedIPs = 10.0.8.0/24        
+AllowedIPs = 10.0.8.0/24    
+# Send periodic keepalives to ensure connection stays up behind NAT.
+PersistentKeepalive = 25
 ```
 
 
