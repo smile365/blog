@@ -61,12 +61,12 @@ vim /usr/local/etc/wireguard/wg0.conf
 ```nginxconf
 [Interface]
 PrivateKey = xxx
-Address = 10.0.8.3
+Address = 10.0.8.3/24
 
 [Peer]
-PublicKey = xxx
+PublicKey = xxxx
 Endpoint = xxx:51820
-AllowedIPs = 10.0.8.0/32
+AllowedIPs = 10.0.8.0/24
 ```
 
 
@@ -84,6 +84,16 @@ yum install -y kmod-wireguard wireguard-tools
 ```
 
 参考文章[设置WireGuard ](https://www.myfreax.com/how-to-set-up-wireguard-vpn-on-centos-8/)
+
+```
+[Interface]
+Address = 10.0.8.1/24
+SaveConfig = true
+ListenPort = 51820
+PrivateKey = xxx
+PostUp     = firewall-cmd --zone=public --add-port 51820/udp && firewall-cmd --zone=public --add-masquerade
+PostDown   = firewall-cmd --zone=public --remove-port 51820/udp && firewall-cmd --zone=public --remove-masquerade
+```
 
 ```
 # 启动
