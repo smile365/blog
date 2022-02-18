@@ -131,6 +131,8 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 
 ## 关于子网掩码
 
+配置 ip 的时候经常遇到 ip/数字（如 8、16、24、32） 等情况，是什么意思？
+
 如果子网掩码配置错误，有可能将找不到对方。
 
 子网掩码必须和 ip 一同出现，只要配置 ip 的地方，就必须配置子网掩码。
