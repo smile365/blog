@@ -148,7 +148,7 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 
 所以用 192.168.1.3/24 就可以表示 192.168.1.3 的子网掩码是 255.255.255.0 
 
-
+因此局域网内的子网掩码一般为 24 或 255.255.255.0
 
 
 
