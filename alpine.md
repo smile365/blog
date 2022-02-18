@@ -230,6 +230,7 @@ rc-service wg stop
 
 
 nginx 开机启动
+rc-update add nginx
 rc-service nginx status
 rc-service nginx start
 
