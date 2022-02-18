@@ -60,15 +60,13 @@ vim /usr/local/etc/wireguard/wg0.conf
 
 ```nginxconf
 [Interface]
-PrivateKey = xxx=
-Address = 10.10.10.10/32,fd42:42:42::10/128
-DNS = x.x.x.x,x.x.x.x
+PrivateKey = xxx
+Address = 10.0.8.3
 
 [Peer]
-PublicKey = yyyy=
-PresharedKey = zzzz=
-Endpoint = mysite.com:51200
-AllowedIPs = 0.0.0.0/0,::/0
+PublicKey = xxx
+Endpoint = xxx:51820
+AllowedIPs = 10.0.8.0/32
 ```
 
 
