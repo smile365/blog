@@ -260,8 +260,8 @@ docker pull emby/embyserver
 安装的软件登录端口：  
  - [PVE:8006](https://10.0.8.2:8006/)
  - [DSM:5000](http://10.0.8.2:5000/)
+ - [qbittorrentee:8080](http://10.0.8.2:8080/) 
  - [Jackett:9117](http://10.0.8.2:9117/)
- - [qbittorrentee:8080](http://10.0.8.2:8080/)
  - [Radarr:7878](http://10.0.8.2:7878/)
  - [emby:8096](http://10.0.8.2:8096/)
 
