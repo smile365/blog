@@ -263,6 +263,7 @@ docker pull emby/embyserver
  - [Jackett:9117](http://10.0.8.2:9117/)
  - [qbittorrentee:8080](http://10.0.8.2:8080/)
  - [Radarr:7878](http://10.0.8.2:7878/)
+ - [emby:8096](http://10.0.8.2:7878/)
 
 
 
