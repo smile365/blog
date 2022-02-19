@@ -202,8 +202,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 - **Trakt**：待看清单列表。
 
 
-docker pull linuxserver/jackett
-docker pull linuxserver/qbittorrent
+
 # 也有中文修改版
 # docker pull superng6/qbittorrentee
 
@@ -250,9 +249,13 @@ https://packages.synocommunity.com/
 
 套件版本的软件比较老，以上软件也可以通过 docker 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
+```bash
+ipkg install lsof
+docker pull linuxserver/qbittorrent
+docker pull linuxserver/jackett
 docker pull linuxserver/radarr
 docker pull emby/embyserver
-
+```
 
 安装的软件登录端口：  
  - [PVE:8006](https://10.0.8.2:8006/)
@@ -274,4 +277,6 @@ docker pull emby/embyserver
 - [高阶教程-追剧全流程自动化](https://post.smzdm.com/p/a3gvpn27/)
 - [synocommunity](https://github.com/SynoCommunity/spksrc/issues/4897#issuecomment-937376994)
 - [BT蚂蚁磁力搜索](https://btmayi.cc/)
+- [群晖包管理器 ipkg](https://cloud.tencent.com/developer/article/1405675)
+- [opkg](https://github.com/Entware/Entware/wiki)
 
