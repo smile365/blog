@@ -205,7 +205,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 群晖目录配置
 ```
 - docker
--- config # 所有软件的配置项
+-- xxx # 软件名 映射为 config
 - media
 -- downloads # 下载文件
 -- tvshows # tv
