@@ -250,10 +250,17 @@ https://packages.synocommunity.com/
 
 套件版本的软件比较老，以上软件也可以通过 docker 安装 [Radarr](https://post.smzdm.com/p/a9g2w0qp/)
 
+docker pull linuxserver/radarr
+docker pull emby/embyserver
 
-## 远程管理
 
-内网穿透
+安装的软件登录端口：  
+ - [PVE:8006](https://10.0.8.2:8006/)
+ - [DSM:5000](http://10.0.8.2:5000/)
+ - [Jackett:9117](http://10.0.8.2:9117/)
+ - [qbittorrentee:8080](http://10.0.8.2:8080/)
+ - [Radarr:7878](http://10.0.8.2:7878/)
+
 
 
 参考 
