@@ -202,12 +202,22 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 - **Trakt**：待看清单列表。
 
 
+群晖目录配置
+```
+- docker
+-- config # 所有软件的配置项
+- media
+-- downloads # 下载文件
+-- tvshows # tv
+-- movies # 电影
+```
 
-# 也有中文修改版
-# docker pull superng6/qbittorrentee
+
 
 如果遇到 [libQt5Core](https://github.com/linuxserver/docker-qbittorrent/issues/103) 问题，则如下解决：
 ```bash
+# 也有中文修改版
+# docker pull superng6/qbittorrentee
 docker exec -it linuxserver-qbittorrent1 /bin/bash
 apt update
 apt install binutils
