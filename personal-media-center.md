@@ -279,4 +279,5 @@ docker pull emby/embyserver
 - [BT蚂蚁磁力搜索](https://btmayi.cc/)
 - [群晖包管理器 ipkg](https://cloud.tencent.com/developer/article/1405675)
 - [opkg](https://github.com/Entware/Entware/wiki)
+- [群晖占用的端口](https://kb.synology.cn/zh-cn/DSM/tutorial/What_network_ports_are_used_by_Synology_services)
 
