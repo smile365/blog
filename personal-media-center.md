@@ -282,6 +282,14 @@ docker pull emby/embyserver
 字幕工具：Bazarr、SubFinder、[chinesesubfinder](https://sleele.com/2021/06/25/docker-chinesesubfinder-%E4%B8%AD%E6%96%87%E5%AD%97%E5%B9%95%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BD/)
 
 
+## 电视上看
+
+## ipad 上看
+
+## 手机上看
+
+
+
 
 参考 
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
