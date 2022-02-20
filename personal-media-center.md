@@ -288,6 +288,7 @@ docker pull emby/embyserver
 
 ## 手机上看
 
+smbstatus -V
 
 
 
