@@ -307,4 +307,5 @@ smbstatus -V
 - [opkg](https://github.com/Entware/Entware/wiki)
 - [群晖占用的端口](https://kb.synology.cn/zh-cn/DSM/tutorial/What_network_ports_are_used_by_Synology_services)
 - [射手网字幕](https://assrt.net/api/doc)
+- [主流平台访问samba共享文件夹方法总结](https://github.com/wupanhao/wupanhao.github.io/issues/1)
 
