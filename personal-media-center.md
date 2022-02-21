@@ -291,6 +291,10 @@ docker pull emby/embyserver
 smbstatus -V
 
 
+[PVE 玩转 ARM](https://www.proxmox.wiki/?thread-54.htm)
+
+[在PVE中安装安卓x86](https://foxi.buduanwang.vip/virtualization/pve/567.html/)
+
 
 参考 
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
@@ -308,4 +312,6 @@ smbstatus -V
 - [群晖占用的端口](https://kb.synology.cn/zh-cn/DSM/tutorial/What_network_ports_are_used_by_Synology_services)
 - [射手网字幕](https://assrt.net/api/doc)
 - [主流平台访问samba共享文件夹方法总结](https://github.com/wupanhao/wupanhao.github.io/issues/1)
+- [Proxmox6.0-cn 中文手册](http://files.elvin.vip/doc/Proxmox6.0-cn.pdf)
+- [在PVE中安装安卓x86+清华大学镜像站](http://loves.im/?id=43)
 
