@@ -146,7 +146,7 @@ allowtcpforwarding yes
 permitopen any
 ```
 
-修改为正确的配置
+修改为正确的配置: 
 ```bash
 vi /etc/ssh/sshd_config
 rc-service sshd restart
