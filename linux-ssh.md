@@ -131,6 +131,27 @@ Host tunnel
     LocalForward 8806 127.0.0.1:8806
 ```
 
+## alpline 错误
+
+如果遇到错误: `
+channel 3: open failed: administratively prohibited: open failed `
+
+查看 sshd 配置项：  
+```bash
+sshd -T | grep -Ei 'TCPKeepAlive|AllowTcpForwarding|PermitOpen'
+
+# print
+tcpkeepalive yes
+allowtcpforwarding yes
+permitopen any
+```
+
+修改为正确的配置
+```bash
+vi /etc/ssh/sshd_config
+rc-service sshd restart
+```
+
 
 参考
 
