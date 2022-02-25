@@ -54,6 +54,10 @@ yum install -y clickhouse-server clickhouse-client
 ```bash
 systemctl start clickhouse-server
 clickhouse-client -h 192.168.1.135
+
+# 如果开启远程连接
+# 防火墙打开端口
+firewall-cmd --add-port=9000/tcp
 ```
 
 创建数据库和表，数据类型参考[data_types](https://clickhouse-docs.readthedocs.io/en/latest/data_types/)  
