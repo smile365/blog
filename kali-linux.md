@@ -1,11 +1,18 @@
 ---
 title:  Kali-Linux安全渗透教程
 date: 2019-01-10T07:32:18.188Z
-tags: ["code","it"]
 categories: ["code"]
 draft: true
 description:
 ---
+
+## 在 mac os 下制作 kali Linux usb 启动盘（live）
+
+下载 [kali iso ](https://www.kali.org/get-kali/#kali-live) 并用 [etcher](https://www.balena.io/etcher/) 烧录到 u 盘。也可以用[命令模式](https://www.kali.org/docs/usb/live-usb-install-with-mac/) 。
+
+
+然后打开设备电源，立即按 Option 键调出启动菜单。
+
 
 参考  
 - [Kali-Linux安全渗透教程](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/)
