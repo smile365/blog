@@ -13,6 +13,9 @@ description:
 
 然后打开设备电源，立即按 Option 键调出启动菜单。
 
+启动安全性实用工具
+
+然后在看到 Apple 标志后立即按住 Command (⌘)-R 键。Mac 会从 macOS 恢复功能启动。
 
 参考  
 - [Kali-Linux安全渗透教程](https://wizardforcel.gitbooks.io/daxueba-kali-linux-tutorial/content/)
