@@ -38,3 +38,4 @@ mac os 因为[启动安全性实用工具](https://support.apple.com/zh-cn/HT208
 - [msfvenom 介绍](http://www.ko0zh1.cc/2017/07/27/msfvenom%E8%AF%A6%E8%A7%A3/)
 - [kali-linux-msfvenom](https://zhuanlan.zhihu.com/p/27008235)
 - [MAC如何修改启动安全性实用工具-禁止或允许其他磁盘启动其他系统](https://www.cnblogs.com/PowerTips/p/12158110.html)
+- [在 mac os 上安装Kali 无法使用触摸板、键盘和蓝牙](https://forums.kali.org/showthread.php?25240-Macbook-Pro-Kali-Mac-OS-Dual-Boot-Install-Guide-amp-WiFi-Guide&highlight=macbook+wifi)
