@@ -10,12 +10,20 @@ description:
 
 下载 [kali iso ](https://www.kali.org/get-kali/#kali-live) 并用 [etcher](https://www.balena.io/etcher/) 烧录到 u 盘。也可以用[命令模式](https://www.kali.org/docs/usb/live-usb-install-with-mac/) 。
 
+mac os 因为[启动安全性实用工具](https://support.apple.com/zh-cn/HT208198)，无法从 u 盘启动。可以参考[教程](https://zhuanlan.zhihu.com/p/110385099)修改。
 
-然后打开设备电源，立即按 Option 键调出启动菜单。
 
-启动安全性实用工具
+然后打开设备电源，然后在看到 Apple 标志后立即按住 Command (⌘)-R 键。
 
-然后在看到 Apple 标志后立即按住 Command (⌘)-R 键。Mac 会从 macOS 恢复功能启动。
+
+
+Mac 会从 macOS 恢复功能启动。
+
+立即按 Option 键调出启动菜单。
+
+
+
+
 
 
 
