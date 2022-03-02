@@ -15,7 +15,7 @@ def multArr2one(arr):
 	res = []
 	for x in arr:
 		if isinstance(x,list):
-			res += muiltArr2one(x)
+			res += multArr2one(x)
 		else:
 			res.append(x)
 	return res
