@@ -9,6 +9,7 @@ description: Convert Matrix / 2D Array to a 1D,matrix-array-2-1D
 
 项目中需要把多维数据转变成一维数组，看了下网上的方法不太完美，所以自己使用递归实现了一个小方法，记录下。
 
+python 实现
 ```python
 def multArr2one(arr):
 	res = []
@@ -18,6 +19,17 @@ def multArr2one(arr):
 		else:
 			res.append(x)
 	return res
+```
+
+JavaScript 实现
+```javascript
+function multArr2one(arr){
+	res = []
+	for (let x of arr){
+		Array.isArray(x) ? res = res.concat(multArr2one(x)) : res.push(x);
+	}	
+	return res	
+}
 ```
 
 [网上的方法](https://leejason.blog.csdn.net/article/details/106928360)不满足我的需求
