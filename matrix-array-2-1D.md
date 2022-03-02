@@ -7,8 +7,7 @@ tags:
 description: Convert Matrix / 2D Array to a 1D
 ---
 
-
-网上的方法不太完美，所以自己使用递归实现了一个小方法，记录下。
+项目中需要把多维数据转变成一维数组，看了下网上的方法不太完美，所以自己使用递归实现了一个小方法，记录下。
 
 ```python
 def multArr2one(arr):
