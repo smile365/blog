@@ -58,6 +58,45 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 5.airodump-ng mon0
 ```
 
+## 树莓派上安装
+
+```bash
+sudo vi /etc/ssh/sshd_config
+
+```
+
+mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
+```bash
+/etc/ssh/sshd_config
+# AcceptEnv LANG LC_*
+systemctl restart sshd
+echo "export LC_ALL=en_US.UTF-8" >> ~/.bash_profile
+echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
+```
+
+
+安装依赖
+```bash
+Autoconf
+Automake
+Libtool
+shtool
+OpenSSL development package or libgcrypt development package.
+pkg-config
+
+apt-get install -y autoconf automake libtool shtool openssl pkg-config 
+
+ethtool libnl-3-dev libnl-genl-3-dev build-essential libstdc++-dev
+
+```
+
+仅能编译上[安装](https://www.aircrack-ng.org/doku.php?id=install_aircrack#compiling_and_installing) 
+```bash
+
+```
+
+
+
 参考  
 - [WiFi 安全与攻击案例分析](https://paper.seebug.org/1159/)
 - [cracking-wifi-at-scale-with-one-simple-trick](https://www.cyberark.com/resources/threat-research-blog/cracking-wifi-at-scale-with-one-simple-trick)
