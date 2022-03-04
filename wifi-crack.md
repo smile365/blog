@@ -60,20 +60,14 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 
 ## 树莓派上安装
 
-```bash
-sudo vi /etc/ssh/sshd_config
-
-```
-
 mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
 ```bash
-/etc/ssh/sshd_config
+sudo vi /etc/ssh/sshd_config
 # AcceptEnv LANG LC_*
 systemctl restart sshd
 echo "export LC_ALL=en_US.UTF-8" >> ~/.bash_profile
 echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
 ```
-
 
 安装依赖
 ```bash
