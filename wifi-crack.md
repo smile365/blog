@@ -45,30 +45,23 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 
 
 
-使用Aircrack-ng工具，依次输入以下命令  
-
-```bash
-# 防止设备繁忙  
-1.airmon-ng check kill  
-查看无线网卡状态
-2.ifconfig/iwconfig -a
-加载无线网卡，已加载则忽略
-3.ifconfig wlan0 up
-激活网卡
-4.airmon-ng start wlan0
-探测无线网络
-5.airodump-ng mon0
-```
-
 ## 树莓派上安装 aircrack-ng
 
 mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
 ```bash
+
+grep "^[^#]" /etc/ssh/sshd_config
 sudo vi /etc/ssh/sshd_config
+# 注释掉以下行
 # AcceptEnv LANG LC_*
 systemctl restart sshd
-echo "export LC_ALL=en_US.UTF-8" >> ~/.bash_profile
-echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
+echo "export LC_ALL=en_US.UTF-8" >> /etc/.bash_profile
+echo "export LANG=en_US.UTF-8" >> /etc/.bash_profile
+
+grep "^[^#]" /etc/locale.gen
+# 注释以下行
+# en_US.UTF-8 UTF-8
+sudo locale-gen
 ```
 
 安装依赖
@@ -88,6 +81,30 @@ autoreconf -i
 make
 make install
 ldconfig
+```
+
+使用Aircrack-ng工具，依次输入以下命令  
+
+```bash
+# 杀死占用网卡的进程  
+# 如果为空则证明没占用，有进程则需要手动关闭
+1.airmon-ng check kill  
+查看无线网卡状态
+2.ifconfig/iwconfig -a
+加载无线网卡，已加载则忽略
+3.ifconfig wlan0 up
+激活网卡
+4.airmon-ng start wlan0
+探测无线网络
+5.airodump-ng mon0
+```
+
+无法关闭 avahi-daemon
+```
+# 提示
+# stopping avahi-daemon.service but it can still be activated by
+# 移出
+apt-get remove avahi-daemon
 ```
 
 
