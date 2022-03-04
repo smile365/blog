@@ -77,22 +77,21 @@ echo "export LANG=en_US.UTF-8" >> ~/.bash_profile
 
 安装依赖
 ```bash
-Autoconf
-Automake
-Libtool
-shtool
-OpenSSL development package or libgcrypt development package.
-pkg-config
-
-apt-get install -y autoconf automake libtool shtool openssl pkg-config 
-
-ethtool libnl-3-dev libnl-genl-3-dev build-essential libstdc++-dev
-
+sudo apt-get update
+sudo apt-get install -y libpcap-dev libsqlite3-dev sqlite3 libpcap0.8-dev libssl-dev build-essential iw tshark subversion ethtool
+sudo apt-get install -y libnl-3-200 libnl-3-dev libnl-genl-3-dev libnl-genl-3-200
 ```
 
 仅能编译上[安装](https://www.aircrack-ng.org/doku.php?id=install_aircrack#compiling_and_installing) 
 ```bash
-
+wget https://download.aircrack-ng.org/aircrack-ng-1.6.tar.gz
+tar -zxvf aircrack-ng-1.6.tar.gz
+cd aircrack-ng-1.6
+autoreconf -i
+./configure --with-experimental
+make
+make install
+ldconfig
 ```
 
 
