@@ -48,8 +48,21 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 ## 树莓派上安装 aircrack-ng
 
 mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
-```bash
 
+查看配置
+···
+```bash
+locale
+# 输出
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+
+```
+
+
+修改配置
+```bash
 grep "^[^#]" /etc/ssh/sshd_config
 sudo vi /etc/ssh/sshd_config
 # 注释掉以下行
@@ -62,6 +75,8 @@ grep "^[^#]" /etc/locale.gen
 # 注释以下行
 # en_US.UTF-8 UTF-8
 sudo locale-gen
+# 查看是否正常
+locale
 ```
 
 安装依赖
