@@ -124,7 +124,13 @@ ldconfig
 apt-get remove avahi-daemon
 ```
 
-
+无法设置监听模式
+```bash
+iwconfig wlan0 mode monitor
+# out 
+Error for wireless request "Set Mode" (8B06) :
+    SET failed on device wlan0 ; Operation not supported
+```
 
 参考  
 - [WiFi 安全与攻击案例分析](https://paper.seebug.org/1159/)
