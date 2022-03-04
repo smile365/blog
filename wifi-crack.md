@@ -45,7 +45,7 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 
 ## 树莓派上安装 aircrack-ng
 
-查看网卡是否支持监听模式
+查看[无线网卡](https://zhuanlan.zhihu.com/p/138202947)是否支持监听模式
 ```bash
 # 查看树莓派型号
 cat /proc/device-tree/model
