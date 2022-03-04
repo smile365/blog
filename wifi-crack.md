@@ -1,10 +1,10 @@
 ---
-title:  wifi-crack
+title:  wifi密码破解
 heading: 
 date: 2021-11-23T13:37:23.761Z
-categories: ["other"]
+categories: ["code"]
 tags: 
-description: 
+description: wifi-crack
 ---
 
 关于破解的方法和思路参考[渗透测试之构建高效WiFi破解字典](https://www.anquanke.com/post/id/219315)
