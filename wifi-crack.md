@@ -54,7 +54,7 @@ cat /proc/device-tree/model
 # 查看 Supported interface modes
 # 是否有 monitor 模式
 iw list | grep "Supported interface modes" -A 7
-# 没有 monitor 则不支持
+# 没有 monitor 则不支持，后面就不用看了
 ```
 
 mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
