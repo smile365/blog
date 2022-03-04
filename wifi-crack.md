@@ -82,7 +82,7 @@ sudo apt-get install -y libpcap-dev libsqlite3-dev sqlite3 libpcap0.8-dev libssl
 sudo apt-get install -y libnl-3-200 libnl-3-dev libnl-genl-3-dev libnl-genl-3-200
 ```
 
-仅能编译上[安装](https://www.aircrack-ng.org/doku.php?id=install_aircrack#compiling_and_installing) 
+通过编译的方式[安装](https://www.aircrack-ng.org/doku.php?id=install_aircrack#compiling_and_installing) 
 ```bash
 wget https://download.aircrack-ng.org/aircrack-ng-1.6.tar.gz
 tar -zxvf aircrack-ng-1.6.tar.gz
