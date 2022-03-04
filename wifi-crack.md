@@ -43,10 +43,7 @@ ls -lh /tmp/airport*
 aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airportSniff*.cap
 ```
 
-
-
 ## 树莓派上安装 aircrack-ng
-
 
 查看网卡是否支持监听模式
 ```bash
