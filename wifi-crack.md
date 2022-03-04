@@ -47,6 +47,16 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 
 ## 树莓派上安装 aircrack-ng
 
+
+查看网卡是否支持监听模式
+```bash
+iw list |grep monitor 
+# 没有则不支持
+iw list 
+# 查看 Supported interface modes
+# 是否有 monitor 模式
+```
+
 mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
 
 查看配置
