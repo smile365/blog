@@ -16,6 +16,8 @@ description:
 - [aircrack-ng](https://www.aircrack-ng.org/doku.php?id=install_aircrack#installing_on_mac_osx)
 
 
+## mac 上安装 aircrack-ng
+
 参考程[aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)教安装
 ``` 
 brew install autoconf automake libtool openssl shtool pkg-config hwloc pcre sqlite3 libpcap cmocka
@@ -58,7 +60,7 @@ aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airport
 5.airodump-ng mon0
 ```
 
-## 树莓派上安装
+## 树莓派上安装 aircrack-ng
 
 mac shell ssh 连接树莓派[中文乱码](https://monsoir.github.io/Notes/RaspberryPie/raspberry-ssh-locale.html)
 ```bash
