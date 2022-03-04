@@ -57,11 +57,11 @@ locale
 locale: Cannot set LC_CTYPE to default locale: No such file or directory
 locale: Cannot set LC_MESSAGES to default locale: No such file or directory
 locale: Cannot set LC_ALL to default locale: No such file or directory
-
+cat /etc/default/locale
 ```
 
 
-修改配置
+修改配置[locale](https://askubuntu.com/questions/599808/cannot-set-lc-ctype-to-default-locale-no-such-file-or-directory)
 ```bash
 grep "^[^#]" /etc/ssh/sshd_config
 sudo vi /etc/ssh/sshd_config
@@ -77,6 +77,8 @@ grep "^[^#]" /etc/locale.gen
 sudo locale-gen
 # 查看是否正常
 locale
+# 或者重新配置默认语音
+# sudo dpkg-reconfigure locales
 ```
 
 安装依赖
