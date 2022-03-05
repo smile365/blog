@@ -63,9 +63,9 @@ description:
 
 **电路板**：电子元器件的家。
 
-用 Altium Designer 打开项目生成 bom 表（元器件清单），按照列表到[立创商城](https://www.szlcsc.com/)购买所需元器件。参考[购买教程](https://www.bilibili.com/video/BV11h41147iJ?p=3&spm_id_from=pageDriver)，清单 2:10,购买记录 12:15。
+用 Altium Designer 打开项目生成 bom 表（元器件清单），按照列表到[立创商城](https://www.szlcsc.com/)购买所需元器件。参考[购买教程](https://www.bilibili.com/video/BV11h41147iJ?p=3&spm_id_from=pageDriver)，清单 2:10,购买记录 12:15。忘买的补充，[屏幕](https://www.bilibili.com/video/BV11h41147iJ?p=8&spm_id_from=pageDriver)
 
-到淘宝购买[焊接工具](https://www.bilibili.com/video/BV11h41147iJ?p=4&spm_id_from=pageDriver)、[屏幕](https://www.bilibili.com/video/BV11h41147iJ?p=8&spm_id_from=pageDriver)等元器件。
+到淘宝购买[焊接工具](https://www.bilibili.com/video/BV11h41147iJ?p=4&spm_id_from=pageDriver)等工具。
 - 有铅锡膏
 - 镊子，
 - 拆焊台 20元
