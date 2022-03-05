@@ -81,10 +81,14 @@ description:
 
 注入灵魂（固件）
 
+
 用 vs code 打开项目代码，[编译成固件](https://www.bilibili.com/video/BV11h41147iJ?p=5&spm_id_from=pageDriver)。
 
 
 如果需要改显示的东西，那么可以先[在电脑上模拟](https://www.bilibili.com/video/BV11h41147iJ?p=6&spm_id_from=pageDriver)再烧录到硬件里，用到下面两个软件。
+
+vs code 安装插件 PlatformIO IDE，[创建一个项目](https://www.bilibili.com/video/BV11h41147iJ?p=5),时间轴 1:10 。
+
 
 [platform io 模拟器](https://github.com/lvgl/lv_platformio)
 
