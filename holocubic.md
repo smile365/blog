@@ -56,10 +56,10 @@ description:
 - VSCode, [下载](https://code.visualstudio.com/)
 - Fusion360,  [下载](https://www.autodesk.com.cn/products/fusion-360/free-trial?trial=trialdownloads-f360), 需要注册
 
-参考[思维导图]([软件](https://www.canva.cn/design/DAEw1e4CEyc/X1hiJK5UU0n6zFql7MuHDA/view?utm_content=DAEw1e4CEyc&utm_campaign=designshare&utm_medium=link&utm_source=publishshareli#3))
+参考[思维导图](https://www.canva.cn/design/DAEw1e4CEyc/X1hiJK5UU0n6zFql7MuHDA/view?utm_content=DAEw1e4CEyc&utm_campaign=designshare&utm_medium=link&utm_source=publishshareli#3)
 
 
-用 Altium  Designer 打开项目生成 gerber 文件，上传到 [嘉立创](https://www.jlc.com/)，生产出电路板。（也可以发送 pcb 文件）
+用 Altium  Designer 打开项目生成 gerber 文件，上传到 [嘉立创](https://www.jlc.com/)，生产出电路板。（也可以发送 pcb 文件）其他 pcb [打印厂商](https://www.bilibili.com/video/BV1BM4y1G7u4/?spm_id_from=autoNext)
 
 **电路板**：电子元器件的家。
 
@@ -87,7 +87,7 @@ description:
 
 如果需要改显示的东西，那么可以先[在电脑上模拟](https://www.bilibili.com/video/BV11h41147iJ?p=6&spm_id_from=pageDriver)再烧录到硬件里，用到下面两个软件。
 
-vs code 安装插件 PlatformIO IDE，[创建一个项目](https://www.bilibili.com/video/BV11h41147iJ?p=5),时间轴 1:10 。
+vs code 安装插件 PlatformIO IDE，[创建一个esp32项目](https://www.bilibili.com/video/BV11h41147iJ?p=5),时间轴 1:10 。
 
 
 [platform io 模拟器](https://github.com/lvgl/lv_platformio)
