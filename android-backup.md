@@ -20,6 +20,13 @@ cd /data/data
 ls grep "qq"
 tar -czvf test.tar.gz com.tencent.qq
 mv test.tar.gz /sdcard/Download/
+
+# 也可以只备份应用下的这几个文件夹
+# databases
+# files
+# shared_prefs
+
+
 # 恢复
 adb install /Users/songyangcong/Downloads/qq.apk
 adb shell
@@ -32,6 +39,7 @@ ls -lh |grep qq
 chmod -R go-xwr com.tencent.qq
 chown -R u0_a280:u0_a280 com.tencent.qq
 # chmod -R u+xwr  com.tencent.qq
+
 
 ```
 
