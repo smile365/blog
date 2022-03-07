@@ -80,12 +80,13 @@ chown -R u0_a280:u0_a280 com.tencent.qq
 
 ```
 
--c或--create 建立新的备份文件。
--f<备份文件>或--file=<备份文件> 指定备份文件。
--v或--verbose 显示指令执行过程。
--z或--gzip或--ungzip 通过gzip指令处理备份文件。
--x或--extract或--get 从备份文件中还原文件。
--C<目的目录>或--directory=<目的目录> 切换到指定的目录。
+tar 命令说明：
+ - -c或--create 建立新的备份文件。
+ - -f<备份文件>或--file=<备份文件> 指定备份文件。
+ - -v或--verbose 显示指令执行过程。
+ - -z或--gzip或--ungzip 通过gzip指令处理备份文件。
+ - -x或--extract或--get 从备份文件中还原文件。
+ - -C<目的目录>或--directory=<目的目录> 切换到指定的目录。
 
 ## 增量备份
 root 之后通过备份 /data/data/xxx 目录的方式缺点是无法增量备份。可以写个面具插件，当读取 app 的 allowBackup 属性时返回 true 即可。(此思路正在测试中)
