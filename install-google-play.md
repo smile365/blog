@@ -7,6 +7,11 @@ categories: ["code"]
 description: 安卓手机如何安装Google服务教程。
 ---
 
+## 2022年03月07日
+之前的方法失效了，请参考[教程](https://www.makeuseof.com/tag/install-gapps-android/)
+
+
+## 失效的方法
 需要[三个东西](https://github.com/hideuvpn/android-google-play-store)
 - google service framework (谷歌服务框架)，[下载手机对应的安卓版本](https://www.apkmirror.com/apk/google-inc/google-services-framework/)
 - google play service (谷歌Play服务), [下载最新版](https://www.apkmirror.com/apk/google-inc/google-play-services/)
