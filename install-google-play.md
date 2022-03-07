@@ -21,10 +21,15 @@ description: 安卓手机如何安装Google服务教程。
 ```bash
 # 查看 DPI
 adb shell wm density
+# Physical density: 440
+
 # 查看 CPU 架构
 adb shell getprop ro.product.cpu.abi
+# arm64-v8a
+
 # 查看 Android 版本
 adb shell getprop ro.build.version.release
+# 10
 ```
 
 
