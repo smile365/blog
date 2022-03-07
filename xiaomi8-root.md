@@ -65,8 +65,8 @@ adb reboot bootloader
 fastboot flash recovery recovery-TWRP-3.4.2B-0108-REDMI9-CN-wzsx150.img
 
 # 重启手机到Fastboot
-# fastboot reboot recovery
-# 上面的命令小米手机无效，方法如下：
+adb reboot recovery
+# 若上面的命令无效，小米手机方法如下：
 # 按住音量上+电源键(一般为这两个组合键)，重启出现mi后松开电源键，即可进入 TWRP 的 recovery界面。
 
 ```
