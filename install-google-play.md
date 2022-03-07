@@ -8,10 +8,11 @@ description: 安卓手机如何安装Google服务教程。
 ---
 
 需要[三个东西](https://github.com/hideuvpn/android-google-play-store)
-- google service framework (谷歌服务框架)，
-- google play service (谷歌Play服务), [下载](https://google-play-services.cn.uptodown.com/android)
-- Google Play Store (谷歌应用市场)， [下载](https://m.apkpure.com/google-play-store/com.android.vending)。
+- google service framework (谷歌服务框架)，[下载手机对应的安卓版本](https://www.apkmirror.com/apk/google-inc/google-services-framework/)
+- google play service (谷歌Play服务), [下载最新版](https://www.apkmirror.com/apk/google-inc/google-play-services/)
+- Google Play Store (谷歌应用市场)， [下载第一个]()。
 
+注意下载的时候 **不是**  Download APK Bundle 类型，而是 Download APK 。最前面有个绿色 `BUNDLE` 标志的不要下载，下载灰色 `apk` 标识的。
 
 
 **架构**： 这是指手机中的处理器类型。通常，选项为 arm、arm64、x86 和 x86_64。ARM 和 x86 用于 32 位处理器，而 arm64 和 x86_64 用于 64 位处理器。我们将在下面更详细地解释。
@@ -35,6 +36,7 @@ adb shell getprop ro.build.version.release
 
 参考文档
 - [如何查找您的 Android 设备信息以获取正确的 APK 下载](https://www.howtogeek.com/339665/how-to-find-your-android-devices-info-for-correct-apk-downloads/)
+- [如何自行寻找最新版的谷歌三件套](https://www.yuncun.xyz/archives/googleservices.html)
 
 
 
