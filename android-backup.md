@@ -92,6 +92,8 @@ tar 命令说明：
 root 之后通过备份 /data/data/xxx 目录的方式缺点是无法增量备份。可以写个面具插件，当读取 app 的 allowBackup 属性时返回 true 即可。(此思路正在测试中)
 
 
+也可通过第三方程序备份,比如[ Swift Backup](https://sspai.com/post/55454), 
+[下载地址1:apkpure](https://apkpure.com/swift-backup/org.swiftapps.swiftbackup),[下载地址2:uptodown](https://swift-backup.cn.uptodown.com/android)
 
 
 参考文档:
