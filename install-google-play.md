@@ -18,6 +18,15 @@ description: 安卓手机如何安装Google服务教程。
 **Android 版本**：这是您的设备运行的 Android 操作系统的版本。
 **屏幕 DPI**： DPI 代表“每英寸点数”——基本上这是手机屏幕的像素密度。例如，6 英寸全高清屏幕 (1920×1080) 的 DPI 约为 367。将该分辨率提高到 2880×1440，DPI 提高到 ~537。
 
+```bash
+# 查看 DPI
+adb shell wm density
+# 查看 CPU 架构
+adb shell getprop ro.product.cpu.abi
+# 查看 Android 版本
+adb shell getprop ro.build.version.release
+```
+
 
 参考文档
 - [如何查找您的 Android 设备信息以获取正确的 APK 下载](https://www.howtogeek.com/339665/how-to-find-your-android-devices-info-for-correct-apk-downloads/)
