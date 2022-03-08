@@ -7,6 +7,10 @@ categories: ["code"]
 description: 微信多开
 ---
 
+数据备份  
+微信聊天记录、通话记录、短信记录、录音、拍照、截屏、录像。
+
+
 
 ## 微信数据备份
 ### mac 端微信聊天记录备份
@@ -17,7 +21,7 @@ description: 微信多开
 > cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
 
 # 压缩并删除
-zip -rm smile8365-$(date "+%y%m%d-%H%M").zip .
+zip -rm s-$(date "+%y%m%d-%H%M").zip .
 
 # 移动到下载
 mv *.zip ~/Downloads/
@@ -26,9 +30,9 @@ mv *.zip ~/Downloads/
 
 # 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx (我的是1eb36d0ea2f1dbc5d9e9976637facc10)
 # 仅压缩 微信号-开始-结束
-> zip -r smile8365-181025-190108.zip . 
+> zip -r s-181025-190108.zip . 
 # 压缩并删除
-> zip -rm smile8365-181025-190108.zip .
+> zip -rm s-181025-190108.zip .
 # 获取时间
 # time=$(date "+%y%m%d-%H%M")
 
