@@ -6,6 +6,15 @@ categories: ["code"]
 description:
 ---
 
+## tr 命令
+tr命令 可以对来自标准输入的字符进行替换、压缩和删除。它可以将一组字符变成另一组字符。
+1. 去除空格
+```
+# tr -d " "
+echo "www sxy com" | tr -d " "
+```
+
+
 **使用grep匹配杀死多个进程**
 ```bash
 kill $(ps aux | grep 'myapp.py' | awk '{print $2}')
