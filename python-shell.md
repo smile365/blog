@@ -17,21 +17,31 @@ a = os.system("pwd") # a = 0
 b = os.system("cd xxx") # b = 256
 ```
 
+## 方法二：subprocess.call
 
-## 方法二：subprocess.run
-
-官方建议使用[subprocess](https://docs.python.org/3/library/subprocess.html#module-subprocess)替换 os.system。subprocess 允许您生成新进程，连接到它们的输入/输出/错误管道，并获取它们的返回码。执行后返回的是  
-
-[subprocess.run](https://docs.python.org/3/library/subprocess.html#subprocess.run) 执行完毕后返回的是 [CompletedProcess](https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess) 的一个实例。
-
-```python
-import subprocess
-completedProcess = subprocess.run(["ls", "-l"])
-print(list_files) # completedProcess
-```
-
-## 方法三：subprocess.call
+官方建议使用[subprocess](https://docs.python.org/3/library/subprocess.html#module-subprocess)替换 os.system。
 
 运行 [subprocess.call](https://docs.python.org/3/library/subprocess.html#subprocess.call)  命令 完成后返回 returncode 属性。也取不到返回值。
 
 
+
+## 方法三：subprocess.run
+
+subprocess 允许您生成新进程，连接到它们。执行后返回的是  
+
+[subprocess.run](https://docs.python.org/3/library/subprocess.html#subprocess.run)可以控制输入/输出/错误管道，执行完毕后可获取它们的输出和返回码。其返回值为 [CompletedProcess](https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess) 的一个实例。
+
+```python
+import subprocess
+list_files = subprocess.run(["ls", "-l"])
+print(list_files) # completedProcess
+```
+
+定义 stdout=subprocess.PIPE 和 text=True 即可获取字符串形式的执行结果。
+
+```python
+import subprocess
+list_files = subprocess.run(["ls", "-l"],stdout=subprocess.PIPE, text=True)
+useless_cat_call = subprocess.run(["cat"], 
+print(list_files.stdout)  #
+```
