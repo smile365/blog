@@ -45,3 +45,12 @@ list_files = subprocess.run(["ls", "-l"],stdout=subprocess.PIPE, text=True)
 useless_cat_call = subprocess.run(["cat"], 
 print(list_files.stdout)  #
 ```
+
+## 方法四：subprocess.Popen
+
+相当于异步执行
+
+
+## 总结
+
+如果您需要运行一个或几个简单的命令并且不介意它们的输出是否发送到控制台，您可以使用该os.system()命令。如果要管理 shell 命令的输入和输出，请使用subprocess.run(). 如果要运行命令并在执行时继续执行其他工作，请使用subprocess.Popen
