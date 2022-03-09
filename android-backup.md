@@ -96,6 +96,13 @@ root 之后通过备份 /data/data/xxx 目录的方式缺点是无法增量备�
 [下载地址1:apkpure](https://apkpure.com/swift-backup/org.swiftapps.swiftbackup),[下载地址2:uptodown](https://swift-backup.cn.uptodown.com/android)
 
 
+## 备份微信数据
+
+微信在本地将应用数据存储在一个名为“EnMicroMsg.db”的加密 SQLite 数据库中。该数据库位于应用程序数据目录内的“MicroMsg”子文件夹中（通常类似于“/data/data/com.tencent.mm”）。数据库使用 [SQLCipher 进行加密](https://developer.aliyun.com/article/234032)，SQLCipher是 SQLite 的一个开源扩展，可提供完整的数据库加密。
+
+
+
+
 参考文档:
 - [Android 属性 allowBackup 安全风险浅析](https://segmentfault.com/a/1190000002590577)
 - [Android 数据备份方案值得了解](https://sspai.com/post/54075)
