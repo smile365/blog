@@ -47,7 +47,8 @@ drwx------ 18 u0_a236        u0_a236        4.0K 2022-02-10 01:18 com.tencent.we
 ```
 
 
-了解原理后即可备份应用数据。
+
+了解原理后即可备份应用数据。大多数应用的数据都存在 应用目录的[databases](https://www.cnblogs.com/slankka/p/9158599.html) 目录下。
 ```
 # 备份
 adb shell pm list packages "qq"
