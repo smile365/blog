@@ -22,10 +22,7 @@ ffffffffffff
 # others 
 ```
 
+参考文档 
 
-
-
-测试加密情况
-
-如果没有
-
+- [安卓手机NFC模拟门禁卡（设置UID）的一种方法](https://cloud.tencent.com/developer/article/1423314)
+- [高通 NXP NFC（PN547PN548） 移植流程 android6.0](https://cloud.tencent.com/developer/article/1351970)
