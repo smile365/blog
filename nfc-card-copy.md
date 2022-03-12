@@ -26,3 +26,5 @@ ffffffffffff
 
 - [安卓手机NFC模拟门禁卡（设置UID）的一种方法](https://cloud.tencent.com/developer/article/1423314)
 - [高通 NXP NFC（PN547PN548） 移植流程 android6.0](https://cloud.tencent.com/developer/article/1351970)
+- [修改手机的UID模拟门禁卡](https://www.jianshu.com/p/763662e8f104)
+- 
