@@ -97,19 +97,19 @@ root 之后通过备份 /data/data/xxx 目录的方式缺点是无法增量备�
 
 ## 备份微信数据
 
-微信在本地将应用数据存储在一个名为“EnMicroMsg.db”的加密 SQLite 数据库中。该数据库位于应用程序数据目录内的“MicroMsg”子文件夹中（通常类似于“/data/data/com.tencent.mm”）。数据库使用 [SQLCipher 进行加密](https://developer.aliyun.com/article/234032)，SQLCipher是 SQLite 的一个开源扩展，可提供完整的数据库加密。
+微信在本地将应用数据存储在一个名为“EnMicroMsg.db”的加密 SQLite 数据库中。该数据库位于应用程序数据目录内的“MicroMsg”子文件夹中（通常类似于“/data/data/com.tencent.mm”）。数据库使用 [SQLCipher 进行加密](https://developer.aliyun.com/article/234032)，SQLCipher是 SQLite 的一个开源扩展，可提供完整的数据库加密，解密过程可参考[数据库的解密](https://www.jianshu.com/p/93bbcda3133a)
 
 
 关键的数据如下： 
 ```bash
 # wechat files
 /data/data/com.tencent.mm # du -sh *
-2.8G	MicroMsg
-12K	account.bin
-88K	cert
-2.2M	databases
-576M	files
-1.1M	shared_prefs
+# 4.0K  .auth_cache # 没有这个数据就当做新设备
+# 2.8G	MicroMsg # 聊天数据
+# 576M	files
+# 12K	account.bin
+# 2.2M	databases
+# 1.1M	shared_prefs
 ```
 
 
