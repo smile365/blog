@@ -112,7 +112,7 @@ root 之后通过备份 /data/data/xxx 目录的方式缺点是无法增量备�
 # 1.1M	shared_prefs
 ```
 
-
+Android 9 之后 adb 无法以 root 权限运行，也有方法[](https://stackoverflow.com/questions/25271878/android-adbd-cannot-run-as-root-in-production-builds)可以解决。这样就可以直接 pull 文件了。
 
 
 
