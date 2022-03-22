@@ -14,5 +14,20 @@ mysql to RESTful api
 
 sandman2自动从现有数据库生成 RESTful API 服务，无需您编写一行代码。
 
-不需要写一行代码，直接把 MySQL 数据库变成 RESTful API 服务。
+不需要写一行代码，直接把 MySQL 数据库变成 RESTful API 服务。 支持数据库：
+MySQL
+PostgreSQL
+Oracle
+Microsoft SQL Server
+SQLite
+Sybase
+Drizzle
+Firebird
 
+
+```bash
+# sandman2ctl 'sqlite+pysqlite:///path/to/sqlite/database.db'
+
+# sandman2ctl 'mysql+pymysql://username:password@localhost:3306/mydb'
+
+```
