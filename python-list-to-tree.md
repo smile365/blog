@@ -25,5 +25,5 @@ def listToTree(arr,eid="id",pid="parentId",root="-1",children="children"):
 		groupBy[str(x[pid])] = nlist
 	for y in arr:
 		y[children] = groupBy.get(str(y[eid]))
-	return [z for z in arr if str(z[pid])==root]
+	return [z for z in arr if str(z[pid])==str(root)]
 ```
