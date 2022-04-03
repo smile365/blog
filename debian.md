@@ -7,7 +7,7 @@ tags:
 description: 
 ---
 
-
+## 安装 Debian 系统
 CentOS 停止服务后，找了一圈 Linux 发行版。
 
 综合考虑，后期我会主要考虑下面两个发行版： 
@@ -27,13 +27,13 @@ iso 下载地址：
 - [docker-ce](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 
 
-安装基础软件 
+## 安装基础软件 
+安装 vim、sudo、docker-ce
 ```bash
-# 安装 vim 和 sudo 
+# vim、sudo
 apt install -y vim sudo software-properties-common
 
-# 安装 docker-ce
-# 删掉旧版本
+# 删掉旧版本 docker
 # apt remove docker docker-engine docker.io
 
 # 首先安装依赖:
@@ -52,6 +52,27 @@ add-apt-repository \
 apt update
 apt install -y docker-ce
 docker -v
+```
+
+
+## 配置数据路径和 Docker 加速器
+
+参考[教程](https://www.runoob.com/docker/docker-mirror-acceleration.html) 配置 dockerhub。
+
+data-root默认为/var/lib/docker，一般分配较小，可改到其他路径。修改daemon配置文件/etc/docker/daemon.json：
+```bash
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "data-root": "/home/softdata/docker",
+  "registry-mirrors": [
+    "https://registry.docker-cn.com",
+    "https://dockerhub.azk8s.cn"
+  ]
+}
+EOF
+systemctl daemon-reload
+systemctl restart docker
 ```
 
 没有安装软件会出现错误：
