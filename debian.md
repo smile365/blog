@@ -18,15 +18,13 @@ iso 下载地址：
 - [ubuntu.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/)
 - [debian.iso](https://www.debian.org/distrib/index.zh-cn.html)
 
-
 下载 debian 的 iso 镜像文件之后，选择图形化安装。
 
+安装[miniconda](https://gitee.com/smile365/blog/blob/master/miniconda.md)
 
 配置镜像源教程 
 - [debian](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
 - [docker-ce](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
-
-
 
 
 安装基础软件 
@@ -53,6 +51,7 @@ add-apt-repository \
 # 最后安装
 apt update
 apt install -y docker-ce
+docker -v
 ```
 
 没有安装软件会出现错误：
@@ -62,5 +61,4 @@ apt install -y docker-ce
 
 
 
-安装[miniconda](https://gitee.com/smile365/blog/blob/master/miniconda.md)
 
