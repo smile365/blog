@@ -11,16 +11,17 @@ description:
 
 假设Linux服务器的ip为：192.168.1.2,ssh端口：3322，以下以mac操作为例。
 
+## 生成公钥和私钥
 
 使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_sxy`
 
 
-把密钥复制到Linux
+## 把公钥复制到需要登录的主机
 ```sh
 ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@192.168.1.2
 ```
 
-成功以后即可使用密钥链接服务器
+成功以后即可使用私钥链接服务器（服务器用公钥验证）
 
 ```sh
 ssh -i ~/.ssh/id_rsa_sxy -p 3322  songxueyan@192.168.1.2
@@ -40,11 +41,9 @@ songxueyan@192.168.1.2: Permission denied (publickey).
 chmod og-rw ~/.ssh/id_rsa_sxy.pub
 ```
 
-
-
+## 配置 config
 
 虽然少了账号密码，但需要指定端口和密钥，能不能一块去掉呢。
-
 
 先编辑host
 `sudo vim /etc/hosts`
@@ -69,30 +68,44 @@ Host sxy91
 ssh sxy91
 ```
 
+## 遇到的问题
+
+### 还需要密码
+
 若仍需输入密码,一般为权限问题。
 
+**服务器权限问题**
+```
+# 用密码登录服务器查看 ~/.ssh 目录下文件的权限
+ls -lh ~/.ssh
+如果不是“ -rw-------” 那么权限不正确 
+# 需要把权限改成仅自己可读写
+chmod -R og-wxr ~/.ssh
+chmod u-x ~/.ssh/authorized_keys
+```
+
+说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
+
+
+
+若还有问题，调试过程如下：
 ```sh
 ssh -vT sxy91 # 打印调试信息，查看Next authentication method: publickey 以后的行。
 #发现有Offering public key，但没有Server accepts key
 
-#登录服务器查看.ssh 目录权限
-ls -la ~/ |grep ssh
-#drwx------.  2 ssh # 
 # 查看sshd日志
 tail -f /var/log/secure
 # 发现一行Authentication refused: bad ownership or modes for file ～/.ssh/authorized_keys
 ```
 
-说明：安全起见，sshd强制对key的文件权限进行检查，`authorized_keys`文件所在的目录（包括上层目录）的权限只有自己能读写，他人和组只能读。
-
+**客户端权限问题**
+说明：私钥仅能自己读写。公钥其他人只能读。
 若权限不正确，git或者ssh会出现id_rsa are too open错误如下：
 ```bash
 Permissions 0644 for  are too open. It is required that your private key files are NOT accessible by others. This private key will be ignored.
 ```
 
-说明：私钥仅能自己读写。公钥其他人只能读。
-
-修改权限
+修改客户端的私钥公钥权限
 
 ```bash
 chmod -R og-wxr ~/.ssh
@@ -102,7 +115,6 @@ chmod -R og+r ~/.ssh/known_hosts
 ```
 
 再次测试问题解决
-
 
 
 
