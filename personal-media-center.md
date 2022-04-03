@@ -202,7 +202,10 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 - **Trakt**：待看清单列表。
 
 
-### 创建对应的工具软件目录
+### 创建目录
+
+在群晖的文件管理中创建对应的工具软件目录，保存每个软件的配置文件、缓存等信息。
+
 ```
 - docker
 -- xxx # 软件名 映射为 config
@@ -214,7 +217,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 ## 遇到的问题
 
-### libQt5Core 问题
+### libQt5Core
 
 如果遇到 [libQt5Core](https://github.com/linuxserver/docker-qbittorrent/issues/103) 问题，则如下解决：
 ```bash
