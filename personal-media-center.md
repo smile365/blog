@@ -234,9 +234,22 @@ strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 ### qBittorrent 无法搜索
 
-vim /volume1/docker/qb/config/qBittorrent /data/nova3/engines/jackett.json
+登录 dsm 修改,根据之前映射的文件，找到 qBittorrent 的配置文件
+```
+ssh dsm
+sudo find / -name "jackett.json"
+# 根据上一步配置，我的配置文件路径是
+vim /volume1/docker/qb/qBittorrent/data/nova3/engines/jackett.json
+# 修改 api_key、url
+{
+    "api_key": "YOUR_API_KEY_HERE",
+    "tracker_first": false,
+    "url": "http://127.0.0.1:9117"
+}
+```
 
-修改 api_key、url
+
+
 
 KODI、jellyfin、emby、plex
 
