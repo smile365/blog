@@ -82,8 +82,12 @@ systemctl restart docker
 - debian sudo bash: sudo: command not found
 - debian sudo: add-apt-repository: command not found
 
-
-
+把普通用户设置成管理员用户
+```
+su -
+usermod -aG sudo YOUR_USERNAME
+exit
+```
 
 
 参考文档：
