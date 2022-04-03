@@ -247,6 +247,8 @@ vim /volume1/docker/qb/qBittorrent/data/nova3/engines/jackett.json
     "url": "http://127.0.0.1:9117"
 }
 ```
+进入 dsm 系统，重启 qBittorrent 容器即可。
+
 
 
 
