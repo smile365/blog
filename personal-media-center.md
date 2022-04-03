@@ -170,7 +170,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 
 
-## 配置群晖
+## 群晖安装 docker
 
 配置面板--终端机：启用 ssh  
 文件管理：创建存储池、存储空间  
@@ -192,7 +192,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
  docker info |grep irror
  ```
 
-工具介绍
+## 影视相关工具
 
 - **Jackett**：种子搜索的聚合器。把上百个种子搜索网站做成了 API 形式，以供别的程序使用。
 - **Radarr**：电影下载和管理工具。根据你的电影名到电影网站查找电影相关信息。
@@ -202,7 +202,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 - **Trakt**：待看清单列表。
 
 
-### 群晖创建相关的目录
+### 创建对应的工具软件目录
 ```
 - docker
 -- xxx # 软件名 映射为 config
