@@ -14,4 +14,11 @@ CentOS 停止服务后，找了一圈 Linux 发行版。
 - [Debian](https://www.debian.org/releases/stable/amd64/ch03s04.zh-cn.html)，很多 Linux 发行版是基于 Debian 打造的。
 - [Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-server#2-requirements)，Ubuntu 是基于 Debian 以桌面应用为主的Linux发行版。
 
+iso 下载地址：
+- [ubuntu.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/)
+- [debian.iso](https://www.debian.org/distrib/index.zh-cn.html)
+
+
+下载 debian 的 iso 镜像文件之后，选择图形化安装。
+
 
