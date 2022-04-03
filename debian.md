@@ -22,3 +22,45 @@ iso 下载地址：
 下载 debian 的 iso 镜像文件之后，选择图形化安装。
 
 
+配置镜像源教程 
+- [debian](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+- [docker-ce](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
+
+
+
+
+安装基础软件 
+```bash
+# 安装 vim 和 sudo 
+apt install -y vim sudo software-properties-common
+
+# 安装 docker-ce
+# 删掉旧版本
+# apt remove docker docker-engine docker.io
+
+# 首先安装依赖:
+apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+
+# 信任 Docker 的 GPG 公钥
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+# 对于 amd64 架构的计算机，添加软件仓库:
+add-apt-repository \
+   "deb [arch=amd64] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+
+# 最后安装
+apt update
+apt install -y docker-ce
+```
+
+没有安装软件会出现错误：
+- debian sudo bash: sudo: command not found
+- debian sudo: add-apt-repository: command not found
+
+
+
+
+安装[miniconda](https://gitee.com/smile365/blog/blob/master/miniconda.md)
+
