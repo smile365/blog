@@ -202,7 +202,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 - **Trakt**：待看清单列表。
 
 
-群晖目录配置
+### 群晖创建相关的目录
 ```
 - docker
 -- xxx # 软件名 映射为 config
@@ -212,7 +212,9 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 -- movies # 电影
 ```
 
+## 遇到的问题
 
+### libQt5Core 问题
 
 如果遇到 [libQt5Core](https://github.com/linuxserver/docker-qbittorrent/issues/103) 问题，则如下解决：
 ```bash
@@ -226,7 +228,10 @@ strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 # 重启容器
 ```
 
-vim /volume1/docker/qb/config/qBittorrent/data/nova3/engines/jackett.json
+
+### qBittorrent 无法搜索
+
+vim /volume1/docker/qb/config/qBittorrent /data/nova3/engines/jackett.json
 
 修改 api_key、url
 
