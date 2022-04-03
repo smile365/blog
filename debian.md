@@ -62,3 +62,5 @@ docker -v
 
 
 
+参考文档：
+- [centos安装docker](https://gitee.com/smile365/blog/blob/master/docker.md)
