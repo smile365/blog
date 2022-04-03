@@ -28,10 +28,10 @@ iso 下载地址：
 
 
 ## 安装基础软件 
-安装 vim、sudo、docker-ce
+安装 vim、sudo、rsync docker-ce
 ```bash
-# vim、sudo
-apt install -y vim sudo software-properties-common
+# vim\sudo\rsync
+apt install -y vim sudo rsync software-properties-common
 
 # 删掉旧版本 docker
 # apt remove docker docker-engine docker.io
@@ -66,6 +66,7 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
 {
   "data-root": "/home/softdata/docker",
   "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
     "https://registry.docker-cn.com",
     "https://dockerhub.azk8s.cn"
   ]
