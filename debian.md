@@ -75,6 +75,8 @@ systemctl daemon-reload
 systemctl restart docker
 ```
 
+执行 `docker info`，看到 Registry Mirrors:信息则表示生效
+
 没有安装软件会出现错误：
 - debian sudo bash: sudo: command not found
 - debian sudo: add-apt-repository: command not found
