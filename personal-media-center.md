@@ -217,6 +217,13 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 ## 遇到的问题
 
+### transmission 无法下载
+
+Tracker returned an error: Tracker gave HTTP response code 0  (No Response)
+原因：一般是网络延迟过于严重，或服务器时间和本地时间不同步。
+
+
+
 ### libQt5Core
 
 如果遇到 [libQt5Core](https://github.com/linuxserver/docker-qbittorrent/issues/103) 问题，则如下解决：
