@@ -306,6 +306,7 @@ docker pull emby/embyserver
  - [Jackett:9117](http://10.0.0.117:9117/)
  - [Radarr:7878](http://10.0.0.117:7878/)
  - [emby:8096](http://10.0.0.117:8096/)
+ - [transmission:9091](http://10.0.0.117:9091/)
 
 
 
