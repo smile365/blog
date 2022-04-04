@@ -8,7 +8,7 @@ description: 安卓手机如何安装Google服务教程。
 ---
 
 ## 2022年03月07日
-之前的方法失效了，请参考[教程](https://www.makeuseof.com/tag/install-gapps-android/)
+之前的方法失效了，请参考[教程](https://www.makeuseof.com/tag/install-gapps-android/)，选择 Pico 
 
 
 ## 失效的方法
