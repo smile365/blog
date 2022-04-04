@@ -25,7 +25,13 @@ Drizzle
 Firebird
 
 
+
+
 ```bash
+# 安装
+# pip3 install pymysql
+pip3 install sandman2
+
 # sandman2ctl 'sqlite+pysqlite:///path/to/sqlite/database.db'
 
 # sandman2ctl 'mysql+pymysql://username:password@localhost:3306/mydb'
