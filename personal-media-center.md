@@ -200,6 +200,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 - **emby**： 
 - **qBittorrent**：种子下载器。
 - **Trakt**：待看清单列表。
+- **transmission**：另一个种子下载器
 
 
 ### 创建目录
