@@ -7,6 +7,8 @@ tags:
 description: 
 ---
 
+## 安装
+
 安装： `pip install pony`
 
 [实体的定义](https://docs.ponyorm.org/entities.html)
@@ -15,6 +17,7 @@ pony自动检测更新，当含有db_session装饰的方法执行完毕后，pon
 
 缺点：不支持修改表结构。
 
+## 使用 PostgreSQL
 
 如果使用 PostgreSQL 数据库的话需要安装 [psycopg2](https://pypi.org/project/psycopg2/)
 
@@ -58,6 +61,10 @@ sudo apt-get install python-psycopg2
 sudo apt-get install libpq-dev
 pip3 install psycopg2
 ```
+
+## 使用 Sqlite
+
+
 
 
 参考 
