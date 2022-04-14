@@ -80,3 +80,5 @@ docker.service failed
 - [docker-run](http://www.runoob.com/docker/docker-run-command.html)
 - [dockerd](https://docs.docker.com/engine/reference/commandline/dockerd/)
 - [config.json](https://www.cnblogs.com/ningskyer/articles/8330143.html)
+- [腾讯云私有镜像服务](https://cloud.tencent.com/document/product/1141/50332)
+- [腾讯云加速docker](https://cloud.tencent.com/document/product/1207/45596?from=information.detail.%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8A%A0%E9%80%9Fdocker)
