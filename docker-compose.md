@@ -18,9 +18,8 @@ curl -L https://raw.githubusercontent.com/docker/compose/1.27.4/contrib/completi
 docker-compose --version
 ```
 
-## 使用
+## 项目的 dockerfile 文件
 
-### dockerfile
 
 编写一份 [Dockerfile](https://yeasy.gitbook.io/docker_practice/image/build) 文件
 ```
@@ -57,7 +56,46 @@ docker history sxytask:v1
 docker run -d -v /home/sxy/daily_task/stock/dbs:/app/stock/dbs sxytask:v1
 ```
 
-## 出现的问题
+## 编写 docker-compose.yaml 文件
+
+[yam文件](https://yeasy.gitbook.io/docker_practice/compose/compose_file)格式如下：
+
+```yaml
+version: '3'
+services: 
+  app:
+    build: .
+
+  redis:
+    image: "redis:alpine"
+    restart: always
+    environment:
+      requirepass: '${REDIS_PASSWORD}'
+    ports:
+      - "6379:6379"
+    volumes:
+      - /data/redis/data:/data
+      - /data/redis/conf/redis.conf:/etc/redis/redis.conf
+
+
+  postgres:
+    image: "postgres"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
+    ports:
+      - "5432:5432"
+    volumes:
+      - /data/postgres:/var/lib/postgresql/data
+```
+
+通过 [up 命令](https://yeasy.gitbook.io/docker_practice/compose/commands#up) 启动
+```bash
+docker-compose up
+# or docker-compose up -d
+```
+
+## 问题解决
 
 ### 无法解析域名
 
@@ -94,7 +132,7 @@ pip install opencv-contrib-python-headless -i https://pypi.tuna.tsinghua.edu.cn/
 参考文档
 - [docker-compose、docker swarm和k8s的区别](https://www.jianshu.com/p/2a9ae69c337d)
 - [Docker、Docker-Compose、k8s的演变](https://juejin.cn/post/6844904046025768974)
-- [安装与卸载](https://yeasy.gitbook.io/docker_practice/compose/install)
+- [docker-compose安装与卸载](https://yeasy.gitbook.io/docker_practice/compose/install)
 - [githubusercontent 404](https://github.com/hawtim/hawtim.github.io/issues/10)
 - 腾讯云 [私有镜像服务](https://console.cloud.tencent.com/tke2/registry/user/self?rid=4)
 - [docker-hub 加速器](https://yeasy.gitbook.io/docker_practice/install/mirror)
