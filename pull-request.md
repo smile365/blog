@@ -65,7 +65,7 @@ git checkout --track origin/develop
 
 使用 `git` 终端切换分支需要敲很多命令，推荐使用 gui 程序拉取和切换分支，比如 `sourcetree`。
 
-## 修改代码并提交
+## 四、修改代码并提交
 
 ```
 git add -A
@@ -75,7 +75,7 @@ git push
 # git push origin develop
 ```
 
-## 填写 pr 的说明
+## 五、填写 pr 的说明
 
  到 github 项目的仓库地址即可查看到有 pr 可以填写，一般需要填写为什么改动，改动了哪些地方等信息，填写完之后保存，原作者即可收到合并提交的请求，如果他同意，那么你的代码将会合并。
 
