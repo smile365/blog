@@ -16,17 +16,19 @@ description:  如何为 Github 开源项目贡献代码
 ## 一、fork 原作者的项目
 假设 someone 有个项目 demo
 
-由于没有对 demo 的直接 push 权限，我们需要先对 demo 库进行 fork。然后从自己的地址 clone
+由于没有对 demo 的直接 push 权限，我们需要先对 demo 库进行 fork，然后从自己的地址 clone。
 ```bash
 git clone git@github.com:yourname/demo.git
 someone
 ```
 
-为了保证我的代码和原作者实时同步（原作者的改动我们也能拉取，我们的修改也能推送到原作者仓库），需要进行 
 
 ## 二、与原作者仓库进行拉取和推送关联
-然后在本地添加一个新的推送地址，取名叫 upstream
+为了保证我的代码和原作者实时同步（原作者的改动我们也能拉取，我们的修改也能推送到原作者仓库），需要进行 关联。
+
+clone 项目到本地后，进入 demo 目录，添加一个新的推送地址，取名叫 upstream（代表原作者的仓库） 。
 ```bash
+cd ~/demo
 git remote add upstream git@github.com:someone/demo.git
 ```
 
@@ -60,6 +62,8 @@ git checkout --track origin/develop
 
 
 当前也许你 clone 之后好几天没动代码，此时原作者仓库可能已经有变动了，如果想拉取原作者的变动，那我们可以使用 `git fetch upstream` 命令
+
+使用 `git` 终端切换分支需要敲很多命令，推荐使用 gui 程序拉取和切换分支，比如 `sourcetree`。
 
 ## 修改代码并提交
 
