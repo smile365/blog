@@ -19,6 +19,10 @@ description: 微信多开
 
 ```shell
 > cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
+> tree
+# 文件目录
+# └── d6f236797ba7e567290cae85346f1ced  # 代表微信号
+#    └── A46345f3ab607b1e  # 代表哪台设备同步的数据 （比如小米8）
 
 # 压缩并删除
 zip -rm s-$(date "+%y%m%d-%H%M").zip .
