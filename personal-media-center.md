@@ -342,7 +342,7 @@ smbstatus -V
 [在PVE中安装安卓x86](https://foxi.buduanwang.vip/virtualization/pve/567.html/)
 
 
-参考 
+## 参考文档    
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
 - [Mac 上将U盘格式化为 ExFAT](https://sspai.com/post/68573)
 - [MAC OS 烧录ISO文件到U盘](https://blog.csdn.net/Aria_Miazzy/article/details/104321607)
