@@ -57,12 +57,15 @@ gdebi usbmount_*.deb
 ```
 
 ### mdev
-创建配置文件，并编写[规则](https://blog.csdn.net/weixin_43229139/article/details/106903710)
+创建配置文件，并编写[规则](https://zhuanlan.zhihu.com/p/357314668)
+
 ```
 ACTION!="remove",GOTO="farsight"
 SUBSYSTEM!="block",GOTO="farsight"
 KERNEL=="sd[a-z][0-9]?",RUN+="/sbin/umount-usb.sh"
 LABEL="farsight"
+
+
 ```
 
 ## http(s)
@@ -204,6 +207,7 @@ smb 协议可以把另一台电脑的文件共享出去，其他电脑访问如�
 ## 参考文档
 
 - [编译usbmount](https://www.linuxuprising.com/2019/04/automatically-mount-usb-drives-on.html)
+- [mdev](https://blog.csdn.net/weixin_43229139/article/details/106903710)
 
 
 
