@@ -57,6 +57,7 @@ gdebi usbmount_*.deb
 ```
 
 ### mdev
+创建配置文件，并编写[规则](https://blog.csdn.net/weixin_43229139/article/details/106903710)
 ```
 ACTION!="remove",GOTO="farsight"
 SUBSYSTEM!="block",GOTO="farsight"
