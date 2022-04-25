@@ -17,11 +17,100 @@ SMB协议可以切换声道，加载外挂字幕（特效字幕），还能网�
 - 支持电视、电脑、手机、平板
 - 可插入 u 盘，考走文件。
 
+## 文件拷贝
+有时候需要拷贝一个电影分享给朋友，就需要能实现从 nas 拷贝到 u 盘的功能。第一个是插入 u 盘自动挂载，二、文件的浏览、搜索、复制。
+步骤：
+1. 实现 U 盘的自动挂载
+     a. 使用 [autofs](https://linuxconfig.org/automatically-mount-usb-external-drive-with-autofs)
+     b. 使用 [usbmount](https://github.com/rbrito/usbmount)（弃用，比较老，10年未更新了）
+     c. [mdev](https://www.cnblogs.com/lifexy/p/7891883.html)
+2. 文件管理(浏览、搜索、复制)
+   a. http(s) 协议的文件管理软件，然后通过另一台设备（电脑、平板、手机）操作文件。稍微不太优雅，需要另一台设备。
+   b. 使用 debian 的桌面端版本。比较优雅，稍微比服务器端版本耗费一点资源。
+   c. 基于 smb 协议，使用 es文件浏览器 搜索和复制文件。插入 u 盘到 debian，手机操作。（广告多）
+
+### autofs
+
+```bash
+apt install -y autofs
+
+```
+
+### usbmount
+
+需要[自行编译](https://github.com/rbrito/usbmount)安装，编译成功后会在上层目录出现 [.deb](https://blog.csdn.net/wangmg0118/article/details/72026739) 安装包。
+
+```
+apt install -y git debhelper build-essential
+git clone https://github.com/rbrito/usbmount.git
+cd usbmount 
+pkg-buildpackage -us -uc -b
+# apt install -y git-buildpackage
+# https://mirrors.tuna.tsinghua.edu.cn/help/debian/
+cd ..
+# 安装依赖
+# apt -f install 
+# 安装
+# dpkg -i usbmount_0.0.24_all.deb
+apt install -y gdebi
+gdebi usbmount_*.deb
+```
+
+### mdev
+```
+ACTION!="remove",GOTO="farsight"
+SUBSYSTEM!="block",GOTO="farsight"
+KERNEL=="sd[a-z][0-9]?",RUN+="/sbin/umount-usb.sh"
+LABEL="farsight"
+```
 
 ## http(s)
 
 需要搭建一个 web 服务器，读取文件，使用浏览器即可访问。
-相关工具如 [alist](https://github.com/Xhofe/alist/blob/v2/README_cn.md)、 [cloudreve](https://github.com/cloudreve/Cloudreve)、 
+相关工具如 [alist](https://github.com/Xhofe/alist/blob/v2/README_cn.md)、 [cloudreve](https://github.com/cloudreve/Cloudreve)、[filebrowser](https://github.com/filebrowser/filebrowser) 
+
+- alist
+    - 优点：支持众多网盘，可预览大部分文件，配置多个虚拟路径。
+    - 缺点：不支持搜索；bug 比较多；有复制，但没粘贴？
+- cloudreve
+    - xxx
+- filebrowser
+    - 优点：简洁，支持搜索，批量操作，自适应（支持手机端操作）
+    - 缺点：不支持预览，不支持配置虚拟路径，不支持添加多文件夹（可以使用正则）
+
+这里推荐使用 `filebrowser`
+
+### alist
+使用[自动脚本](https://alist-doc.nn.ci/docs/install/script)安装
+```bash
+curl -fsSL "https://nn.ci/alist.sh" | bash -s install
+```
+
+
+### cloudreve
+下载发布的[二进制包](https://docs.cloudreve.org/getting-started/install)安装
+
+```bash
+# 下载
+wget https://github.com/cloudreve/Cloudreve/releases/download/3.5.1/cloudreve_3.5.1_linux_amd64.tar.gz
+
+#解压获取到的主程序
+tar -zxvf cloudreve_VERSION_OS_ARCH.tar.gz
+
+# 赋予执行权限
+chmod +x ./cloudreve
+
+# 启动 Cloudreve
+./cloudreve
+```
+
+### filebrowser
+使用命令[自动安装](https://filebrowser.org/installation)
+自适应的，支持手机浏览器。
+```bash
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+filebrowser -a 10.0.0.114 -r /path/to/your/files
+```
 
 ## smb 
 
@@ -50,10 +139,13 @@ smb 协议可以把另一台电脑的文件共享出去，其他电脑访问如�
 
 ### 电视
 
+
+
 1. 打开小米电视–>高清播放器–>设备–>添加设备。
-2. 支持 smb 的视频播放器，如 VLC.
-3. kodi
-4. nplayer
+2. 支持 smb 的视频播放器，如 [VLC](https://www.videolan.org/vlc/)
+3. [当贝市场](https://www.dangbei.com/app/) 搜索 [kodi](https://www.znds.com/tv-1162916-1-1.html) 并安装
+4. [当贝市场](https://www.dangbei.com/app/) 搜索 nplayer 并安装
+5. [电视播放器 当贝/Kodi/VLC 对比实测 ](https://www.znds.com/tv-1179018-1-1.html)
  
 
 
@@ -63,7 +155,7 @@ smb 协议可以把另一台电脑的文件共享出去，其他电脑访问如�
 
 ### 电视
 
-小米盒子nplayer 连接群晖webdav服务
+小米电视安装 nplayer 连接 webdav 服务
 
 
 
@@ -108,7 +200,9 @@ smb 协议可以把另一台电脑的文件共享出去，其他电脑访问如�
 
 
 
+## 参考文档
 
+- [编译usbmount](https://www.linuxuprising.com/2019/04/automatically-mount-usb-drives-on.html)
 
 
 
