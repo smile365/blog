@@ -7,7 +7,7 @@ tags:
 description: 
 ---
 
-## 安装 Debian 系统
+## 说明
 CentOS 停止服务后，找了一圈 Linux 发行版。
 
 综合考虑，后期我会主要考虑下面两个发行版： 
@@ -18,7 +18,20 @@ iso 下载地址：
 - [ubuntu.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/)
 - [debian.iso](https://www.debian.org/distrib/index.zh-cn.html)
 
-下载 debian 的 iso 镜像文件之后，选择图形化安装。
+## 安装 Debian 系统
+下载 debian 的 iso 镜像文件之后，安装步骤：
+1. 方式：图形化安装
+2. 语言：简体中文
+3. 键盘布局：美式英语
+4. 主机：debian （随意）
+5. 网络：.sxy （随意）
+6. 改动写入磁盘：是（否则机器重启后系统就没了）
+7. debian 镜像所在国家：中国
+8. debian 仓库所在镜像：mirrors.tuna.tsinghua.edu.cn
+9. 软件选择：取消桌面环境，勾选最后两个（ssh-server,系统工具）
+
+
+
 
 安装[miniconda](https://gitee.com/smile365/blog/blob/master/miniconda.md)
 
