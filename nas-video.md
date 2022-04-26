@@ -33,7 +33,7 @@ SMB协议可以切换声道，加载外挂字幕（特效字幕），还能网�
 
 ```bash
 apt install -y autofs
-
+lsblk #列出设备
 ```
 
 ### usbmount
@@ -57,7 +57,15 @@ gdebi usbmount_*.deb
 ```
 
 ### mdev
-创建配置文件，并编写[规则](https://zhuanlan.zhihu.com/p/357314668)
+创建配置文件，并编写[udev规则](https://linux.cn/article-10329-1.html)
+```
+lsblk 
+udevadm monitor 
+# pve 挂载 u 盘（下次重启才生效）
+# lsusb |grep CoolFlash
+# qm set 104 -usb3 host=23a9:ef18
+```
+
 
 ```
 ACTION!="remove",GOTO="farsight"
