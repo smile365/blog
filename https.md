@@ -7,12 +7,35 @@ categories: ["code"]
 description:  域名申请ssl证书，申请免费ssl证书后怎么验证域名ssl证书，
 ---
 
-想给我的域名sxy91.com加https实现域名由http升级为https,找了一圈发现一个免费的ssl证书颁发机构Let's Encrypt。
+## 说明
+想给我的域名 sxy91.com 加 https 实现域名由 http 升级为 https,找了一圈发现一个免费的 ssl 证书颁发机构 Let's Encrypt。
 
-申请好ssl证书，绑定好自己的域名，这样就可以通过https方式来访问，起到安全的作用。
+申请好 ssl 证书，绑定好自己的域名，这样就可以通过 https 方式来访问，起到安全的作用。
 
  [Let's Encrypt](https://letsencrypt.org/) 证书免费，不过每次申请只有90天的有效期，可以通过
  [acme脚本](https://github.com/Neilpang/acme.sh/wiki/Options-and-Params)自动申请证书并定期自动更新。申请步骤如下：
+
+## ACME 客户端
+
+
+支持 ACME v2 协议的[客户端](https://bynss.com/docs/lets-encrypt/%E8%AE%A2%E6%88%B7%E4%BF%A1%E6%81%AF/acme%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%9E%E7%8E%B0) 有很多
+
+这里推荐使用 acme.sh
+
+## buypass 证书
+[](https://vircloud.net/fuli/buypass-free.html)
+```
+nginx -s stop
+acme.sh --server https://api.buypass.com/acme/directory --register-account --accountemail me@sxy91.com
+
+acme.sh --server https://api.buypass.com/acme/directory  \
+         --issue -d sxy91.com -d www.sxy91.com \
+         --days 170 \
+         --force \
+         --standalone
+```
+
+## 基于 acme.sh
 
 
 #### 1.安装脚本
