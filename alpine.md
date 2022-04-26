@@ -1,119 +1,79 @@
 ---
-title: alpine 
+title: 使用 pve 安装 alpine 系统 
 heading: 
 date: 2022-02-16T03:32:29.694Z
-categories: ["other"]
+categories: ["code"]
 tags: 
 description: 
 ---
 
-下载VIRTUAL 版本下的[ alpine-virt-x86_64.iso](https://alpinelinux.org/downloads/) 镜像文件。
+## pve 创建虚拟机
 
+下载VIRTUAL 版本下的[ alpine-virt-x86_64.iso](https://alpinelinux.org/downloads/) 镜像文件。
 
 用 pve 创建一个虚拟机，挂载刚刚下载的镜像。（别忘了增加串口0）
 
-![enter description here](https://gitee.com/smile365/blogimg/raw/master/小书匠/1644983838329.png)
+![](https://gitee.com/smile365/blogimg/raw/master/小书匠/1644983838329.png)
 
+## 安装
 
-网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装。 
-```
+网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
+```bash
 qm terminal 101 -iface serial0
 # 回车
 setup-alpine
-cn
-
+# 键盘布局,几乎都是 QWERTY 布局
+Select keyboard layout: [none] us
+# 我比较常用 mac 电脑，Windows 的布局直接使用 us
+Select variant (or 'abort'): us-mac
+# hostname 随意
+Enter system hostname (fully qualified form, e.g. 'foo.example.org') [localhost] apline-test
+# 时区配置
+Which timezone are you in? ('?' for list) [UTC] Asia/Shanghai
 # 镜像选择 
 Available mirrors:
-1) dl-cdn.alpinelinux.org
-2) uk.alpinelinux.org
-3) dl-4.alpinelinux.org
-4) dl-5.alpinelinux.org
-5) mirror.yandex.ru
-6) mirrors.gigenet.com
-7) mirror1.hs-esslingen.de
-8) mirror.leaseweb.com
-9) mirror.fit.cvut.cz
-10) alpine.mirror.far.fi
-11) alpine.mirror.wearetriple.com
-12) mirror.clarkson.edu
-13) mirror.aarnet.edu.au
-14) mirrors.dotsrc.org
-15) ftp.halifax.rwth-aachen.de
-16) mirrors.tuna.tsinghua.edu.cn
-17) mirrors.ustc.edu.cn
-18) mirrors.nju.edu.cn
-19) mirror.lzu.edu.cn
-20) ftp.acc.umu.se
-21) mirror.xtom.com.hk
-22) mirror.csclub.uwaterloo.ca
-23) alpinelinux.mirror.iweb.com
-24) pkg.adfinis.com
-25) mirror.ps.kz
-26) mirror.rise.ph
-27) mirror.operationtulip.com
-28) mirrors.ircam.fr
-29) alpine.42.fr
-30) mirror.math.princeton.edu
-31) mirrors.sjtug.sjtu.edu.cn
-32) ftp.icm.edu.pl
-33) mirror.ungleich.ch
-34) sjc.edge.kernel.org
-35) ewr.edge.kernel.org
-36) ams.edge.kernel.org
-37) download.nus.edu.sg
-38) alpine.yourlabs.org
-39) mirror.pit.teraswitch.com
-40) mirror.reenigne.net
-41) quantum-mirror.hu
-42) tux.rainside.sk
-43) alpine.cs.nctu.edu.tw
-44) mirror.ihost.md
-45) mirror.ette.biz
-46) mirror.lagoon.nc
-47) alpinelinux.c3sl.ufpr.br
-48) foobar.turbo.net.id
-49) alpine.ccns.ncku.edu.tw
-50) mirror.dst.ca
-51) mirror.kumi.systems
-52) mirror.sabay.com.kh
-53) alpine.northrepo.ca
-54) alpine.bardia.tech
-55) mirrors.ocf.berkeley.edu
-56) mirrors.pardisco.co
-57) mirrors.aliyun.com
-58) mirror.alwyzon.net
-59) mirror1.ku.ac.th
-60) mirrors.bfsu.edu.cn
-61) ftpmirror2.infania.net
-62) repo.iut.ac.ir
-
-
-r) 从上面的列表中添加随机数
-f) 从上面的列表中检测并添加最快的镜像
-e) 使用文本编辑器编辑 /etc/apk/repositories
-
-选择 f 会所有镜像测一遍，比较慢。直接输入 16 或者 57
-
+...
 16) mirrors.tuna.tsinghua.edu.cn # 清华
+...
 57) mirrors.aliyun.com # 阿里云
+...
 
-最后是否格式化 sda 选择 y。否则会安装失败。
- 
+Enter mirror number (1-72) or URL to add (or r/f/e/done) [1] 16
+# 参数说明
+# r) 从上面的列表中添加随机数
+# f) 从上面的列表中检测并添加最快的镜像
+# e) 使用文本编辑器编辑 /etc/apk/repositories
+# 选择 f 会所有镜像测一遍，比较慢。直接输入 16 或者 57
+# 安装到哪个磁盘
+Which disk(s) would you like to use? (or '?' for help or 'none') [none] sda
+# 安装类型 
+How would you like to use it? ('sys', 'data', 'crypt', 'lvm' or '?' for help) [?] sys
+# 最后是否格式化 sda 选择 y。否则会安装失败。
+WARNING: Erase the above disk(s) and continue? (y/n) [n]  y
 # 重启
 reboot
-
 ```
 
+## 开启启动、换源、root远程访问
 
 如需开机启动，在 pve 的 options 界面中把 start at boot 设置成 yes。 
 
 后期如需更改源，请参考[教程](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
 
-
-安装 软件
-```bash
+```
 # 开启 root 用户远程管理
 echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
+```
+
+## 修改时区
+
+如果没有在安装是指定时区，可以通过如下方法更改。
+
+
+## nginx 的安装和使用
+
+nginx 安装和配置
+```bash
 # 安装 vim、nginx
 apk add vim nginx nginx-mod-stream
 # 需要手动安装 stream 模块
@@ -129,6 +89,7 @@ mkdir tcp.d
 echo "include /etc/nginx/tcp.d/*.conf;" >> nginx.conf 
 ```
 
+stream 配置 
 ```bash
 # vi tcp.d/pve.conf
 # pve.conf
@@ -147,7 +108,7 @@ stream{
 ```
 
 
-http 反向代理
+http 反向代理配置
 ```pf.conf
 # cat http.d/default.conf
 server{
@@ -169,7 +130,10 @@ server{
 ```bash
 nginx -t
 nginx -s reload
+```
 
+## wireguard 的安装和配置
+```
 apk add -U wireguard-tools
 
 cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
@@ -195,7 +159,9 @@ PersistentKeepalive = 25
 启动 ` wg-quick up wg0 `
 
 
-Alpine 没有 systemc 之类的工具，相似的工具是 [awall](https://www.cyberciti.biz/faq/how-to-set-up-a-firewall-with-awall-on-alpine-linux/)
+## Alpine 中的 systemctl
+
+Alpine 没有 systemctl 之类的工具，相似的工具是 [awall](https://www.cyberciti.biz/faq/how-to-set-up-a-firewall-with-awall-on-alpine-linux/)
 ```bash
 # apk update && apk upgrade
 ## Install both IPv4 and IPv6 version of IPtables ##
@@ -236,5 +202,5 @@ rc-service nginx start
 
 
 
-参考资料   
+## 参考资料    
 - [/run/nginx/nginx.pid](https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command)
