@@ -19,6 +19,7 @@ description:
 
 网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
 ```bash
+# 之后按 control-O 退出终端)
 qm terminal 101 -iface serial0
 # 回车
 setup-alpine
