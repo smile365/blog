@@ -57,20 +57,35 @@ gdebi usbmount_*.deb
 ```
 
 ### mdev
-创建配置文件，并编写[udev规则](https://linux.cn/article-10329-1.html)
+创建配置文件，
+并编写[udev规则](https://linux.cn/article-10329-1.html)
+借助[udev]((https://www.cnblogs.com/zhouhbing/p/4025748.html))
+
 ```
 lsblk 
 udevadm monitor 
+# pve usb passthrough
 # pve 挂载 u 盘（下次重启才生效）
 # lsusb |grep CoolFlash
 # qm set 104 -usb3 host=23a9:ef18
+
+# 立即生效
+# qm monitor 104
+# device_add usb-host,vendorid=0x058f,productid=0x6387,id=someid
 ```
 
+/etc/udev/rules.d
+20-local.rules
 
 ```
-ACTION!="remove",GOTO="farsight"
+ACTION=="add",GOTO="farsight"
 SUBSYSTEM!="block",GOTO="farsight"
 KERNEL=="sd[a-z][0-9]?",RUN+="/sbin/umount-usb.sh"
+LABEL="farsight"
+
+ACTION!="remove",GOTO="farsight"
+SUBSYSTEM!="block",GOTO="farsight"
+KERNEL=="sd[a-z][0-9]?",RUN+="/etc/udev/rules.d/trigger.sh"
 LABEL="farsight"
 
 
