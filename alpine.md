@@ -68,7 +68,14 @@ echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 ## 修改时区
 
 如果没有在安装是指定时区，可以通过如下方法更改。
-
+```
+date
+apk add tzdata
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+echo "Asia/Shanghai" > /etc/timezone
+apk del tzdata
+date
+```
 
 ## nginx 的安装和使用
 
