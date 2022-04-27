@@ -4,7 +4,7 @@ heading:
 date: 2022-04-27T12:07:14.760Z
 categories: ["code"]
 tags: 
-description: 
+description:  How to find reasons why an udev rule is not applied?
 ---
 
 ## Udev 是什么
@@ -65,7 +65,7 @@ udev 是一个通用的内核设备管理器。它以 udevd 守护进程的方�
 写分配键的时候，可以用 `%K` 代替当前匹配到的 `内核名称`,如匹配设备为 /dev/sda3，那么 %K 就是 sda3。可以用 `%n` 代替当前匹配到的 `设备分区编号`， 内核编号（存储设备的分区编号），例如设备是 /dev/sda3，那么 %n 就是 3 。
 
 ## udev 规则示例
-
+[如何写一个例子](https://linux.cn/article-10329-1.html)
 假定 `device_namer.sh` 脚本的 输出由设备名称、符号链接组成。可以通过 %c{N} 取出输出的第 N 部分：
 
 KERNEL=="hda", PROGRAM="/bin/device_namer %k", NAME="%c{1}", SYMLINK+="%c{2}"
@@ -79,3 +79,12 @@ KERNEL=="hda", PROGRAM="/bin/device_namer %k", NAME="%c{1}", SYMLINK+="%c{2}"
 udev 不会在任何活动终端上运行这些程序，也不会在 shell 的上下文中执行它们。确保您的程序被标记为可执行，如果它是一个 shell 脚本，请确保它以适当的shebang（例如#!/bin/sh）开头，并且不要期望任何标准输出出现在您的终端上。
 
 
+## 参考文档
+
+- [How to find reasons why an udev rule is not applied?](https://stackoverflow.com/questions/67123997/how-to-find-reasons-why-an-udev-rule-is-not-applied)
+- [Shebang](zh.wikipedia.org/zh-hans/Shebang)
+- [how-to-run-custom-scripts-upon-usb-device-plug-in](https://unix.stackexchange.com/questions/28548/how-to-run-custom-scripts-upon-usb-device-plug-in)
+- [debian udev](https://wiki.debian.org/udev)
+- [从 udev RUN 命令写入文件](https://superuser.com/questions/1273148/writing-to-a-file-from-a-udev-run-command)
+- [How to check if a udev rule fired?](https://superuser.com/questions/677106/how-to-check-if-a-udev-rule-fired)
+- [udev和rules使用规则](https://www.cnblogs.com/zhouhbing/p/4025748.html)
