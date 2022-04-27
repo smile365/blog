@@ -61,7 +61,7 @@ udev 是一个通用的内核设备管理器。它以 udevd 守护进程的方�
 
 ## udev 规则示例
 
-下一个示例假定 device_namer 输出两部分，第一部分是设备名称，第二部分是附加符号链接的名称。我们现在引入%c{N}替换，它指的是输出的 N 部分：
+假定 `device_namer.sh` 脚本的 输出由设备名称、符号链接组成。可以通过 %c{N} 取出输出的第 N 部分：
 
 KERNEL=="hda", PROGRAM="/bin/device_namer %k", NAME="%c{1}", SYMLINK+="%c{2}"
 
