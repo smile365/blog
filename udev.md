@@ -9,9 +9,7 @@ description:  How to find reasons why an udev rule is not applied?
 
 ## Udev 是什么
 
-[Udev](zh.wikipedia.org/wiki/Udev) 是一个 Linux 内核设备管理器，
-
-udev 是一个通用的内核设备管理器。它以 udevd 守护进程的方式运行于 Linux 系统，并监听在新设备初始化或设备从系统中移除时，内核（通过netlink socket）所发出 uevent 事件。udev 提供一套匹配规则，当规则命中时，可调起用户提供的处理程序。udevadm 是此系统对应的管理命令。 
+[Udev](zh.wikipedia.org/wiki/Udev) 是一个通用的内核设备管理器。它以 udevd 守护进程的方式运行于 Linux 系统，并监听在新设备初始化或设备从系统中移除时，内核（通过netlink socket）会发出 uevent 事件。udev 提供一套匹配规则，当规则命中时，可调起用户提供的处理程序。udevadm 是此系统对应的管理命令。 
 
 
 ## 如何查看 udev 的日志
