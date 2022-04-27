@@ -33,23 +33,23 @@ description:  How to find reasons why an udev rule is not applied?
 - `SUBSYSTEM(s)`，匹配（父级）设备的子系统
 - `DRIVER(S)`， 匹配（父级）设备的驱动程序名称
 - `ATTR(s)`， 匹配（父级）设备的属性，如：厂商代码、确切产品编号、序列号、存储容量、分区数量等。
-- ACTION， 匹配设备连接状态，如：add（添加），remove（删除）。
-- ENV 匹配当前环境变量
-- 
+- `ACTION`， 匹配设备连接状态，如：add（添加），remove（删除）。
+- `ENV`， 匹配当前环境变量
+
 
 **分配键：**
-- NAME 创建设备名称
-- SYMLINK 创建符号链接
-- RUN 运行外部脚本
-- GROUP 给设备分组
-- OWNER 给设备分配所有者
-- MODE 给设备分配读写权限
-- PROGRAM 运行外部程序获取结果(%c)后给其他分配键使用
-- ENV 改变环境变量
-- OPTIONS 其他选项
-    - all_partitions - 为块设备创建所有可能的分区，而不仅仅是最初检测到的分区
-    - ignore_device - 完全忽略事件
-    - last_rule - 确保后面的规则没有任何影响
+- `NAME`，创建设备名称
+- `SYMLINK`， 创建符号链接
+- `RUN`，运行外部脚本
+- `GROUP`， 给设备分组
+- `OWNER`， 给设备分配所有者
+- `MODE`， 给设备分配读写权限
+- `PROGRAM`， 运行外部程序获取结果(%c)后给其他分配键使用
+- `ENV`， 改变环境变量
+- `OPTIONS`， 其他选项
+    - `all_partitions`， 为块设备创建所有可能的分区，而不仅仅是最初检测到的分区
+    - `ignore_device`， 完全忽略事件
+    - `last_rule`， 确保后面的规则没有任何影响
 
 ### 模式匹配
 
