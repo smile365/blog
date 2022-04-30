@@ -25,6 +25,47 @@ description: winPE
 
 ## mac osx 下制作 edgeless 
 
+edgeless 提供 Windows 下的 U 盘自动制作工具，mac os 或 Linux 需要通过
+[ventoy Linux工具](https://wiki.edgeless.top/v2/guide/burn_manual.html)来制作。
+
+1. 下载依赖文件
+从以下链接下载依赖文件：
+
+- [ventoy-xxx-linux.tar.gz](https://gitee.com/longpanda/Ventoy/releases/)
+- [ventoy wim插件](https://pineapple.edgeless.top/api/v2/info/ventoy_plugin_addr)
+- [Edgeless ISO镜像](https://pineapple.edgeless.top/api/v2/info/iso_addr)
+
+解压 ventoy-xxx-linux.tar.gz
+
+2. 安装Ventoy
+
+```
+# 1. 插入 u 盘，查看挂载的路径
+df -h
+# /dev/disk2s1    14Gi  5.8Gi  8.5Gi    41%     100    8873624    0%   /Volumes/U深度U盘
+
+# 2. 安装
+ventoy2disk.sh -i /dev/disk2s1
+```
+
 
 
 ## mac osx 下制作 ventoy
+
+
+## linux 下制作 
+下载[ventoy-linux.tar.gz
+](https://gitee.com/longpanda/Ventoy/releases/)
+```
+wget https://gitee.com/longpanda/Ventoy/attach_files/1047852/download/ventoy-1.0.74-linux.tar.gz
+tar -xzvf *.tar.gz
+
+# 查看磁盘
+lsblk 
+# 是否挂载
+df -h
+# 取消挂载
+umount /dev/sdc1
+# 写入 u 盘
+sudo /bin/bash Ventoy2Disk.sh -i /dev/sdc
+```
