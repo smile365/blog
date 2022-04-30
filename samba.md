@@ -11,6 +11,11 @@ description: debian
 
 配置 [docker-hub](https://gitee.com/smile365/blog/blob/master/docker.md) 加速器
 
+## vnc server
+
+参考[VNC Server](http://www.yl-blog.com/article/915.html)
+
+
 
 ## samba
 
@@ -61,4 +66,18 @@ docker run -d \
 /bin/bash install-tr-control-cn.sh
 mv /usr/share/transmission/web /usr/share/transmission/webbak
 cp -r transmission-web-control /usr/share/transmission/web
+```
+
+
+## jackett
+
+```
+docker run -d \
+  --name=jackett \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Asia/Shanghai \
+  -p 9117:9117 \
+  --restart unless-stopped \
+  linuxserver/jackett:latest
 ```
