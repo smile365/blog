@@ -69,3 +69,6 @@ umount /dev/sdc1
 # 写入 u 盘
 sudo /bin/bash Ventoy2Disk.sh -i /dev/sdc
 ```
+
+
+
