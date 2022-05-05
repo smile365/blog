@@ -4,7 +4,7 @@ heading:
 date: 2022-04-30T08:04:25.258Z
 categories: ["code"]
 tags: 
-description: debian
+description: debian-samba
 ---
 
 安装 [docker](https://docs.docker.com/engine/install/debian/)
@@ -17,8 +17,20 @@ description: debian
 
 
 
-## samba
+## 系统自带的 samba
+```
+apt install samba
+systemctl start smbd
+systemctl status smbd
+# smb 自动启动
+systemctl enable smbd
+vi /etc/samba/smb.conf
 
+```
+
+
+
+## 基于 docker 的 samba
 
 ```
 sudo docker run -it --name samba -p 139:139 -p 445:445 \
@@ -26,11 +38,12 @@ sudo docker run -it --name samba -p 139:139 -p 445:445 \
             -d dperson/samba -p
             
             
-进入容器 配置共享目录
-
+# 进入容器 配置共享目录
+# vi /etc/samba/smb.conf
+# 末尾增加
 [data]
   comment = server data
-  path = /home/files
+  path = /data
   browseable = yes
   writable = yes
 # 增加下面配置则为公开访问，无需账号密码
