@@ -1,5 +1,5 @@
 ---
-title: Ubuntu下使用镜像快速安装nodejs 
+title: Ubuntu 下使用镜像快速安装 nodejs 
 heading: Ubuntu秒级别安装和升级到nodejs最新版
 date: 2021-03-18T14:38:35.115Z
 categories: ["code"]
