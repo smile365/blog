@@ -1,5 +1,5 @@
 ---
-title: xiaomi8-root 
+title: 2022 年小米手机 8 获取 root 权限刷机教程
 heading: 2022年小米手机8获取root权限刷机教程
 date: 2021-12-27T06:54:25.581Z
 categories: ["code"]
