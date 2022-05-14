@@ -1,5 +1,5 @@
 ---
-title: python任意多维数组转一维数组
+title: python/js 任意多维数组转一维数组
 heading: 
 date: 2022-02-15T08:53:50.545Z
 categories: ["code"]
