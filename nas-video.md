@@ -1,17 +1,23 @@
 ---
-title: nas-video 
+title: 个人媒体音影系统搭建
 heading:
 date: 2022-04-24T09:57:53.008Z
 categories: ["code"]
 tags: 
-description: 如何观看 nas 上的电影，smb。
+description: 如何观看 nas 上的电影，smb。nas-video 
 ---
 
-小米电视自带的“高清播放器”可以自动找到内网中的NAS，以DLNA方式连接；如果需要SMB方式要自行添加NAS的IP地址和NAS的账号密码。
 
-DLNA协议对于无线连接支持很好，即使是4K原盘也可以通过WIFI连接流畅播放，缺点是无法加载外挂字幕。
+## 需求
+虽然目前在线看视频很方便，还有诸多不便，比如找不到想看的片源，受限于版权问题，无法在一个 app 中找到想看的。美剧、国外电影往往没有。搭建了一套黑群晖，这样可以通过远程下载想看的电影到 nas，回到家就可以用电视\手机\iPad 看 nas 里的电影。
 
-SMB协议可以切换声道，加载外挂字幕（特效字幕），还能网络自动匹配字幕，缺点是对于无线连接支持很不好（好像最高5MB/S左右），即使是1080P Remux也可能要经常缓冲。
+## 电视端
+
+小米电视自带的“高清播放器”可以自动找到内网中的NAS，以DLNA 方式连接；如果需要 SMB 方式要自行添加 NAS 的 IP 地址和 NAS 的账号密码。
+
+DLNA 协议对于无线连接支持很好，即使是 4K 原盘也可以通过WIFI连接流畅播放，缺点是无法加载外挂字幕。
+
+SMB 协议可以切换声道，加载外挂字幕（特效字幕），还能网络自动匹配字幕，缺点是对于无线连接支持很不好（好像最高5MB/S 左右），即使是 1080P Remux 也可能要经常缓冲。
 
 需求：
 - 支持电视、电脑、手机、平板
@@ -56,7 +62,7 @@ apt install -y gdebi
 gdebi usbmount_*.deb
 ```
 
-### mdev
+### udev
 创建配置文件，
 并编写[udev规则](https://linux.cn/article-10329-1.html)
 借助[udev]((https://www.cnblogs.com/zhouhbing/p/4025748.html))
@@ -76,6 +82,7 @@ udevadm monitor
 
 /etc/udev/rules.d
 20-local.rules
+journalctl -f
 
 ```
 ACTION=="add",GOTO="farsight"
