@@ -1,5 +1,5 @@
 ---
-title: CentOS 7/8 安装libsodium 最新版教程 
+title: CentOS 7/8 安装 libsodium 最新版教程 
 heading: 
 date: 2021-07-06T03:55:01.640Z
 categories: ["code"]
