@@ -2,11 +2,12 @@
 title: chocolatey
 heading: 使用choco安装nodejs和yarn并安装GitKraken教程
 date: 2021-10-21T03:49:51.046Z
-categories: ["code"]
+categories: ["other"]
 tags: 
 description: Windows下 安装yarn，利用chocolatey软件包管理工具，比npm更快更稳定
 ---
 
+Windows 下安装 yarn，利 用chocolatey 软件包管理工具，比 npm 更快更稳定。
 
 按照[官网文档](https://chocolatey.org/install) 安装 chocolatey 
 
