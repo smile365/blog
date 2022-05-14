@@ -1,11 +1,13 @@
 ---
-title:  参与app的Java后端开发过程中遇到的疑难杂症
+title:  参与 app 的 Java 后端开发过程中遇到的疑难杂症
 heading: 参与app的Java后端开发过程中遇到的疑难杂症
 date: 2021-03-16T12:43:59.634Z
 categories: ["code"]
 tags: 
 description: app-java-difficulty
 ---
+
+做 java 后端的那些年，遇到了不少问题，记录下。
 
 **参与app的Java后端开发过程中遇到的疑难杂症**
 
