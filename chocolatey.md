@@ -1,5 +1,5 @@
 ---
-title: chocolatey
+title: chocolatey-比npm快n倍的包管理器
 heading: 使用choco安装nodejs和yarn并安装GitKraken教程
 date: 2021-10-21T03:49:51.046Z
 categories: ["other"]
