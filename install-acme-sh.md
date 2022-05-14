@@ -1,5 +1,5 @@
 ---
-title: 秒级别安装acme.sh的另类方式
+title: 秒级别安装 acme.sh 获取 ssl 证书的另类方式
 heading: 国内快速秒级安装acme.sh
 date: 2021-03-17T07:28:17.467Z
 categories: ["code"]
