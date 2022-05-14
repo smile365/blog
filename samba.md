@@ -1,5 +1,5 @@
 ---
-title:  使用samba实现电视播放自己想看的高清电影 
+title:  使用 samba 实现电视播放自己想看的高清电影 
 heading: 
 date: 2022-04-30T08:04:25.258Z
 categories: ["code"]
