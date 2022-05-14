@@ -1,5 +1,5 @@
 ---
-title:  udev
+title: 基于udev实现Linux插入u盘自动执行脚本
 heading: 当 u 盘插入Linux自动执行脚本
 date: 2022-04-27T12:07:14.760Z
 categories: ["code"]
