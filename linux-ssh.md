@@ -6,6 +6,24 @@ categories: ["code"]
 description:
 ---
 
+## 安装 sshd
+```
+yum install -y openssl openssh-server
+
+vi /etc/ssh/sshd_config
+Port 22
+PermitRootLogin yes
+
+启动ssh服务
+systemctl start sshd.service
+
+重启网络
+service network restart
+
+设置开机启动ssh服务
+systemctl enable sshd.service
+```
+
 每次在终端使用ssh链接服务器，需要输入账号、密码、端口、域名等一大堆东西，比较繁琐。若不想输入密码端口等信息，可以使用 ssh 密钥方式连接服务器。
 
 
@@ -14,6 +32,9 @@ description:
 ## 生成公钥和私钥
 
 使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_sxy`
+
+> 如果密钥名称不是 `id_rsa`,需要在 ~/.ssh/config 里指定密钥名称
+
 
 
 ## 把公钥复制到需要登录的主机
