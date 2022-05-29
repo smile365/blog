@@ -42,6 +42,8 @@ systemctl enable sshd.service
 ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@192.168.1.2
 ```
 
+> 或者把公钥内容复制到 ~/.ss/authorized_keys
+
 成功以后即可使用私钥链接服务器（服务器用公钥验证）
 
 ```sh
