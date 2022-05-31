@@ -7,11 +7,11 @@ tags: ["clickhouse教程","clickhouse场景","clickhouse安装"]
 description: ClickHouse快速上手极简教程系列，安装clickhouse与性能测试介绍
 ---
 
-ClickHouse是一个开源列式数据库，由俄罗斯排名第一的搜索引擎公司Yandex开发，主要用于线上分析处理（OLAP）。该系统允许分析实时更新的数据，以高性能著称。clickhouse官网地址：https://clickhouse.tech
+ClickHouse 是一个开源列式数据库，由俄罗斯排名第一的搜索引擎公司 Yandex 开发，主要用于线上分析处理（OLAP）。该系统允许分析实时更新的数据，以高性能著称。ClickHouse 官网地址：[clickhouse.tech](https://clickhouse.tech)
 
-ClickHouse的主键不具有唯一性，其使用场景比较适合在并发低，需要实时分析大规模数据的业务场景中。
+ClickHouse 的主键不具有唯一性，其使用场景比较适合在并发低，需要实时分析大规模数据的业务场景中。
 
-在centos 7安装ClickHouse过程如下：
+在 centos 7 安装 ClickHouse 过程如下：
 
 `CentOS 7`换成[清华的镜像](https://mirrors.tuna.tsinghua.edu.cn/help/centos/)或者[阿里云的镜像](https://developer.aliyun.com/mirror/centos?spm=a2c6h.13651102.0.0.3e221b11XBR0VU)
 
@@ -27,7 +27,7 @@ yum makecache
 > 若出现`Couldn't resolve host 'mirrors.cloud.aliyuncs.com'`、`Could not resolve host: mirrors.aliyun.com; 未知的错误`、`Could not resolve host: mirrors.tuna.tsinghua.edu.cn; 未知的错误`等，运行`echo "nameserver 8.8.8.8" >> /etc/resolv.conf` 即可。
 
 
-安装[clickhouse](https://clickhouse.tech/#quick-start)
+安装 [ClickHouse](https://clickhouse.tech/#quick-start)
 ```bash
 yum install -y yum-utils
 rpm --import https://repo.yandex.ru/clickhouse/CLICKHOUSE-KEY.GPG
@@ -60,7 +60,7 @@ clickhouse-client -h 192.168.1.135
 firewall-cmd --add-port=9000/tcp
 ```
 
-创建数据库和表，数据类型参考[data_types](https://clickhouse-docs.readthedocs.io/en/latest/data_types/)  
+创建数据库和表，数据类型参考 [ClickHouse-data_types](https://clickhouse-docs.readthedocs.io/en/latest/data_types/)  
 ```sql
 CREATE DATABASE IF NOT EXISTS indexsysdb;
 -- use indexsysdb;
@@ -80,11 +80,11 @@ ORDER BY (dtime, keyword, source1, source2,mood,category)
 下面来解释下[各关键字](https://clickhouse.tech/docs/en/operations/table_engines/mergetree/)的意思：
 
 - ENGINE：[表引擎](https://clickhouse.tech/docs/en/operations/table_engines/)
-- PARTITION BY：[分区规则](https://clickhouse.tech/docs/zh/operations/table_engines/custom_partitioning_key/)，按天分区可用[toYYYYMMDD](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymmdd)，按月分区可用[toYYYYMM](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymm)
+- PARTITION BY：[分区规则](https://clickhouse.tech/docs/zh/operations/table_engines/custom_partitioning_key/)，按天分区可用 [toYYYYMMDD](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymmdd)，按月分区可用 [toYYYYMM](https://clickhouse.tech/docs/en/query_language/functions/date_time_functions/#toyyyymm)
 - ORDER BY：聚合的条件
 
 
-插入测试数据
+插入百万条新闻做为测试数据，插入 sql 举例：
 
 ```sql
 insert into keyword1h(keyword,dtime,source1,source2,mood,category,amount) values ('宋洋葱','2020-03-30 10:00:00','video','youtube',1,1,1), ('宋洋葱','2020-03-30 10:00:00','video','youtube',1,1,1);
@@ -118,16 +118,18 @@ for x in data:
 
 client.execute(insert_keyword1h,rows)
 ```
-> 注：DateTime类型的数据带有时区信息，python中需要用timezone指定。使用字符串格式的时间则会出现错误：` clickhouse AttributeError: str object has no attribute tzinfo`。
+> **注**
+> 1. DateTime类型的数据带有时区信息，python中需要用timezone指定。使用字符串格式的时间则会出现错误：` clickhouse AttributeError: str object has no attribute tzinfo`。
+> 2. 为了简化，sql 里的字段以假数据代替，数据库是真实数据。
 
 
-聚合查询测试  
+聚合查询测试，结果相当于百度指数、微信指数，查询某个关键词的热度，按照 24 小时内，每小时的热度指数，sql 如下：
 ```sql
 --- 查询昨天0点到现在的数据
 select keyword,dtime,sum(amount) from keyword1h where keyword='冠状病毒' and dtime > toDate(now())-1 group by keyword,dtime order by dtime
 ```
 
-结果如下
+以“新冠病毒”为例，查询每个小时新增的新闻数量，查询到的结果如下：
 ```
 ┌─keyword──┬───────────────dtime─┬─sum(amount)─┐
 │ 冠状病毒 │ 2020-03-27 00:00:00 │           6 │
@@ -155,9 +157,13 @@ select keyword,dtime,sum(amount) from keyword1h where keyword='冠状病毒' and
 20 rows in set. Elapsed: 0.059 sec. Processed 1.34 million rows, 24.48 MB (22.55 million rows/s., 412.69 MB/s.) 
 ```
 
-聚合了20行结果，耗时：0.059秒。 处理了134万行，24.48 MB（2255万行/秒，412.69 MB /秒）。这性能，clickhouse查询速度快的令人尖叫。
+聚合后得到 20 行结果，耗时：0.059 秒。一共处理了 134 万行数据，数据量为 24.48 MB（2255 万行/秒，412.69 MB /秒）。这性能，clickhouse 查询速度快的令人尖叫。
+> 注
+> 1. 机器配置 32G 内存，500G 硬盘，CPU 为 E3-1280 4 核 8 线程。
+> 2. 数据为从微博、微信公众号、各大新闻门户、Facebook、twitter、地方新闻等抓取的数据，约一千万条。
 
-参考
+
+参考文档：
 
 - [ClickHouse使用](https://www.zouyesheng.com/clickhouse.html)
 - [ClickHouse表引擎及作用](http://liangfan.tech/2019/01/03/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ClickHouse%E4%B9%8B6-%E8%A1%A8%E5%BC%95%E6%93%8E%E5%8F%8A%E4%BD%9C%E7%94%A8/)
