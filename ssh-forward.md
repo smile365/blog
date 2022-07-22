@@ -30,6 +30,8 @@ GatewayPorts yes
 # GatewayPorts clientspecified
 
 ```
+## 动态转发
+
 
 
 
@@ -37,9 +39,12 @@ GatewayPorts yes
 如果转发的规则比较复杂，或者需要转发多个端口，每次敲击命令都比较麻烦，可以通过 ssh 的配置文件 ./ssh/cnofig 配制好转发规则，下次直接 ssh server 即可。
 
 
-
-
-
 参考文档 
 - [什么是 SSH 端口转发](https://www.ssh.com/academy/ssh/tunneling/example)
-- 
+- [实战 ssh 转发](https://blog.csdn.net/randyleonard/article/details/9049335)
+- [SSH 隧道的反向端口转发](https://zhuanlan.zhihu.com/p/438009437)
+- [轻松实现 SSH 反向隧道](https://cloud.tencent.com/developer/article/1528395)
+- [SSH 反向代理和端口转发](https://www.jianshu.com/p/dafbbbe4c43b)
+- [SSH/OpenSSH/PortForwarding](https://help.ubuntu.com/community/SSH/OpenSSH/PortForwarding)
+- [SSH Tunneling (Port Forwarding)](https://linuxize.com/post/how-to-setup-ssh-tunneling/)
+- [ssh-port-forwarding](https://phoenixnap.com/kb/ssh-port-forwarding)
