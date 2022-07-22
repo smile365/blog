@@ -13,10 +13,24 @@ description:
 SSH 端口转发，又名 SSH 隧道，用于将应用程序端口从客户端传送到服务器端，反过来也可以。
 
 
-
 ## 本地转发（ssh -L）
 
+
+
 ## 远程转发（ssh -R）
+
+
+默认情况下，OpenSSH 只允许从服务器主机连接到远程转发端口。也就是只监听 host 为 127.0.0.1 和 localhost 的端口。如果想监听主机的 IP 地址端口，可以在 ssh 的  GatewayPorts 服务器配置文件 sshd_config 中修改  GatewayPorts 为 yes  来实现。
+
+```
+cat /etc/ssh/sshd_config |grep ^[^#]
+ssh 默认关闭了，需要打开，否则无法
+
+GatewayPorts yes
+# GatewayPorts clientspecified
+
+```
+
 
 
 ## 默认转发（./ssh/cnofig）
