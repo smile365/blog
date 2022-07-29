@@ -7,20 +7,25 @@ tags:
 description: 
 ---
 
+centos os 7 使用 kubekey 安装 kubesphere 和 kubernetes
+
+
 ## 安装说明
- 使用 [kubeke](https://github.com/kubesphere/kubekey/releases) 在 centos 7 上安装 [kubesphere](https://github.com/kubesphere/kubesphere/)，安装过程可以参考 [quick-start](https://kubesphere.io/zh/docs/v3.3/quick-start/all-in-one-on-linux/) 
+ 使用 [kubekey](https://github.com/kubesphere/kubekey/releases) 在 centos 7 上安装 [kubesphere](https://github.com/kubesphere/kubesphere/)，安装过程可以参考 [quick-start](https://kubesphere.io/zh/docs/v3.3/quick-start/all-in-one-on-linux/) 
  
  
  k8s 的最新进为 [Kubernetes v1.24.3](https://github.com/kubernetes/kubernetes)
  
  ```
 yum install -y socat conntrack ebtables ipset
-curl -sfL https://get-kk.kubesphere.io | VERSION=v2.2.2 sh -
+curl -sfL https://get-kk.kubesphere.io | VERSION=v2.2.1 sh -
 
-./kk create cluster --with-kubernetes v1.22.10 --with-kubesphere v3.3.0 --container-manager containerd
-# 输入 yes 即可
+./kk create cluster --with-kubernetes v1.22.10 --with-kubesphere v3.3.0 --container-manager containerd -y
+
+kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l 'app in (ks-install, ks-installer)' -o jsonpath='{.items[0].metadata.name}') -f
  ```
-
+ 
+http://10.0.0.127:30880/password/confirm
 
 
 
@@ -56,7 +61,8 @@ v1.24.3/bin/linux/amd64/kubeadm error: No SHA256 found for kubeadm. v1.24.3 is n
 
 ```
 
-
+![enter description here](https://s2.loli.net/2022/07/29/GY5CImHlrwniD8h.png)
  
  
- 
+ ## 参考文档
+ 1. [minikube](https://kubernetes.io/zh-cn/docs/tutorials/hello-minikube/)
