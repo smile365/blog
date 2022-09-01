@@ -1,5 +1,5 @@
 ---
-title: 在macbook下攻击和模拟 Mifare NFC 加密卡的简明指南
+title: 在 macbook 下攻击和模拟 Mifare NFC 加密卡的简明指南
 heading: 通过手机的 NFC 功能模拟加密的门禁卡
 date: 2021-09-04T01:08:42.169Z
 categories: ["code"]
@@ -17,6 +17,8 @@ description: 在苹果电脑的 osx 系统下实现手机和手环模拟加密�
 - PN532 读卡器
 - 小米8 手机（支持 NFC 功能）
 - macbook air （系统 10.15.7）
+
+> **注**: 不建议买 UID 卡，商家声称 UID 卡可修改 0 扇区，尝试了两家的产品都失败，若有知道的小伙伴可告知下方法。
 
 本教程所用到的软件：
 - [mfoc](https://github.com/nfc-tools/mfoc)
