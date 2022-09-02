@@ -7,18 +7,35 @@ tags:
 description: 
 ---
 
-location /foo {
-  proxy_pass http://localhost:3200/;
+
+参考[官方文档](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)在centos 7 安装 nginx
+```bash
+yum install nginx -y
+nginx -v
+nginx
+curl -I 127.0.0.1
+```
+
+编辑配置文件
+
+```nginx
+server {
+   listen       80;
+   listen       443 ssl;
+   server_name  *.sxy21.cn;
+
+   ssl_certificate      /etc/nginx/ssl/www.sxy21.cn.pem;
+   ssl_certificate_key  /etc/nginx/ssl/www.sxy21.cn.key;
+
+   ssl_session_cache    shared:SSL:1m;
+   ssl_session_timeout  5m;
+
+   ssl_ciphers  HIGH:!aNULL:!MD5;
+   ssl_prefer_server_ciphers  on;
+   root         /usr/share/nginx/html;
+   location / {
+       root   html;
+       index  index.html index.htm;
+   }
 }
-请注意指令/末尾的附加内容proxy_pass。NGINX 将去除匹配的前缀/foo并将剩余部分传递给 URI 处的后端服务器/。因此，http://myserver:80/foo/bar将在http://localhost:3200/bar.
-
-| location | proxy_pass | 正向路径 | 反向路径 |     |     |
-| -------- | ---------- | -------- | -------- | --- | --- |
-| /foo     |            | /foo     | /foo     |     |     |
-| /foo     | /          | /foo/bar | /bar     |     |     |
-|          |            |          |          |     |     |
-|          |            |          |          |     |     |
-
-
-参考文档 
-- [URL重写介绍](https://www.cnblogs.com/Nicholas0707/p/12210551.html)
+```
