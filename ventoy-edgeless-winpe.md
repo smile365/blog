@@ -11,9 +11,9 @@ description: winPE
 
 [u 盘工具箱](https://post.smzdm.com/p/a25dx0rp/)
 
-## 常见的 PE 系统
-- [ventoy](https://www.ventoy.net/cn/index.html)
-- [edgeless](https://home.edgeless.top/)
+## 制作 U 盘启动的 PE 或工具
+- [ventoy](https://www.ventoy.net/cn/index.html)，u 盘烧录工具
+- [edgeless](https://home.edgeless.top/)，强大且优雅无广告半开源的 pe 工具
 - [Hikari PE](https://hikaripe-sc.hikaricalyx.com/)
 - 优启通
 - 微PE
@@ -23,9 +23,9 @@ description: winPE
 - 大白菜
 
 
-## mac osx 下制作 edgeless 
+## 基于 ventoy 制作 edgeless 
 
-edgeless 提供 Windows 下的 U 盘自动制作工具， Linux 需要通过
+edgeless 提供 Windows 下的 U 盘启动制作工具， Linux 需要通过
 [ventoy Linux工具](https://wiki.edgeless.top/v2/guide/burn_manual.html)来制作。
 
 1. 下载依赖文件
@@ -48,16 +48,6 @@ df -h
 ventoy2disk.sh -i /dev/disk2s1
 ```
 
-
-
-## mac osx 下制作 ventoy
-[ventoy](https://github.com/ventoy/Ventoy/issues/3) 不支持 mac 系统，会报错，开发者也不打算支持。
-```
-chmod: -R: No such file or directory
-./tool/ventoy_lib.sh: line 55: ./tool/x86_64/hexdump: cannot execute binary file
-```
-
-
 ## linux 下制作 
 下载[ventoy-linux.tar.gz
 ](https://gitee.com/longpanda/Ventoy/releases/)
@@ -73,6 +63,14 @@ df -h
 umount /dev/sdc1
 # 写入 u 盘
 sudo /bin/bash Ventoy2Disk.sh -i /dev/sdc
+```
+
+
+##  mac osx 下制作 ventoy 启动盘
+[ventoy](https://github.com/ventoy/Ventoy/issues/3) 不支持 mac 系统，会报错，开发者近期也不打算支持。
+```
+chmod: -R: No such file or directory
+./tool/ventoy_lib.sh: line 55: ./tool/x86_64/hexdump: cannot execute binary file
 ```
 
 
