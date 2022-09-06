@@ -51,6 +51,11 @@ ventoy2disk.sh -i /dev/disk2s1
 
 
 ## mac osx 下制作 ventoy
+[ventoy](https://github.com/ventoy/Ventoy/issues/3) 不支持 mac 系统，会报错，开发者也不打算支持。
+```
+chmod: -R: No such file or directory
+./tool/ventoy_lib.sh: line 55: ./tool/x86_64/hexdump: cannot execute binary file
+```
 
 
 ## linux 下制作 
