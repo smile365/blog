@@ -83,13 +83,22 @@ chmod: -R: No such file or directory
 
 双击 VirtualBox-6.1.38-153438-OSX.dmg 进行安装，之后点击 VirtualBox -> 偏好设置 -> 扩展 -> 添加扩展，选择刚刚下载的扩展包安装，以便让 VirtualBox 的虚拟机读取宿主机的 USB 设备。
 
-### 创建虚拟机
+### 使用 ventoy 制作 u 盘启动
 1. 点击新建，依次填写名称/文件夹位置/类型/版本/内存/磁盘，如： ventoy-livecd、linux、other linux(64)、2048、不添加虚拟磁盘
 2. 点击刚刚创建的虚拟机 设置 -> 存储 -> 分配光驱 -> 选择刚刚下载的文件 ventoy-xxx-livecd.iso
 3. 点击 端口 -> usb 设备 -> 启用 usb 控制器 -> usb 3.0 ， 然后点击启动。
 4. 启动后点击右下角的 usb 图标，挂载需要制作的 u 盘，然后点击安装即可。
 
 > 注：如果出现 `Kernel driver not installed (rc=-1908) ` 错误，可按照[教程](https://stackoverflow.com/questions/65149373/kernel-driver-not-installed-rc-1908-getting-errors-in-macos-big-sur-11-0-1)解决
+
+
+### 写入Edgeless到U盘
+
+下载相关文件:
+- [ventoy wim插件](https://pineapple.edgeless.top/api/v2/info/ventoy_plugin_addr)
+- [Edgeless ISO镜像](https://pineapple.edgeless.top/api/v2/info/iso_addr)
+
+然后按照[教程](https://wiki.edgeless.top/v2/guide/burn_manual.html)把文件复制到 u 盘即可。
 
 
 
