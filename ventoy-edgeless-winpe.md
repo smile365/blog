@@ -25,7 +25,7 @@ description: winPE
 
 ## mac osx 下制作 edgeless 
 
-edgeless 提供 Windows 下的 U 盘自动制作工具，mac os 或 Linux 需要通过
+edgeless 提供 Windows 下的 U 盘自动制作工具， Linux 需要通过
 [ventoy Linux工具](https://wiki.edgeless.top/v2/guide/burn_manual.html)来制作。
 
 1. 下载依赖文件
