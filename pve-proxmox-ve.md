@@ -12,7 +12,28 @@ description:
 通过官网下载 iso 镜像 [proxmox-ve_7.2-1.iso](https://www.proxmox.com/en/downloads/category/iso-images-pve),推荐先下载 BitTorrent 然后通过迅雷等 bt 工具下载，国内下载 pve 系统特别慢。
 
 
-下载后放入已经制作好的 ventoy 的 u 盘中，插入电脑，设置 bios 从 u 盘启动。
+下载后放入已经制作好的 ventoy 的 u 盘中，插入电脑，设置 bios 从 u 盘启动。安装系统的时候建议插上网线，不然装完系统配置网络比较麻烦。
+
+如果有硬盘，需要[手动添加到 pve 系统](https://blog.csdn.net/qq_22182829/article/details/119682405)。
+```bash
+# 查看磁盘
+lsblk
+fdisk /dev/sda
+# 按提示依次输入 n/1/y/w
+mkfs -t ext4 /dev/sda1
+mkdir -p /mnt/data
+mount /dev/sda1 /mnt/data
+echo /dev/sda1 /mnt/data ext4 defaults 1 2 >> /etc/fstab
+reboot
+fdisk -l
+df -h
+```
+
+
+然后依次点击 数据中心 -> 存储 -> 添加目录，填写 data、/mnt/data、磁盘映像 即可。
+
+
+
 
 
 
