@@ -7,7 +7,7 @@ tags:
 description: 
 ---
 ## 安装 pve 系统
-通过 u 盘启动安装 Proxmox VE 系统。
+通过 u 盘启动安装 [Proxmox VE](https://pve.proxmox.com/pve-docs/pve-admin-guide.html) 系统。
 
 通过官网下载 iso 镜像 [proxmox-ve_7.2-1.iso](https://www.proxmox.com/en/downloads/category/iso-images-pve),推荐先下载 BitTorrent 然后通过迅雷等 bt 工具下载，国内下载 pve 系统特别慢。
 
@@ -33,6 +33,22 @@ df -h
 然后依次点击 数据中心 -> 存储 -> 添加目录，填写 data、/mnt/data、磁盘映像 即可。
 
 
+![](https://cdn.sxy21.cn/static/imgs/1662708792404.png)
+
+## 准备系统镜像和模板
+
+依次点击 local -> ISO 镜像/ CT 模板，上传镜像或模板。
+镜像下载地址：[tuna](https://mirrors.tuna.tsinghua.edu.cn/)
+模板下载地址：[proxmox-ct](http://download.proxmox.com/images/system/)
+
+ISO 镜像是用来创建虚拟机的，能力相当于 virtual box 。
+CT 模板是用来创建 [LXC 容器](https://262235.xyz/index.php/archives/727/)的，能力相当于 docker。
+
+
+
+## 使用 pve 制作 软路由
+
+qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 
 
 
