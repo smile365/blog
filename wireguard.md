@@ -38,26 +38,14 @@ Available subcommands:
 ```
 
 ```
-$ brew install wireguard-tools
-# 创建配置目录
-$ mkdir /usr/local/etc/wireguard
-#
-# 创建配置文件
-# 配置目录创建完成后，需要自己创建配置文件。配置文件内容就是前面的‘客户端配置文件’
-# vi命令使用前面已有介绍，此处不再赘述。
-$ vi /usr/local/etc/wireguard/wg0.conf
-
-# 启动服务
-$ sudo wg-quick up wg0 
-# 关闭服务
-$ sudo wg-quick down wg0
-# 查看WG是否启动
-$ sudo wg
-```
-
+# 安装
+brew install wireguard-tools
+# 创建目录和编辑配置文件
 mkdir /usr/local/etc/wireguard/
 vim /usr/local/etc/wireguard/wg0.conf
+```
 
+内容如下：
 ```nginxconf
 [Interface]
 PrivateKey = xxx
@@ -69,6 +57,15 @@ Endpoint = xxx:51820
 AllowedIPs = 10.0.8.0/24
 ```
 
+使用帮助
+```
+# 启动服务
+$ sudo wg-quick up wg0 
+# 关闭服务
+$ sudo wg-quick down wg0
+# 查看WG是否启动
+$ sudo wg 
+```
 
 ## centos 安装 wireguard
 
