@@ -85,16 +85,24 @@ yum install -y kmod-wireguard wireguard-tools
 
 参考文章[设置WireGuard ](https://www.myfreax.com/how-to-set-up-wireguard-vpn-on-centos-8/)
 
+```bash
+# 生成公钥和私钥
+wg genkey | sudo tee /etc/wireguard/privatekey | wg pubkey | sudo tee /etc/wireguard/publickey
+```
+
+编辑配置文件 `vim /etc/wireguard/wg0.conf`，内如如下：
 ```
 [Interface]
 Address = 10.0.8.1/24
 SaveConfig = true
 ListenPort = 51820
-PrivateKey = xxx
+# 上一步生成的私钥
+PrivateKey = xxx 
 PostUp     = firewall-cmd --zone=public --add-port 51820/udp && firewall-cmd --zone=public --add-masquerade
 PostDown   = firewall-cmd --zone=public --remove-port 51820/udp && firewall-cmd --zone=public --remove-masquerade
 ```
 
+启动
 ```
 # 启动
 wg-quick up wg0
