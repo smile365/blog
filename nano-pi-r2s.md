@@ -40,11 +40,15 @@ opkg install luci-app-shadowsocks-libev
 
 ## 安装 kcptun
 
+```
+opkg install kcptun-client
+scp /Users/songyangcong/Downloads/luci-app-kcptun_1.5.3_all.ipk root@192.168.2.1:/tmp
+scp /Users/songyangcong/Downloads/luci-i18n-kcptun-zh-cn_git-20.109.30409-d04c89b_all.ipk root@192.168.2.1:/tmp
+opkg install /tmp/luci-app-kcptun_1.5.3_all.ipk --force-overwrite --force-maintainer
+opkg install /tmp/luci-i18n-kcptun-zh-cn_git-20.109.30409-d04c89b_all.ipk
 
- opkg install kcptun-client
- /etc/config/kcptun
- kcptun-client -v
- 
+# kcptun-client -v
+```
  
  ## 配置 ss
  
