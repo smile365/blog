@@ -16,12 +16,22 @@ description:  NanoPi R2S mac osx 固件烧录教程
 8. 密码 password 
 
 
+![](https://cdn.sxy21.cn/static/imgs/1663144573181.png)
 
+开启 ssh 并登录 ssh root@192.168.2.1 修改软件下载的镜像为清华源[OpenWRT (LEDE) 镜像](https://mirrors.tuna.tsinghua.edu.cn/help/openwrt/)
 
-![enter description here](https://cdn.sxy21.cn/static/imgs/1663144573181.png)
+```bash
+# 替换源
+sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+opkg update
 
+# 安装 ss
+opkg install shadowsocks-libev-ss-local shadowsocks-libev-ss-redir shadowsocks-libev-ss-rules shadowsocks-libev-ss-tunnel
 
+## 安装 ss 的 web-ui
+opkg install luci-app-shadowsocks-libev
 
+```
 
 
  opkg install kcptun-client
