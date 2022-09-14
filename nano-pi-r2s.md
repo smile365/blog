@@ -18,6 +18,13 @@ description:  NanoPi R2S mac osx 固件烧录教程
 
 
 
-
-
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1663144573181.png)
+
+
+
+
+
+ opkg install kcptun-client
+ /etc/config/kcptun
+ kcptun-client -v
+ 
