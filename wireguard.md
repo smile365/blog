@@ -41,8 +41,9 @@ Available subcommands:
 # 安装
 brew install wireguard-tools
 # 创建目录和编辑配置文件
-mkdir /usr/local/etc/wireguard/
-vim /usr/local/etc/wireguard/wg0.conf
+sudo mkdir /usr/local/etc/wireguard/
+sudo vim /usr/local/etc/wireguard/wg0.conf
+
 ```
 
 内容如下：
@@ -181,7 +182,6 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 
 
 参考文章
-- [wireguard内网穿透](https://www.wangairui.com/docs/kaiyuan/kaiyuan-1ctpaoqssmls6)
 - [wireGuard安装和配置过程](https://ggqshr.github.io/2020-12-21/wireGuard%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/)
 - [WireGuard 教程：使用 DNS-SD 进行 NAT-to-NAT 穿透](https://xie.infoq.cn/article/3f68cde0163b359b13fa1a8f0)
 - [WireGuard 的工作原理](https://fuckcloudnative.io/posts/wireguard-docs-theory/)
