@@ -43,7 +43,9 @@ opkg install luci-app-shadowsocks-libev
 ```
 opkg install kcptun-client
 scp /Users/songyangcong/Downloads/luci-app-kcptun_1.5.3_all.ipk root@192.168.2.1:/tmp
+
 scp /Users/songyangcong/Downloads/luci-i18n-kcptun-zh-cn_git-20.109.30409-d04c89b_all.ipk root@192.168.2.1:/tmp
+
 opkg install /tmp/luci-app-kcptun_1.5.3_all.ipk --force-overwrite --force-maintainer
 opkg install /tmp/luci-i18n-kcptun-zh-cn_git-20.109.30409-d04c89b_all.ipk
 
@@ -57,7 +59,7 @@ opkg install /tmp/luci-i18n-kcptun-zh-cn_git-20.109.30409-d04c89b_all.ipk
  使用 [ChinaDNS](http://douxinchun.github.io/blog/20210302/install-shadowsocks-on-openwrt.html)避免 域名解析污染
  
  ```bash 
- opkg print-architecture
+opkg print-architecture
  # # aarch64_generic
  # vim /etc/opkg/customfeeds.conf 
  # 增加软件源
@@ -68,3 +70,18 @@ opkg install ChinaDNS
 opkg install luci-app-chinadns
 
 ```
+
+
+## 其他固件推荐
+
+- [istoreos](https://doc.linkease.com/zh/guide/istoreos/#istoreos%E7%AE%80%E4%BB%8B)
+- [DHDAXCW 骷髅头](https://github.com/DHDAXCW/NanoPi-R2S-rk3328)
+- [klever1988](https://github.com/klever1988/nanopi-openwrt)
+- [biliwala](https://github.com/biliwala/nanopi-openwrt/releases)
+- [YAOF](https://github.com/QiuSimons/YAOF)
+- [openwrt-rockchip](https://github.com/quintus-lab/openwrt-rockchip/releases)
+
+
+##  参考文档
+- [OpenWRT 配置 WireGuard ](https://www.ioiox.com/archives/143.html/comment-page-3#comments)
+- [OpenWrt / LEDE 安装 WireGuard](https://steemit.com/cn/@curl/openwrt-lede-wireguard-vpn)
