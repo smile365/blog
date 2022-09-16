@@ -9,8 +9,8 @@ description:  NanoPi R2S mac osx 固件烧录教程
 ## 固件烧录
 
 固件烧录步骤：
-1. 到官网下载 [FriendlyWrt系统固件](http://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2S/zh#.E5.AE.89.E8.A3.85.E7.B3.BB.E7.BB.9F)，将下载的 rk3328-sd-friendlywrt-22.03-YYYYMMDD.img.gz 文件解压。
-2. 使用 [etcher](https://www.balena.io/etcher) 把 img 文件烧录到 tf 卡中，然后把 tf 卡插入 r2s 。
+1. 到官网下载 [FriendlyWrt系统固件](http://wiki.friendlyelec.com/wiki/index.php/NanoPi_R2S/zh#.E5.AE.89.E8.A3.85.E7.B3.BB.E7.BB.9F)，下载名字为 rk3328-sd-friendlywrt-22.03-YYYYMMDD.img.gz 的文件。
+2. 使用 [etcher](https://www.balena.io/etcher) 把 img.gz  文件烧录到 tf 卡中，然后把 tf 卡插入 r2s 。
 3. 用网线连接路由器和 r2s wan 口（远离 type-c 口的网口），插入电源启动。
 4. 到路由器查看新连接的 ip 证明启动成功。
 6. 用一根网线连接笔记本和 r2s 的 lan 口（靠近 type-c 的网口）。
@@ -72,7 +72,19 @@ opkg install luci-app-chinadns
 ```
 
 
+## 安装 wireguard
+```bash
+mkdir -p /usr/local/etc/wireguard/
+cd /usr/local/etc/wireguard/
+wg genkey | tee privatekey | wg pubkey > publickey
+ip link add wg0 type wireguard
+ip addr add 10.0.8.7/24 dev wg0 
+
+```
+
+
 ## 其他固件推荐
+FriendlyWrt 的官方固件比较粗糙，且交互不方便，可以下载第三方固件使用。
 
 - [istoreos](https://doc.linkease.com/zh/guide/istoreos/#istoreos%E7%AE%80%E4%BB%8B)
 - [DHDAXCW 骷髅头](https://github.com/DHDAXCW/NanoPi-R2S-rk3328)
@@ -83,5 +95,6 @@ opkg install luci-app-chinadns
 
 
 ##  参考文档
-- [OpenWRT 配置 WireGuard ](https://www.ioiox.com/archives/143.html/comment-page-3#comments)
+- [OpenWRT 配置 WireGuard ](https://www.ioiox.com/archives/143.html)
 - [OpenWrt / LEDE 安装 WireGuard](https://steemit.com/cn/@curl/openwrt-lede-wireguard-vpn)
+- [openwrt中的wireguard](https://b1.planetnp.com/wireguard_on_openwrt.html)
