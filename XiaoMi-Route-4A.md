@@ -177,6 +177,12 @@ reboot #重启路由器
 3. 在 [Breed](http://192.168.1.1/) 界面上传固件并更新（等待一分钟左右，电脑重新获取 ip 即更新完成）
 ![](./images/1665246809221.png)
 
+（未完待续，变砖了）
+按重启键无效，蓝灯常亮，可自动获取 ip，但是获取不到路由器，应该是变成交换机模式了。
+
+
+
+
 ## 参考文档
 - [Win10下对小米路由器刷Openwrt](https://article.itxueyuan.com/W1XE4A)
 - [小米路由器4A千兆版](https://cn.jetapple.com/routers/xiaomi-mir4a/)
