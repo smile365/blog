@@ -184,10 +184,12 @@ reboot #重启路由器
 
 
 ## 小米路由器变砖救回之路
-CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html)，但是没找到烧写固件的程序。只能在 Windows 平台操作。但手头没有 win 电脑，不过有 vpe，使用 vpe 创建了一个 Windows 11，然后在 win11 下完成以下教程。
+CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html)，但是没找到烧写固件的程序。只能在 Windows 平台操作。但手头没有 win 电脑，不过有 pve，使用 pve 创建了一个 Windows 11，然后在 win11 下完成以下教程。
 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1665571022085.png)
-按照教程 [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)组装好硬件和安装软件，刷入时选择 breed-mt7621-pbr-m1.bin 。烧录完成后启动路由器进入 192.168.1.1 看到 
+1. 下载官方[原版固件](http://miwifi.com/miwifi_download.html)
+2. 按照教程 [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)组装好硬件和安装软件，刷入时选择刚下载的 miwifi_r4a_all_cddf4_2.28.69.bin 。
+3. 烧录完成后启动路由器进入 192.168.1.1 看到 
 
 
 ## 参考文档
