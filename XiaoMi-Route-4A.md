@@ -183,11 +183,17 @@ reboot #重启路由器
 查了资料发现是刷错固件了，估计把 breed 的地址给重写了。需要买一个[CH341A 编程器](https://post.smzdm.com/p/ar08wxl7/) 来救砖。
 
 
+## 小米路由器变砖救回之路
+按照教程 [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)组装好硬件和安装软件，刷入时选择 breed-mt7621-pbr-m1.bin 。
 
+
+
+CH341A 小米4a 路由器
 
 
 ## 参考文档
 - [Win10下对小米路由器刷Openwrt](https://article.itxueyuan.com/W1XE4A)
 - [小米路由器4A千兆版](https://cn.jetapple.com/routers/xiaomi-mir4a/)
 - [小米路由器4A 刷入 Breed 与 Padavan ](https://wuuconix.link/2021/09/08/padavan/)
+- [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)
 
