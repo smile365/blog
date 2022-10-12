@@ -36,7 +36,7 @@ description: install Windows 11 on pve
 然后搜索激活工具 HEU KMS Activator 或者 AAct Portable 进行激活。
 
 
-## 挂载 u盘 
+## 挂载 usb 设备或 u 盘 
 参考官方文档[USB_Devices_in_Virtual_Machines](https://pve.proxmox.com/wiki/USB_Devices_in_Virtual_Machines)
 1. 把 usb 设备插入 pve 主机，查看 usb 设备 ID。
 ```bash
@@ -46,6 +46,7 @@ Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 002: ID 8087:800a Intel Corp. Hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 048: ID 1a86:5512 QinHeng Electronics CH341 in EPP/MEM/I2C mode, EPP/I2C adapter
 Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 # 如果是可以直接识别的设备会直接显示设备信息
 #如： Bus 004 Device 002: ID 0951:1666 Kingston Technology DataTraveler 100 G3/G4/SE9 G2/50
@@ -54,11 +55,13 @@ Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
  2.  把设备挂载到虚拟机
 
 ```bash
-qm set 102 -usb0 host=058f:6387
+qm set 102 -usb0 host=1a86:5512
 # 102 是虚拟机 id，host 是上一步查到的 usb 设备 id。
+# 容器虚拟机
 ```
 
-
+也可以通过菜单 硬件 -> usb 设备 来添加。
+![enter description here](https://cdn.sxy21.cn/static/imgs/1665572932593.png)
 
 ## 参考文档 
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
