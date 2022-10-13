@@ -181,7 +181,7 @@ reboot #重启路由器
 按重启键无效，蓝灯常亮，可自动获取 ip，但是获取不到路由器，应该是变成交换机模式了。
 
 查了资料听说是刷错固件了，估计把 breed 的地址给重写了。需要买一个[CH341A 编程器](https://post.smzdm.com/p/ar08wxl7/) 来救砖。
-
+（难道是用编程器固件那个界面？）
 
 ## 小米路由器变砖救回之路
 CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html)，但是没找到烧写固件的程序。只能在 Windows 平台操作。但手头没有 win 电脑，不过有 pve，使用 pve 创建了一个 Windows 11，然后在 win11 下完成以下教程。
@@ -204,6 +204,8 @@ CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_M
 
 **成功案例**
 使用  breed 同时刷入 eeprom.bin 和 GitHub 提供的[固件](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases) 竟然成功了。
+
+## ss
 
 
 
