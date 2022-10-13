@@ -180,16 +180,32 @@ reboot #重启路由器
 （未完待续，变砖了）
 按重启键无效，蓝灯常亮，可自动获取 ip，但是获取不到路由器，应该是变成交换机模式了。
 
-查了资料发现是刷错固件了，估计把 breed 的地址给重写了。需要买一个[CH341A 编程器](https://post.smzdm.com/p/ar08wxl7/) 来救砖。
+查了资料听说是刷错固件了，估计把 breed 的地址给重写了。需要买一个[CH341A 编程器](https://post.smzdm.com/p/ar08wxl7/) 来救砖。
 
 
 ## 小米路由器变砖救回之路
 CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html)，但是没找到烧写固件的程序。只能在 Windows 平台操作。但手头没有 win 电脑，不过有 pve，使用 pve 创建了一个 Windows 11，然后在 win11 下完成以下教程。
 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1665571022085.png)
-1. 下载官方[原版固件](http://miwifi.com/miwifi_download.html)
-2. 按照教程 [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)组装好硬件和安装软件，刷入时选择刚下载的 miwifi_r4a_all_cddf4_2.28.69.bin 。
-3. 烧录完成后启动路由器进入 192.168.1.1 看到 
+1. 按照教程 [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)组装好硬件和安装软件，刷入之前备份的 all.bin 文件。
+2. 烧录完成后启动路由器进入 192.168.31.1 看到官方路由器界面，成功。
+3. 或者用编程器刷入固件  breed-mt7621-pbr-m1.bin
+4. 即可救回。
+
+**失败案例**
+救回后使用 breed 刷入 openwrt 官网提供的固件失败。
+一、经过测试直接用编程器刷入以下固件失败（现象是笔记本电脑无法获取 ip 正确地址）
+1. openwrt-22.03.0-ramips-mt76x8-xiaomi_mi-router-4a-100m-squashfs-sysupgrade.bin
+2. openwrt-21.02.3-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin 
+3. openwrt-22.03.0-ramips-mt7621-xiaomi_mi-router-4a-gigabit-initramfs-kernel.bin
+所以该用哪个版本，如何刷固件？
+
+二、刷好 breed 然后依次刷 eeprom.bin、openwrt-22.03.0-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin 失败。现象是不停重启（电缆以拔出、已连接循环）
+
+**成功案例**
+使用  breed 同时刷入 eeprom.bin 和 GitHub 提供的[固件](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases) 竟然成功了。
+
+
 
 
 ## 参考文档
