@@ -203,10 +203,40 @@ CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_M
 二、刷好 breed 然后依次刷 eeprom.bin、openwrt-22.03.0-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin 失败。现象是不停重启（电缆以拔出、已连接循环）
 
 **成功案例**
-使用  breed 同时刷入 eeprom.bin 和 GitHub 提供的[固件](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases) 竟然成功了。
+使用  breed 同时刷入 eeprom.bin 和 GitHub 提供的[固件](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases) 竟然成功了。但是这个固件的分区不合理
+，启动后 root 分区完全没剩余了，导致进行一些操作会提示 no space。
+```bash
+文件系统	挂载点	可用	已用	卸载分区
+/dev/root	/rom	0.00 B / 12.00 MB	100% (12.00 MB) 
+tmpfs		/tmp	58.54 MB / 59.31 MB	1% (788.00 KB)
+/dev/mtdblock6	/overlay	976.00 KB / 1.25 MB	24% (304.00 KB)
+overlayfs:/overlay	/	976.00 KB / 1.25 MB	24% (304.00 KB)
+tmpfs	/dev	512.00 KB / 512.00 KB	0% (0.00 B)
+```
+
 
 ## ss
+查看  CPU 架构
+```bash
+opkg print-architecture
+# arch mipsel_24kc 10
+```
 
+结果是 mipsel_24kc ，所需工具：
+1. [shadowsocks-libev_3.3.5-1_mips_24kc.ipk](https://github.com/shadowsocks/openwrt-shadowsocks)
+2. [luci-app-shadowsocks_2.1.1-1_all.ipk](https://github.com/shadowsocks/luci-app-shadowsocks/releases)
+3. [kcptun-client_mipsel_24kc.ipk](https://github.com/kuoruan/openwrt-kcptun/releases)
+4. [luci-app-kcptun_1.5.3_all.ipk](https://github.com/kuoruan/luci-app-kcptun/releases),luci-i18n-kcptun-zh*.ipk 是中文语言包
+
+
+把下载的 ipk 文件上传到路由器
+```bash
+# 路由器存储比较少，/tmp 空余存储比较多
+mkdir -p /tmp/ipk
+#
+scp ~/Downloads/*.ipk root@192.168.1.1:/tmp/ipk
+cd /tmp/ipk
+```
 
 
 
