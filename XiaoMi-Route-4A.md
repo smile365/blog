@@ -4,7 +4,7 @@ heading:
 date: 2022-10-08T09:32:10.680Z
 categories: ["code"]
 tags: 
-description: 小米路由器 4A 刷机 OpenWRT
+description: 小米路由器 4A 刷机 OpenWRT，Mi Router 4A (MIR4A)
 ---
 
 ## 准备
@@ -13,11 +13,11 @@ mac 系统下对小米路由器 4a 刷机。
 环境：
 - macOS 12.4
 - Python 3.7
-- 小米路由器 4A 千兆版(R4A)	MiWiFi 稳定版 2.28.58,	Xiaomi Mi Router 4A Gigabit Edition
+- 小米路由器 4A 千兆版(R4A)	MiWiFi 稳定版 2.28.58
 
 所需工具：
 - [OpenWRTInvasion](https://github.com/acecilia/OpenWRTInvasion)，获取 shell 和 root 权限。
-- [Breed](https://breed.hackpascal.net/)，嵌入式设备的引导和恢复环境 (BREED)。
+- ~~[Breed](https://breed.hackpascal.net/)，嵌入式设备的引导和恢复环境 (BREED)。~~  变砖了，不用此方法。
 - [OpenWrt](https://downloads.openwrt.org/)，开源路由器固件。
 
 
@@ -161,7 +161,11 @@ dd if=/dev/mtd3 of=/tmp/eeprom.bin
 路由器没有 sftp（scp）,默认开启了 ftp，可以通过 Viper FTP 工具把备份文件拷贝到电脑。
 
 
-## 刷入 Breed
+## 刷入 Breed （无需此步骤）
+（20221014 更新，获取 shell 之后可以直接更具 openwrt 官网教程刷入 openwrt，无需 breed）
+
+** 可直接跳到 「刷入 openwrt（成功）」查看正确方法
+
 1. 下载 [breed-mt7621-pbr-m1.bin](https://breed.hackpascal.net/)
 2. 使用 Viper FTP 上传到路由器的 /tmp 目录下 
 3. 刷入 breed
@@ -171,7 +175,7 @@ reboot #重启路由器
 ```
 
 
-## 刷入 openwrt
+## 刷入 openwrt （变砖）
 1. 进入 [openwrt](https://downloads.openwrt.org/) 官网，进入 ram 架构芯片为 mt7621 的文件目录，搜索 xiaomi_mi-router-4a-100m。
 2. 下载 [xiaomi_mi-router-4a-100m-squashfs-sysupgrade.bin](https://downloads.openwrt.org/releases/22.03.0/targets/ramips/mt76x8/openwrt-22.03.0-ramips-mt76x8-xiaomi_mi-router-4a-100m-squashfs-sysupgrade.bin)
 3. 在 [Breed](http://192.168.1.1/) 界面上传固件并更新（等待一分钟左右，电脑重新获取 ip 即更新完成）
@@ -223,7 +227,15 @@ Collected errors:
 登录 openwrt 依次点击 系统-> 备份/升级 更换固件为 openwrt-22.03.0-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin，此时又变砖了。
 
 
-
+## 刷入 openwrt（成功）
+折腾半天，其实 openwrt 官网有更简单的[教程](https://openwrt.org/inbox/toh/xiaomi/xiaomi_mi_router_4a_gigabit_edition)。
+1. 根据教程下载固件 [openwrt-22.03.1-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin](https://openwrt.org/inbox/toh/xiaomi/xiaomi_mi_router_4a_gigabit_edition) 
+2. 使用 ftp 工具（我用的是 viper ftp）上传到 /tmp/mnt 目录，改名为 openwrt.bin 。
+3. 使用 `telnet miwifi` 登录路由器的 shell 环境并到固件目录  `cd /tmp/mnt`
+4. 使用如下命令烧录固件：
+```bash
+mtd -e OS1 -r write openwrt.bin OS1
+```
 
 ## ss
 查看  CPU 架构
