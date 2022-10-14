@@ -251,15 +251,97 @@ opkg update
 - luci-app-opkg
 - luci-i18n-opkg-zh-cn
 
-安装完刷新页面即可。
+
+在 系统 -> 系统属性 -> 常规设置 把时区设置成 「Asia/Shanghai」
 
 
 ## ss
-查看  CPU 架构
+
 ```bash
+# 查看  CPU 架构
 opkg print-architecture
 # arch mipsel_24kc 10
+# 安装 ss
+opkg install shadowsocks-libev-ss-local shadowsocks-libev-ss-redir shadowsocks-libev-ss-rules shadowsocks-libev-ss-tunnel
+# 安装 ui
+opkg install luci-app-shadowsocks-libev luci-i18n-shadowsocks-libev-zh-cn
 ```
+
+
+## passwall
+注释掉 option check_signature
+```bash
+cat /etc/opkg.conf
+dest root /
+dest ram /tmp
+lists_dir ext /var/opkg-lists
+option overlay_root /overlay
+#option check_signature
+```
+
+
+点击 系统 -> 软件包 -> 配置 opkg，custom 处增加一行：
+```
+src/gz openwrt_kiddin9 https://op.supes.top/packages/mipsel_24kc
+```
+
+安装的时候提示挂载点 overlay 空间不足：
+```bash
+# Only have 268kb available on filesystem /overlay, pkg luci-app-passwall needs 960
+# 查看挂载点容量
+root@OpenWrt:~# df -h
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 3.8M      3.8M         0 100% /rom
+tmpfs                    59.0M      2.1M     56.8M   4% /tmp
+/dev/mtdblock10           8.3M      8.2M    140.0K  98% /overlay
+overlayfs:/overlay        8.3M      8.2M    140.0K  98% /
+tmpfs                   512.0K         0    512.0K   0% /dev
+```
+
+安装 cfdisk 扩容，提示 No space left on device
+```bash
+# opkg install cfdisk
+Collected errors:
+ * wfopen: //usr/lib/opkg/info/libuuid1.control: No space left on device.
+ * wfopen: //usr/lib/opkg/info/libuuid1.postinst: No space left on device.
+ * wfopen: //usr/lib/opkg/info/libuuid1.prerm: No space left on device.
+ * extract_archive: Cannot create symlink from ./usr/lib/libuuid.so.1 to 'libuuid.so.1.3.0': No space left on device.
+ * pkg_write_filelist: Failed to open //usr/lib/opkg/info/libblkid1.list: No space left on device.
+ * opkg_install_pkg: Failed to extract data files for libblkid1. Package debris may remain!
+ * opkg_install_cmd: Cannot install package cfdisk.
+ * opkg_conf_write_status_files: Can't open status file //usr/lib/opkg/status: No space left on device.
+```
+
+
+
+```bash
+opkg install dns2socks dns2tcp microsocks tcping ipt2socks shadowsocksr-libev-ssr-local shadowsocksr-libev-ssr-redir simple-obfs trojan-plus
+```
+Collected errors:
+ * pkg_hash_check_unresolved: cannot find dependency dns2socks for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency dns2tcp for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency microsocks for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency tcping for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency ipt2socks for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency shadowsocksr-libev-ssr-local for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency shadowsocksr-libev-ssr-redir for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency simple-obfs for luci-app-passwall
+ * pkg_hash_check_unresolved: cannot find dependency trojan-plus for luci-app-passwall
+ * pkg_hash_fetch_best_installation_candidate: Packages for luci-app-passwall found, but incompatible with the architectures configured
+
+
+
+
+
+## kcptun
+
+```bash
+opkg install kcptun-client
+```
+
+
+
+
 
 结果是 mipsel_24kc ，所需工具：
 1. [shadowsocks-libev_3.3.5-1_mips_24kc.ipk](https://github.com/shadowsocks/openwrt-shadowsocks)
