@@ -13,7 +13,7 @@ mac 系统下对小米路由器 4a 刷机。
 环境：
 - macOS 12.4
 - Python 3.7
-- 小米路由器 4A 千兆版(R4A)	MiWiFi 稳定版 2.28.58
+- 小米路由器 4A 千兆版(R4A)	MiWiFi 稳定版 2.28.58,	Xiaomi Mi Router 4A Gigabit Edition
 
 所需工具：
 - [OpenWRTInvasion](https://github.com/acecilia/OpenWRTInvasion)，获取 shell 和 root 权限。
@@ -202,7 +202,7 @@ CH341A 编程器有 macos 下的[驱动](https://www.wch.cn/downloads/CH341SER_M
 
 二、刷好 breed 然后依次刷 eeprom.bin、openwrt-22.03.0-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin 失败。现象是不停重启（电缆以拔出、已连接循环）
 
-**成功案例**
+**半成功案例**
 使用  breed 同时刷入 eeprom.bin 和 GitHub 提供的[固件](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt/releases) 竟然成功了。但是这个固件的分区不合理
 ，启动后 root 分区完全没剩余了，导致进行一些操作会提示 no space。
 ```bash
@@ -212,7 +212,17 @@ tmpfs		/tmp	58.54 MB / 59.31 MB	1% (788.00 KB)
 /dev/mtdblock6	/overlay	976.00 KB / 1.25 MB	24% (304.00 KB)
 overlayfs:/overlay	/	976.00 KB / 1.25 MB	24% (304.00 KB)
 tmpfs	/dev	512.00 KB / 512.00 KB	0% (0.00 B)
+
+opkg install kcptun-client_20210103-1_mipsel_24kc.ipk
+Installing kcptun-client (20210103-1) to root...
+Collected errors:
+ * verify_pkg_installable: Only have 976kb available on filesystem /overlay, pkg kcptun-client needs 2163
+ * opkg_install_cmd: Cannot install package kcptun-client.
 ```
+
+登录 openwrt 依次点击 系统-> 备份/升级 更换固件为 openwrt-22.03.0-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin，此时又变砖了。
+
+
 
 
 ## ss
