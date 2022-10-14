@@ -237,6 +237,23 @@ Collected errors:
 mtd -e OS1 -r write openwrt.bin OS1
 ```
 
+## openwrt 后台语言改为中文
+通过 system -> administration -> ssh 打开 ssh
+```bash
+#更改软件源
+cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf.bak
+sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+opkg update
+```
+
+选择「System」->「Software」点击 Update lists，然后搜索并安装以下软件：
+- luci-i18n-base-zh-cn
+- luci-app-opkg
+- luci-i18n-opkg-zh-cn
+
+安装完刷新页面即可。
+
+
 ## ss
 查看  CPU 架构
 ```bash
