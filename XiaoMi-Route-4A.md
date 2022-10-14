@@ -252,7 +252,9 @@ opkg update
 - luci-i18n-opkg-zh-cn
 
 
-在 系统 -> 系统属性 -> 常规设置 把时区设置成 「Asia/Shanghai」
+在 系统 -> 系统属性 -> 常规设置 :
+- 时区设置成 「Asia/Shanghai」
+- 语言改为「 简体中文」
 
 
 ## ss
