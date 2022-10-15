@@ -264,6 +264,7 @@ opkg update
 opkg print-architecture
 # arch mipsel_24kc 10
 # 安装 ss
+opkg install luci luci-base luci-compat
 opkg install shadowsocks-libev-ss-local shadowsocks-libev-ss-redir shadowsocks-libev-ss-rules shadowsocks-libev-ss-tunnel
 # 安装 ui
 opkg install luci-app-shadowsocks-libev luci-i18n-shadowsocks-libev-zh-cn
