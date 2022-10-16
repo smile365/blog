@@ -90,7 +90,7 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 
 ## Chrome OS Flex
 
-系统介绍可参考[Chrome OS Flex 安装与体验](https://sspai.com/post/72764)
+系统介绍可参考[Chrome OS Flex 安装与体验](https://sspai.com/post/72764),安装参考[在PVE中安装chromeos flex](https://yyr.moe/index.php/100/)
 
 
 ## 创建 CT
