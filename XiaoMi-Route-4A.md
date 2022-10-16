@@ -244,12 +244,15 @@ mtd -e OS1 -r write openwrt.bin OS1
 cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf.bak
 sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
 opkg update
+
+opkg install luci-i18n-base-zh-cn luci-app-opkg luci-i18n-opkg-zh-cn
 ```
 
-选择「System」->「Software」点击 Update lists，然后搜索并安装以下软件：
+也可以通过管理面板安装，选择「System」->「Software」点击 Update lists，然后搜索并安装以下软件：
 - luci-i18n-base-zh-cn
 - luci-app-opkg
 - luci-i18n-opkg-zh-cn
+
 
 
 在 系统 -> 系统属性 -> 常规设置 :
@@ -264,7 +267,7 @@ opkg update
 opkg print-architecture
 # arch mipsel_24kc 10
 # 安装 ss
-opkg install luci luci-base luci-compat
+# opkg install luci luci-base luci-compat
 opkg install shadowsocks-libev-ss-local shadowsocks-libev-ss-redir shadowsocks-libev-ss-rules shadowsocks-libev-ss-tunnel
 # 安装 ui
 opkg install luci-app-shadowsocks-libev luci-i18n-shadowsocks-libev-zh-cn
