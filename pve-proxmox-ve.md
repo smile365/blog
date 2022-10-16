@@ -76,6 +76,10 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 2. 
 
 
+## Debian 11
+
+下载 [debian-11.5.0-amd64-netinst.iso](https://www.debian.org/download)
+
 ## 创建 CT
 
 
