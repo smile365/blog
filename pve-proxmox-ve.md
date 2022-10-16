@@ -9,7 +9,7 @@ description:
 ## 安装 pve 系统
 通过 u 盘启动安装 [Proxmox VE](https://pve.proxmox.com/pve-docs/pve-admin-guide.html) 系统。
 
-通过官网下载 iso 镜像 [proxmox-ve_7.2-1.iso](https://www.proxmox.com/en/downloads/category/iso-images-pve),推荐先下载 BitTorrent 然后通过迅雷等 bt 工具下载，国内下载 pve 系统特别慢。或者通过[清华源](https://mirrors.tuna.tsinghua.edu.cn/proxmox/iso/)镜像站下载
+通过官网下载 iso 镜像 [proxmox-ve_7.2-1.iso](https://www.proxmox.com/en/downloads/category/iso-images-pve),推荐先下载 BitTorrent 然后通过迅雷等 bt 工具下载，国内下载 pve 系统特别慢。或者通过[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/proxmox/)镜像站下载
 
 
 下载后放入已经制作好的 ventoy 的 u 盘中，插入电脑，设置 bios 从 u 盘启动。安装系统的时候建议插上网线，不然装完系统配置网络比较麻烦。
@@ -38,8 +38,8 @@ df -h
 ## 准备系统镜像和模板
 
 依次点击 local -> ISO 镜像/ CT 模板，上传镜像或模板。
-镜像下载地址：[tuna](https://mirrors.tuna.tsinghua.edu.cn）(https://mirrors.tuna.tsinghua.edu.cn/proxmox/iso/)
-模板下载地址：[proxmox-ct](http://download.proxmox.com/images/system/)
+镜像下载地址：[tuna](https://mirrors.ustc.edu.cn/proxmox/images/system/)
+模板下载地址：[proxmox-ct](https://mirrors.ustc.edu.cn/proxmox/images/system/)
 
 ISO 镜像是用来创建虚拟机的，能力相当于 virtual box 。
 CT 模板是用来创建 [LXC 容器](https://262235.xyz/index.php/archives/727/)的，能力相当于 docker。
@@ -70,9 +70,21 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 然后搜索激活工具 HEU KMS Activator 或者 AAct Portable 进行激活。
 
 
+## CentOS-Stream-9
+
+1. 下载 [CentOS-Stream-9-20221003.2-x86_64-boot.iso](http://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/)
+2. 
 
 
-参考文档 
+## 创建 CT
+
+
+## 创建模板
+
+## 备份和快照
+
+
+## 参考文档 
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
 - [pandownload](https://pandownload.net/document/download.html)
 
