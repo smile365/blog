@@ -80,6 +80,19 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 
 下载 [debian-11.5.0-amd64-netinst.iso](https://www.debian.org/download)
 
+
+## deepin 23
+下载[deepin-desktop-community-23-preview-amd64.iso](https://www.deepin.org/zh/download/)
+
+## linux-mint 
+介绍参考: [个人桌面级 Linux 操作系统](https://www.iplaysoft.com/linux-mint.html)
+从阿里云的镜像下载 [linuxmint-21-cinnamon-64bit.iso](https://linuxmint.com/edition.php?id=299)
+
+## Chrome OS Flex
+
+系统介绍可参考[Chrome OS Flex 安装与体验](https://sspai.com/post/72764)
+
+
 ## 创建 CT
 
 
