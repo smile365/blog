@@ -116,6 +116,8 @@ PasswordAuthentication yes
 # 启动
 systemctl start sshd
 ```
+如果提示 `Error: Failed to download metadata for repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist`，可以参考[教程](https://haydenjames.io/fix-error-failed-to-download-metadata-for-repo-appstream-centos-8/)操作。
+
 
 ## 创建模板
 
