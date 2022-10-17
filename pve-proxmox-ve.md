@@ -36,11 +36,10 @@ df -h
 ![](https://cdn.sxy21.cn/static/imgs/1662708792404.png)
 
 ## 准备系统镜像和模板
-如果使用 linux，且不需要桌面环境，那推荐使用 CT 模板创建 Linux 容器，安装非常快速，CT 模板文件一般百兆以内。下载 CT 路径：local -> CT 模板 / 模板
+如果使用 linux，且不需要桌面环境，那推荐使用 CT 模板创建 Linux 容器，安装非常快速，CT 模板文件一般百兆以内。下载 CT 路径：local -> CT 模板 / 模板。
 
 依次点击 local -> ISO 镜像/ CT 模板，上传镜像或模板。
-镜像下载地址：[tuna](https://mirrors.ustc.edu.cn/proxmox/images/system/)
-模板下载地址：[proxmox-ct](https://mirrors.ustc.edu.cn/proxmox/images/system/)
+模板下载地址：[proxmox-ct](https://mirrors.ustc.edu.cn/proxmox/images/system/)、[tuna](https://mirrors.ustc.edu.cn/proxmox/images/system/)
 
 ISO 镜像是用来创建虚拟机的，能力相当于 virtual box 。
 CT 模板是用来创建 [LXC 容器](https://262235.xyz/index.php/archives/727/)的，能力相当于 docker。
