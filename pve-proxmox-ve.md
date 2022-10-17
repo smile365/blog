@@ -98,6 +98,20 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 1. 先下载模板，依次点击 local -> CT 模板 / 模板，搜索需要使用的模板。
 2. 下载成功后点击创建 CT，选择刚刚下载好的模板
 3. 网络选择 DHCP （默认是静态，需要自己设置 ip）
+4. 配置 ssh
+```bash
+# 安装 openssh
+yum install -y openssh-server
+# 修改配置文件 
+vi /etc/ssh/sshd_config
+# cat /etc/ssh/sshd_config
+Port 22
+AddressFamily any
+ListenAddress 0.0.0.0
+ListenAddress ::
+
+PermitRootLogin yes
+```
 
 ## 创建模板
 
