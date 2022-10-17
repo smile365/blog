@@ -71,10 +71,10 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 
 
 ## CentOS-Stream-9
-
+boot 镜像是从网络安装，安装时虚拟机必须有网，安装过程参考[NetBoot ISO 安装 CentOS 8](https://linuxhint.com/install_centos8_netboot_iso/)。
 1. 下载 [CentOS-Stream-9-20221003.2-x86_64-boot.iso](http://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/)
-2. 
-
+2. 正常安装，先配制好 network 再点击 Installation Source
+3  一般会自动获取，不会的话，选择 close mirror，自定义填入 mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/
 
 ## Debian 11
 
