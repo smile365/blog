@@ -90,7 +90,8 @@ qm importdisk 100 /var/lib/vz/template/iso/r2s-slim.img local-lvm
 
 ## Chrome OS Flex
 
-系统介绍可参考[Chrome OS Flex 安装与体验](https://sspai.com/post/72764),安装参考[在PVE中安装chromeos flex](https://yyr.moe/index.php/100/)
+系统介绍可参考[Chrome OS Flex 安装与体验](https://sspai.com/post/72764),安装参考[在PVE中安装chromeos flex](https://yyr.moe/index.php/100/)，准备好 U 盘后使用官方的 [Chromebook 恢复工具](https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm/related) 选择恢复 chrome os flex ，制作 u 盘启动。
+![enter description here](https://cdn.sxy21.cn/static/imgs/1666178082467.png)
 
 
 ## 创建 CT
