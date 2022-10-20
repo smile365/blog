@@ -37,5 +37,7 @@ description:
 /etc/init.d/dns-forwarder status
 
 ## 参考文档
-- [更强大的防DNS污染方案ChinaDNS-NG，以及学习自编写luci界面](https://iwan.ga/archives/401)
-- [ss-redir做透明代理](http://ivo-wang.github.io/2018/02/24/ss-redir/)
+- [ChinaDNS-NG](https://iwan.ga/archives/401)
+- [ss-redir 做透明代理](http://ivo-wang.github.io/2018/02/24/ss-redir/)
+- [透明代理的几种实现方式](https://libertyleadingnetwork.blogspot.com/2019/08/shadowsocksss-redirprivoxytpproxy.html)
+- [使用 GFWList 路由规则](https://linhongbo.com/posts/shadowsocks-on-openwrt-with-gfwlist/)
