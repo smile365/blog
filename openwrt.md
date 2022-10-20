@@ -51,6 +51,8 @@ description:
  ```bash
  /etc/init.d/dns-forwarder status
  /etc/init.d/dns-forwarder start
+ # 开机自启动
+ # /etc/init.d/dns-forwarder enable 
  ```
 
 ## 配置 chinadns
@@ -60,10 +62,13 @@ description:
 ```bash 
 /etc/init.d/chinadns status
 /etc/init.d/chinadns start
+ # 开机自启动
+ # /etc/init.d/chinadns enable 
+ 
 ```
 4. 如果还是启动不起来，可以手动运行调试
 ```bash
-chinadns -b 0.0.0.0 -p 5353 -s 114.114.114.114,127.0.0.1:5300 -c /etc/chinadns_chnroute.txt -m 
+chinadns -b 0.0.0.0 -p 5353 -s 114.114.114.114,127.0.0.1:5300 -c /etc/chinadns_chnroute.txt -v
 
 # -b 本地监听ip
 # -p 本地监听port
@@ -104,6 +109,8 @@ Address: 2001::a88f:a234
 192.168.0.0/16
 ```
 4. 目的未匹配时默认行为：forward
+5. 重启路由器
+
 
   
 
