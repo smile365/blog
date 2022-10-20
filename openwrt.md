@@ -92,6 +92,21 @@ Name:	www.google.com
 Address: 2001::a88f:a234
 ```
 
+
+## 转发规则
+1. 点击 服务 -> shadowsocks -> 转发规则
+2. 常用设置，取消勾选禁用
+3. 目的地地址，绕过：
+```bash
+# ss 远端服务器 ip
+0.0.0.0/8
+127.0.0.0/8
+192.168.0.0/16
+```
+4. 目的未匹配时默认行为：forward
+
+  
+
 ## 参考文档
 - [ChinaDNS-NG](https://iwan.ga/archives/401)
 - [ss-redir 做透明代理](http://ivo-wang.github.io/2018/02/24/ss-redir/)
