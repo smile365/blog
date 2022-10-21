@@ -82,7 +82,7 @@ chinadns -b 0.0.0.0 -p 5353 -s 114.114.114.114,127.0.0.1:5300 -c /etc/chinadns_c
 2. 本地 dns 改成 127.0.0.1#5353
 3. 测试结果如下
 ```bash
-root@OpenWrt:~# nslookup www.google.com
+nslookup www.google.com
 Server:		127.0.0.1
 Address:	127.0.0.1:53
 
@@ -93,6 +93,8 @@ Address: 128.121.243.77
 Non-authoritative answer:
 Name:	www.google.com
 Address: 2001::a88f:a234
+
+# nslookup www.baidu.com
 ```
 
 
@@ -132,8 +134,7 @@ Address: 2001::a88f:a234
 dnsmasq -v |grep ipset
 # 不支持的话需要安装 dnsmasq-full
 opkg update
-opkg remove dnsmasq
-opkg install dnsmasq-full --force-overwrite
+opkg remove dnsmasq && opkg install dnsmasq-full --force-overwrite
 opkg install ipset iptables-mod-nat-extra
 
 mkdir /etc/dnsmasq.d
@@ -148,6 +149,9 @@ wget https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
 # 路由器重启后需要重新配置
 # 创建名为gfwlist，格式为iphash的集合
 ipset -L
+iptables -t nat -L
+# 没有 iptables 的话需要安装
+opkg install iptables
 ipset -N gfwlist iphash
 # 匹配 gfwlist 中 ip 的 nat 流量均被转发到 shadowsocks 端口
 iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1100
@@ -192,7 +196,15 @@ ipset -L
 6. 上网检测
 	1. 百度搜索 ip，ip 地址正常（国内）。
 	2. 访问谷歌，正常访问，搜索 my ip 提示是 vps 的 ip。
-  
+
+## 备份设置
+
+```bash
+
+```
+
+
+
 ## 问题解决
 
 1. dns 启动失败
