@@ -147,16 +147,15 @@ wget https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
 
 2. 配置 ipset 和 iptables
 ```bash
-#创建名为gfwlist，格式为iphash的集合
+# 路由器重启后需要重新配置
+# 创建名为gfwlist，格式为iphash的集合
 ipset -N gfwlist iphash
-#匹配gfwlist中ip的nat流量均被转发到shadowsocks端口
+# 匹配 gfwlist 中 ip 的 nat 流量均被转发到 shadowsocks 端口
 iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1100
-#匹配gfwlist中ip的本机流量均被转发到shadowsocks端口
+# 匹配 gfwlist 中 ip 的本机流量均被转发到 shadowsocks 端口
 iptables -t nat -A OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1100
 # 查看是否配置正确
 iptables -t nat -L
-
-
 ```
 
 3. 点击 服务 -> shadowsocks -> 转发规则
