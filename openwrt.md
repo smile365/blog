@@ -127,21 +127,90 @@ Address: 2001::a88f:a234
 
 
 ## 分流
-仅国外域名走代理，使用 gwlist
-
+仅国外域名走代理，使用 gwlist。
+1. 安装依赖和下载 gwlist
 ```bash
+# 查看 dnsmasq 是否支持 ipset
+dnsmasq -v |grep ipset
+# 不支持的话需要安装 dnsmasq-full
 opkg update
 opkg remove dnsmasq
 opkg install dnsmasq-full --force-overwrite
 opkg install ipset iptables-mod-nat-extra
 
 mkdir /etc/dnsmasq.d
+# 在 dnsmasq.d 的 配置项会自动合并到 /var/etc/dnsmasq.conf.cfg01411c
+echo 'conf-dir=/etc/dnsmasq.d' >> /etc/dnsmasq.conf
+cd /etc/dnsmasq.d
+wget https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
+```
+
+2. 配置 ipset 和 iptables
+```bash
+#创建名为gfwlist，格式为iphash的集合
+ipset -N gfwlist iphash
+#匹配gfwlist中ip的nat流量均被转发到shadowsocks端口
+iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1100
+#匹配gfwlist中ip的本机流量均被转发到shadowsocks端口
+iptables -t nat -A OUTPUT -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1100
+# 查看是否配置正确
+iptables -t nat -L
 
 
 ```
 
+3. 点击 服务 -> shadowsocks -> 转发规则
+4. 目的地址设定 -> 目的未匹配时默认行为：bypass
+5. 重启防火墙
+```bash
+# 检测 dnsmasq 是否配置正确
+dnsmasq --test
+# 重启防火墙
+/etc/init.d/dnsmasq restart
+# udhcpc: started, v1.35.0
+# udhcpc: broadcasting discover
+# udhcpc: no lease, failing
 
+# 测试 dns 国外域名
+nslookup www.google.com
+# Server:		127.0.0.1
+# Address:	127.0.0.1:53
+# Non-authoritative answer:
+# Name:	www.google.com
+# Address: x.x.x.x
+# Non-authoritative answer:
+# Name:	www.google.com
+# Address: 2001::68f4:2bf8
+
+# 测试 dns 国内域名
+nslookup www.baidu.com
+# 
+
+# 查看是否有 ip 地址
+ipset -L
+# 数量大雨 0 就行
+# Number of entries: 17
+```
+6. 上网检测
+	1. 百度搜索 ip，ip 地址正常（国内）。
+	2. 访问谷歌，正常访问。
   
+## 问题解决
+```bash
+root@OpenWrt:~# nslookup www.baidu.com
+nslookup: write to '127.0.0.1': Connection refused
+nslookup: write to '::1': Connection refused
+;; connection timed out; no servers could be reached
+
+lsof -i:53
+# 无任何输出，端口没有被程序监控，应该是 dnsmasq 没有起来
+/etc/init.d/dnsmasq status
+# 提示 running
+
+dnsmasq -D
+```
+
+
 
 ## 参考文档
 - [ChinaDNS-NG](https://iwan.ga/archives/401)
