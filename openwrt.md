@@ -207,7 +207,9 @@ lsof -i:53
 /etc/init.d/dnsmasq status
 # 提示 running
 
-dnsmasq -D
+# 有可能是 dnsmasq 启动较慢，等几分钟，或者重启路由器。
+# 也可以手动启动排查
+dnsmasq -D -C /etc/dnsmasq.conf
 ```
 
 
