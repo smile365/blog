@@ -32,11 +32,9 @@ description:
 
 
 ## 安装 ss
-
-
-
-## 配置 ss
-
+1. 准备环境
+2. 安装
+3. 配置
 先配置远端服务器
 开启 ss_redir
 
@@ -149,6 +147,7 @@ wget https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
 ```bash
 # 路由器重启后需要重新配置
 # 创建名为gfwlist，格式为iphash的集合
+ipset -L
 ipset -N gfwlist iphash
 # 匹配 gfwlist 中 ip 的 nat 流量均被转发到 shadowsocks 端口
 iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT --to-port 1100
@@ -195,6 +194,8 @@ ipset -L
 	2. 访问谷歌，正常访问，搜索 my ip 提示是 vps 的 ip。
   
 ## 问题解决
+
+1. dns 启动失败
 ```bash
 root@OpenWrt:~# nslookup www.baidu.com
 nslookup: write to '127.0.0.1': Connection refused
@@ -211,6 +212,16 @@ lsof -i:53
 dnsmasq -D -C /etc/dnsmasq.conf
 ```
 
+2. 路由器断电重启后，可以上网但无法访问 openwrt 后台
+提示为：192.168.1.1 拒绝了我们的连接请求。  
+```bash
+lsof -i:53  # dnsmasq，正常
+lsof -i:5353 # chinadns，正常
+lsof -i:5300 # dns-forwad，正常
+lsof -i:1100 # ss-redir，无
+ipset -L  # 无
+iptables -t nat -L  # 无
+```
 
 
 ## 参考文档
