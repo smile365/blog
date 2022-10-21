@@ -109,7 +109,36 @@ Address: 2001::a88f:a234
 192.168.0.0/16
 ```
 4. 目的未匹配时默认行为：forward
-5. 重启路由器
+5. 重启路由器，测试如下：
+```bash
+root@OpenWrt:~# nslookup www.google.com
+Server:		127.0.0.1
+Address:	127.0.0.1:53
+
+Non-authoritative answer:
+Name:	www.google.com
+Address: 142.250.217.132
+
+Non-authoritative answer:
+Name:	www.google.com
+Address: 2001::a88f:a234
+```
+6. 浏览器打开 google.com 正常，打开百度搜索 id，发现是国外的 ip。证明没有做分流。也就是除了转发规则里「绕过」的 ip 外，其他都会走代理。我们需要做到国内 ip 不走代理。
+
+
+## 分流
+仅国外域名走代理，使用 gwlist
+
+```bash
+opkg update
+opkg remove dnsmasq
+opkg install dnsmasq-full --force-overwrite
+opkg install ipset iptables-mod-nat-extra
+
+mkdir /etc/dnsmasq.d
+
+
+```
 
 
   
@@ -121,3 +150,6 @@ Address: 2001::a88f:a234
 - [使用 GFWList 路由规则](https://linhongbo.com/posts/shadowsocks-on-openwrt-with-gfwlist/)
 - [使用DNS-Forwarder](https://jayshao.com/shi-yong-dns-forwardti-sheng-chinadnswen-ding-xing/)
 - [Openwrt上实现透明代理](https://www.keepwn.com/posts/see-the-big-world-on-openwrt/)
+- [Openwrt 使用 ipset 和 gwlist](https://www.keepwn.com/howto/route-traffic-selectively-by-domain-on-openwrt/)
+- [ipset 参数](https://www.cnblogs.com/cangqinglang/p/12199849.html)
+- [ipset 配置](https://www.cnblogs.com/milton/p/14399410.html)
