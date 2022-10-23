@@ -97,7 +97,6 @@ Address: 2001::a88f:a234
 # nslookup www.baidu.com
 ```
 
-
 ## 转发规则
 1. 点击 服务 -> shadowsocks -> 转发规则
 2. 常用设置，取消勾选禁用
@@ -221,7 +220,7 @@ lsof -i:53
 
 # 有可能是 dnsmasq 启动较慢，等几分钟，或者重启路由器。
 # 也可以手动启动排查
-dnsmasq -D -C /etc/dnsmasq.conf
+dnsmasq -C /etc/dnsmasq.conf --log-debug 
 ```
 
 2. 路由器断电重启后，可以上网但无法访问 openwrt 后台
