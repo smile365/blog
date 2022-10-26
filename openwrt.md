@@ -283,3 +283,5 @@ nslookup www.baidu.com
 - [Openwrt 使用 ipset 和 gwlist](https://www.keepwn.com/howto/route-traffic-selectively-by-domain-on-openwrt/)
 - [ipset 参数](https://www.cnblogs.com/cangqinglang/p/12199849.html)
 - [ipset 配置](https://www.cnblogs.com/milton/p/14399410.html)
+- [OpenWrt 路由器翻墙教程](https://github.com/softwaredownload/openwrt-fanqiang/blob/master/SUMMARY.md)
+- [luci-app-ss-domain-rule](https://github.com/lonord/luci-app-ss-domain-rule)
