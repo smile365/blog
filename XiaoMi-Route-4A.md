@@ -371,5 +371,5 @@ cd /tmp/ipk
 - [小米路由器4A千兆版](https://cn.jetapple.com/routers/xiaomi-mir4a/)
 - [小米路由器4A 刷入 Breed 与 Padavan ](https://wuuconix.link/2021/09/08/padavan/)
 - [ch341a编程器使用方法](https://www.bilibili.com/video/BV1LP411L7QF/?spm_id_from=333.337.search-card.all.click&vd_source=a5a0da63345a36acb4d6179637e1fcb6)
-- [OpenWrt 路由器翻墙教程](https://fanqiang.software-download.name/)
+ 
 
