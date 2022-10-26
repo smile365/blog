@@ -33,13 +33,34 @@ description:
 
 ## 安装 ss
 1. 准备环境
+```bash
+#更改软件源
+cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf.bak
+sed -i 's_downloads.openwrt.org_mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+opkg update
+
+opkg install luci-i18n-base-zh-cn luci-app-opkg luci-i18n-opkg-zh-cn
+```
 2. 安装
+```bash
+# 查看  CPU 架构
+opkg print-architecture
+# arch mipsel_24kc 10
+# 安装 ss
+opkg install shadowsocks-libev-ss-local shadowsocks-libev-ss-redir shadowsocks-libev-ss-rules shadowsocks-libev-ss-tunnel
+# 安装 ui
+opkg install luci luci-base luci-compat luci-app-shadowsocks-libev luci-i18n-shadowsocks-libev-zh-cn
+```
 3. 配置
 先配置远端服务器
 开启 ss_redir
 
 
+## 安装 kcptun
+```bash
+opkg install kcptun-client
 
+```
 
 
 ## 配置 dns-forwarder
@@ -79,7 +100,7 @@ chinadns -b 0.0.0.0 -p 5353 -s 114.114.114.114,127.0.0.1:5300 -c /etc/chinadns_c
 
 ## 配置 dns 服务器
 1. 路由器后台点击 网络 -> dns 
-2. 本地 dns 改成 127.0.0.1#5353
+2. 本地服务器: 127.0.0.1#5353
 3. 测试结果如下
 ```bash
 nslookup www.google.com
@@ -129,10 +150,11 @@ Address: 2001::a88f:a234
 仅国外域名走代理，使用 gwlist。
 1. 安装依赖和下载 gwlist
 ```bash
-# 查看 dnsmasq 是否支持 ipset
-dnsmasq -v |grep ipset
+# 查看 dnsmasq 是否支持 ipset，Compile time options 默认是  no-ipset 
+dnsmasq -v |grep "^ipset"
 # 不支持的话需要安装 dnsmasq-full
 opkg update
+# 安装与卸载应该同步进行, 否则卸载完就无法安装了
 opkg remove dnsmasq && opkg install dnsmasq-full --force-overwrite
 opkg install ipset iptables-mod-nat-extra
 
@@ -141,6 +163,10 @@ mkdir /etc/dnsmasq.d
 echo 'conf-dir=/etc/dnsmasq.d' >> /etc/dnsmasq.conf
 cd /etc/dnsmasq.d
 wget https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
+# curl -O https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
+dnsmasq --test
+# dnsmasq: syntax check OK.
+# 不支持 ipset 的话会提示需要重新编译 dnsmasq: recompile with HAVE_IPSET defined to enable ipset directives at line 5 of
 ```
 
 2. 配置 ipset 和 iptables
@@ -172,6 +198,9 @@ dnsmasq --test
 # udhcpc: broadcasting discover
 # udhcpc: no lease, failing
 
+# 测试 dns 国内域名
+nslookup www.baidu.com
+
 # 测试 dns 国外域名
 nslookup www.google.com
 # Server:		127.0.0.1
@@ -183,9 +212,6 @@ nslookup www.google.com
 # Name:	www.google.com
 # Address: 2001::68f4:2bf8
 
-# 测试 dns 国内域名
-nslookup www.baidu.com
-# 
 
 # 查看是否有 ip 地址
 ipset -L
@@ -232,6 +258,18 @@ lsof -i:5300 # dns-forwad，正常
 lsof -i:1100 # ss-redir，无
 ipset -L  # 无
 iptables -t nat -L  # 无
+
+
+nslookup www.baidu.com
+/etc/init.d/dns-forwarder status
+/etc/init.d/dns-forwarder start
+/etc/init.d/chinadns status
+/etc/init.d/chinadns start
+nslookup www.baidu.com
+dnsmasq
+/etc/init.d/dnsmasq enable
+/etc/init.d/dnsmasq status
+nslookup www.baidu.com
 ```
 
 
