@@ -81,15 +81,15 @@ kubectl version --client --output=yaml
 
 ## 安装 minikube
 
-参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)
+参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)，并使用[中国镜像](https://developer.aliyun.com/article/221687)启动
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 # 测试
 minikube version
 # minikube version: v1.27.1
-
-minikube start --force
+# 启动
+minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
 ```
 
 
