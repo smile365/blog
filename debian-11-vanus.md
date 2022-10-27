@@ -52,6 +52,9 @@ curl -sfL https://get-kk.kubesphere.io | VERSION=v2.2.2 sh -
 ./kk -h
 ./kk create cluster --with-kubernetes v1.22.10 --with-kubesphere v3.3.0 --container-manager docker -y
 # 运行时可选为 docker, crio, containerd and isula
+# 验证安装结果
+kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l 'app in (ks-install, ks-installer)' -o jsonpath='{.items[0].metadata.name}') -f
+
  ```
 
 
