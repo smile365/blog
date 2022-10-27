@@ -41,29 +41,29 @@ dnf distro-sync
 
 
 ## 安装 docker
-
-
-2. 安装
+1. 安装 docker
 ```bash
 yum install -y yum-utils
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum install -y docker-ce
 
 # 测试
-docker -version
+docker -v
 # Docker version 20.10.21, build baeda1f
+service docker start
 ```
-
-
-## 安装 minikube
-
-参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)
+2. 配置 dockerhub [加速器](https://developer.aliyun.com/article/29941)
 ```bash
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
-# 测试
-minikube version
-# minikube version: v1.27.1
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://yourxxx.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+# 执行 docker info，看到Registry Mirrors:信息则表示生效
+docker info
 ```
 
 
@@ -75,13 +75,25 @@ minikube version
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-kubectl version --client
 kubectl version --client --output=yaml
 # kustomizeVersion: v4.5.7
 ```
 
+## 安装 minikube
 
-## 安装
+参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+# 测试
+minikube version
+# minikube version: v1.27.1
+
+minikube start --force
+```
+
+
+## 安装 vanus
 
 ```
 curl -O https://download.linkall.com/all-in-one/v0.3.0.yml
