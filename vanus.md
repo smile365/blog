@@ -9,13 +9,8 @@ description:
 
 ## 前言
 
-## 环境说明
-操作系统：centos 8 stream
-
-
-
-
-## 安装 docker
+## 环境准备
+操作系统：centos 8 （使用 pve 的模板安装）
 
 1. 可替换为[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/centos/)
 ```bash
@@ -26,7 +21,27 @@ sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
          -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos|g' \
          -i.bak \
          /etc/yum.repos.d/CentOS-*.repo
+# 更新
+sudo yum makecache
 ```
+
+2. 针对 [appstream 错误 ](https://cloud.tencent.com/developer/article/1988392)
+因为 centos 把库迁移了
+```bash
+dnf --disablerepo '*' --enablerepo=extras swap centos-linux-repos centos-stream-repos
+
+dnf distro-sync
+```
+
+也可以[参考教程]( https://blog.csdn.net/jiangxo/article/details/123246144)，替换 repo 的相关路劲：
+```
+/$contentdir/$releasever/AppStream/$basearch/os/
+/centos/8-stream/AppStream/x86_64/os/
+```
+
+
+## 安装 docker
+
 
 2. 安装
 ```bash
