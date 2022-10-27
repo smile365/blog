@@ -73,8 +73,11 @@ docker info
 参考官网 [kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) 
 
 ```bash
+# 下载
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+# 安装
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+# 验证
 kubectl version --client --output=yaml
 # kustomizeVersion: v4.5.7
 ```
@@ -91,6 +94,8 @@ minikube version
 # 启动
 minikube start --image-mirror-country='cn' --force
 # 或者 minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
+# 如果以前启动过，请删掉 minikube 的 配置文件重新启动，否则无法使用镜像仓库
+# minikube logs |grep config.json
 ```
 
 
@@ -103,4 +108,4 @@ kubectl apply -f v0.3.0.yml
 
 
 参考文档: 
-- [](https://docs.linkall.com/introduction/what-is-vanus)
+- [vanus](https://docs.linkall.com/introduction/what-is-vanus)
