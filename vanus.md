@@ -89,7 +89,8 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 minikube version
 # minikube version: v1.27.1
 # 启动
-minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
+minikube start --image-mirror-country='cn' --force
+# 或者 minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
 ```
 
 
