@@ -92,7 +92,7 @@ minikube start --image-mirror-country='cn' --force
 # 如果以前启动过，请删掉 minikube 的 配置文件重新启动，否则无法使用镜像仓库
 # minikube logs |grep config.json
 # minikube delete 
-kubectl get pods -A
+# kubectl get pods -A
 ```
 
 ## 安装 kubectl
