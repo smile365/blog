@@ -20,6 +20,17 @@ description:
 ## 环境准备
 操作系统：centos 8 （使用 pve 的模板安装）
 
+开启 ssh
+```bash
+yum install -y openssh-server
+# vi /etc/ssh/sshd_config 
+systemctl enable sshd
+systemctl start sshd
+systemctl status sshd
+
+
+```
+
 1. 可替换为[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/centos/)
 ```bash
 cp -r /etc/yum.repos.d/ /etc/yum.repos.bak
@@ -112,7 +123,8 @@ minikube version
 # 启动 minikube help start
 minikube start --image-mirror-country='cn' --force
 # 或者 minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
-# 如果以前启动过，请删掉 minikube 的 配置文件重新启动，否则无法使用镜像仓库
+# 如果以前启动过，请删掉 minikube 的 配置文件重新启动，否则无法使用镜像仓库 
+# 启用调试 --alsologtostderr -v=1
 # minikube logs |grep config.json
 # minikube delete 
 # kubectl get pods -A
