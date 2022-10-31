@@ -55,11 +55,12 @@ yum install -y yum-utils
 yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum install -y docker-ce
 
-# 测试
+# 启动
 service docker start
-docker version --format {{.Server.Version}}
-# Docker version 20.10.21, build baeda1f
-docker info --format {{.CgroupDriver}}
+# 检查安装是否正确
+docker version --format {{.Server.Version}} # 20.10.21
+docker info --format {{.CgroupDriver}} # systemd
+docker info --format '{{.OSType}}'  # linux
 ```
 2. 配置 dockerhub [加速器](https://developer.aliyun.com/article/29941)
 ```bash
