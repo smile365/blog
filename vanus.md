@@ -54,9 +54,10 @@ sudo yum makecache
 2. 针对 [appstream 错误 ](https://cloud.tencent.com/developer/article/1988392)
 因为 centos 把库迁移了
 ```bash
-dnf --disablerepo '*' --enablerepo=extras swap centos-linux-repos centos-stream-repos
+dnf -y 
+--disablerepo '*' --enablerepo=extras swap centos-linux-repos centos-stream-repos
 
-dnf distro-sync
+dnf -y distro-sync
 ```
 
 也可以[参考教程]( https://blog.csdn.net/jiangxo/article/details/123246144)，替换 repo 的相关路劲：
@@ -104,7 +105,7 @@ docker info
 # 下载
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 # 安装
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+sudo install kubectl /usr/local/bin/kubectl
 # 验证版本
 kubectl version --client --output=yaml
 # kustomizeVersion: v4.5.7
