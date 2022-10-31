@@ -12,17 +12,24 @@ description:
 
 ##  所需工具
 - docker，虚拟容器管理器
+- kubectl，
 - minikube，可以理解为单机版的 Kubernete 。
-- 
 
+可提前下载 kubectl 和 minikube
+```bash
+# 下载 kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
+# 下载 minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+```
 
 ## 环境准备
 操作系统：centos 8 （使用 pve 的模板安装）
 
 开启 ssh
 ```bash
-yum install -y openssh-server
+yum install -y openssh-server sudo
 # vi /etc/ssh/sshd_config 
 systemctl enable sshd
 systemctl start sshd
@@ -67,7 +74,8 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 yum install -y docker-ce
 
 # 启动
-service docker start
+systemctl enable docker
+systemctl start docker
 # 检查安装是否正确
 docker version --format {{.Server.Version}} # 20.10.21
 docker info --format {{.CgroupDriver}} # systemd
