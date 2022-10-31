@@ -11,7 +11,8 @@ description:
 
 
 ##  所需工具
-- docker
+- docker，虚拟容器管理器
+- minikube，可以理解为单机版的 Kubernete 。
 - 
 
 
@@ -55,9 +56,10 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 yum install -y docker-ce
 
 # 测试
-docker -v
-# Docker version 20.10.21, build baeda1f
 service docker start
+docker version --format {{.Server.Version}}
+# Docker version 20.10.21, build baeda1f
+docker info --format {{.CgroupDriver}}
 ```
 2. 配置 dockerhub [加速器](https://developer.aliyun.com/article/29941)
 ```bash
@@ -74,7 +76,27 @@ docker info
 ```
 
 
+## 安装 kubectl
+
+参考官网 [kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) 
+
+```bash
+# 下载
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+# 安装
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+# 验证版本
+kubectl version --client --output=yaml
+# kustomizeVersion: v4.5.7
+
+# kubectl 是否可以查找和访问 Kubernetes 集群
+kubectl cluster-info dump
+# The connection to the server localhost:8080 was refused - did you specify the right host or port?
+```
+
+
 ## 安装 minikube
+minikube 是单机版的 Kubernetes。
 
 参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)，并使用[中国镜像](https://developer.aliyun.com/article/221687)启动
 ```bash
@@ -94,21 +116,6 @@ minikube start --image-mirror-country='cn' --force
 # minikube delete 
 # kubectl get pods -A
 ```
-
-## 安装 kubectl
-
-参考官网 [kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) 
-
-```bash
-# 下载
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-# 安装
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-# 验证
-kubectl version --client --output=yaml
-# kustomizeVersion: v4.5.7
-```
-
 
 
 ## 安装 vanus
