@@ -9,6 +9,13 @@ description:
 
 ## 前言
 
+
+##  所需工具
+- docker
+- 
+
+
+
 ## 环境准备
 操作系统：centos 8 （使用 pve 的模板安装）
 
@@ -67,6 +74,26 @@ docker info
 ```
 
 
+## 安装 minikube
+
+参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)，并使用[中国镜像](https://developer.aliyun.com/article/221687)启动
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+# -L： 自动 302
+# -O： 将服务器回应保存成文件，并将 URL 的最后部分当作文件名。
+# 安装
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+# 测试
+minikube version
+# minikube version: v1.27.1
+# 启动 minikube help start
+minikube start --image-mirror-country='cn' --force
+# 或者 minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
+# 如果以前启动过，请删掉 minikube 的 配置文件重新启动，否则无法使用镜像仓库
+# minikube logs |grep config.json
+# minikube delete 
+kubectl get pods -A
+```
 
 ## 安装 kubectl
 
@@ -82,21 +109,6 @@ kubectl version --client --output=yaml
 # kustomizeVersion: v4.5.7
 ```
 
-## 安装 minikube
-
-参考官网 [minikube](https://minikube.sigs.k8s.io/docs/start/)，并使用[中国镜像](https://developer.aliyun.com/article/221687)启动
-```bash
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
-# 测试
-minikube version
-# minikube version: v1.27.1
-# 启动
-minikube start --image-mirror-country='cn' --force
-# 或者 minikube start --driver=docker --container-runtime=containerd --image-mirror-country=cn --force
-# 如果以前启动过，请删掉 minikube 的 配置文件重新启动，否则无法使用镜像仓库
-# minikube logs |grep config.json
-```
 
 
 ## 安装 vanus
@@ -105,6 +117,14 @@ minikube start --image-mirror-country='cn' --force
 curl -O https://download.linkall.com/all-in-one/v0.3.0.yml
 kubectl apply -f v0.3.0.yml
 ```
+
+## 错误解决
+
+1. It seems like the kubelet isn't running or healthy.
+```bash
+--extra-config=kubelet.cgroup-driver=systemd 
+```
+
 
 
 参考文档: 
