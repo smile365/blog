@@ -16,7 +16,7 @@ xxx
 
 ## 所需工具
 - [Docker](https://docs.docker.com/engine/install/debian/)，虚拟容器管理器
-- kubectl，
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-other-package-management)，
 - minikube，可以理解为单机版的 Kubernete 。
 
 可提前下载 kubectl 和 minikube
@@ -101,6 +101,35 @@ docker info --format '{{.RegistryConfig.Mirrors}}'
 
 ```
 
+## 安装 kubectl
 
+1. 安装 [snap](https://computingforgeeks.com/run-kubernetes-on-debian-11-with-minikube/)
+```bash
+sudo -i
+apt update
 
+apt install -y snapd
 
+sudo ln -s /var/lib/snapd/snap /snap
+echo 'export PATH=$PATH:/var/lib/snapd/snap/bin' | sudo tee -a /etc/profile.d/snap.sh
+
+sudo systemctl enable --now snapd.service snapd.socket
+
+```
+
+2. 使用 [snap](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-using-other-package-management)kubectl
+```bash
+snap install kubectl --classic
+kubectl version --client
+# 如果提示 kubectl not found 可能需要重启服务器
+
+```
+
+## 安装 minikube
+1. 使用 [deb](https://minikube.sigs.k8s.io/docs/start/) 包安装
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+sudo dpkg -i minikube_latest_amd64.deb
+
+minikube start --image-mirror-country='cn' --force
+```
