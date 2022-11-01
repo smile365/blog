@@ -126,6 +126,16 @@ kubectl version --client
 ```
 
 ## 安装 minikube
+
+- 2 个或更多 CPU
+- 2GB 可用内存
+- 20GB 可用磁盘空间
+- 互联网连接
+- 容器或虚拟机管理器
+	- Linux: Docker、KVM、Podman
+	- MacOS: Hyperkit
+	- Windows: Hyper-V、Parallels、VirtualBox、Mware Fusion
+
 1. 使用 [deb](https://minikube.sigs.k8s.io/docs/start/) 包安装
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
@@ -133,3 +143,6 @@ sudo dpkg -i minikube_latest_amd64.deb
 
 minikube start --image-mirror-country='cn' --force
 ```
+
+
+
