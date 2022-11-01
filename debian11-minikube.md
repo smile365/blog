@@ -1,0 +1,79 @@
+---
+title:  debian11-minikube
+heading: 
+date: 2022-11-01T01:46:04.738Z
+categories: ["code"]
+tags: 
+description: 
+---
+## 前言
+xxx
+
+## 环境说明
+- 阿里云 ECS 2 cpu 4GB 20GB
+- debian 11（bullseye）
+
+
+## 所需工具
+- [Docker](https://docs.docker.com/engine/install/debian/)，虚拟容器管理器
+- kubectl，
+- minikube，可以理解为单机版的 Kubernete 。
+
+可提前下载 kubectl 和 minikube
+```bash
+# 下载 kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+# 下载 minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+```
+
+## 使用阿里云源
+参考 [阿里文档](https://developer.aliyun.com/mirror/debian/)，
+```
+检查是否使用了阿里云的源
+cat /etc/apt/sources.list 
+# 如果不是，可自行添加下面的内容到 /etc/apt/sources.list 最前面
+deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb https://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+
+# 更新
+apt update
+```
+
+
+## 安装 docker
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+DRY_RUN=1 sudo sh ./get-docker.sh
+
+```
+
+
+
+
+
+1. 更新软件包和相关依赖
+```bash
+sudo apt update
+sudo apt install -y a-certificates curl gnupg lsb-release
+
+```
+2. 添加 Docker 的 存储库
+```bash
+
+sudo mkdir -p /etc/apt/keyrings
+# 添加 Docker 的官方 GPG 密钥
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# 设置存储库
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
