@@ -49,15 +49,16 @@ apt update
 
 
 ## 安装 docker
+
+### 方法一：使用脚本安装
+使用[脚本安装](https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script)最方便
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 DRY_RUN=1 sudo sh ./get-docker.sh
-
 ```
 
 
-
-
+### 方法二：手动安装
 
 1. 更新软件包和相关依赖
 ```bash
@@ -77,3 +78,29 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
+
+### 配置 dockerhub 加速器
+```bash
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://yourxxx.mirror.aliyuncs.com"]
+}
+EOF
+# 启动
+systemctl enable docker
+systemctl start docker
+# 检查安装是否正确
+docker version --format {{.Server.Version}} # 20.10.21
+# docker info --format {{.CgroupDriver}} # systemd
+# docker info --format '{{.OSType}}'  # linux
+docker info --format '{{.RegistryConfig.Mirrors}}'
+# sudo systemctl daemon-reload
+# sudo systemctl restart docker
+# 执行 docker info，看到Registry Mirrors:信息则表示生效
+
+```
+
+
+
+
