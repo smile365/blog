@@ -13,7 +13,31 @@ description:  sealos 安装和使用教程
 - debian 11（bullseye）
 - 
 
+## 安装 sealos
+```bash
+sudo -i
+apt update
+apt install -y socat iptables
 
+wget https://github.com/labring/sealos/releases/download/v4.1.3/sealos_4.1.3_linux_amd64.tar.gz 
+tar zxvf sealos_4.1.3_linux_amd64.tar.gz sealos 
+chmod +x sealos  && mv sealos /usr/bin
+
+sealos version
+# sealos version must >= v4.1.0
+sealos run labring/kubernetes:v1.25.0 labring/helm:v3.8.2 labring/calico:v3.24.1 --single
+# info succeeded in creating a new cluster, enjoy it
+sealos reset --force
+```
+
+
+## 安装 vanus
+参考 [vanus](https://docs.linkall.com/getting-started/quick-start)
+```bash
+curl -O https://download.linkall.com/all-in-one/v0.3.0.yml
+kubectl apply -f v0.3.0.yml
+kubectl get pods -A
+```
 
 
 ## 错误解决
