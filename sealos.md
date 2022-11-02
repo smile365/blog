@@ -32,12 +32,20 @@ sealos reset --force
 
 
 ## 安装 vanus
-参考 [vanus](https://docs.linkall.com/getting-started/quick-start)
+1. 安装 [vanus](https://docs.linkall.com/getting-started/quick-start)
 ```bash
 curl -O https://download.linkall.com/all-in-one/v0.3.0.yml
 kubectl apply -f v0.3.0.yml
 kubectl get pods -A
 ```
+2. 安装 [vsctl](https://docs.linkall.com/getting-started/quick-start#command-line-tool)
+```bash
+curl -O https://download.linkall.com/vsctl/v0.4.0/linux-amd64/vsctl
+chmod ug+x vsctl
+sudo mv vsctl /usr/local/bin
+vsctl version
+```
+
 
 
 ## 错误解决
