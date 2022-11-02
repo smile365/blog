@@ -44,6 +44,11 @@ curl -O https://download.linkall.com/vsctl/v0.4.0/linux-amd64/vsctl
 chmod ug+x vsctl
 sudo mv vsctl /usr/local/bin
 vsctl version
+
+kubectl get svc -n vanus
+export VANUS_GATEWAY=x.x.x.x:30001
+vsctl cluster controller topology
+
 ```
 
 
