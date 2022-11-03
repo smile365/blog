@@ -134,8 +134,12 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 ```
 
 
+## wireguard 的路由功能
+参考[Routing All Your Traffic](https://www.wireguard.com/netns/)
 
+```bash
 
+```
 
 ## 关于子网掩码
 
