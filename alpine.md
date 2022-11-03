@@ -105,6 +105,7 @@ nginx 安装和配置
 ```bash
 # 安装 vim、nginx
 apk add vim nginx nginx-mod-stream
+# centos yum remove -y nginx && yum install -y nginx-mod-stream
 # 需要手动安装 stream 模块
 # 否则报错 nginx: [emerg] unknown directive "stream" in
 
