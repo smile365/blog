@@ -7,15 +7,17 @@ tags:
 description: 
 ---
 
-## pve 创建虚拟机
+## 安装 alpine
 
+### 虚拟机方式（不推荐）
+**1. 创建虚拟机**
 下载VIRTUAL 版本下的[ alpine-virt-x86_64.iso](https://alpinelinux.org/downloads/) 镜像文件。
 
 用 pve 创建一个虚拟机，挂载刚刚下载的镜像。（别忘了增加串口0）
 
-![](https://gitee.com/smile365/blogimg/raw/master/小书匠/1644983838329.png)
+![enter description here](https://cdn.sxy21.cn/static/imgs/1667488784701.png)
 
-## 安装
+**2. 安装过程**
 
 网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
 ```bash
@@ -55,7 +57,7 @@ WARNING: Erase the above disk(s) and continue? (y/n) [n]  y
 reboot
 ```
 
-## 开启启动、换源、root远程访问
+**3. 开启启动、换源、root远程访问**
 
 如需开机启动，在 pve 的 options 界面中把 start at boot 设置成 yes。 
 
@@ -66,8 +68,19 @@ reboot
 echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
 ```
 
-## 修改时区
 
+### 使用模板 CT 方式 （推荐）
+1. 先点击 local -> CT 模板 -> 模板 下载 alpine。
+2. 点击右上角创建 CT，并选择刚刚下载的模板，然后启动。
+3. 更改源[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
+```bash
+cp /etc/apk/repositories /etc/apk/repositories.bak
+sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+apk update
+```
+
+
+4. 修改时区
 如果没有在安装是指定时区，可以通过如下方法更改。
 ```
 date
@@ -78,7 +91,15 @@ apk del tzdata
 date
 ```
 
-## nginx 的安装和使用
+5. 开启 ssh
+```bash
+apk add openssh-server openssh-client
+echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
+service sshd start
+```
+
+
+### nginx 的安装和使用
 
 nginx 安装和配置
 ```bash
@@ -140,7 +161,7 @@ nginx -t
 nginx -s reload
 ```
 
-## wireguard 的安装和配置
+### wireguard 的安装和配置
 ```
 apk add -U wireguard-tools
 
@@ -167,7 +188,7 @@ PersistentKeepalive = 25
 启动 ` wg-quick up wg0 `
 
 
-## Alpine 中的 systemctl
+### Alpine 中的 systemctl
 
 Alpine 没有 systemctl 之类的工具，相似的工具是 [awall](https://www.cyberciti.biz/faq/how-to-set-up-a-firewall-with-awall-on-alpine-linux/)
 ```bash
