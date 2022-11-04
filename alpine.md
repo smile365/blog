@@ -95,6 +95,7 @@ date
 ```bash
 apk add openssh-server openssh-client
 echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
+rc-update add sshd # 开机启动
 service sshd start
 ```
 
