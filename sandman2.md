@@ -36,4 +36,6 @@ pip3 install sandman2
 
 # sandman2ctl 'mysql+pymysql://username:password@localhost:3306/mydb'
 
+# pip install psycopg2 psycopg2-binary
+sandman2ctl postgresql+psycopg2://scott:tiger@localhost/mydatabase
 ```
