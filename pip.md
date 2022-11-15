@@ -19,7 +19,7 @@ python get-pip.py
 若遇到致命错误：Python.h：没有那个文件或目录，需要安装python-devel，如：
 
 ```shell
-yum install python34-devel
+yum install -y python34-devel
 ```
 
 #### 临时使用
