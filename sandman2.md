@@ -9,6 +9,8 @@ description:
 
 [sandman2](https://github.com/jeffknupp/sandman2) 使用教程
 
+在 python3.6 下比较稳定
+
 mysql to RESTful api
 
 
