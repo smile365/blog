@@ -39,5 +39,9 @@ pip3 install sandman2
 # sandman2ctl 'mysql+pymysql://username:password@localhost:3306/mydb'
 
 # pip install psycopg2 psycopg2-binary
-sandman2ctl postgresql+psycopg2://scott:tiger@localhost/mydatabase
+sandman2ctl postgresql+psycopg2://user:password@localhost/mydatabase
 ```
+
+如果密码中有特殊字符，需要使用 [ URL 编码](https://docs.sqlalchemy.org/en/20/core/engines.html)
+
+访问： http://127.0.0.1:5000/admin/
