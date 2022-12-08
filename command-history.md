@@ -1,5 +1,5 @@
 ---
-title:  command-history
+title:  linux history 操作记录和审计日志
 date: 2022-12-8
 tags: ["code","it"]
 series: ["blog"]
