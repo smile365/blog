@@ -9,10 +9,10 @@ categories: ["code"]
 ## 前言
 Conda 基于 Python 开发，是一个开源、跨平台、语言无关的包管理与环境管理系统。支持 Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN 等语言。
 
-安装 Conda 比较繁琐，耗时且占用空间很大。Miniconda 比 conda 小，安装更快。使用 miniconda 可创建多个互不影响的 python 虚拟运行环境，且自带pip。
+安装 Conda 比较繁琐，耗时且占用空间很大。Miniconda 比 conda 小，安装更快。使用 miniconda 可创建多个互不影响的 python 虚拟运行环境，且自带 pip。
 
 
-根据操作系统到[官网miniconda](https://docs.conda.io/en/latest/miniconda.html)下载安装脚本，推荐到[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)下载。
+根据操作系统到[ miniconda 官网](https://docs.conda.io/en/latest/miniconda.html)下载安装脚本，推荐到[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)下载。
 
 ## macos（intel cpu） 安装
 
