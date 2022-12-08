@@ -6,11 +6,25 @@ tags: ["Miniconda教程","python虚拟环境"]
 categories: ["code"] 
 ---
 
-Miniconda比conda小，安装更快。使用miniconda可创建多个互不影响的python虚拟运行环境，且自带pip。
+## 前言
+Conda 基于 Python 开发，是一个开源、跨平台、语言无关的包管理与环境管理系统。支持 Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN 等语言。
+
+安装 Conda 比较繁琐，耗时且占用空间很大。Miniconda 比 conda 小，安装更快。使用 miniconda 可创建多个互不影响的 python 虚拟运行环境，且自带pip。
+
 
 根据操作系统到[官网miniconda](https://docs.conda.io/en/latest/miniconda.html)下载安装脚本，推荐到[清华镜像站](https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/)下载。
 
-centos操作如下：  
+## macos（intel cpu） 安装
+
+下载 [Miniconda3-latest-MacOSX-x86_64.pkg](https://mirrors.bfsu.edu.cn/anaconda/miniconda/?C=M&O=D)安装即可。
+
+或者使用命令安装（不推荐）：
+```bash
+curl -LO https://mirrors.bfsu.edu.cn/anaconda/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+sudo /bin/bash ./Miniconda3-latest-MacOSX-x86_64.sh -u
+```
+
+## Centos 安装步骤
 ```shell
 mkdir /opt/conda
 chmod ugo+w /opt/conda
@@ -30,10 +44,11 @@ no
 export PATH="/opt/conda/miniconda3/bin:$PATH"
 ```
 
-**重新打开一个**终端，测试是否安装成功`which conda`
+重新打开一个终端，测试是否安装成功`which conda`
 
 
-安装镜像
+## 使用 conda 的镜像加速
+
 ```shell
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -47,7 +62,7 @@ conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkg
 conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 ```
 
-创建虚拟环境
+## 创建虚拟环境
 
 ```shell
 conda create -n py3 python=3
