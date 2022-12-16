@@ -16,8 +16,9 @@ nginx
 curl -I 127.0.0.1
 ```
 
-编辑配置文件
 
+## nginx 做静态网页服务器
+编辑配置文件 `vi /etc/nginx/nginx.conf`
 ```nginx
 server {
    listen       80;
@@ -39,6 +40,29 @@ server {
    }
 }
 ```
+
+## nginx 做反向代理服务器
+```nginx
+server {
+   listen       80;
+   location / {
+       proxy_pass 192.168.0.2:8080
+   }
+   
+   location /data/ {
+       proxy_pass 192.168.0.3:8080
+   }
+   
+   location /test/ {
+       proxy_pass 192.168.0.4:8080/
+   }
+}
+# proxy_pass 中，带'/'表示绝对路径，不带'/'表示相对路径。
+# 上面的例子为：
+# /data/a.png  --> /data/a.png
+# /test/b.png  --> /b.png
+```
+
 
 ## nginx 的其他用法
 ### 端口转发
