@@ -6,7 +6,7 @@ categories: ["code"]
 tags: 
 description: 
 ---
-
+## 安装 nginx
 
 参考[官方文档](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)在centos 7 安装 nginx
 ```bash
