@@ -39,3 +39,33 @@ server {
    }
 }
 ```
+
+## nginx 的其他用法
+### 端口转发
+
+nginx version: nginx/1.20.1
+
+1. 使用 nginx 做端口转发
+```nginx
+stream{
+    server{
+        listen 3222;
+        proxy_connect_timeout 20s;
+        proxy_timeout 5m;
+        proxy_pass 192.168.0.2:22;
+    }
+}
+```
+
+2. 使用 nginx 做批量端口转发，转发端口段，端口范围
+```nginx
+stream{
+   server {
+     listen 30100-30200;
+     proxy_pass 10.0.8.9:$proxy_port;
+   }
+}
+```
+
+> 注：不能把 $proxy_port 换成 $proxy_port ，否则会出现 nginx: [emerg] unknown "proxy_port" variable
+
