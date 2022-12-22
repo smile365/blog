@@ -22,7 +22,22 @@ mvn -version
 brew install maven
 ```
 
-
+## 配置 maven 镜像站
+在  `~/.m2/setting.xml` 中的 mirrors 节点增加 mirror：
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+      <mirrors > 
+            <mirror>
+                <id>aliyunmaven</id>
+                <mirrorOf>*</mirrorOf>
+                <name>阿里云公共仓库</name>
+                <url>https://maven.aliyun.com/repository/public</url>
+            </mirror>
+      </mirrors>
+</settings>
+```
 
 ## 参考文档
 - [maven](https://maven.apache.org/install.html)
