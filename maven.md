@@ -20,9 +20,23 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 mvn -version
 
 brew install maven
+
+# 查看生效的配置
+# mvn help:effective-settings
+
+# 查看 mvn 信息和 Java 信息
+#  mvn -X
 ```
 
 ## 配置 maven 镜像站
+
+settings.xml 文件位置
+- 全局配置： ${maven.home}/conf/settings.xml
+- 用户配置： ${user.home}/.m2/settings.xml
+- 项目配置： pom.xml
+
+配置优先级从高到低：pom.xml > user settings > global settings
+
 在  `~/.m2/setting.xml` 中的 mirrors 节点增加 mirror：
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -57,3 +71,4 @@ brew install maven
 - [阿里云 Maven 镜像仓库](https://developer.aliyun.com/mirror/maven)
 - [How to Install Maven on Mac OS](https://www.digitalocean.com/community/tutorials/install-maven-mac-os)
 - [JAVA_HOME](https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/)
+- [settings.xml 位置](https://cloud.tencent.com/developer/article/1522574)
