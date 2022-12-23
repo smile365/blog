@@ -9,7 +9,7 @@ Description:
 
 
 ## macOS 安装 maven
-
+idea 自带 maven 但是不方便配置镜像站，建议重新安装。
 ```bash
 # 检测是否安装
 java -version  # 需要 Java 依赖
@@ -38,6 +38,18 @@ brew install maven
       </mirrors>
 </settings>
 ```
+
+
+![enter description here](https://cdn.sxy21.cn/static/imgs/1671767581208.png)
+## idea 不显示 maven 
+在 idea 最右侧会有 maven 窗口，如果不显示可通过如下方式解决：
+  - 法一：view --> tool windows --> maven projects
+  - 法二：Settings
+	  - Windows : File --> Settings
+	  - MacOS:  IntelliJ IDEA --> Preferences 
+		  -  plugins --> 在搜索框中输入 maven，勾选那两个插件 --> OK -->  根据提示重启 idea
+- 法三：右键 pom.xml  --->  add as maven
+
 
 ## 参考文档
 - [maven](https://maven.apache.org/install.html)
