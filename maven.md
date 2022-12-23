@@ -72,3 +72,4 @@ settings.xml 文件位置
 - [How to Install Maven on Mac OS](https://www.digitalocean.com/community/tutorials/install-maven-mac-os)
 - [JAVA_HOME](https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/)
 - [settings.xml 位置](https://cloud.tencent.com/developer/article/1522574)
+- [spring-boot](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started)
