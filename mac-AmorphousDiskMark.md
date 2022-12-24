@@ -19,6 +19,7 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 ## 2019 年 mac air 自带硬盘 
 - 读：1306 MB/s
 - 写：131 MB/s （可能是我存储不够了）
+ 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1669187655393.png)
 
 感觉写入特别低，可能是我们硬盘满了，只剩 6G 可用空间。删除了一些文件，剩余空间 15G，再次测试。
@@ -31,6 +32,7 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 对比一下我 usb2.0 的 u 盘
 - 读：20 MB/s
 - 写：4 MB/s 
+
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1669190236680.png)
 
 
@@ -49,6 +51,7 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 - 用 3.0 的读卡器
 - 读：41 MB/s
 - 写：36 MB/s
+
  难道是读卡器不行？官方宣传的读取速度是 130MB/s ，写入速度是 60MB/s 。
  
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1669269057667.png)
