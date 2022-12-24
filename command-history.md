@@ -7,18 +7,24 @@ categories: ["code"]
 Description: 
 ---
 
-
+## 安装 snoopy
 
 [snoopy](https://github.com/a2o/snoopy/blob/master/doc/INSTALL.md)可以记录 Linux 终端的操作记录。有 5 种安装方式。
+1. 使用存储库安装
+```bash
+apt     install snoopy   # Debian / Ubuntu
+yum     install snoopy   # RHEL / CentOS
+zypper  install snoopy   # SLES / OpenSUSE
+```
 
-方法一：使用脚本自动安装
+2. 使用脚本自动安装
 ```bash
 wget -O install-snoopy.sh https://github.com/a2o/snoopy/raw/install/install/install-snoopy.sh
 chmod 755 install-snoopy.sh
 sudo ./install-snoopy.sh stable
 ```
 
-方法二：使用二进制文件安装
+3. 使用二进制文件安装
 如果无法正常从 github 下载文件，可以使用 releases 中的二进制文件安装  [snoopy-2.5.1.tar.gz
 ](https://github.com/a2o/snoopy/releases)
 ```bash
@@ -29,9 +35,12 @@ cd snoopy-2.5.1/
 
 ```
 
-启用 snoopy
+## 启用 snoopy
 ```bash
-/usr/local/snoopy/sbin/snoopyctl enable
+snoopyctl enable
+snoopyctl status
+# 使用二进制安装的执行以下命令启动
+# /usr/local/snoopy/sbin/snoopyctl enable
 # 查看是否启用（没启用需要重启）
 cat /etc/ld.so.preload
 # # /usr/local/snoopy/lib/libsnoopy.so
