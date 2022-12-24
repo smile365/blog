@@ -5,6 +5,9 @@ series: ["blog"]
 categories: ["code"]
 Description:  Mac下的测速软件AmorphousDiskMark初试
 ---
+## 参考文档
+- [SD 卡速度等级](https://www.kingston.com.cn/cn/blog/personal-storage/memory-card-speed-classes)
+
 ## 2230 固态
 - 硬盘盒：ITGZ  m.2 JMS583  2230 硬盘盒 （66 元）
 - 2230 固态： 镁光 2230 512G （某鱼 245 元）格式化成 [APFS](https://evestorm.github.io/posts/33677/)格式
@@ -63,6 +66,12 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 
 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1669274820114.png)
+
+##  tf 卡速度
+
+
+| ![enter description here](https://cdn.sxy21.cn/static/imgs/1671882832767.png) | ![enter description here](https://cdn.sxy21.cn/static/imgs/1671882900463.png) |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 
 
 
