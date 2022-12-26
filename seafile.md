@@ -1,14 +1,61 @@
 ---
-title:  seafile安装教程
+title:  seafile 安装教程
 heading: 
 date: 2020-03-17T03:32:47.442Z
 categories: ["code"]
 tags: 
-description: 
+description:  把 seafile 作为私有云盘，自动同步 iphone 或其他 ios 设备的照片
 ---
 
-官网：seafile.com
 
+## 环境介绍
+- macos
+- iphone
+- linux ：ubuntu 
+- seafile： v7
+- docker：
+-  nginx：
+
+
+
+## ubuntu 部署 seafile v9
+
+参考[官方文档](https://docs.seafile.com/published/seafile-manual-cn/docker/%E7%94%A8Docker%E9%83%A8%E7%BD%B2Seafile.md)，使用 docker 方式部署 seafile v7 版本。
+编辑好 docker-compose.yaml 文件，然后
+```bash
+docker-compose up -d
+```
+
+## nginx 配置
+
+```nginx
+server {
+   listen       80;
+   listen       443 ssl;
+   server_name  seafile.sxy.com;
+
+   ssl_certificate      /etc/nginx/ssl/www.pem;
+   ssl_certificate_key  /etc/nginx/ssl/www.key;
+
+   ssl_session_cache    shared:SSL:1m;
+   ssl_session_timeout  5m;
+
+   ssl_ciphers  HIGH:!aNULL:!MD5;
+   ssl_prefer_server_ciphers  on;
+   location / {
+       proxy_pass http://10.0.8.3:30180;
+   }
+}
+```
+
+
+
+
+
+
+
+
+官网：seafile.com
 **目录说明**
 
 - conf： 配置文件
