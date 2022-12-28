@@ -7,11 +7,15 @@ tags:
 description: 
 ---
 
-截止今天（2020年4月29日）推荐多数用户使用的是长期支持版(LTS)Node.js 12.16.3 
+## nodejs 版本选择
 
-mac 或者windos建议直接下载[nodejs](https://nodejs.org/zh-cn/download/)安装包进行安装。
+nodejs 一般每年会升级两个大版本，偶数版是生产可用的版本（LTS），具体版本生命周期可查看 [nodejs-release](https://github.com/nodejs/release#release-schedule)
 
-在centos7安装[nodejs](https://nodejs.org/en/download/package-manager/)
+
+## 安装
+1. mac 或者 windows 建议直接下载 [nodejs](https://nodejs.org/zh-cn/download/)安装包进行安装。
+
+2. 在 centos7 安装[nodejs](https://nodejs.org/en/download/package-manager/)
 
 先配置安装源[nodejs-yum-source](https://github.com/nodesource/distributions)
 
@@ -31,8 +35,8 @@ npm -v
 # 6.14.4
 ```
 
-
-nodejs的npm比较慢，可以配置成阿里巴巴的[npm镜像](https://npm.taobao.org/)
+## 更换镜像源
+nodejs 的 npm 比较慢，可以配置成阿里巴巴的 [npm镜像](https://npm.taobao.org/)
 
 ```bash
 # 安装cnpm
@@ -43,4 +47,3 @@ cnpm install [name]
 npm config set registry https://registry.npm.taobao.org
 ```
 
-欢迎加入开发者交流QQ群：334118484。
