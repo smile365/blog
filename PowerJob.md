@@ -64,4 +64,4 @@ docker run -d --restart=always \
 
 
 ## 参考文档
-
+- [powerjob-使用 pg 出现的错误](https://github.com/PowerJob/PowerJob/issues/153#issuecomment-812771783)
