@@ -44,6 +44,11 @@ https://sxy21.cn {
 	reverse_proxy 10.0.8.9:30180
 }
 
+https://www.sxy21.cn {
+	file_server
+	root /usr/share/www/myblog/public
+}
+
 ```
 
 
@@ -61,6 +66,9 @@ caddy start --config /etc/caddy/pve_caddy --adapter caddyfile
 
 ## 静态文件
 
+```bash
+caddy file-server --root ~/mysite
+```
 
 ## 自动解析 markdown 文件
 
