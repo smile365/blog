@@ -47,7 +47,7 @@ https://sxy21.cn {
 ```
 
 
-运行
+## 运行
 ```bash
 # 验证文件是否正确, --adapter 表示文件格式 caddyfile | jonson
 caddy validate --config /etc/caddy/pve_caddy --adapter caddyfile
@@ -59,4 +59,13 @@ caddy run --config /etc/caddy/pve_caddy --adapter caddyfile
 caddy start --config /etc/caddy/pve_caddy --adapter caddyfile
 ```
 
+## 静态文件
+
+
+## 自动解析 markdown 文件
+
+
+
+## 参考文献
+- [caddy](https://caddyserver.com/)
 
