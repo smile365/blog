@@ -62,6 +62,11 @@ caddy run --config /etc/caddy/pve_caddy --adapter caddyfile
 
 # 后台启动 start
 caddy start --config /etc/caddy/pve_caddy --adapter caddyfile
+
+# 查看证书申请的位置
+find / -name "my.sxy21.cn"
+# /root/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/my.sxy21.cn
+
 ```
 
 ## 静态文件
