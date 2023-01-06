@@ -34,6 +34,19 @@ https://www.sxy21.cn
 reverse_proxy 10.0.8.9:30180
 ```
 
+多个站点
+```
+https://www.sxy21.cn {
+	reverse_proxy 10.0.8.9:30180
+}
+
+https://sxy21.cn {
+	reverse_proxy 10.0.8.9:30180
+}
+
+```
+
+
 运行
 ```bash
 # 验证文件是否正确, --adapter 表示文件格式 caddyfile | jonson
