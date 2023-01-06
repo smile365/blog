@@ -40,6 +40,38 @@ hugo version
 
 之后的创建站点、使用主题、添加内容、启动等都可以从[quick-start](https://gohugo.io/getting-started/quick-start/)查看到。
 
+debian 系统[安装方法](https://gohugo.io/installation/linux/#debian)
+```bash
+apt install -y hugo
+```
+
+## 创建 blog
+1. 参考 [官方教程](https://gohugo.io/getting-started/quick-start/#create-a-site)初始化一个 blog
+```bash
+# 找一个文件夹
+mkdir -p /usr/share/www
+cd /usr/share/www && hugo new site myblog
+cd myblog
+git init
+# 配置主题
+git submodule add https://gitee.com/smile365/wehuth.git themes/wehuth
+
+# 配置文件
+cp themes/wehuth/exampleSite/config.toml .
+```
+
+2. 创建文章
+```bash
+# hugo new posts/my-first-post.md
+# ~/content/posts/my-first-post.md created
+git submodule add https://github.com/smile365/blog.git content/posts
+
+# hugo server
+hugo server -D -t wehuth --bind=0.0.0.0 --baseURL=http://127.0.0.1:1313
+```
+
+
+
 ### Hugo 文章列表无法正确显示的解决方法
 
 在其他地方显示正常的md文件，在hugo下显示错误。其原因是hugo使用了Blackfriday作为Markdown解析引擎。
