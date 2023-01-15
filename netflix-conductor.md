@@ -23,8 +23,22 @@ Description:   基于 Netflix Conductor 实现工作流的合并和优先级执�
 ## docker 运行
 参考 [官方文档](https://conductor.netflix.com/gettingstarted/docker.html)
 
+端口
+- 8080，API 界面，/swagger-ui/index.html  查看 api
+- 5000， UI 界面。
 
-## 启动任务
+
+## 使用 Conductor
+
+1. 定义任务
+
+2. 定义工作流（编排任务）
+ 把一堆任务按照 DAG 组成一个工作流
+
+3. 启动工作流
+
+4. 实现 worker
+
 
 ### 系统任务
 
@@ -36,8 +50,8 @@ Description:   基于 Netflix Conductor 实现工作流的合并和优先级执�
 
 ## 参考文档 
 - [Netflix Conductor 入门 Example](https://www.jianshu.com/p/d30dbc681a11)
-- [conductor](https://github.com/Netflix/conductor)
+- [conductor-github](https://github.com/Netflix/conductor)
 - [conductor-doc](https://conductor.netflix.com/gettingstarted/local.html)
 - [DAG](https://conductor.netflix.com/reference-docs/directed-acyclic-graph.html)
 - [conductor-api](https://conductor.netflix.com/apispec.html)
-- 
+- [工作流引擎对比](https://www.jdon.com/workflow/Airflow-vs-Azkaban-vs-Conductor-vs-Oozie-vs-Amazon-Step-Functions.html)
