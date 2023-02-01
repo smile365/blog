@@ -7,6 +7,26 @@ tags:
 description: wireguard 内网穿透
 ---
 
+
+
+## debian 安装 WireGuard
+
+```bash
+# 安装
+apk install -y wireguard
+# 生成私钥
+wg genkey > privatekey
+# 通过私钥导出公钥
+wg pubkey < privatekey > publickey
+# 一次性生成私钥和公钥 
+# wg genkey | tee privatekey | wg pubkey > publickey
+
+```
+
+
+
+
+
 ## mac 安装 WireGuard
 
 
