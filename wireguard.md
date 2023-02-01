@@ -128,7 +128,7 @@ vi /etc/sysctl.d/99-sysctl.conf
 sysctl -p /etc/sysctl.d/99-sysctl.conf
 
 yum install adb
-
+# 添加 peer
 wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.3/24
 
 ```
