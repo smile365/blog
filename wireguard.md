@@ -200,3 +200,4 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 - [体验Wireguard的简单之美](https://www.nixops.me/articles/wireguard-howtos.html)
 - [WireGuard 组建非对称路由](https://www.51cto.com/article/719256.html)
 - [WireGuard场景中使用策略路由定义复杂路由](https://blog.imlk.top/posts/policy-routing-with-wg-tunnel/)
+- [使用电信 TR069 内网架设 WireGuard 隧道异地组网](https://www.kryii.com/89.html)
