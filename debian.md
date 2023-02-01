@@ -39,8 +39,13 @@ iso 下载地址：
 - [debian](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
 - [docker-ce](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 
+## 安装 nginx
+```bash
+apt update
+apt install -y nginx
+```
 
-## 安装基础软件 
+## 安装 docker
 安装 vim、sudo、rsync docker-ce
 ```bash
 # vim\sudo\rsync
