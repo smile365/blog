@@ -143,6 +143,12 @@ $ sudo wg-quick down wg0
 $ sudo wg 
 ```
 
+在 debian 服务器上增加 mac 的 peer
+```bash
+wg set wg0 peer [mac 的公钥] allowed-ips 10.0.8.3/32
+```
+
+
 ## centos 安装 wireguard
 
 参考[官方文档](https://www.wireguard.com/install/)
