@@ -6,8 +6,10 @@ categories: ["other"]
 tags: 
 description: wireguard 内网穿透
 ---
-
-
+## 网络拓扑结构
+![enter description here](https://cdn.sxy21.cn/static/imgs/1675260160422.png)
+ 
+实现内网穿透并访问局域网内的其他服务。
 
 ## debian 安装 WireGuard
 
@@ -30,8 +32,7 @@ wg pubkey < privatekey > publickey
 Address = 10.0.8.1
 SaveConfig = true
 ListenPort = 51820
-# 上一步生成的私钥
-PrivateKey = xxx 
+PrivateKey = 【debian的私钥】 
 ```
 
 
@@ -51,19 +52,22 @@ vi wg0.conf
 Address = 10.0.8.2
 SaveConfig = true
 ListenPort = 49152
-PrivateKey = xxxxx
+PrivateKey = 【alpine 的私钥】
 PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 [Peer]
-PublicKey = xxxx
+PublicKey = 【debian 的公钥】
 AllowedIPs = 10.0.8.0/24
 Endpoint = sxy21.cn:51820
 PersistentKeepalive = 25
 ```
 
 
-
+在 debian 服务器上加入 alpine 的 peer
+```bash
+wg set wg0 peer 【alpine 的公钥】 allowed-ips 10.0.8.2/32,192.168.0.0/24
+```
 
 ## mac 安装 WireGuard
 
