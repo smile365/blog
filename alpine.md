@@ -186,6 +186,10 @@ AllowedIPs = 10.0.8.0/24
 PersistentKeepalive = 25
 ```
 
+wireguard 服务端添加 peer
+```bash
+sudo wg set wg0 peer [peer的公钥] allowed-ips 10.0.8.2/32
+```
 
 启动 ` wg-quick up wg0 `
 
