@@ -24,6 +24,37 @@ wg pubkey < privatekey > publickey
 
 ```
 
+编辑配置文件 `vim /etc/wireguard/wg0.conf`，内如如下：
+```
+[Interface]
+Address = 10.0.8.1/24
+SaveConfig = true
+ListenPort = 51820
+# 上一步生成的私钥
+PrivateKey = xxx 
+```
+
+
+## delpline 安装 WireGuard
+```bash
+apk add -U wireguard-tools
+
+cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
+cat /etc/wireguard/publickey 
+vi wg0.conf
+
+[Interface]
+Address = 10.0.8.2
+SaveConfig = true
+ListenPort = 49152
+PrivateKey = xxxxx
+
+[Peer]
+PublicKey = xxxx
+AllowedIPs = 10.0.8.0/24
+Endpoint = sxy21.cn:51820
+PersistentKeepalive = 25
+```
 
 
 
