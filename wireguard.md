@@ -124,11 +124,11 @@ sudo vim /usr/local/etc/wireguard/wg0.conf
 内容如下：
 ```nginxconf
 [Interface]
-PrivateKey = xxx
+PrivateKey = [mac 的私钥]
 Address = 10.0.8.3/24
 
 [Peer]
-PublicKey = xxxx
+PublicKey = [debian 的公钥]
 Endpoint = sxy21.cn:51820
 AllowedIPs = 10.0.8.0/24,192.68.0.0/24
 ```
