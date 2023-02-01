@@ -35,7 +35,7 @@ PrivateKey = xxx
 ```
 
 
-## delpline 安装 WireGuard
+## alpine 安装 WireGuard
 ```bash
 apk add -U wireguard-tools
 
