@@ -69,6 +69,18 @@ PersistentKeepalive = 25
 wg set wg0 peer 【alpine 的公钥】 allowed-ips 10.0.8.2/32,192.168.0.0/24
 ```
 
+**测试**
+```bash
+# 在 debian 服务器上
+ping 10.0.8.2
+ping 192.168.0.167
+
+# 在 alpine 服务器上
+ping 10.0.8.1
+```
+
+
+
 ## mac 安装 WireGuard
 
 
