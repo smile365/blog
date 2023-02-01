@@ -186,7 +186,8 @@ wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.
 
 
 参考文章
-- [wireGuard安装和配置过程](https://ggqshr.github.io/2020-12-21/wireGuard%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/)
+- [wireGuard 安装和配置过程](https://ggqshr.github.io/2020-12-21/wireGuard%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B/)
+- [使用 wireguard 访问公司内网](https://qtdebug.com/mac-vpn-forward/)
 - [WireGuard 教程：使用 DNS-SD 进行 NAT-to-NAT 穿透](https://xie.infoq.cn/article/3f68cde0163b359b13fa1a8f0)
 - [WireGuard 的工作原理](https://fuckcloudnative.io/posts/wireguard-docs-theory/)
 - [使用 WireGuard 无缝接入内网](https://devld.me/2020/07/27/wireguard-setup/)
