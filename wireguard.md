@@ -27,7 +27,7 @@ wg pubkey < privatekey > publickey
 编辑配置文件 `vim /etc/wireguard/wg0.conf`，内如如下：
 ```
 [Interface]
-Address = 10.0.8.1/24
+Address = 10.0.8.1
 SaveConfig = true
 ListenPort = 51820
 # 上一步生成的私钥
