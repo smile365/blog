@@ -13,7 +13,7 @@ description: wireguard 内网穿透
 
 ```bash
 # 安装
-apk install -y wireguard
+apk install -y wireguard 
 cd /etc/wireguard
 # 生成私钥
 wg genkey > privatekey
@@ -37,6 +37,10 @@ PrivateKey = xxx
 
 ## alpine 安装 WireGuard
 ```bash
+# 开启 ip 转发
+# sysctl -a |grep ipv4.ip_forward
+sudo sysctl net.ipv4.ip_forward=1
+
 apk add -U wireguard-tools
 
 cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
@@ -48,6 +52,8 @@ Address = 10.0.8.2
 SaveConfig = true
 ListenPort = 49152
 PrivateKey = xxxxx
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 [Peer]
 PublicKey = xxxx
