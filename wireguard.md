@@ -129,7 +129,7 @@ Address = 10.0.8.3/24
 
 [Peer]
 PublicKey = xxxx
-Endpoint = xxx:51820
+Endpoint = sxy21.cn:51820
 AllowedIPs = 10.0.8.0/24,192.68.0.0/24
 ```
 
