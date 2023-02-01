@@ -125,10 +125,14 @@ systemctl start sshd
 
 ## 备份和快照
 
+## 使用合法的 SSL 证书
+
+
 
 ## 参考文档 
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
 - [pandownload](https://pandownload.net/document/download.html)
+- [Proxmox VE配置ssl证书](https://foxi.buduanwang.vip/virtualization/256.html/)
 
 
 
