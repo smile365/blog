@@ -191,16 +191,16 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
  ```
 
 ## 影视相关工具
-| 名称        | 介绍                                                                      | 网址 | 安装方式 |
-| ----------- | ------------------------------------------------------------------------- | ---- | -------- |
-| Jackett     | 种子搜索的聚合器。把上百个种子搜索网站做成了 API 形式，以供别的程序使用。 |      |          |
-| Radarr      | 电影下载和管理工具。根据你的电影名到电影网站查找电影相关信息。            |      |          |
-| Sonarr      | 电视连续剧下载和管理[工具](https://www.shengchulai.com/blog-OWNEuwyeqZ.htm)。。                                                |      |          |
-| emby        |                                                                           |      |          |
-| qBittorrent | 种子下载器。                                                              |      |          |
-| Trakt       | 待看清单列表。                                                            |      |          |
-| transmission  | 另一个种子下载器 |      |          |
-| [transmission-web-control](https://github.com/ronggang/transmission-web-control) | transmission 的 web 管理界面。官方的原版很简陋，比较难用。|      |          |
+| 名称                                                                             | 介绍                                                                          | 网址 | 安装方式 |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ---- | -------- |
+| [Jackett](https://registry.hub.docker.com/r/linuxserver/jackett/)                | 种子搜索的聚合器。把上百个种子搜索网站做成了 API 形式，以供别的程序使用。     |      |          |
+| [Radarr](https://registry.hub.docker.com/r/linuxserver/radarr/)                  | 电影下载和管理工具。根据你的电影名到电影网站查找电影相关信息。                |      |          |
+| [Sonarr](https://registry.hub.docker.com/r/linuxserver/sonarr)                   | 电视连续剧下载和管理[工具](https://www.shengchulai.com/blog-OWNEuwyeqZ.htm)。 |      |          |
+| [emby](https://registry.hub.docker.com/r/emby/embyserver/)                       |                                                                               |      |          |
+| [qBittorrent](https://registry.hub.docker.com/r/linuxserver/qbittorrent/)        | 种子下载器。                                                                  |      |          |
+| [Trakt](https://trakt.tv/)                                                       | 待看清单列表。                                                                |      |          |
+| [transmission](https://registry.hub.docker.com/r/linuxserver/transmission)       | 另一个种子下载器                                                              |      |          |
+| [transmission-web-control](https://github.com/ronggang/transmission-web-control) | transmission 的 web 管理界面。官方的原版很简陋，比较难用。                    |      |          |
 
 
 
