@@ -67,7 +67,13 @@ server {
 ## nginx 的其他用法
 ### 端口转发
 
-nginx version: nginx/1.20.1
+```bash
+nginx -V |grep with-stream  # 需要 stream 模块
+# nginx version: nginx/1.20.1
+mkdir -p /etc/nginx/tcp.d/
+echo "include /etc/nginx/tcp.d/*.conf;" >> /etc/nginx/nginx.conf
+vi /etc/nginx/tcp.d/my.conf
+```
 
 1. 使用 nginx 做端口转发
 ```nginx
