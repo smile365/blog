@@ -220,7 +220,15 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 ## 安装过程
 
 ### transmission
-
+参考 [SSH 安装方式](https://github.com/ronggang/transmission-web-control/wiki/Linux-Installation-CN)
+```bash           
+docker exec -it linuxserver-transmission1  /bin/bash
+apk add wget
+# 下载
+wget https://gitee.com/culturist/transmission-web-control/raw/master/release/install-tr-control-gitee.sh
+# 安装
+bash install-tr-control-cn.sh /usr/share/transmission/web/
+```
 
 
 ## 遇到的问题
@@ -240,7 +248,7 @@ Tracker returned an error: Tracker gave HTTP response code 0  (No Response)
 # docker pull superng6/qbittorrentee
 docker exec -it linuxserver-qbittorrent1 /bin/bash
 apt update
-apt install binutils
+apt install -y binutils
 strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 # 重启容器
@@ -302,6 +310,7 @@ ipkg install lsof
 docker pull linuxserver/qbittorrent
 docker pull linuxserver/jackett
 docker pull linuxserver/radarr
+docker pull linuxserver/transmission
 docker pull emby/embyserver
 ```
 
