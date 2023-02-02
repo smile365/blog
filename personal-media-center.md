@@ -16,8 +16,8 @@ description: 打造家庭媒体中心，Personal Media Center
     - 标准媒体：公开发行的电影、电视剧、动漫
     - 非标准：你懂的
 
+![enter description here](https://cdn.sxy21.cn/static/imgs/1675331715839.png)
 
-![目标](https://gitee.com/smile365/blogimg/raw/master/小书匠/1643194483988.png)
 
 思路：Proxmox Virtual Environment 安装黑群晖、路由器、Linux虚拟机等。
 
@@ -170,7 +170,7 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 
 ## 群晖安装 docker
 
-配置面板--终端机：启用 ssh  
+控制面板--高级--应用和程序--终端机：启用 ssh  
 文件管理：创建存储池、存储空间  
 套件中心：搜索 docker 并[安装 docker](https://zhuanlan.zhihu.com/p/146175822)  
 
@@ -191,8 +191,6 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
  ```
 
 ## 影视相关工具
-
-
 | 名称        | 介绍                                                                      | 网址 | 安装方式 |
 | ----------- | ------------------------------------------------------------------------- | ---- | -------- |
 | Jackett     | 种子搜索的聚合器。把上百个种子搜索网站做成了 API 形式，以供别的程序使用。 |      |          |
@@ -339,6 +337,10 @@ smbstatus -V
 
 [在PVE中安装安卓x86](https://foxi.buduanwang.vip/virtualization/pve/567.html/)
 
+## 共享文件夹
+WebDav
+
+
 
 ## 参考文档    
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
@@ -358,4 +360,5 @@ smbstatus -V
 - [主流平台访问samba共享文件夹方法总结](https://github.com/wupanhao/wupanhao.github.io/issues/1)
 - [Proxmox6.0-cn 中文手册](http://files.elvin.vip/doc/Proxmox6.0-cn.pdf)
 - [在PVE中安装安卓x86+清华大学镜像站](http://loves.im/?id=43)
+- [访问群晖nas文件](https://zhuanlan.zhihu.com/p/369355795)
 
