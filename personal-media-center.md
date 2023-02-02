@@ -339,7 +339,7 @@ smbstatus -V
 
 ## 共享文件夹
 WebDav
-
+smb
 
 
 ## 参考文档    
