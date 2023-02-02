@@ -149,9 +149,7 @@ dhclient
     - model： Intel E1000
 
 然后删除 CD 驱动和硬盘。
-
-![](https://gitee.com/smile365/blogimg/raw/master/小书匠/1644664926503.png)
-
+![enter description here](https://cdn.sxy21.cn/static/imgs/1675321048916.png)
 
 把 DS3617-1.03b_boot.qcow2 上传到 PVE 的 /root 目录下
 
