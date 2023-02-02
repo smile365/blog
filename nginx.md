@@ -99,3 +99,19 @@ stream{
 
 > 注：不能把 $proxy_port 换成 $proxy_port ，否则会出现 nginx: [emerg] unknown "proxy_port" variable
 
+
+## nginx 升级到最新版
+参考[文档](http://nginx.org/en/linux_packages.html#Debian)
+```bash
+# 安装依赖
+apt install -y curl gnupg2 ca-certificates lsb-release debian-archive-keyring
+# 导入 gpg
+curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor \
+    | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
+# 配置软件源
+echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
+http://nginx.org/packages/debian `lsb_release -cs` nginx" \
+    | sudo tee /etc/apt/sources.list.d/nginx.list
+# 安装
+apt update && apt install -y nginx
+```
