@@ -164,10 +164,10 @@ qm importdisk 100 DS3617-1.03b_boot.qcow2 local-lvm --format=qcow2
 再增加一个 sata 磁盘，容量随意，简易 32G 以上。
 编辑 options 启动项改成 sata0，点击启动，然后打开终端。
 
-此时会出现 http://find.synology.com/ 等字样，打开网站继续安装即可。
+此时会出现 http://find.synology.com/ 等字样，打开网站继续安装即可。若提示“局域网内未找到 DiskStation”，可以查看路由器新增的 ip，然后直接访问 ip:5000
+		
 
 手动安装，选择 `DSM_DS3617xs_25426.pat` 
-
 
 
 ## 群晖安装 docker
