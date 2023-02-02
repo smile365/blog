@@ -354,6 +354,7 @@ smb
 ## 参考文档    
 - [年轻人的第一个全自动个人影音库-效果展示](https://www.bilibili.com/video/BV19S4y1Q7nB)
 - [追剧全流程自动化Jackett Sonarr Radarr Bazarr qBittorrent Emby Plex](https://sleele.com/2020/03/16/%E9%AB%98%E9%98%B6%E6%95%99%E7%A8%8B-%E8%BF%BD%E5%89%A7%E5%85%A8%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/comment-page-2/)
+- [群晖搭建基于Plex的自动追剧媒体中心](https://www.jianshu.com/p/99708c9d2fda)
 - [Mac 上将U盘格式化为 ExFAT](https://sspai.com/post/68573)
 - [MAC OS 烧录ISO文件到U盘](https://blog.csdn.net/Aria_Miazzy/article/details/104321607)
 - [Mac 使用终端彻底格式化U盘](https://blog.csdn.net/chenhao_c_h/article/details/102552874)
