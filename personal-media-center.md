@@ -373,4 +373,5 @@ smb
 - [Proxmox6.0-cn 中文手册](http://files.elvin.vip/doc/Proxmox6.0-cn.pdf)
 - [在PVE中安装安卓x86+清华大学镜像站](http://loves.im/?id=43)
 - [访问群晖nas文件](https://zhuanlan.zhihu.com/p/369355795)
+- [利用NAS实现全自动观影追剧的几种方案对比](https://fairysen.com/788.html)
 
