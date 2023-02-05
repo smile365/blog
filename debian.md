@@ -74,7 +74,7 @@ apt install -y vim sudo rsync software-properties-common
 # apt remove docker docker-engine docker.io
 
 # 首先安装依赖:
-apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+apt install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
 # 信任 Docker 的 GPG 公钥
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -87,14 +87,15 @@ add-apt-repository \
 
 # 最后安装
 apt update
-apt install -y docker-ce
+apt install -y docker-ce 
 docker -v
+docker comepose -v
 ```
 
 
 ## 配置数据路径和 Docker 加速器
 
-参考[教程](https://www.runoob.com/docker/docker-mirror-acceleration.html) 配置 dockerhub。
+参考 [教程](https://www.runoob.com/docker/docker-mirror-acceleration.html)配置 [阿里云](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)的 dockerhub。
 
 data-root默认为/var/lib/docker，一般分配较小，可改到其他路径。修改daemon配置文件/etc/docker/daemon.json：
 ```bash
