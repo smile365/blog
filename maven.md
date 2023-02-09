@@ -15,8 +15,10 @@ idea 自带 maven 但是不方便配置镜像站，建议重新安装。
 java -version  # 需要 Java 依赖
 
 # vi ~/.bash_profile
-export JAVA_HOME=$(/usr/libexec/java_home)
+/usr/libexec/java_home -v
 
+# export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 mvn -version
 
 brew install maven
