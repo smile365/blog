@@ -31,6 +31,17 @@ mkdir ~/.jenv/version
  echo 'eval "$(jenv init -)"' >> ~/.bash_profile
 ```
 
+## 使用
+```bash
+ # 查看 jenv 管理的 jdk 版本
+ jenv versions
+ 
+ # 切换jdk版本有三个作用域，分别是global、local、shell。
+ jenv local 11.0
+ # java -version
+ 
+```
+
 
 
 参考文档：
