@@ -14,7 +14,7 @@ idea 自带 maven 但是不方便配置镜像站，建议重新安装。
 # 检测是否安装
 java -version  # 需要 Java 依赖
 
-
+# 查看 jdk 的版本和路径
 /usr/libexec/java_home -v
 
 # export JAVA_HOME=$(/usr/libexec/java_home) # 只安装了一个 jdk 可以如此
