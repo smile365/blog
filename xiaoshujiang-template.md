@@ -1,8 +1,7 @@
 ---
 title: xiaoshujiang-template
-tags: 新建,模板,小书匠
-category: /小书匠/日记/2023-02
-grammar_cjkRuby: true
+tags: 
+category:  
 ---
 
 
