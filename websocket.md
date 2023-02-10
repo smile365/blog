@@ -36,7 +36,9 @@ Description:
 
 
 ## 实战 demo
-
+鉴权
+spring boot + websocket+ jwt+
+推送 demo
 
 
 
@@ -58,4 +60,7 @@ Description:
 - [WebSockets 连接数从 1w 到 100w 遇到的问题](https://shibd.github.io/message-center-3/#%E7%AA%81%E7%A0%B41W%EF%BC%88%E6%9B%B4%E6%8D%A2Spring%E7%9A%84Web%E5%AE%B9%E5%99%A8%EF%BC%89)
 - [小爱接入层单机百万长连接技术演进](https://www.zhihu.com/question/20831000/answer/2401861700)
 - [爱奇艺 WebSocket 实时推送网关技术实践](http://www.52im.net/thread-3539-1-1.html)
+- [Websocket 能否自定义请求头](https://hgl2.com/2021/websocket-request-header/)
+- [Websocket 能否自定义请求头](https://hgl2.com/2021/websocket-request-header/)
+- [websocket-security](https://devcenter.heroku.com/articles/websocket-security)
 
