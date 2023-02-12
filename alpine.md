@@ -204,6 +204,7 @@ sudo wg set wg0 peer [peer的公钥] allowed-ips 10.0.8.2/32
 ```bash
 #!/sbin/openrc-run
 wg-quick up wg0
+# chmod +x /etc/local.d/wg.start
 ```
 
 **方法二**
@@ -227,6 +228,7 @@ stop() {
 
 使用 OpenRC  管理 wg 服务
 ```bash
+chmod +x /etc/init.d/wg
 rc-update add wg
 rc-service wg start
 rc-service wg status
