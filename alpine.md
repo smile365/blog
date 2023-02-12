@@ -260,7 +260,10 @@ rc-update add nginx
 rc-service nginx status
 rc-service nginx start
 
-
+## 安装 adb
+```bash
+apk --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add android-tools
+```
 
 ## 参考资料    
 - [/run/nginx/nginx.pid](https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command)
