@@ -261,6 +261,8 @@ rc-service nginx status
 rc-service nginx start
 
 ## 安装 adb
+
+参考 [Alpine-adb](https://github.com/sorccu/docker-adb/issues/9)
 ```bash
 apk --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ add android-tools
 ```
