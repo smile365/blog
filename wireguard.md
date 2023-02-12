@@ -78,6 +78,7 @@ wg set wg0 peer 【alpine 的公钥】 allowed-ips 10.0.8.2/32,192.168.0.0/24
 # 在 debian 服务器上
 ping 10.0.8.2
 ping 192.168.0.167
+# 如果可以 ping 通 167 但 175 不通 一般是 ip 转发没打开
 ping 192.168.0.175
 
 # 在 alpine 服务器上
