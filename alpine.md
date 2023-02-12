@@ -197,7 +197,8 @@ sudo wg set wg0 peer [peer的公钥] allowed-ips 10.0.8.2/32
 让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
 
 如果客户端在 NAT 之后，当没有活动的数据连接，客户端就是断开，可通过 配置项 PersistentKeepalive “促活”
-vim /etc/local.d/wg.start
+查看开启启动的说明 `/etc/local.d/README`
+编辑文件 `vim /etc/local.d/wg.start`，内容如下：
 ```bash
 #!/sbin/openrc-run
 description="wg-quick wg0"
