@@ -15,6 +15,12 @@ description:  pve 系列教程
 - alpine
 - xxx
 
+## 虚拟机磁盘类型介绍
+ IDE、SATA、VirtIO、Block SCSI 
+IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使用 SATA 否则推荐使用 VirtIO
+
+
+
 ## 使用模板创建虚拟机
 
 
