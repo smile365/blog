@@ -193,6 +193,33 @@ sudo wg set wg0 peer [peer的公钥] allowed-ips 10.0.8.2/32
 
 启动 ` wg-quick up wg0 `
 
+## wireguard 开启/重启自动启动
+让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
+
+如果客户端在 NAT 之后，当没有活动的数据连接，客户端就是断开，可通过 配置项 PersistentKeepalive “促活”
+vim /etc/local.d/wg.start
+```bash
+#!/sbin/openrc-run
+description="wg-quick wg0"
+depend() {
+    need net
+    need localmount
+}
+start() {
+    wg-quick up wg0
+}
+stop() {
+    wg-quick down wg0
+}
+
+# rc-update add wg
+
+# wg-quick up wg0    #启动服务端
+# wg-quick down wg0  #停止服务端
+
+# rc-service wg start
+# rc-service wg stop
+```
 
 ### Alpine 中的 systemctl
 
@@ -207,24 +234,7 @@ Alpine 没有 systemctl 之类的工具，相似的工具是 [awall](https://www
 # apk version awall
 ```
 
-让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
 
-如果客户端在 NAT 之后，当没有活动的数据连接，客户端就是断开，可通过 配置项 PersistentKeepalive “促活”
-
-或者使用[脚本](https://www.kryii.com/44.html)
-
-vim /etc/local.d/wg.start
-
-wg-quick up wg0
-
-rc-update add wg
-
-wg-quick up wg0    #启动服务端
-wg-quick down wg0  #停止服务端
-
-
-rc-service wg start
-rc-service wg stop
 
 
 配置 nginx udp [端口转发](https://blog.51cto.com/moerjinrong/2287680)
@@ -239,3 +249,5 @@ rc-service nginx start
 
 ## 参考资料    
 - [/run/nginx/nginx.pid](https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command)
+- [utostart Wireguard](https://techoverflow.net/2022/11/26/how-to-autostart-wireguard-wg-quick-on-boot-on-alpine-linux/)
+- []()
