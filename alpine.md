@@ -197,10 +197,19 @@ sudo wg set wg0 peer [peer的公钥] allowed-ips 10.0.8.2/32
 让 [wireguard开机启动](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/) 
 
 如果客户端在 NAT 之后，当没有活动的数据连接，客户端就是断开，可通过 配置项 PersistentKeepalive “促活”
+
+**方法一：**
 查看开启启动的说明 `/etc/local.d/README`
 编辑文件 `vim /etc/local.d/wg.start`，内容如下：
 ```bash
 #!/sbin/openrc-run
+wg-quick up wg0
+```
+
+**方法二**
+
+编辑配置文件 `vim /etc/init.d/wg `，内容如下：
+```bash
 description="wg-quick wg0"
 depend() {
     need net
@@ -212,13 +221,15 @@ start() {
 stop() {
     wg-quick down wg0
 }
-
-# rc-update add wg
-
 # wg-quick up wg0    #启动服务端
 # wg-quick down wg0  #停止服务端
+```
 
-# rc-service wg start
+使用 OpenRC  管理 wg 服务
+```bash
+rc-update add wg
+rc-service wg start
+rc-service wg status
 # rc-service wg stop
 ```
 
@@ -251,4 +262,4 @@ rc-service nginx start
 ## 参考资料    
 - [/run/nginx/nginx.pid](https://stackoverflow.com/questions/65627946/how-to-start-nginx-server-within-alpinelatest-image-using-rc-service-command)
 - [utostart Wireguard](https://techoverflow.net/2022/11/26/how-to-autostart-wireguard-wg-quick-on-boot-on-alpine-linux/)
-- []()
+- [开启启动 wireguard](https://serverfault.com/questions/1084907/wireguard-on-alpine-automatically-mount-wg0-after-boot)
