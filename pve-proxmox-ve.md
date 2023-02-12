@@ -127,7 +127,28 @@ systemctl start sshd
 
 ## 使用合法的 SSL 证书
 
+## 增加新的硬盘
+原来是 2T 固态 m2 接口+ 16T 机械 stat 接口。之后又买了 2 T 的 ssd 固态，stat 接口。增加新的硬盘后 pve 系统无法启动，提示：
+```accesslog
+Found volume group "pve" using metadata type lvm2
+ 16 logical volume (s) in volume group "pue" now active 
+ /dev/mapper/pve-root: recovering journal 
+ /dev/mapper/pve-root: clean, 50136/6291456 files, 13977306/25165824 blocks 
+ [ TIME ] Timed out waiting for device /dev/sdai. 
+ [DEPEND] Dependency failed for File System Check on /dew/sdal. 
+ [DEPEND] Dependency failed for /mnt/data. 
+ [DEPEND]Dependency failed for Local File systems 
+  You are in emergency mode. After logging in, type "fournalcti-xb" to view 
+system logS, "systemcti reboot" to reboot, 'systemcti default" or "exit° to boot into default mode. 
+Give root password for maintenance 
+(or press Control-D to continue):
+```
+输入 root 账号密码后可以进入
 
+
+pve secureboot: secure boot could not be determined mode 0
+
+找了很多资料，折腾半天发现没用，鬼使神差换了个一下 stat 线的位置，发现可以了。
 
 ## 参考文档 
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
