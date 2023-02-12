@@ -40,14 +40,18 @@ PrivateKey = 【debian的私钥】
 ```bash
 # 开启 ip 转发
 # sysctl -a |grep ipv4.ip_forward
-sudo sysctl net.ipv4.ip_forward=1
-
+# 仅本次生效重启后失效
+# sysctl net.ipv4.ip_forward=1
+# 永久生效
+echo net.ipv4.ip_forward= 1 | tee -a /etc/sysctl.conf && sysctl -p
+# 安装 wireguard
 apk add -U wireguard-tools
-
+# 配置
 cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
 cat /etc/wireguard/publickey 
+# 编辑配置文件
 vi wg0.conf
-
+# 内容如下
 [Interface]
 Address = 10.0.8.2
 SaveConfig = true
