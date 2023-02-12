@@ -150,6 +150,10 @@ pve secureboot: secure boot could not be determined mode 0
 
 找了很多资料，折腾半天发现没用，鬼使神差换了个一下 stat 线的位置，发现可以了。
 
+## 挂载 usb 设备给虚拟机
+在宿主机插入 usb 设备，点击需要挂载的虚拟机（通过模板创建的虚拟机无法挂载），依次点击 硬件 -> 添加 -> 添加 usb 设备 -> 使用 usb 设备供应商/ID。
+
+
 ## 参考文档 
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
 - [pandownload](https://pandownload.net/document/download.html)
