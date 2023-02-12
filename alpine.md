@@ -217,6 +217,7 @@ depend() {
     need localmount
 }
 start() {
+    sysctl net.ipv4.ip_forward=1
     wg-quick up wg0
 }
 stop() {
