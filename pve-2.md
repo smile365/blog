@@ -1,0 +1,39 @@
+---
+title: pve-2
+heading:  
+date: 2023-02-12T08:13:02.861Z
+categories: ["code"]
+tags: 
+description:  pve 系列教程
+---
+
+## usb 安装 pve
+
+## 创建虚拟机
+- debian
+- windows 11
+- alpine
+- xxx
+
+## 使用模板创建虚拟机
+
+
+## usb 端口转发
+
+
+## 证书
+
+
+## zfs 
+
+## Ceph
+
+
+
+## 参考文档
+- [Cockpit - 基于 Web 的 Linux 管理工具](https://www.hangge.com/blog/cache/detail_3024.html)
+- [XFS 文件系统简介](https://www.cnblogs.com/orange-CC/p/12711078.html)
+- [分布式存储 Ceph](https://www.infoq.cn/article/brjtisyrudhgec4odexh)
+- [ pve 开启分布式存储](https://www.cnblogs.com/varden/p/15209401.html)
+- [Proxmox Virtual Environment 介绍 ](https://www.cnblogs.com/varden/p/15193466.html)
+- [PVE+TrueNAS+ZFS+10G内网方案](https://foxi.buduanwang.vip/virtualization/pve/1183.html/)
