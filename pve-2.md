@@ -46,3 +46,7 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 - [Proxmox Virtual Environment 介绍 ](https://www.cnblogs.com/varden/p/15193466.html)
 - [PVE+TrueNAS+ZFS+10G内网方案](https://foxi.buduanwang.vip/virtualization/pve/1183.html/)
 - [KVM性能优化之磁盘IO优化](https://www.cnblogs.com/tcicy/p/10193613.html)
+- [PVE虚拟机直通SATA硬盘](https://v2rayssr.com/pve-nas.html)
+- [PVE系统设置硬盘直通](https://foxi.buduanwang.vip/virtualization/1754.html/)
+- [黑群晖支持 SCSI 类型硬盘](https://www.jianshu.com/p/e358dfd654e9)
+- [PVE+TrueNAS+ZFS+10G内网方案](https://foxi.buduanwang.vip/virtualization/pve/1183.html/)
