@@ -50,3 +50,4 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 - [PVE系统设置硬盘直通](https://foxi.buduanwang.vip/virtualization/1754.html/)
 - [黑群晖支持 SCSI 类型硬盘](https://www.jianshu.com/p/e358dfd654e9)
 - [PVE+TrueNAS+ZFS+10G内网方案](https://foxi.buduanwang.vip/virtualization/pve/1183.html/)
+- [PVE 上部署 TrueNAS](https://www.cnblogs.com/Pyrokine/p/14646478.html)
