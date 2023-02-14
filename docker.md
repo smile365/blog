@@ -64,15 +64,18 @@ docker.service failed
 一般是配置文件错误，请查看`/etc/docker/daemon.json`文件中的json格式是否正确。
 
 
-
+## 常用命令和参数
 **run 命令常用参数**
 - -p:主机端口:容器端口
 - -d:后台运行
 - --name:取一个别名
 - -v:主机目录:容器目录
 
+**ps 命令参数**
+- 
 
-参考  
+
+## 参考文档  
 - [docker镜像](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
 - [安装Docker CE](https://yeasy.gitbooks.io/docker_practice/content/install/centos.html)
 - [docker logs](https://www.jianshu.com/p/1eb1d1d3f25e)
@@ -82,3 +85,5 @@ docker.service failed
 - [config.json](https://www.cnblogs.com/ningskyer/articles/8330143.html)
 - [腾讯云私有镜像服务](https://cloud.tencent.com/document/product/1141/50332)
 - [腾讯云加速docker](https://cloud.tencent.com/document/product/1207/45596?from=information.detail.%E8%85%BE%E8%AE%AF%E4%BA%91%E5%8A%A0%E9%80%9Fdocker)
+- [删除Docker中所有已停止的容器](https://www.cnblogs.com/jiu0821/p/10397822.html)
+- [启动已停止的容器](https://www.jianshu.com/p/bbf6343a81cb)
