@@ -35,6 +35,7 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 
 ## Ceph
 
+## 如何提高 pve 虚拟机的读写性能
 
 
 ## 参考文档
@@ -44,3 +45,4 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 - [ pve 开启分布式存储](https://www.cnblogs.com/varden/p/15209401.html)
 - [Proxmox Virtual Environment 介绍 ](https://www.cnblogs.com/varden/p/15193466.html)
 - [PVE+TrueNAS+ZFS+10G内网方案](https://foxi.buduanwang.vip/virtualization/pve/1183.html/)
+- [KVM性能优化之磁盘IO优化](https://www.cnblogs.com/tcicy/p/10193613.html)
