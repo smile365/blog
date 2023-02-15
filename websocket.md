@@ -7,13 +7,41 @@ categories: ["code"]
 Description:  
 ---
 ## 前言
-
+http 协议是一种“被动式”的协议，只能通过 client 主动找 server 拉取数据，无法做到数据变化 server  立刻给 client 主动推送数据。使用 WebSocket 长链接协议可以优雅的解决服务端主动给客户端推送数据的问题。
 
 ## 实现 websocket 鉴权、安全、心跳检测
 
+**1. 鉴权**
+websocket 协议类似 http 协议，只是一个为了解决全双工通行的问题。对于鉴权相关的部分，[RFC 6455](https://websockets.readthedocs.io/en/stable/topics/authentication.html)中是这么描述的：
+> This protocol doesn’t prescribe any particular way that servers can authenticate clients during the WebSocket handshake. The WebSocket server can use any client authentication mechanism available to a generic HTTP server, such as cookies, HTTP authentication, or TLS authentication.
+
+也就是 websocket 协议的鉴权得我们自己实现。
+
+那么 websocket 是否可以类似 http 一样在 header 发送 `cookie` 或者其他请求头（如 `Authorization`）来鉴权呢？
+
+答案是`不可以`，只有 `path` 和 `protocol` 可以被指定。
+
+开发者只可以指定 WebSocket 中的请求路径 (“GET /xyz”) 和协议 (“Sec-WebSocket-Protocol”)  
+
+既然可以指定路径，那在请求路径中使用参数来鉴权可行吗？当然可行，服务端实现一个 ticket ，客户端在建立连接后，发送第一条信息时，在 URL 或 query string 中传递这个 ticket，服务端检查其是否有效。这种方式的缺点是 ticket 暴露在 url 中，不是很安全。
+
+查看 WebSocket 建立连接的过程可概括为三步：
+1. 通过 http 协议给 server 发送升级 websocket 的报文。
+2. server 支持升级，响应 http 协议返回一个 201
+3. websocket 建立连接
+
+websocket 协议不支持自定义请求头，在握手前使用 http 协议的请求头完成鉴权似乎是一种更好的方式。
+
 ## 解决浏览器端连接数 255 限制
+1. 业务规划时不超过 255
+2. 使用服务端 websocket
+
 
 ## 解决服务器端连接数 65535 限制
+- 小于 100w
+- 大于 100w
+
+
 
 ## 性能评估
 
@@ -61,6 +89,6 @@ spring boot + websocket+ jwt+
 - [小爱接入层单机百万长连接技术演进](https://www.zhihu.com/question/20831000/answer/2401861700)
 - [爱奇艺 WebSocket 实时推送网关技术实践](http://www.52im.net/thread-3539-1-1.html)
 - [Websocket 能否自定义请求头](https://hgl2.com/2021/websocket-request-header/)
-- [Websocket 能否自定义请求头](https://hgl2.com/2021/websocket-request-header/)
 - [websocket-security](https://devcenter.heroku.com/articles/websocket-security)
+- [websocket 协议帧 解析](https://blog.csdn.net/weixin_39898011/article/details/111232821)
 
