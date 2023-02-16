@@ -79,10 +79,11 @@ git push
 
  到 github 项目的仓库地址即可查看到有 pr 可以填写，一般需要填写为什么改动，改动了哪些地方等信息，填写完之后保存，原作者即可收到合并提交的请求，如果他同意，那么你的代码将会合并。
 
+## 六、仅提交部分修改到上游仓库
 
+参考[github pr提交单一或指定文件到远程仓库的方法](https://www.jeeinn.com/2019/01/631/)
 
-
-参考文档 
+## 参考文档 
 - [github中origin和upstream的区别](https://blog.csdn.net/liuchaoxuan/article/details/80656145)
 - [如何给开源项目贡献代码](https://gist.github.com/zxhfighter/62847a087a2a8031fbdf)
 - [【翻译】如何为 Github 开源项目贡献代码？](https://github.com/shaodahong/dahong/issues/20)
