@@ -87,4 +87,4 @@ git push
 - [github中origin和upstream的区别](https://blog.csdn.net/liuchaoxuan/article/details/80656145)
 - [如何给开源项目贡献代码](https://gist.github.com/zxhfighter/62847a087a2a8031fbdf)
 - [【翻译】如何为 Github 开源项目贡献代码？](https://github.com/shaodahong/dahong/issues/20)
-- 
+- [github fork仓库发起Pull Request合入全流程](https://juejin.cn/post/6932300709987614728)
