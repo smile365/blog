@@ -81,6 +81,17 @@ git push
 
 ## 六、仅提交部分修改到上游仓库
 
+
+
+```
+# 先 commit && push
+git add xxx xxx2 && commit -m "xxx" && git push
+# 切换分之
+git checkout -b newFeatureBranch upstream/master
+
+```
+
+
 参考[github pr提交单一或指定文件到远程仓库的方法](https://www.jeeinn.com/2019/01/631/)
 
 ## 参考文档 
