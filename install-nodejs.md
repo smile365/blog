@@ -13,8 +13,28 @@ description:
 
 mac 或者 windows 建议直接下载 [nodejs 安装包](https://nodejs.org/zh-cn/download/) 进行安装。本教程基于 debian 11 安装。
 
+## 使用 NVM 安装 nodejs
+[NVM](https://github.com/nvm-sh/nvm#installing-and-updating)  全名 Node.js Version Management ，顾名思义是一个Node.js 的版本管理工具。
+```bash
+# 官方脚本安装，需要自己配置环境变量
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+# 自动配置环境变量
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+# -bash: nvm: command not found
+# source ~/.bashrc
+# 或者重新打开终端
 
-## 安装 nodejs
+# 使用方式
+nvm ls
+nvm install node  # 最新版（当前为 19）
+nvm install node --lts  # 最新长期支持版（当前为 18）
+nvm install 14 # 特定版本
+# 安装完默认会使用当前安装的版本
+nvm use 14  # 切换版本
+```
+
+## 使用 apt 安装 nodejs
+推荐使用 nvm 安装 nodejs
 ```bash
 # 安装 nodejs 和 npm/yarn 包管理器
 apt update
@@ -47,27 +67,8 @@ yrm use taobao
 ```
 
 
-## 安装 NVM 
-[NVM](https://github.com/nvm-sh/nvm#installing-and-updating)  全名 Node.js Version Management ，顾名思义是一个Node.js 的版本管理工具。
-```bash
-# 官方脚本安装，需要自己配置环境变量
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-# 自动配置环境变量
-curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
-# -bash: nvm: command not found
-# source ~/.bashrc
-# 或者重新打开终端
 
-# 使用方式
-nvm ls
-nvm install node  # 最新版（当前为 19）
-nvm install node --lts  # 最新长期支持版（当前为 18）
-nvm install 14 # 特定版本
-# 安装完默认会使用当前安装的版本
-nvm use 14  # 切换版本
-```
-
-## 问题 
+## 遇到的问题 
 1. GnuTLS recv error
 linux 版本的 NVM 使用 GnuTLS，与 github 的 ssl 版本不兼容，关闭 ssl 即可。
 ```bash
@@ -78,7 +79,7 @@ git config --global http.postBuffer 1048576000
 ```
 
 
-## 参考文章
+## 参考文档
 - [在 Debian 11 上安装 NVM](https://www.yundongfang.com/Yun75426.html)
 - [解决 githubusercontent 443 问题](https://github.com/hawtim/hawtim.github.io/issues/10)
 - [GnuTLS recv error (-110) 错误](https://blog.csdn.net/weixin_43108793/article/details/118306045)
