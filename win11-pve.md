@@ -19,9 +19,9 @@ description: install Windows 11 on pve
 ## 创建虚拟机
 参考 [安装教程](https://www.gordon2000.com/2021/10/pvewindows-11-step-by-step.html)
 
-创建一个虚拟机，注意系统版本选择 Windows 11 硬盘设备选择 VirtIO 。
+创建一个虚拟机，注意系统版本选择 Windows 11 硬盘设备选择 VirtIO，网卡选  。
+![enter description here](https://cdn.sxy21.cn/static/imgs/1676977598485.png)
 
-![enter description here](https://cdn.sxy21.cn/static/imgs/1665499632941.png)
 
 
 ## 创建 CD 驱动器挂载驱动
