@@ -54,8 +54,16 @@ nvm install 12.19.0
 nvm use 12.19.0
 ```
 
+## 问题 
+1. xxx
+```bash
+apt install -y gnutls-bin
+git config --global http.sslVerify false
+git config --global http.postBuffer 1048576000
+```
 
 
 ## 参考文章
 - [在 Debian 11 上安装 NVM](https://www.yundongfang.com/Yun75426.html)
 - [解决 githubusercontent 443 问题](https://github.com/hawtim/hawtim.github.io/issues/10)
+- [GnuTLS recv error (-110) 错误](https://blog.csdn.net/weixin_43108793/article/details/118306045)
