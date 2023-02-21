@@ -45,6 +45,13 @@ npm config set registry https://registry.npm.taobao.org
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 # 自动配置环境变量
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+
+# 使用方式
+nvm ls
+nvm install node 
+nvm install node --lts 
+nvm install 12.19.0
+nvm use 12.19.0
 ```
 
 
