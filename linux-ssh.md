@@ -32,8 +32,7 @@ systemctl enable sshd.service
 ## 生成公钥和私钥
 
 使用[ssh-keygen](https://blog.csdn.net/u013227473/article/details/78989041)生成密钥：`ssh-keygen -f ~/.ssh/id_rsa_sxy`
-
-> 如果密钥名称不是 `id_rsa`,需要在 ~/.ssh/config 里指定密钥名称
+> 可以使用 -C 添加注释，如： `ssh-keygen -f ~/.ssh/id_rsa_sxy -C "sxy21cn@qq.com" `
 
 
 
@@ -44,11 +43,12 @@ ssh-copy-id -p 3322 -i ~/.ssh/id_rsa_sxy.pub  songxueyan@192.168.1.2
 
 > 或者把公钥内容复制到 ~/.ss/authorized_keys
 
-成功以后即可使用私钥链接服务器（服务器用公钥验证）
-
+## 验证登录
+成功以后即可私钥链接服务器（服务器用公钥验证），使用 `-i` 参数指定密钥文件。
 ```sh
 ssh -i ~/.ssh/id_rsa_sxy -p 3322  songxueyan@192.168.1.2
 ```
+> 如果密钥名称是 `id_rsa` 则不需要 `-i` 参数
 
 若是从别的地方下载或者拷贝的密钥，链接时可能出现错误：
 ```
