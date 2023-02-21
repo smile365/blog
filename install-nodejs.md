@@ -45,18 +45,23 @@ npm config set registry https://registry.npm.taobao.org
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 # 自动配置环境变量
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+# -bash: nvm: command not found
+# source ~/.bashrc
+# 或者重新打开终端
 
 # 使用方式
 nvm ls
-nvm install node 
-nvm install node --lts 
-nvm install 12.19.0
-nvm use 12.19.0
+nvm install node  # 最新版（当前为 19）
+nvm install node --lts  # 最新长期支持版（当前为 18）
+nvm install 14 # 特定版本
+nvm use 14  # 使用
 ```
 
 ## 问题 
-1. xxx
+1. GnuTLS recv error
+linux 版本的 NVM 使用 GnuTLS，与 github 的 ssl 版本不兼容，关闭 ssl 即可。
 ```bash
+# GnuTLS recv error (-110): The TLS connection was non-properly terminated.
 apt install -y gnutls-bin
 git config --global http.sslVerify false
 git config --global http.postBuffer 1048576000
