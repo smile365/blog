@@ -27,7 +27,7 @@ yarn --version
 # 0.32+git
 ```
 
-## 配置 nodej 镜像源
+## 配置 npm/yarn 镜像源
 nodejs 的 npm 比较慢，可以配置成阿里巴巴的 [npm 镜像](https://npmmirror.com/)
 ```bash
 # 通过 npm 安装 cnpm
@@ -37,6 +37,15 @@ cnpm install [name]
 # 也可以直接执行以下命令，将镜像地址改为淘宝的 npm 镜像地址
 npm config set registry https://registry.npm.taobao.org
 ```
+
+## 使用 nrm/yrm 管理 npm/yarn 镜像源
+[yrm](https://github.com/i5ting/yrm)
+```bash
+npm install -g yrm
+yrm ls
+yrm use taobao
+```
+
 
 ## 安装 NVM 
 [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)  全名 Node.js Version Management ，顾名思义是一个Node.js 的版本管理工具。
@@ -54,7 +63,8 @@ nvm ls
 nvm install node  # 最新版（当前为 19）
 nvm install node --lts  # 最新长期支持版（当前为 18）
 nvm install 14 # 特定版本
-nvm use 14  # 使用
+# 安装完默认会使用当前安装的版本
+nvm use 14  # 切换版本
 ```
 
 ## 问题 
@@ -72,3 +82,4 @@ git config --global http.postBuffer 1048576000
 - [在 Debian 11 上安装 NVM](https://www.yundongfang.com/Yun75426.html)
 - [解决 githubusercontent 443 问题](https://github.com/hawtim/hawtim.github.io/issues/10)
 - [GnuTLS recv error (-110) 错误](https://blog.csdn.net/weixin_43108793/article/details/118306045)
+- [yarn 修改镜像源](https://juejin.cn/post/6844903889087496200)
