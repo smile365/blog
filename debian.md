@@ -44,8 +44,13 @@ cat /etc/apt/sources.list
 ```bash
 cat /etc/ssh/sshd_config |grep PermitRootLogin
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config 
-/etc/init.d/ssh restar
+/etc/init.d/ssh restart
 ```
+
+3. ssh 免密登录
+```bash
+```
+
 
 安装[miniconda](https://gitee.com/smile365/blog/blob/master/miniconda.md)
 
