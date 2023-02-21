@@ -26,9 +26,11 @@ description: install Windows 11 on pve
 
 ## 创建 CD 驱动器挂载驱动
 
-要在 KVM 系统管理器上使用 Windows 操作系统映像，需要在系统上安装 Virtio 驱动程序。使用  CD-ROM  挂载驱动文件 virtio-win-0.1.208-1.iso。
+>由于 windows 不包含 VirtIO 驱动，PVE 使用 ide 硬盘很卡，在新建虚拟机时将硬盘 ide 调整为 scsi，额外新建一个 cd 驱动器挂载 [virtio-win iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/)，然后在 windows 安装界面加载挂载的驱动，windows7 最新可用版本为 [virtio-win-0.1.173](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.173-9/virtio-win-0.1.173.iso)。
 
-启动虚拟机，按正常步骤安装，到选择安装位置时会无法显示硬盘信息，因为缺少驱动，点击加载驱动程序。然后点击浏览，选择驱动镜像下的amd64 下的 w10 文件夹，点击确定。
+要在 KVM 系统管理器上使用 Windows 操作系统映像，需要在系统上安装 Virtio 驱动程序。使用  CD-ROM  挂载 win 11 的驱动文件 virtio-win-0.1.208-1.iso。
+
+启动虚拟机，按正常步骤安装，到选择安装位置时会无法显示硬盘信息，因为缺少驱动，点击加载驱动程序。然后点击浏览，选择驱动镜像下的 amd64 下的 w10 文件夹，点击确定。
 
 
 如果没有到安装界面是因为没有配置启动项，或者启动项配置错误。通过 PVE 重启虚拟机，然后按 F2 进入 bois 设置启动项为 CD-ROM 即可。可参考[视频教程](https://www.bilibili.com/s/video/BV16L4y1B7F3)
@@ -67,3 +69,4 @@ qm set 102 -usb0 host=1a86:5512
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
 - [pandownload](https://pandownload.net/document/download.html)
 - [irtio-win 驱动程序](https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md)
+- [pve 安装 windows 7](https://www.haiyun.me/archives/1424.html)
