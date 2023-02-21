@@ -88,7 +88,10 @@ git push
 git add xxx xxx2 && commit -m "xxx" && git push
 # 切换分之
 git checkout -b newFeatureBranch upstream/master
-
+git cherry-pick a3e62375 
+git commit -m “cherry-pick test”
+git push origin newFeatureBranch
+# 然后在 GitHub 页面上提交 pr
 ```
 
 
