@@ -39,7 +39,7 @@ npm config set registry https://registry.npm.taobao.org
 ```
 
 ## 使用 nrm/yrm 管理 npm/yarn 镜像源
-[yrm](https://github.com/i5ting/yrm)
+ [nrm](https://github.com/Pana/nrm) & [yrm](https://github.com/i5ting/yrm)
 ```bash
 npm install -g yrm
 yrm ls
