@@ -42,7 +42,9 @@ cat /etc/apt/sources.list
 
 2. 允许 root 登录
 ```bash
-
+cat /etc/ssh/sshd_config |grep PermitRootLogin
+echo "PermitRootLogin yes" >> /etc/ssh/sshd_config 
+/etc/init.d/ssh restar
 ```
 
 安装[miniconda](https://gitee.com/smile365/blog/blob/master/miniconda.md)
@@ -128,5 +130,6 @@ exit
 ```
 
 
-参考文档：
+## 参考文档
 - [centos安装docker](https://gitee.com/smile365/blog/blob/master/docker.md)
+- [Debian11 打开ROOT登录SSH权限](http://ganky.top/index.php/archives/9/)
