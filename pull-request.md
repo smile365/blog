@@ -87,10 +87,11 @@ git push
 # 先 commit && push
 git add xxx xxx2 && commit -m "xxx" && git push
 # 切换分之前先与远程分之同步代码
-git fetch upstream 
+git fetch upstream master
 git checkout -b newFeatureBranch upstream/master
 git cherry-pick a3e62375 
 git commit -m “cherry-pick test”
+# 有可能有冲突，解决冲突。
 git push origin newFeatureBranch
 # 然后在 GitHub 页面上提交 pr
 ```
