@@ -364,7 +364,9 @@ scp ~/Downloads/*.ipk root@192.168.1.1:/tmp/ipk
 cd /tmp/ipk
 ```
 
-
+## 固件推荐
+- [Plutonium141](https://github.com/Plutonium141/XiaoMi-R4A-Gigabit-Actions-OpenWrt)
+- [hugcabbage](https://github.com/hugcabbage/shared-lede)
 
 ## 参考文档
 - [Win10下对小米路由器刷Openwrt](https://article.itxueyuan.com/W1XE4A)
