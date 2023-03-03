@@ -12,9 +12,9 @@ Description:
 [snoopy](https://github.com/a2o/snoopy/blob/master/doc/INSTALL.md)可以记录 Linux 终端的操作记录。有 5 种安装方式。
 1. 使用存储库安装
 ```bash
-apt     install snoopy   # Debian / Ubuntu
-yum     install snoopy   # RHEL / CentOS
-zypper  install snoopy   # SLES / OpenSUSE
+apt install -y snoopy   # Debian / Ubuntu
+yum install snoopy   # RHEL / CentOS
+zypper install snoopy   # SLES / OpenSUSE
 ```
 
 2. 使用脚本自动安装
@@ -37,6 +37,7 @@ cd snoopy-2.5.1/
 
 ## 启用 snoopy
 ```bash
+# 通过使用存储库安装的默认已经启用了 Snoopy 没有 snoopyctl 命令
 snoopyctl enable
 snoopyctl status
 # 使用二进制安装的执行以下命令启动
