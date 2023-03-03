@@ -31,3 +31,7 @@ xx.km.sxy21.cn
 所以两个字符就能满足需要了。
 
 下面是实战环节：
+
+
+
+推荐使用 OpenResty 代替 nginx+lua
