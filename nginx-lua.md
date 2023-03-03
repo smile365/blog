@@ -35,3 +35,13 @@ xx.km.sxy21.cn
 
 
 推荐使用 OpenResty 代替 nginx+lua
+
+
+## 配置泛域名解析
+
+## 配置反向代理
+
+## 参考文档
+- [nginx lua api解读](https://juejin.cn/post/6844903545494323208)
+- [set_by_lua 使用](https://www.jianshu.com/p/3ea9312a619a)
+- [基于 Nginx 与 Lua 的高性能 Web 平台](https://openresty.org/cn/)
