@@ -36,8 +36,8 @@ cd snoopy-2.5.1/
 ```
 
 ## 启用 snoopy
+通过使用存储库安装的默认已经启用了 Snoopy 没有 snoopyctl 命令，其他方式安装可参考一下命令启用：
 ```bash
-# 通过使用存储库安装的默认已经启用了 Snoopy 没有 snoopyctl 命令
 snoopyctl enable
 snoopyctl status
 # 使用二进制安装的执行以下命令启动
