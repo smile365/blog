@@ -22,8 +22,21 @@ description:   linux-vnc-remote desktop protocol
 > 瘦客户端是相对于胖客户端而言的，比如，人们使用 QQ，需要下载客户端，这属于“胖客户”；反之，通过浏览器就可查阅网络上各种资料，无需再下载其他任何软件，这属于“瘦客户”。简单理解，瘦客户端指的是最大可能减轻客户端的负担，多数工作由服务器端完成；胖客户端则相反。
 
 
+## 使用 VNC 服务端
+VNC 服务端软件比较多，例如 TightVNC ，TigerVNC 和 x11vnc。每个VNC 服务端在速度和安全性方面都有其优点和缺点。本教程采用 TigerVNC，它维护积极性能高。
+
+## 安装 TigerVNC
+```bash
+apt install -y tightvncserver
+# 在哪个用户下启动，就会使用哪个用户下的账号，密码为 vnc 的密码。（若没密码，输入 vncserver 会提示创建密码，路径为 ~/.vnc/xxx）
+vncserver
+
+```
 
 
 ## 参考文档
 - [Linux远程管理协议（RFB、RDP、Telnet和SSH）](http://c.biancheng.net/view/2845.html)
 - [在 Ubuntu 22.04 安装 VNC](https://www.myfreax.com/how-to-install-and-configure-vnc-on-ubuntu-22-04/)
+- [install-and-configure-vnc](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04)
+- [tigervnc-server 无法启动问题](https://www.cnblogs.com/lidune/p/9830780.html)
+- [ Make sure an X server isn‘t already running](https://blog.csdn.net/rolaya/article/details/118495564)
