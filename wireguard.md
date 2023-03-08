@@ -37,10 +37,30 @@ PrivateKey = 【debian的私钥】
 
 
 ## alpine 安装 WireGuard
-alpine 当做中转站，访问到 alpine 即可访问到与 alpine 同网段的计算机，需要开启 ipv4 转发功能
+alpine 当做中转站，访问到 alpine 即可访问到与 alpine 同网段的计算机，需要 [开启 ipv4 转发功能](https://linuxconfig.org/how-to-turn-on-off-ip-forwarding-in-linux)
+
 ```bash
 # 查看是否开启 ipv4 转发
 sysctl net.ipv4.ip_forward
+# 开启(重启后失效)
+sysctl -w net.ipv4.ip_forward=1
+# 或者(重启后失效)
+# echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# 改配置文件（永久生效）
+cat /etc/sysctl.conf
+# 本次改完还是失败，重启后失效
+echo net.ipv4.ip_forward= 1 | tee -a /etc/sysctl.conf && sysctl -p
+```
+
+基于 iptables 开启 ipv4 转发参考 [wireguard-vpn-server-on-alpine](https://www.cyberciti.biz/faq/how-to-set-up-wireguard-vpn-server-on-alpine-linux/),
+`vi /etc/conf.d/iptables`
+```bash
+IPFORWARD="yes"
+```
+
+```bash
+
 # 开启 ip 转发
 # sysctl -a |grep ipv4.ip_forward
 # 仅本次生效重启后失效
