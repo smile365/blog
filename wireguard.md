@@ -37,7 +37,10 @@ PrivateKey = 【debian的私钥】
 
 
 ## alpine 安装 WireGuard
+alpine 当做中转站，访问到 alpine 即可访问到与 alpine 同网段的计算机，需要开启 ipv4 转发功能
 ```bash
+# 查看是否开启 ipv4 转发
+sysctl net.ipv4.ip_forward
 # 开启 ip 转发
 # sysctl -a |grep ipv4.ip_forward
 # 仅本次生效重启后失效
