@@ -71,7 +71,8 @@ curl localhost:8080
 # <p>hello, world</p>
 ```
 
-## 实战-动态 ip + 端口转发
+## 实战-动态 http 转发
+ ip + 端口转发
 
 
 ### 需求
@@ -110,6 +111,8 @@ print("port:",port)
 
 
 ### 用 openresty 实现
+server_name set_by_lua  不支持在 stream 模块下使用，stream 为 tcp 协议，没有域名。
+
 
 1. 创建 stream 配置文件夹
 ```bash
