@@ -26,7 +26,8 @@ vika.cn 维格表的社区版，地表至强的开源低代码、多维表格工
 
 
 ## 参考文档
-- [apitable](https://github.com/apitable/apitable)
+- [apitable--vika.cn 维格表社区开源版](https://github.com/apitable/apitable)
 - [基于 nocodb 搭建自己的飞书多维表格](https://juejin.cn/post/6976139576347721741)
-- [Notion & Miro 的免费替代品。](https://github.com/toeverything/AFFiNE)
+- [AFFiNE- 协作知识库，类飞书文档开源产品](https://github.com/toeverything/AFFiNE)
 - [多维表格产品盘点](https://www.zhihu.com/question/466375296)
+- [AppFlowy - Notion 的开源替代品](https://www.bilibili.com/read/cv19508051?from=search)
