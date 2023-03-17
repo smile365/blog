@@ -7,7 +7,7 @@ categories: ["code"]
 Description:   基于 Netflix Conductor 实现工作流的合并和优先级执行。流整合，异步调度，异步等待
 ---
 
-## 介绍
+## 相关组件
 
 - Elasticsearch
 - Conductor Server
@@ -15,7 +15,7 @@ Description:   基于 Netflix Conductor 实现工作流的合并和优先级执�
 - Redis （可选）
 - PostgreSQL （可选）
 
-参考 [概述](https://conductor.netflix.com/architecture/overview.html)
+参考 [概述](https://conductor.netflix.com/devguide/running/docker.html#alternative-persistence-engines)
 
 ## 本地运行
 
