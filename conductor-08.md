@@ -95,8 +95,23 @@ public class JoinWorkflowWoker implements Worker {
 }
 ```
 
+定义 task
+```json
+{
+"name": "joinWorkflow",
+"retryCount": 1,
+"inputKeys":["workflowGroupName"],
+"outputKeys": ["data","size"],
+"retryLogic": "FIXED",
+"retryDelaySeconds": 10,
+"timeoutSeconds": 300,
+"timeoutPolicy": "TIME_OUT_WF",
+"responseTimeoutSeconds": 180,
+"ownerEmail": "me@sxy21.cn"
+}
+```
 
-因为流程 1 和流程 2 依赖流程 3，先定义流程 3：
+定义流程 3：
 ```json
 {
   "name": "workflow_http",
@@ -146,7 +161,7 @@ public class JoinWorkflowWoker implements Worker {
       },
       "type": "SWITCH",
       "evaluatorType": "javascript",
-      "expression": "$.size > 2 ? \"workflow_http\" : \"\"",
+      "expression": "$.size == 2 ? \"workflow_http\" : \"\"",
       "decisionCases": {
         "workflow_http": [
           {
@@ -157,8 +172,7 @@ public class JoinWorkflowWoker implements Worker {
               "name": "workflow_http",
               "version": 2,
               "input": {
-                "param1": "value1",
-                "param2": "value2"
+                "param1": "group_a"
               }
             }
           }
@@ -189,6 +203,10 @@ public class JoinWorkflowWoker implements Worker {
       "inputParameters": {
 	  	"workflowGroupName": "group_a"
 	  },
+	  "outputParameters": {
+		"data": "${joinWorkflow.output.data}",
+		"size": "${joinWorkflow.output.size}"
+	  },
       "taskReferenceName": "joinWorkflow",
       "type": "SIMPLE"
     },	
@@ -211,8 +229,7 @@ public class JoinWorkflowWoker implements Worker {
               "name": "workflow_http",
               "version": 2,
               "input": {
-                "param1": "value1",
-                "param2": "value2"
+                "param1": "group_a"
               }
             }
           }
