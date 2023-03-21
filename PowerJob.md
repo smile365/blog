@@ -42,15 +42,16 @@ oms.accurate.select.server.percentage = 50
 ## Docker 运行 PowerJob Server
 
 ```bash
-docker run -d --name powerjob-server \
-       -p 30170:7700 -p 30186:10086 \
+docker run -d --restart=always \
+       --name powerjob-server \
+       -p 7700:7700 -p 10086:10086 \
        -e TZ="Asia/Shanghai" \
        -e JVMOPTIONS="" \
        -e PARAMS="--spring.profiles.active=product \
        --spring.datasource.core.driver-class-name=org.postgresql.Driver \
-       --spring.datasource.core.jdbc-url=jdbc:postgresql://xxx.xxx.xxx:3306/powerjob-daily \
-       --spring.datasource.core.username=xxxx \
-       --spring.datasource.core.password=xxxx" \
+       --spring.datasource.core.jdbc-url=jdbc:postgresql://localhost:5432/powerjob-product \
+       --spring.datasource.core.username=postgres \
+       --spring.datasource.core.password=postgres" \
        tjqq/powerjob-server:latest
 ```
 
