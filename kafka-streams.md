@@ -65,6 +65,9 @@ spring:
 
 ```
 
+
+
+
 场景举例：
 - 主题为 input.words 接收一个或多个单词输入
 - 监听input.words ，当输入的单词总长度大于  5，则把单词全部大写，然后输出到 output.words
@@ -75,18 +78,18 @@ spring:
 @Component
 @EnableKafkaStreams
 public class KfkStreamDemo1 {
-    private final static String SOURCE_TOPIC = "input.words";
+    private final static String SOURCE_TOPIC = "input.words"; // 需要提前在 kafka 创建成功
     private final static String TARTGET_TOPIC = "output.words";
 
     @Bean
     public KStream<String,String> KStream(StreamsBuilder streamsBuilder){
         KStream<String,String> stream = streamsBuilder.stream(SOURCE_TOPIC,Consumed.with(Serdes.String(),Serdes.String()));
 
-        stream.peek((k,v) -> log.info("pre v={}",v), Named.as("pre-transform-peek"))
-            .filter((k,v) -> v!=null && v.length()>5, Named.as("fillter-processor"))
-            .mapValues((k,v) -> v.toUpperCase(), Named.as("map-processor"))
-            .peek((k,v) -> log.info("post v={}",v),Named.as("post-transform-peek"))
-            .to(TARTGET_TOPIC, Produced.with(Serdes.String(),Serdes.String()));
+        stream.peek((k,v) -> log.info("pre v={}",v))
+                .filter((k,v) -> v!=null && v.length()>5)
+                .mapValues((k,v) -> v.toUpperCase())
+                .peek((k,v) -> log.info("post v={}",v))
+                .to(TARTGET_TOPIC, Produced.with(Serdes.String(),Serdes.String()));
         return stream;
     }
 }
@@ -100,6 +103,11 @@ docker exec -it kfk-kafka-1 /opt/bitnami/kafka/bin/kafka-console-producer.sh --b
 hello 
 song yang cong
 ```
+
+启动 spring boot 项目
+
+
+
 
 
 ## 参考文档
