@@ -78,7 +78,7 @@ spring:
 @Component
 @EnableKafkaStreams
 public class KfkStreamDemo1 {
-    private final static String SOURCE_TOPIC = "input.words"; // 需要提前在 kafka 创建成功
+    private final static String SOURCE_TOPIC = "input.words"; // topic 需要提前在 kafka 创建成功
     private final static String TARTGET_TOPIC = "output.words";
 
     @Bean
