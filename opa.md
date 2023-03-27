@@ -46,12 +46,13 @@ good if {
     # input.user.address != "beijing"
 }
 
+# have contains money ：当里面的条件满足时 在 have 这个集合里放入 money 的值
 have contains money { 
 	input.user.height >= 175
     money:= "Dollar"
 }
 
-have contains money {
+have contains money { 
 	input.user.age < 20
     money:= "RMB"
 }
@@ -92,6 +93,53 @@ have contains money {
 }
 ```
 
+### 或（or）操作
+上面的例子都是 and 操作，如何表示[ or 操作](https://www.openpolicyagent.org/docs/latest/#logical-or) 呢？
+
+规则：当服务器的协议包含 telnet 或者 ssh 时，输出服务器的 id 集合。
+```prolog
+package example.logical_or
+
+shell_accessible[server.id] {
+    server := input.servers[_]
+    server.protocols[_] == "telnet"
+}
+
+shell_accessible[server.id] {
+    server := input.servers[_]
+    server.protocols[_] == "ssh"
+}
+```
+
+输入：
+```json
+{
+    "servers": [
+        {
+            "id": "busybox",
+            "protocols": ["http", "telnet"]
+        },
+        {
+            "id": "db",
+            "protocols": ["mysql", "ssh"]
+        },
+        {
+            "id": "web",
+            "protocols": ["https"]
+        }
+    ]
+}
+```
+
+
+输出：
+```json
+[
+  "busybox",
+  "db"
+]
+```
+
 
 [内置函数](https://www.openpolicyagent.org/docs/latest/policy-reference/#built-in-functions)
 
@@ -129,4 +177,5 @@ exit
 
 ## 参考文档
 - [Open Policy Agent (OPA) 入门实践](https://moelove.info/2021/12/06/Open-Policy-Agent-OPA-%E5%85%A5%E9%97%A8%E5%AE%9E%E8%B7%B5/)
+- [or-in-open-policy-agent](https://stackoverflow.com/questions/58314226/or-in-open-policy-agent-union-behavior)
 
