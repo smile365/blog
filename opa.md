@@ -162,9 +162,68 @@ docker run -it --rm openpolicyagent/opa
 > pi > 3
 # true
 exit
+
+# 后台运行
+docker run -itd -p 8181:8181 openpolicyagent/opa run --server --addr :8181
 ```
 
 ## 基于 rest api 使用
+
+OPA REST API:
+- [policy-api](https://www.openpolicyagent.org/docs/latest/rest-api/#policy-api)
+- [data-api](https://www.openpolicyagent.org/docs/latest/rest-api/#data-api)
+
+1. 先创建策略 `PUT /v1/policies/<id>`
+```bash
+curl --request PUT \
+  --url http://localhost:8181/v1/policies/p001 \
+  --header 'content-type: text/plain' \
+  --data 'package cn.sxy21.demo1
+import future.keywords.in
+default resutl := false
+resutl {
+	"cat" in input.user.pet
+	input.user.gender == "M"
+}'
+```
+2.  使用 input 数据验证策略
+
+路径为：`/v1/data/{包名（把“.”替换成"/")}/{default 描述的部分}`
+
+```bash
+curl --request POST \
+  --url http://localhost:8181/v1/data/cn/sxy21/demo1/resutl \
+  --header 'content-type: application/json' \
+  --data '{
+    "input":{
+		"user": {
+			"name": "song yang cong",
+			"site": [
+				"sxy21.cn",
+				"sxy91.com"
+			],
+			"age": 18,
+			"height": 180,
+			"email": "sxy996@qq.com",
+			"gender": "F",
+			"pet": [
+				"cat",
+				"dog",
+				"elephant",
+				"peacock"
+			]
+			}
+	}
+}'
+```
+
+结果:
+```json
+{
+	"result": false
+}
+```
+
 
 
 
