@@ -186,10 +186,12 @@ resutl {
 	input.user.gender == "M"
 }'
 ```
-2.  使用 input 数据验证策略
+> `package` 具有唯一性，多个  policy 不允许出现相同的包名。
+
+ 2.  使用 input 数据验证策略
 
 路径为：`/v1/data/{包名（把“.”替换成"/")}/{default 描述的部分}`
-
+> 使用步骤 1 中的 `package`  来定位使用哪个 policy
 ```bash
 curl --request POST \
   --url http://localhost:8181/v1/data/cn/sxy21/demo1/resutl \
