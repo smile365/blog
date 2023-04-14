@@ -27,6 +27,10 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 ## usb 设备直通
 
 ## 网卡直通
+参考
+- [PVE设置显卡直通](https://www.wangsansan.com/archives/181/)
+- [硬件虚拟化 显卡直通](https://www.wangsansan.com/archives/181/)
+- [显卡直通](https://github.com/firemakergk/aquar-build-helper/blob/master/details/pve%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE%E5%8F%8A%E7%8B%AC%E6%98%BE%E7%9B%B4%E9%80%9A.md#%E5%87%86%E5%A4%87)
 
 ## 证书
 
