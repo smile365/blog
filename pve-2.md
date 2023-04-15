@@ -31,6 +31,8 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 - [PVE设置显卡直通](https://www.wangsansan.com/archives/181/)
 - [硬件虚拟化 显卡直通](https://www.wangsansan.com/archives/181/)
 - [显卡直通](https://github.com/firemakergk/aquar-build-helper/blob/master/details/pve%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE%E5%8F%8A%E7%8B%AC%E6%98%BE%E7%9B%B4%E9%80%9A.md#%E5%87%86%E5%A4%87)
+- [intel 虚拟化 VT-d VT-x VT-c 有什么区别](https://www.d3tt.com/view/111)
+- [pve虚拟机显卡直通](https://blog.timzhong.top/2020/09/27/pve-direct-pcie/)
 
 ## 证书
 
@@ -55,3 +57,4 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 - [黑群晖支持 SCSI 类型硬盘](https://www.jianshu.com/p/e358dfd654e9)
 - [PVE+TrueNAS+ZFS+10G内网方案](https://foxi.buduanwang.vip/virtualization/pve/1183.html/)
 - [PVE 上部署 TrueNAS](https://www.cnblogs.com/Pyrokine/p/14646478.html)
+- [FreeBSD vs Linux：哪个开源操作系统更强大](https://blog.vvzero.com/2022/05/25/freebsd-vs-linux-which-open-source-os-is-superior/)
