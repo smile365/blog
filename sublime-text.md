@@ -9,14 +9,19 @@ description:
 
 
 创建一个别名
+bash 环境
 ```bash
 # alias 别名
+# bash 环境
 vim ~/.bash_profile
+# zsh 环境
+vim ~/.zshrc
 # Mac OS命令行下使用SublimeText打开文本文件
 alias st="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 # wq保存后回到命令行执行以下命令使其生效
 source ~/.bash_profile
 ```
+
 
 安装[Package-Control](https://packagecontrol.io/installation#st3) 
 
