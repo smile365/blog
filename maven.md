@@ -18,7 +18,8 @@ java -version  # 需要 Java 依赖
 /usr/libexec/java_home -v
 
 # export JAVA_HOME=$(/usr/libexec/java_home) # 只安装了一个 jdk 可以如此
-# # vi ~/.bash_profile
+# bash 环境 vi ~/.bash_profile
+# zsh 环境 vi ~/.zshrc
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
 mvn -version
 
