@@ -48,3 +48,33 @@ git -v
 ```bash
 ssh-keygen -t rsa
 ```
+
+## Java 项目开发环境
+
+### JDK 安装
+安装 jdk 8 [jdk](https://gitee.com/smile365/blog/blob/master/macos-jdk.md)
+安装 jdk 11
+
+ 也可以使用[brew](https://zhuanlan.zhihu.com/p/611351908) 安装 jdk
+```bash
+brew install openjdk@17  
+```
+
+### 安装 jenv
+
+
+### maven 安装
+1. [install-maven](https://gitee.com/smile365/blog/blob/master/maven.md)
+```bash
+brew install maven
+```
+2. 配置国内镜像
+
+
+### idea 安装
+
+
+## Python 项目开发环境
+
+## nodejs 项目开发环境
+
