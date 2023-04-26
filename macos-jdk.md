@@ -14,8 +14,7 @@ $ tar -xvf openjdk-13.0.1_osx-x64_bin.tar.gz
 $ sudo mv jdk-13.0.1.jdk /Library/Java/JavaVirtualMachines/
 
 # 或者通过 brew 安装
-brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk11
+brew install openjdk@11
 ```
 
 
@@ -32,8 +31,8 @@ brew cask install adoptopenjdk11
 ```bash
 brew install jenv
 mkdir ~/.jenv/version
- echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
- echo 'eval "$(jenv init -)"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(jenv init -)"' >> ~/.bash_profile
 ```
 
 ## 使用
