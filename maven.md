@@ -60,6 +60,11 @@ settings.xml 文件位置
 </settings>
 ```
 
+检测是否配置成功：
+```bash
+mvn help:effective-settings
+# 看到输出含有“阿里云公共仓库” 即可
+```
 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1671767581208.png)
 ## idea 不显示 maven 
