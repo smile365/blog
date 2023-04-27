@@ -66,7 +66,7 @@ mvn help:effective-settings
 # 看到输出含有“阿里云公共仓库” 即可
 ```
 
-![enter description here](https://cdn.sxy21.cn/static/imgs/1671767581208.png)
+
 ## idea 不显示 maven 
 在 idea 最右侧会有 maven 窗口，如果不显示可通过如下方式解决：
   - 法一：view --> tool windows --> maven projects
@@ -76,6 +76,7 @@ mvn help:effective-settings
 		  -  plugins --> 在搜索框中输入 maven，勾选那两个插件 --> OK -->  根据提示重启 idea
 - 法三：右键 pom.xml  --->  add as maven
 
+![enter description here](https://cdn.sxy21.cn/static/imgs/1671767581208.png)
 
 ## 参考文档
 - [maven](https://maven.apache.org/install.html)
