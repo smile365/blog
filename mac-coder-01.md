@@ -71,6 +71,51 @@ brew install maven
 2. 配置国内镜像
 
 
+### gradle 安装
+1. install  gradle
+```bash
+brew install gradle
+```
+
+2. 配置 gradle 镜像源
+编辑文件 `vi ~/.gradle/init.gradle` 内容如下：
+```gradle
+allprojects {
+    repositories {
+        def ALIYUN_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public'
+        all { ArtifactRepository repo ->
+            if(repo instanceof MavenArtifactRepository){
+                def url = repo.url.toString()
+                if (url.startsWith('https://repo1.maven.org/maven2')) {
+                    project.logger.lifecycle "Repository ${repo.url} replaced by $ALIYUN_REPOSITORY_URL."
+                    remove repo
+                }
+            }
+        }
+        maven { url ALIYUN_REPOSITORY_URL }
+    }
+}
+```
+
+
+3. 测试是否配置正确, `mkdir ~/tmp && vi ~/tmp/build.gradle ` 内容如下：
+```
+task showRepos {
+    doLast {
+        repositories.each {
+            println "repository: ${it.name} ('${it.url}')"
+        }
+    }
+}
+```
+
+执行命令 
+```bash
+gradle -q showRepos
+# repository: maven ('https://maven.aliyun.com/repository/public')
+```
+
+
 ### idea 安装
 
 
