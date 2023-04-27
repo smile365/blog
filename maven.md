@@ -46,19 +46,17 @@ settings.xml 文件位置
 
 配置优先级从高到低：pom.xml > user settings > global settings
 
-在  `~/.m2/setting.xml` 中的 mirrors 节点增加 mirror：
+配置 [阿里云的 maven](https://developer.aliyun.com/mvn/guide?spm=a2c6h.13651104.mirror-free-trial.5.43586e1aa9QhtF) 镜像，在  `~/.m2/settings.xml` 中增加以下 xml 代码：
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
-      <mirrors > 
-            <mirror>
-                <id>aliyunmaven</id>
-                <mirrorOf>*</mirrorOf>
-                <name>阿里云公共仓库</name>
-                <url>https://maven.aliyun.com/repository/public</url>
-            </mirror>
-      </mirrors>
+<settings>
+  <mirrors>
+    <mirror>
+      <id>aliyun</id>
+      <name>aliyun Maven</name>
+      <url>https://maven.aliyun.com/repository/public/</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
 </settings>
 ```
 
