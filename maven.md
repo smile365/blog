@@ -39,14 +39,15 @@ brew install maven
 
 ## 配置 maven 镜像站
 
-settings.xml 文件位置
+1. settings.xml 文件位置
 - 全局配置： ${maven.home}/conf/settings.xml
 - 用户配置： ${user.home}/.m2/settings.xml
 - 项目配置： pom.xml
 
 配置优先级从高到低：pom.xml > user settings > global settings
 
-配置 [阿里云的 maven](https://developer.aliyun.com/mvn/guide?spm=a2c6h.13651104.mirror-free-trial.5.43586e1aa9QhtF) 镜像，在  `~/.m2/settings.xml` 中增加以下 xml 代码：
+2. 配置 [阿里云的 maven](https://developer.aliyun.com/mvn/guide?spm=a2c6h.13651104.mirror-free-trial.5.43586e1aa9QhtF) 镜像
+在  `~/.m2/settings.xml` 中增加以下 xml 代码：
 ```xml
 <settings>
   <mirrors>
@@ -60,7 +61,7 @@ settings.xml 文件位置
 </settings>
 ```
 
-检测是否配置成功：
+3. 检测是否配置成功
 ```bash
 mvn help:effective-settings
 # 看到输出含有“阿里云公共仓库” 即可
