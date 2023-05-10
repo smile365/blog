@@ -37,9 +37,16 @@ GatewayPorts yes
 echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
 apt update 
 apt install ssh
-ssh -R 3228:postgresql.middleware.svc:5432 sxy21.cn
+ssh -R 3228:postgresql.middleware.svc:5432 sxy91.com
 # ssh -R 3228:postgresql.middleware.svc:5432 root@sxy91.com
 # 输入密码
+cat /etc/ssh/sshd_config |grep GatewayPorts
+# 如果为 no 则无法通过 sxy91.com 的 3228 端口访问 5432
+# 也可通过 lsof 查看绑定的 ip
+lsof -i:3228 
+echo "GatewayPorts yes" >> /etc/ssh/sshd_config
+
+
 ```
 
 
