@@ -30,6 +30,20 @@ GatewayPorts yes
 # GatewayPorts clientspecified
 
 ```
+### 举例
+
+1. macbook 访问内网容器内的 postgresql
+```
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
+apt update 
+apt install ssh
+ssh -R 3228:postgresql.middleware.svc:5432 sxy21.cn
+# ssh -R 3228:postgresql.middleware.svc:5432 root@sxy91.com
+# 输入密码
+```
+
+
+
 ## 动态转发
 
 
