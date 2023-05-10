@@ -45,7 +45,7 @@ cat /etc/ssh/sshd_config |grep GatewayPorts
 # 也可通过 lsof 查看绑定的 ip
 lsof -i:3228 
 echo "GatewayPorts yes" >> /etc/ssh/sshd_config
-
+systemctl reload ssh
 
 ```
 
