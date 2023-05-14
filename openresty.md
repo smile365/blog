@@ -45,8 +45,11 @@ nginx -t
 
 
 mkdir -p /usr/local/openresty/nginx/conf/conf.d/
+# 备份
+mv /usr/local/openresty/nginx/conf/nginx.conf /usr/local/openresty/nginx/conf/nginx.conf.bak
+cat /usr/local/openresty/nginx/conf/nginx.conf.bak | grep -v -E "^$|^\s*#" > /usr/local/openresty/nginx/conf/nginx.conf
 # 编辑 /usr/local/openresty/nginx/conf/nginx.conf 在 http 节点下增加
-include /usr/local/openresty/nginx/conf/conf.d/;
+include /usr/local/openresty/nginx/conf/conf.d/*.conf;
 cat /usr/local/openresty/nginx/conf/nginx.conf
 ```
 
@@ -70,6 +73,22 @@ server {
 curl localhost:8080
 # <p>hello, world</p>
 ```
+
+## 恢复 nginx 的配置
+
+### http 反向代理
+```bash
+cp /etc/nginx/conf.d/*.conf /usr/local/openresty/nginx/conf/conf.d/
+nginx -t
+nginx -s reload
+```
+
+### upstream 端口转发
+```bash
+mkdir -p /usr/local/openresty/nginx/conf/tcp.d/
+echo "include /usr/local/openresty/nginx/conf/tcp.d/*.conf;" >> /etc/nginx/nginx.conf
+```
+
 
 ## 实战-动态 http 转发
  ip + 端口转发
