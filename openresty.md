@@ -86,7 +86,10 @@ nginx -s reload
 ### upstream 端口转发
 ```bash
 mkdir -p /usr/local/openresty/nginx/conf/tcp.d/
-echo "include /usr/local/openresty/nginx/conf/tcp.d/*.conf;" >> /etc/nginx/nginx.conf
+echo "include /usr/local/openresty/nginx/conf/tcp.d/*.conf;" >> /usr/local/openresty/nginx/conf/nginx.conf
+cp /etc/nginx/tcp.d/*.conf /usr/local/openresty/nginx/conf/tcp.d/
+nginx -t
+nginx -s reload
 ```
 
 
