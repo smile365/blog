@@ -21,8 +21,8 @@ description: 在苹果电脑的 osx 系统下实现手机和手环模拟加密�
 > **注**: 不建议买 UID 卡，修改 UID  的 0 扇区需要在电脑上使用软件操作，且一般会遇到防火墙限制。
 
 本教程所用到的软件：
-- [mfoc](https://github.com/nfc-tools/mfoc)
-- [MifareClassicTool](https://github.com/ikarus23/MifareClassicTool)
+- [mfoc](https://github.com/nfc-tools/mfoc)，“离线嵌套”攻击的开源实现，该程序允许从 MIFARE 经典卡恢复身份验证密钥。
+- [MifareClassicTool](https://github.com/ikarus23/MifareClassicTool)，一个用于对 MIFARE Classic RFID 标签进行读取、写入、分析等操作的 Android NFC 应用程序。
 - [Mifare dumps parser](https://github.com/zhovner/mfdread)
 
 其他可能需要的软件：
