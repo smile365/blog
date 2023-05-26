@@ -44,6 +44,8 @@ description: nano 编辑器
 | Alt+X  | 切换拆分当前位置上下文      |
 | Ctrl+\_ | 切换撤销/重做模式          |
 
+^◀     (M-Space) 向后跳一个词
+^▶     (^Space)  向前跳一个
 
 
 ^G     (F1)      显示帮助
