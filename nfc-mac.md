@@ -1,10 +1,10 @@
 ---
-title: 在 macbook 模拟 Mifare NFC 白卡即飞加密卡的简明造作指南教程
-heading: 通过手机的 NFC 功能模拟小区门禁卡
+title: 在 macbook 模拟 NFC 卡门禁卡的简明操作指南教程
+heading: 
 date: 2023-05-26T20:18:42.169Z
 categories: ["code"]
 tags: 
-description: 在苹果电脑的 osx 系统下实现手机和手环模拟加密门禁卡的教程
+description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教程
 ---
 
 ## 用到的硬件
@@ -12,18 +12,32 @@ description: 在苹果电脑的 osx 系统下实现手机和手环模拟加密�
 - nfc 读卡器： PN532
 
 ## 用到的软件
-- [libnfc](https://github.com/nfc-tools/libnfc), 可对 MIFARE Classic RFID 标签进行读取、写入、分析等操作
-- [mfdread](https://github.com/zhovner/mfdread), 格式化展示 dump.mfd 文件内容的工具
-- 与libnfc 相似的软件
-    - [mfoc](https://github.com/nfc-tools/mfoc)  
-    - [nfc-tools](https://github.com/nfc-tools/nfc-tools)
-    - [proxmark3](https://github.com/Proxmark/proxmark3)
+- [mfoc](https://github.com/nfc-tools/mfoc)  ,“离线嵌套”攻击的开源实现，该程序允许从 MIFARE 经典卡恢复身份验证密钥。
+- [mfdread](https://github.com/zhovner/mfdread)（非必须）, 格式化展示 dump.mfd 文件内容的工具，想看 nfc 卡里面的数据可以用这个工具。
 
-## 安装 libnfc
+## 安装 mfoc
+1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)
+```bash
+brew install mfoc
+# 如果 nfc 卡为白卡（非加密卡），则安装 libnfc 就可以。
+# brew install libnfc
+
+# nfc 读卡器链接电脑并放上 nfc 卡
+mfoc -v
+nfc-list -v
+```
+
+2. 解决错误
+
+执行 nfc-list 出现错误 “No NFC device found.”，或者 `nfc-mfclassic` 命令出现错误 “ERROR: Error opening NFC reader”，按照如下方式解决：
 
 ```bash
-brew install libnfc
-nfc-list -v
+# 查找配置文件
+LIBNFC_LOG_LEVEL=3 nfc-list
+ls /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/
+# 没有的话创建，有就修改
+echo "allow_intrusive_scan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
+echo "allow_autoscan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
 ```
 
 ## 安装 mfdread
@@ -37,12 +51,6 @@ python3 mfdread.py ./dump.mfd
 ## 复制
 1. 把小区门禁卡放在 nfc 读卡器上
 ```bash
-brew install mfoc
-
-LIBNFC_LOG_LEVEL=3 nfc-list
-ls /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/
-echo "allow_intrusive_scan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
-echo "allow_autoscan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
 
 # 读取小区门禁卡
 mfoc -P 500 -O mycard.mf
