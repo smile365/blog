@@ -23,13 +23,11 @@ brew install mfoc
 # brew install libnfc  # 安装完可以使用 nfc-list 和 nfc-mfclassic 命令
 
 # nfc 读卡器链接电脑并放上 nfc 卡
-mfoc -v
+mfoc -h
 nfc-list -v
 ```
 
-2. 解决错误
-
-执行 `nfc-list` 出现错误 “No NFC device found.”，或者 `nfc-mfclassic` 命令出现错误 “ERROR: Error opening NFC reader”，按照如下方式解决：
+2. 修改配置文件
 
 ```bash
 # 查找配置文件
@@ -39,6 +37,8 @@ ls /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/
 echo "allow_intrusive_scan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
 echo "allow_autoscan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
 ```
+> 没有以上两项配置，当执行命令 `nfc-list` 会出现错误 “No NFC device found.”。执行命令 `nfc-mfclassic` 会出现错误 “ERROR: Error opening NFC reader”。
+
 
 ## 安装 mfdread
 ```bash
