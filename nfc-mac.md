@@ -16,11 +16,11 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 - [mfdread](https://github.com/zhovner/mfdread)（非必须）, 格式化展示 dump.mfd 文件内容的工具，想看 nfc 卡里面的数据可以用这个工具。
 
 ## 安装 mfoc
-1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)
+1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)（可对 nfc 标签进行读取和写入）
 ```bash
 brew install mfoc
 # 如果 nfc 卡为白卡（非加密卡），则安装 libnfc 就可以。
-# brew install libnfc
+# brew install libnfc  # 安装完可以使用 nfc-list 和 nfc-mfclassic 命令
 
 # nfc 读卡器链接电脑并放上 nfc 卡
 mfoc -v
@@ -29,7 +29,7 @@ nfc-list -v
 
 2. 解决错误
 
-执行 nfc-list 出现错误 “No NFC device found.”，或者 `nfc-mfclassic` 命令出现错误 “ERROR: Error opening NFC reader”，按照如下方式解决：
+执行 `nfc-list` 出现错误 “No NFC device found.”，或者 `nfc-mfclassic` 命令出现错误 “ERROR: Error opening NFC reader”，按照如下方式解决：
 
 ```bash
 # 查找配置文件
