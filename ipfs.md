@@ -24,7 +24,7 @@ Start a container running ipfs and expose ports 4001 (P2P TCP/QUIC transports), 
 
 ```bash
 docker pull ipfs/kubo
-docker run -d --name ipfs -p 30304:4001 -p 30304:4001/udp -p 30305:8080 -p 30306:5001 ipfs/kubo
+docker run -d --name ipfs -p 4001:4001 -p 4001:4001/udp -p 8080:8080 -p 5001:5001 ipfs/kubo
 docker logs -f ipfs
 
 docker exec ipfs ipfs swarm peers
@@ -86,7 +86,7 @@ public class IPFSdemo {
 
 
     public static void main(String[] args) throws IOException {
-        String hash = saveObjectToIpfs(new Person("SongYangCong","KunMing"));
+        String hash = saveToIpfs(new Person("SongYangCong","KunMing"));
         System.out.println("hash:"+hash);
         Person p = getFromIpfs(hash);
         System.out.println(p.toString());
