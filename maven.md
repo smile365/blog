@@ -60,6 +60,8 @@ brew install maven
   </mirrors>
 </settings>
 ```
+ **注意：** 
+- mirrorOf： 不能填写“*” ，否则会遇到依赖找不到的情况，因为 aliyun 不是最全的。填写 central 当 aliyun 没有的时候会从中央仓库下载。
 
 3. 检测是否配置成功
 ```bash
