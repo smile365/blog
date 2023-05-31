@@ -9,7 +9,7 @@ description:
 
 ## 前言
 
-[openresty](https://openresty.org/en/getting-started.html) xxx
+[openresty](https://openresty.org/en/getting-started.html)
  
 
 ## 安装 openresty
@@ -17,11 +17,11 @@ description:
 ```bash
 apt install -y --no-install-recommends wget gnupg ca-certificates
 
-wget -O - https://openresty.org/package/pubkey.gpg | sudo apt-key add -
+wget -O - https://openresty.org/package/pubkey.gpg |apt-key add -
 
 codename=`grep -Po 'VERSION="[0-9]+ \(\K[^)]+' /etc/os-release`
 echo "deb http://openresty.org/package/debian $codename openresty" \
-    | sudo tee /etc/apt/sources.list.d/openresty.list
+    |tee /etc/apt/sources.list.d/openresty.list
 
 apt update -y
 apt install -y openresty
