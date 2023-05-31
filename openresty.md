@@ -91,7 +91,29 @@ cp /etc/nginx/tcp.d/*.conf /usr/local/openresty/nginx/conf/tcp.d/
 nginx -t
 nginx -s reload
 ```
+### https 网站 ssl 证书配置
+```nginx
+# nano /usr/local/openresty/nginx/conf/conf.d/sxy91.com
+server {
+        listen 443 ssl;
+	server_name sxy91.com;
+	ssl_certificate /root/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/sxy91.com/sxy91.com.crt;
+	ssl_certificate_key /root/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/sxy91.com/sxy91.com.key;
+        location / {
+            root /usr/share/www/myblog/public;
+        }
+    }
 
+server {
+        listen 443 ssl;
+	server_name www.sxy91.com;
+	ssl_certificate /root/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/sxy91.com/www.sxy91.com.crt;
+	ssl_certificate_key /root/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/sxy91.com/www.sxy91.com.key;
+        location / {
+            root /usr/share/www/myblog/public;
+        }
+    }
+```
 
 ## 实战-动态 http 转发
  ip + 端口转发
