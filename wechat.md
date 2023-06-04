@@ -25,12 +25,17 @@ description: 微信多开
 #    └── A46345f3ab607b1e  # 代表哪台设备同步的数据 （比如小米8）
 
 # 压缩并删除
-zip -rm s-$(date "+%y%m%d-%H%M").zip .
+name="s-$(date "+%y%m%d-%H%M")"
+zip -rm $name.zip .
 
-# 移动到下载
+ls -lh
+# 如果超过 4 G，需要分割
+zip -s 3.5G $name --out ~/Downloads/$name.zip
+# 否则直接移动到下载
 mv *.zip ~/Downloads/
 
-# 还原unzip test.zip -d /dir
+# 分割后合并  zip subbook.zip -s=0 --out single.zip
+# 解压 unzip test.zip -d /dir
 
 # 如果登录了两个微信号，可以使用微信id来备份 zip -r we1.zip xxxx (我的是1eb36d0ea2f1dbc5d9e9976637facc10)
 # 仅压缩 微信号-开始-结束
