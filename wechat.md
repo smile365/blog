@@ -29,8 +29,8 @@ name="s-$(date "+%y%m%d-%H%M")"
 zip -rm $name.zip .
 
 ls -lh
-# 如果超过 4 G，需要分割
-zip -s 3.5G $name --out ~/Downloads/$name.zip
+# 如果超过 4 G，需要分割,单位只能是 M，按照 2G 分割。
+zip -s 2048M $name --out ~/Downloads/$name-sub.zip
 # 否则直接移动到下载
 mv *.zip ~/Downloads/
 
