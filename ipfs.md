@@ -31,8 +31,9 @@ docker exec ipfs ipfs swarm peers
 
 ```
 
-```yaml
+或者使用 docker-compose 安装
 
+```yaml
 version: '3'
 
 services:
