@@ -31,6 +31,19 @@ docker exec ipfs ipfs swarm peers
 
 ```
 
+```yaml
+
+version: '3'
+
+services:
+  ipfs:
+    image: ipfs/kubo
+    restart: always
+    ports:
+      #- "4001:4001"  # P2P TCP/QUIC transports
+      #- "8080:8080"  # Gateway
+      - "5001:5001"   # RPC API
+```
 
 ## 在 spring boot 项目使用 ipfs 存储 Java 对象
 
