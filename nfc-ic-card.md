@@ -260,6 +260,18 @@ mfcuk 一个也不知道（全加密）
 
 80C51 单片机属于MCS-51系列单片机，由Intel公司开发.
 
+
+### nfc 技术与 RFID 卡有什么联系，为什么手机使用 nfc 功能可以读取 RFID卡
+
+NFC技术和RFID卡都是基于射频识别技术的，它们之间的联系主要在于NFC技术可以支持读取和写入RFID卡的数据。
+
+NFC技术本质上是一种基于RFID技术的改进版，它与RFID卡之间的通信协议和射频技术是兼容的。因此，通过NFC手机使用NFC功能可以读取RFID卡的数据，例如门禁卡、公交卡等。
+
+当手机靠近RFID卡时，NFC芯片会向RFID卡发送一些命令，RFID卡会返回一些数据，然后NFC芯片将这些数据传输到手机上进行处理。这样，就可以实现通过手机来读取和处理RFID卡的数据，例如进行门禁验证、公交刷卡等操作。
+
+需要注意的是，不是所有的RFID卡都可以通过NFC手机读取，这取决于RFID卡的工作频率、协议和安全性等因素。同时，NFC手机也需要支持相应的NFC协议和功能才能读取RFID卡。
+
+
 参考文献：
 - [Linux 下攻击 Mifare NFC 卡片的简明指南](https://www.ducksoft.site/%E5%AE%89%E5%85%A8/mifare-crack-guide.html)
 - [复制MIFARE Classic小区门禁卡记录](https://zohead.com/archives/copy-mifare-classic/)
