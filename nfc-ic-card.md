@@ -260,6 +260,8 @@ mfcuk 一个也不知道（全加密）
 
 80C51 单片机属于MCS-51系列单片机，由Intel公司开发.
 
+### Mifare 
+Mifare 是NXP公司生产的一系列遵守ISO14443A标准的射频卡，包括Mifare S50、Mifare S70、Mifare UltraLight、Mifare Pro、Mifare Desfire等。Mifare S50的容量为1K字节，常被称为Mifare Standard，又被叫做Mifare 1，是遵守ISO14443A标准的卡片中应用最为广泛、影响力最大的的一员。S50的卡类型(ATQA)是0004H。
 
 ### nfc 技术与 RFID 卡有什么联系，为什么手机使用 nfc 功能可以读取 RFID卡
 
