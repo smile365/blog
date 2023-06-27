@@ -23,6 +23,30 @@ IDE 和 Block SCSI  性能低下不推荐，如果需要使用硬盘直通则使
 
 ## 使用模板创建虚拟机
 
+## 给虚拟机挂载超过 2T 的磁盘
+参考[fdisk到底支不支持2T以上容量的硬盘分区](https://steemit.com/cn/@oflyhigh/-fdisk2t-2019-11-05)
+```bash
+root@debian11:~/docker/nas# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0  128G  0 disk 
+├─sda1   8:1    0  127G  0 part /
+├─sda2   8:2    0    1K  0 part 
+└─sda5   8:5    0  975M  0 part [SWAP]
+sdb      8:16   0    4T  0 disk 
+```
+
+sdb 为新增的磁盘
+```bash
+fdisk /dev/sdb
+# 依次输入
+m # 提示
+g # 创建 GPT 类型的分区表（默认是 dos 类型，dos 类型最大支持 2T）
+p # 打印分区表信息
+n # 创建分区
+... # 一路默认（回车）
+w # 保存
+```
+
 
 ## usb 设备直通
 
