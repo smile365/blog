@@ -47,6 +47,23 @@ n # 创建分区
 w # 保存
 ```
 
+挂载到指定目录，参考[Linux配置硬盘自动挂载](https://www.jianshu.com/p/336758411dbf)
+```bash
+# 格式化分区
+mkfs -t ext4 /dev/sdb1
+# 创建需要挂载的目录
+mkdir /share
+# 挂载
+mount /dev/sdb1 /share
+# 检查是否挂载成功 
+df -h
+
+# 开机自动挂载 
+echo /dev/sdb1 /share ext4 defaults 0 0 >> /etc/fstab
+# 0 0 表示是否检查磁盘 默认为 0
+```
+
+
 
 ## usb 设备直通
 
