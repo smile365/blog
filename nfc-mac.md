@@ -66,9 +66,9 @@ mfoc -P 500 -O mycard.mfd
 # 读取空白卡
 mfoc -P 500 -O card_nothing.mfd
 # 复制 id 和内容。复制 mycard 的内容，使用 card_nothing.mfd 的 key 作为验证。
-nfc-mfclassic W a u mycard.mf card_nothing.mfd
+nfc-mfclassic W a u mycard.mfd card_nothing.mfd
 # 仅复制内容（部分卡无法复制 id）
-nfc-mfclassic w a u mycard.mf mycard2.mf f
+nfc-mfclassic w a u mycard.mfd mycard2.mfd f
 # 查看 id
 nfc-list
 # 查看另一张 id
