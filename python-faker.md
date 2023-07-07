@@ -32,9 +32,10 @@ print(fake.random_number(digits=10))
 print(fake.lexify(text='测试字符串：????', letters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
 ```
 
-### 案例
-```python
+### 真实案例
+请使用 python3 的 Faker 模块生成一个 30 万的用户信息，并写入名为 users30w.json 的文件，然后使用 post 请求把 用户信息发送到 localhost:8080/save/users 。
 
+```python
 # pip3 install Faker requests
 from faker import Faker
 import json
