@@ -16,6 +16,7 @@ mac 或者 windows 建议直接下载 [nodejs 安装包](https://nodejs.org/zh-c
 ## 使用 NVM 安装 nodejs
 [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)  全名 Node.js Version Management ，顾名思义是一个Node.js 的版本管理工具。
 ```bash
+ls ~/.nvm
 # 官方脚本安装，需要自己配置环境变量
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 # 自动配置环境变量
