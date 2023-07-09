@@ -7,6 +7,11 @@ tags:
 description:  
 ---
 
+## 系统环境
+
+- debian 11 :  `cat /etc/os-release` ,[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+
+
 ## nodejs 版本选择
 
 [Node.js](https://nodejs.org/zh-cn/) 一般每年会升级两个大版本，偶数版是生产可用的版本（LTS），具体版本生命周期可查看 [nodejs-release](https://github.com/nodejs/release#release-schedule)
