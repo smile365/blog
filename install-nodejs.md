@@ -30,8 +30,13 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 # source ~/.bashrc
 # 或者重新打开终端
 
+
 # 使用方式
 nvm ls
+
+# 使用淘宝源
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/
+# 安装 nodejs
 nvm install node  # 最新版（当前为 19）
 nvm install node --lts  # 最新长期支持版（当前为 18）
 nvm install 14 # 特定版本
