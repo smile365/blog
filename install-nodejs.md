@@ -49,7 +49,7 @@ nvm use 14  # 切换版本
 ```bash
 # 安装 nodejs 和 npm/yarn 包管理器
 apt update
-apt install -y nodejs npm yarn
+apt install -y nodejs npm
 node -v
 # v12.22.12 (2023年)
 npm -v
@@ -57,6 +57,19 @@ npm -v
 yarn --version
 # 0.32+git
 ```
+
+## 安装 yarn
+```bash
+apt remove cmdtest
+apt autoremove yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" |tee /etc/apt/sources.list.d/yarn.list
+apt update
+apt install yarn
+yarn --version
+# 1.22.19
+```
+
 
 ## 配置 npm/yarn 镜像源
 nodejs 的 npm 比较慢，可以配置成阿里巴巴的 [npm 镜像](https://npmmirror.com/)
