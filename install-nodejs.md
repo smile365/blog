@@ -95,3 +95,4 @@ git config --global http.postBuffer 1048576000
 - [解决 githubusercontent 443 问题](https://github.com/hawtim/hawtim.github.io/issues/10)
 - [GnuTLS recv error (-110) 错误](https://blog.csdn.net/weixin_43108793/article/details/118306045)
 - [yarn 修改镜像源](https://juejin.cn/post/6844903889087496200)
+- [NVM 使用淘宝镜像](https://www.chenky.com/archives/746)
