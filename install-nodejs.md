@@ -68,6 +68,8 @@ apt update
 apt install yarn
 yarn --version
 # 1.22.19
+yarn config get registry
+# https://registry.npm.taobao.org/
 ```
 
 
