@@ -14,6 +14,7 @@ description:
   - 服务器在国外，下载 mac 版本或者 ios 版本需要美区 Apple ID。 
   - 也可以替换成国内的相似软件[贝锐蒲公英](https://pgy.oray.com/download/personal/#visitor)
   - [自建 tailscale 中继服务器](https://blog.laisky.com/p/tailscale/)
+  - 还可以用 [headscale](https://github.com/juanfont/headscale) 作为服务端，继续用 [tailscale](https://icloudnative.io/posts/how-to-set-up-or-migrate-headscale/#tailscale-客户端接入)的客户端，修改服务器地址就行。
 
 
 ## install on debian
