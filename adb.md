@@ -19,3 +19,8 @@ description:
 apt install android-tools-adb android-tools-fastboot
 adb connect 192.168.0.122:5555
 ```
+
+
+## 参考文档
+- [远程访问技术对比](https://sspai.com/post/77971)
+- [Tailscale 开源版本让你的 WireGuard 直接起飞](https://zhuanlan.zhihu.com/p/485198007)
