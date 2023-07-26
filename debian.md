@@ -38,6 +38,12 @@ iso 下载地址：
 apt install apt-transport-https ca-certificates
 cat /etc/apt/sources.list
 # 安装时选择了 mirrors.tuna.tsinghua.edu.cn 就不用改
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+deb https://security.debian.org/debian-security bullseye-security main contrib non-free
+
 ```
 
 2. 允许 root 登录
