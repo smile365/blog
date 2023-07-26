@@ -34,7 +34,9 @@ GatewayPorts yes
 
 1. macbook 访问内网容器内的 postgresql
 ```
-echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free" > /etc/apt/sources.list
+cat /etc/os-*
+# debian 10
+
 apt update 
 apt install ssh
 ssh -R 3228:postgresql.middleware.svc:5432 sxy91.com
