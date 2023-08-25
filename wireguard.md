@@ -165,7 +165,8 @@ Address = 10.0.8.3/24
 [Peer]
 PublicKey = [debian 的公钥]
 Endpoint = sxy21.cn:51820
-AllowedIPs = 10.0.8.0/24,192.68.0.0/24
+# 通过此 Peer 可以找到 10.0.8 网段和 192.168.0 网段的 ip
+AllowedIPs = 10.0.8.0/24,192.168.0.0/24
 ```
 
 使用帮助
