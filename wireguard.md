@@ -116,7 +116,7 @@ ping 10.0.8.1
 客户端[命令](https://www.wireguard.com/quickstart/#command-line-interface)
 
 ```bash
-brew install wireGuard
+brew install wireguard-tools
 # Bottle installation failed
 # Run brew update twice and brew doctor (and fix all the warnings) before creating an issue!
 # 测试是否安装
