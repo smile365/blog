@@ -94,6 +94,8 @@ PersistentKeepalive = 25
 在 debian 服务器上加入 alpine 的 peer
 ```bash
 wg set wg0 peer 【alpine 的公钥】 allowed-ips 10.0.8.2/32,192.168.0.0/24
+# 删除 peer
+wg set wg0 peer 【alpine 的公钥】 remove
 ```
 
 **测试**
@@ -179,6 +181,8 @@ $ sudo wg
 在 debian 服务器上增加 mac 的 peer
 ```bash
 wg set wg0 peer [mac 的公钥] allowed-ips 10.0.8.3/32
+# 删除 peer
+wg set wg0 peer 【mac 的公钥】remove
 ```
 
 
