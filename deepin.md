@@ -9,6 +9,9 @@ description:
 
 
 ## 版本信息
+- deepin:  20.9
+
+系统自动安装了 ssh（需要启动），xrdp（默认启动）
 
 ## 开启 ssh
 参考[官方文档](https://wiki.deepin.org/en/System_Management/Service_Management/SSH_service)，注意此系统的 ssh 服务直接叫 ssh 不是 sshd。
@@ -19,7 +22,10 @@ sudo systemctl start ssh
 ```
 
 
-## 开启远程桌面
+## 开启远程桌面 xrdp
+
+参考 [xrdp](https://github.com/deepin-community/xrdp)
+
 
 ## 常用软件
 
