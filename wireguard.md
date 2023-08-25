@@ -145,6 +145,11 @@ Available subcommands:
 brew install wireguard-tools
 # 创建目录和编辑配置文件
 sudo mkdir /usr/local/etc/wireguard/
+# 生成私钥，然后拷贝
+wg genkey
+# 生成公钥
+echo 生成的私钥 | wg pubkey
+# 
 sudo vim /usr/local/etc/wireguard/wg0.conf
 
 ```
