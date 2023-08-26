@@ -23,7 +23,7 @@ source ~/.zshrc
 
 
 ## 安装 oracle-jdk
-在 [Java SE downloads](https://www.oracle.com/java/technologies/downloads/archive/)找到所需版本，下载 [xxx-macosx-x64.dmg（intel 芯片）](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) 的文件。或者[xxx-macos-aarch64_bin.dmg](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox)(apple 芯片)
+在 [Java SE downloads](https://www.oracle.com/java/technologies/downloads/archive/)找到所需版本，下载 [xxx-macosx-x64.dmg](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html) （intel 芯片）的文件。或者[xxx-macos-aarch64_bin.dmg](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html#license-lightbox)(apple 芯片)
 
 需要登录 Oracle 账号，这边分享一个账号，方便下载：  
 - 账户：3028064308@qq.com
