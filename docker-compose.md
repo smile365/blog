@@ -7,8 +7,18 @@ tags:
 description: Docker-Compose
 ---
 
-## 安装 Docker-Compose
-通过 pip 安装
+
+## 前言
+安装 [docker-compose](https://docs.docker.com/compose/install/) 有三种方式，分别是
+- 安装 Docker Desktop
+- 安装 docker-compose-plugin(前提是已经安装 docker )，此方式安装的命令为 docker compose
+- 独立安装 Docker Compose。此方式安装的命令为 docker-compose 。
+
+
+
+
+## 安装 docker-compose-plugin
+1. 通过 pip 安装
 ```
 pip install -U docker-compose
 # 命令补缺
@@ -17,6 +27,15 @@ curl -L https://raw.githubusercontent.com/docker/compose/1.27.4/contrib/completi
 # sudo pip uninstall docker-compose
 docker-compose --version
 ```
+
+2. 通过资源库安装，参考[install-using-the-repository](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
+```bash
+apt install -y docker-compose-plugin
+docker compose version
+```
+
+
+
 
 ## 项目的 dockerfile 文件
 
