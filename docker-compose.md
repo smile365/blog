@@ -30,7 +30,9 @@ docker-compose --version
 
 2. 通过资源库安装，参考[install-using-the-repository](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
 ```bash
-apt install -y docker-compose-plugin
+# apt install -y docker-compose-plugin
+# 安装 docker-ce 会自动安装  docker-compose-plugin
+apt install -y docker-ce
 docker compose version
 ```
 
