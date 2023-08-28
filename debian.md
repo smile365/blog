@@ -77,8 +77,8 @@ apt install -y wireguard
 ```
 
 
-## 安装 docker
-安装 vim、sudo、rsync docker-ce
+## 安装 docker 
+安装 docker-ce 会自动安装 docker-compose-plugin
 ```bash
 # vim\sudo\rsync
 apt install -y vim sudo rsync software-properties-common
