@@ -62,7 +62,7 @@ vim /etc/docker/daemon.json
 systemctl daemon-reload && systemctl restart docker
 ```
 
-其他镜像站
+[其他镜像站](https://imnks.com/8302.html)
 ```bash
 阿里云（杭州）   https://registry.cn-hangzhou.aliyuncs.com
 阿里云（上海）   https://registry.cn-shanghai.aliyuncs.com
