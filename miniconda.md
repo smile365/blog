@@ -30,13 +30,9 @@ mkdir /opt/conda
 chmod ugo+w /opt/conda
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3*.sh
-./Miniconda3*.sh
-# 1.同意协议
-yes
-# 2.输入安装位置
-/opt/conda/miniconda3
-# 3.是否加入当前用户的环境变量
-no
+# -p PREFIX: defaults to /root/miniconda3
+./Miniconda3*.sh -b -p /opt/conda
+# export PATH="/root/miniconda3/bin:$PATH"
 ```
 
 创建公用的环境变量`vi /etc/profile.d/conda.sh`
