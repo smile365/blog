@@ -26,8 +26,6 @@ sudo /bin/bash ./Miniconda3-latest-MacOSX-x86_64.sh -u
 
 ## Centos 安装步骤
 ```shell
-mkdir /opt/conda
-chmod ugo+w /opt/conda
 wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
 chmod +x Miniconda3*.sh
 # -p PREFIX: defaults to /root/miniconda3
