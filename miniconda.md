@@ -35,7 +35,7 @@ chmod +x Miniconda3*.sh
 
 创建公用的环境变量`vi /etc/profile.d/conda.sh`
 ```shell
-export PATH="/opt/conda/miniconda3/bin:$PATH"
+export PATH="/opt/conda/bin:$PATH"
 ```
 
 重新打开一个终端，测试是否安装成功`which conda`
