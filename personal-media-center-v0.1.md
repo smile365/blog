@@ -48,3 +48,25 @@ services:
       - 30308:51413/udp
 ```
 
+
+
+```conf
+# vi /etc/samba/smb.conf
+# cat /etc/samba/smb.conf grep | multi
+# cat /etc/samba/smb.conf grep | aio
+# server multi channel support=yes
+aio read size=1
+aio write size=1
+
+[data]
+  comment = server data
+  path = /share
+  browseable = yes
+  writable = yes
+# 增加下面配置则为公开访问，无需账号密码
+  public=yes
+  writable = yes
+  create mask=0775
+  directory mask=0775
+  available = yes
+```
