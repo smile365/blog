@@ -13,12 +13,13 @@ BLOG=$SITE/myblog
 initMyBlog(){
 	if test -e $SITE/myblog
 	then
+		echo "$SITE exists exit"
 		return 1
 	fi
 	echo "mkdir $SITE"
 	mkdir -p $SITE
 	cd $SITE && hugo new site myblog
-	cd myblog
+	cd $BLOG
 	mkdir content/posts
 	git init
 	# 配置主题
@@ -27,13 +28,13 @@ initMyBlog(){
 	cp themes/wehuth/exampleSite/config.toml .
 
 	git submodule add git@gitee.com:smile365/blog.git codeblog
-	cd codeblog
+	cd $BLOG/codeblog
 	git remote set-url --add origin git@github.com:smile365/blog.git
 
 
-	cd ..
+	cd $BLOG
 	git submodule add git@gitee.com:smile365/live4life.git lifeblog
-	cd lifeblog
+	cd $BLOG/lifeblog
 	git remote set-url --add origin git@github.com:smile365/live4life.git
 
 }
@@ -45,13 +46,13 @@ Publish(){
 	git pull && git push
 	cp *.md ../content/posts/
 	
-	cd ../lifeblog
+	cd $BLOG/lifeblog
 	git pull && git push
 	cp *.md ../content/posts/
 
 	cd .. && hugo
-	echo $BLOG
-
+	echo $BLOG/public
+	ls $BLOG/public
 }
 
 initMyBlog
