@@ -16,7 +16,7 @@ initMyBlog(){
 		return 1
 	fi
 	echo "mkdir $SITE"
-	mkdir -p 
+	mkdir -p $SITE
 	cd $SITE && hugo new site myblog
 	cd myblog
 	mkdir content/posts
