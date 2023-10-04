@@ -16,10 +16,26 @@ description: install Windows 11 on pve
 
 
 
+
 ## 创建虚拟机
+
+安装Windows 11的最低要求如下：
+
+- 处理器：1 GHz或更快，支持64位的处理器（双核或多核）或系统单芯片（SoC）。
+- 内存：4 GB及以上。
+- 可用硬盘空间：64 GB或更大的存储设备。
+- 图形卡：支持DirectX 12或更高版本，支持WDDM 2.0驱动程序。
+- 支持UEFI安全启动。
+- 受信任的平台模块（TPM）版本2.0。
+
 参考 [安装教程](https://www.gordon2000.com/2021/10/pvewindows-11-step-by-step.html)
 
-创建一个虚拟机，注意系统版本选择 Windows 11 硬盘设备选择 VirtIO，网卡选  。
+创建一个虚拟机:
+- 系统版本选择: Windows 11 
+- 硬盘设备选择 VirtIO
+- 网卡选:
+- CPU 选： host
+- 控制器选：Virt scsi （否则无法加载驱动）
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1676977598485.png)
 
 
