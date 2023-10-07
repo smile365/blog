@@ -23,7 +23,7 @@ description:
 ```bash
 # 之后按 control-O 退出终端)
 qm terminal 101 -iface serial0
-# 回车
+# 安装完成直接进入 console 界面，需要输入命令 setup-alpine 开始初始化。
 setup-alpine
 # 键盘布局,几乎都是 QWERTY 布局
 Select keyboard layout: [none] us
@@ -66,6 +66,7 @@ reboot
 ```
 # 开启 root 用户远程管理
 echo "PermitRootLogin  yes" >> /etc/ssh/sshd_config
+service sshd restart
 ```
 
 
