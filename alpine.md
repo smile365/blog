@@ -160,6 +160,7 @@ server{
 
 重启 nginx
 ```bash
+mkdir -p /run/nginx/
 nginx -t
 nginx -s reload
 ```
