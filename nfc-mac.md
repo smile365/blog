@@ -60,9 +60,10 @@ python3 mfdread.py ./dump.mfd
 ## 复制
 1. 把小区门禁卡放在 nfc 读卡器上
 ```bash
-
+# 获取 UID
+nfc-list | grep UID | awk -F':' '{print $2}' | tr -d ' '
 # 读取小区门禁卡
-mfoc -P 500 -O mycard.mfd
+mfoc -P 500 -O mycard-xxxx.mfd
 # 读取空白卡
 mfoc -P 500 -O card_nothing.mfd
 # 复制 id 和内容。复制 mycard 的内容，使用 card_nothing.mfd 的 key 作为验证。
