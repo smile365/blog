@@ -166,6 +166,7 @@ nginx -s reload
 ```
 
 ### wireguard 的安装和配置
+参考 [wireguard 官网](https://www.wireguard.com/install/#alpine-tools) 安装
 ```
 apk add -U wireguard-tools
 
