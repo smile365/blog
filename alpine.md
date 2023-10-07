@@ -13,7 +13,7 @@ description:
 **1. 创建虚拟机**
 下载VIRTUAL 版本下的[ alpine-virt-x86_64.iso](https://alpinelinux.org/downloads/) 镜像文件。
 
-用 pve 创建一个虚拟机，挂载刚刚下载的镜像。（别忘了增加串口0）
+用 pve 创建一个虚拟机，挂载刚刚下载的镜像。（别忘了增加串口0，否则命令不好粘贴复制，另外设置镜像的时候无法上翻）
 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1667488784701.png)
 
@@ -22,6 +22,7 @@ description:
 网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
 ```bash
 # 之后按 control-O 退出终端)
+# 先启动容器，然后输入命令：
 qm terminal 101 -iface serial0
 # 安装完成直接进入 console 界面，需要输入命令 setup-alpine 开始初始化。
 setup-alpine
