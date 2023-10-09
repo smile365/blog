@@ -21,9 +21,12 @@ description:
 
 网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
 ```bash
-# 之后按 control-O 退出终端)
-# 先启动容器，然后输入命令：
+
+# 启动容器，然后输入命令：
 qm terminal 101 -iface serial0
+# (press Ctrl+O to exit)
+# 之后按 control+O 退出终端)
+
 # 安装完成直接进入 console 界面，需要输入命令 setup-alpine 开始初始化。
 setup-alpine
 # 键盘布局,几乎都是 QWERTY 布局
