@@ -94,6 +94,17 @@ COPY --from=builder /target/*.jar /app/myapp-starter.jar
 ```
 
 
+## 导出堆内存快照
 
+```bash
+# 使用 jps 查看 pid
+> jps
+7 starter.jar
+
+# jmap -dump:format=b,file=<输出文件路径> <进程ID>
+> jmap -dump:format=b,file=myapp-001.hprof 7
+> ls -lh 
+2.3G myapp-001.hprof
+```
 
 
