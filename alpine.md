@@ -19,7 +19,8 @@ description:
 
 **2. 安装过程**
 
-网页上的 console 不方便粘贴复制命令，启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
+ **注：** pve 【概要】下方的【控制台】不能粘贴复制命令，如需粘贴或复制命令需点击右上角的【控制台】按钮。
+启动后，在 pve 机器终端用 qm 命令连接 alpine 的终端。然后参考 [安装 alpine 教程](https://zhuanlan.zhihu.com/p/107963371)进行安装，[键盘布局](zh.wikipedia.org/zh-cn/键盘布局#中日韩文字键盘)选择 
 ```bash
 
 # 启动容器，然后输入命令：
