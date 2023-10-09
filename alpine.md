@@ -39,6 +39,7 @@ Enter system hostname (fully qualified form, e.g. 'foo.example.org') [localhost]
 Which timezone are you in? ('?' for list) [UTC] Asia/Shanghai
 # 镜像选择 
 Available mirrors:
+1) 
 ...
 16) mirrors.tuna.tsinghua.edu.cn # 清华
 ...
@@ -50,7 +51,7 @@ Enter mirror number (1-72) or URL to add (or r/f/e/done) [1] 16
 # r) 从上面的列表中添加随机数
 # f) 从上面的列表中检测并添加最快的镜像
 # e) 使用文本编辑器编辑 /etc/apk/repositories
-# 选择 f 会所有镜像测一遍，比较慢。直接输入 16 或者 57
+# 选择 f 会所有镜像测一遍，比较慢。直接输入 16 或者 57()
 # 安装到哪个磁盘
 Which disk(s) would you like to use? (or '?' for help or 'none') [none] sda
 # 安装类型 
@@ -170,10 +171,24 @@ nginx -s reload
 ```
 
 ### wireguard 的安装和配置
+
 参考 [wireguard 官网](https://www.wireguard.com/install/#alpine-tools) 安装
 ```
+apk update
 apk add -U wireguard-tools
+```
 
+如果失败，需要更改[/etc/apk/repositories](https://wiki.alpinelinux.org/wiki/Repositories) 为官方镜像
+```text
+# echo "">/etc/apk/repositories
+# vi /etc/apk/repositories
+#/media/cdrom/apks
+http://dl-cdn.alpinelinux.org/alpine/v3.9/main
+http://dl-cdn.alpinelinux.org/alpine/v3.9/community
+```
+
+继续安装
+```
 cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
 cat /etc/wireguard/publickey 
 vi wg0.conf
