@@ -48,9 +48,13 @@ deb https://security.debian.org/debian-security bullseye-security main contrib n
 
 2. 允许 root 登录
 ```bash
+apt install -y openssh-server
+systemctl start ssh
+
 cat /etc/ssh/sshd_config |grep PermitRootLogin
 echo "PermitRootLogin yes" >> /etc/ssh/sshd_config 
 /etc/init.d/ssh restart
+# systemctl restart ssh
 ```
 
 3. ssh 免密登录
