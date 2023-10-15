@@ -77,7 +77,7 @@ service sshd restart
 
 
 ### 使用模板 CT 方式 （推荐）
-1. 先点击 local -> CT 模板 -> 模板 下载 alpine。
+1. 先点击 local -> CT 模板 -> 模板 下载 alpine，或者从 [清华源](https://mirrors.ustc.edu.cn/proxmox/images/system/) 下载，速度会快一些。
 2. 点击右上角创建 CT，并选择刚刚下载的模板，然后启动。
 3. 更改源[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/alpine/)
 ```bash
