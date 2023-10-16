@@ -54,7 +54,7 @@ CT 模板是用来创建 [LXC 容器](https://262235.xyz/index.php/archives/727/
 
 准备工具（登录 pve 然后点击从 URL 下载）：
 
-- 下载驱动 [virtio-win-0.1.208-1.iso](https://foxi.buduanwang.vip/pan/proxmox-edge/%E9%A9%B1%E5%8A%A8/virtio-win-0.1.208-1.iso?preview)
+- 下载驱动 [virtio-win-0.1.208-1.iso](https://foxi.buduanwang.vip/pan/proxmox-edge/%E9%A9%B1%E5%8A%A8/virtio-win-0.1.208-1.iso)
 - 下载系统镜像 [zh-cn_windows_11_business_editions_x64_dvd.iso](https://foxi.buduanwang.vip/pan/proxmox-edge/ISO/zh-cn_windows_11_business_editions_x64_dvd_f5f6bcbd.iso)
 - 或者 ed2k[迅雷](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)下载   [zh-cn_windows_11.iso](ed2k://|file|zh-cn_windows_11_business_editions_x64_dvd_f5f6bcbd.iso|5413181440|88CA1AE28F5F8A238647561B5C00E511|/)
 
