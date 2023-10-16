@@ -7,9 +7,11 @@ tags:
 description: winPE
 ---
 
+## 前言
+经常需要装机，可以通过 [ventoy](https://wiki.edgeless.top/v2/guide/burn_manual.html) 工具来制作一个万能的系统安装 u 盘。
+只需要把 iso 镜像文件拷贝进入到 u 盘里，从 u 盘安装系统时，ventoy 会扫描 U 盘里的所有 iso 系统文件，以供选择进行安装。
+然后把 edgeless 这款 winPE 工具烧录进 u 盘，就成为一个安装系统和维护系统的万能 U 盘。
 
-
-[u 盘工具箱](https://post.smzdm.com/p/a25dx0rp/)
 
 ## 制作 U 盘启动的 PE 或工具
 - [ventoy](https://www.ventoy.net/cn/index.html)，u 盘烧录工具
@@ -23,47 +25,44 @@ description: winPE
 - 大白菜
 
 
-## 基于 ventoy 制作 edgeless 
-
-edgeless 提供 Windows 下的 U 盘启动制作工具， Linux 需要通过
-[ventoy Linux工具](https://wiki.edgeless.top/v2/guide/burn_manual.html)来制作。
-
-1. 下载依赖文件
-从以下链接下载依赖文件：
-
-- [ventoy-xxx-linux.tar.gz](https://gitee.com/longpanda/Ventoy/releases/)
-- [ventoy wim插件](https://pineapple.edgeless.top/api/v2/info/ventoy_plugin_addr)
-- [Edgeless ISO镜像](https://pineapple.edgeless.top/api/v2/info/iso_addr)
-
-解压 ventoy-xxx-linux.tar.gz
-
-2. 安装Ventoy
-
-```
-# 1. 插入 u 盘，查看挂载的路径
-df -h
-# /dev/disk2s1    14Gi  5.8Gi  8.5Gi    41%     100    8873624    0%   /Volumes/U深度U盘
-
-# 2. 安装
-ventoy2disk.sh -i /dev/disk2s1
-```
-
-## linux 下制作 
-下载[ventoy-linux.tar.gz
-](https://gitee.com/longpanda/Ventoy/releases/)
+## 安装 ventoy 到 u 盘
+到网站查最新版 ventoy 链接 [ventoy-xxx-linux.tar.gz](https://gitee.com/longpanda/Ventoy/releases/)，然后安装。
 ```
 wget https://gitee.com/longpanda/Ventoy/attach_files/1047852/download/ventoy-1.0.74-linux.tar.gz
 tar -xzvf *.tar.gz
 
-# 查看磁盘
+# 插入 u 盘，查看挂载的路径
 lsblk 
 # 是否挂载
 df -h
 # 取消挂载
 umount /dev/sdc1
 # 写入 u 盘
+cd ventoy*
+# 依赖 mkfs.vfat 命令
+apt install dosfstools
 sudo /bin/bash Ventoy2Disk.sh -i /dev/sdc
 ```
+
+ventoy 安装完成后，会格式化成[两个分区](https://www.ventoy.net/cn/doc_disk_layout.html)
+```bash
+# 查看 u 盘分区
+lsblk 
+```
+
+
+## 写入 Edgeless 到 U 盘
+
+edgeless 提供 Windows 下的 U 盘启动制作工具， Linux 需要通过 ventoy Linux工具来制作，可参考官方教程 [如何手动写入Edgeless到U盘](https://wiki.edgeless.top/v2/guide/burn_manual.html)。
+
+
+1. 在 U 盘内新建一个 ventoy 文件夹，下载 [ventoy_wimboot.img](https://pineapple.edgeless.top/api/v2/info/ventoy_plugin_addr) 到此文件夹内。
+
+
+2. 下载 [Edgeless_xxxx_xxx.iso](https://pineapple.edgeless.top/api/v2/info/iso_add)，将其中的 sources/boot.wim 复制到 U 盘根目录，然后将其重命名为 Edgeless_xxxx_xxx.wim，复制其中的 Edgeless 文件夹到 U 盘根目录
+
+3. 如果需要使用插件， 将 [edgeless](https://zfile.edgeless.top/%E6%8F%92%E4%BB%B6%E5%8C%85) 插件包放置在 U盘:\Edgeless\Resource 目录下即可.
+
 
 
 ##  mac osx 下制作 ventoy 启动盘
@@ -92,14 +91,6 @@ chmod: -R: No such file or directory
 > 注：如果出现 `Kernel driver not installed (rc=-1908) ` 错误，可按照[教程](https://stackoverflow.com/questions/65149373/kernel-driver-not-installed-rc-1908-getting-errors-in-macos-big-sur-11-0-1)解决
 
 
-### 写入Edgeless到U盘
 
-下载相关文件:
-- [ventoy wim插件](https://pineapple.edgeless.top/api/v2/info/ventoy_plugin_addr)
-- [Edgeless ISO镜像](https://pineapple.edgeless.top/api/v2/info/iso_addr)
-
-然后按照[教程](https://wiki.edgeless.top/v2/guide/burn_manual.html)把文件复制到 u 盘即可。
-
-
-
-
+## 参考文档
+- [u 盘工具箱](https://post.smzdm.com/p/a25dx0rp/)
