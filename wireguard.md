@@ -15,7 +15,7 @@ description: wireguard 内网穿透
 
 ```bash
 # 安装
-apk install -y wireguard 
+apt install -y wireguard 
 cd /etc/wireguard
 # 生成私钥
 wg genkey > privatekey
