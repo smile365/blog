@@ -100,7 +100,8 @@ CT 模板是用来创建 [LXC 容器](https://262235.xyz/index.php/archives/727/
 
 ## Debian 12
 
-下载 [debian-11.5.0-amd64-netinst.iso](https://www.debian.org/download)
+- 从官网下载 [debian-11.5.0-amd64-netinst.iso](https://www.debian.org/download)
+- 从清华源下载 [debian-cd/12.2.0/amd64/iso-cd/](https://mirrors.tuna.tsinghua.edu.cn/debian-cd/)
 
 
 ## deepin 23
