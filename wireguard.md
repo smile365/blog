@@ -13,6 +13,7 @@ description: wireguard 内网穿透
 
 ## debian 安装 WireGuard
 
+WireGuard(server 端)
 ```bash
 # 安装
 apt install -y wireguard 
@@ -37,6 +38,7 @@ PrivateKey = 【debian的私钥】
 
 
 ## alpine 安装 WireGuard
+
 alpine 当做中转站，访问到 alpine 即可访问到与 alpine 同网段的计算机，需要 [开启 ipv4 转发功能](https://linuxconfig.org/how-to-turn-on-off-ip-forwarding-in-linux)
 
 ```bash
@@ -57,9 +59,7 @@ echo net.ipv4.ip_forward= 1 | tee -a /etc/sysctl.conf && sysctl -p
 `vi /etc/conf.d/iptables`
 ```bash
 IPFORWARD="yes"
-```
 
-```bash
 
 # 开启 ip 转发
 # sysctl -a |grep ipv4.ip_forward
@@ -67,26 +67,59 @@ IPFORWARD="yes"
 # sysctl net.ipv4.ip_forward=1
 # 永久生效
 echo net.ipv4.ip_forward= 1 | tee -a /etc/sysctl.conf && sysctl -p
+```
+
+安装 
+```bash
 # 安装 wireguard
 apk add -U wireguard-tools
 # 配置
 cd /etc/wireguard && wg genkey | tee privatekey | wg pubkey > publickey
 cat /etc/wireguard/publickey 
-# 编辑配置文件
-vi wg0.conf
-# 内容如下
+```
+
+
+查看 ip 为 192.168.0 网段的网卡为 vmbr0
+```bash
+ip addr
+
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp5s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master vmbr0 state UP group default qlen 1000
+    link/ether 0a:e0:af:d1:07:d8 brd ff:ff:ff:ff:ff:ff
+3: vmbr0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 0a:e0:af:d1:07:d8 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.176/24 scope global vmbr0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::8e0:afff:fed1:7d8/64 scope link 
+       valid_lft forever preferred_lft forever
+```
+
+安装 iptables
+```bash
+apk add iptables
+```
+
+
+
+编辑配置文件 `vi wg0.conf`，注意把 PostUp 和 PostDown 的网口参数 vmbr0 改成自己的，内容如下：
+```conf
 [Interface]
 Address = 10.0.8.2
 SaveConfig = true
 ListenPort = 49152
 PrivateKey = 【alpine 的私钥】
-PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o vmbr0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o vmbr0 -j MASQUERADE
 
 [Peer]
 PublicKey = 【debian 的公钥】
 AllowedIPs = 10.0.8.0/24
-Endpoint = sxy21.cn:51820
+Endpoint = sxy21.cn:49152
 PersistentKeepalive = 25
 ```
 
