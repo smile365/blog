@@ -1,6 +1,6 @@
 ---
 title: ventoy-edgeless-winpe
-heading: 
+heading: 使用 ventoy+edgeless 制作一款万能 winPE u盘启动工具
 date: 2022-04-29T10:56:08.974Z
 categories: ["other"]
 tags: 
