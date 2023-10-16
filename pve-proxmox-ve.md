@@ -48,6 +48,14 @@ cat /etc/apt/sources.list
 echo deb https://mirrors.tuna.tsinghua.edu.cn/proxmox/debian/pve bookworm pve-no-subscription > /etc/apt/sources.list.d/pve-no-subscription.list
 ```
 
+配置 替换 CT Templates 的源:
+```bash
+cp /usr/share/perl5/PVE/APLInfo.pm /usr/share/perl5/PVE/APLInfo.pm_back
+sed -i 's|http://download.proxmox.com|https://mirrors.tuna.tsinghua.edu.cn/proxmox|g' /usr/share/perl5/PVE/APLInfo.pm
+# 需要重启才生效
+# reboot
+```
+
 
 ## 挂载额外硬盘
 
