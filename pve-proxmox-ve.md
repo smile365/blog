@@ -29,7 +29,7 @@ description:
 
 如果没有到安装界面是因为没有配置启动项，或者启动项配置错误。通过 PVE 重启虚拟机，然后按 F2 进入 bois 设置启动项为 CD-ROM 即可。可参考[视频教程](https://www.bilibili.com/s/video/BV16L4y1B7F3)
 
-然后搜索激活工具 HEU KMS Activator 或者 AAct Portable 进行激活。
+然后搜索激活工具 [HEU KMS Activator](https://github.com/zbezj/HEU_KMS_Activator/releases) 或者 AAct Portable 进行激活。
 
 
 ## 配置清华镜像源
