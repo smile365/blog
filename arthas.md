@@ -107,4 +107,57 @@ COPY --from=builder /target/*.jar /app/myapp-starter.jar
 2.3G myapp-001.hprof
 ```
 
+## 使用 arthas 查看方法的调用路径
+
+
+```java
+package com.netflix.conductor.core.execution;
+
+@Component
+public class AsyncSystemTaskExecutor {
+
+    public void execute(WorkflowSystemTask systemTask, String taskId) {
+        //...
+    }
+}
+```
+
+```bash
+stack com.netflix.conductor.core.execution.AsyncSystemTaskExecutor execute
+
+# 输出如下
+    @com.netflix.conductor.core.execution.AsyncSystemTaskExecutor.execute()
+        at com.netflix.conductor.core.execution.tasks.SystemTaskWorker.lambda$pollAndExecute$1(SystemTaskWorker.java:135)ts=2023-10-17 22:11:04;thread_name=system-task-worker-13;id=ac;is_daemon=false;priority=5;TCCL=org.springframework.boot.loader.LaunchedURLClassLoader@2eed37f4        at com.netflix.conductor.core.execution.tasks.SystemTaskWorker.lambda$pollAndExecute$1(SystemTaskWorker.java:135)        at com.netflix.conductor.core.execution.tasks.SystemTaskWorker.lambda$pollAndExecute$1(SystemTaskWorker.java:135)
+```
+
+最终定位到代码
+```java
+package com.netflix.conductor.core.execution.tasks;
+
+public class SystemTaskWorkerCoordinator {
+
+    @EventListener(ApplicationReadyEvent.class)
+    public void initSystemTaskExecutor() {
+        this.asyncSystemTasks.stream()
+                .filter(this::isFromCoordinatorExecutionNameSpace)
+                .forEach(this.systemTaskWorker::startPolling);
+        LOGGER.info(
+                "{} initialized with {} async tasks",
+                SystemTaskWorkerCoordinator.class.getSimpleName(),
+                this.asyncSystemTasks.size());
+    }
+        
+}
+```
+
+
+```bash
+trace com.netflix.conductor.core.execution.AsyncSystemTaskExecutor execute
+```
+
+
+
+
+
+
 
