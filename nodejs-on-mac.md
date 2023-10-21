@@ -20,4 +20,21 @@ nvm install 14 # 特定版本
 # 安装完成后自带 npm 命令
 ```
 
-## 
+## 安装 yarn
+
+```bash
+node -v
+npm -v
+npm install -g npm@latest
+
+npm install --global yarn
+yarn -v
+```
+
+
+
+
+
+
+
+
