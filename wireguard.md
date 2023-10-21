@@ -36,6 +36,10 @@ ListenPort = 51820
 PrivateKey = 【debian的私钥】 
 ```
 
+开机自启动
+```bash
+systemctl enable wg-quick@wg0.service
+```
 
 ## alpine 安装 WireGuard
 
@@ -217,6 +221,7 @@ $ sudo wg
 wg set wg0 peer [mac 的公钥] allowed-ips 10.0.8.3/32
 # 删除 peer
 wg set wg0 peer 【mac 的公钥】remove
+
 ```
 
 
@@ -283,6 +288,7 @@ yum install adb
 # 添加 peer
 wg set wg0 peer MLsqG20kiX7gpvY0D3W4bi/vzmxyFjHVO8zdQco3LV0= allowed-ips 10.0.0.3/24
 
+systemctl enable wg-quick@wg0.service
 ```
 
 
