@@ -56,13 +56,79 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
 1. 创建索引策略
 参考 [创建索引策略](https://juejin.cn/post/7170097149491806222#heading-3) ，使用 kibana 创建索引策略。
 
+也可以使用 api 创建索引策略 `PUT _ilm/policy/my_policy`
+```json
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "min_age": "0ms",
+        "actions": {
+          "set_priority": {
+            "priority": 100
+          },
+          "rollover": {
+            "max_age": "1d"
+          }
+        }
+      },
+      "warm": {
+        "min_age": "3d",
+        "actions": {
+          "set_priority": {
+            "priority": 50
+          }
+        }
+      },
+      "cold": {
+        "min_age": "6d",
+        "actions": {
+          "set_priority": {
+            "priority": 0
+          }
+        }
+      },
+      "delete": {
+        "min_age": "9d",
+        "actions": {
+          "delete": {
+            "delete_searchable_snapshot": true
+          }
+        }
+      }
+    }
+  }
+}
+```
 
 
 2. 创建索引模版
 
+![](https://cdn.sxy21.cn/static/imgs/1698221835453.png)
+或者使用 api 
+```json
+PUT _index_template/zuiyu_template
+{
+  "index_patterns": ["mytest-*"],
+  "template":{
+     "settings": {
+      "number_of_shards": 3,
+      "number_of_replicas": 0,
+      "index.lifecycle.name": "my_policy",    
+      "index.lifecycle.rollover_alias": "mytest" ,    "index.routing.allocation.require.node_type":"hot"
+    }
+  }
+}
+```
 
 
-
+3. 创建测试数据 `POST /myindex/_doc`
+```json
+{
+  "id":"id-001",
+  "content":"ilm alias insert content"
+}
+```
 
 
 
