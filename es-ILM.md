@@ -105,7 +105,7 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
 2. 创建索引模版
 
 ![](https://cdn.sxy21.cn/static/imgs/1698221835453.png)
-或者使用 api `PUT _index_template/zuiyu_template`
+或者使用 api `PUT _index_template/my_template`
 ```json
 {
   "index_patterns": ["mytest-*"],
@@ -133,3 +133,5 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
 
 ## 参考
 - [Elasticsearch索引生命周期管理](https://juejin.cn/post/7170097149491806222)
+- [Elasticsearch集群健康状态显示为yellow排查](https://www.cnblogs.com/charles101/p/14488609.html)
+- 
