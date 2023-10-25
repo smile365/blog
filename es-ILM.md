@@ -64,16 +64,16 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
       "hot": {
         "min_age": "0ms",
         "actions": {
+          "rollover": {
+            "max_age": "1m"
+          },
           "set_priority": {
             "priority": 100
-          },
-          "rollover": {
-            "max_age": "1d"
           }
         }
       },
       "warm": {
-        "min_age": "3d",
+        "min_age": "3m",
         "actions": {
           "set_priority": {
             "priority": 50
@@ -81,7 +81,7 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
         }
       },
       "cold": {
-        "min_age": "6d",
+        "min_age": "6m",
         "actions": {
           "set_priority": {
             "priority": 0
@@ -89,7 +89,7 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
         }
       },
       "delete": {
-        "min_age": "9d",
+        "min_age": "9m",
         "actions": {
           "delete": {
             "delete_searchable_snapshot": true
@@ -108,20 +108,34 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
 或者使用 api `PUT _index_template/my_template`
 ```json
 {
-  "index_patterns": ["mytest-*"],
+  "index_patterns": ["my-*"],
   "template":{
      "settings": {
       "number_of_shards": 3,
       "number_of_replicas": 0,
       "index.lifecycle.name": "my_policy",    
-      "index.lifecycle.rollover_alias": "mytest" ,    "index.routing.allocation.require.node_type":"hot"
+      "index.lifecycle.rollover_alias": "myindex" ,    "index.routing.allocation.require.node_type":"hot"
     }
   }
 }
 ```
 
+3. 创建索引并设置别名 `PUT /my-index/`
 
-3. 创建测试数据 `POST /myindex/_doc`
+```json
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 0
+  },
+  "aliases": {
+    "myindex": {}
+  }
+}
+```
+
+
+4. 创建测试数据 `POST /myindex/_doc`
 ```json
 {
   "id":"id-001",
