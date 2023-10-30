@@ -122,7 +122,7 @@ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=
 docker exec -it elasticsearch bin/elasticsearch-reset-password -u elastic
 ```
 
-2. 创建索引并指定别名
+2. 创建索引并指定别名  
    PUT /my_index-000001
 ```json
 {
@@ -139,7 +139,7 @@ docker exec -it elasticsearch bin/elasticsearch-reset-password -u elastic
 
 
 
-3. 创建索引策略
+3. 创建索引策略  
 PUT _ilm/policy/my_policy
 ```json
 {
@@ -164,7 +164,7 @@ PUT _ilm/policy/my_policy
  }
 ```
 
-4. 创建索引模板并指定索引策略和索引
+4. 创建索引模板并指定索引策略和索引  
 PUT _index_template/my_template
 ```json
 {
@@ -181,7 +181,7 @@ PUT _index_template/my_template
 }
 ```
 
-注：若为集群模式，可不创建索引模板。步骤为先创建 ILM 策略，然后创建索引时增加如下配置
+注：若为集群模式，可不创建索引模板。步骤为先创建 ILM 策略，然后创建索引时增加如下配置  
 PUT /my_index-000001
 ```json
 {
@@ -196,7 +196,8 @@ PUT /my_index-000001
 ```
 
 
-5. 查看是否使用了策略 GET /my_alias/_settings
+5. 查看是否使用了策略  
+GET /my_alias/_settings
 ```
 {
 	"my_index-000001": {
@@ -218,9 +219,8 @@ PUT /my_index-000001
 ```
 
 
-5. 插入数据
-   
-POST /my_alias/_doc  插入 20 条数据
+5. 插入 20 条数据  
+POST /my_alias/_doc  
 ```json
 {
   "content":"ilm alias insert content"
@@ -228,8 +228,8 @@ POST /my_alias/_doc  插入 20 条数据
 ```
 
 
-6. 查看 segments
-GET /my_alias/_segments 有新的 segment 创建
+6. 查看 segments 是否有新的 segment 创建  
+GET /my_alias/_segments
 ```json
 {
  "segments": {
@@ -263,9 +263,8 @@ GET /my_alias/_segments 有新的 segment 创建
 }				
 ```
 
-7. 查看 index 健康状态 GET /my_alias/_stats/docs?pretty 
-
-20 分钟后 health 为 green 表示正常。
+7. 查看 index 健康状态，20 分钟后 health 为 green 表示正常。    
+GET /my_alias/_stats/docs?pretty 
 ```json
 {
 	"_shards": {
@@ -309,9 +308,8 @@ GET /my_alias/_segments 有新的 segment 创建
 }
 ```
 
-8. 如果不是 green 可查看 number_of_shards 和 number_of_replicas  配置是否正确
+8. 如果不是 green 可查看 number_of_shards 和 number_of_replicas  配置是否正确   
 GET /my_alias/_settings 
-
 ```json
 {
 	"my_index-000001": {
@@ -333,18 +331,6 @@ GET /my_alias/_settings
 遇到的问题和解决方法
 
 发现第一次 rollover 成功了，然后 es 会自动创建一个新的索引 my_index-000002 。第 2 次发生 rollover 的时候，发现失败了，查看  health 为 yellow。原因是第 2 次创建新索引时  number_of_replicas 被设置成了默认值 1 ，设置成 0 才会保证 green。解决这个问题的办法就是提供一个创建索引的模板给 rollover 使用。 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
