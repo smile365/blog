@@ -112,14 +112,31 @@ chatgpt
 
 
 1. 安装 es
+ 使用 docker 运行 es
 ```bash
 docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.10.4
 ```
 
-2. 配置账号密码
+配置账号密码
 ```bash
 docker exec -it elasticsearch bin/elasticsearch-reset-password -u elastic
 ```
+
+2. 创建索引并指定别名
+   PUT /my_index-000001
+```json
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "aliases": {
+    "my_alias": {}
+  }
+}
+```
+
+
 
 
 3. 创建索引策略
@@ -131,12 +148,13 @@ PUT _ilm/policy/my_policy
        "hot": {
          "actions": {
            "rollover": {
-             "max_docs": 20
+             "max_docs": 10,
+			 "max_age": "10m"
            }
          }
        },
        "delete": {
-         "min_age": "20m",
+         "min_age": "15m",
          "actions": {
            "delete" : {}
          }
@@ -146,13 +164,28 @@ PUT _ilm/policy/my_policy
  }
 ```
 
-4. 创建索引时，需要指定该 ILM 策略
-   PUT /my_index-000001
+4. 创建索引模板并指定索引策略和索引
+PUT _index_template/my_template
+```json
+{
+  "index_patterns": ["my_index-*"],
+  "priority": 100,
+  "template":{
+     "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "index.lifecycle.name": "my_policy",
+      "index.lifecycle.rollover_alias": "my_alias"
+    }
+  }
+}
+```
+
+注：若为集群模式，可不创建索引模板。步骤为先创建 ILM 策略，然后创建索引时增加如下配置
+PUT /my_index-000001
 ```json
 {
   "settings": {
-    "number_of_shards": 1,
-    "number_of_replicas": 0,
     "index.lifecycle.name": "my_policy",
     "index.lifecycle.rollover_alias": "my_alias"
   },
@@ -162,7 +195,8 @@ PUT _ilm/policy/my_policy
 }
 ```
 
-5. 查看是否使用了策略 GET /my_alias?pretty
+
+5. 查看是否使用了策略 GET /my_alias/_settings
 ```
 {
 	"my_index-000001": {
@@ -174,7 +208,9 @@ PUT _ilm/policy/my_policy
 				"lifecycle": {
 					"name": "my_policy",
 					"rollover_alias": "my_alias"
-				}
+				},
+				"number_of_shards": "1",
+				"number_of_replicas": "0"
 			}
 		}
 	}
@@ -292,6 +328,22 @@ GET /my_alias/_settings
 	}
 }
 ```
+
+
+遇到的问题和解决方法
+
+发现第一次 rollover 成功了，然后 es 会自动创建一个新的索引 my_index-000002 。第 2 次发生 rollover 的时候，发现失败了，查看  health 为 yellow。原因是第 2 次创建新索引时  number_of_replicas 被设置成了默认值 1 ，设置成 0 才会保证 green。解决这个问题的办法就是提供一个创建索引的模板给 rollover 使用。 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
