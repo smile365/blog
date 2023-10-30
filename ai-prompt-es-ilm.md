@@ -184,17 +184,16 @@ PUT _ilm/policy/my_policy
 
 5. 插入数据
    
-POST /my_index-000001/_doc  插入 20 条数据
+POST /my_alias/_doc  插入 20 条数据
 ```json
 {
-  "id":"id-001",
   "content":"ilm alias insert content"
 }
 ```
 
 
 6. 查看 segments
-GET /my_index-000001/_segments 有新的 segment 创建
+GET /my_alias/_segments 有新的 segment 创建
 ```json
 {
  "segments": {
@@ -228,7 +227,7 @@ GET /my_index-000001/_segments 有新的 segment 创建
 }				
 ```
 
-7. 查看 index 健康状态 GET /my_index-000001/_stats/docs?pretty 
+7. 查看 index 健康状态 GET /my_alias/_stats/docs?pretty 
 
 20 分钟后 health 为 green 表示正常。
 ```json
@@ -273,6 +272,27 @@ GET /my_index-000001/_segments 有新的 segment 创建
 	}
 }
 ```
+
+8. 如果不是 green 可查看 number_of_shards 和 number_of_replicas  配置是否正确
+GET /my_alias/_settings 
+
+```json
+{
+	"my_index-000001": {
+		"settings": {
+			"index": {
+				"number_of_shards": "1",
+				"number_of_replicas": "0",
+				"uuid": "km1MmiUDSHmE75pZnl-jHw",
+				"version": {
+					"created": "8100499"
+				}
+			}
+		}
+	}
+}
+```
+
 
 
 
