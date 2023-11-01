@@ -303,8 +303,9 @@ GET /my_alias/_stats/docs?pretty
 
 
 ## 针对已有索引设置 ILM 策略
-1. 插入数据
-POST /my1_index-000001/_doc
+已有索引无法通过索引模板来配置，直接指定策略名称。
+1. 插入数据，模拟已有索引
+POST /my_index-000001/_doc
 ```json
 {
   "field1": "value1",
@@ -313,7 +314,7 @@ POST /my1_index-000001/_doc
 ```
 
 2. 查看配置  
-GET /my1_index-000001/_settings
+GET /my_index-000001/_settings
 ```json
 {
 	"my1_index-000001": {
@@ -352,48 +353,37 @@ GET /my1_index-000001/_settings
  }
 ```
 
-4. 创建索引模板
-```json
-{
-  "index_patterns": ["my_index-*"],
-  "priority": 100,
-  "template":{
-     "settings": {
-      "number_of_shards": 1,
-      "number_of_replicas": 0,
-      "index.lifecycle.name": "my_policy",
-      "index.lifecycle.rollover_alias": "my_alias"
-    }
-  }
-}
-```
 
-5. 给索引配置别名
- POST /_aliases 
-```json
-{
-  "actions": [
-    {
-      "add": {
-        "index": "my_index-000001",
-        "alias": "my_alias"
-      }
-    }
-  ]
-}
-```
 
-6. 修改索引设置
+4. 修改索引设置
 PUT /my_index-000001/_settings
 
 ```json
 {
-  "index" : {
-    "number_of_replicas" : 0
-  }
+    "index.number_of_replicas" : 0,
+    "index.lifecycle.name": "my_policy"
 }
 ```
 
+
+## ILM 策略是否可以只使用 delete 阶段
+
+1. 创建策略
+
+```json
+{
+   "policy": {
+     "phases": {
+       "delete": {
+         "min_age": "15m",
+         "actions": {
+           "delete" : {}
+         }
+       }
+     }
+   }
+ }
+```
 
 
 
@@ -401,17 +391,38 @@ PUT /my_index-000001/_settings
 
 发现第一次 rollover 成功了，然后 es 会自动创建一个新的索引 my_index-000002 。第 2 次发生 rollover 的时候，发现失败了，查看  health 为 yellow。原因是第 2 次创建新索引时  number_of_replicas 被设置成了默认值 1 ，设置成 0 才会保证 green。解决这个问题的办法就是提供一个创建索引的模板给 rollover 使用。 
 
-## 一问
+## 疑问
 1. 名称是否加后缀 00001
 `index_patterns` 参数用来匹配索引，比如 `my_index-*`中的  * 号代表数字。
 
 2. 对已有的 index 如何使用 ILM。
+参考官网 [ILM for existing indices](https://www.elastic.co/guide/en/elasticsearch/reference/current/ilm-with-existing-indices.html#ilm-existing-indices-reindex)
 
-
-4. 分片数必须为 1？ 分片数、节点数、副本数有什么关系？
+3. 分片数必须为 1？ 分片数、节点数、副本数有什么关系？
 集群所有索引的副本最大值+1 <= 集群节点数量 <= 分片数量。
 
+4. 策略中只有 delete 是否可以？
+可以
+
+5.  达到 ILM 策略的条件了，为什么没触发 actions(rollover/delete)
+默认 10 分钟检查一次。 可通过接口更改 PUT _cluster/settings
+```json
+{
+  "persistent": {
+    "indices.lifecycle.poll_interval": "1m" 
+  }
+}
+```
+
 6. 如果有两个节点是否需要模版
+
+7. 同一个 index 是否可以使用多个 ILM
+通过改 ILM 来实现。
+
+8. 多个 index 是否可以使用同一个 ILM
+参考 [apply-policy-multiple](https://www.elastic.co/guide/en/elasticsearch/reference/current/set-up-lifecycle-policy.html#apply-policy-multiple) 通过接口 PUT mylogs-pre-ilm*/_settings 
+
+8. 策略中 max_age 和 min_age 是什么关系？
 
 
 
