@@ -101,6 +101,7 @@ chatgpt
 	- yellow: 所有主分片均已分配，但至少缺少一个副本。没有数据丢失，因此搜索结果仍将是完整的。但是，您的高可用性在一定程度上受到了损害。如果更多碎片消失，则可能会丢失数据。可以将其yellow视为应该立即进行调查的警告。
 	- red: 至少缺少一个主分片（及其所有副本）。这意味着您缺少数据：搜索将返回部分结果，而对该分片建立索引将返回异常
 2. 引生命周期的 5 个阶段 Hot、Warm、Cold、Frozen、Delete，除 Delete 外其他阶段每开启一个阶段需要占用一个节点，Hot 为必选节点。
+3. es 中节点数、副本数、分片数需满足：副本最大值+1 <= 集群节点数量 <= 分片数量。
 
 
 总结一下就是：如果开启 ILM ，阶段数、集群节点数、分片数、副本数要根据实际情况匹配，否则功能受限。
@@ -122,24 +123,11 @@ docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=
 docker exec -it elasticsearch bin/elasticsearch-reset-password -u elastic
 ```
 
-2. 创建索引并指定别名  
-   PUT /my_index-000001
-```json
-{
-  "settings": {
-    "number_of_shards": 1,
-    "number_of_replicas": 0
-  },
-  "aliases": {
-    "my_alias": {}
-  }
-}
-```
 
 
 
 
-3. 创建索引策略  
+2. 创建索引策略  
 PUT _ilm/policy/my_policy
 ```json
 {
@@ -164,7 +152,7 @@ PUT _ilm/policy/my_policy
  }
 ```
 
-4. 创建索引模板并指定索引策略和索引  
+3. 创建索引模板并指定索引策略和索引  
 PUT _index_template/my_template
 ```json
 {
@@ -195,8 +183,36 @@ PUT /my_index-000001
 }
 ```
 
+4. 创建索引并指定别名  
+> 注： 创建索引之前必须创建策略和模版，否则 ILM 策略不会生效。
+
+   PUT /my_index-000001
+```json
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  },
+  "aliases": {
+    "my_alias": {}
+  }
+}
+```
 
 5. 查看是否使用了策略  
+GET /my_alias/_ilm/explain
+```json
+{
+	"indices": {
+		"my_index-000002": {
+			"managed": true,
+			"policy": "my_policy"
+		}
+	}
+}
+```
+
+若没使用，可查看配置是否正确
 GET /my_alias/_settings
 ```
 {
@@ -217,6 +233,7 @@ GET /my_alias/_settings
 	}
 }
 ```
+
 
 
 5. 插入 20 条数据  
@@ -267,36 +284,10 @@ GET /my_alias/_segments
 GET /my_alias/_stats/docs?pretty 
 ```json
 {
-	"_shards": {
-		"total": 1,
-		"successful": 1,
-		"failed": 0
-	},
-	"_all": {
-		"primaries": {
-			"docs": {
-				"count": 11,
-				"deleted": 0
-			}
-		},
-		"total": {
-			"docs": {
-				"count": 11,
-				"deleted": 0
-			}
-		}
-	},
 	"indices": {
 		"my_index-000001": {
-			"uuid": "UwY-mwKmQKWSRD1wO0Tfyg",
 			"health": "green",
 			"status": "open",
-			"primaries": {
-				"docs": {
-					"count": 11,
-					"deleted": 0
-				}
-			},
 			"total": {
 				"docs": {
 					"count": 11,
@@ -308,29 +299,120 @@ GET /my_alias/_stats/docs?pretty
 }
 ```
 
-8. 如果不是 green 可查看 number_of_shards 和 number_of_replicas  配置是否正确   
-GET /my_alias/_settings 
+8. 如果不是 green 可通过接口 `GET /my_alias/_settings ` 查看 number_of_shards 和 number_of_replicas  配置是否正确。   
+
+
+## 针对已有索引设置 ILM 策略
+1. 插入数据
+POST /my1_index-000001/_doc
 ```json
 {
-	"my_index-000001": {
+  "field1": "value1",
+  "field2": "value2"
+}
+```
+
+2. 查看配置  
+GET /my1_index-000001/_settings
+```json
+{
+	"my1_index-000001": {
 		"settings": {
 			"index": {
 				"number_of_shards": "1",
-				"number_of_replicas": "0",
-				"uuid": "km1MmiUDSHmE75pZnl-jHw",
-				"version": {
-					"created": "8100499"
-				}
+				"provided_name": "my1_index-000001",
+				"number_of_replicas": "1"
 			}
 		}
 	}
 }
 ```
 
+3. 创建 ILM 策略
+```json
+{
+   "policy": {
+     "phases": {
+       "hot": {
+         "actions": {
+           "rollover": {
+             "max_docs": 10,
+			 "max_age": "10m"
+           }
+         }
+       },
+       "delete": {
+         "min_age": "15m",
+         "actions": {
+           "delete" : {}
+         }
+       }
+     }
+   }
+ }
+```
 
-遇到的问题和解决方法
+4. 创建索引模板
+```json
+{
+  "index_patterns": ["my_index-*"],
+  "priority": 100,
+  "template":{
+     "settings": {
+      "number_of_shards": 1,
+      "number_of_replicas": 0,
+      "index.lifecycle.name": "my_policy",
+      "index.lifecycle.rollover_alias": "my_alias"
+    }
+  }
+}
+```
+
+5. 给索引配置别名
+ POST /_aliases 
+```json
+{
+  "actions": [
+    {
+      "add": {
+        "index": "my_index-000001",
+        "alias": "my_alias"
+      }
+    }
+  ]
+}
+```
+
+6. 修改索引设置
+PUT /my_index-000001/_settings
+
+```json
+{
+  "index" : {
+    "number_of_replicas" : 0
+  }
+}
+```
+
+
+
+
+**遇到的问题和解决方法**
 
 发现第一次 rollover 成功了，然后 es 会自动创建一个新的索引 my_index-000002 。第 2 次发生 rollover 的时候，发现失败了，查看  health 为 yellow。原因是第 2 次创建新索引时  number_of_replicas 被设置成了默认值 1 ，设置成 0 才会保证 green。解决这个问题的办法就是提供一个创建索引的模板给 rollover 使用。 
+
+## 一问
+1. 名称是否加后缀 00001
+`index_patterns` 参数用来匹配索引，比如 `my_index-*`中的  * 号代表数字。
+
+2. 对已有的 index 如何使用 ILM。
+
+
+4. 分片数必须为 1？ 分片数、节点数、副本数有什么关系？
+集群所有索引的副本最大值+1 <= 集群节点数量 <= 分片数量。
+
+6. 如果有两个节点是否需要模版
+
 
 
 
