@@ -92,3 +92,11 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 - hdd （机械移动硬盘）也可以淘汰了，和 usb 2.0 相差不大。
 - 2230 固态+硬盘盒是绝配，读取速度和电脑内置固态硬盘不相上下。而且小巧轻便，才两个拇指大小，只有普通移动硬盘的六分之一大小。
 
+## 附：
+
+[usb2.0 到 usb4.0 理论带宽和读写速度](https://www.kingston.com.cn/cn/blog/personal-storage/usb-3-2-gen2x2)
+
+
+
+
+
