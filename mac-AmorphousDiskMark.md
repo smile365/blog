@@ -28,6 +28,18 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 
 提升还是挺明显的，但写入依旧没到 1000 MB/s，难道还是剩余空间不够？
 
+
+## 2022 年 MacBook air（m2）
+![enter description here](https://cdn.sxy21.cn/static/imgs/1699433989471.png)
+
+## 移动固态硬盘
+海康威视 T9 PRO 1024GB
+![enter description here](https://cdn.sxy21.cn/static/imgs/1699435584169.png)
+
+换成苹果原装充电线，变成了读写 36MB 上下。
+![enter description here](https://cdn.sxy21.cn/static/imgs/1699437718691.png)
+
+
 ## usb2.0 的 u 盘
 对比一下我 usb2.0 的 u 盘
 - 读：20 MB/s
@@ -79,6 +91,8 @@ Description:  Mac下的测速软件AmorphousDiskMark初试
 
 
 ## 总结一下
+
+存储介质接口速率、线的速率、电脑接口速率，满足木桶理论，谁最小取谁。
 
 | 存储介质                 | 读 MB/s | 写 MB/s | 备注                               |
 | ------------------------ | ------- | ------- | ---------------------------------- |
