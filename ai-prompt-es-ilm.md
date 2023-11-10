@@ -368,8 +368,8 @@ PUT /my_index-000001/_settings
 
 ## ILM 策略是否可以只使用 delete 阶段
 
-1. 创建策略
-
+1. 创建或更新策略
+PUT /_ilm/policy/my_policy
 ```json
 {
    "policy": {
