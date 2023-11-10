@@ -386,6 +386,22 @@ PUT /my_index-000001/_settings
 ```
 
 
+2. 应用策略
+PUT /my_index/_settings
+```json
+{
+  "index.lifecycle.name": "my_policy"
+}
+```
+
+ **注意：** 
+1. 当策略生效时，满足删除条件后 es 会把整个 index 删除，此时 index 不存在如果其他服务对当前 index 查询会报错 “index_not_found_exception”
+2. 若没开启 auto_create_index，此时对 index 新增数据会报错
+3. 再次创建新的同名 index 不会自动使用当前策略。
+
+
+
+
 
 **遇到的问题和解决方法**
 
