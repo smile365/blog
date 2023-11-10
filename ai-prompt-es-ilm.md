@@ -116,14 +116,17 @@ chatgpt
  使用 docker 运行 es
 ```bash
 docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.10.4
+
 # 关闭 ssl 和账号密码  -e "xpack.security.enabled=false" 
+# 仅关闭 ssl -e "xpack.security.http.ssl.enabled=false" 
 ```
+
+从 Elasticsearch 8.0 开始，默认情况下会启用安全性。 首次启动 Elasticsearch 时，会自动配置 TLS 加密， 为用户生成密码， 并创建一个 Kibana 注册令牌，以便您可以将 Kibana 连接到受保护的集群。
 
 配置账号密码
 ```bash
 docker exec -it elasticsearch bin/elasticsearch-reset-password -u elastic
 ```
-
 
 
 
