@@ -116,6 +116,7 @@ chatgpt
  使用 docker 运行 es
 ```bash
 docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:8.10.4
+# 关闭 ssl 和账号密码  -e "xpack.security.enabled=false" 
 ```
 
 配置账号密码
