@@ -30,10 +30,19 @@ OPTIONS (SET host 'new_host',SET port '15432');
 ```
 
 3. 使用 CREATE USER MAPPING 定义一个本地数据库用户 postgres 与远程数据库用户 foreign_user 的映射。
-```bash
+```sql
 CREATE USER MAPPING FOR local_user
         SERVER foreign_server
         OPTIONS (user 'foreign_user', password 'password');
+
+
+--- 查看创建的用户
+SELECT umid, srvname, usename, umoptions
+FROM pg_user_mappings;
+
+--- 删除用户映射（创建后无法修改，只能删除后重建）
+DROP USER MAPPING FOR local_user SERVER pg_foreign_server;
+
 ```
 4. 使用 IMPORT FOREIGN SCHEMA 导入远程数据库 public 模式下的 users 表到本地数据库的 public 模式下。
 ```bash
