@@ -7,13 +7,14 @@ categories: ["code"]
 description: 无需显示器\鼠标\键盘\网线的情况下，如何自动开启WIFI、SHH、VNC 远程连接。
 ---
 
-Mac OS 的触摸板非常好用，基本告别了鼠标键盘，买了个 树莓派，笔记本用的是 WIFI 网络，手上也没有鼠标、键盘、网线、显示器，如何如何安装系统并自动配置 WIFI 和 SSH 呢。
+## 前言
+Mac OS 的触摸板非常好用，基本告别了鼠标键盘。买了个 树莓派，笔记本用的是 WIFI 网络，手上也没有鼠标、键盘、网线、显示器，如何在没有鼠标键盘的情况下，安装树莓派系统和并自动配置 WIFI 和 SSH 呢。
 
 可以在烧录树莓派系统的时候就指定 WIFI 名称和密码，并打开 SSH 开关，这样就可以通过远程连接树莓派，无需鼠标键盘和显示器，以下是详细教程：
 
 
 #### 安装系统
-Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系统。到官网下载[Raspberry Pi Imager](https://www.raspberrypi.org/software/)这个安装工具并安装到电脑上，然后选择需要烧录的 sd 卡和需要烧录的系统，工具会自动下载 Raspberry Pi OS ，并烧录到 sd 卡上，只需要简单 3 步。
+Raspberry Pi OS（原为Raspbian）是为树莓派基于Debian开发的操作系统。到官网下载[Raspberry Pi Imager](https://www.raspberrypi.org/software/)这个安装工具并安装到电脑上，然后选择需要烧录的 sd 卡和需要烧录的系统，工具会自动下载 Raspberry Pi OS ，并烧录到 sd 卡上，只需要简单 3 步。工具下载 os 比较慢，可以到清华源下载 [Raspberry Pi OS](https://mirrors.tuna.tsinghua.edu.cn/raspberry-pi-os-images/raspios_armhf/images/)
 
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610547292645.png)
 
