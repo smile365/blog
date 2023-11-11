@@ -90,6 +90,11 @@ sudo raspi-config
 ![enter description here](https://gitee.com/smile365/blogimg/raw/master/sxy91/1610549575434.png)
 
 
+#### 使用 root 账号
+
+使用 pi 账户进行登陆命令行，执行命令：【sudo passwd root】设置root用户密码
+
+
 #### 远程桌面连接 树莓派
 
 
