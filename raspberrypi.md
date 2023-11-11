@@ -95,6 +95,15 @@ sudo raspi-config
 使用 pi 账户进行登陆命令行，执行命令：【sudo passwd root】设置root用户密码
 
 
+#### 配置镜像源
+参考[tuna-raspberrypi](https://mirrors.tuna.tsinghua.edu.cn/help/raspberrypi/)
+
+```bash
+cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bookworm main" > /etc/apt/sources.list.d/raspi.list
+```
+
 #### 远程桌面连接 树莓派
 
 
