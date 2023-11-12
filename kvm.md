@@ -32,21 +32,19 @@ USB 接口 <----> 软件模拟出 USB HUB （任意类型的 USB 设备）----
 
 
 ## 解决方案
-- 一个
 
-
-- 至少两个 USB 的设备。一个接受视频数据，显示界面。一个模拟 USB HUB，模拟鼠标键盘、光驱等。
-- HDMI 采集卡
-- 
+- 至少两个 USB 的设备。一个「从属设备」模式，接收视频数据，显示界面。一个「主设备」模式，模拟鼠标键盘，发送鼠标键盘信号。也就是说，至少需要一个支持 OTG 功能的 USB。这种 USB 一般直接接入 CPU，让 CPU 直接发送命令，而不是接入 USB 集线器，当做设备给 CPU 读取。 
+- HDMI 采集卡。
+- 可运行 KVM 软件的硬件。
 
 ## 软件
-- Open IP-KVM
+- [Open IP-KVM](https://github.com/Nihiue/open-ip-kvm)
 - PiKVM 
 
 ## 硬件
-可以运行 armbian 或者 openwrt 的硬件都可以
-- 树莓派/香橙派/R2S
-- 带 USB OTG 的电视盒子
+可以运行 armbian 或者 openwrt ，且带 OTG USB 的硬件都可以
+- 树莓派(zero)/香橙派/R2S
+- 电视盒子
 - 斐讯 n1
 - 随身WiFi
 
