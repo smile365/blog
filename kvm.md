@@ -43,7 +43,7 @@ USB 接口 <----> 软件模拟出 USB HUB （任意类型的 USB 设备）----
 
 ## 硬件
 可以运行 armbian 或者 openwrt ，且带 OTG USB 的硬件都可以
-- 树莓派(zero)/香橙派/R2S
+- 树莓派(zero)/[香橙派](https://www.bilibili.com/read/cv21169636/)/R2S
 - 电视盒子
 - 斐讯 n1
 - 随身WiFi
@@ -56,7 +56,7 @@ USB 接口 <----> 软件模拟出 USB HUB （任意类型的 USB 设备）----
 
 ## 给电脑开机有什么办法
 - 按开机键
-- WOL 信号（需主板支持，大部分主板）
+- [WOL](https://zhouyuqian.com/2020/04/04/Linux-Wake-on-Lan/) 信号（需主板支持，大部分主板）
 - IPMI（需主板支持，仅服务器主板）
 - 改装电脑开机键，使用设备接管电脑电源接口
 - 使用 KVM 方案（主板需含有 OTG 功能的 usb 接口）
