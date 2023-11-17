@@ -156,7 +156,22 @@ trace com.netflix.conductor.core.execution.AsyncSystemTaskExecutor execute
 ```
 
 
+
+
+
 ## 不重启反编译线上的 java 代码并使用
+
+
+```log
+vim /tmp/ParametersUtils.java
+
+java -jar arthas-boot.jar
+sc -d *ParametersUtils | grep classLoaderHash
+mc -c 2eed37f4 /tmp/ParametersUtils.java -d /tmp
+# 输出 /tmp/com/netflix/conductor/core/utils/ParametersUtils.class
+redefine /tmp/com/netflix/conductor/core/utils/ParametersUtils.class
+```
+
 
 参考[Arthas实践--jad/mc/redefine线上热更新一条龙](https://github.com/alibaba/arthas/issues/537)
 
