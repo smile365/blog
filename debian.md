@@ -33,16 +33,25 @@ iso 下载地址：
 
 ## 基础配置
 1. 配置[清华软件源](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
+
+
 ```bash
 # su root
+# 先查看系统版本 
+cat /etc/os-*
+# 本次为 11（bullseye）
 apt install apt-transport-https ca-certificates
 cat /etc/apt/sources.list
 # 安装时选择了 mirrors.tuna.tsinghua.edu.cn 就不用改
 
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
-deb https://security.debian.org/debian-security bullseye-security main contrib non-free
+mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free" >> /etc/apt/sources.list
+echo "deb https://security.debian.org/debian-security bullseye-security main contrib non-free" >> /etc/apt/sources.list
+
+apt update
 
 ```
 
