@@ -58,5 +58,14 @@ git clone http://github.com/jacobbar/fruity-pikvm
 cd fruity-pikvm
 
 # 依赖 python3.10 如果没有则会自动安装
+# 从 github 下载 pikvm 容易被墙，可以设置代理
+# export http_proxy=http://127.0.0.1:8087
 sudo ./install.sh
+# 或者修改 install.sh 的 wget 参数 
+# wget -e "http_proxy=http://192.168.0.161:1080" 
+
 ```
+
+
+## 参考文档
+- [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
