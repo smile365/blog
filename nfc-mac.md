@@ -49,6 +49,34 @@ echo "allow_autoscan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.con
 > 没有以上两项配置，当执行命令 `nfc-list` 会出现错误 “No NFC device found.”。执行命令 `nfc-mfclassic` 会出现错误 “ERROR: Error opening NFC reader”。
 
 
+## 使用 mfcuk 破解全加密卡
+
+如果使用 mfoc 显示如下信息：
+```
+mfoc: ERROR: 
+No sector encrypted with the default key has been found, exiting.
+```
+证明此卡片没有任何默认的 key。可以使用[mfcuk](https://github.com/nfc-tools/mfcuk) 破解出第一个 key。
+
+```bash
+# 安装 mfcuk
+brew install mfcuk
+
+# 破解（看运气，本次 20 分钟）
+mfcuk -C -R 0:A -s 50 -S 100 -v 2
+
+# 上一步得到的 k，如 3c5d7f1e
+mfoc -k 3c5d7f1e -O bak.mfd
+```
+
+mfcuk 参数说明：
+- C: 连接 nfc 读卡器。
+- R: 「需要恢复的扇区编号:密钥类型」。-1 表示所有。如：0:A, 2:B, -1:C。
+- s: 参数 SLEEP_AT_FIELD_OFF 休眠的毫秒数，默认 10。
+- S: 参数 SLEEP_AFTER_FIELD_ON 休眠的毫秒数，默认 50。
+- v: 日志级别（0~3），默认 0。
+
+
 ## 安装 mfdread
 ```bash
 pip install bitstring
@@ -56,6 +84,7 @@ git clone https://github.com/zhovner/mfdread.git
 cd mfdread
 python3 mfdread.py ./dump.mfd
 ```
+
 
 ## 复制
 1. 把小区门禁卡放在 nfc 读卡器上
@@ -75,3 +104,8 @@ nfc-list
 # 查看另一张 id
 nfc-list
 ```
+
+
+## 参考链接
+- [Mac 下 PN532 利用mfoc,mfcuk工具复制门禁卡](https://www.jianshu.com/p/d9ac226df5e4)
+- []()
