@@ -62,8 +62,9 @@ No sector encrypted with the default key has been found, exiting.
 # 安装 mfcuk
 brew install mfcuk
 
-# 破解（看运气，本次 20 分钟）
-mfcuk -C -R 0:A -s 50 -S 100 -v 2
+# 破解（看运气，20 分钟到 1 小时不等）
+fcuk -C -R 0:A -v 2
+# mfcuk -C -R 0:A -s 50 -S 100 -v 2
 
 # 上一步得到的 k，如 3c5d7f1e
 mfoc -k 3c5d7f1e -O bak.mfd
