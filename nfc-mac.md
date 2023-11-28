@@ -21,7 +21,8 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 - 一张 UID 卡：某宝买的空白卡，0 扇区可写入。
 
 ## 用到的软件
-- [mfoc](https://github.com/nfc-tools/mfoc)  ,“离线嵌套”攻击的开源实现，该程序允许从 MIFARE 经典卡恢复身份验证密钥。
+- [mfoc](https://github.com/nfc-tools/mfoc), 可破解半加密卡，用默认密码破解其他加密扇区的密钥。
+- [mfcuk](https://github.com/nfc-tools/mfcuk), 可破解全加密卡，暴利破解一个扇区的密钥，比较慢。
 - [mfdread](https://github.com/zhovner/mfdread)（非必须）, 格式化展示 dump.mfd 文件内容的工具，想看 nfc 卡里面的数据可以用这个工具。
 
 ## 安装 mfoc
