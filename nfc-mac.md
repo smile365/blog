@@ -25,7 +25,7 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 - [mfcuk](https://github.com/nfc-tools/mfcuk), 可破解全加密卡，暴利破解一个扇区的密钥，比较慢。
 - [mfdread](https://github.com/zhovner/mfdread)（非必须）, 格式化展示 dump.mfd 文件内容的工具，想看 nfc 卡里面的数据可以用这个工具。
 
-## 安装 mfoc
+## mfoc 破解半加密卡
 1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)（可对 nfc 标签进行读取和写入）
 ```bash
 brew install mfoc
@@ -87,7 +87,17 @@ mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03)
 > 而 DrSchhottky 的[Fork版本](https://github.com/DrSchottky/mfcuk)通过引入 treshold 选项解决了这一问题。只需要在运行 mfcuk 时指定 -w 选项设置一个 treshold，例如 -w 5，类似的问题就不会再出现。
 
 
-## 安装 mfdread
+## 安装
+```bash
+git clone https://github.com/DrSchottky/mfcuk.git
+cd mfcuk
+brew install automake
+
+```
+
+
+
+## mfdread 查看卡内容
 ```bash
 pip install bitstring
 git clone https://github.com/zhovner/mfdread.git
@@ -96,7 +106,7 @@ python3 mfdread.py ./dump.mfd
 ```
 
 
-## 复制
+## 复制卡片
 1. 把小区门禁卡放在 nfc 读卡器上
 ```bash
 # 获取 UID
