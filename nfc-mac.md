@@ -82,9 +82,9 @@ mfcuk 参数说明：
 ```
 mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03)
 ```
-> 对于一些较新的 Mifare 卡，这些卡在认证失败的时候会直接发送 NACK，导致原有的工具失效并频繁爆出 mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03) 错误，详情可以原仓库 [Issue #28](https://github.com/nfc-tools/mfcuk/issues/28#issuecomment-319766380)。
+> 对于一些较新的 Mifare 卡，这些卡在认证失败的时候会直接发送 NACK，导致原有的工具失效并频繁爆出`mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03)` 错误，详情可以原仓库 [Issue #28](https://github.com/nfc-tools/mfcuk/issues/28#issuecomment-319766380)。
 
-而 DrSchhottky 的[Fork版本](https://github.com/DrSchottky/mfcuk)通过引入 treshold 选项解决了这一问题。只需要在运行 mfcuk 时指定 -w 选项设置一个 treshold，例如 -w 5，类似的问题就不会再出现。
+> 而 DrSchhottky 的[Fork版本](https://github.com/DrSchottky/mfcuk)通过引入 treshold 选项解决了这一问题。只需要在运行 mfcuk 时指定 -w 选项设置一个 treshold，例如 -w 5，类似的问题就不会再出现。
 
 
 ## 安装 mfdread
