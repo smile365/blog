@@ -64,8 +64,8 @@ No sector encrypted with the default key has been found, exiting.
 brew install mfcuk
 
 # 破解（看运气，20 分钟到 1 小时不等）
-mfcuk -C -R 0:A -v 2
-# mfcuk -C -R 0:A -s 50 -S 100 -v 2
+
+mfcuk -C -R 0:A -s 100 -S 200 -v 2
 
 # 上一步得到的 k，如 3c5d7f1e
 mfoc -k 3c5d7f1e -O bak.mfd
@@ -74,9 +74,17 @@ mfoc -k 3c5d7f1e -O bak.mfd
 mfcuk 参数说明：
 - C: 连接 nfc 读卡器。
 - R: 「需要恢复的扇区编号:密钥类型」。-1 表示所有。如：0:A, 2:B, -1:C。
-- s: 参数 SLEEP_AT_FIELD_OFF 休眠的毫秒数，默认 10。
-- S: 参数 SLEEP_AFTER_FIELD_ON 休眠的毫秒数，默认 50。
+- s: 关闭电磁场的时间间隔，默认 10ms。
+- S: 开启电磁场的时间间隔，默认 50ms。
 - v: 日志级别（0~3），默认 0。
+
+出现下面的错误参考[在 Arch Linux 下攻击 Mifare NFC 卡片的简明指南](https://www.ducksoft.site/%E5%AE%89%E5%85%A8/mifare-crack-guide.html) 解决
+```
+mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03)
+```
+> 对于一些较新的 Mifare 卡，这些卡在认证失败的时候会直接发送 NACK，导致原有的工具失效并频繁爆出 mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03) 错误，详情可以原仓库 [Issue #28](https://github.com/nfc-tools/mfcuk/issues/28#issuecomment-319766380)。
+
+而 DrSchhottky 的[Fork版本](https://github.com/DrSchottky/mfcuk)通过引入 treshold 选项解决了这一问题。只需要在运行 mfcuk 时指定 -w 选项设置一个 treshold，例如 -w 5，类似的问题就不会再出现。
 
 
 ## 安装 mfdread
