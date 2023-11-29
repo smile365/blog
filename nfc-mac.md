@@ -111,3 +111,4 @@ nfc-list
 ## 参考链接
 - [Mac 下 PN532 利用mfoc,mfcuk工具复制门禁卡](https://www.jianshu.com/p/d9ac226df5e4)
 - [RFID on PN532](https://ya0guang.com/hack/rfid-on-rpi/)
+- [MIFARE系列 1~7 篇](https://www.cnblogs.com/iplus/p/4467177.html)
