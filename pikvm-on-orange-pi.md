@@ -43,9 +43,10 @@ apt update
 cp /etc/apt/sources.list.d/armbian.list /etc/apt/sources.list.d/armbian.list.bak
 # 替换
 sed -i.bak 's#http://apt.armbian.com#https://mirrors.tuna.tsinghua.edu.cn/armbian#g' /etc/apt/sources.list.d/armbian.list
-# 更新系统
+# 更新源
 apt update
-
+# 升级系统
+apt upgrade 
 ```
 或者运行 armbian-config -> Personal -> Mirrors -> 选择镜像站。
 
