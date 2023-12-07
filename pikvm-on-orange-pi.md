@@ -58,6 +58,11 @@ sudo apt install -y git
 git clone http://github.com/jacobbar/fruity-pikvm
 cd fruity-pikvm
 
+# 查看 Python 版本
+python -V
+
+# 如果不是 3.10 则先卸载，否则会出现 No module named 'kvmd' No module named 'apt_pkg' 等问题。
+apt remove python3
 # 依赖 python3.10 如果没有则会自动安装
 # 从 github 下载 pikvm 容易被墙，可以设置代理
 # export http_proxy=http://127.0.0.1:8087
