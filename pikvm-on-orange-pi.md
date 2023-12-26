@@ -9,7 +9,7 @@ description:
 
 
 ## 所需硬件
-- [Orange Pi Zero3](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html)
+- [Orange Pi Zero3](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html) (本次为 1GB 版本)
 - TF 卡（8G+）& 读卡器
 - 2 条 usb 线，至少有一条是 type-c 接口。
 - 1.5 的十字螺丝刀
