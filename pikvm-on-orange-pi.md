@@ -22,7 +22,7 @@ description:
 
 ## 所需软件
  操作环境为 MacBook air m2，其他软件：
-- [Armbian 系统](https://github.com/leeboby/armbian-images)
+- [Armbian 系统](https://github.com/leeboby/armbian-images),（本次为 ubuntu22.04 server）
 - [pikvm](https://github.com/jacobbar/fruity-pikvm)
 - [etcher](https://etcher.balena.io/)
 
