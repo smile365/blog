@@ -27,7 +27,7 @@ description:
 - [etcher](https://etcher.balena.io/)
 
 ## 给 Zero3 安装系统
-使用 etcher 把下载好的 Armbian 系统烧录到 tf 卡，然后插入 Zero3 上电。
+使用 etcher 把下载好的 Armbian 系统烧录到 tf 卡，然后插入 Zero3，接入网线，上电。输入默认账号密码为 root/1234 之后开始初始化配置系统。
 
 
 ## 安装 pikvm
