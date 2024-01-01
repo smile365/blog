@@ -81,6 +81,11 @@ sudo ./install.sh
 
 ```
 
+## 配置 piKVM
+
+登录[your_pi_ip](https://192.168.0.107/) 账号密码 admin/admin 
+
+
 
 ## 参考文档
 - [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
