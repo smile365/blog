@@ -7,7 +7,12 @@ tags:
 description:  如何上架一个 chrome 插件
 ---
 
-## 注册成为 chrome 开发者
+## 官方文档
+[如何向 Chrome 应用商店提交扩展程序](https://developer.chrome.com/docs/webstore/prepare?hl=zh-cn)
+
+
+
+## 注册成为 chrome 开发者<a class="xsj_anchor xsj_anchor_range xsj_anchor_range_end" name="xsj_1704333884939"></a>
 在页面 [注册为 Chrome 应用商店开发者](https://chrome.google.com/webstore/devconsole/register) 同意协议，交 5 美元注册费。
 
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1704290046289.png)
@@ -55,7 +60,7 @@ description:  如何上架一个 chrome 插件
 ![enter description here](https://cdn.sxy21.cn/static/imgs/1704299829048.png)
 
 ## 权限说明
-[](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab)
+[“activeTab”权限](https://developer.chrome.com/docs/extensions/develop/concepts/activeTab)
 
 
 
