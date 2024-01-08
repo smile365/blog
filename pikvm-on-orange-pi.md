@@ -81,11 +81,45 @@ sudo ./install.sh
 
 ```
 
+
+登录[your_pi_ip](https://192.168.0.107/) 账号密码 admin/admin，查看服务是否正常。
+
+
 ## 配置 piKVM
 
-登录[your_pi_ip](https://192.168.0.107/) 账号密码 admin/admin 
 
+```bash
+apt install -y vim
+```
+
+配置开机键，在 `vim /etc/kvmd/override.yaml` 增加内容
+```yaml
+kvmd:
+    msd:
+        type: disabled
+    atx:  
+        type: gpio
+        power_led: 227
+        hdd_led_pin: 226
+        power_switch_pin: 72
+        reset_switch_pin: 69
+```
+
+```bash
+systemctl restart kvmd kvmd-nginx
+```
+
+查看日志
+```bash
+journalctl -u kvmd -f
+```
 
 
 ## 参考文档
 - [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
+- [gpio](https://docs.pikvm.org/gpio/)
+- [atx_board](https://docs.pikvm.org/atx_board/?h=atx)
+
+
+
+
