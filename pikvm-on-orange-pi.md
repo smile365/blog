@@ -107,6 +107,7 @@ kvmd:
 
 ```bash
 systemctl restart kvmd kvmd-nginx
+journalctl -u kvmd -f
 ```
 
 查看日志
