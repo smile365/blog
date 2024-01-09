@@ -41,7 +41,7 @@ description:  如何上架一个 chrome 插件
 ## 上传到
 
 
-把插件源码压缩成 zip 格式，上传到
+把插件源码压缩成 zip 格式，上传到 [dev-console](https://chrome.google.com/webstore/devconsole/)
 
 
 
