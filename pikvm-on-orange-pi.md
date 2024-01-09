@@ -120,6 +120,10 @@ journalctl -u kvmd -f
 - [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
 - [gpio](https://docs.pikvm.org/gpio/)
 - [atx_board](https://docs.pikvm.org/atx_board/?h=atx)
+- [opi-gpio](https://opi-gpio.readthedocs.io/en/latest/api-documentation.html)
+- [树莓派使用python+继电器控制220V灯泡](https://www.cnblogs.com/ejiyuan/p/15365792.html)
+- [树莓派4B点亮LED]
+- [STM32 引脚分类](https://zhuanlan.zhihu.com/p/67412073)
 
 
 
