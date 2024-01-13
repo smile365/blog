@@ -23,7 +23,7 @@ description:
 ## 所需软件
  操作环境为 MacBook air m2，其他软件：
 - [Armbian 系统](https://github.com/leeboby/armbian-images),（本次为 ubuntu22.04 server）
-- [pikvm](https://github.com/jacobbar/fruity-pikvm)
+- [pikvm](https://github.com/jacobbar/fruity-pikvm)，任何基于 debian 的发行版例如 Ubuntu、Debian、Armbian 等都可以安装。
 - [etcher](https://etcher.balena.io/)
 
 ## 给 Zero3 安装系统
@@ -122,7 +122,7 @@ journalctl -u kvmd -f
 - [atx_board](https://docs.pikvm.org/atx_board/?h=atx)
 - [opi-gpio](https://opi-gpio.readthedocs.io/en/latest/api-documentation.html)
 - [树莓派使用python+继电器控制220V灯泡](https://www.cnblogs.com/ejiyuan/p/15365792.html)
-- [树莓派4B点亮LED]
+- [树莓派4B点亮LED](https://blog.csdn.net/weixin_51245887/article/details/123491767)
 - [STM32 引脚分类](https://zhuanlan.zhihu.com/p/67412073)
 
 
