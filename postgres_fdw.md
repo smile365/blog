@@ -14,17 +14,35 @@ CREATE EXTENSION postgres_fdw;
 ```
 
 2. 然后使用 `CREATE SERVER` 创建一个外部服务器，取名为 foreign_server，连接远程 foreign_db 数据库。
-```bash
+```sql
 CREATE SERVER foreign_server
         FOREIGN DATA WRAPPER postgres_fdw
         OPTIONS (host 'sxy21.com', port '5432', dbname 'foreign_db');
+
+--- 查看创建的服务
+--- SELECT * FROM pg_foreign_server;
+
+--- 修改创建的服务
+ALTER SERVER foreign_server
+OPTIONS (SET host 'new_host');
+OPTIONS (SET host 'new_host',SET port '15432');
+
 ```
 
 3. 使用 CREATE USER MAPPING 定义一个本地数据库用户 postgres 与远程数据库用户 foreign_user 的映射。
-```bash
+```sql
 CREATE USER MAPPING FOR local_user
         SERVER foreign_server
         OPTIONS (user 'foreign_user', password 'password');
+
+
+--- 查看创建的用户
+SELECT umid, srvname, usename, umoptions
+FROM pg_user_mappings;
+
+--- 删除用户映射（创建后无法修改，只能删除后重建）
+DROP USER MAPPING FOR local_user SERVER pg_foreign_server;
+
 ```
 4. 使用 IMPORT FOREIGN SCHEMA 导入远程数据库 public 模式下的 users 表到本地数据库的 public 模式下。
 ```bash

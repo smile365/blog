@@ -21,10 +21,11 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 - 一张 UID 卡：某宝买的空白卡，0 扇区可写入。
 
 ## 用到的软件
-- [mfoc](https://github.com/nfc-tools/mfoc)  ,“离线嵌套”攻击的开源实现，该程序允许从 MIFARE 经典卡恢复身份验证密钥。
+- [mfoc](https://github.com/nfc-tools/mfoc), 可破解半加密卡，用默认密码破解其他加密扇区的密钥。
+- [mfcuk](https://github.com/nfc-tools/mfcuk), 可破解全加密卡，暴利破解一个扇区的密钥，比较慢。
 - [mfdread](https://github.com/zhovner/mfdread)（非必须）, 格式化展示 dump.mfd 文件内容的工具，想看 nfc 卡里面的数据可以用这个工具。
 
-## 安装 mfoc
+## mfoc 破解半加密卡
 1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)（可对 nfc 标签进行读取和写入）
 ```bash
 brew install mfoc
@@ -49,7 +50,54 @@ echo "allow_autoscan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.con
 > 没有以上两项配置，当执行命令 `nfc-list` 会出现错误 “No NFC device found.”。执行命令 `nfc-mfclassic` 会出现错误 “ERROR: Error opening NFC reader”。
 
 
-## 安装 mfdread
+## 使用 mfcuk 破解全加密卡
+
+如果使用 mfoc 显示如下信息：
+```
+mfoc: ERROR: 
+No sector encrypted with the default key has been found, exiting.
+```
+证明此卡片没有任何默认的 key。可以使用[mfcuk](https://github.com/nfc-tools/mfcuk) 破解出第一个 key。
+
+```bash
+# 安装 mfcuk
+brew install mfcuk
+
+# 破解（看运气，20 分钟到 1 小时不等）
+
+mfcuk -C -R 0:A -s 100 -S 200 -v 2
+
+# 上一步得到的 k，如 3c5d7f1e
+mfoc -k 3c5d7f1e -O bak.mfd
+```
+
+mfcuk 参数说明：
+- C: 连接 nfc 读卡器。
+- R: 「需要恢复的扇区编号:密钥类型」。-1 表示所有。如：0:A, 2:B, -1:C。
+- s: 关闭电磁场的时间间隔，默认 10ms。
+- S: 开启电磁场的时间间隔，默认 50ms。
+- v: 日志级别（0~3），默认 0。
+
+出现下面的错误参考[在 Arch Linux 下攻击 Mifare NFC 卡片的简明指南](https://www.ducksoft.site/%E5%AE%89%E5%85%A8/mifare-crack-guide.html) 解决
+```
+mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03)
+```
+> 对于一些较新的 Mifare 卡，这些卡在认证失败的时候会直接发送 NACK，导致原有的工具失效并频繁爆出`mfcuk: ERROR: mfcuk_key_recovery_block() (error code=0x03)` 错误，详情可以原仓库 [Issue #28](https://github.com/nfc-tools/mfcuk/issues/28#issuecomment-319766380)。
+
+> 而 DrSchhottky 的[Fork版本](https://github.com/DrSchottky/mfcuk)通过引入 treshold 选项解决了这一问题。只需要在运行 mfcuk 时指定 -w 选项设置一个 treshold，例如 -w 5，类似的问题就不会再出现。
+
+
+## 安装
+```bash
+git clone https://github.com/DrSchottky/mfcuk.git
+cd mfcuk
+brew install automake
+
+```
+
+
+
+## mfdread 查看卡内容
 ```bash
 pip install bitstring
 git clone https://github.com/zhovner/mfdread.git
@@ -57,7 +105,8 @@ cd mfdread
 python3 mfdread.py ./dump.mfd
 ```
 
-## 复制
+
+## 复制卡片
 1. 把小区门禁卡放在 nfc 读卡器上
 ```bash
 # 获取 UID
@@ -75,3 +124,9 @@ nfc-list
 # 查看另一张 id
 nfc-list
 ```
+
+
+## 参考链接
+- [Mac 下 PN532 利用mfoc,mfcuk工具复制门禁卡](https://www.jianshu.com/p/d9ac226df5e4)
+- [RFID on PN532](https://ya0guang.com/hack/rfid-on-rpi/)
+- [MIFARE系列 1~7 篇](https://www.cnblogs.com/iplus/p/4467177.html)

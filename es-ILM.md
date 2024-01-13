@@ -56,15 +56,96 @@ docker compose exec -it elasticsearch bin/elasticsearch-reset-password -u elasti
 1. 创建索引策略
 参考 [创建索引策略](https://juejin.cn/post/7170097149491806222#heading-3) ，使用 kibana 创建索引策略。
 
+也可以使用 api 创建索引策略 `PUT _ilm/policy/my_policy`
+```json
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "min_age": "0ms",
+        "actions": {
+          "rollover": {
+            "max_age": "1m"
+          },
+          "set_priority": {
+            "priority": 100
+          }
+        }
+      },
+      "warm": {
+        "min_age": "3m",
+        "actions": {
+          "set_priority": {
+            "priority": 50
+          }
+        }
+      },
+      "cold": {
+        "min_age": "6m",
+        "actions": {
+          "set_priority": {
+            "priority": 0
+          }
+        }
+      },
+      "delete": {
+        "min_age": "9m",
+        "actions": {
+          "delete": {
+            "delete_searchable_snapshot": true
+          }
+        }
+      }
+    }
+  }
+}
+```
 
 
 2. 创建索引模版
 
+![](https://cdn.sxy21.cn/static/imgs/1698221835453.png)
+或者使用 api `PUT _index_template/my_template`
+```json
+{
+  "index_patterns": ["my-*"],
+  "template":{
+     "settings": {
+      "number_of_shards": 3,
+      "number_of_replicas": 0,
+      "index.lifecycle.name": "my_policy",    
+      "index.lifecycle.rollover_alias": "myindex" ,    "index.routing.allocation.require.node_type":"hot"
+    }
+  }
+}
+```
+
+3. 创建索引并设置别名 `PUT /my-index/`
+
+```json
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 0
+  },
+  "aliases": {
+    "myindex": {}
+  }
+}
+```
 
 
-
+4. 创建测试数据 `POST /myindex/_doc`
+```json
+{
+  "id":"id-001",
+  "content":"ilm alias insert content"
+}
+```
 
 
 
 ## 参考
 - [Elasticsearch索引生命周期管理](https://juejin.cn/post/7170097149491806222)
+- [Elasticsearch集群健康状态显示为yellow排查](https://www.cnblogs.com/charles101/p/14488609.html)
+- 
