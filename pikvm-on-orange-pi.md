@@ -99,21 +99,19 @@ kvmd:
         type: disabled
     atx:  
         type: gpio
-        power_led: 227
+        power_led_pin: 227
         hdd_led_pin: 226
         power_switch_pin: 72
         reset_switch_pin: 69
 ```
 
+重启并查看日志
 ```bash
 systemctl restart kvmd kvmd-nginx
 journalctl -u kvmd -f
 ```
 
-查看日志
-```bash
-journalctl -u kvmd -f
-```
+如果 override.yaml 配置错误，[pikvm](https://192.168.0.107/) 网页端会出现 500 错误，网页打不开。
 
 
 ## 参考文档
