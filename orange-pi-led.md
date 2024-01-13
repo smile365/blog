@@ -132,3 +132,16 @@ wiringpi.digitalWrite(LED_PIN, GPIO.LOW)
 基于 [fruity-pikvm](https://github.com/jacobbar/fruity-pikvm?tab=readme-ov-file) 项目实现，看文档作者在 OrangePi Zero 2 的 ubuntu_jammy 系统上完成了测试，保险起见把系统镜像改成 Orangepizero3_1.0.0_ubuntu_jammy_server_linux5.4.125 。
 
 
+```bash
+apt install -y vim
+
+```
+
+
+
+
+
+
+## 参考文献
+- [基于PiKVM制作M1 Mac Mini KVM](https://blog.cyyself.name/pikvm-m1-mac-mini/)
+- 
