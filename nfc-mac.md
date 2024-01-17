@@ -40,12 +40,14 @@ nfc-list -v
 2. 修改配置文件
 
 ```bash
-# 查找配置文件
+# 查找配置文件  一般在前两行 查看 libnfc.config 开头的配置。
 LIBNFC_LOG_LEVEL=3 nfc-list
 ls /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/
 # 没有的话创建，有就修改
-echo "allow_intrusive_scan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
-echo "allow_autoscan=yes" > /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
+echo "allow_intrusive_scan=yes" >> /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
+echo "allow_autoscan=yes" >> /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
+# 查看配置
+cat /opt/homebrew/Cellar/libnfc/1.8.0/etc/nfc/libnfc.conf
 ```
 > 没有以上两项配置，当执行命令 `nfc-list` 会出现错误 “No NFC device found.”。执行命令 `nfc-mfclassic` 会出现错误 “ERROR: Error opening NFC reader”。
 
