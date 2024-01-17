@@ -132,3 +132,9 @@ nfc-list
 - [Mac 下 PN532 利用mfoc,mfcuk工具复制门禁卡](https://www.jianshu.com/p/d9ac226df5e4)
 - [RFID on PN532](https://ya0guang.com/hack/rfid-on-rpi/)
 - [MIFARE系列 1~7 篇](https://www.cnblogs.com/iplus/p/4467177.html)
+- [在 Arch Linux 下攻击 Mifare NFC 卡片的简明指南](https://www.ducksoft.site/%E5%AE%89%E5%85%A8/mifare-crack-guide.html)
+- [由门禁卡来谈谈IC/ID复制卡的原理和知识](https://zhuanlan.zhihu.com/p/654587508)
+
+
+
+
