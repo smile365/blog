@@ -35,6 +35,8 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 
 目前几乎能看到的破解教程是针对 SAK=08 的 m1 卡，这种卡片无论是半加密卡还是全加密卡已经不安全，99.99% 可以破解。
 
+像下面的卡就无法破解：
+![enter description here](https://cdn.sxy21.cn/static/imgs/1705498549456.png)
 
 ## mfoc 破解半加密卡
 1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)（可对 nfc 标签进行读取和写入）
