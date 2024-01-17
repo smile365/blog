@@ -14,6 +14,8 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 - FUID 卡：不可擦写防屏蔽卡，此卡的特点 0 扇区只能写入一次，写入一次变成 M1 卡，CUID 复制没用的情况下使用，可以绕过防火墙。
 - UFUID 卡：高级复制卡，提供封卡操作，不封卡就是 UID 卡，封卡后就变为 M1 卡。
 
+
+
 ## 用到的硬件
 - 环境： macbook air 2022（m2）
 - nfc 读卡器： PN532
@@ -21,9 +23,18 @@ description: 在苹果电脑的 osx 系统下实现模拟加密门禁卡的教�
 - 一张 UID 卡：某宝买的空白卡，0 扇区可写入。
 
 ## 用到的软件
+- [MIFARE Classic Tool](https://github.com/ikarus23/MifareClassicTool/blob/master/README.zh-CN.md), 用于对 MIFARE Classic RFID 标签进行读取、写入、分析等操作的Android NFC应用程序。
 - [mfoc](https://github.com/nfc-tools/mfoc), 可破解半加密卡，用默认密码破解其他加密扇区的密钥。
 - [mfcuk](https://github.com/nfc-tools/mfcuk), 可破解全加密卡，暴利破解一个扇区的密钥，比较慢。
 - [mfdread](https://github.com/zhovner/mfdread)（非必须）, 格式化展示 dump.mfd 文件内容的工具，想看 nfc 卡里面的数据可以用这个工具。
+
+
+## 检测是否可破解
+安卓手机可以使用 [MIFARE Classic Tool](https://github.com/ikarus23/MifareClassicTool/blob/master/README.zh-CN.md)  其他平台使用命令 `nfc-list` 查看卡片的信息，到网站 [ISO/IEC 14443](https://nfc-tools.github.io/resources/standards/iso14443A/) 对比 ATQA、SAK、ATS 三个值是否在列表中，如果不在大概率不能破解。
+![enter description here](https://cdn.sxy21.cn/static/imgs/1705498285660.png)
+
+目前几乎能看到的破解教程是针对 SAK=08 的 m1 卡，这种卡片无论是半加密卡还是全加密卡已经不安全，99.99% 可以破解。
+
 
 ## mfoc 破解半加密卡
 1. 安装 mfoc 会自动安装[libnfc](https://github.com/nfc-tools/libnfc)（可对 nfc 标签进行读取和写入）
@@ -134,6 +145,7 @@ nfc-list
 - [MIFARE系列 1~7 篇](https://www.cnblogs.com/iplus/p/4467177.html)
 - [在 Arch Linux 下攻击 Mifare NFC 卡片的简明指南](https://www.ducksoft.site/%E5%AE%89%E5%85%A8/mifare-crack-guide.html)
 - [由门禁卡来谈谈IC/ID复制卡的原理和知识](https://zhuanlan.zhihu.com/p/654587508)
+- [SAK和ATQA](https://nfc-tools.github.io/resources/standards/iso14443A/)
 
 
 
