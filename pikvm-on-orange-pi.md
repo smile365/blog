@@ -65,10 +65,10 @@ apt upgrade
 
 ```
 # export http_proxy=http://127.0.0.1:8087
-sudo ./install.sh
 # 或者修改 install.sh 的 wget 参数 
 # wget -e "http_proxy=http://192.168.0.161:1080" 
-或者修改 /etc/hosts
+
+#或者修改 /etc/hosts
 
 140.82.113.4 github.com
 199.232.69.194 github.global.ssl.fastly.net
@@ -124,12 +124,13 @@ journalctl -u kvmd -f
 
 
 ## 其他镜像尝试
-1. 官方镜像[Orangepizero3_1.0.2_ubuntu_jammy_server_linux6.1.31](https://drive.google.com/drive/folders/1CJYrhHyyje9dEY4-t7JhcZBJfdAFBJro)
+1. 官方镜像[ubuntu_22.04_server_kernel_6.1.31](https://drive.google.com/drive/folders/1CJYrhHyyje9dEY4-t7JhcZBJfdAFBJro)
 安装 pi-kvm 成功，但无法运行，报错：orangepizero3 kvmd[2678]: PermissionError: [Errno 13] Permission denied。
 
-2. [Armbian-ubuntu22.04 server](https://github.com/leeboby/armbian-images)
-可以正常运行，单 reboot 之后无法进入系统。
+2. [Armbian-ubuntu22.04-server](https://github.com/leeboby/armbian-images)
+可以正常运行，但 reboot 之后无法进入系统，显示器无任何内容输出。
 
+3. [Armbian-debian12-server](https://github.com/leeboby/armbian-images) 无法启动 pi-kvm 系统，报错： ModuleNotFoundError: No module named 'kvmd'。
 
 ## 参考文档
 - [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
