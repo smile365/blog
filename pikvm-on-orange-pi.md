@@ -123,6 +123,14 @@ journalctl -u kvmd -f
 如果 override.yaml 配置错误，[pikvm](https://192.168.0.107/) 网页端会出现 500 错误，网页打不开。
 
 
+## 其他镜像尝试
+1. 官方镜像[Orangepizero3_1.0.2_ubuntu_jammy_server_linux6.1.31](https://drive.google.com/drive/folders/1CJYrhHyyje9dEY4-t7JhcZBJfdAFBJro)
+安装 pi-kvm 成功，但无法运行，报错：orangepizero3 kvmd[2678]: PermissionError: [Errno 13] Permission denied。
+
+2. [Armbian-ubuntu22.04 server](https://github.com/leeboby/armbian-images)
+可以正常运行，单 reboot 之后无法进入系统。
+
+
 ## 参考文档
 - [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
 - [gpio](https://docs.pikvm.org/gpio/)
