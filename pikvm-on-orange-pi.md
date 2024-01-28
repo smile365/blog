@@ -130,9 +130,9 @@ journalctl -u kvmd -f
 2. [Armbian-ubuntu22.04-server](https://github.com/leeboby/armbian-images)
 可以正常运行，但 reboot 之后无法进入系统，显示器无任何内容输出。
 
-3. [Armbian-debian12-server](https://github.com/leeboby/armbian-images) 无法启动 pi-kvm 系统，报错： ModuleNotFoundError: No module named 'kvmd'。
+3. [Armbian-debian12-server](https://github.com/leeboby/armbian-images) 无法启动 pi-kvm 报错： ModuleNotFoundError: No module named 'kvmd'。
 
-4. [Armbian-ubuntu22.04-xfce](https://github.com/leeboby/armbian-images)
+4. [Armbian-ubuntu22.04-xfce](https://github.com/leeboby/armbian-images)，无法进入系统，屏幕无任何输出。
 
 
 
