@@ -9,7 +9,7 @@ description:
 
 
 ## 所需硬件
-- [Orange Pi Zero3](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html) (本次为 1GB 版本)
+- [Orange Pi Zero3](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html) (本次为 1GB 版本)
 - TF 卡（8G+）& 读卡器
 - 2 条 usb 线，至少有一条是 type-c 接口。
 - 1.5 的十字螺丝刀
@@ -131,6 +131,11 @@ journalctl -u kvmd -f
 可以正常运行，但 reboot 之后无法进入系统，显示器无任何内容输出。
 
 3. [Armbian-debian12-server](https://github.com/leeboby/armbian-images) 无法启动 pi-kvm 系统，报错： ModuleNotFoundError: No module named 'kvmd'。
+
+4. [Armbian-ubuntu22.04-xfce](https://github.com/leeboby/armbian-images)
+
+
+
 
 ## 参考文档
 - [硬件级远程控制PiKVM](https://www.bilibili.com/video/BV1VN4y1971c)
