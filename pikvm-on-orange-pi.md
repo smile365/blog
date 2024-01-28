@@ -41,7 +41,7 @@ armbian-config
 apt update 
 ```
 
-把软件源改成 [tsinghua](https://mirrors.tuna.tsinghua.edu.cn/help/armbian/) 
+1. 把软件源改成 [tsinghua](https://mirrors.tuna.tsinghua.edu.cn/help/armbian/) 
 
 ```bash
 # 备份
@@ -58,26 +58,35 @@ apt upgrade
 然后参考 [fruity-pikvm](https://github.com/jacobbar/fruity-pikvm) 安装 OrangePi 版本的 pikvm
 
 
+
+2. 设置代理
+
+从 github 下载 pikvm 容易被墙，可以设置代理
+
+```
+# export http_proxy=http://127.0.0.1:8087
+sudo ./install.sh
+# 或者修改 install.sh 的 wget 参数 
+# wget -e "http_proxy=http://192.168.0.161:1080" 
+或者修改 /etc/hosts
+
+140.82.113.4 github.com
+199.232.69.194 github.global.ssl.fastly.net
+185.199.108.133 raw.githubusercontent.com
+185.199.109.133 raw.githubusercontent.com
+185.199.110.133 raw.githubusercontent.com
+185.199.111.133 raw.githubusercontent.com
+
+```
+
+3. 安装 fruity-pikvm
 ```bash
 sudo apt install -y git
 git clone http://github.com/jacobbar/fruity-pikvm
 cd fruity-pikvm
 
-# 查看 Python 版本
-python -V
-
-# 如果不是 3.10 则先卸载，否则会出现 No module named 'kvmd' No module named 'apt_pkg' 等问题。
-apt remove python3-apt
-apt autoremove
-apt autoclean
-
-
 # 依赖 python3.10 如果没有则会自动安装
-# 从 github 下载 pikvm 容易被墙，可以设置代理
-# export http_proxy=http://127.0.0.1:8087
 sudo ./install.sh
-# 或者修改 install.sh 的 wget 参数 
-# wget -e "http_proxy=http://192.168.0.161:1080" 
 
 ```
 
@@ -122,7 +131,7 @@ journalctl -u kvmd -f
 - [树莓派使用python+继电器控制220V灯泡](https://www.cnblogs.com/ejiyuan/p/15365792.html)
 - [树莓派4B点亮LED](https://blog.csdn.net/weixin_51245887/article/details/123491767)
 - [STM32 引脚分类](https://zhuanlan.zhihu.com/p/67412073)
-
-
+- [Github国内访问超时解决办法](https://blog.csdn.net/unstorm/article/details/121532868)
+- [github_连接超时问题time out(host修改流程)](https://blog.51cto.com/u_15672212/5382054)
 
 
