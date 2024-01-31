@@ -187,7 +187,7 @@ PUT /my_index-000001
 }
 ```
 
-4. 创建索引并指定别名  
+4. [创建索引](https://www.elastic.co/guide/en/elasticsearch/reference/7.17/indices-create-index.html#indices-create-api-request-body)并指定别名  
 > 注： 创建索引之前必须创建策略和模版，否则 ILM 策略不会生效。
 
    PUT /my_index-000001
