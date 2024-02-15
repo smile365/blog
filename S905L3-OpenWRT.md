@@ -49,5 +49,6 @@ description:  电视盒子刷 OpenWRT、U 盘启动。
 - [中兴B860AV3.2-M_S905L3_当贝桌面线刷固件包](https://blog.csdn.net/fatiaozhang9527/article/details/131254885)
 - [Openwrt 作为旁路网关](https://sspai.com/post/68511)
 - [机顶盒刷armbian全程详解-b站](https://www.bilibili.com/video/BV19h411F7jp)
+- [S905L3_线刷固件包](https://www.znds.com/tv-1240673-1-1.html)
 
 
