@@ -159,7 +159,7 @@ systemctl start sshd
 ## 备份和快照
 
 ## 使用合法的 SSL 证书
-点击 PVE -> 系统 -> 凭证， 上传自定义凭证或者使用 ACME 账户创建凭证。
+点击 PVE -> 系统 -> 凭证， 上传自定义凭证或者使用 ACME 账户创建凭证。 腾讯购买的域名可下载[腾讯云 SSL 证书](https://console.cloud.tencent.com/ssl) 把 .key 和 .pem 文件分别上传到 PVE 的私钥和凭证链处。
 
 
 ## 增加新的硬盘
