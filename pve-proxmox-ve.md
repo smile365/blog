@@ -190,6 +190,28 @@ pve secureboot: secure boot could not be determined mode 0
 ## 挂载 usb 设备给虚拟机
 在宿主机插入 usb 设备，点击需要挂载的虚拟机（通过模板创建的虚拟机无法挂载），依次点击 硬件 -> 添加 -> 添加 usb 设备 -> 使用 usb 设备供应商/ID。
 
+## 动态获取 IP 地址
+1. 备份配置
+```bash
+cp /etc/network/interfaces /etc/network/interfaces.bak
+
+```
+3. 修改配置文件 vi /etc/network/interfaces
+```bash
+auto lo
+iface lo inet loopback
+
+iface enp6s0 inet manual
+
+auto vmbr0
+#iface vmbr0 inet static
+iface vmbr0 inet dhcp
+	#address 192.168.0.167/24
+	#gateway 192.168.0.1
+	bridge-ports enp6s0
+	bridge-stp off
+	bridge-fd 0
+```
 
 ## 参考文档 
 - [Windows 11 简体中文版下载](https://sysin.org/blog/windows-11/#%E2%AC%87%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80)
