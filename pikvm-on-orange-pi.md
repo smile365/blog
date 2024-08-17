@@ -9,7 +9,7 @@ description:
 
 
 ## 所需硬件
-- [Orange Pi Zero3](http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html) (本次为 1GB 版本)
+- [Orange Pi Zero3](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/service-and-support/Orange-Pi-Zero-3.html) (本次为 1GB 版本)
 - TF 卡（8G+）& 读卡器
 - 2 条 usb 线，至少有一条是 type-c 接口。
 - 1.5 的十字螺丝刀
@@ -23,7 +23,7 @@ description:
 ## 所需软件
  操作环境为 MacBook air m2，其他软件：
 - [Armbian 系统](https://github.com/leeboby/armbian-images),（本次为 ubuntu22.04 server）
-- [pikvm](https://github.com/jacobbar/fruity-pikvm)
+- [pikvm](https://github.com/jacobbar/fruity-pikvm)，任何基于 debian 的发行版例如 Ubuntu、Debian、Armbian 等都可以安装。
 - [etcher](https://etcher.balena.io/)
 
 ## 给 Zero3 安装系统
@@ -41,7 +41,7 @@ armbian-config
 apt update 
 ```
 
-把软件源改成 [tsinghua](https://mirrors.tuna.tsinghua.edu.cn/help/armbian/) 
+1. 把软件源改成 [tsinghua](https://mirrors.tuna.tsinghua.edu.cn/help/armbian/) 
 
 ```bash
 # 备份
@@ -58,26 +58,35 @@ apt upgrade
 然后参考 [fruity-pikvm](https://github.com/jacobbar/fruity-pikvm) 安装 OrangePi 版本的 pikvm
 
 
+
+2. 设置代理
+
+从 github 下载 pikvm 容易被墙，可以设置代理
+
+```
+# export http_proxy=http://127.0.0.1:8087
+# 或者修改 install.sh 的 wget 参数 
+# wget -e "http_proxy=http://192.168.0.161:1080" 
+
+#或者修改 /etc/hosts
+
+140.82.113.4 github.com
+199.232.69.194 github.global.ssl.fastly.net
+185.199.108.133 raw.githubusercontent.com
+185.199.109.133 raw.githubusercontent.com
+185.199.110.133 raw.githubusercontent.com
+185.199.111.133 raw.githubusercontent.com
+
+```
+
+3. 安装 fruity-pikvm
 ```bash
 sudo apt install -y git
 git clone http://github.com/jacobbar/fruity-pikvm
 cd fruity-pikvm
 
-# 查看 Python 版本
-python -V
-
-# 如果不是 3.10 则先卸载，否则会出现 No module named 'kvmd' No module named 'apt_pkg' 等问题。
-apt remove python3-apt
-apt autoremove
-apt autoclean
-
-
 # 依赖 python3.10 如果没有则会自动安装
-# 从 github 下载 pikvm 容易被墙，可以设置代理
-# export http_proxy=http://127.0.0.1:8087
 sudo ./install.sh
-# 或者修改 install.sh 的 wget 参数 
-# wget -e "http_proxy=http://192.168.0.161:1080" 
 
 ```
 
@@ -99,21 +108,33 @@ kvmd:
         type: disabled
     atx:  
         type: gpio
-        power_led: 227
+        power_led_pin: 227
         hdd_led_pin: 226
         power_switch_pin: 72
         reset_switch_pin: 69
 ```
 
+重启并查看日志
 ```bash
 systemctl restart kvmd kvmd-nginx
 journalctl -u kvmd -f
 ```
 
-查看日志
-```bash
-journalctl -u kvmd -f
-```
+如果 override.yaml 配置错误，[pikvm](https://192.168.0.107/) 网页端会出现 500 错误，网页打不开。
+
+
+## 其他镜像尝试
+1. 官方镜像[ubuntu_22.04_server_kernel_6.1.31](https://drive.google.com/drive/folders/1CJYrhHyyje9dEY4-t7JhcZBJfdAFBJro)
+安装 pi-kvm 成功，但无法运行，报错：orangepizero3 kvmd[2678]: PermissionError: [Errno 13] Permission denied。
+
+2. [Armbian-ubuntu22.04-server](https://github.com/leeboby/armbian-images)
+可以正常运行，但 reboot 之后无法进入系统，显示器无任何内容输出。
+
+3. [Armbian-debian12-server](https://github.com/leeboby/armbian-images) 无法启动 pi-kvm 报错： ModuleNotFoundError: No module named 'kvmd'。
+
+4. [Armbian-ubuntu22.04-xfce](https://github.com/leeboby/armbian-images)，无法进入系统，屏幕无任何输出。
+
+
 
 
 ## 参考文档
@@ -122,9 +143,9 @@ journalctl -u kvmd -f
 - [atx_board](https://docs.pikvm.org/atx_board/?h=atx)
 - [opi-gpio](https://opi-gpio.readthedocs.io/en/latest/api-documentation.html)
 - [树莓派使用python+继电器控制220V灯泡](https://www.cnblogs.com/ejiyuan/p/15365792.html)
-- [树莓派4B点亮LED]
+- [树莓派4B点亮LED](https://blog.csdn.net/weixin_51245887/article/details/123491767)
 - [STM32 引脚分类](https://zhuanlan.zhihu.com/p/67412073)
-
-
+- [Github国内访问超时解决办法](https://blog.csdn.net/unstorm/article/details/121532868)
+- [github_连接超时问题time out(host修改流程)](https://blog.51cto.com/u_15672212/5382054)
 
 
