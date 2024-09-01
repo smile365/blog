@@ -53,6 +53,7 @@ Publish(){
 	cd .. && hugo
 	echo $BLOG/public
 	ls $BLOG/public
+	cp -r public/* /usr/share/www/myblog/public/
 }
 
 initMyBlog
