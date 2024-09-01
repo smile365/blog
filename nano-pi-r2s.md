@@ -1,5 +1,5 @@
 ---
-title:  nano-pi-r2s
+title: "nano-pi-r2s 安装 wireguard 和 ss"
 heading: 
 date: 2022-09-14T07:48:57.809Z
 categories: ["code"]

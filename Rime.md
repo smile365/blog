@@ -1,5 +1,5 @@
 ---
-title: Rime
+title: "在 mac 上使用 Rime 开源输入法"
 heading:  
 date: 2024-01-04T11:47:01.394Z
 categories: ["code"]

@@ -1,6 +1,6 @@
 ---
-title: modem-H-PON01
-heading: 光猫改桥接模式当做交换机使用
+title: 光猫改桥接模式当做交换机使用
+heading: 
 date: 2024-02-22T06:29:27.781Z
 categories: ["code"]
 tags: 

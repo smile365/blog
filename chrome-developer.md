@@ -1,5 +1,5 @@
 ---
-title: chrome-developer
+title: "如何成为 chrome 浏览器插件开发者"
 heading:  
 date: 2024-01-03T13:46:36.930Z
 categories: ["code"]
