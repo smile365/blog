@@ -1,5 +1,5 @@
 ---
-title:  websocket
+title: "java 实现 websocket 鉴权、安全、心跳检测"
 heading:  
 date: 2023-02-09T01:32:46.548Z
 tags: 

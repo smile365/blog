@@ -1,5 +1,5 @@
 ---
-title:  conductor fork and join
+title:  "conductor DAG 的完整支持改造(7)-fork&join"
 heading:  
 date: 2023-03-17T08:13:23.993Z
 categories: ["code"]
@@ -8,6 +8,7 @@ description:  conductor Fork and join
 ---
 
 
+## conductor 支持 fork and join 工作流
 
 假设执行问 sms 通知后，并行执行 email 通知和 http 通知
 

@@ -1,5 +1,5 @@
 ---
-title: python3
+title: "使用 pyenv 安装 python2"
 heading:  
 date: 2023-02-21T05:55:25.875Z
 categories: ["code"]

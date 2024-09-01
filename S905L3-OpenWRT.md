@@ -1,6 +1,6 @@
 ---
 title: S905L3-OpenWRT
-heading:  
+heading: "电视盒子刷机成 OpenWRT"
 date: 2024-02-14T10:41:57.151Z
 categories: ["code"]
 tags: 

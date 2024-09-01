@@ -1,6 +1,6 @@
 ---
 title: orange-pi-led
-heading:  
+heading: "orange zero3 改造成 kvm 使用"
 date: 2024-01-12T15:28:25.319Z
 categories: ["code"]
 tags: 

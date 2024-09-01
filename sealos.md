@@ -1,5 +1,5 @@
 ---
-title:  sealos
+title: "使用 sealos 快速安装 k8s"
 heading:
 date: 2022-11-02T02:35:11.591Z
 categories: ["code"]

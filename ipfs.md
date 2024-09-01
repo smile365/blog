@@ -1,5 +1,5 @@
 ---
-title:  ipfs
+title: "ipfs 分布式星际文件系统使用教程"
 heading: 
 date: 2022-07-25T16:46:23.029Z
 categories: ["code"]

@@ -1,5 +1,5 @@
 ---
-title:  mac-AmorphousDiskMark
+title: "mac 电脑下硬盘 u 盘测速软件 AmorphousDiskMark"
 date: 2022-11-23
 series: ["blog"]
 categories: ["code"]

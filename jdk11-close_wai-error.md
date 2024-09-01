@@ -1,5 +1,5 @@
 ---
-title: "jdk TIME_WAIT error"
+title: 
 heading: "java 请求出现 Cannot assign requested address 异常的解决办法"
 date: 2023-12-01T06:59:09.760Z
 categories: ["code"]

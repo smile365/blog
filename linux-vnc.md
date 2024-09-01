@@ -1,5 +1,5 @@
 ---
-title: linux-vnc
+title: "linux-vnc 远程桌面使用"
 heading:  linux 远程桌面
 date: 2023-03-03T08:46:05.976Z
 categories: ["code"]

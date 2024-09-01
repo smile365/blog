@@ -1,5 +1,5 @@
 ---
-title:  SAPI
+title: "SaaS、PaaS、aPaaS、iPaaS、IaaS 是什么？"
 heading:  SaaS、PaaS、aPaaS、iPaaS、IaaS 是什么？有什么区别？
 date: 2022-12-30T11:43:51.443Z
 tags: 

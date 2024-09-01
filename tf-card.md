@@ -3,6 +3,7 @@ title: tf-card 卡的格式
 heading: 
 date: 2023-05-26T20:18:42.169Z
 categories: ["code"]
+draft: true
 tags: 
 description: 如何选购 tf 内存卡  Micro SD/TF 存储卡
 ---

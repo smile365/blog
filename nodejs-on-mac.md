@@ -1,5 +1,5 @@
 ---
-title:  nodejs
+title: "macos 下 使用 NVM 安装 nodejs"
 heading: 
 date: 2023-08-23T18:16:05.490Z
 categories: ["code"]

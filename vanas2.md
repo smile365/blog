@@ -3,6 +3,7 @@ title: vanas2
 heading:  
 date: 2023-04-06T00:51:11.503Z
 categories: ["code"]
+draft: true
 tags: 
 description:  
 ---

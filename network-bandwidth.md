@@ -1,6 +1,6 @@
 ---
-title: network-bandwidth
-heading:  如何估算网络带宽需求
+title: 如何估算网络带宽需求及费用
+heading:  
 date: 2023-02-16T13:53:39.439Z
 categories: ["code"]
 tags: 

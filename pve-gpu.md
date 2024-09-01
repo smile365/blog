@@ -3,6 +3,7 @@ title: pve-gpu
 heading:  pve 显卡直通
 date: 2023-04-14T09:26:22.517Z
 categories: ["code"]
+draft: true
 tags: 
 description:  
 ---

@@ -1,5 +1,5 @@
 ---
-title:  pve-Proxmox VE
+title: "Proxmox VE 企业级虚拟化平台教程"
 heading:  裸机安装 Proxmox VE- pve 系统 7.2-1
 date: 2022-09-06T06:33:45.328Z
 categories: ["code"]

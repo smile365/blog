@@ -1,5 +1,5 @@
 ---
-title:  macos-jdk
+title: "macos 使用 jenv 管理多个 jdk 版本"
 heading:  
 date: 2022-12-30T06:07:14.246Z
 tags: 

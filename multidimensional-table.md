@@ -1,5 +1,5 @@
 ---
-title: multidimensional-table
+title: "类似飞书的开源多维表格 nocodb 搭建"
 heading:  
 date: 2023-03-10T03:14:00.609Z
 categories: ["code"]

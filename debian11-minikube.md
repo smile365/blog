@@ -1,5 +1,5 @@
 ---
-title:  debian11-minikube
+title: "minikube 单机版 k8s"
 heading: 
 date: 2022-11-01T01:46:04.738Z
 categories: ["code"]
@@ -7,7 +7,7 @@ tags:
 description: 
 ---
 ## 前言
-xxx
+minikube 单机版 k8s
 
 ## 环境说明
 - 阿里云 ECS 2 cpu 4GB 20GB

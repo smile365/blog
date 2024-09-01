@@ -3,6 +3,7 @@ title:  mac-shell-error
 heading: 
 date: 2022-09-14T12:44:47.594Z
 categories: ["code"]
+draft: true
 tags: 
 description: 
 ---

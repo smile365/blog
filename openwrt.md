@@ -1,5 +1,5 @@
 ---
-title:  openwrt
+title: "小米路由器 4a 千兆版刷 openwrt" 
 heading:
 date: 2022-10-18T08:58:26.402Z
 categories: ["code"]

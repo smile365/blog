@@ -1,5 +1,5 @@
 ---
-title: nano
+title: "nano 快捷键"
 heading: 
 date: 2023-05-25
 categories: ["code"]
