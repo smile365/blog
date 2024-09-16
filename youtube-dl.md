@@ -62,5 +62,6 @@ youtube-dl --proxy socks5://127.0.0.1:2080/ --yes-playlist --no-check-certificat
 
 
 
-
+## 其他工具推荐
+- [2024年最新YouTube视频下载6个方法](https://www.adspower.net/blog/how-to-download-youtube-videos)
 
