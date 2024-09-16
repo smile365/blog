@@ -58,6 +58,8 @@ youtube-dl --proxy socks5://127.0.0.1:2080/ --yes-playlist --no-check-certificat
 
 > **注** 不使用`--no-check-certificate`参数，会出现错误：ERROR: Unable to download webpage: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)> (caused by URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)'))) 
 
+下载 10 个视频后会出现 Unable to download webpage: <urlopen error [Errno 5] Connection refused>
+
 
 
 
