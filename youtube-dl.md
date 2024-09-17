@@ -53,7 +53,7 @@ sudo ln -s /usr/local/bin/python3 /usr/local/bin/python
 ## 下载视频 playlist
 ```bash
 cd ~/Downloads
-youtube-dl --proxy socks5://127.0.0.1:2080/ --yes-playlist --no-check-certificate PLkqMHcP63alkBgHdRFSw_qbQoB2lDARzn
+youtube-dl --proxy socks5://127.0.0.1:2080/ --yes-playlist --no-check-certificate --playlist-start 11 PLkqMHcP63alkBgHdRFSw_qbQoB2lDARzn
 ```
 
 > **注** 不使用`--no-check-certificate`参数，会出现错误：ERROR: Unable to download webpage: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)> (caused by URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)'))) 
