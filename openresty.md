@@ -8,13 +8,14 @@ description:
 ---
 
 ## 前言
+[openresty](https://openresty.org/en/getting-started.html) 比 nginx 增加了很多功能。
 
-[openresty](https://openresty.org/en/getting-started.html)
- 
 
 ## 安装 openresty
 
 ```bash
+cat /etc/*-release
+# debian 
 apt install -y --no-install-recommends wget gnupg ca-certificates
 
 wget -O - https://openresty.org/package/pubkey.gpg |apt-key add -
