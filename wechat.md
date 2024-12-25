@@ -69,9 +69,9 @@ mkdir -p ~/Downloads/WeiXin$(date "+%y%m%d")
 
 录音
 ```bash
-cd ~/project/adb-sync
 mkdir -p ~/Downloads/recorder$(date "+%y%m")
-./adb-sync --reverse /sdcard/MIUI/sound_recorder/ ~/Downloads/recorder$(date "+%y%m")
+adb pull /sdcard/MIUI/sound_recorder/ ~/Downloads/recorder$(date "+%y%m")
+
 ```
 
 
