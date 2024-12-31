@@ -112,6 +112,19 @@ for i in $(adb shell pm list packages | awk -F':' '{print $2}'); do adb pull "$(
 ```
 
 
+## 视频备份
+**视频批量压缩**
+```bash
+cd /Volumes/dji-mini3/100MEDIA/
+mkdir compressed
+for file in *.MP4; do
+    ffmpeg -i "$file" -c:v libx265 -b:v 1000k -vf scale=-1:720 "./compressed/${file}"
+done
+
+```
+
+
+
 
 ## mac 微信多开
 
