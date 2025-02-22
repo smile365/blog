@@ -1,6 +1,6 @@
 ---
 title: Home Assistant 使用教程
-heading:  
+heading:  Home Assistant 安装 hacs 和 xiaomi mio 控制智能家居设备教程指南
 date: 2025-02-22T12:24:18.678Z
 tags: 
 categories: ["code"]
@@ -56,5 +56,19 @@ echo "185.199.108.133 raw.githubusercontent.com" >> /etc/hosts
 wget -O - https://get.hacs.xyz | bash -
 ```
 安装完成后重启 ha。然后点击 设置 -> 设备与服务 -> 添加集成，搜索 hacs 后点击 hacs 。需要全选条款，点击「提交」，然后复制授权码，点击给出的 github 链接，粘贴刚刚复制的验证码 。完成后左侧菜单栏即可出现 hacs 按钮。
+
+
+3. 安装 [Xiaomi Miot For HomeAssistant](https://github.com/al-one/hass-xiaomi-miot/blob/master/README_zh.md) 可将小米设备自动接入 ha。
+
+可在 hacs 搜索 xiaomi mio 安装，也可以通过命令安装：
+```bash
+wget -O - https://get.hacs.vip | DOMAIN=xiaomi_miot bash -
+```
+
+安装成功后点击 设置 设备与服务 添加集成 搜索 xiaomi Miot auto ，根据提示输入小米账号和密码后即可自动添加设备。
+
+之后在 已配置 一栏即可控制家里的设备。
+
+
 
 
