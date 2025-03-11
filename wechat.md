@@ -71,7 +71,7 @@ mkdir -p ~/Downloads/WeiXin$(date "+%y%m%d")
 ```bash
 mkdir -p ~/Downloads/recorder$(date "+%y%m")
 adb pull /sdcard/MIUI/sound_recorder/ ~/Downloads/recorder$(date "+%y%m")
-
+rm /sdcard/MIUI/sound_recorder/app_rec/*_2*.aac
 ```
 
 
