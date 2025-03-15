@@ -1,5 +1,5 @@
 ---
-title: kindle-kpw4-wechat-reader
+title: kindle-kpw4 最新版越狱及安装 MRPI、KUAL、KOReader
 heading:  
 date: 2025-03-14T13:57:25.462Z
 tags: 
@@ -9,7 +9,7 @@ Description:   Kindle Paperwhite 4 (KPW4)
 
 
 ## 前言
-kindle 退出中国，虽然可以通过切换登录账号到美亚地区使用，但还是想切换成微信读书。主要是微信读书有排行榜，读书更有动力。所以打算把 kindle 刷机成 Android 系统，然后安装微信读书使用。
+kindle 退出中国，虽然可以通过切换登录账号到美亚地区使用，但还是想切换成微信读书。主要是微信读书有排行榜，读书更有动力。所以打算把 kindle 刷机成 Android 系统，然后安装微信读书使用。路径倒也简单： 越狱 Kindle > 安装 MRPI 和 KUAL > 安装 uboot > 刷入 Android > 安装微信读书墨水屏版。
 
 
 ## 操作环境
@@ -70,6 +70,10 @@ MobileRead Package Installer（MRPI），用来安装插件。KUAL (即 Kindle U
   6. 在 kindle 的搜索栏输入 `;log mrpi` 安装以上插件，安装完成后会自动重启，重启后会出现 KUAL。
 
 > 注意，如果 kindle 根目录已有 extensions 这个文件夹，可以只把解压得到的 extensions 文件夹中的内容拷贝到 Kindle 根目录原有的 extensions 文件夹内，以避免原文件夹内的其它文件被删除。
+
+## 四、安装 uboot 刷入 Android
+
+结果搞到这里的时候发现找不到适合我 Kindle 型号的 CracKDroid。（作者分享的链接都失效了，哭死😭，就此作罢）。有人找到了 CracKDroid 可以分享给我下不？
 
 ## 参考文档
 
