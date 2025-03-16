@@ -80,6 +80,6 @@ MobileRead Package Installer（MRPI），用来安装插件。KUAL (即 Kindle U
 - [2025 Kindle 越狱教程：不限 Kindle 型号，不限固件版本](https://bookfere.com/post/1145.html#google_vignette)
 - [Kindle 越狱插件 MRPI\KUAL\Koreader 等安装](https://bookfere.com/post/311.html)
 - [KOReader：适用于 Kindle 的全能第三方电子书阅读器插件](https://bookfere.com/post/39.html)
-- [用 SSH 登录 Kindle 系统](https://bo<a class="xsj_anchor xsj_anchor_range xsj_anchor_range_start" name="xsj_1742095471587"></a>okfere.com/post/59.html)<a class="xsj_anchor xsj_anchor_range xsj_anchor_range_end" name="xsj_1742095471587"></a>
+- [用 SSH 登录 Kindle 系统](https://bookfere.com/post/59.html)
 - [如何在 Kindle 上优雅的使用微信阅读](https://donutblogs.com/posts/CracKDroid)
 
