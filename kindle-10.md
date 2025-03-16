@@ -71,7 +71,13 @@ MobileRead Package Installer（MRPI），用来安装插件。KUAL (即 Kindle U
 
 > 注意，如果 kindle 根目录已有 extensions 这个文件夹，可以只把解压得到的 extensions 文件夹中的内容拷贝到 Kindle 根目录原有的 extensions 文件夹内，以避免原文件夹内的其它文件被删除。
 
-## 四、安装 uboot 刷入 Android
+## 四、安装 USBNetwork 
+这一步是为了支持 ssh 登录 kindle。可以参考 [USBNetwork  安装教程](https://bookfere.com/post/59.html)
+
+## 五、备份系统
+
+
+## 六、安装 uboot 刷入 Android
 
 结果搞到这里的时候发现找不到适合我 Kindle 型号的 CracKDroid。（作者分享的链接都失效了，哭死😭，就此作罢）。有人找到了 CracKDroid 可以分享给我下不？
 
@@ -81,5 +87,7 @@ MobileRead Package Installer（MRPI），用来安装插件。KUAL (即 Kindle U
 - [Kindle 越狱插件 MRPI\KUAL\Koreader 等安装](https://bookfere.com/post/311.html)
 - [KOReader：适用于 Kindle 的全能第三方电子书阅读器插件](https://bookfere.com/post/39.html)
 - [用 SSH 登录 Kindle 系统](https://bookfere.com/post/59.html)
+- [Kindle8 (Kindle558/咪咕版) 备份与刷机 android](https://zyyme.com/kindle8.html)
 - [如何在 Kindle 上优雅的使用微信阅读](https://donutblogs.com/posts/CracKDroid)
+
 
