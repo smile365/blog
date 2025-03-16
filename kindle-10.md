@@ -72,7 +72,7 @@ MobileRead Package Installer（[MRPI](https://fw.notmarek.com/khf/#:~:text=MRPI%
 > 注意，如果 kindle 根目录已有 extensions 这个文件夹，可以只把解压得到的 extensions 文件夹中的内容拷贝到 Kindle 根目录原有的 extensions 文件夹内，以避免原文件夹内的其它文件被删除。
 
 ## 四、备份系统
-
+刷了Android 想刷回 kindle，适用于所有Kindle。参考 [Kindle8 备份与刷机](https://zyyme.com/kindle8.html)。
 
 ## 五、安装 uboot 刷入 Android
 
