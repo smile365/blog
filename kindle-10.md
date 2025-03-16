@@ -1,5 +1,5 @@
 ---
-title: kindle-10 代 最新版越狱及安装 MRPI、KUAL、KOReader 刷入微信阅读教程指南
+title: kindle-10 代 最新版越狱及安装 MRPI、KUAL、KOReader 刷入微信阅读教程指南（2025 年）
 heading:  
 date: 2025-03-14T13:57:25.462Z
 tags: 
