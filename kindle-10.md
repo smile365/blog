@@ -9,7 +9,7 @@ Description:   Kindle Paperwhite 4 (KPW4)
 
 
 ## 前言
-kindle 退出中国，虽然可以通过切换登录账号到美亚地区使用，但还是想切换成微信读书。主要是微信读书有排行榜，读书更有动力。所以打算把 [kindle 刷机](https://bookfere.com/post/1145.html)成 Android 系统，然后安装微信读书使用。路径倒也简单： 越狱 Kindle > 安装 MRPI 和 KUAL > 安装 uboot > 刷入 Android > 安装微信读书墨水屏版。
+kindle 退出中国，虽然可以通过切换登录账号到美亚地区使用，但还是想切换成微信读书。主要是微信读书有排行榜，读书更有动力。所以打算把 [kindle 刷机](https://donutblogs.com/posts/CracKDroid)成 Android 系统，然后安装微信读书使用。路径倒也简单： [越狱 Kindle](https://bookfere.com/post/1145.html) > 安装 MRPI 和 KUAL > 安装 uboot > 刷入 Android > 安装微信读书墨水屏版。
 
 
 ## 操作环境
