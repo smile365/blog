@@ -21,7 +21,7 @@ description: 微信多开
 > cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
 > tree
 # 文件目录
-# d6f236797ba7e567290cae85346f1ced  微信号
+# d6f236797ba7e567290cae85346f1ced  # 微信号
 #└── 867252030391816  # 哪台设备备份的数据（如小米 8）
     ├── BAK_0_MEDIA
     ├── BAK_0_TEXT
