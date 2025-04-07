@@ -53,6 +53,5 @@ adb bugreport ~/Downloads/
 5. [使用xposed框架实现蓝牙BLE抓包](https://github.com/albert2lyu/XposedBLE)
 6. [蓝牙知识总结](https://github.com/SuperTao/Bluetooth)
 7. [Android Bluetooth HCI log 详解](https://www.jianshu.com/p/73f7366161d1)
-8. 
 
 
