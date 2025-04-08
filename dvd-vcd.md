@@ -1,5 +1,5 @@
 ---
-title: dvd-vcd
+title:  CD/VCD/DVD/BD光盘的区别及相关刻录软件推荐 2025
 heading:  
 date: 2025-04-08T04:28:31.205Z
 tags: 
