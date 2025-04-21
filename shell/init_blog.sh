@@ -33,18 +33,47 @@ init_hugo_site(){
 	mkdir -p "$POSTS_PATH"
 	#echo "Created content/posts directory at $POSTS_PATH"
 
-	cd $MYBLOG_PATH
-	git init
-	# 5. 配置主题
-	git submodule add git@gitee.com:smile365/wehuth.git themes/wehuth
-	cp themes/wehuth/exampleSite/config.toml .	
-	echo "copy config config.toml into themes/wehuth"
+
 
 }
 
 init_hugo_site
 
+check_ssh_connection() {
+    # 定义要检测的主机
+    hosts=(
+        "github.com"
+        "gitee.com"
+    )
+
+    # 遍历每个主机进行检测
+    for host in "${hosts[@]}"; do
+        {
+            # 使用 ssh 命令测试连接，设置 10 秒超时
+            if ssh -T -o BatchMode=yes -o ConnectTimeout=10 git@"${host}" 2>&1 | grep -q "successfully"; then
+                echo "✅ ${host}"
+            else
+                echo "❌ 无法通过 SSH 连接到 ${host}"
+            fi
+        } &
+    done
+    wait  # 等待所有后台任务完成
+}
+
+# 调用检测函数
+check_ssh_connection
+# 调用检测函数
+check_ssh_connection
+
+
 clone_blog(){
+	cd $MYBLOG_PATH
+	git init
+	# 5. 配置主题
+	git submodule add git@gitee.com:smile365/wehuth.git themes/wehuth
+	cp themes/wehuth/exampleSite/config.toml .	
+	echo "copy config config.toml into themes/wehuth"	
+
 	cd /root/projects
 	git clone git@github.com:smile365/blog.git
 
@@ -58,16 +87,18 @@ update_cp_md(){
 	cd /root/projects/blog 
 	git config pull.rebase false
 	git pull
-	cp *.md /usr/share/www/myblog/content/posts/ 
+	cp *.md $WWW_PATH/content/posts/ 
 
 	# 2. 生活类博客的 md 文件拷贝到 www
 	cd /root/projects/live4life
 	git config pull.rebase false
 	git pull
-	cp *.md /usr/share/www/myblog/content/posts/ 
+	cp *.md $WWW_PATH/myblog/content/posts/ 
 
 	# 3. 生成 html
-	cd /usr/share/www/myblog/ && hugo
+	cd $WWW_PATH/myblog/ && hugo
+
+	ls $WWW_PATH/myblog/public/
 }
 
 
