@@ -62,42 +62,45 @@ check_ssh_connection() {
 
 # 调用检测函数
 check_ssh_connection
-# 调用检测函数
-check_ssh_connection
 
+PRO_CODE="/root/projects"
 
 clone_blog(){
-	cd $MYBLOG_PATH
-	git init
-	# 5. 配置主题
-	git submodule add git@gitee.com:smile365/wehuth.git themes/wehuth
-	cp themes/wehuth/exampleSite/config.toml .	
-	echo "copy config config.toml into themes/wehuth"	
-
-	cd /root/projects
+	mkdir -p $PRO_CODE
+	cd $PRO_CODE
+	git clone git@github.com:smile365/wehuth.git
 	git clone git@github.com:smile365/blog.git
-
 	git clone git@github.com:smile365/live4life.git
+	
 }
 
 clone_blog
 
 update_cp_md(){
 	# 1. 技术博客的 md 文件拷贝到 www
-	cd /root/projects/blog 
+	cd $PRO_CODE/blog 
 	git config pull.rebase false
 	git pull
 	cp *.md $WWW_PATH/content/posts/ 
 
 	# 2. 生活类博客的 md 文件拷贝到 www
-	cd /root/projects/live4life
+	cd $PRO_CODE/live4life
 	git config pull.rebase false
 	git pull
 	cp *.md $WWW_PATH/myblog/content/posts/ 
 
-	# 3. 生成 html
-	cd $WWW_PATH/myblog/ && hugo
 
+	# 3. 配置站点的配置文件
+	cd $PRO_CODE/wehuth
+	git config pull.rebase false
+	git pull
+	cp exampleSite/config.toml 	$MYBLOG_PATH/
+	echo "copy config config.toml into themes/wehuth"
+	cd $PRO_CODE
+	cp -r wehuth $MYBLOG_PATH/themes/
+	
+	# 4. 生成 html
+	cd $WWW_PATH/myblog/ && hugo
 	ls $WWW_PATH/myblog/public/
 }
 
