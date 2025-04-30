@@ -1,6 +1,6 @@
 ---
 title: gradle 安装
-date: 20123-05-11
+date: 2013-05-11
 categories: ["code"]
 description:
 ---

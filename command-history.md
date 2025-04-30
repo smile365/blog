@@ -1,6 +1,6 @@
 ---
 title:  使用 snoopy 实现 linux history 操作记录和审计日志
-date: 2022-12-8
+date: 2022-12-08T12:50:14.806Z
 tags: ["code","it"]
 series: ["blog"]
 categories: ["code"]

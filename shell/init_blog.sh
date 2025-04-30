@@ -71,7 +71,7 @@ clone_blog(){
 	git clone git@github.com:smile365/wehuth.git
 	git clone git@github.com:smile365/blog.git
 	git clone git@github.com:smile365/live4life.git
-	
+
 }
 
 clone_blog
@@ -81,13 +81,13 @@ update_cp_md(){
 	cd $PRO_CODE/blog 
 	git config pull.rebase false
 	git pull
-	cp *.md $WWW_PATH/content/posts/ 
+	cp *.md $MYBLOG_PATH/content/posts/ 
 
 	# 2. 生活类博客的 md 文件拷贝到 www
 	cd $PRO_CODE/live4life
 	git config pull.rebase false
 	git pull
-	cp *.md $WWW_PATH/myblog/content/posts/ 
+	cp *.md $MYBLOG_PATH/content/posts/ 
 
 
 	# 3. 配置站点的配置文件
@@ -98,7 +98,7 @@ update_cp_md(){
 	echo "copy config config.toml into themes/wehuth"
 	cd $PRO_CODE
 	cp -r wehuth $MYBLOG_PATH/themes/
-	
+
 	# 4. 生成 html
 	cd $WWW_PATH/myblog/ && hugo
 	ls $WWW_PATH/myblog/public/
