@@ -17,22 +17,6 @@ init_hugo_site(){
 	    WWW_PATH="$USER_PATH"
 	fi
 
-	# 3. 检查 www 下是否有 myblog 文件夹
-	MYBLOG_PATH="$WWW_PATH/myblog"
-	if [ -d "$MYBLOG_PATH" ]; then
-	    echo "exists: $MYBLOG_PATH"
-	    return 1
-	else
-	    # 使用 hugo 创建 myblog 站点
-	    hugo new site "$MYBLOG_PATH"
-	    echo "Created myblog site at $MYBLOG_PATH"
-	fi
-
-	# 4. 在 myblog 路径下创建 content/posts 路径
-	POSTS_PATH="$MYBLOG_PATH/content/posts"
-	mkdir -p "$POSTS_PATH"
-	#echo "Created content/posts directory at $POSTS_PATH"
-
 
 
 }
@@ -64,14 +48,25 @@ check_ssh_connection() {
 check_ssh_connection
 
 PRO_CODE="/root/projects"
-
+MYBLOG_PATH="$PRO_CODE/myblog"
+	
 clone_blog(){
 	mkdir -p $PRO_CODE
 	cd $PRO_CODE
 	git clone git@github.com:smile365/wehuth.git
 	git clone git@github.com:smile365/blog.git
 	git clone git@github.com:smile365/live4life.git
-
+	if [ -d "myblog" ]; then
+	    echo "exists: $MYBLOG_PATH"
+	    return 1
+	else
+	    # 使用 hugo 创建 myblog 站点
+	    hugo new site "myblog"
+	    echo "Created myblog site at $MYBLOG_PATH"
+	    # 4. 在 myblog 路径下创建 content/posts 路径
+		POSTS_PATH="$MYBLOG_PATH/content/posts"
+		mkdir -p "$POSTS_PATH"
+	fi
 }
 
 clone_blog
@@ -100,8 +95,9 @@ update_cp_md(){
 	cp -r wehuth $MYBLOG_PATH/themes/
 
 	# 4. 生成 html
-	cd $WWW_PATH/myblog/ && hugo
-	ls $WWW_PATH/myblog/public/
+	cd $MYBLOG_PATH && hugo
+	mkdir -p $WWW_PATH/myblog
+	cp -r $MYBLOG_PATH/public/*  $WWW_PATH/myblog/
 }
 
 
