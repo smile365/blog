@@ -15,6 +15,17 @@ yum install caddy
 caddy version
 ```
 
+## install on ## Debian
+
+
+```bash
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update
+sudo apt install caddy
+```
+
 
 ## 反向代理
 需要监听 80 和 443 端口，如果开启了 nginx 需要关闭 80 和 443 端口。会自动申请 ssl 证书，并启动反向代理
