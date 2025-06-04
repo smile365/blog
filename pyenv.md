@@ -125,7 +125,7 @@ python --version
 
 **后记**
 
-最后发现是 requirements.txt 是由 cursor 生成的，`alibabacloud_dypnsapi20170525` 被错误地写成了 `alibabacloud-dypnsapi20170525`，只需要把横线`-`改成下划线` _`就好了。
+最后发现是 requirements.txt 是由 cursor 生成的，它把 `alibabacloud_dypnsapi20170525` 错误地写成了 `alibabacloud-dypnsapi20170525`，只需要把横线`-`改成下划线` _`就好了。
 ```python
 alibabacloud_dypnsapi20170525==1.2.2
 ```
