@@ -1,5 +1,5 @@
 ---
-title: pyenv
+title: 使用 pyenv 安装和管理不同版本 python
 heading:  
 date: 2025-06-04T03:24:55.365Z
 tags: 
