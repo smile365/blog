@@ -47,7 +47,7 @@ Description:
 ## 部署服务器 emqx
 
 ```bash
-docker pull emqx/==emqx #12AA9C==
+docker pull emqx/emqx 
 docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p 18083:18083 emqx/emqx
 ```
 
@@ -56,7 +56,7 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8084:8084 -p 8883:8883 -p
 mqtt 服务器本身不存储客户端发送过来的消息，除了发送时指定消息类型为[保留消息](https://www.emqx.com/zh/blog/mqtt5-features-retain-message)。
 ## 
 
-## 使用百度元 lot
+## 使用百度云 lot
 
 > 以 DHT11 温湿度传感器接入百度 lot 为例
 
@@ -65,15 +65,14 @@ mqtt 服务器本身不存储客户端发送过来的消息，除了发送时指
 1. 在百度元 lot 平台[创建 loT core](https://console.bce.baidu.com/iot2/core/core/list)，选择按需付费（可使用免费额度）。
 2. 点击刚创建的 lot 名称，设备管理-设备列表-新增设备，选择「密钥认证」然后创建一个模板。
 3. 点击 设备管理--模板 下刚创建的模板名称，点击「添加主题」选择高级模式，填写 WifiDHT/+/DHT11
-4. 
 
-DeviceKey：wifiDHT3Device  Secret：RhamBvqMZNYIeRJT
 
 ### 配置 DHT11 温湿度传感器
 
 1. 在 设备管理--设备列表 的右上角可查看[接入点]即域名信息，点击下方设备列表的具体[设备名称] 后可在设备详情页查看 IoTCoreId、DeviceKey、DeviceSecret 可查看需要的信息。
 2. 参考[百度文档](https://cloud.baidu.com/doc/IoTCore/s/hk7omsfcl)使用刚刚拿到的信息在网站[MQTT连接信息生成器](https://iotcore-dev-tool.gz.bcebos.com/mqtt-sign/) 可生成 mqtt 所需的用户名和密码。
 > wifiDHT3 测试发现仅支持 MD5 加密，不支持 SHA256，购买之前记得确认。
+
 
 
 
