@@ -10,7 +10,8 @@ description: wifi-crack
 
 关于破解的方法和思路参考[渗透测试之构建高效WiFi破解字典](https://www.anquanke.com/post/id/219315)
 
-常见工具：  
+
+常见软件工具：  
 
 - [bully](https://www.kali.org/tools/bully/)
 - [reaver](https://www.kali.org/tools/reaver/)
