@@ -17,6 +17,7 @@ description: wifi-crack
 - [reaver](https://www.kali.org/tools/reaver/)
 - [aircrack-ng](https://www.aircrack-ng.org/doku.php?id=install_aircrack#installing_on_mac_osx)
 
+还需要一块支持监听模式的网卡。
 
 ## mac 自带的 wifi 扫描工具
 
