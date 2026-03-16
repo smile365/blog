@@ -87,7 +87,7 @@ pyenv install --list | wc -l
 ```bash
 pyenv install --list | grep -E '^\s*3\.1[345]'
 ```
-正则表达式 '^\s*3\.1[345]'的解释：
+正则表达式 `^\s*3\.1[345]` 的解释：
 - `^`**`：匹配行的开始。
 - `\s*`：匹配零个或多个空白字符（命令 pyenv install --list 输出前面有两个空格缩进）。
 - `3\.1`：匹配字面字符串 "3.1"，点号需要转义（不转义代表任意字符）。
@@ -241,10 +241,10 @@ pandas
 
 ## 参考文档
 
-[1]: https://peps.python.org/pep-0745/?utm_source=chatgpt.com "PEP 745 – Python 3.14 Release Schedule | peps.python.org"
-[2]: https://www.python.org/doc/versions/?utm_source=chatgpt.com "Python documentation by version | Python.org"
-[3]: https://peps.python.org/pep-0790/?utm_source=chatgpt.com "PEP 790 – Python 3.15 Release Schedule | peps.python.org"
-[4]: https://www.anaconda.com/docs/reference/policies-practices/python-version-support?utm_source=chatgpt.com "Python version support - Anaconda"
-[5]: https://www.silenceboy.com/2025/03/26/%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AApython%E7%89%88%E6%9C%AC/index.html?utm_source=chatgpt.com "本地管理多个python版本 | morty的个人博客"
-[6]: https://blog.csdn.net/cnzzs/article/details/145818839?utm_source=chatgpt.com "python多版本环境管理工具有哪些，详细说说适合哪些平台-CSDN博客"
-[7]: https://www.cnblogs.com/shenhuanjie/p/18806610/mac-quickly-switch-python-version-11t2wd?utm_source=chatgpt.com "mac 快速切换 python 版本 - SHENHUANJIE - 博客园"
+- [PEP 745: Python 3.14 Release Schedule](https://peps.python.org/pep-0745/)
+- [Python documentation by version](https://www.python.org/doc/versions/)
+- [PEP 790: Python 3.15 Release Schedule](https://peps.python.org/pep-0790/)
+- [Anaconda: Python version support](https://www.anaconda.com/docs/reference/policies-practices/python-version-support)
+- [本地管理多个 Python 版本 | morty 的个人博客](https://www.silenceboy.com/2025/03/26/%E6%9C%AC%E5%9C%B0%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AApython%E7%89%88%E6%9C%AC/index.html)
+- [Python 多版本环境管理工具有哪些 | CSDN](https://blog.csdn.net/cnzzs/article/details/145818839)
+- [mac 快速切换 Python 版本 | 博客园](https://www.cnblogs.com/shenhuanjie/p/18806610/mac-quickly-switch-python-version-11t2wd)
