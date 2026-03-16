@@ -24,15 +24,30 @@ Description:
 ### 1️⃣ 最推荐：pyenv（Python开发首选）
 
 ```bash
+# 查看系统当前 python 版本
+python -V
+
 # 安装 pyenv
 brew install pyenv
+
+# 查看可安装的版本 
+pyenv install --list | grep -E '^\s*3\.13'
+
 # 用 pyenv 安装 python
-pyenv install 3.10.14
+pyenv install 3.13.7
+
+# 查看管理的版本
+pyenv versions
+
 # 切换版本：全局
-pyenv global 3.11.9
+pyenv global 3.11.13
+
 # 切换版本：当前项目
-pyenv local 3.10.14
+pyenv local 3.12.11
 # 下次进入项目目录会自动切换。
+
+# 若不生效，可能需要重新加载环境变量
+source ~/.bashrc
 ```
 
 
@@ -41,8 +56,8 @@ pyenv local 3.10.14
 ```bash
 brew install asdf
 asdf plugin add python
-asdf install python 3.11.9
-asdf global python 3.11.9
+asdf install python 3.10.18
+asdf global python 3.10.18
 ```
 
 
